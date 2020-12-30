@@ -10,8 +10,8 @@ function UIButton(title, x, y, height, padding = 2, onClick) {
         bounds.width = getTextWidth(title, Fonts.ButtonTitle) + padding * 2;
         bounds.height = height;
         
-        bounds.x = x;// - (bounds.width/2);
-        bounds.y = y;// - (height * fontOverhangRatio) + height;
+        bounds.x = x;
+        bounds.y = y;
     }
 
     setBounds(this.title, x, y, height, padding);

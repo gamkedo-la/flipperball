@@ -17,8 +17,8 @@ function TitleScene() {
         
         if(buttons.length === 0) {
             //add these in the same order as the selections array above
-            buttons.push(buildPlayButton(mainMenuX, mainMenuY, buttonHeight, buttonTitlePadding));
-            buttons.push(buildOptionsButton(mainMenuX, mainMenuY + 40, buttonHeight, buttonTitlePadding));
+            // buttons.push(buildPlayButton(mainMenuX, mainMenuY, buttonHeight, buttonTitlePadding));
+            // buttons.push(buildOptionsButton(mainMenuX, mainMenuY + 40, buttonHeight, buttonTitlePadding));
         }
 
         selectorPositionsIndex = 0;
@@ -57,6 +57,7 @@ function TitleScene() {
             case ALIAS.SELECT1:
                 // console.log("Activated the current button");
 //                SceneManager.setState(selections[selectorPositionsIndex]);
+                SceneManager.setState(SCENE.GAME);
                 return true;
             case ALIAS.SELECT2:
                 // console.log("Selected the Play button");
@@ -145,7 +146,9 @@ function TitleScene() {
 	
 	const drawBG = function() {
         // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
+        drawRect(0, 0, canvas.width, canvas.height);
+        colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
     }
         
     return this;
-};
+}

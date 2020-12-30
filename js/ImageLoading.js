@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 //Image Loading
-let shouldShowTitleImage = false;
-let finishedLoading = false;
+let shouldShowTitleImage = true; // set this to false once there's a title screen image
+let finishedLoading = true; // set this to false once there is any image to load
 
 function showTitleImage() {
     if(shouldShowTitleImage) {

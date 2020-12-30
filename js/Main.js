@@ -35,6 +35,7 @@ function loadingDoneSoStartGame() {
 function update() {
 	const deltaTime = timer.update();
 	SceneManager.run(deltaTime);
+	requestAnimationFrame(update);
 }
 
 function startGame() {
