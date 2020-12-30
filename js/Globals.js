@@ -46,6 +46,17 @@ let firstLoad = localStorage.getItem(localStorageKey.FirstLoad);
 let timer;
 let worldSpeed = 1;
 
+//------------Tables----------//
+const TABLES = {
+	Prototype: 'prototype'
+}
+
+const TABLE_LAYERS = {
+	Collision: 'Collision',
+	Dynamic: 'Dynamic',
+	Fixed: 'Fixed'
+}
+
 //------------Asset Management----------//
 const assetPath = {
 	Audio:"./audio/",

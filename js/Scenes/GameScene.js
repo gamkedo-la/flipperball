@@ -46,7 +46,7 @@ function GameScene() {
     }
 
     const draw = function(deltaTime) {
-        drawRect(0, 0, canvas.width, canvas.height, 'blue');
-        // canvasContext.drawImage(tempBackground, 0, 0, canvas.width, canvas.height);
+        drawRect(0, 0, canvas.width, canvas.height, Color.Black);
+        canvasContext.drawImage(prototype, 0, 0, canvas.width, canvas.height);
     }
 }

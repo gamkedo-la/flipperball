@@ -18,18 +18,14 @@ window.onload = function() {
 	configureGameAudio();
 	loadAudio();
 //	currentBackgroundMusic.loopSong(menuMusic);//TODO: Restore once there is background music
-	loadHTGDLogo();
+	htgdLogoPic.src = assetPath.Image + "screens/screen_HTGD_Logo.png";
 };
 
 function loadingDoneSoStartGame() {
-	if(finishedLoading) {
-		timer = new Chronogram();
-		// fontRenderer = new FontBuilder(fontSheet, CHAR_WIDTH, CHAR_HEIGHT);
-		SceneManager.setState(SCENE.TITLE);
-		requestAnimationFrame(update);
-	} else {
-		finishedLoading = true;
-	}
+	timer = new Chronogram();
+	// fontRenderer = new FontBuilder(fontSheet, CHAR_WIDTH, CHAR_HEIGHT);
+	SceneManager.setState(SCENE.TITLE);
+	requestAnimationFrame(update);
 }
 
 function update() {
@@ -38,23 +34,15 @@ function update() {
 	requestAnimationFrame(update);
 }
 
-function startGame() {
-	if(!firstLoad) {
-		firstLoad = false;
-		localStorage.setItem(localStorageKey.FirstLoad, firstLoad);
-	} 
-}
 
 function drawAll() {
 
 }
 
-function moveAll() {
-
-}
-
 function windowOnFocus() {
+	//Resume game from pause?
 }
 
 function windowOnBlur() {
+	//Pause game? - Probably not on a menu, but on SCENE.Game
 }
