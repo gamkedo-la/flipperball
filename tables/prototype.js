@@ -315,7 +315,7 @@
                  "ellipse":true,
                  "height":95.4153512698487,
                  "id":1,
-                 "name":"blue",
+                 "name":"circle_bumper_blue",
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -327,7 +327,7 @@
                  "ellipse":true,
                  "height":95.4154,
                  "id":3,
-                 "name":"green",
+                 "name":"circle_bumper_green",
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -339,7 +339,7 @@
                  "ellipse":true,
                  "height":95.4154,
                  "id":4,
-                 "name":"yellow",
+                 "name":"circle_bumper_yellow",
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -351,7 +351,7 @@
                  "ellipse":true,
                  "height":95.4154,
                  "id":5,
-                 "name":"red",
+                 "name":"circle_bumper_red",
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -402,7 +402,7 @@
                 {
                  "height":0,
                  "id":7,
-                 "name":"right",
+                 "name":"flipper_bumper_right",
                  "polygon":[
                         {
                          "x":0,
@@ -494,7 +494,7 @@
                 {
                  "height":0,
                  "id":9,
-                 "name":"left",
+                 "name":"flipper_bumper_left",
                  "polygon":[
                         {
                          "x":0,
@@ -693,7 +693,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

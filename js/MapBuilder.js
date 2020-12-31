@@ -23,9 +23,44 @@ function MapBuilder (selectedTable = TABLES.Prototype) {
                 break;
         }
     }
-    this.fixedObjects = getFixedObjects(this.fixedLayerData)
+    this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
+    this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
 
-    const getFixedObjects = function(data) {
-        
+    const buildStaticObjects = function(objData) {
+        const result = [];
+
+        for (const obj of objData) {
+            result.push(new StaticMapObject(obj));
+        }
+        return result;
     }
+
+    const buildDynamicObjects = function(objData, collisionData) {
+        const result = [];
+
+        for (const obj of objData) {
+            const bodyData = collisionData.find((data) => data.name === obj.name)
+            result.push(new DynamicMapObject(obj, bodyData));
+        }
+
+        return result;
+    }
+}
+
+function StaticMapObject (objData) {
+    this.x = objData.x;
+    this.y = objData.y;
+    this.width = objData.width;
+    this.height = objData.height;
+    this.type = objData.type;
+    this.image = images[objData.name];
+}
+
+function DynamicMapObject (objData, bodyData) {
+    this.x = objData.x;
+    this.y = objData.y;
+    this.width = objData.width;
+    this.height = objData.height;
+    this.type = objData.type;
+    this.image = images[objData.name];
 }

@@ -28,7 +28,7 @@ const localStorageKey = {
 	MusicVolume:"flipperball_musicVolume",
 	SFXVolume:"flipperball_effectsVolume",
     FirstLoad:"flipperball_firstLoad"
-}
+};
 
 //----------State Management----------//
 const SCENE = {
@@ -40,7 +40,7 @@ const SCENE = {
 	PAUSE:"pause",
 	GAME:"game",
 	ENDING:"ending"
-}
+};
 
 let firstLoad = localStorage.getItem(localStorageKey.FirstLoad);
 let timer;
@@ -49,19 +49,25 @@ let worldSpeed = 1;
 //------------Tables----------//
 const TABLES = {
 	Prototype: 'prototype'
-}
+};
 
 const TABLE_LAYERS = {
 	Collision: 'Collision',
 	Dynamic: 'Dynamic',
 	Fixed: 'Fixed'
-}
+};
 
+const BodyType = {
+	Circle: 'circle',
+	Polygon: 'polygon'
+}
 //------------Asset Management----------//
+const images = {};
+
 const assetPath = {
 	Audio:"./audio/",
 	Image:"./img/"
-}
+};
 
 //---------------Audio------------------//
 let isMuted = false;

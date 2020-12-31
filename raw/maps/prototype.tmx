@@ -92,29 +92,29 @@
   <object id="34" name="circle_bumper_yellow" gid="12" x="405.5" y="188" width="94" height="95"/>
   <object id="35" name="circle_bumper_green" gid="13" x="216.5" y="187" width="94" height="95"/>
  </objectgroup>
- <objectgroup id="3" name="Collision" visible="0">
-  <object id="1" name="blue" type="circle_bumper" x="309.909" y="2.28997" width="94.652" height="95.4154">
+ <objectgroup id="3" name="Collision">
+  <object id="1" name="circle_bumper_blue" type="circle_bumper" x="309.909" y="2.28997" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="3" name="green" type="circle_bumper" x="215.784" y="91.9804" width="94.652" height="95.4154">
+  <object id="3" name="circle_bumper_green" type="circle_bumper" x="215.784" y="91.9804" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="4" name="yellow" type="circle_bumper" x="404.561" y="91.9804" width="94.652" height="95.4154">
+  <object id="4" name="circle_bumper_yellow" type="circle_bumper" x="404.561" y="91.9804" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="5" name="red" type="circle_bumper" x="309.909" y="175.946" width="94.652" height="95.4154">
+  <object id="5" name="circle_bumper_red" type="circle_bumper" x="309.909" y="175.946" width="94.652" height="95.4154">
    <ellipse/>
   </object>
   <object id="6" name="right" type="drain_divider" x="633.25" y="179">
    <polygon points="0,0 -6,2.75 -6.25,160.75 -76.25,231 -69.5,238.25 3.75,166 4,1.75"/>
   </object>
-  <object id="7" name="right" type="flipper_bumper" x="579" y="183.25">
+  <object id="7" name="flipper_bumper_right" type="flipper_bumper" x="579" y="183.25">
    <polygon points="0,0 0.25,134.75 -2,139 -45.25,178.75 -48.25,180 -51.5,180 -55,177.25 -55,172.75 -18.75,0 -16.5,-4.5 -12.75,-6.25 -6.5,-6 -2.5,-4.25"/>
   </object>
   <object id="8" name="drain" type="drain" x="200" y="597.75">
    <polygon points="0,0 310,0.25 310.25,35.25 0,36"/>
   </object>
-  <object id="9" name="left" type="flipper_bumper" x="129" y="183.5">
+  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="129" y="183.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
   <object id="10" name="left" type="drain_divider" x="73.25" y="179.25">

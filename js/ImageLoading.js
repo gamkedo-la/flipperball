@@ -1,31 +1,10 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 //Image Loading
 const TITLE_IMG_EXISTS = false;
-let finishedLoading = false;
 
 //-----Global Img Objects-----//
 let titlePic;
-let angledWall1Img;
-let angledWall2Img;
-let angledWall3Img;
-let angledWall4img;
-let ballImg;
-let circleBumperBlueImg;
-let circleBumperGreenImg;
-let circleBumperRedImg;
-let circleBumperYellowImg;
-let drainRailLeftImg;
-let drainRailRightImg;
-let drainWallLeftImg;
-let drainWallRightImg;
-let flipperBumperLeftImg;
-let flipperBumperRightImg;
-let flipperLeftImg;
-let flipperRightImg;
-let plungerChuteImg;
-let plungerImg;
-let titleScreenPic;
-let verticalWallImg;
 
 //-----Load the HTGD Logo-----//
 let startTime;
@@ -34,7 +13,7 @@ htgdLogoPic.onload = function() {
     if (TITLE_IMG_EXISTS) {
         //Begin loading the Title Image
         titlePic = document.createElement("img");
-        titleScreenPic.onload = function() {
+        titlePic.onload = function() {
             //Begin Loading remaining images
             loadImages();
             showTitleScreen();
@@ -87,34 +66,34 @@ let picsToLoad = 0;
 function loadImages() {
     const imageList = [
         // List them here alphabetically to make it easier to find the one you're looking for
-        {imgName: angledWall1Img, theFile: "tables/angled_wall_1.png"},
-        {imgName: angledWall2Img, theFile: "tables/angled_wall_2.png"},
-        {imgName: angledWall3Img, theFile: "tables/angled_wall_3.png"},
-        {imgName: angledWall4img, theFile: "tables/angled_wall_4.png"},
+        {imgName: "angled_wall_1", theFile: "tables/angled_wall_1.png", image: {}},
+        {imgName: "angled_wall_2", theFile: "tables/angled_wall_2.png"},
+        {imgName: "angled_wall_3", theFile: "tables/angled_wall_3.png"},
+        {imgName: "angled_wall_4", theFile: "tables/angled_wall_4.png"},
 
-        {imgName: ballImg, theFile: "tables/ball.png"},
+        {imgName: "ball", theFile: "tables/ball.png"},
 
-        {imgName: circleBumperBlueImg, theFile: "tables/circle_bumper_blue.png"},
-        {imgName: circleBumperGreenImg, theFile: "tables/circle_bumper_green.png"},
-        {imgName: circleBumperRedImg, theFile: "tables/circle_bumper_red.png"},
-        {imgName: circleBumperYellowImg, theFile: "tables/circle_bumper_yellow.png"},
+        {imgName: "circle_bumper_blue", theFile: "tables/circle_bumper_blue.png"},
+        {imgName: "circle_bumper_green", theFile: "tables/circle_bumper_green.png"},
+        {imgName: "circle_bumper_red", theFile: "tables/circle_bumper_red.png"},
+        {imgName: "circle_bumper_yellow", theFile: "tables/circle_bumper_yellow.png"},
 
-        {imgName: drainRailLeftImg, theFile: "tables/drain_rail_left.png"},
-        {imgName: drainRailRightImg, theFile: "tables/drain_rail_right.png"},
+        {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
+        {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
 
-        {imgName: drainWallLeftImg, theFile: "tables/drain_wall_left.png"},
-        {imgName: drainWallRightImg, theFile: "tables/drain_wall_right.png"},
+        {imgName: "drain_wall_left", theFile: "tables/drain_wall_left.png"},
+        {imgName: "drain_wall_right", theFile: "tables/drain_wall_right.png"},
 
-        {imgName: flipperBumperLeftImg, theFile: "tables/flipper_bumper_left.png"},
-        {imgName: flipperBumperRightImg, theFile: "tables/flipper_bumper_right.png"},
+        {imgName: "flipper_bumper_left", theFile: "tables/flipper_bumper_left.png"},
+        {imgName: "flipper_bumper_right", theFile: "tables/flipper_bumper_right.png"},
 
-        {imgName: flipperLeftImg, theFile: "tables/flipper_left.png"},
-        {imgName: flipperRightImg, theFile: "tables/flipper_right.png"},
+        {imgName: "flipper_left", theFile: "tables/flipper_left.png"},
+        {imgName: "flipper_right", theFile: "tables/flipper_right.png"},
 
-        {imgName: plungerChuteImg, theFile: "tables/plunger_chute.png"},
-        {imgName: plungerImg, theFile: "tables/plunger.png"},
+        {imgName: "plunger_chute", theFile: "tables/plunger_chute.png"},
+        {imgName: "plunger", theFile: "tables/plunger.png"},
 
-        {imgName: verticalWallImg, theFile: "tables/vertical_wall.png"}
+        {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"}
     ];
 
     picsToLoad = imageList.length;
@@ -124,14 +103,14 @@ function loadImages() {
     }
 }
 
-function beginLoadingImage(imgVar, fileName) {
-    // eslint-disable-next-line no-param-reassign
-    imgVar = document.createElement("img");
-    imgVar.onload = function() {
+function beginLoadingImage(imgName, fileName) {
+    const newImg = document.createElement("img");
+    newImg.onload = function() {
+        images[imgName] = newImg;
         picsToLoad--;
         if (picsToLoad === 0) { // last image loaded?
             loadingDoneSoStartGame();
         }
     }
-    imgVar.src = assetPath.Image + fileName;
+    newImg.src = assetPath.Image + fileName;
 }
