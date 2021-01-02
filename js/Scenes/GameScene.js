@@ -48,6 +48,13 @@ function GameScene() {
     };
 
     const update = function(deltaTime) {
+        for (const dynamicObj of self.table.dynamicObjects) {
+            dynamicObj.update(deltaTime);
+        }
+
+        for (const ball of self.table.balls) {
+            ball.update(deltaTime);
+        }
     }
 
     const draw = function(deltaTime) {
@@ -63,6 +70,10 @@ function GameScene() {
 
         for (const wall of self.table.tableColliders) {
             wall.draw();
+        }
+
+        for (const ball of self.table.balls) {
+            ball.draw();
         }
     }
 }

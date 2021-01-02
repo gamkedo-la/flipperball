@@ -2,9 +2,13 @@
 // eslint-disable-next-line no-unused-vars
 function MapBuilder (tableName = TABLES.Prototype) {
     const mapData = TileMaps[tableName];
+    // eslint-disable-next-line consistent-this
+    const self = this;
     this.collisionLayerData = null;
     this.dynamicLayerData = null;
     this.fixedLayerData = null;
+    this.balls = [];
+    this.flippers = [];
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {
@@ -38,7 +42,11 @@ function MapBuilder (tableName = TABLES.Prototype) {
 
         for (const obj of objData) {
             const bodyData = collisionData.find((data) => data.name === obj.name)
-            result.push(new DynamicMapObject(obj, bodyData));
+            if (obj.type === 'ball') {
+                self.balls.push(new Ball(obj, bodyData));
+            } else {
+                result.push(new DynamicMapObject(obj, bodyData));
+            }
         }
 
         return result;
@@ -81,6 +89,7 @@ function DynamicMapObject (objData, bodyData) {
     this.type = objData.type;
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
+    this.update = function(deltaTime) {}
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
         this.body.draw();

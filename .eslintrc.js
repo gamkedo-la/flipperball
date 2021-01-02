@@ -28,6 +28,7 @@ module.exports = {
         "fontRenderer": true,
         "Fonts": true,
         "GAME_SCALE": true,
+        "GRAVITY": true,
         "htgdLogoPic":true,
         "images": true,
         "isMuted": true,
@@ -79,6 +80,7 @@ module.exports = {
 
         //Classes
         "BackgroundMusicClass": true,
+        "Ball": true,
         "Chronogram": true,
         "CollisionBody": true,
         "CreditsScene": true,

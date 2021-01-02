@@ -8,7 +8,8 @@ let canvasContext;
 let DEBUG = false;
 let CHEATS_ACTIVE = false;
 
-const GAME_SCALE = 4;
+const GAME_SCALE = 1;
+const GRAVITY = 300;
 
 const canvasClearColor = "black";
 
