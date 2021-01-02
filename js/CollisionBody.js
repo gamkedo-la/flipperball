@@ -1,12 +1,6 @@
 //CollisionBody.js
 // eslint-disable-next-line no-unused-vars
 function CollisionBody (data) {
-    if (data.ellipse) {
-        buildCircleBody(this, data);
-    } else if (data.polygon) {
-        buildPolygonBody(this, data);
-    }
-
     const buildCircleBody = function (self, data) {
         self.type = BodyType.Circle;
         self.name = data.name;
@@ -23,6 +17,42 @@ function CollisionBody (data) {
             const end = (i === data.polygon.length ? data.polygon[0] : data.polygon[i]);
             self.edges.push(new Edge(start, end, data.x, data.y));
         }
+    }
+
+    if (data.ellipse) {
+        buildCircleBody(this, data);
+    } else if (data.polygon) {
+        buildPolygonBody(this, data);
+    }
+
+    this.draw = function () {
+        if(!DEBUG) {return;}
+        if(this.type === BodyType.Circle) {drawCircleBody(this.center, this.radius);}
+        if(this.type === BodyType.Polygon) {drawPolygonBody(this.edges);}
+    }
+
+    const drawCircleBody = function (center, radius) {
+        canvasContext.save();
+        canvasContext.strokeStyle = Color.Red;
+        canvasContext.beginPath();
+        canvasContext.arc(center.x, center.y, radius, 0, 2 * Math.PI);
+        canvasContext.stroke();
+        canvasContext.restore();
+    }
+
+    const drawPolygonBody = function(edges) {
+        canvasContext.save();
+        canvasContext.strokeStyle = Color.Red;
+        canvasContext.beginPath();
+
+        canvasContext.moveTo(edges[0].start.x, edges[0].start.y);
+        for (const edge of edges) {
+            canvasContext.lineTo(edge.end.x, edge.end.y);
+        }
+        canvasContext.closePath();
+
+        canvasContext.stroke();
+        canvasContext.restore();
     }
 }
 

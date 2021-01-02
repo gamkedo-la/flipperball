@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="80" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="41">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="80" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="50">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
@@ -18,10 +18,10 @@
    <image width="105" height="598" source="../img/backgrounds/plunger_chute.png"/>
   </tile>
   <tile id="4" type="wall">
-   <image width="197" height="195" source="../img/backgrounds/left_drain_wall.png"/>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_left.png"/>
   </tile>
   <tile id="5" type="wall">
-   <image width="197" height="195" source="../img/backgrounds/right_drain_wall.png"/>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_right.png"/>
   </tile>
   <tile id="6">
    <image width="14" height="598" source="../img/backgrounds/vertical_wall.png"/>
@@ -68,11 +68,9 @@
  </tileset>
  <objectgroup id="5" name="Fixed">
   <object id="23" name="plunger_chute" gid="4" x="693" y="598" width="105" height="598"/>
-  <object id="24" name="right_drain_wall" gid="6" x="496" y="600" width="197" height="195"/>
-  <object id="25" name="left_drain_wall" gid="5" x="13" y="598" width="197" height="195"/>
+  <object id="24" name="drain_wall_right" gid="6" x="498" y="598" width="197" height="195"/>
+  <object id="25" name="drain_wall_left" gid="5" x="13" y="598" width="197" height="195"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="0" y="598" width="14" height="598"/>
-  <object id="27" name="drain_left_rail" gid="19" x="69" y="420" width="82" height="240"/>
-  <object id="29" name="drain_right_rail" gid="20" x="556" y="419" width="82" height="240"/>
   <object id="36" name="angled_wall_4" gid="11" x="643" y="138" width="52" height="86"/>
   <object id="37" name="angled_wall_1" gid="8" x="14" y="138" width="52" height="86"/>
   <object id="39" name="angled_wall_3" gid="10" x="642.667" y="52.3333" width="52" height="52"/>
@@ -83,14 +81,14 @@
   <object id="14" name="flipper_left" gid="2" x="130" y="539" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="408" y="540" width="170" height="124"/>
   <object id="16" name="ball" gid="16" x="514" y="85" width="26" height="26"/>
-  <object id="17" name="ball" gid="16" x="9" y="596" width="26" height="26"/>
-  <object id="18" name="ball" gid="16" x="42" y="596" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="130" y="363.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="524.5" y="363" width="55" height="186"/>
   <object id="32" name="circle_bumper_red" gid="15" x="311" y="271.5" width="94" height="95"/>
   <object id="33" name="circle_bumper_blue" gid="14" x="310.5" y="98" width="94" height="95"/>
   <object id="34" name="circle_bumper_yellow" gid="12" x="405.5" y="188" width="94" height="95"/>
   <object id="35" name="circle_bumper_green" gid="13" x="216.5" y="187" width="94" height="95"/>
+  <object id="48" name="drain_rail_right" gid="20" x="556" y="419" width="82" height="240"/>
+  <object id="49" name="drain_rail_left" gid="19" x="69" y="420" width="82" height="240"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="1" name="circle_bumper_blue" type="circle_bumper" x="309.909" y="2.28997" width="94.652" height="95.4154">
@@ -105,7 +103,7 @@
   <object id="5" name="circle_bumper_red" type="circle_bumper" x="309.909" y="175.946" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="6" name="right" type="drain_divider" x="633.25" y="179">
+  <object id="6" name="drain_rail_right" type="drain_divider" x="633.25" y="179">
    <polygon points="0,0 -6,2.75 -6.25,160.75 -76.25,231 -69.5,238.25 3.75,166 4,1.75"/>
   </object>
   <object id="7" name="flipper_bumper_right" type="flipper_bumper" x="579" y="183.25">
@@ -117,7 +115,7 @@
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="129" y="183.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
-  <object id="10" name="left" type="drain_divider" x="73.25" y="179.25">
+  <object id="10" name="drain_rail_left" type="drain_divider" x="73.25" y="179.25">
    <polygon points="0,0 5.5,2.5 6,161 75.5,231 69,238 -3.75,166 -4,1.5"/>
   </object>
   <object id="11" name="right" type="wall" x="784" y="0.333333">
@@ -125,6 +123,18 @@
   </object>
   <object id="12" name="left" type="wall" x="14" y="0.666667">
    <polygon points="0,0 51.6667,52 0.333333,136.333 0,402.333 194.667,597.333 -14,596.667 -14,-0.333333"/>
+  </object>
+  <object id="41" name="plunger" type="plunger" x="712.25" y="263.25">
+   <polygon points="0,0 0,13 67.75,13.5 67.75,0.25"/>
+  </object>
+  <object id="42" name="flipper_left" type="flipper" x="295.818" y="520">
+   <polygon points="0,0 -122.364,-100.364 -132.909,-104.909 -143.636,-104.909 -152.364,-100.727 -156.545,-97.6364 -161.455,-92 -164.545,-84.7273 -164.727,-71.6364 -162.545,-65.6364 -157.636,-58.5455 -152.909,-54.5455 -12.1818,17.2727 -9.09091,18.7273 -2.54545,17.8182 1.09091,14.3636 3.09091,11.6364 3.27273,3.09091"/>
+  </object>
+  <object id="43" name="flipper_right" type="flipper" x="538.545" y="418">
+   <polygon points="0,0 -127.455,103.636 -129.455,106.182 -129.818,114.545 -127.091,118.182 -122.182,121.455 -115.091,120.909 26.9091,48.1818 34.1818,40.7273 37.4545,34.7273 38.3636,32.1818 38.5455,18.9091 34.7273,10.5455 31.2727,6.36364 26.5455,2.72727 20.9091,-0.181818 14.7273,-2 6,-2"/>
+  </object>
+  <object id="45" name="ball" type="ball" x="513.818" y="58.7273" width="25.4545" height="26">
+   <ellipse/>
   </object>
  </objectgroup>
 </map>

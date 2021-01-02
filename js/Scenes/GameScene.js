@@ -1,8 +1,13 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
 function GameScene() {
-    this.transitionIn = function() {
+    this.properties = TABLES.Prototype
+    this.table = null
+    // eslint-disable-next-line consistent-this
+    const self = this
 
+    this.transitionIn = function() {
+        this.table = new MapBuilder(this.properties.tableName)
     }
 
     this.transitionOut = function() {
@@ -47,6 +52,17 @@ function GameScene() {
 
     const draw = function(deltaTime) {
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
-        canvasContext.drawImage(prototype, 0, 0, canvas.width, canvas.height);
+        // canvasContext.drawImage(prototype, 0, 0, canvas.width, canvas.height);
+        for (const staticObj of self.table.staticObjects) {
+            staticObj.draw();
+        }
+
+        for (const dynamicObj of self.table.dynamicObjects) {
+            dynamicObj.draw();
+        }
+
+        for (const wall of self.table.tableColliders) {
+            wall.draw();
+        }
     }
 }

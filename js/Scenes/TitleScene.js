@@ -57,7 +57,7 @@ function TitleScene() {
             case ALIAS.SELECT1:
                 // console.log("Activated the current button");
 //                SceneManager.setState(selections[selectorPositionsIndex]);
-                SceneManager.setState(SCENE.GAME);
+                SceneManager.setState(SCENE.GAME, TABLES.Prototype);
                 return true;
             case ALIAS.SELECT2:
                 // console.log("Selected the Play button");
