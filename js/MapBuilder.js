@@ -41,7 +41,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {
-            const bodyData = collisionData.find((data) => data.name === obj.name)
+            const bodyData = collisionData.find((data) => data.name === obj.name);
             if (obj.type === 'ball') {
                 self.balls.push(new Ball(obj, bodyData));
             } else {
@@ -57,7 +57,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
 
         for (const obj of collisionData) {
             if (obj.type === 'wall') {
-                result.push(new CollisionBody(obj));
+                result.push(new TableObject(obj));
             }
         }
 
@@ -75,6 +75,7 @@ function StaticMapObject (objData) {
     this.width = objData.width;
     this.height = objData.height;
     this.type = objData.type;
+    this.reflectance = objData.reflectance || 1;
     this.image = images[objData.name];
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
@@ -86,12 +87,32 @@ function DynamicMapObject (objData, bodyData) {
     this.y = objData.y - objData.height;
     this.width = objData.width;
     this.height = objData.height;
-    this.type = objData.type;
+    
+    if ((objData.type === 'left_flipper') || (objData.type === 'right_flipper')) {
+        this.type = ENTITY_TYPE.Flipper
+    } else {
+        this.type = objData.type;
+    }
+
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
+    this.reflectance = objData.reflectance || 1;
     this.update = function(deltaTime) {}
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
+        this.body.draw();
+    }
+}
+
+function TableObject (objData) {
+    this.x = objData.x;
+    this.y = objData.y - objData.height;
+    this.width = objData.width;
+    this.height = objData.height;
+    this.type = objData.type;
+    this.reflectance = objData.reflectance || 1;
+    this.body = new CollisionBody(objData);
+    this.draw = function() {
         this.body.draw();
     }
 }

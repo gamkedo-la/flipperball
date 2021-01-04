@@ -58,10 +58,24 @@ const TABLE_LAYERS = {
 	Fixed: 'Fixed'
 };
 
-const BodyType = {
+const BODY_TYPE = {
 	Circle: 'circle',
 	Polygon: 'polygon'
-}
+};
+
+const ENTITY_TYPE = {
+	Ball: 'ball',
+	CircleBumper: 'circle_bumper',
+	Flipper: 'flipper',
+	FlipperBumper: 'flipper_bumper',
+	Plunger: 'plunger',
+	Wall: 'wall'
+};
+
+const COLLISION_TYPE = {
+	Circle: 'circleXcircle',
+	Polygon: 'circleXpolygon'
+};
 //------------Asset Management----------//
 const images = {};
 

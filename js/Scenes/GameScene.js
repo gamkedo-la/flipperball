@@ -1,13 +1,27 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
 function GameScene() {
-    this.properties = TABLES.Prototype
-    this.table = null
+    this.properties = TABLES.Prototype;
+    this.table = null;
+    this.collisionManager = null;
     // eslint-disable-next-line consistent-this
     const self = this
 
     this.transitionIn = function() {
-        this.table = new MapBuilder(this.properties.tableName)
+        this.table = new MapBuilder(this.properties.tableName);
+        this.collisionManager = new CollisionManager();
+
+        for (const dynamicObj of self.table.dynamicObjects) {
+            this.collisionManager.registerEntity(dynamicObj);
+        }
+
+        for (const wall of self.table.tableColliders) {
+            this.collisionManager.registerEntity(wall);
+        }
+
+        for (const ball of self.table.balls) {
+            this.collisionManager.registerBall(ball);
+        }        
     }
 
     this.transitionOut = function() {
@@ -55,6 +69,8 @@ function GameScene() {
         for (const ball of self.table.balls) {
             ball.update(deltaTime);
         }
+
+        self.collisionManager.checkCollisions();
     }
 
     const draw = function(deltaTime) {

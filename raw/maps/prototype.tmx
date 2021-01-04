@@ -23,7 +23,7 @@
   <tile id="5" type="wall">
    <image width="197" height="195" source="../img/backgrounds/drain_wall_right.png"/>
   </tile>
-  <tile id="6">
+  <tile id="6" type="wall">
    <image width="14" height="598" source="../img/backgrounds/vertical_wall.png"/>
   </tile>
   <tile id="7" type="wall">
