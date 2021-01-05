@@ -19,6 +19,10 @@ function GameScene() {
             this.collisionManager.registerEntity(wall);
         }
 
+        for (const flipper of self.table.flippers) {
+            this.collisionManager.registerEntity(flipper);
+        }
+
         for (const ball of self.table.balls) {
             this.collisionManager.registerBall(ball);
         }        
@@ -37,12 +41,8 @@ function GameScene() {
     this.control = function(newKeyEvent, pressed, pressedKeys) {
         switch (newKeyEvent) {
             case ALIAS.LEFT:
-                // eslint-disable-next-line no-console
-                console.log("Left Flipper Activated");
                 return true;
             case ALIAS.RIGHT:
-                // eslint-disable-next-line no-console
-                console.log("Right Flipper Activated");
                 return true;
             case ALIAS.PLUNGER:
                 // eslint-disable-next-line no-console
@@ -66,6 +66,10 @@ function GameScene() {
             dynamicObj.update(deltaTime);
         }
 
+        for (const flipper of self.table.flippers) {
+            flipper.update(deltaTime);
+        }
+
         for (const ball of self.table.balls) {
             ball.update(deltaTime);
         }
@@ -86,6 +90,10 @@ function GameScene() {
 
         for (const wall of self.table.tableColliders) {
             wall.draw();
+        }
+
+        for (const flipper of self.table.flippers) {
+            flipper.draw();
         }
 
         for (const ball of self.table.balls) {

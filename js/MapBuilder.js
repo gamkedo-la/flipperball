@@ -44,6 +44,8 @@ function MapBuilder (tableName = TABLES.Prototype) {
             const bodyData = collisionData.find((data) => data.name === obj.name);
             if (obj.type === 'ball') {
                 self.balls.push(new Ball(obj, bodyData));
+            } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
+                self.flippers.push(new Flipper(obj, bodyData));
             } else {
                 result.push(new DynamicMapObject(obj, bodyData));
             }
@@ -75,8 +77,9 @@ function StaticMapObject (objData) {
     this.width = objData.width;
     this.height = objData.height;
     this.type = objData.type;
-    this.reflectance = objData.reflectance || 1;
+    this.reflectance = objData.reflectance || 0.75;
     this.image = images[objData.name];
+
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
     }
@@ -88,15 +91,12 @@ function DynamicMapObject (objData, bodyData) {
     this.width = objData.width;
     this.height = objData.height;
     
-    if ((objData.type === 'left_flipper') || (objData.type === 'right_flipper')) {
-        this.type = ENTITY_TYPE.Flipper
-    } else {
-        this.type = objData.type;
-    }
+    this.type = objData.type;
 
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
+
     this.update = function(deltaTime) {}
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
@@ -110,7 +110,7 @@ function TableObject (objData) {
     this.width = objData.width;
     this.height = objData.height;
     this.type = objData.type;
-    this.reflectance = objData.reflectance || 1;
+    this.reflectance = objData.reflectance || 0.4;
     this.body = new CollisionBody(objData);
     this.draw = function() {
         this.body.draw();

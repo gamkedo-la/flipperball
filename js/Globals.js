@@ -10,6 +10,8 @@ let CHEATS_ACTIVE = false;
 
 const GAME_SCALE = 1;
 const GRAVITY = 300;
+const ROTATION_RATE = 15;
+const MAX_ROTATION_ANGLE = Math.PI / 4;
 
 const canvasClearColor = "black";
 

@@ -45,6 +45,17 @@ function CollisionBody (data) {
         this.center.y += deltaY;
     }
 
+    this.rotate = function (center, angle) {
+        if (this.type === BODY_TYPE.Polygon) {
+            for (const edge of this.edges) {
+                edge.rotate(center, angle);
+            }
+        } else {
+            //Need to rotate a single point (the center) here
+
+        }
+    }
+
     this.draw = function () {
         if(!DEBUG) {return;}
         if(this.type === BODY_TYPE.Circle) {drawCircleBody(this.center, this.radius);}
@@ -79,13 +90,44 @@ function CollisionBody (data) {
 function Edge (start, end, x, y) {
     this.start = {x: start.x + x, y: start.y + y};
     this.end = {x: end.x + x, y: end.y + y};
+    this.rotation = 0;
 
-    const deltaX = (end.x - start.x);
-    const deltaY = (end.y - start.y);
-    this.length = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+    this.recalculate = function() {
+        const deltaX = (this.end.x - this.start.x);
+        const deltaY = (this.end.y - this.start.y);
+        this.length = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+    
+        const normalX = deltaY / this.length;
+        const normalY = -deltaX / this.length;
+        this.normal = {x: normalX, y: normalY};
+        this.reflectance = 0.75;//TODO: Need to override this default somehow
+    }
+    this.recalculate();
 
-    const normalX = deltaY / this.length;
-    const normalY = -deltaX / this.length;
-    this.normal = {x: normalX, y: normalY};
-    this.reflectance = 1;//TODO: Need to override this default somehow
+    this.rotate = function(center, angle) {
+        if (Math.abs(angle) < Number.EPSILON) {
+            this.start = {x: start.x + x, y: start.y + y};
+            this.end = {x: end.x + x, y: end.y + y};
+        } else if (Math.abs(this.rotation - angle) < Number.EPSILON) {
+            return;
+        } else {
+            const deltaStartX = this.start.x - center.x;
+            const deltaStartY = this.start.y - center.y;
+            const deltaEndX = this.end.x - center.x;
+            const deltaEndY = this.end.y - center.y;
+    
+            const startX = deltaStartX * Math.cos(angle - this.rotation) - deltaStartY * Math.sin(angle - this.rotation);
+            const startY = deltaStartX * Math.sin(angle - this.rotation) + deltaStartY * Math.cos(angle - this.rotation);
+            const endX = deltaEndX * Math.cos(angle - this.rotation) - deltaEndY * Math.sin(angle - this.rotation);
+            const endY = deltaEndX * Math.sin(angle - this.rotation) + deltaEndY * Math.cos(angle - this.rotation);
+    
+            this.start.x = startX + center.x;
+            this.start.y = startY + center.y;
+            this.end.x = endX + center.x;
+            this.end.y = endY + center.y;    
+        }
+
+        this.rotation = angle;
+        this.recalculate();
+    }
 }
