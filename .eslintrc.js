@@ -50,6 +50,7 @@ module.exports = {
         "KEY_SPACE": true,
         "KEY_UP": true,
         "localStorageKey": true,
+        "MAX_BALL_SPEED": true,
         "MAX_ROTATION_ANGLE": true,
         "menuMusic": true,
         "mouseX": true,

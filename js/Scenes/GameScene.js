@@ -4,6 +4,7 @@ function GameScene() {
     this.properties = TABLES.Prototype;
     this.table = null;
     this.collisionManager = null;
+    this.collisionRate = 20;
     // eslint-disable-next-line consistent-this
     const self = this
 
@@ -20,7 +21,7 @@ function GameScene() {
         }
 
         for (const flipper of self.table.flippers) {
-            this.collisionManager.registerEntity(flipper);
+            this.collisionManager.registerFlipper(flipper);
         }
 
         for (const ball of self.table.balls) {
@@ -62,19 +63,37 @@ function GameScene() {
     };
 
     const update = function(deltaTime) {
+        for (let i = 0; i < self.collisionRate / 2; i++) {
+            for (const flipper of self.table.flippers) {
+                flipper.update(deltaTime / self.collisionRate);
+            }
+    
+            for (const ball of self.table.balls) {
+                ball.update(deltaTime / self.collisionRate);
+            }
+
+            self.collisionManager.checkBallFlipperCollisions();
+        }
+
         for (const dynamicObj of self.table.dynamicObjects) {
             dynamicObj.update(deltaTime);
         }
 
-        for (const flipper of self.table.flippers) {
-            flipper.update(deltaTime);
-        }
-
-        for (const ball of self.table.balls) {
-            ball.update(deltaTime);
-        }
-
         self.collisionManager.checkCollisions();
+
+        for (let i = 0; i < self.collisionRate / 2; i++) {
+            for (const flipper of self.table.flippers) {
+                flipper.update(deltaTime / self.collisionRate);
+            }
+    
+            for (const ball of self.table.balls) {
+                ball.update(deltaTime / self.collisionRate);
+            }
+
+            self.collisionManager.checkBallFlipperCollisions();
+        }
+
+        
     }
 
     const draw = function(deltaTime) {

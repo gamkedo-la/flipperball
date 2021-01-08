@@ -28,7 +28,7 @@ function CollisionBody (data) {
 
         const width = maxX - minX;
         const height = maxY - minY;
-        self.radius = width > height ? width / 2 : height / 2;
+        self.radius = Math.sqrt((width) * (width) + (height) * (height)) / 2;
         self.center = {x: data.x + minX + width / 2, y: data.y + minY + height / 2};
     }
 
@@ -97,9 +97,41 @@ function Edge (start, end, x, y) {
         const deltaY = (this.end.y - this.start.y);
         this.length = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
     
-        const normalX = deltaY / this.length;
-        const normalY = -deltaX / this.length;
-        this.normal = {x: normalX, y: normalY};
+        /*
+            (x < 0, y < 0) [left-up] -> (x > 0, y < 0) [right-up]
+            (x < 0, y > 0) [left-down] -> (x < 0, y < 0) [left-up]
+            (x > 0, y > 0) [right-down] -> (x < 0, y > 0) [left-down]
+            (x > 0, y < 0) [right-up] -> (x > 0, y > 0) [right-down]
+            left -> up, down -> left, right -> down, up -> right
+        */
+
+        const normalizedX = deltaX / this.length;
+        const normalizedY = deltaY / this.length;
+        if (Math.abs(deltaX) < Number.EPSILON) {
+            if (deltaY >= 0) { // down -> left
+                this.normal = {x: -1, y: 0};
+            } else { // up -> right
+                this.normal = {x: 1, y: 0};
+            }
+        } else if (Math.abs(deltaY) < Number.EPSILON) {
+            if (deltaX >= 0) { // right -> down
+                this.normal = {x: 0, y: 1};
+            } else { // left -> up
+                this.normal = {x: 0, y: -1};
+            }
+        // } else if((deltaX < 0) && (deltaY < 0)) { //left-up -> right-up
+        //     this.normal = {x: -normalizedY, y: normalizedX};
+        // } else if((deltaX < 0) && (deltaY > 0)) { //left-down -> left-up
+        //     this.normal = {x: -normalizedY, y: normalizedX};
+        // } else if((deltaX > 0) && (deltaY > 0)) { // right-down -> left-down
+        //     this.normal = {x: -normalizedY, y: normalizedX};
+        // } else if((deltaX > 0) && (deltaY < 0)) { // right-up -> right-down
+        //     this.normal = {x: -normalizedY, y: normalizedX};
+        // }
+        } else {
+            this.normal = {x: -normalizedY, y: normalizedX};
+        }
+
         this.reflectance = 0.75;//TODO: Need to override this default somehow
     }
     this.recalculate();

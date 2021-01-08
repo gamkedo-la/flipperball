@@ -3,6 +3,7 @@
 // eslint-disable-next-line no-unused-vars
 function CollisionManager () {
     this.balls = new Set();
+    this.flippers = new Set();
     this.entities = new Set();
     this.collisions = [];
 
@@ -11,7 +12,15 @@ function CollisionManager () {
     }
 
     this.unregisterBall = function(ball) {
-        this.balls.delete(ball)
+        this.balls.delete(ball);
+    }
+
+    this.registerFlipper = function(flipper) {
+        this.flippers.add(flipper);
+    }
+
+    this.unregisterFlipper = function(flipper) {
+        this.flippers.delete(flipper);
     }
 
     this.registerEntity = function (entity) {
@@ -22,7 +31,7 @@ function CollisionManager () {
         this.entities.delete(entity);
     }
 
-    this.checkCollisions = function() {
+    this.checkBallFlipperCollisions = function() {
         for (const ball of this.balls.values()) {
             this.collisions.length = 0; //empty the collisions array
             for (const otherBall of this.balls.values()) {
@@ -40,6 +49,24 @@ function CollisionManager () {
                 }
             }
 
+            for (const flipper of this.flippers.values()) {
+                const distance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.body.center.x, flipper.body.center.y);
+                const squaredRadii = (ball.body.radius + flipper.body.radius) * (ball.body.radius + flipper.body.radius);
+                if (distance <= squaredRadii) {
+                    const circleLine = circlePolygonCollision(ball, flipper);
+                    if (circleLine && circleLine.length > 0) {
+                        this.collisions.push(...circleLine);
+                    }
+                }                
+            }
+
+            ball.resolveCollisions(this.collisions);
+        }
+    }
+
+    this.checkCollisions = function() {
+        for (const ball of this.balls.values()) {
+            this.collisions.length = 0; //empty the collisions array
             for (const entity of this.entities.values()) {
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
                 const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
@@ -74,38 +101,25 @@ function CollisionManager () {
         for (const edge of polygon.body.edges) {
             const coll = circleLineCollision(circle, edge);
             if (coll != null) {
-                result.push(new Collision(COLLISION_TYPE.Polygon, polygon, coll.dist, coll.dir, edge));
+                result.push(new Collision(COLLISION_TYPE.Polygon, polygon, coll.dist, coll.dir, coll.point, edge));
             }
         }
         return result;
     }
 
     const circleLineCollision = function (circle, line) {
-        const plusX = circle.body.center.x + circle.body.radius * line.normal.x;
-        const plusY = circle.body.center.y + circle.body.radius * line.normal.y;
         const minusX = circle.body.center.x - circle.body.radius * line.normal.x;
         const minusY = circle.body.center.y - circle.body.radius * line.normal.y;
 
-        const plusCollision = lineLineCollision(
-            circle.body.center.x, circle.body.center.y,
-            plusX, plusY,
-            line.start.x, line.start.y,
-            line.end.x, line.end.y
-        );
-
-        if (plusCollision !== null) {
-            return {dist: plusCollision * circle.body.radius, dir: {x: -line.normal.x, y: -line.normal.y}};
-        }
-
-        const minusCollision = lineLineCollision(
+        const collision = lineLineCollision(
             circle.body.center.x, circle.body.center.y,
             minusX, minusY,
             line.start.x, line.start.y,
             line.end.x, line.end.y
         );
 
-        if (minusCollision !== null) {
-            return {dist: minusCollision * circle.body.radius, dir: line.normal};
+        if (collision !== null) {
+            return {dist: collision.line1Dist * circle.body.radius, dir: line.normal, point: collision.point};
         } else {
             return null;
         }
@@ -139,7 +153,10 @@ function CollisionManager () {
         const s = numerator2 / denominator;
     
         if ((r >= 0 && r <= 1) && (s >= 0 && s <= 1)) {
-            return r;
+            // r * line1 === s * line2
+            const line1DeltaX = line1EndX - line1StartX;
+            const line1DeltaY = line1EndY - line1StartY;
+            return {line1Dist: r, line2Dist: s, point: {x: line1StartX + r * line1DeltaX, y: line1StartY + r * line1DeltaY}}
         } else {
             return null;
         }
@@ -157,10 +174,11 @@ function CollisionManager () {
     }
 }
 
-function Collision (type, otherEntity, distance, direction, edge = null) {
+function Collision (type, otherEntity, distance, direction, point = null, edge = null) {
     this.type = type;
     this.otherEntity = otherEntity;
     this.distance = distance;
     this.direction = direction;
+    this.point = point;
     this.edge = edge;
 }

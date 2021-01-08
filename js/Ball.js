@@ -1,6 +1,8 @@
 //Ball.js
 // eslint-disable-next-line no-unused-vars
 function Ball (objData, bodyData) {
+    // eslint-disable-next-line consistent-this
+    const self = this;
     this.x = objData.x;
     this.oldX = objData.x;
     this.xAdjustment = 0;
@@ -30,6 +32,12 @@ function Ball (objData, bodyData) {
 
         this.velocity.y += GRAVITY * deltaTime / 1000;
 
+        const speed = Math.sqrt((this.velocity.x) * (this.velocity.x) + (this.velocity.y) * (this.velocity.y));
+        if (speed > MAX_BALL_SPEED) {
+            this.velocity.x = this.velocity.x * (MAX_BALL_SPEED / speed);
+            this.velocity.y = this.velocity.y * (MAX_BALL_SPEED / speed);
+        }
+
         const deltaX = this.velocity.x * deltaTime / 1000;
         const deltaY = this.velocity.y * deltaTime / 1000;
         this.x += deltaX;
@@ -49,25 +57,9 @@ function Ball (objData, bodyData) {
             // }
             if (respondsTo(collision.otherEntity.type)) {
                 if (collision.edge) {
-                    const {reflectance} = collision.edge;
-                    const dot = this.velocity.x * collision.direction.x + this.velocity.y * collision.direction.y;
-                    if (dot <= 0) {
-                        this.xAdjustment += (this.radius - collision.distance) * collision.direction.x;
-                        this.yAdjustment += (this.radius - collision.distance) * collision.direction.y;    
-                    } else {
-                        this.xAdjustment -= (this.radius - collision.distance) * collision.direction.x;
-                        this.yAdjustment -= (this.radius - collision.distance) * collision.direction.y;    
-                    }
-                    
-                    this.vxAdjustment -= (2 * reflectance * dot * collision.direction.x);
-                    this.vyAdjustment -= (2 * reflectance * dot * collision.direction.y);
+                    respondToPolygonCollision(collision);
                 } else {
-                    const {reflectance} = collision.otherEntity;
-                    this.xAdjustment += (this.radius - collision.distance) * collision.direction.x;
-                    this.yAdjustment += (this.radius - collision.distance) * collision.direction.y;
-                    const speed = Math.sqrt((this.velocity.x) * (this.velocity.x) + (this.velocity.y) * (this.velocity.y));
-                    this.vxAdjustment += speed * reflectance * collision.direction.x - this.velocity.x;
-                    this.vyAdjustment += speed * reflectance * collision.direction.y - this.velocity.y;
+                    respondToCircularCollision(collision);
                 }
             }
         }
@@ -91,6 +83,36 @@ function Ball (objData, bodyData) {
             default:
                 return false;
         }
+    }
+
+    const respondToCircularCollision = function(collision) {
+        const {reflectance} = collision.otherEntity;
+        self.xAdjustment += (self.radius - collision.distance) * collision.direction.x;
+        self.yAdjustment += (self.radius - collision.distance) * collision.direction.y;
+        const speed = Math.sqrt((self.velocity.x) * (self.velocity.x) + (self.velocity.y) * (self.velocity.y));
+        self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
+        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
+    }
+
+    const respondToPolygonCollision = function(collision) {
+        const {reflectance} = collision.edge;
+        const velDot = self.velocity.x * collision.direction.x + self.velocity.y * collision.direction.y;
+
+        let xPosAdjust = (self.radius - collision.distance) * collision.direction.x;
+        let yPosAdjust = (self.radius - collision.distance) * collision.direction.y;
+        let xVelAdjust = -(2 * reflectance * velDot * collision.direction.x);
+        let yVelAdjust = -(2 * reflectance * velDot * collision.direction.y);
+
+        if (collision.otherEntity.type === ENTITY_TYPE.Flipper) {
+            const reflectedVelocity = collision.otherEntity.velocityForPointOnEdge(collision.point);
+            xVelAdjust *= reflectedVelocity;
+            yVelAdjust *= reflectedVelocity;
+        }
+
+        self.xAdjustment += xPosAdjust;
+        self.yAdjustment += yPosAdjust;
+        self.vxAdjustment += xVelAdjust;
+        self.vyAdjustment += yVelAdjust;
     }
 
     this.didCollideWith = function() {

@@ -2,6 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 function Flipper (objData, bodyData) {
     //Rotate around larger circle whose radius is 27pixels and located at position (27, 27)
+    //Left flipper small circle at (157, 111) radius = 11
+    //Right flipper small circle at (11, 111) radius = 11
     this.x = objData.x;
     this.y = objData.y - objData.height;
     this.width = objData.width;
@@ -12,6 +14,7 @@ function Flipper (objData, bodyData) {
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 0.4;
+    this.reflectedVelocity = 15;
     this.rotation = 0;
     this.oldRotation = 0;
     this.rotationCenter = {};
@@ -19,10 +22,12 @@ function Flipper (objData, bodyData) {
         this.input = ALIAS.LEFT;
         this.side = 'left'
         this.rotationCenter = {x: this.x + 27, y: this.y + 27}
+        this.tipBody = new CollisionBody({ellipse: true, width: 22, height: 22, x: 157, y: 111})
     } else if (objData.type === 'right_flipper') {
         this.input = ALIAS.RIGHT;
         this.side = 'right'
         this.rotationCenter = {x:this.x + (this.image.width - 27), y: this.y + 27};
+        this.tipBody = new CollisionBody({ellipse: true, width: 22, height: 22, x: 11, y: 111})
     }
 
     this.update = function(deltaTime) {
@@ -54,14 +59,12 @@ function Flipper (objData, bodyData) {
         this.body.rotate(this.rotationCenter, this.rotation);
     }
 
-    this.getLinearVelocityForPosition = function(x, y) {
+    this.velocityForPointOnEdge = function(point, edge) {
         if (Math.abs(this.rotation - this.oldRotation) < Number.EPSILON) {
-            return 0;
+            return 1;
         }
 
-        const deltaAngle = this.rotation - this.oldRotation;
-        const flipperLength = Math.sqrt((x - this.rotationCenter.x) * (x - this.rotationCenter.x) + (y - this.rotationCenter.y) * (y - this.rotationCenter.y));
-        return {x: flipperLength * Math.cos(deltaAngle), y: flipperLength * Math.sin(deltaAngle)};
+        return 1.5;
     }
     
     this.draw = function() {
