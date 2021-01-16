@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-//Main for Xeno Jackers
+//Main for Flipperball
 window.onload = function() {
     window.addEventListener("focus", windowOnFocus);
     window.addEventListener("blur", windowOnBlur);
