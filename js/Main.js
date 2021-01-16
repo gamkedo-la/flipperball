@@ -8,7 +8,7 @@ window.onload = function() {
 	canvas.classList.add("game-canvas")
     canvasContext = canvas.getContext("2d");
     document.body.appendChild(canvas);
-    canvas.width = 800;
+    canvas.width = 1000;
     canvas.height = 600;
 	drawRect(0, 0, canvas.width, canvas.height, Color.Black);
 
