@@ -26,30 +26,6 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":6,
-                 "height":195,
-                 "id":24,
-                 "name":"drain_wall_right",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":197,
-                 "x":698,
-                 "y":598
-                }, 
-                {
-                 "gid":5,
-                 "height":195,
-                 "id":25,
-                 "name":"drain_wall_left",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":197,
-                 "x":289,
-                 "y":598
-                }, 
-                {
                  "gid":7,
                  "height":598,
                  "id":26,
@@ -113,7 +89,7 @@
                  "gid":11,
                  "height":86,
                  "id":59,
-                 "name":"",
+                 "name":"angled_wall_4",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -125,7 +101,7 @@
                  "gid":21,
                  "height":14,
                  "id":61,
-                 "name":"",
+                 "name":"horizontal_wall",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -137,7 +113,7 @@
                  "gid":21,
                  "height":14,
                  "id":62,
-                 "name":"",
+                 "name":"horizontal_wall",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -165,8 +141,8 @@
                  "type":"left_flipper",
                  "visible":true,
                  "width":170,
-                 "x":380,
-                 "y":539
+                 "x":292,
+                 "y":590
                 }, 
                 {
                  "gid":3,
@@ -177,8 +153,8 @@
                  "type":"right_flipper",
                  "visible":true,
                  "width":170,
-                 "x":630,
-                 "y":540
+                 "x":723,
+                 "y":593
                 }, 
                 {
                  "gid":17,
@@ -189,8 +165,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":360,
-                 "y":363.5
+                 "x":322,
+                 "y":410.5
                 }, 
                 {
                  "gid":18,
@@ -201,32 +177,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":761.5,
-                 "y":363
-                }, 
-                {
-                 "gid":20,
-                 "height":240,
-                 "id":48,
-                 "name":"drain_rail_right",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":82,
-                 "x":778,
-                 "y":419
-                }, 
-                {
-                 "gid":19,
-                 "height":240,
-                 "id":49,
-                 "name":"drain_rail_left",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":82,
-                 "x":319,
-                 "y":420
+                 "x":807.5,
+                 "y":428
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -300,8 +252,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":359,
-                 "y":183.5
+                 "x":321,
+                 "y":230.5
                 }, 
                 {
                  "height":0,
@@ -384,8 +336,8 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":545.818,
-                 "y":520
+                 "x":458.818,
+                 "y":570
                 }, 
                 {
                  "height":0,
@@ -468,80 +420,8 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":760.545,
-                 "y":418
-                }, 
-                {
-                 "height":0,
-                 "id":51,
-                 "name":"drain_rail_right",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-10.5,
-                         "y":1.5
-                        }, 
-                        {
-                         "x":-10.25,
-                         "y":161.159
-                        }, 
-                        {
-                         "x":-80.9773,
-                         "y":231.432
-                        }, 
-                        {
-                         "x":-73.3409,
-                         "y":238.886
-                        }, 
-                        {
-                         "x":-0.25,
-                         "y":165.159
-                        }],
-                 "rotation":0,
-                 "type":"drain_divider",
-                 "visible":true,
-                 "width":0,
-                 "x":859.25,
-                 "y":178.75
-                }, 
-                {
-                 "height":0,
-                 "id":52,
-                 "name":"drain_rail_left",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":0,
-                         "y":164.364
-                        }, 
-                        {
-                         "x":72.5455,
-                         "y":237.818
-                        }, 
-                        {
-                         "x":80.1818,
-                         "y":230.909
-                        }, 
-                        {
-                         "x":10.1818,
-                         "y":161.091
-                        }, 
-                        {
-                         "x":9.81818,
-                         "y":1.63636
-                        }],
-                 "rotation":0,
-                 "type":"drain_divider",
-                 "visible":true,
-                 "width":0,
-                 "x":320,
-                 "y":180.182
+                 "x":851.545,
+                 "y":470
                 }, 
                 {
                  "height":0,
@@ -557,8 +437,8 @@
                          "y":599.5
                         }, 
                         {
-                         "x":210.5,
-                         "y":598.5
+                         "x":12.5,
+                         "y":597.5
                         }, 
                         {
                          "x":13.5,
@@ -644,8 +524,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":816.273,
-                 "y":317.455
+                 "x":862.273,
+                 "y":381.455
                 }, 
                 {
                  "height":0,
@@ -697,7 +577,7 @@
                          "y":276.333333333333
                         }, 
                         {
-                         "x":-212,
+                         "x":-14,
                          "y":472
                         }, 
                         {

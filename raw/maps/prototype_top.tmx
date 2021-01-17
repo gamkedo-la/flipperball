@@ -70,52 +70,42 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
-  <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="37" name="angled_wall_1" gid="8" x="290" y="138" width="52" height="86"/>
   <object id="40" name="angled_wall_2" gid="9" x="290" y="53" width="52" height="52"/>
   <object id="56" name="vertical_wall" type="wall" gid="7" x="986" y="598" width="14" height="598"/>
   <object id="57" name="vertical_wall" type="wall" gid="7" x="894" y="725" width="14" height="598"/>
-  <object id="59" gid="11" x="934" y="100.333" width="52" height="86"/>
-  <object id="61" gid="21" x="388" y="14" width="598" height="14"/>
-  <object id="62" gid="21" x="278" y="14" width="598" height="14"/>
+  <object id="59" name="angled_wall_4" gid="11" x="934" y="100.333" width="52" height="86"/>
+  <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
+  <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
-  <object id="14" name="flipper_left" gid="2" x="380" y="539" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="630" y="540" width="170" height="124"/>
-  <object id="30" name="flipper_bumper_left" gid="17" x="360" y="363.5" width="55" height="186"/>
-  <object id="31" name="flipper_bumper_right" gid="18" x="761.5" y="363" width="55" height="186"/>
-  <object id="48" name="drain_rail_right" gid="20" x="778" y="419" width="82" height="240"/>
-  <object id="49" name="drain_rail_left" gid="19" x="319" y="420" width="82" height="240"/>
+  <object id="14" name="flipper_left" gid="2" x="292" y="590" width="170" height="124"/>
+  <object id="15" name="flipper_right" gid="3" x="723" y="593" width="170" height="124"/>
+  <object id="30" name="flipper_bumper_left" gid="17" x="322" y="410.5" width="55" height="186"/>
+  <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="428" width="55" height="186"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
-  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="359" y="183.5">
+  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="321" y="230.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="545.818" y="520">
+  <object id="42" name="flipper_left" type="flipper" x="458.818" y="570">
    <polygon points="0,0 -122.364,-100.364 -132.909,-104.909 -143.636,-104.909 -152.364,-100.727 -156.545,-97.6364 -161.455,-92 -164.545,-84.7273 -164.727,-71.6364 -162.545,-65.6364 -157.636,-58.5455 -152.909,-54.5455 -12.1818,17.2727 -9.09091,18.7273 -2.54545,17.8182 1.09091,14.3636 3.09091,11.6364 3.27273,3.09091"/>
   </object>
-  <object id="43" name="flipper_right" type="flipper" x="760.545" y="418">
+  <object id="43" name="flipper_right" type="flipper" x="851.545" y="470">
    <polygon points="0,0 -127.455,103.636 -129.455,106.182 -129.818,114.545 -127.091,118.182 -122.182,121.455 -115.091,120.909 26.9091,48.1818 34.1818,40.7273 37.4545,34.7273 38.3636,32.1818 38.5455,18.9091 34.7273,10.5455 31.2727,6.36364 26.5455,2.72727 20.9091,-0.181818 14.7273,-2 6,-2"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="859.25" y="178.75">
-   <polygon points="0,0 -10.5,1.5 -10.25,161.159 -80.9773,231.432 -73.3409,238.886 -0.25,165.159"/>
-  </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="320" y="180.182">
-   <polygon points="0,0 0,164.364 72.5455,237.818 80.1818,230.909 10.1818,161.091 9.81818,1.63636"/>
-  </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,0 -1,599.5 210.5,598.5 13.5,401.5 13,136.5 64.5,52 14,-0.5"/>
+   <polygon points="0,0 -1,599.5 12.5,597.5 13.5,401.5 13,136.5 64.5,52 14,-0.5"/>
   </object>
-  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="816.273" y="317.455">
+  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="862.273" y="381.455">
    <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
   </object>
   <object id="58" name="right" type="wall" x="986.333" y="0">
    <polygon points="-61.6667,0 0.0131669,100.376 -0.333333,599.333 13.6667,599.333 13.6667,0"/>
   </object>
   <object id="60" name="inner_right" type="wall" x="908.333" y="127.333">
-   <polygon points="0,0 -14,0.666667 -14.3333,276.333 -212,472 0,472.333"/>
+   <polygon points="0,0 -14,0.666667 -14.3333,276.333 -14,472 0,472.333"/>
   </object>
   <object id="63" name="top" type="wall" x="940" y="0">
    <polygon points="0,0 -664.333,0.333333 -664.333,13.3333 4.66667,14"/>

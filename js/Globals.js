@@ -52,7 +52,8 @@ let worldSpeed = 1;
 
 //------------Tables----------//
 const TABLES = {
-	Prototype: 'prototype'
+	Prototype: 'prototype',
+	PrototypeTop: 'prototype_top'
 };
 
 const TABLE_LAYERS = {

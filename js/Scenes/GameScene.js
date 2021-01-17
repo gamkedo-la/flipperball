@@ -24,9 +24,20 @@ function GameScene() {
             this.collisionManager.registerFlipper(flipper);
         }
 
-        for (const ball of self.table.balls) {
-            this.collisionManager.registerBall(ball);
-        }        
+        if (this.properties.ball) {
+            self.table.balls.length = 0
+            if (this.properties.ballOffset) {
+                this.properties.ball.setPosition(this.properties.ball.x + this.properties.ballOffset.x, this.properties.ball.y + this.properties.ballOffset.y);
+                // this.properties.ball.x += this.properties.ballOffset.x;
+                // this.properties.ball.y += this.properties.ballOffset.y;
+            }
+            self.table.balls.push(this.properties.ball);
+            this.collisionManager.registerBall(this.properties.ball);
+        } else {
+            for (const ball of self.table.balls) {
+                this.collisionManager.registerBall(ball);
+            }
+        }
     }
 
     this.transitionOut = function() {
@@ -93,7 +104,16 @@ function GameScene() {
             self.collisionManager.checkBallFlipperCollisions();
         }
 
-        
+        //TODO: We'll need to change to figure out what to do about multi-ball
+        for (const ball of self.table.balls) {
+            if (ball.y < 0) {
+                SceneManager.setState(SCENE.GAME, {tableName: TABLES.PrototypeTop, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                break
+            } else if (ball.y > canvas.height) {
+                SceneManager.setState(SCENE.GAME, {tableName: TABLES.Prototype, ball: ball, ballOffset: {x: 0, y: -canvas.height}});
+                break
+            }
+        }
     }
 
     const draw = function(deltaTime) {

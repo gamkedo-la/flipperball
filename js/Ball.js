@@ -45,6 +45,16 @@ function Ball (objData, bodyData) {
         this.body.update(deltaX, deltaY);
     }
 
+    this.setPosition = function (x, y) {
+        this.oldX = this.x;
+        this.oldY = this.y;
+        this.x = x;
+        this.y = y;
+        this.body.update(this.x - this.oldX, this.y - this.oldY);
+        this.oldX = this.x;
+        this.oldY = this.y;
+    }
+
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
         this.body.draw();

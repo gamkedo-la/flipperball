@@ -93,7 +93,8 @@ function loadImages() {
         {imgName: "plunger_chute", theFile: "tables/plunger_chute.png"},
         {imgName: "plunger", theFile: "tables/plunger.png"},
 
-        {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"}
+        {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
+        {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"}
     ];
 
     picsToLoad = imageList.length;
