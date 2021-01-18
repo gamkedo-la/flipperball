@@ -7,6 +7,7 @@ function GameScene() {
     this.collisionRate = 20;
     // eslint-disable-next-line consistent-this
     const self = this
+    this.paused = false;
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
@@ -45,8 +46,11 @@ function GameScene() {
     }
 
     this.run = function(deltaTime) {
+        if (this.paused) {
+            return
+        }
+        
         update(deltaTime);
-
         draw(deltaTime);
     }
 
@@ -67,6 +71,12 @@ function GameScene() {
                 DEBUG = !DEBUG;
                 // eslint-disable-next-line no-console
                 console.log("Debug? " + DEBUG);
+                return true;
+            case ALIAS.PAUSE:
+            case ALIAS.PAUSE2:
+                if (!pressed) {
+                    this.paused = !this.paused;
+                }
                 return true;
         }
         
