@@ -146,3 +146,15 @@ function turnVolumeDown() {
 	setMusicVolume(musicVolume - VOLUME_INCREMENT);
 	setEffectsVolume(effectsVolume - VOLUME_INCREMENT);
 }
+
+function playPauseSound() {
+	if(!isMuted) {
+		pauseSound.play();
+	}
+}
+
+function playResumeSound() {
+	if(!isMuted) {
+		resumeSound.play();
+	}
+}

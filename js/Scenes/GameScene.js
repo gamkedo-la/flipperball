@@ -74,14 +74,28 @@ function GameScene() {
                 return true;
             case ALIAS.PAUSE:
             case ALIAS.PAUSE2:
-                if (!pressed) {
-                    this.paused = !this.paused;
+                this.pauseScene(pressed);
+                return true;
+            case ALIAS.MUTE:
+                if (pressed) {
+                    toggleMute();
                 }
                 return true;
         }
         
         return false;
     };
+
+    this.pauseScene = function(pressed) {
+        if (pressed) {
+            this.paused = !this.paused;
+            if(this.paused) {
+                playPauseSound();
+            } else {
+                playResumeSound();
+            }
+        }
+    }
 
     const update = function(deltaTime) {
         for (let i = 0; i < self.collisionRate / 2; i++) {
