@@ -8,7 +8,6 @@ let menuMusic;
 let musicVolume;
 let effectsVolume;
 let currentBackgroundMusic;
-let currentBackgroundMusicInitialized = false;
 
 const VOLUME_INCREMENT = 0.05;
 
@@ -176,8 +175,5 @@ function resumeSoundAndMusic() {
 }
 
 function playBackgroundMusic() {
-	// if (!currentBackgroundMusicInitialized) {
-	// 	currentBackgroundMusicInitialized = true;
-		currentBackgroundMusic.loopSong(assetPath.Audio + "BeepBox-Song");
-	// }
+	currentBackgroundMusic.loopSong(assetPath.Audio + "BeepBox-Song");
 }
