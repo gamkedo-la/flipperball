@@ -8,11 +8,12 @@ let menuMusic;
 let musicVolume;
 let effectsVolume;
 let currentBackgroundMusic;
+let currentBackgroundMusicInitialized = false;
+
 const VOLUME_INCREMENT = 0.05;
 
 function configureGameAudio() {
-//	currentBackgroundMusic = new BackgroundMusicClass();//TODO: Restore once there is background music
-	
+	currentBackgroundMusic = new BackgroundMusicClass(); 
 	musicVolume = parseFloat(localStorage.getItem(localStorageKey.MusicVolume));
 	effectsVolume = parseFloat(localStorage.getItem(localStorageKey.SFXVolume));
 	
@@ -26,6 +27,7 @@ function configureGameAudio() {
 }
 
 function loadAudio() {
+	
 	pauseSound = new SoundOverlapsClass(assetPath.Audio + "PauseSoundLow");
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 //	menuMusic = assetPath.Audio + "beeblebrox";
@@ -40,14 +42,14 @@ function setFormat() {
     }
 }
 
-function BackgroundMusicClass() {	
+function BackgroundMusicClass(filenameWithPath) {	
     this.loopSong = function(filenameWithPath) {
         setFormat(); // calling this to ensure that audioFormat is set before needed
 
         if (musicSound != null) {
             musicSound.pause();
             musicSound = null;
-        }
+		}
         musicSound = new Audio(filenameWithPath + audioFormat);
         musicSound.loop = true;
         this.setVolume(musicVolume);
@@ -114,7 +116,11 @@ function getRandomVolume(){
 
 function toggleMute() {
 	isMuted = !isMuted;
-//	currentBackgroundMusic.setVolume(musicVolume);//TODO: restore once there is background music
+	if (isMuted) {
+		currentBackgroundMusic.pauseSound();	
+	} else {
+		currentBackgroundMusic.resumeSound();
+	}	
 }
 
 function setEffectsVolume(amount)
@@ -134,7 +140,7 @@ function setMusicVolume(amount){
 	} else if (musicVolume < 0.0) {
 		musicVolume = 0.0;
 	}
-//	currentBackgroundMusic.setVolume(musicVolume);//TODO:Restore once there is background music
+	currentBackgroundMusic.setVolume(musicVolume);
 }
 
 function turnVolumeUp() {
@@ -157,4 +163,21 @@ function playResumeSound() {
 	if(!isMuted) {
 		resumeSound.play();
 	}
+}
+
+function pauseSoundAndMusic() {
+	playPauseSound();
+	currentBackgroundMusic.pauseSound();
+}
+
+function resumeSoundAndMusic() {
+	playResumeSound();
+	currentBackgroundMusic.resumeSound();
+}
+
+function playBackgroundMusic() {
+	// if (!currentBackgroundMusicInitialized) {
+	// 	currentBackgroundMusicInitialized = true;
+		currentBackgroundMusic.loopSong(assetPath.Audio + "BeepBox-Song");
+	// }
 }

@@ -52,6 +52,8 @@ const KEY_Z = 90;
 const KEY_PLUS = 187;
 const KEY_MINUS = 189;
 const KEY_TILDE = 192;
+const KEY_OPEN_ANGLE = 188;
+const KEY_CLOSE_ANGLE = 190;
 
 let mouseY = 0;
 let mouseX = 0;
@@ -75,7 +77,9 @@ const ALIAS = {
 	POINTER:LEFT_MOUSE_BUTTON,
 	CONTEXT:RIGHT_MOUSE_BUTTON,
 	PAUSE: KEY_P,
-	PAUSE2: KEY_ESCAPE
+	PAUSE2: KEY_ESCAPE,
+	VOLUME_UP: KEY_CLOSE_ANGLE,
+	VOLUME_DOWN: KEY_OPEN_ANGLE
 }
 
 function initializeInput() {

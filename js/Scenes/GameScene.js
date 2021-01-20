@@ -39,6 +39,8 @@ function GameScene() {
                 this.collisionManager.registerBall(ball);
             }
         }
+        
+        playBackgroundMusic();
     }
 
     this.transitionOut = function() {
@@ -81,6 +83,16 @@ function GameScene() {
                     toggleMute();
                 }
                 return true;
+            case ALIAS.VOLUME_UP:
+                if(pressed) {
+                    turnVolumeUp();
+                }
+                return true;
+            case ALIAS.VOLUME_DOWN:
+                if (pressed) {
+                    turnVolumeDown();
+                }
+                return true;
         }
         
         return false;
@@ -90,9 +102,9 @@ function GameScene() {
         if (pressed) {
             this.paused = !this.paused;
             if(this.paused) {
-                playPauseSound();
+                pauseSoundAndMusic();
             } else {
-                playResumeSound();
+                resumeSoundAndMusic();
             }
         }
     }
