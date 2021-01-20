@@ -146,8 +146,12 @@ function TitleScene() {
 	
 	const drawBG = function() {
         // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
+        const PADDING = 40;
         drawRect(0, 0, canvas.width, canvas.height);
         colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*3, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
     }
         
     return this;
