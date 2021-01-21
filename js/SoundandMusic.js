@@ -10,6 +10,7 @@ let effectsVolume;
 let currentBackgroundMusic;
 let currentBackgroundMusicInitialized = false;
 
+//Practice Commit - will remove
 const VOLUME_INCREMENT = 0.05;
 
 function configureGameAudio() {
