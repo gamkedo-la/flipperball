@@ -26,6 +26,18 @@
          "name":"Fixed",
          "objects":[
                 {
+                 "gid":21,
+                 "height":600,
+                 "id":56,
+                 "name":"cloud_bg",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":720,
+                 "x":280,
+                 "y":600
+                }, 
+                {
                  "gid":4,
                  "height":598,
                  "id":23,
@@ -177,8 +189,8 @@
                  "type":"ball",
                  "visible":true,
                  "width":26,
-                 "x":761.166666666667,
-                 "y":88.8333333333333
+                 "x":761.167,
+                 "y":88.8333
                 }, 
                 {
                  "gid":17,
@@ -608,8 +620,8 @@
                  "type":"ball",
                  "visible":true,
                  "width":25.4545,
-                 "x":761.469515151515,
-                 "y":62.5148787878788
+                 "x":761.47,
+                 "y":62.5149
                 }, 
                 {
                  "height":0,
@@ -878,7 +890,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":56,
+ "nextobjectid":57,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1040,6 +1052,29 @@
                  "type":"wall"
                 }],
          "tilewidth":197
+        }, 
+        {
+         "columns":0,
+         "firstgid":21,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"cloud_bg",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":600,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/raw\/img\/backgrounds\/cloud_bg.png",
+                 "imageheight":600,
+                 "imagewidth":720
+                }],
+         "tilewidth":720
         }],
  "tilewidth":10,
  "type":"map",
