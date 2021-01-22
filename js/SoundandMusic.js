@@ -145,11 +145,17 @@ function setMusicVolume(amount){
 
 function turnVolumeUp() {
 	setMusicVolume(musicVolume + VOLUME_INCREMENT);
-	setEffectsVolume(effectsVolume + VOLUME_INCREMENT);
 }
 
 function turnVolumeDown() {
 	setMusicVolume(musicVolume - VOLUME_INCREMENT);
+}
+
+function turnSFXVolumeUp() {
+	setEffectsVolume(effectsVolume + VOLUME_INCREMENT);
+}
+
+function turnSFXVolumeDown() {
 	setEffectsVolume(effectsVolume - VOLUME_INCREMENT);
 }
 

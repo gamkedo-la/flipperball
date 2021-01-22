@@ -39,7 +39,7 @@ function GameScene() {
                 this.collisionManager.registerBall(ball);
             }
         }
-        
+
         playBackgroundMusic();
     }
 
@@ -91,6 +91,16 @@ function GameScene() {
             case ALIAS.VOLUME_DOWN:
                 if (pressed) {
                     turnVolumeDown();
+                }
+                return true;
+            case ALIAS.SFX_VOLUME_UP:
+                if(pressed) {
+                    turnSFXVolumeUp();
+                }
+                return true;
+            case ALIAS.SFX_VOLUME_DOWN:
+                if (pressed) {
+                    turnSFXVolumeDown();
                 }
                 return true;
         }
