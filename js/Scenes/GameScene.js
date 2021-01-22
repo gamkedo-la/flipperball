@@ -8,6 +8,7 @@ function GameScene() {
     this.paused = false;
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
+    this.numberOfRemainingBalls = 0;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -16,7 +17,6 @@ function GameScene() {
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
         this.collisionManager = new CollisionManager();
-        this.currentTableIndex = 0;
 
         for (const dynamicObj of self.table.dynamicObjects) {
             this.collisionManager.registerEntity(dynamicObj);
@@ -129,7 +129,7 @@ function GameScene() {
     }
 
     //TODO: FM: To be Removed; To Help with Debugging
-        const originalBallAndTableTransition = function() {
+    const originalBallAndTableTransition = function() {
         for (const ball of self.table.balls) {
             if (ball.y < 0) {
                 SceneManager.setState(SCENE.GAME, {tableName: TABLES.PrototypeTop, ball: ball, ballOffset: {x: 0, y: canvas.height}});
@@ -145,10 +145,13 @@ function GameScene() {
                 if (self.currentTableIndex < self.tablesForScene.length - 1) {
                     self.currentTableIndex++;
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                    //TODO: FM: Determine when extra ball should actually be given to player
+                    extraBall();
                 }
             } else if (ball.y > canvas.height) {
                 if (self.currentTableIndex == 0) {
                     loseBall(ball);
+                    playRemainingBall();
                 } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
                     self.currentTableIndex--;
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: -canvas.height}});
@@ -165,8 +168,20 @@ function GameScene() {
         }
     }
 
+    const extraBall = function() {
+        self.numberOfRemainingBalls++;
+    }
+
+    const playRemainingBall = function() {
+        if (self.numberOfRemainingBalls > 0) {
+            self.numberOfRemainingBalls--;
+            self.transitionIn();
+        }
+    }
+
     this.restartScene = function() {
         if (isGameOver()) {
+            this.currentTableIndex = 0;
             this.transitionIn();
         }
     }
@@ -234,9 +249,12 @@ function GameScene() {
             ball.draw();
         }
 
+        colorText("No. of plays left: " + self.numberOfRemainingBalls, 145, canvas.height - 50, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+
         if (isGameOver()) {
             colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
         }
+        
     }
 }
 
