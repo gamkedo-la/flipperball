@@ -5,9 +5,14 @@ function GameScene() {
     this.table = null;
     this.collisionManager = null;
     this.collisionRate = 20;
+    this.paused = false;
+    this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
+    this.currentTableIndex = 0;
+    this.numberOfRemainingBalls = 0;
+
     // eslint-disable-next-line consistent-this
     const self = this
-    this.paused = false;
+    
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
@@ -39,7 +44,7 @@ function GameScene() {
                 this.collisionManager.registerBall(ball);
             }
         }
-        
+
         playBackgroundMusic();
     }
 
@@ -93,6 +98,20 @@ function GameScene() {
                     turnVolumeDown();
                 }
                 return true;
+            case ALIAS.SFX_VOLUME_UP:
+                if(pressed) {
+                    turnSFXVolumeUp();
+                }
+                return true;
+            case ALIAS.SFX_VOLUME_DOWN:
+                if (pressed) {
+                    turnSFXVolumeDown();
+                }
+                return true;
+            case ALIAS.RESTART:
+                if (pressed) {
+                    this.restartScene();
+                }
         }
         
         return false;
@@ -107,6 +126,68 @@ function GameScene() {
                 resumeSoundAndMusic();
             }
         }
+    }
+
+    //TODO: FM: To be Removed; To Help with Debugging
+    const originalBallAndTableTransition = function() {
+        for (const ball of self.table.balls) {
+            if (ball.y < 0) {
+                SceneManager.setState(SCENE.GAME, {tableName: TABLES.PrototypeTop, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+            } else if (ball.y > canvas.height) {
+                SceneManager.setState(SCENE.GAME, {tableName: TABLES.Prototype, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+            }
+        }
+    }
+
+    const determineBallAndTableState = function() {
+        for (const ball of self.table.balls) {
+            if (ball.y < 0) {
+                if (self.currentTableIndex < self.tablesForScene.length - 1) {
+                    self.currentTableIndex++;
+                    SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                    //TODO: FM: Determine when extra ball should actually be given to player
+                    extraBall();
+                }
+            } else if (ball.y > canvas.height) {
+                if (self.currentTableIndex == 0) {
+                    loseBall(ball);
+                    playRemainingBall();
+                } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
+                    self.currentTableIndex--;
+                    SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: -canvas.height}});
+                }
+            }
+        }
+    }
+        
+    const loseBall = function(ball) {
+        let ballIndex = self.table.balls.indexOf(ball);
+        if (ballIndex !== -1) {
+            self.collisionManager.unregisterBall(ball);
+            self.table.balls.splice(ballIndex, 1);
+        }
+    }
+
+    const extraBall = function() {
+        self.numberOfRemainingBalls++;
+    }
+
+    const playRemainingBall = function() {
+        if (self.numberOfRemainingBalls > 0) {
+            self.numberOfRemainingBalls--;
+            self.transitionIn();
+        }
+    }
+
+    this.restartScene = function() {
+        if (isGameOver()) {
+            this.currentTableIndex = 0;
+            this.transitionIn();
+        }
+    }
+
+    const isGameOver = function() {
+        return self.table.balls.length == 0;
     }
 
     const update = function(deltaTime) {
@@ -141,15 +222,8 @@ function GameScene() {
         }
 
         //TODO: We'll need to change to figure out what to do about multi-ball
-        for (const ball of self.table.balls) {
-            if (ball.y < 0) {
-                SceneManager.setState(SCENE.GAME, {tableName: TABLES.PrototypeTop, ball: ball, ballOffset: {x: 0, y: canvas.height}});
-                break
-            } else if (ball.y > canvas.height) {
-                SceneManager.setState(SCENE.GAME, {tableName: TABLES.Prototype, ball: ball, ballOffset: {x: 0, y: -canvas.height}});
-                break
-            }
-        }
+        //FM: If Debug use originalBallAndTableTransition instead
+        determineBallAndTableState();
     }
 
     const draw = function(deltaTime) {
@@ -174,5 +248,13 @@ function GameScene() {
         for (const ball of self.table.balls) {
             ball.draw();
         }
+
+        colorText("No. of plays left: " + self.numberOfRemainingBalls, 145, canvas.height - 50, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+
+        if (isGameOver()) {
+            colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
+        }
+        
     }
 }
+
