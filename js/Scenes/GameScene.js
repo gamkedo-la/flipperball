@@ -9,7 +9,8 @@ function GameScene() {
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
-    this.gameHasFinished = false
+    this.score = 0;
+    this.gameHasFinished = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -21,8 +22,10 @@ function GameScene() {
         
         if (this.gameHasFinished) {
             // Reset numberOfRemainingBalls when we transition into a new game
-            this.numberOfRemainingBalls = STARTING_BALLS_COUNT
-            this.gameHasFinished = false
+            this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
+            this.score = 0;
+
+            this.gameHasFinished = false;
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
@@ -259,11 +262,22 @@ function GameScene() {
             ball.draw();
         }
 
-        colorText("No. of plays left: " + self.numberOfRemainingBalls, 145, canvas.height - 50, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        leftOffset = 20;
+        colorText("Score: " + self.score, leftOffset, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
+        colorText("No. of plays left: " + self.numberOfRemainingBalls, leftOffset, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
+       
         if (isGameOver()) {
             colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
         }
         
+    }
+
+    this.notifyBallCollision = function(otherEntity) {
+        switch (otherEntity.type) {
+            case ENTITY_TYPE.CircleBumper:
+                self.score += 100;
+            default:
+        }
     }
 }

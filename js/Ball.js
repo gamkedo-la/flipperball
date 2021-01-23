@@ -66,6 +66,7 @@ function Ball (objData, bodyData) {
             //     collision.otherEntity.didCollideWith(this);
             // }
             if (respondsTo(collision.otherEntity.type)) {
+                SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                 if (collision.edge) {
                     respondToPolygonCollision(collision);
                 } else {
@@ -101,7 +102,7 @@ function Ball (objData, bodyData) {
         self.yAdjustment += (self.radius - collision.distance) * collision.direction.y;
         const speed = Math.sqrt((self.velocity.x) * (self.velocity.x) + (self.velocity.y) * (self.velocity.y));
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
-        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
+        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;        
     }
 
     const respondToPolygonCollision = function(collision) {
