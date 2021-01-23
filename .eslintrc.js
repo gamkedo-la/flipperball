@@ -79,8 +79,13 @@ module.exports = {
         "loadHTGDLogo": true,
         "loadingDoneSoStartGame": true,
         "mouseInside": true,
+        "playBackgroundMusic": true,
         "pointInside": true,
+        "pauseSoundAndMusic": true,
+        "resumeSoundAndMusic": true,
         "toggleMute": true,
+        "turnSFXVolumeDown": true,
+        "turnSFXVolumeUp": true,
         "turnVolumeDown": true,
         "turnVolumeUp": true,
 

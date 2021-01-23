@@ -8,7 +8,7 @@ function GameScene() {
     this.paused = false;
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
-    this.numberOfRemainingBalls = 0;
+    this.numberOfRemainingBalls = 2;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -34,8 +34,6 @@ function GameScene() {
             self.table.balls.length = 0
             if (this.properties.ballOffset) {
                 this.properties.ball.setPosition(this.properties.ball.x + this.properties.ballOffset.x, this.properties.ball.y + this.properties.ballOffset.y);
-                // this.properties.ball.x += this.properties.ballOffset.x;
-                // this.properties.ball.y += this.properties.ballOffset.y;
             }
             self.table.balls.push(this.properties.ball);
             this.collisionManager.registerBall(this.properties.ball);
@@ -146,6 +144,7 @@ function GameScene() {
                     self.currentTableIndex++;
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
                     //TODO: FM: Determine when extra ball should actually be given to player
+                    //Probably at some number of points and under some special circumstances
                     extraBall();
                 }
             } else if (ball.y > canvas.height) {
@@ -176,6 +175,9 @@ function GameScene() {
         if (self.numberOfRemainingBalls > 0) {
             self.numberOfRemainingBalls--;
             self.transitionIn();
+        } else {
+            //TODO: This should be a game over scene once we've got it
+            SceneManager.setState(SCENE.TITLE);
         }
     }
 
@@ -226,7 +228,7 @@ function GameScene() {
         determineBallAndTableState();
     }
 
-    const draw = function(deltaTime) {
+    const draw = function() {
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
         // canvasContext.drawImage(prototype, 0, 0, canvas.width, canvas.height);
         for (const staticObj of self.table.staticObjects) {
@@ -257,4 +259,3 @@ function GameScene() {
         
     }
 }
-
