@@ -9,10 +9,10 @@
    <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
   </tile>
   <tile id="1" type="left_flipper">
-   <image width="170" height="124" source="../img/backgrounds/flipper_left.png"/>
+   <image width="171" height="126" source="../../img/tables/flipper_left.png"/>
   </tile>
   <tile id="2" type="right_flipper">
-   <image width="170" height="124" source="../img/backgrounds/flipper_right.png"/>
+   <image width="171" height="126" source="../../img/tables/flipper_right.png"/>
   </tile>
   <tile id="3" type="wall">
    <image width="105" height="598" source="../img/backgrounds/plunger_chute.png"/>
@@ -116,11 +116,11 @@
   <object id="41" name="plunger" type="plunger" x="912.25" y="263.25">
    <polygon points="0,-1.81818 0,13 67.75,13.5 67.75,-1.75 33.875,0.0340909"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="545.818" y="520">
-   <polygon points="0,0 -122.364,-100.364 -132.909,-104.909 -143.636,-104.909 -152.364,-100.727 -156.545,-97.6364 -161.455,-92 -164.545,-84.7273 -164.727,-71.6364 -162.545,-65.6364 -157.636,-58.5455 -152.909,-54.5455 -12.1818,17.2727 -9.09091,18.7273 -2.54545,17.8182 1.09091,14.3636 3.09091,11.6364 3.27273,3.09091"/>
+  <object id="42" name="flipper_left" type="flipper" x="544.818" y="522">
+   <polygon points="2.33333,-2 -123.364,-99.364 -139.636,-107.242 -152.364,-102.727 -160.122,-96.6667 -163.878,-88.394 -164.545,-63.9697 -151.909,-52.2122 -12.8485,15.606 -2.54545,17.8182 4.09091,12.9697"/>
   </object>
-  <object id="43" name="flipper_right" type="flipper" x="760.545" y="418">
-   <polygon points="0,0 -127.455,103.636 -129.455,106.182 -129.818,114.545 -127.091,118.182 -122.182,121.455 -115.091,120.909 26.9091,48.1818 34.1818,40.7273 37.4545,34.7273 38.3636,32.1818 38.5455,18.9091 34.7273,10.5455 31.2727,6.36364 26.5455,2.72727 20.9091,-0.181818 14.7273,-2 6,-2"/>
+  <object id="43" name="flipper_right" type="flipper" x="761.545" y="419">
+   <polygon points="-1.66667,1.33333 -127.122,101.849 -130.758,114.182 -122.182,121.455 -103.424,116.242 31.5151,47.7273 38.3636,32.1818 37.2122,17.2424 31.8788,5.0606 13.0606,-2.66667"/>
   </object>
   <object id="45" name="ball" type="ball" x="761.47" y="62.5149" width="25.4545" height="26">
    <ellipse/>
@@ -135,7 +135,7 @@
    <polygon points="0,0 0,164.364 72.5455,237.818 80.1818,230.909 10.1818,161.091 9.81818,1.63636"/>
   </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,0 -1,599.5 210.5,598.5 13.5,401.5 13,136.5 64.5,52 14,-0.5"/>
+   <polygon points="0,-80 -1,599.5 210.5,598.5 13.5,401.5 13,136.5 64.5,52 13.6667,0.5 13.0214,-80.4187"/>
   </object>
   <object id="54" name="drain" type="drain" x="443.5" y="600">
    <polygon points="0,0 -0.5,41 312,39 312.5,-0.5"/>

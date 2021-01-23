@@ -1,3 +1,4 @@
+/* eslint-disable no-continue */
 /* eslint-disable max-depth */
 //CollisionManager.js
 // eslint-disable-next-line no-unused-vars
