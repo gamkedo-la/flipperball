@@ -8,7 +8,8 @@ function GameScene() {
     this.paused = false;
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
-    this.numberOfRemainingBalls = 2;
+    this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
+    this.gameHasFinished = false
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -17,6 +18,12 @@ function GameScene() {
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
         this.collisionManager = new CollisionManager();
+        
+        if (this.gameHasFinished) {
+            // Reset numberOfRemainingBalls when we transition into a new game
+            this.numberOfRemainingBalls = STARTING_BALLS_COUNT
+            this.gameHasFinished = false
+        }
 
         for (const dynamicObj of self.table.dynamicObjects) {
             this.collisionManager.registerEntity(dynamicObj);
@@ -175,7 +182,8 @@ function GameScene() {
         if (self.numberOfRemainingBalls > 0) {
             self.numberOfRemainingBalls--;
             self.transitionIn();
-        } else {
+        } else {            
+            self.gameHasFinished = true
             //TODO: This should be a game over scene once we've got it
             SceneManager.setState(SCENE.TITLE);
         }

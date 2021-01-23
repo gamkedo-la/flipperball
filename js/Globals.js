@@ -16,6 +16,8 @@ const MAX_ROTATION_ANGLE = Math.PI / 4;
 
 const canvasClearColor = "black";
 
+const STARTING_BALLS_COUNT = 2
+
 const Color = {
 	Red:"red",
 	Blue:"blue",
