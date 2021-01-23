@@ -148,6 +148,11 @@ function TitleScene() {
         // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
         const PADDING = 40;
         drawRect(0, 0, canvas.width, canvas.height);
+
+        if (SceneManager.scenes[SCENE.GAME].gameHasFinished) {
+            colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        }
+        
         colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
