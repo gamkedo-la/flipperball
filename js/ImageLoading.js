@@ -91,7 +91,9 @@ function loadImages() {
         {imgName: "drain_wall_right", theFile: "tables/drain_wall_right.png"},
 
         {imgName: "flipper_bumper_left", theFile: "tables/flipper_bumper_left.png"},
+        {imgName: "flipper_bumper_left_anim", theFile: "animations/flipper_bumper_left_anim.png"},
         {imgName: "flipper_bumper_right", theFile: "tables/flipper_bumper_right.png"},
+        {imgName: "flipper_bumper_right_anim", theFile: "animations/flipper_bumper_right_anim.png"},
 
         {imgName: "flipper_left", theFile: "tables/flipper_left.png"},
         {imgName: "flipper_right", theFile: "tables/flipper_right.png"},

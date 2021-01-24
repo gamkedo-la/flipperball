@@ -83,6 +83,8 @@ const ENTITY_NAME = {
 	CircleBumperBlue: 'circle_bumper_blue',
 	CircleBumperYellow: 'circle_bumper_yellow',
 	CircleBumperGreen: 'circle_bumper_green',
+	FlipperBumperRight: 'flipper_bumper_right',
+	FlipperBumperLeft: 'flipper_bumper_left'
 }
 
 const COLLISION_TYPE = {
@@ -133,6 +135,18 @@ const ANIMATIONS = {
 		frameHeight: 96,
 		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: true,
+		loops: false
+	},
+	FLIPPER_BUMPER: {
+		imageNames: {
+			"flipper_bumper_right": "flipper_bumper_right_anim",
+			"flipper_bumper_left": "flipper_bumper_left_anim"	
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+		frameWidth: 57,
+		frameHeight: 186,
+		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
+		reverses: false,
 		loops: false
 	}
 };
