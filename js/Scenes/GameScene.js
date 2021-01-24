@@ -298,25 +298,24 @@ function GameScene() {
         
     }
 
-    this.notifyBallCollision = function(otherEntity) {
-        ANIMATIONS.CIRCLE_BUMPER.imageName = otherEntity.body.name + '_anim';
+    this.notifyBallCollision = function(otherEntity) {        
 
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.score += 100;
-                self.playAnimation(ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
+                self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;
             default:
                 break;
         }
     }
 
-    this.playAnimation = function(animationData, x, y) {
+    this.playAnimation = function(imageName, animationData, x, y) {
         //is it possible to only make these once and then play them when
         //we want to run them, rather than creating a new object every time?
         const newAnimation = new SpriteAnimation(
-            animationData.imageName, 
-            images[animationData.imageName],
+            imageName, 
+            images[animationData.imageNames[imageName]],
             x, y,
             animationData.frames,
             animationData.frameWidth,

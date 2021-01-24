@@ -120,9 +120,14 @@ const Fonts = {
 
 const fontOverhangRatio = 4/5; // Currently 4/5 is correct for "Tahoma" font. Change if font changes
 
-let ANIMATIONS = {
+const ANIMATIONS = {
 	CIRCLE_BUMPER: {
-		imageName: null,
+		imageNames: {
+			"circle_bumper_blue": "circle_bumper_blue_anim",
+			"circle_bumper_green": "circle_bumper_green_anim",
+			"circle_bumper_red": "circle_bumper_red_anim",
+			"circle_bumper_yellow": "circle_bumper_yellow_anim"		
+		},
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 		frameWidth: 96,
 		frameHeight: 96,
