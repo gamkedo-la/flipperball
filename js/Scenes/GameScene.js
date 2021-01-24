@@ -14,7 +14,7 @@ function GameScene() {
 
     // eslint-disable-next-line consistent-this
     const self = this
-    
+    const TEXT_LEFT_OFFSET = 20
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
@@ -61,11 +61,6 @@ function GameScene() {
     }
 
     this.run = function(deltaTime) {
-        if (this.paused) {
-			colorText("[GAME PAUSED]" , leftOffset, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
-			colorText("press P to resume" , leftOffset, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
-            return;
-        }
         update(deltaTime);
         draw(deltaTime);
     }
@@ -138,6 +133,7 @@ function GameScene() {
     }
 
     //TODO: FM: To be Removed; To Help with Debugging
+    //We can probably leave it in, not a big deal
     const originalBallAndTableTransition = function() {
         for (const ball of self.table.balls) {
             if (ball.y < 0) {
@@ -205,6 +201,8 @@ function GameScene() {
     }
 
     const update = function(deltaTime) {
+        if (self.paused) {return;}
+
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
                 flipper.update(deltaTime / self.collisionRate);
@@ -235,24 +233,31 @@ function GameScene() {
             self.collisionManager.checkBallFlipperCollisions();
         }
 
-
-        for (let i = 0; i < self.table.animations.length; i++) {
-            animation = self.table.animations[i]
+        for (let i = self.table.animations.length - 1; i >= 0; i--) {
+            //Need to iterate backwards to avoid skipping anything or going
+            //past the end of the array if we remove an element part way
+            //through the loop.
+            const animation = self.table.animations[i];
             animation.update(deltaTime);
             if (animation.isFinished) {
                 // remove finished animations
                 self.table.animations.splice(i, 1);
+                // is it possible to inactivate the animations rather than
+                // destroying them so we don't have to create a new object
+                // when we just want to play the same animation again?
             }
         }
 
         //TODO: We'll need to change to figure out what to do about multi-ball
-        //FM: If Debug use originalBallAndTableTransition instead
-        determineBallAndTableState();
+        if (DEBUG) {
+            originalBallAndTableTransition();
+        } else {
+            determineBallAndTableState();
+        }
     }
 
     const draw = function() {
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
-        // canvasContext.drawImage(prototype, 0, 0, canvas.width, canvas.height);
         for (const staticObj of self.table.staticObjects) {
             staticObj.draw();
         }
@@ -277,10 +282,14 @@ function GameScene() {
             animation.draw();
         }
 
-        leftOffset = 20;
-        colorText("Score: " + self.score, leftOffset, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
+        if (self.paused) {
+			colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
+			colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
+        }
 
-        colorText("No. of plays left: " + self.numberOfRemainingBalls, leftOffset, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
+        colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
+
+        colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
        
         if (isGameOver()) {
             colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
@@ -293,13 +302,16 @@ function GameScene() {
             case ENTITY_TYPE.CircleBumper:
                 self.score += 100;
                 self.playAnimation(ANIMATIONS.CIRCLE_BUMPER_BLUE, otherEntity.x, otherEntity.y)
-
+                break;
             default:
+                break;
         }
     }
 
     this.playAnimation = function(animationData, x, y) {
-        newAnimation = new SpriteAnimation(
+        //is it possible to only make these once and then play them when
+        //we want to run them, rather than creating a new object every time?
+        const newAnimation = new SpriteAnimation(
             animationData.imageName, 
             images[animationData.imageName],
             x, y,
