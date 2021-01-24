@@ -13,7 +13,7 @@ window.onload = function() {
 	drawRect(0, 0, canvas.width, canvas.height, Color.Black);
 
     colorText("L..O..A..D..I..N..G..", canvas.width / 2, canvas.height / 2, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
-
+	// Ben WAZ here
 	initializeInput();
 	configureGameAudio();
 	loadAudio();
