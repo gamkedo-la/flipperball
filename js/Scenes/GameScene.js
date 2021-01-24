@@ -298,8 +298,7 @@ function GameScene() {
     }
 
     this.notifyBallCollision = function(otherEntity) {
-        let animImageName = otherEntity.body.name + '_anim';
-        ANIMATIONS.CIRCLE_BUMPER.imageName = animImageName;
+        ANIMATIONS.CIRCLE_BUMPER.imageName = otherEntity.body.name + '_anim';
 
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
