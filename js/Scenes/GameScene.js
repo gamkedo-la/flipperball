@@ -298,10 +298,13 @@ function GameScene() {
     }
 
     this.notifyBallCollision = function(otherEntity) {
+        let animImageName = otherEntity.body.name + '_anim';
+        ANIMATIONS.CIRCLE_BUMPER.imageName = animImageName;
+
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.score += 100;
-                self.playAnimation(ANIMATIONS.CIRCLE_BUMPER_BLUE, otherEntity.x, otherEntity.y)
+                self.playAnimation(ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;
             default:
                 break;

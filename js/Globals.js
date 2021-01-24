@@ -78,6 +78,13 @@ const ENTITY_TYPE = {
 	Wall: 'wall'
 };
 
+const ENTITY_NAME = {
+	CircleBumperRed: 'circle_bumper_red',
+	CircleBumperBlue: 'circle_bumper_blue',
+	CircleBumperYellow: 'circle_bumper_yellow',
+	CircleBumperGreen: 'circle_bumper_green',
+}
+
 const COLLISION_TYPE = {
 	Circle: 'circleXcircle',
 	Polygon: 'circleXpolygon'
@@ -113,13 +120,13 @@ const Fonts = {
 
 const fontOverhangRatio = 4/5; // Currently 4/5 is correct for "Tahoma" font. Change if font changes
 
-const ANIMATIONS = {
-	CIRCLE_BUMPER_BLUE: {
-		imageName: "circle_bumper_blue_anim",
-		frames: [0, 1, 2, 3, 4, 5, 6, 7],
+let ANIMATIONS = {
+	CIRCLE_BUMPER: {
+		imageName: null,
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 		frameWidth: 96,
 		frameHeight: 96,
-		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: true,
 		loops: false
 	}

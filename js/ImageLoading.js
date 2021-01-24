@@ -76,8 +76,11 @@ function loadImages() {
         {imgName: "circle_bumper_blue", theFile: "tables/circle_bumper_blue.png"},
         {imgName: "circle_bumper_blue_anim", theFile: "animations/circle_bumper_blue_anim.png"},
         {imgName: "circle_bumper_green", theFile: "tables/circle_bumper_green.png"},
+        {imgName: "circle_bumper_green_anim", theFile: "animations/circle_bumper_green_anim.png"},
         {imgName: "circle_bumper_red", theFile: "tables/circle_bumper_red.png"},
+        {imgName: "circle_bumper_red_anim", theFile: "animations/circle_bumper_red_anim.png"},
         {imgName: "circle_bumper_yellow", theFile: "tables/circle_bumper_yellow.png"},
+        {imgName: "circle_bumper_yellow_anim", theFile: "animations/circle_bumper_yellow_anim.png"},
 
         {imgName: "cloud_bg", theFile: "tables/cloud_bg.png"},
 
