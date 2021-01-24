@@ -62,9 +62,10 @@ function GameScene() {
 
     this.run = function(deltaTime) {
         if (this.paused) {
-            return
+			colorText("[GAME PAUSED]" , leftOffset, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
+			colorText("press P to resume" , leftOffset, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
+            return;
         }
-        
         update(deltaTime);
         draw(deltaTime);
     }
