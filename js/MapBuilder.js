@@ -9,6 +9,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.fixedLayerData = null;
     this.balls = [];
     this.flippers = [];
+    this.animations = [];
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {

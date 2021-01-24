@@ -112,3 +112,15 @@ const Fonts = {
 };
 
 const fontOverhangRatio = 4/5; // Currently 4/5 is correct for "Tahoma" font. Change if font changes
+
+const ANIMATIONS = {
+	CIRCLE_BUMPER_BLUE: {
+		imageName: "circle_bumper_blue_anim",
+		frames: [0, 1, 2, 3, 4, 5, 6, 7],
+		frameWidth: 96,
+		frameHeight: 96,
+		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64],
+		reverses: true,
+		loops: false
+	}
+};

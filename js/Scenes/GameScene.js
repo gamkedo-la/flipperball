@@ -234,6 +234,16 @@ function GameScene() {
             self.collisionManager.checkBallFlipperCollisions();
         }
 
+
+        for (let i = 0; i < self.table.animations.length; i++) {
+            animation = self.table.animations[i]
+            animation.update(deltaTime);
+            if (animation.isFinished) {
+                // remove finished animations
+                self.table.animations.splice(i, 1);
+            }
+        }
+
         //TODO: We'll need to change to figure out what to do about multi-ball
         //FM: If Debug use originalBallAndTableTransition instead
         determineBallAndTableState();
@@ -262,6 +272,10 @@ function GameScene() {
             ball.draw();
         }
 
+        for (const animation of self.table.animations) {
+            animation.draw();
+        }
+
         leftOffset = 20;
         colorText("Score: " + self.score, leftOffset, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
@@ -277,7 +291,24 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.score += 100;
+                self.playAnimation(ANIMATIONS.CIRCLE_BUMPER_BLUE, otherEntity.x, otherEntity.y)
+
             default:
         }
+    }
+
+    this.playAnimation = function(animationData, x, y) {
+        newAnimation = new SpriteAnimation(
+            animationData.imageName, 
+            images[animationData.imageName],
+            x, y,
+            animationData.frames,
+            animationData.frameWidth,
+            animationData.frameHeight,
+            animationData.frameTimes,
+            animationData.reverses,
+            animationData.loops);
+            
+       self.table.animations.push(newAnimation);
     }
 }

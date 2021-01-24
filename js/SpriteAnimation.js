@@ -1,7 +1,9 @@
 //Animation
 // eslint-disable-next-line no-unused-vars
 function SpriteAnimation(name, //string identifier for this animation
-                   image, //image in which the frames reside
+                   image, //image in which the frames reside,
+                   x, // x position
+                   y, // y position
                    frames = [0], //array of frame indexes to use for this animation
                    frameWidth = 32, //width of each frame
                    frameHeight = 32, //height of each frame
@@ -13,7 +15,7 @@ function SpriteAnimation(name, //string identifier for this animation
     const self = this;
     this.name = name;
     this.scale = 1;
-    this.isFinished = false; //only becomes true if reverses is false and loops is false (i.e. does neither)
+    this.isFinished = false; //only becomes true if loops is false 
 
     let times;
     let isInReverse = false;
@@ -21,6 +23,9 @@ function SpriteAnimation(name, //string identifier for this animation
     const framesPerRow = Math.round(image.width / frameWidth);
     
     let remainderTime = 0;
+
+    this.x = x;
+    this.y = y;
     
     this.update = function(deltaTime) {
         if(times == null) {return;}
@@ -37,6 +42,10 @@ function SpriteAnimation(name, //string identifier for this animation
         canvasContext.drawImage(image, 
                                 thisFrameRect.x, thisFrameRect.y, thisFrameRect.width, thisFrameRect.height,
                                 x, y, thisFrameRect.width * this.scale, thisFrameRect.height * this.scale);
+    }
+
+    this.draw = function() {
+        this.drawAt(this.x, this.y);
     }
 
     const getCurrentFrameRect = function() {
@@ -65,8 +74,13 @@ function SpriteAnimation(name, //string identifier for this animation
         if(isInReverse) {
             newFrameIndex = currentFrame - 1;
             if(newFrameIndex < 0) {
-                newFrameIndex = currentFrame + 1;
-                isInReverse = false;
+                if (loops) {
+                    newFrameIndex = currentFrame + 1;
+                    isInReverse = false;
+                } else {
+                    self.isFinished = true;
+                    newFrameIndex = currentFrame;
+                }                
             } 
         } else {
             newFrameIndex = currentFrame + 1;

@@ -74,6 +74,7 @@ function loadImages() {
         {imgName: "ball", theFile: "tables/ball.png"},
 
         {imgName: "circle_bumper_blue", theFile: "tables/circle_bumper_blue.png"},
+        {imgName: "circle_bumper_blue_anim", theFile: "animations/circle_bumper_blue_anim.png"},
         {imgName: "circle_bumper_green", theFile: "tables/circle_bumper_green.png"},
         {imgName: "circle_bumper_red", theFile: "tables/circle_bumper_red.png"},
         {imgName: "circle_bumper_yellow", theFile: "tables/circle_bumper_yellow.png"},
