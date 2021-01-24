@@ -100,6 +100,7 @@ function loadImages() {
 
         {imgName: "plunger_chute", theFile: "tables/plunger_chute.png"},
         {imgName: "plunger", theFile: "tables/plunger.png"},
+        {imgName: "plunger_anim", theFile: "animations/plunger_anim.png"},
 
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"}

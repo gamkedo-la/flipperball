@@ -148,5 +148,16 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
+	},
+	PLUNGER: {
+		imageNames: {
+			"plunger": "plunger_anim"
+		},
+		frames: [0, 1, 2, 3, 4],
+		frameWidth: 66,
+		frameHeight: 288,
+		frameTimes: [64, 64, 64, 64, 64],
+		reverses: false,
+		loops: false
 	}
 };
