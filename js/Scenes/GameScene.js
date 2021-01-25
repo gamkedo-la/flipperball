@@ -301,11 +301,15 @@ function GameScene() {
     this.notifyBallCollision = function(otherEntity) {        
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
-                self.score += 100;
+                self.score += 100;   
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;
             case ENTITY_TYPE.FlipperBumper:
-                self.playAnimation(otherEntity.body.name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)  
+                self.playAnimation(otherEntity.body.name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
+                break;  
+            case ENTITY_TYPE.Trigger:
+                self.score += 25;
+                break;
             default:
                 break;
         }

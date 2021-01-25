@@ -287,6 +287,18 @@
                  "width":82,
                  "x":319,
                  "y":420
+                }, 
+                {
+                 "gid":21,
+                 "height":26,
+                 "id":58,
+                 "name":"lane_trigger",
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":5,
+                 "x":830.18,
+                 "y":245.818181818182
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -826,6 +838,18 @@
                  "width":0,
                  "x":816.273,
                  "y":317.455
+                }, 
+                {
+                 "ellipse":true,
+                 "height":25.9090909090909,
+                 "id":59,
+                 "name":"lane_trigger",
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":5.09090909090907,
+                 "x":830.18,
+                 "y":219.909090909091
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -834,7 +858,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":57,
+ "nextobjectid":60,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -852,7 +876,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":598,
          "tiles":[
                 {
@@ -994,12 +1018,19 @@
                  "imageheight":240,
                  "imagewidth":82,
                  "type":"wall"
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
+                 "imageheight":26,
+                 "imagewidth":5,
+                 "type":"trigger"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,

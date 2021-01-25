@@ -67,6 +67,9 @@ function Ball (objData, bodyData) {
             // }
             if (respondsTo(collision.otherEntity.type)) {
                 SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                if (collision.otherEntity.type == ENTITY_TYPE.Trigger && collision.otherEntity.subType == TRIGGER_TYPE.Lane)  {
+                    return;
+                }
                 if (collision.edge) {
                     respondToPolygonCollision(collision);
                 } else {
@@ -90,6 +93,7 @@ function Ball (objData, bodyData) {
             case ENTITY_TYPE.FlipperBumper:
             case ENTITY_TYPE.Plunger:
             case ENTITY_TYPE.Wall:
+            case ENTITY_TYPE.Trigger:
                 return true;
             default:
                 return false;
