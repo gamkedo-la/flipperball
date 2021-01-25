@@ -184,6 +184,6 @@ function resumeSoundAndMusic() {
 function playBackgroundMusic() { 
 	if (!currentBackgroundMusicInitialized) {
 		currentBackgroundMusicInitialized = true;
-		currentBackgroundMusic.loopSong(assetPath.Audio + "BeepBox-Song");
+		currentBackgroundMusic.loopSong(assetPath.Audio + "Honky_Tonk_Piano _Loop");
 	}
 }
