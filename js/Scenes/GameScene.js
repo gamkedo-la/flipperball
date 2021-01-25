@@ -11,6 +11,11 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.score = 0;
     this.gameHasFinished = false;
+   
+    var shakeStartTime = -1;
+    var shakeDuration = 500;
+    var currentShakes = 0;
+    var shakesBeforeTilt = 2;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -116,10 +121,73 @@ function GameScene() {
                 if (pressed) {
                     this.restartScene();
                 }
+            case ALIAS.SHAKE:
+            	this.shakeScene(pressed);
+            	return true;
         }
         
         return false;
     };
+    
+    this.shakeScene = function(pressed) {
+	    if (!pressed) return;
+	    
+	    if (this.paused) return;
+		
+		currentShakes++;
+		if (shakeStartTime != -1) {
+			if (currentShakes >= shakesBeforeTilt) {
+				console.log("TILT");
+				shakeStartTime = -1;
+				currentShakes = 0;
+				return;
+			}
+		} else {
+			currentShakes = 0;
+		}
+		
+		shakeStartTime = Date.now();
+
+		shakeAnimation();
+    }
+    
+    function shakeAnimation() {
+
+    	requestAnimationFrame(shakeAnimation); // tells the context to save animation
+		canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+
+		shakeCanvasMovement();
+		
+		//drawing scene
+		update(0);
+        draw(0);
+		
+		if (shakeStartTime ==-1) { // shake endend -> return
+			return;
+		}
+		canvasContext.restore();
+		
+    }
+    
+    function shakeCanvasMovement() {
+		if (shakeStartTime ==-1) { // shake ended -> no move
+			return;
+		}
+
+		var dt = Date.now() - shakeStartTime; // actual shake duration
+
+		if (dt > shakeDuration) { // shake duration limit reached -> stop
+		  shakeStartTime = -1; 
+		  return;
+		}
+
+		canvasContext.save();
+
+		var dx = Math.random() * 10; // increase or drecrease horizontal shake effect
+		var dy = Math.random() * 10; // increase or drecrease vertical shake effect
+
+		canvasContext.translate(dx, dy);  
+	}
 
     this.pauseScene = function(pressed) {
         if (pressed) {
