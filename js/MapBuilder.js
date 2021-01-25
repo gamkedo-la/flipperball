@@ -93,8 +93,8 @@ function DynamicMapObject (objData, bodyData) {
     this.height = objData.height;
     
     this.type = objData.type;
-
     this.image = images[objData.name];
+    this.subType = objData.name;
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
 

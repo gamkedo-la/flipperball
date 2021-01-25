@@ -75,8 +75,13 @@ const ENTITY_TYPE = {
 	Flipper: 'flipper',
 	FlipperBumper: 'flipper_bumper',
 	Plunger: 'plunger',
-	Wall: 'wall'
+	Wall: 'wall',
+	Trigger: 'trigger'
 };
+
+const TRIGGER_TYPE = {
+	Lane: 'lane_trigger'
+}
 
 const ENTITY_NAME = {
 	CircleBumperRed: 'circle_bumper_red',

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="57">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="60">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="20" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="21" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
@@ -65,15 +65,18 @@
   <tile id="19" type="wall">
    <image width="82" height="240" source="../img/backgrounds/drain_rail_right.png"/>
   </tile>
+  <tile id="20" type="trigger">
+   <image width="5" height="26" source="../img/backgrounds/lane_trigger.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="21" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="1" columns="0">
+ <tileset firstgid="22" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="600" source="../img/backgrounds/cloud_bg.png"/>
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="56" name="cloud_bg" gid="21" x="280" y="600" width="720" height="600"/>
+  <object id="56" name="cloud_bg" gid="22" x="280" y="600" width="720" height="600"/>
   <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
   <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
   <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
@@ -96,6 +99,7 @@
   <object id="35" name="circle_bumper_green" gid="13" x="446.5" y="197" width="94" height="95"/>
   <object id="48" name="drain_rail_right" gid="20" x="778" y="419" width="82" height="240"/>
   <object id="49" name="drain_rail_left" gid="19" x="319" y="420" width="82" height="240"/>
+  <object id="58" name="lane_trigger" gid="21" x="830.18" y="245.818" width="5" height="26"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="1" name="circle_bumper_blue" type="circle_bumper" x="539.909" y="2.28997" width="94.652" height="95.4154">
@@ -142,6 +146,9 @@
   </object>
   <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="816.273" y="317.455">
    <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
+  </object>
+  <object id="59" name="lane_trigger" type="trigger" x="830.18" y="219.909" width="5.09091" height="25.9091">
+   <ellipse/>
   </object>
  </objectgroup>
 </map>

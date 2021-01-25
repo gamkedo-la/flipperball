@@ -103,7 +103,8 @@ function loadImages() {
         {imgName: "plunger_anim", theFile: "animations/plunger_anim.png"},
 
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
-        {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"}
+        {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
+        {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"}
     ];
 
     picsToLoad = imageList.length;
