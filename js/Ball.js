@@ -19,6 +19,7 @@ function Ball (objData, bodyData) {
     this.type = objData.type;
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
+    this.triggersCollided = {};
 
     this.update = function(deltaTime) {
         this.oldX = this.x;
@@ -66,15 +67,23 @@ function Ball (objData, bodyData) {
             //     collision.otherEntity.didCollideWith(this);
             // }
             if (respondsTo(collision.otherEntity.type)) {
-                SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                 if (collision.otherEntity.type == ENTITY_TYPE.Trigger && collision.otherEntity.subType == TRIGGER_TYPE.Lane)  {
+                    if (!collision.otherEntity.hasCollided) {
+                        collision.otherEntity.hasCollided = true;
+                        this.triggersCollided[Date.now()] = collision.otherEntity;
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                    } 
                     return;
-                }
-                if (collision.edge) {
-                    respondToPolygonCollision(collision);
                 } else {
-                    respondToCircularCollision(collision);
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                    if (collision.edge) {
+                        respondToPolygonCollision(collision);
+                    } else {
+                        respondToCircularCollision(collision);
+                    }
+                    self.clearTriggerCollisions();
                 }
+                
             }
         }
 
@@ -83,6 +92,21 @@ function Ball (objData, bodyData) {
         this.body.update(this.xAdjustment, this.yAdjustment);
         this.velocity.x += this.vxAdjustment;
         this.velocity.y += this.vyAdjustment;
+    }
+
+    this.clearTriggerCollisions = function() {
+        removeEntities = [];
+        for (var datetime in this.triggersCollided) {
+            var delta = Date.now() - datetime;
+            if (delta >= LANE_TRIGGER_TIMEOUT) {
+                this.triggersCollided[datetime].hasCollided = false;
+                removeEntities.push(datetime);
+            }
+        }
+
+        for (var key in removeEntities) {
+            delete this.triggersCollided[key];
+        }
     }
 
     const respondsTo = function (type) {

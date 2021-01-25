@@ -18,6 +18,8 @@ const canvasClearColor = "black";
 
 const STARTING_BALLS_COUNT = 2
 
+const LANE_TRIGGER_TIMEOUT = 3000;
+
 const Color = {
 	Red:"red",
 	Blue:"blue",

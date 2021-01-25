@@ -376,7 +376,7 @@ function GameScene() {
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
                 break;  
             case ENTITY_TYPE.Trigger:
-                self.score += 25;
+                self.handleTriggerCollision(otherEntity);
                 break;
             default:
                 break;
@@ -397,6 +397,11 @@ function GameScene() {
             animationData.reverses,
             animationData.loops);
             
-       self.table.animations.push(newAnimation);
+       self.
+       table.animations.push(newAnimation);
+    }
+
+    this.handleTriggerCollision = function(otherEntity) {
+        self.score += 25;
     }
 }

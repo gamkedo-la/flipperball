@@ -47,7 +47,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 self.balls.push(new Ball(obj, bodyData));
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
                 self.flippers.push(new Flipper(obj, bodyData));
-            } else {
+            } else if (obj.type === 'trigger') {
+                result.push(new TriggerMapObject(obj, bodyData));
+            } 
+            else {
                 result.push(new DynamicMapObject(obj, bodyData));
             }
         }
@@ -94,7 +97,6 @@ function DynamicMapObject (objData, bodyData) {
     
     this.type = objData.type;
     this.image = images[objData.name];
-    this.subType = objData.name;
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
 
@@ -114,6 +116,26 @@ function TableObject (objData) {
     this.reflectance = objData.reflectance || 0.4;
     this.body = new CollisionBody(objData);
     this.draw = function() {
+        this.body.draw();
+    }
+}
+
+function TriggerMapObject(objData, bodyData) {
+    this.x = objData.x;
+    this.y = objData.y - objData.height;
+    this.width = objData.width;
+    this.height = objData.height;
+    
+    this.type = objData.type;
+    this.image = images[objData.name];
+    this.subType = objData.name;
+    this.body = new CollisionBody(bodyData);
+    this.reflectance = objData.reflectance || 1;
+    this.hasCollided = false;
+
+    this.update = function(deltaTime) {}
+    this.draw = function() {
+        canvasContext.drawImage(this.image, this.x, this.y);
         this.body.draw();
     }
 }
