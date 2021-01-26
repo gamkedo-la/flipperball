@@ -131,6 +131,7 @@ function setEffectsVolume(amount)
 	} else if (effectsVolume < 0.0) {
 		effectsVolume = 0.0;
 	}
+  localStorage.setItem(localStorageKey.SFXVolume, musicVolume);
 }
 
 function setMusicVolume(amount){
@@ -141,6 +142,7 @@ function setMusicVolume(amount){
 		musicVolume = 0.0;
 	}
 	currentBackgroundMusic.setVolume(musicVolume);
+  localStorage.setItem(localStorageKey.MusicVolume, musicVolume);
 }
 
 function turnVolumeUp() {
