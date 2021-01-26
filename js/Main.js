@@ -6,13 +6,14 @@ window.onload = function() {
 
 	canvas = document.createElement("canvas");
 	canvas.classList.add("game-canvas")
-    canvasContext = canvas.getContext("2d");
-    document.body.appendChild(canvas);
-    canvas.width = 1000;
-    canvas.height = 600;
+  canvasContext = canvas.getContext("2d");
+  document.getElementById('canvas-container').appendChild(canvas);
+
+  canvas.width = 1000;
+  canvas.height = 600;
 	drawRect(0, 0, canvas.width, canvas.height, Color.Black);
 
-    colorText("L..O..A..D..I..N..G..", canvas.width / 2, canvas.height / 2, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
+  colorText("L..O..A..D..I..N..G..", canvas.width / 2, canvas.height / 2, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
 
 	initializeInput();
 	configureGameAudio();
