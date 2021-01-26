@@ -159,7 +159,9 @@ function TitleScene() {
         colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*3, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         colorText("'k' = sfx volume down", canvas.width / 2, canvas.height / 2 + PADDING*4, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         colorText("'l' = sfx volume up", canvas.width / 2, canvas.height / 2 + PADDING*5, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-    }
+        colorText("'f' = toggle flash", canvas.width / 2, canvas.height / 2 + PADDING*6, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+
+      }
         
     return this;
 }

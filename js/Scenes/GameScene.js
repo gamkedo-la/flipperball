@@ -11,6 +11,8 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.score = 0;
     this.gameHasFinished = false;
+    this.flashEnabled = true;
+    this.flash = false;
    
     let shakeStartTime = -1;
     const shakeDuration = 500;
@@ -124,6 +126,11 @@ function GameScene() {
                 return true;
             case ALIAS.SHAKE:
                 this.shakeScene(pressed);
+                return true;
+            case ALIAS.TOGGLE_FLASH:
+                if(pressed){
+                  this.flashEnabled = !this.flashEnabled;
+                }
                 return true;
         }
         
@@ -353,10 +360,15 @@ function GameScene() {
             animation.draw();
         }
 
+        if (self.flashEnabled && self.flash){
+          drawRect(0, 0, canvas.width, canvas.height, 'rgba(255,255,255, 0.3)');
+          self.flash = false;
+        }
+
         if (self.paused) {
-			colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
-			colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
-			drawRect(0,0,canvas.width,canvas.height,'rgba(0,0,0,0.30)');
+          colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
+          colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
+          drawRect(0,0,canvas.width,canvas.height,'rgba(0,0,0,0.30)');
         }
 
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
@@ -372,6 +384,7 @@ function GameScene() {
     this.notifyBallCollision = function(otherEntity) {        
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
+                self.flash = true;
                 self.score += 100;   
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;

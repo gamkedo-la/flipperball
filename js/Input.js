@@ -83,7 +83,8 @@ const ALIAS = {
 	SFX_VOLUME_UP: KEY_L,
 	SFX_VOLUME_DOWN: KEY_K,
 	RESTART: KEY_R,
-	SHAKE: KEY_SPACE
+  SHAKE: KEY_SPACE,
+  TOGGLE_FLASH: KEY_F,
 }
 
 function initializeInput() {
