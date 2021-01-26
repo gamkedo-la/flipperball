@@ -12,10 +12,10 @@ function GameScene() {
     this.score = 0;
     this.gameHasFinished = false;
    
-    var shakeStartTime = -1;
-    var shakeDuration = 500;
-    var currentShakes = 0;
-    var shakesBeforeTilt = 2;
+    let shakeStartTime = -1;
+    const shakeDuration = 500;
+    let currentShakes = 0;
+    const shakesBeforeTilt = 2;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -121,18 +121,19 @@ function GameScene() {
                 if (pressed) {
                     this.restartScene();
                 }
+                return true;
             case ALIAS.SHAKE:
-            	this.shakeScene(pressed);
-            	return true;
+                this.shakeScene(pressed);
+                return true;
         }
         
         return false;
     };
     
     this.shakeScene = function(pressed) {
-	    if (!pressed) return;
-	    
-	    if (this.paused) return;
+        if (!pressed) {return;}
+
+        if (this.paused) {return;}
 		
 		currentShakes++;
 		if (shakeStartTime != -1) {
@@ -152,8 +153,7 @@ function GameScene() {
     }
     
     function shakeAnimation() {
-
-    	requestAnimationFrame(shakeAnimation); // tells the context to save animation
+        requestAnimationFrame(shakeAnimation); // tells the context to save animation
 		canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
 		shakeCanvasMovement();
@@ -170,21 +170,24 @@ function GameScene() {
     }
     
     function shakeCanvasMovement() {
-		if (shakeStartTime ==-1) { // shake ended -> no move
+		if (shakeStartTime === -1) { // shake ended -> no move
 			return;
 		}
 
-		var dt = Date.now() - shakeStartTime; // actual shake duration
+        // The Chronogram object (Chronogram.js) keeps a timer and allows registering events
+        // Also, the GameScene object gets a deltaTime passed to it each update cycle, that
+        // could be summed and compared to shakeDuration
+		const dt = Date.now() - shakeStartTime; // actual shake duration
 
 		if (dt > shakeDuration) { // shake duration limit reached -> stop
-		  shakeStartTime = -1; 
-		  return;
+            shakeStartTime = -1; 
+            return;
 		}
 
 		canvasContext.save();
 
-		var dx = Math.random() * 10; // increase or drecrease horizontal shake effect
-		var dy = Math.random() * 10; // increase or drecrease vertical shake effect
+		const dx = Math.random() * 10; // increase or drecrease horizontal shake effect
+		const dy = Math.random() * 10; // increase or drecrease vertical shake effect
 
 		canvasContext.translate(dx, dy);  
 	}
@@ -397,11 +400,13 @@ function GameScene() {
             animationData.reverses,
             animationData.loops);
             
-       self.
-       table.animations.push(newAnimation);
+       self.table.animations.push(newAnimation);
     }
 
     this.handleTriggerCollision = function(otherEntity) {
+        //We should add a score property to all the other entities, then instead of
+        //hard coding 25 here, we could do self.score += otherEntity.score and set
+        //that other score to whatever was appropriate for that individual object 
         self.score += 25;
     }
 }
