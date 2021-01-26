@@ -9,6 +9,7 @@ function GameScene() {
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
+    this.hasPlungerReleased = false;
     this.score = 0;
     this.gameHasFinished = false;
    
@@ -77,8 +78,7 @@ function GameScene() {
             case ALIAS.RIGHT:
                 return true;
             case ALIAS.PLUNGER:
-                // eslint-disable-next-line no-console
-                console.log("Plunger Activated");
+                this.releasePlunger();
                 return true;
             case ALIAS.CHEATS:
                 CHEATS_ACTIVE = !CHEATS_ACTIVE;
@@ -257,6 +257,15 @@ function GameScene() {
             self.gameHasFinished = true
             //TODO: This should be a game over scene once we've got it
             SceneManager.setState(SCENE.TITLE);
+        }
+    }
+
+    this.releasePlunger = function() {
+        if(!this.hasPlungerReleased) {
+            this.hasPlungerReleased = true;
+            // eslint-disable-next-line no-console
+            console.log("Plunger Activated");
+            this.playAnimation("plunger", ANIMATIONS.PLUNGER_RELEASE, 912, 552);
         }
     }
 
