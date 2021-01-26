@@ -8,6 +8,7 @@ function TitleScene() {
     ];
 
     const buttons = [];
+    const START_GAME_TIME_BUFFER = 400; //milleseconds
 
     this.transitionIn = function() {
         const mainMenuX = 235;
@@ -57,7 +58,8 @@ function TitleScene() {
             case ALIAS.SELECT1:
                 // console.log("Activated the current button");
 //                SceneManager.setState(selections[selectorPositionsIndex]);
-                SceneManager.setState(SCENE.GAME, TABLES.Prototype);
+                playStartGameSound();
+                setTimeout(() => { SceneManager.setState(SCENE.GAME, TABLES.Prototype); }, startGameSound.duration() + START_GAME_TIME_BUFFER);
                 return true;
             case ALIAS.SELECT2:
                 // console.log("Selected the Play button");

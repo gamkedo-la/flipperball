@@ -4,6 +4,7 @@ let audioFormat;
 let musicSound = null;
 let pauseSound;
 let resumeSound;
+let startGameSound;
 let menuMusic;
 let musicVolume;
 let effectsVolume;
@@ -11,6 +12,7 @@ let currentBackgroundMusic;
 let currentBackgroundMusicInitialized = false;
 
 const VOLUME_INCREMENT = 0.05;
+const MILLESECOND_MULTIPLIER = 1000;
 
 function configureGameAudio() {
 	currentBackgroundMusic = new BackgroundMusicClass(); 
@@ -30,7 +32,9 @@ function loadAudio() {
 	
 	pauseSound = new SoundOverlapsClass(assetPath.Audio + "PauseSoundLow");
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
-//	menuMusic = assetPath.Audio + "beeblebrox";
+	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
+
+	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
 
 function setFormat() {
@@ -103,8 +107,13 @@ function SoundOverlapsClass(filenameWithPath) {
         sounds[soundIndex].volume = Math.pow(getRandomVolume() * effectsVolume * !isMuted, 2);
         sounds[soundIndex].play();
 
-        soundIndex = (++soundIndex) % sounds.length;
-    }
+		soundIndex = (++soundIndex) % sounds.length;
+	}
+
+	this.duration = function() {
+		//return duration in milleseconds
+		return sounds[0].duration * MILLESECOND_MULTIPLIER;
+	}
 }
 
 function getRandomVolume(){
@@ -187,5 +196,11 @@ function playBackgroundMusic() {
 	if (!currentBackgroundMusicInitialized) {
 		currentBackgroundMusicInitialized = true;
 		currentBackgroundMusic.loopSong(assetPath.Audio + "Honky_Tonk_Piano _Loop");
+	}
+}
+
+function playStartGameSound() {
+	if(!isMuted) {
+		startGameSound.play();
 	}
 }
