@@ -93,13 +93,33 @@
   <object id="16" name="ball" gid="16" x="761.167" y="88.8333" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="360" y="363.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="761.5" y="363" width="55" height="186"/>
-  <object id="32" name="circle_bumper_red" gid="15" x="541" y="291.5" width="94" height="95"/>
-  <object id="33" name="circle_bumper_blue" gid="14" x="540.5" y="98" width="94" height="95"/>
-  <object id="34" name="circle_bumper_yellow" gid="12" x="635.5" y="198" width="94" height="95"/>
-  <object id="35" name="circle_bumper_green" gid="13" x="446.5" y="197" width="94" height="95"/>
+  <object id="32" name="circle_bumper_red" gid="15" x="541" y="291.5" width="94" height="95">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
+  </object>
+  <object id="33" name="circle_bumper_blue" gid="14" x="540.5" y="98" width="94" height="95">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
+  </object>
+  <object id="34" name="circle_bumper_yellow" gid="12" x="635.5" y="198" width="94" height="95">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
+  </object>
+  <object id="35" name="circle_bumper_green" gid="13" x="446.5" y="197" width="94" height="95">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
+  </object>
   <object id="48" name="drain_rail_right" gid="20" x="778" y="419" width="82" height="240"/>
   <object id="49" name="drain_rail_left" gid="19" x="319" y="420" width="82" height="240"/>
-  <object id="58" name="lane_trigger" gid="21" x="830.18" y="245.818" width="5" height="26"/>
+  <object id="58" name="lane_trigger" gid="21" x="830.18" y="245.818" width="5" height="26">
+   <properties>
+    <property name="score" type="int" value="25"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="1" name="circle_bumper_blue" type="circle_bumper" x="539.909" y="2.28997" width="94.652" height="95.4154">

@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":21,
+                 "gid":22,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -221,6 +221,12 @@
                  "height":95,
                  "id":32,
                  "name":"circle_bumper_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -233,6 +239,12 @@
                  "height":95,
                  "id":33,
                  "name":"circle_bumper_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -245,6 +257,12 @@
                  "height":95,
                  "id":34,
                  "name":"circle_bumper_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -257,6 +275,12 @@
                  "height":95,
                  "id":35,
                  "name":"circle_bumper_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -293,6 +317,12 @@
                  "height":26,
                  "id":58,
                  "name":"lane_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }],
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,

@@ -99,6 +99,7 @@ function DynamicMapObject (objData, bodyData) {
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
+    this.score = objData.properties ? objData.properties[0].value: 0;
 
     this.update = function(deltaTime) {}
     this.draw = function() {
@@ -132,6 +133,7 @@ function TriggerMapObject(objData, bodyData) {
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
     this.hasCollided = false;
+    this.score = objData.properties[0].value || 0;
 
     this.update = function(deltaTime) {}
     this.draw = function() {

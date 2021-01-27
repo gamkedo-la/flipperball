@@ -394,7 +394,7 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
-                self.score += 100;   
+                self.score += otherEntity.score;   
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;
             case ENTITY_TYPE.FlipperBumper:
@@ -425,10 +425,7 @@ function GameScene() {
        self.table.animations.push(newAnimation);
     }
 
-    this.handleTriggerCollision = function(otherEntity) {
-        //We should add a score property to all the other entities, then instead of
-        //hard coding 25 here, we could do self.score += otherEntity.score and set
-        //that other score to whatever was appropriate for that individual object 
-        self.score += 25;
+    this.handleTriggerCollision = function(triggerEntity) {
+        self.score += triggerEntity.score;
     }
 }
