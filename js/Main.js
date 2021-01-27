@@ -5,9 +5,16 @@ window.onload = function() {
     window.addEventListener("blur", windowOnBlur);
 
 	canvas = document.createElement("canvas");
-	canvas.classList.add("game-canvas")
+	canvas.classList.add("game-canvas");
   canvasContext = canvas.getContext("2d");
-  document.getElementById('canvas-container').appendChild(canvas);
+
+  if (FEATURE_FLAGS.useCanvasContainer) {
+	  document.getElementById('canvas-container').appendChild(canvas);
+	  
+  } else {
+		canvas.style.height = '100vh';
+  	document.body.appendChild(canvas);
+  }
 
   canvas.width = 1000;
   canvas.height = 600;
