@@ -29,6 +29,10 @@ function Flipper (objData, bodyData) {
         this.rotationCenter = {x:this.x + (this.image.width - 27), y: this.y + 27};
         this.tipBody = new CollisionBody({ellipse: true, width: 22, height: 22, x: 11, y: 111})
     }
+    
+    this.setInput = function(alias) {
+	    this.input = alias;
+    }
 
     this.update = function(deltaTime) {
         this.oldRotation = this.rotation;

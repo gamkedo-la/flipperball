@@ -19,6 +19,7 @@ function GameScene() {
     const shakeDuration = 500;
     let currentShakes = 0;
     const shakesBeforeTilt = 2;
+    let tilt = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -139,6 +140,8 @@ function GameScene() {
     
     this.shakeScene = function(pressed) {
         if (!pressed) {return;}
+        
+        if (tilt) {return;}
 
         if (this.paused) {return;}
 		
@@ -146,6 +149,7 @@ function GameScene() {
 		if (shakeStartTime != -1) {
 			if (currentShakes >= shakesBeforeTilt) {
 				console.log("TILT");
+				tilt = true;
 				shakeStartTime = -1;
 				currentShakes = 0;
 				return;
@@ -249,6 +253,18 @@ function GameScene() {
         if (ballIndex !== -1) {
             self.collisionManager.unregisterBall(ball);
             self.table.balls.splice(ballIndex, 1);
+            
+            // reset flipper input (in case of tilt)
+            if (tilt) {
+	            tilt = false;
+	            for (const flipper of self.table.flippers) {
+		            if (flipper.side == "left")
+			            flipper.setInput(ALIAS.LEFT);
+			        else 
+			        	flipper.setInput(ALIAS.RIGHT);
+	            }
+	            
+            }
         }
     }
 
@@ -292,7 +308,9 @@ function GameScene() {
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
-                flipper.update(deltaTime / self.collisionRate);
+	            if (tilt)
+		            flipper.setInput(null);
+            	flipper.update(deltaTime / self.collisionRate);
             }
     
             for (const ball of self.table.balls) {
@@ -310,6 +328,8 @@ function GameScene() {
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
+	            if (tilt)
+		            flipper.setInput(null);
                 flipper.update(deltaTime / self.collisionRate);
             }
     
@@ -378,6 +398,10 @@ function GameScene() {
           colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
           colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
           drawRect(0,0,canvas.width,canvas.height,'rgba(0,0,0,0.30)');
+        }
+        
+        if (tilt) {
+	        colorText("[GAME TILT]", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
         }
 
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
