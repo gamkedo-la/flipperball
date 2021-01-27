@@ -1,6 +1,15 @@
 /* eslint-disable no-unused-vars */
 
 //Globals
+//----------Feature Flags---------//
+const FEATURE_FLAGS = {
+	/**
+	 * true: canvas resizes based on width
+	 * false: canvas is always fullscreen
+	 */
+	useCanvasContainer: true,
+};
+
 //----------Drawing and Canvas---------//
 let canvas;
 let canvasContext;
