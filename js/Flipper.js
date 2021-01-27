@@ -83,6 +83,14 @@ function Flipper (objData, bodyData) {
                 canvasContext.drawImage(this.image, this.x, this.y);
             }
         } else {
+            //By placing the right flipper translations in this block
+            //I was able to keep the right flipper from staying "in place"
+            //during screen shake when the flipper is not engaged. Likely a better fix.
+            canvasContext.save();
+            canvasContext.translate(this.x + (this.image.width - 27), this.y + 27);
+            canvasContext.rotate(this.rotation);
+            canvasContext.translate(-this.x - (this.image.width - 27), -this.y - 27);
+            
             canvasContext.drawImage(this.image, this.x, this.y);
         }
 
