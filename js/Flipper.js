@@ -31,12 +31,15 @@ function Flipper (objData, bodyData) {
     }
     
     this.setInput = function(alias) {
-	    this.input = alias;
+        this.input = alias;
     }
 
     this.update = function(deltaTime) {
         this.oldRotation = this.rotation;
         if (heldButtons.includes(this.input)) {
+            if (this.rotation === 0) {
+                flipperSound.play();
+            }
             if (this.side === 'right') {
                 this.rotation += (deltaTime * ROTATION_RATE / 1000);
                 if (this.rotation > MAX_ROTATION_ANGLE) {

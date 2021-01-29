@@ -256,14 +256,14 @@ function GameScene() {
             
             // reset flipper input (in case of tilt)
             if (tilt) {
-	            tilt = false;
-	            for (const flipper of self.table.flippers) {
-		            if (flipper.side == "left")
-			            flipper.setInput(ALIAS.LEFT);
-			        else 
-			        	flipper.setInput(ALIAS.RIGHT);
-	            }
-	            
+                tilt = false;
+                for (const flipper of self.table.flippers) {
+                    if (flipper.side === "left") {
+                        flipper.setInput(ALIAS.LEFT);
+                    } else {
+                        flipper.setInput(ALIAS.RIGHT);
+                    }
+                }
             }
         }
     }
@@ -308,9 +308,10 @@ function GameScene() {
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
-	            if (tilt)
-		            flipper.setInput(null);
-            	flipper.update(deltaTime / self.collisionRate);
+                if (tilt) {
+                    flipper.setInput(null);
+                }
+                flipper.update(deltaTime / self.collisionRate);
             }
     
             for (const ball of self.table.balls) {
@@ -328,8 +329,9 @@ function GameScene() {
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
-	            if (tilt)
-		            flipper.setInput(null);
+                if (tilt) {
+                    flipper.setInput(null);
+                }
                 flipper.update(deltaTime / self.collisionRate);
             }
     
@@ -390,18 +392,18 @@ function GameScene() {
         }
 
         if (self.flashEnabled && self.flash){
-          drawRect(0, 0, canvas.width, canvas.height, 'rgba(255,255,255, 0.3)');
+          drawRect(0, 0, canvas.width, canvas.height, Color.WhiteFlash);
           self.flash = false;
         }
 
         if (self.paused) {
           colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
           colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
-          drawRect(0,0,canvas.width,canvas.height,'rgba(0,0,0,0.30)');
+          drawRect(0,0,canvas.width,canvas.height, Color.BlackOverlay);
         }
         
         if (tilt) {
-	        colorText("[GAME TILT]", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
+            colorText("[GAME TILT]", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
         }
 
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    

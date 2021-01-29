@@ -9,11 +9,10 @@ window.onload = function() {
   canvasContext = canvas.getContext("2d");
 
   if (FEATURE_FLAGS.useCanvasContainer) {
-	  document.getElementById('canvas-container').appendChild(canvas);
-	  
+		document.getElementById('canvas-container').appendChild(canvas);
   } else {
 		canvas.style.height = '100vh';
-  	document.body.appendChild(canvas);
+		document.body.appendChild(canvas);
   }
 
   canvas.width = 1000;

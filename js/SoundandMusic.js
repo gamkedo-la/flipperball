@@ -5,6 +5,7 @@ let musicSound = null;
 let pauseSound;
 let resumeSound;
 let startGameSound;
+let flipperSound;
 let menuMusic;
 let musicVolume;
 let effectsVolume;
@@ -33,6 +34,7 @@ function loadAudio() {
 	pauseSound = new SoundOverlapsClass(assetPath.Audio + "PauseSoundLow");
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
+	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX");
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
@@ -192,10 +194,10 @@ function resumeSoundAndMusic() {
 	currentBackgroundMusic.resumeSound();
 }
 
-function playBackgroundMusic() { 
+function playBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") { 
 	if (!currentBackgroundMusicInitialized) {
 		currentBackgroundMusicInitialized = true;
-		currentBackgroundMusic.loopSong(assetPath.Audio + "Honky_Tonk_Piano _Loop");
+		currentBackgroundMusic.loopSong(assetPath.Audio + trackToPlay);
 	}
 }
 

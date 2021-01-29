@@ -37,7 +37,9 @@ const Color = {
 	Black:"black",
 	Yellow:"yellow",
 	Purple:"purple",
-	Aqua:"aqua"
+	Aqua:"aqua",
+	WhiteFlash: "rgba(255, 255, 255, 0.3)",
+	BlackOverlay: "rgba(0, 0, 0, 0.30)"
 };
 
 //---------------Persistence-----------//
