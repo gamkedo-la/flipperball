@@ -130,7 +130,8 @@ function Ball (objData, bodyData) {
         self.yAdjustment += (self.radius - collision.distance) * collision.direction.y;
         const speed = Math.sqrt((self.velocity.x) * (self.velocity.x) + (self.velocity.y) * (self.velocity.y));
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
-        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;        
+        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y; 
+        bumperSound.play();       
     }
 
     const respondToPolygonCollision = function(collision) {
@@ -145,7 +146,7 @@ function Ball (objData, bodyData) {
         if (collision.otherEntity.type === ENTITY_TYPE.Flipper) {
             const reflectedVelocity = collision.otherEntity.velocityForPointOnEdge(collision.point);
             xVelAdjust *= reflectedVelocity;
-            yVelAdjust *= reflectedVelocity;
+            yVelAdjust *= reflectedVelocity;       
         }
 
         self.xAdjustment += xPosAdjust;
