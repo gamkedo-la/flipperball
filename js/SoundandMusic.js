@@ -6,6 +6,7 @@ let pauseSound;
 let resumeSound;
 let startGameSound;
 let flipperSound;
+let bumperSound;
 let menuMusic;
 let musicVolume;
 let effectsVolume;
@@ -35,6 +36,8 @@ function loadAudio() {
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
 	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX");
+	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding");
+
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
