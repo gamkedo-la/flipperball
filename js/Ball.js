@@ -136,8 +136,10 @@ function Ball (objData, bodyData) {
             reflectance = 1.1;
         }
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
-        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y; 
-        bumperSound.play();       
+        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
+        if (collision.otherEntity.type === ENTITY_TYPE.CircleBumper) {
+            bumperSound.play();       
+        }
     }
 
     const respondToPolygonCollision = function(collision) {

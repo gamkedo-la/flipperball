@@ -14,6 +14,7 @@ module.exports = {
         "assetPath": true,
         "audioFormat": true,
         "BODY_TYPE": true,
+        "bumperSound": true,
         "canvas": true,
         "canvasClearColor": true,
         "canvasContext": true,
