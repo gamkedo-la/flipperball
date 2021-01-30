@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="64">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="75">
  <editorsettings>
   <export target="../../tables/prototype_top.js" format="js"/>
  </editorsettings>
@@ -78,6 +78,8 @@
   <object id="59" name="angled_wall_4" gid="11" x="934" y="100.333" width="52" height="86"/>
   <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
   <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
+  <object id="70" name="angled_wall_3" gid="10" x="842" y="467" width="52" height="52"/>
+  <object id="72" name="angled_wall_2" gid="9" x="290.25" y="465.5" width="52" height="52"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="292" y="590" width="170" height="124"/>
@@ -89,26 +91,44 @@
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="321" y="230.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="458.818" y="570">
-   <polygon points="0,0 -122.364,-100.364 -132.909,-104.909 -143.636,-104.909 -152.364,-100.727 -156.545,-97.6364 -161.455,-92 -164.545,-84.7273 -164.727,-71.6364 -162.545,-65.6364 -157.636,-58.5455 -152.909,-54.5455 -12.1818,17.2727 -9.09091,18.7273 -2.54545,17.8182 1.09091,14.3636 3.09091,11.6364 3.27273,3.09091"/>
-  </object>
-  <object id="43" name="flipper_right" type="flipper" x="851.545" y="470">
-   <polygon points="0,0 -127.455,103.636 -129.455,106.182 -129.818,114.545 -127.091,118.182 -122.182,121.455 -115.091,120.909 26.9091,48.1818 34.1818,40.7273 37.4545,34.7273 38.3636,32.1818 38.5455,18.9091 34.7273,10.5455 31.2727,6.36364 26.5455,2.72727 20.9091,-0.181818 14.7273,-2 6,-2"/>
-  </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,0 -0.75,710.5 13.25,710.25 13.5,401.5 13,136.5 64.5,52 14,-0.5"/>
+   <polygon points="0,0 -0.75,710.5 13.25,710.25 13.6553,464.876 65.454,464.748 13.75,413 13,136.5 64.5,52 14,-0.5"/>
   </object>
   <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="862.273" y="381.455">
    <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
   </object>
   <object id="58" name="right" type="wall" x="986.333" y="0">
-   <polygon points="-61.6667,0 0.0131669,100.376 -0.333333,599.333 13.6667,599.333 13.6667,0"/>
+   <polygon points="-61.6667,0 0.0131669,100.376 -0.333333,729.333 12.6667,730.333 13.6667,0"/>
   </object>
   <object id="60" name="inner_right" type="wall" x="908.333" y="127.333">
-   <polygon points="0,0 -14,0.666667 -14.3333,276.333 -14,472 0,472.333"/>
+   <polygon points="0,0 -14,0.843096 -14.2752,287.915 -66.0833,339.463 -14.8238,339.856 -15,596.912 0,597.333"/>
   </object>
   <object id="63" name="top" type="wall" x="940" y="0">
    <polygon points="0,0 -664.333,0.333333 -664.333,13.3333 4.66667,14"/>
+  </object>
+  <object id="64" name="flipper_right" type="flipper" x="856.219" y="468.677">
+   <polygon points="-9.33334,5.66666 -130.789,103.516 -117.515,122.788 23.8484,51.7273"/>
+  </object>
+  <object id="65" name="flipper_right" type="flipper_tip" x="720.348" y="569.303" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="66" name="flipper_right" type="flipper_base" x="835.015" y="468.636" width="55" height="55">
+   <ellipse/>
+  </object>
+  <object id="67" name="flipper_left" type="flipper" x="458.234" y="571.584">
+   <polygon points="2.33333,-2 -123.303,-102.575 -154.242,-54.5455 -11.8485,16.2727"/>
+  </object>
+  <object id="68" name="flipper_left" type="flipper_tip" x="439.416" y="565.917" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="69" name="flipper_left" type="flipper_base" x="292.584" y="465.417" width="55" height="55">
+   <ellipse/>
+  </object>
+  <object id="73" name="flipper_left" type="flipper_inner" x="458.75" y="569.5">
+   <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
+  </object>
+  <object id="74" name="flipper_right" type="flipper_inner" x="854" y="458.75">
+   <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
   </object>
  </objectgroup>
 </map>

@@ -52,6 +52,7 @@ module.exports = {
         "KEY_S": true,
         "KEY_SPACE": true,
         "KEY_UP": true,
+        "LANE_TRIGGER_TIMEOUT": true,
         "localStorageKey": true,
         "MAX_BALL_SPEED": true,
         "MAX_ROTATION_ANGLE": true,
@@ -70,6 +71,7 @@ module.exports = {
         "TextAlignment": true,
         "TileMaps": true,
         "timer": true,
+        "TRIGGER_TYPE": true,
         "VOLUME_INCREMENT": true,
         "worldSpeed": true,
 
@@ -321,7 +323,6 @@ module.exports = {
         "prefer-numeric-literals": "error",
         "prefer-object-spread": "error",
         "prefer-promise-reject-errors": "error",
-        "prefer-reflect": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "off",

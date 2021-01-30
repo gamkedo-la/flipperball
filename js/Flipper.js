@@ -8,12 +8,24 @@ function Flipper (objData, bodyData) {
     this.y = objData.y - objData.height;
     this.width = objData.width;
     this.height = objData.height;
+    this.isMoving = false;
     
     this.type = ENTITY_TYPE.Flipper
 
     this.image = images[objData.name];
-    this.body = new CollisionBody(bodyData);
-    this.reflectance = objData.reflectance || 0.4;
+    for (const body of bodyData) {
+        if (body.type === "flipper") {
+            this.body = new CollisionBody(body);
+        } else if (body.type === "flipper_tip") {
+            this.tipBody = new CollisionBody(body);
+            this.tipBody.reflectance = 1.1;
+        } else if (body.type === "flipper_inner") {
+            this.innerBody = new CollisionBody(body);
+        } else {
+            this.baseBody = new CollisionBody(body);
+        }
+    }
+    this.reflectance = objData.reflectance || 0.9;
     this.reflectedVelocity = 15;
     this.rotation = 0;
     this.oldRotation = 0;
@@ -22,12 +34,10 @@ function Flipper (objData, bodyData) {
         this.input = ALIAS.LEFT;
         this.side = 'left'
         this.rotationCenter = {x: this.x + 27, y: this.y + 27}
-        this.tipBody = new CollisionBody({ellipse: true, width: 22, height: 22, x: 157, y: 111})
     } else if (objData.type === 'right_flipper') {
         this.input = ALIAS.RIGHT;
         this.side = 'right'
         this.rotationCenter = {x:this.x + (this.image.width - 27), y: this.y + 27};
-        this.tipBody = new CollisionBody({ellipse: true, width: 22, height: 22, x: 11, y: 111})
     }
     
     this.setInput = function(alias) {
@@ -63,7 +73,10 @@ function Flipper (objData, bodyData) {
             }
         }
 
+        this.isMoving = (Math.abs(this.oldRotation - this.rotation) > Number.EPSILON);
+
         this.body.rotate(this.rotationCenter, this.rotation);
+        this.tipBody.rotate(this.rotationCenter, this.rotation);
     }
 
     this.velocityForPointOnEdge = function(point, edge) {
@@ -101,8 +114,9 @@ function Flipper (objData, bodyData) {
             canvasContext.drawImage(this.image, this.x, this.y);
         }
 
-        this.body.draw();
-
         canvasContext.restore();
+        this.body.draw();
+        this.tipBody.draw();
+        this.baseBody.draw();
     }
 }

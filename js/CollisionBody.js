@@ -6,6 +6,7 @@ function CollisionBody (data) {
         self.name = data.name;
         self.radius = (data.width + data.height) / 4; //average of half the width and half the height
         self.center = {x:data.x + self.radius, y:data.y + self.radius};
+        self.rotation = 0;
     }
 
     const buildPolygonBody = function (self, data) {
@@ -52,7 +53,16 @@ function CollisionBody (data) {
             }
         } else {
             //Need to rotate a single point (the center) here
+            const deltaCenterX = this.center.x - center.x;
+            const deltaCenterY = this.center.y - center.y;
+    
+            const centerX = deltaCenterX * Math.cos(angle - this.rotation) - deltaCenterY * Math.sin(angle - this.rotation);
+            const centerY = deltaCenterX * Math.sin(angle - this.rotation) + deltaCenterY * Math.cos(angle - this.rotation);
+    
+            this.center.x = centerX + center.x;
+            this.center.y = centerY + center.y;
 
+            this.rotation = angle;
         }
     }
 
