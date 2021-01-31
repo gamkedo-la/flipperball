@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="60">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="69">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
@@ -76,7 +76,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="56" name="cloud_bg" gid="22" x="280" y="600" width="720" height="600"/>
+  <object id="56" name="cloud_bg" gid="22" x="280" y="600" width="720" height="600" visible="0"/>
   <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
   <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
   <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
@@ -88,63 +88,55 @@
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" gid="1" x="912" y="552" width="68" height="289"/>
-  <object id="14" name="flipper_left" gid="2" x="380" y="539" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="630" y="540" width="170" height="124"/>
+  <object id="14" name="flipper_left" gid="2" x="381" y="532" width="170" height="124"/>
+  <object id="15" name="flipper_right" gid="3" x="636" y="533" width="170" height="124"/>
   <object id="16" name="ball" gid="16" x="761.167" y="88.8333" width="26" height="26"/>
-  <object id="30" name="flipper_bumper_left" gid="17" x="360" y="363.5" width="55" height="186"/>
-  <object id="31" name="flipper_bumper_right" gid="18" x="761.5" y="363" width="55" height="186"/>
+  <object id="30" name="flipper_bumper_left" gid="17" x="363" y="360.5" width="55" height="186"/>
+  <object id="31" name="flipper_bumper_right" gid="18" x="758.5" y="360" width="55" height="186"/>
   <object id="32" name="circle_bumper_red" gid="15" x="541" y="291.5" width="94" height="95">
    <properties>
     <property name="score" type="int" value="100"/>
    </properties>
   </object>
-  <object id="33" name="circle_bumper_blue" gid="14" x="540.5" y="98" width="94" height="95">
+  <object id="34" name="circle_bumper_yellow" gid="12" x="635.5" y="158" width="94" height="95">
    <properties>
     <property name="score" type="int" value="100"/>
    </properties>
   </object>
-  <object id="34" name="circle_bumper_yellow" gid="12" x="635.5" y="198" width="94" height="95">
+  <object id="35" name="circle_bumper_green" gid="13" x="446.5" y="157" width="94" height="95">
    <properties>
     <property name="score" type="int" value="100"/>
    </properties>
   </object>
-  <object id="35" name="circle_bumper_green" gid="13" x="446.5" y="197" width="94" height="95">
-   <properties>
-    <property name="score" type="int" value="100"/>
-   </properties>
-  </object>
-  <object id="48" name="drain_rail_right" gid="20" x="778" y="419" width="82" height="240"/>
-  <object id="49" name="drain_rail_left" gid="19" x="319" y="420" width="82" height="240"/>
-  <object id="58" name="lane_trigger" gid="21" x="830.18" y="245.818" width="5" height="26">
+  <object id="48" name="drain_rail_right" gid="20" x="775" y="416" width="82" height="240"/>
+  <object id="49" name="drain_rail_left" gid="19" x="322" y="417" width="82" height="240"/>
+  <object id="58" name="lane_trigger" gid="21" x="827.18" y="242.818" width="5" height="26">
    <properties>
     <property name="score" type="int" value="25"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
-  <object id="1" name="circle_bumper_blue" type="circle_bumper" x="539.909" y="2.28997" width="94.652" height="95.4154">
+  <object id="3" name="circle_bumper_green" type="circle_bumper" x="445.784" y="61.98" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="3" name="circle_bumper_green" type="circle_bumper" x="445.784" y="101.98" width="94.652" height="95.4154">
-   <ellipse/>
-  </object>
-  <object id="4" name="circle_bumper_yellow" type="circle_bumper" x="634.561" y="101.98" width="94.652" height="95.4154">
+  <object id="4" name="circle_bumper_yellow" type="circle_bumper" x="634.561" y="61.98" width="94.652" height="95.4154">
    <ellipse/>
   </object>
   <object id="5" name="circle_bumper_red" type="circle_bumper" x="539.909" y="195.946" width="94.652" height="95.4154">
    <ellipse/>
   </object>
-  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="359" y="183.5">
+  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="362" y="180.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
   <object id="41" name="plunger" type="plunger" x="912.25" y="263.25">
    <polygon points="0,-1.81818 0,13 67.75,13.5 67.75,-1.75 33.875,0.0340909"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="544.818" y="522">
-   <polygon points="2.33333,-2 -123.364,-99.364 -139.636,-107.242 -152.364,-102.727 -160.122,-96.6667 -163.878,-88.394 -164.545,-63.9697 -151.909,-52.2122 -12.8485,15.606 -2.54545,17.8182 4.09091,12.9697"/>
+  <object id="42" name="flipper_left" type="flipper" x="545.485" y="515.667">
+   <polygon points="2.33333,-2 -123.303,-102.575 -154.242,-54.5455 -11.8485,16.2727"/>
   </object>
-  <object id="43" name="flipper_right" type="flipper" x="761.545" y="419">
-   <polygon points="-1.66667,1.33333 -127.122,101.849 -130.758,114.182 -122.182,121.455 -103.424,116.242 31.5151,47.7273 38.3636,32.1818 37.2122,17.2424 31.8788,5.0606 13.0606,-2.66667"/>
+  <object id="43" name="flipper_right" type="flipper" x="772.545" y="409.333">
+   <polygon points="-13.6667,9.66666 -130.789,103.516 -117.515,122.788 24.5151,48.7273"/>
   </object>
   <object id="45" name="ball" type="ball" x="761.47" y="62.5149" width="25.4545" height="26">
    <ellipse/>
@@ -152,10 +144,10 @@
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
    <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 87.736,-484 90.5,141.5 16,141.5 11.736,-484.5 -0.5,-484.223 0.5,-404.5 -49.5,-352.5 0,-270.5"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="859.25" y="178.75">
+  <object id="51" name="drain_rail_right" type="drain_divider" x="856.25" y="175.75">
    <polygon points="0,0 -10.5,1.5 -10.25,161.159 -80.9773,231.432 -73.3409,238.886 -0.25,165.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="320" y="180.182">
+  <object id="52" name="drain_rail_left" type="drain_divider" x="323" y="177.182">
    <polygon points="0,0 0,164.364 72.5455,237.818 80.1818,230.909 10.1818,161.091 9.81818,1.63636"/>
   </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
@@ -164,11 +156,32 @@
   <object id="54" name="drain" type="drain" x="443.5" y="600">
    <polygon points="0,0 -0.5,41 312,39 312.5,-0.5"/>
   </object>
-  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="816.273" y="317.455">
+  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="813.273" y="314.455">
    <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
   </object>
-  <object id="59" name="lane_trigger" type="trigger" x="830.18" y="219.909" width="5.09091" height="25.9091">
+  <object id="59" name="lane_trigger" type="trigger" x="827.18" y="216.909" width="5.09091" height="25.9091">
    <ellipse/>
+  </object>
+  <object id="60" name="flipper_right" type="flipper_tip" x="636.674" y="509.959" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="61" name="flipper_right" type="flipper_base" x="751.341" y="409.292" width="55" height="55">
+   <ellipse/>
+  </object>
+  <object id="62" name="flipper_left" type="flipper_tip" x="526.667" y="510" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="63" name="flipper_left" type="flipper_base" x="379.833" y="409.5" width="55" height="55">
+   <ellipse/>
+  </object>
+  <object id="66" name="flipper_right" type="flipper_inner" x="770" y="398.667">
+   <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
+  </object>
+  <object id="67" name="flipper_left" type="flipper_inner" x="546" y="515">
+   <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
+  </object>
+  <object id="68" name="right" type="wall" x="893.5" y="7">
+   <polygon points="1.5,-3 -43.5,45.5 10,136 9,-84.5 0.5,-84.5"/>
   </object>
  </objectgroup>
 </map>

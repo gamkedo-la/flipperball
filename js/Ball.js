@@ -19,6 +19,7 @@ function Ball (objData, bodyData) {
     this.type = objData.type;
     this.image = images[objData.name];
     this.body = new CollisionBody(bodyData);
+    this.center = this.body.center;
     this.triggersCollided = {};
 
     this.update = function(deltaTime) {
@@ -67,13 +68,12 @@ function Ball (objData, bodyData) {
             //     collision.otherEntity.didCollideWith(this);
             // }
             if (respondsTo(collision.otherEntity.type)) {
-                if (collision.otherEntity.type == ENTITY_TYPE.Trigger && collision.otherEntity.subType == TRIGGER_TYPE.Lane)  {
+                if (collision.otherEntity.type === ENTITY_TYPE.Trigger && collision.otherEntity.subType === TRIGGER_TYPE.Lane) {
                     if (!collision.otherEntity.hasCollided) {
                         collision.otherEntity.hasCollided = true;
                         this.triggersCollided[Date.now()] = collision.otherEntity;
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     } 
-                    return;
                 } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     if (collision.edge) {
@@ -95,16 +95,17 @@ function Ball (objData, bodyData) {
     }
 
     this.clearTriggerCollisions = function() {
-        removeEntities = [];
-        for (var datetime in this.triggersCollided) {
-            var delta = Date.now() - datetime;
+        const removeEntities = [];
+        // eslint-disable-next-line guard-for-in
+        for (const datetime in this.triggersCollided) {
+            const delta = Date.now() - datetime;
             if (delta >= LANE_TRIGGER_TIMEOUT) {
                 this.triggersCollided[datetime].hasCollided = false;
                 removeEntities.push(datetime);
             }
         }
 
-        for (var key in removeEntities) {
+        for (const key of removeEntities) {
             delete this.triggersCollided[key];
         }
     }
@@ -125,12 +126,20 @@ function Ball (objData, bodyData) {
     }
 
     const respondToCircularCollision = function(collision) {
-        const {reflectance} = collision.otherEntity;
-        self.xAdjustment += (self.radius - collision.distance) * collision.direction.x;
-        self.yAdjustment += (self.radius - collision.distance) * collision.direction.y;
+        let {reflectance} = collision.otherEntity;
+        self.xAdjustment += (collision.distance) * collision.direction.x;
+        self.yAdjustment += (collision.distance) * collision.direction.y;
+
         const speed = Math.sqrt((self.velocity.x) * (self.velocity.x) + (self.velocity.y) * (self.velocity.y));
+
+        if (collision.body.reflectance) {
+            reflectance = 1.1;
+        }
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
-        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;        
+        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
+        if (collision.otherEntity.type === ENTITY_TYPE.CircleBumper) {
+            bumperSound.play();       
+        }
     }
 
     const respondToPolygonCollision = function(collision) {
@@ -145,7 +154,7 @@ function Ball (objData, bodyData) {
         if (collision.otherEntity.type === ENTITY_TYPE.Flipper) {
             const reflectedVelocity = collision.otherEntity.velocityForPointOnEdge(collision.point);
             xVelAdjust *= reflectedVelocity;
-            yVelAdjust *= reflectedVelocity;
+            yVelAdjust *= reflectedVelocity;       
         }
 
         self.xAdjustment += xPosAdjust;

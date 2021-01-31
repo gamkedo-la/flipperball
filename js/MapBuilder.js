@@ -42,15 +42,22 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {
-            const bodyData = collisionData.find((data) => data.name === obj.name);
             if (obj.type === 'ball') {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.balls.push(new Ball(obj, bodyData));
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
+                const bodyData = []
+                for (const colData of collisionData) {
+                    if (colData.name === obj.name) {bodyData.push(colData);}
+                    if (bodyData.length === 4) {break;}
+                }
                 self.flippers.push(new Flipper(obj, bodyData));
             } else if (obj.type === 'trigger') {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new TriggerMapObject(obj, bodyData));
             } 
             else {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new DynamicMapObject(obj, bodyData));
             }
         }

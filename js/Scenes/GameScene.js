@@ -4,7 +4,7 @@ function GameScene() {
     this.properties = TABLES.Prototype;
     this.table = null;
     this.collisionManager = null;
-    this.collisionRate = 20;
+    this.collisionRate = 100;
     this.paused = false;
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;

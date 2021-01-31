@@ -43,14 +43,44 @@ function CollisionManager () {
                         this.collisions.push(new Collision(
                             COLLISION_TYPE.Circle,
                             otherBall,
-                            distance - otherBall.body.radius,
-                            direction
+                            otherBall.body,
+                            Math.sqrt(distance) - otherBall.body.radius,
+                            direction,
+                            otherBall.center
                         ));
                     }
                 }
             }
 
             for (const flipper of this.flippers.values()) {
+                const tipDistance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.tipBody.center.x, flipper.tipBody.center.y);
+                if (tipDistance <= ((ball.body.radius + flipper.tipBody.radius) * (ball.body.radius + flipper.tipBody.radius))) {
+                    const direction = normalize(ball.center, flipper.tipBody.center);
+                    this.collisions.push(new Collision(
+                        COLLISION_TYPE.Circle,
+                        flipper,
+                        flipper.tipBody,
+                        (ball.body.radius + flipper.tipBody.radius) - Math.sqrt(tipDistance),
+                        direction,
+                        flipper.tipBody.center
+                    ));
+                    break;
+                }
+
+                const baseDistance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.baseBody.center.x, flipper.baseBody.center.y);
+                if (baseDistance <= ((ball.body.radius + flipper.baseBody.radius) * (ball.body.radius + flipper.baseBody.radius))) {
+                    const direction = normalize(ball.center, flipper.baseBody.center);
+                    this.collisions.push(new Collision(
+                        COLLISION_TYPE.Circle,
+                        flipper,
+                        flipper.baseBody,
+                        (ball.body.radius + flipper.baseBody.radius) - Math.sqrt(baseDistance),
+                        direction,
+                        flipper.baseBody.center
+                    ));
+                    break;
+                }
+
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.body.center.x, flipper.body.center.y);
                 const squaredRadii = (ball.body.radius + flipper.body.radius) * (ball.body.radius + flipper.body.radius);
                 if (distance <= squaredRadii) {
@@ -58,7 +88,8 @@ function CollisionManager () {
                     if (circleLine && circleLine.length > 0) {
                         this.collisions.push(...circleLine);
                     }
-                }                
+                    break;
+                }              
             }
 
             ball.resolveCollisions(this.collisions);
@@ -77,6 +108,7 @@ function CollisionManager () {
                         this.collisions.push(new Collision(
                             COLLISION_TYPE.Circle, 
                             entity,
+                            entity.body,
                             Math.sqrt(distance) - entity.body.radius,
                             direction
                         ));
@@ -102,7 +134,7 @@ function CollisionManager () {
         for (const edge of polygon.body.edges) {
             const coll = circleLineCollision(circle, edge);
             if (coll != null) {
-                result.push(new Collision(COLLISION_TYPE.Polygon, polygon, coll.dist, coll.dir, coll.point, edge));
+                result.push(new Collision(COLLISION_TYPE.Polygon, polygon, edge, coll.dist, coll.dir, coll.point, edge));
             }
         }
         return result;
@@ -164,6 +196,11 @@ function CollisionManager () {
     }
 
     const normalize = function(end, start) {
+        if (!end) {
+            console.log(`stopping`)
+        } else if (!start) {
+            console.log(`stopping`)
+        }
         const deltaX = end.x - start.x;
         const deltaY = end.y - start.y;
         const magnitude = (Math.sqrt((deltaX * deltaX) + (deltaY * deltaY)));
@@ -175,9 +212,10 @@ function CollisionManager () {
     }
 }
 
-function Collision (type, otherEntity, distance, direction, point = null, edge = null) {
+function Collision (type, otherEntity, body, distance, direction, point = null, edge = null) {
     this.type = type;
     this.otherEntity = otherEntity;
+    this.body = body;
     this.distance = distance;
     this.direction = direction;
     this.point = point;
