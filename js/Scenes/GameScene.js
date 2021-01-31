@@ -50,6 +50,7 @@ function GameScene() {
         }
 
         if (this.properties.ball) {
+            // we are moving the balls inbetween table scenes?
             self.table.balls.length = 0
             if (this.properties.ballOffset) {
                 this.properties.ball.setPosition(this.properties.ball.x + this.properties.ballOffset.x, this.properties.ball.y + this.properties.ballOffset.y);
@@ -57,6 +58,7 @@ function GameScene() {
             self.table.balls.push(this.properties.ball);
             this.collisionManager.registerBall(this.properties.ball);
         } else {
+            // we lost the ball and are adding a new one to the scene? 
             for (const ball of self.table.balls) {
                 this.collisionManager.registerBall(ball);
             }
