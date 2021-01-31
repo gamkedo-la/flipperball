@@ -69,6 +69,18 @@
    <image width="598" height="14" source="../../img/tables/horizontal_wall.png"/>
   </tile>
  </tileset>
+ <tileset firstgid="22" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0" type="habitrail">
+   <image width="36" height="75" source="C:/Users/The Haad/Desktop/habitrail3.png"/>
+  </tile>
+  <tile id="1" type="habitrail">
+   <image width="36" height="125" source="C:/Users/The Haad/Desktop/habitrail2.png"/>
+  </tile>
+  <tile id="2" type="habitrail">
+   <image width="36" height="75" source="C:/Users/The Haad/Desktop/habitrail1.png"/>
+  </tile>
+ </tileset>
  <objectgroup id="5" name="Fixed">
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="37" name="angled_wall_1" gid="8" x="290" y="138" width="52" height="86"/>

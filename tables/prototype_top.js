@@ -827,6 +827,44 @@
                  "type":"wall"
                 }],
          "tilewidth":598
+        }, 
+        {
+         "columns":0,
+         "firstgid":22,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"habitrail",
+         "spacing":0,
+         "tilecount":3,
+         "tileheight":125,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail3.png",
+                 "imageheight":75,
+                 "imagewidth":36,
+                 "type":"habitrail"
+                }, 
+                {
+                 "id":1,
+                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail2.png",
+                 "imageheight":125,
+                 "imagewidth":36,
+                 "type":"habitrail"
+                }, 
+                {
+                 "id":2,
+                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail1.png",
+                 "imageheight":75,
+                 "imagewidth":36,
+                 "type":"habitrail"
+                }],
+         "tilewidth":36
         }],
  "tilewidth":10,
  "type":"map",
