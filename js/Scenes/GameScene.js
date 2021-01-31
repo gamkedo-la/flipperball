@@ -1,6 +1,7 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
 function GameScene() {
+    // this.properties gets overwritten with SceneManager.js->setState([..], properties)
     this.properties = TABLES.Prototype;
     this.table = null;
     this.collisionManager = null;
@@ -124,7 +125,13 @@ function GameScene() {
                 return true;
             case ALIAS.RESTART:
                 if (pressed) {
-                    this.restartScene();
+                    if (self.paused) {
+                        // force restart when in pause menu
+                        self.paused = false;
+                        this.restartScene(true);
+                    } else {
+                        this.restartScene();
+                    }
                 }
                 return true;
             case ALIAS.SHAKE:
@@ -294,10 +301,10 @@ function GameScene() {
         }
     }
 
-    this.restartScene = function() {
-        if (isGameOver()) {
-            this.currentTableIndex = 0;
-            this.transitionIn();
+    this.restartScene = function(force=false) {
+        if (isGameOver() || force) {
+            self.gameHasFinished = true;
+            SceneManager.setState(SCENE.GAME, TABLES.Prototype);
         }
     }
 
@@ -401,6 +408,7 @@ function GameScene() {
         if (self.paused) {
           colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
           colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
+          colorText("press R to restart" , TEXT_LEFT_OFFSET, 180, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);       
           drawRect(0,0,canvas.width,canvas.height, Color.BlackOverlay);
         }
         
