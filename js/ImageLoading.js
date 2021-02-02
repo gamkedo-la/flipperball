@@ -104,7 +104,8 @@ function loadImages() {
 
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
-        {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"}
+        {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
+        {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"}
     ];
 
     picsToLoad = imageList.length;

@@ -26,6 +26,18 @@
          "name":"Fixed",
          "objects":[
                 {
+                 "gid":25,
+                 "height":600,
+                 "id":75,
+                 "name":"cloud_bg_top",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":720,
+                 "x":279.132329443665,
+                 "y":599.714327216385
+                }, 
+                {
                  "gid":7,
                  "height":598,
                  "id":26,
@@ -658,7 +670,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":75,
+ "nextobjectid":76,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -865,6 +877,29 @@
                  "type":"habitrail"
                 }],
          "tilewidth":36
+        }, 
+        {
+         "columns":0,
+         "firstgid":25,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"cloud_bg_top",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":600,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/raw\/img\/backgrounds\/cloud_bg_top.png",
+                 "imageheight":600,
+                 "imagewidth":720
+                }],
+         "tilewidth":720
         }],
  "tilewidth":10,
  "type":"map",
