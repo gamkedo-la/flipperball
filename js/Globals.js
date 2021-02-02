@@ -61,6 +61,8 @@ const SCENE = {
 	ENDING:"ending"
 };
 
+let canvasContainer = document.getElementById('canvas-container');
+let fullScreenButton = document.createElement('BUTTON');
 let firstLoad = localStorage.getItem(localStorageKey.FirstLoad);
 let timer;
 let worldSpeed = 1;

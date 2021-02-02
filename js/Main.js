@@ -8,12 +8,7 @@ window.onload = function() {
 	canvas.classList.add("game-canvas");
   canvasContext = canvas.getContext("2d");
 
-  if (FEATURE_FLAGS.useCanvasContainer) {
-		document.getElementById('canvas-container').appendChild(canvas);
-  } else {
-		canvas.style.height = '100vh';
-		document.body.appendChild(canvas);
-  }
+  canvasContainer.appendChild(canvas);
 
   canvas.width = 1000;
   canvas.height = 600;
@@ -27,6 +22,22 @@ window.onload = function() {
 //	currentBackgroundMusic.loopSong(menuMusic);//TODO: Restore once there is background music
 	htgdLogoPic.src = assetPath.Image + "screens/screen_HTGD_Logo.png";
 };
+
+fullScreenButton.innerHTML = 'Full Screen';
+fullScreenButton.style.borderRadius = 0;
+canvasContainer.appendChild(fullScreenButton);
+fullScreenButton.onclick = function () {
+	FEATURE_FLAGS.useCanvasContainer = !FEATURE_FLAGS.useCanvasContainer;
+	toggleFullScreen();
+}
+
+function toggleFullScreen() {
+	if (FEATURE_FLAGS.useCanvasContainer) {
+		canvas.style.height = '';
+  } else {
+		 canvas.style.height = '100vh';	
+  }
+}
 
 function loadingDoneSoStartGame() {
 	timer = new Chronogram();
