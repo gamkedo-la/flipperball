@@ -88,7 +88,7 @@ function loadImages() {
         {imgName: "circle_bumper_small_green", theFile: "tables/circle_bumper_small_green.png"},
 
         {imgName: "cloud_bg", theFile: "tables/cloud_bg.png"},
-        {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"}
+        {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"},
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},

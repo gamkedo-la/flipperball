@@ -32,10 +32,10 @@
                  "name":"cloud_bg_top",
                  "rotation":0,
                  "type":"",
-                 "visible":true,
+                 "visible":false,
                  "width":720,
-                 "x":279.132329443665,
-                 "y":599.714327216385
+                 "x":279.132,
+                 "y":599.714
                 }, 
                 {
                  "gid":7,
@@ -48,30 +48,6 @@
                  "width":14,
                  "x":276,
                  "y":598
-                }, 
-                {
-                 "gid":8,
-                 "height":86,
-                 "id":37,
-                 "name":"angled_wall_1",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":290,
-                 "y":138
-                }, 
-                {
-                 "gid":9,
-                 "height":52,
-                 "id":40,
-                 "name":"angled_wall_2",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":290,
-                 "y":53
                 }, 
                 {
                  "gid":7,
@@ -156,6 +132,114 @@
                  "width":52,
                  "x":290.25,
                  "y":465.5
+                }, 
+                {
+                 "gid":32,
+                 "height":54,
+                 "id":77,
+                 "name":"plane_pipe_right",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":855,
+                 "y":180
+                }, 
+                {
+                 "gid":33,
+                 "height":54,
+                 "id":78,
+                 "name":"plane_pipe_left",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":290,
+                 "y":180
+                }, 
+                {
+                 "gid":34,
+                 "height":54,
+                 "id":86,
+                 "name":"circle_bumper_small_red",
+                 "rotation":0,
+                 "type":"circle_bumper",
+                 "visible":true,
+                 "width":54,
+                 "x":430,
+                 "y":120
+                }, 
+                {
+                 "gid":35,
+                 "height":54,
+                 "id":87,
+                 "name":"circle_bumper_small_yellow",
+                 "rotation":0,
+                 "type":"circle_bumper",
+                 "visible":true,
+                 "width":54,
+                 "x":430,
+                 "y":310
+                }, 
+                {
+                 "gid":36,
+                 "height":54,
+                 "id":88,
+                 "name":"circle_bumper_small_blue",
+                 "rotation":0,
+                 "type":"circle_bumper",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":310
+                }, 
+                {
+                 "gid":37,
+                 "height":54,
+                 "id":89,
+                 "name":"circle_bumper_small_green",
+                 "rotation":0,
+                 "type":"circle_bumper",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":120
+                }, 
+                {
+                 "gid":26,
+                 "height":48,
+                 "id":90,
+                 "name":"plane_red",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":51,
+                 "x":350,
+                 "y":178
+                }, 
+                {
+                 "gid":31,
+                 "height":54,
+                 "id":91,
+                 "name":"ball_catch",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":54,
+                 "x":310,
+                 "y":80
+                }, 
+                {
+                 "gid":30,
+                 "height":24,
+                 "id":92,
+                 "name":"ball_catch_arrow",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":350,
+                 "y":90
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -309,12 +393,12 @@
                          "y":710.25
                         }, 
                         {
-                         "x":13.6553408190559,
-                         "y":464.876098870858
+                         "x":13.6553,
+                         "y":464.876
                         }, 
                         {
-                         "x":65.4539763281621,
-                         "y":464.7482878463
+                         "x":65.454,
+                         "y":464.748
                         }, 
                         {
                          "x":13.75,
@@ -325,8 +409,8 @@
                          "y":136.5
                         }, 
                         {
-                         "x":64.5,
-                         "y":52
+                         "x":13.5,
+                         "y":49.5
                         }, 
                         {
                          "x":14,
@@ -417,7 +501,7 @@
                          "y":100.376
                         }, 
                         {
-                         "x":-0.333333000000039,
+                         "x":-0.333333,
                          "y":729.333
                         }, 
                         {
@@ -446,23 +530,23 @@
                         }, 
                         {
                          "x":-14,
-                         "y":0.843096288235207
+                         "y":0.843096
                         }, 
                         {
-                         "x":-14.27517401634,
-                         "y":287.915143172734
+                         "x":-14.2752,
+                         "y":287.915
                         }, 
                         {
                          "x":-66.0833,
-                         "y":339.462815193942
+                         "y":339.463
                         }, 
                         {
-                         "x":-14.8238293599329,
-                         "y":339.856131592744
+                         "x":-14.8238,
+                         "y":339.856
                         }, 
                         {
                          "x":-15,
-                         "y":596.91187361459
+                         "y":596.912
                         }, 
                         {
                          "x":0,
@@ -528,8 +612,8 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":856.219318181818,
-                 "y":468.677196969697
+                 "x":856.219,
+                 "y":468.677
                 }, 
                 {
                  "ellipse":true,
@@ -540,8 +624,8 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":24,
-                 "x":720.348318181818,
-                 "y":569.303196969697
+                 "x":720.348,
+                 "y":569.303
                 }, 
                 {
                  "ellipse":true,
@@ -552,8 +636,8 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":55,
-                 "x":835.015318181818,
-                 "y":468.636196969697
+                 "x":835.015,
+                 "y":468.636
                 }, 
                 {
                  "height":0,
@@ -580,8 +664,8 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":458.2345,
-                 "y":571.583666666667
+                 "x":458.234,
+                 "y":571.584
                 }, 
                 {
                  "ellipse":true,
@@ -592,8 +676,8 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":24,
-                 "x":439.4165,
-                 "y":565.916666666667
+                 "x":439.416,
+                 "y":565.917
                 }, 
                 {
                  "ellipse":true,
@@ -604,8 +688,8 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":55,
-                 "x":292.5835,
-                 "y":465.416666666667
+                 "x":292.584,
+                 "y":465.417
                 }, 
                 {
                  "height":0,
@@ -613,7 +697,7 @@
                  "name":"flipper_left",
                  "polygon":[
                         {
-                         "x":-2.91667000000001,
+                         "x":-2.91667,
                          "y":10.25
                         }, 
                         {
@@ -622,7 +706,7 @@
                         }, 
                         {
                          "x":-123.492,
-                         "y":-42.0454999999999
+                         "y":-42.0455
                         }, 
                         {
                          "x":-16.3485,
@@ -641,20 +725,20 @@
                  "name":"flipper_right",
                  "polygon":[
                         {
-                         "x":-35.6666733333333,
-                         "y":58.0833266666666
+                         "x":-35.6667,
+                         "y":58.0833
                         }, 
                         {
-                         "x":-126.455666666667,
+                         "x":-126.456,
                          "y":124.766
                         }, 
                         {
-                         "x":-116.181666666667,
-                         "y":128.121333333333
+                         "x":-116.182,
+                         "y":128.121
                         }, 
                         {
-                         "x":-17.9849333333333,
-                         "y":77.1439666666668
+                         "x":-17.9849,
+                         "y":77.144
                         }],
                  "rotation":0,
                  "type":"flipper_inner",
@@ -670,7 +754,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":76,
+ "nextobjectid":93,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -890,7 +974,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":1,
+         "tilecount":13,
          "tileheight":600,
          "tiles":[
                 {
@@ -898,6 +982,78 @@
                  "image":"..\/raw\/img\/backgrounds\/cloud_bg_top.png",
                  "imageheight":600,
                  "imagewidth":720
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/img\/tables\/plane_red.png",
+                 "imageheight":48,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/img\/tables\/plane_blue.png",
+                 "imageheight":48,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/img\/tables\/plane_green.png",
+                 "imageheight":48,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/img\/tables\/plane_yellow.png",
+                 "imageheight":48,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/img\/tables\/ball_catch_arrow.png",
+                 "imageheight":24,
+                 "imagewidth":24
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/img\/tables\/ball_catch.png",
+                 "imageheight":54,
+                 "imagewidth":54
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/img\/tables\/plane_pipe_right.png",
+                 "imageheight":54,
+                 "imagewidth":39
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/img\/tables\/plane_pipe_left.png",
+                 "imageheight":54,
+                 "imagewidth":39
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/img\/tables\/circle_bumper_small_red.png",
+                 "imageheight":54,
+                 "imagewidth":54
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/img\/tables\/circle_bumper_small_yellow.png",
+                 "imageheight":54,
+                 "imagewidth":54
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/img\/tables\/circle_bumper_small_blue.png",
+                 "imageheight":54,
+                 "imagewidth":54
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/img\/tables\/circle_bumper_small_green.png",
+                 "imageheight":54,
+                 "imagewidth":54
                 }],
          "tilewidth":720
         }],
