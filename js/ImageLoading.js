@@ -82,7 +82,13 @@ function loadImages() {
         {imgName: "circle_bumper_yellow", theFile: "tables/circle_bumper_yellow.png"},
         {imgName: "circle_bumper_yellow_anim", theFile: "animations/circle_bumper_yellow_anim.png"},
 
+        {imgName: "circle_bumper_small_red", theFile: "tables/circle_bumper_small_red.png"},
+        {imgName: "circle_bumper_small_yellow", theFile: "tables/circle_bumper_small_yellow.png"},
+        {imgName: "circle_bumper_small_blue", theFile: "tables/circle_bumper_small_blue.png"},
+        {imgName: "circle_bumper_small_green", theFile: "tables/circle_bumper_small_green.png"},
+
         {imgName: "cloud_bg", theFile: "tables/cloud_bg.png"},
+        {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"}
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
@@ -105,7 +111,18 @@ function loadImages() {
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
-        {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"}
+
+        {imgName: "plane_red", theFile: "tables/plane_red.png"},
+        {imgName: "plane_blue", theFile: "tables/plane_blue.png"},
+        {imgName: "plane_yellow", theFile: "tables/plane_yellow.png"},
+        {imgName: "plane_green", theFile: "tables/plane_green.png"},
+
+        {imgName: "plane_pipe_right", theFile: "tables/plane_pipe_right.png"},
+        {imgName: "plane_pipe_left", theFile: "tables/plane_pipe_left.png"},        
+
+        {imgName: "ball_catch", theFile: "tables/ball_catch.png"},
+        {imgName: "ball_catch_arrow", theFile: "tables/ball_catch_arrow.png"},
+        
     ];
 
     picsToLoad = imageList.length;
