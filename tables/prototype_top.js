@@ -845,21 +845,21 @@
          "tiles":[
                 {
                  "id":0,
-                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail3.png",
+                 "image":"..\/raw\/img\/backgrounds\/habitrail1.png",
                  "imageheight":75,
                  "imagewidth":36,
                  "type":"habitrail"
                 }, 
                 {
                  "id":1,
-                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail2.png",
+                 "image":"..\/raw\/img\/backgrounds\/habitrail2.png",
                  "imageheight":125,
                  "imagewidth":36,
                  "type":"habitrail"
                 }, 
                 {
                  "id":2,
-                 "image":"C:\/Users\/The Haad\/Desktop\/habitrail1.png",
+                 "image":"..\/raw\/img\/backgrounds\/habitrail3.png",
                  "imageheight":75,
                  "imagewidth":36,
                  "type":"habitrail"
