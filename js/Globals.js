@@ -164,7 +164,10 @@ const ANIMATIONS = {
 	},
 	CIRCLE_BUMPER_SMALL: {
 		imageNames: {
-			"circle_bumper_small_red": "circle_bumper_small_red_anim"	
+			"circle_bumper_small_red": "circle_bumper_small_red_anim",
+			"circle_bumper_small_yellow": "circle_bumper_small_yellow_anim",
+			"circle_bumper_small_blue": "circle_bumper_small_blue_anim",
+			"circle_bumper_small_green": "circle_bumper_small_green_anim"	
 		},
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 54,

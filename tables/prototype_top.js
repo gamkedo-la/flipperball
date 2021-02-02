@@ -158,42 +158,6 @@
                  "y":180
                 }, 
                 {
-                 "gid":35,
-                 "height":54,
-                 "id":87,
-                 "name":"circle_bumper_small_yellow",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":430,
-                 "y":310
-                }, 
-                {
-                 "gid":36,
-                 "height":54,
-                 "id":88,
-                 "name":"circle_bumper_small_blue",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":710,
-                 "y":310
-                }, 
-                {
-                 "gid":37,
-                 "height":54,
-                 "id":89,
-                 "name":"circle_bumper_small_green",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":710,
-                 "y":120
-                }, 
-                {
                  "gid":26,
                  "height":48,
                  "id":90,
@@ -299,6 +263,42 @@
                  "width":54,
                  "x":430,
                  "y":120
+                }, 
+                {
+                 "gid":37,
+                 "height":54,
+                 "id":97,
+                 "name":"circle_bumper_small_green",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":120
+                }, 
+                {
+                 "gid":36,
+                 "height":54,
+                 "id":100,
+                 "name":"circle_bumper_small_blue",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":310
+                }, 
+                {
+                 "gid":35,
+                 "height":54,
+                 "id":101,
+                 "name":"circle_bumper_small_yellow",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":430,
+                 "y":310
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -758,6 +758,42 @@
                  "width":53,
                  "x":430,
                  "y":66
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":96,
+                 "name":"circle_bumper_small_green",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":710,
+                 "y":66
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":98,
+                 "name":"circle_bumper_small_blue",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":710,
+                 "y":256
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":102,
+                 "name":"circle_bumper_small_yellow",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":430,
+                 "y":256
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -766,7 +802,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":96,
+ "nextobjectid":103,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
