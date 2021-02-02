@@ -85,6 +85,7 @@ const BODY_TYPE = {
 const ENTITY_TYPE = {
 	Ball: 'ball',
 	CircleBumper: 'circle_bumper',
+	CircleBumperSmall: 'circle_bumper_small',
 	Flipper: 'flipper',
 	FlipperBumper: 'flipper_bumper',
 	Plunger: 'plunger',
@@ -101,6 +102,10 @@ const ENTITY_NAME = {
 	CircleBumperBlue: 'circle_bumper_blue',
 	CircleBumperYellow: 'circle_bumper_yellow',
 	CircleBumperGreen: 'circle_bumper_green',
+	CircleBumperSmallRed: 'circle_bumper_small_red',
+	CircleBumperSmallBlue: 'circle_bumper_small_blue',
+	CircleBumperSmallYellow: 'circle_bumper_small_yellow',
+	CircleBumperSmallGreen: 'circle_bumper_small_green',
 	FlipperBumperRight: 'flipper_bumper_right',
 	FlipperBumperLeft: 'flipper_bumper_left'
 }
@@ -153,6 +158,17 @@ const ANIMATIONS = {
 		frameHeight: 96,
 		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: true,
+		loops: false
+	},
+	CIRCLE_BUMPER_SMALL: {
+		imageNames: {
+			"circle_bumper_small_red": "circle_bumper_small_red_anim"	
+		},
+		frames: [0, 1, 2, 3, 4],
+		frameWidth: 54,
+		frameHeight: 54,
+		frameTimes: [64, 64, 64, 64, 64],
+		reverses: false,
 		loops: false
 	},
 	FLIPPER_BUMPER: {

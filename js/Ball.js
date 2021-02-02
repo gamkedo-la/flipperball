@@ -114,6 +114,7 @@ function Ball (objData, bodyData) {
         switch (type) {
             case ENTITY_TYPE.Ball:
             case ENTITY_TYPE.CircleBumper:
+            case ENTITY_TYPE.CircleBumperSmall:
             case ENTITY_TYPE.Flipper:
             case ENTITY_TYPE.FlipperBumper:
             case ENTITY_TYPE.Plunger:

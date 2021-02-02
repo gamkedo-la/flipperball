@@ -433,6 +433,11 @@ function GameScene() {
                 self.score += otherEntity.score;   
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER, otherEntity.x, otherEntity.y)
                 break;
+            case ENTITY_TYPE.CircleBumperSmall:
+                self.flash = true;
+                self.score += otherEntity.score;   
+                self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)
+                break;
             case ENTITY_TYPE.FlipperBumper:
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
                 break;  

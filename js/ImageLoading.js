@@ -83,6 +83,7 @@ function loadImages() {
         {imgName: "circle_bumper_yellow_anim", theFile: "animations/circle_bumper_yellow_anim.png"},
 
         {imgName: "circle_bumper_small_red", theFile: "tables/circle_bumper_small_red.png"},
+        {imgName: "circle_bumper_small_red_anim", theFile: "animations/circle_bumper_small_red_anim.png"},
         {imgName: "circle_bumper_small_yellow", theFile: "tables/circle_bumper_small_yellow.png"},
         {imgName: "circle_bumper_small_blue", theFile: "tables/circle_bumper_small_blue.png"},
         {imgName: "circle_bumper_small_green", theFile: "tables/circle_bumper_small_green.png"},
