@@ -72,13 +72,13 @@
  <tileset firstgid="22" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
-   <image width="36" height="75" source="C:/Users/The Haad/Desktop/habitrail3.png"/>
+   <image width="36" height="75" source="../img/backgrounds/habitrail1.png"/>
   </tile>
   <tile id="1" type="habitrail">
-   <image width="36" height="125" source="C:/Users/The Haad/Desktop/habitrail2.png"/>
+   <image width="36" height="125" source="../img/backgrounds/habitrail2.png"/>
   </tile>
   <tile id="2" type="habitrail">
-   <image width="36" height="75" source="C:/Users/The Haad/Desktop/habitrail1.png"/>
+   <image width="36" height="75" source="../img/backgrounds/habitrail3.png"/>
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
