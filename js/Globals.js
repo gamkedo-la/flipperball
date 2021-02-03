@@ -139,10 +139,11 @@ const TextAlignment = {
 };
 
 const Fonts = {
-	MainTitle:"40px Tahoma",
-	Subtitle:"30px Tahoma",
-	ButtonTitle:"20px Tahoma",
-	CreditsText:"16px Tahoma"
+	MainTitle:"800 60px Poppins",
+	Subtitle:"800 26px Poppins",
+	BodyText:"400 20px Poppins",
+	ButtonTitle:"400 20px Poppins",
+	CreditsText:"400 16px Poppins"
 };
 
 const fontOverhangRatio = 4/5; // Currently 4/5 is correct for "Tahoma" font. Change if font changes

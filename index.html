@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
 	<style>
 		body {
-			background:black;
-			margin:0;
-			padding:0;
-			overflow:hidden;
+			background: black;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			font-family: 'Poppins', sans-serif;
 		}
+
 		#canvas-container:not(:empty) {
 			height: 100vh;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
+
 		.game-canvas {
-			padding:0;
-			outline:0;
+			padding: 0;
+			outline: 0;
 			image-rendering: pixelated;
 			-ms-interpolation-mode: nearest-neighbor;
 			image-rendering: -webkit-optimize-contrast;
@@ -27,14 +34,16 @@
 			image-rendering: -o-crisp-edges;
 			image-rendering: pixelated;
 		}
+
 		#debugText {
 			float: right;
-		    position: absolute;
-		    left: 90px;
-		    top: 0;
+			position: absolute;
+			left: 90px;
+			top: 0;
 		}
 	</style>
 </head>
+
 <body>
 	<div id='canvas-container'></div>
 	<script src="js/Globals.js"></script>
@@ -61,4 +70,5 @@
 	<script src="js/MapBuilder.js"></script>
 	<script src="js/Main.js"></script>
 </body>
+
 </html>
