@@ -1,28 +1,11 @@
-//Ball.js
-// eslint-disable-next-line no-unused-vars
-function Ball (objData, bodyData) {
-    // eslint-disable-next-line consistent-this
-    const self = this;
-    this.x = objData.x;
-    this.oldX = objData.x;
-    this.xAdjustment = 0;
-    this.y = objData.y - objData.height;
-    this.oldY = objData.y - objData.height;
-    this.yAdjustment = 0;
-    this.width = objData.width;
-    this.height = objData.height;
-    this.radius = (objData.width + objData.height) / 4; //Average of half width and half height
-    this.velocity = {x: 0, y: 0};
-    this.oldVelocity = {x: 0, y: 0};
-    this.vxAdjustment = 0;
-    this.vyAdjustment = 0;
-    this.type = objData.type;
-    this.image = images[objData.name];
-    this.body = new CollisionBody(bodyData);
-    this.center = this.body.center;
-    this.triggersCollided = {};
+class Ball extends BaseEntity {
+    constructor(...props) {
+        super(...props);
 
-    this.update = function(deltaTime) {
+        this.triggersCollided = {};
+    }
+
+    update(deltaTime) {
         this.oldX = this.x;
         this.oldY = this.y;
         this.xAdjustment = 0;
@@ -47,7 +30,7 @@ function Ball (objData, bodyData) {
         this.body.update(deltaX, deltaY);
     }
 
-    this.setPosition = function (x, y) {
+    setPosition(x, y) {
         this.oldX = this.x;
         this.oldY = this.y;
         this.x = x;
@@ -57,17 +40,12 @@ function Ball (objData, bodyData) {
         this.oldY = this.y;
     }
 
-    this.draw = function() {
-        canvasContext.drawImage(this.image, this.x, this.y);
-        this.body.draw();
-    }
-
-    this.resolveCollisions = function(collisions) {
+    resolveCollisions(collisions) {
         for (const collision of collisions) {
             // if (collision.otherEntity.type !== ENTITY_TYPE.Ball) {
             //     collision.otherEntity.didCollideWith(this);
             // }
-            if (respondsTo(collision.otherEntity.type)) {
+            if (this.respondsTo(collision.otherEntity.type)) {
                 if (collision.otherEntity.type === ENTITY_TYPE.Trigger && collision.otherEntity.subType === TRIGGER_TYPE.Lane) {
                     if (!collision.otherEntity.hasCollided) {
                         collision.otherEntity.hasCollided = true;
@@ -77,11 +55,11 @@ function Ball (objData, bodyData) {
                 } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     if (collision.edge) {
-                        respondToPolygonCollision(collision);
+                        this.respondToPolygonCollision(collision);
                     } else {
-                        respondToCircularCollision(collision);
+                        this.respondToCircularCollision(collision);
                     }
-                    self.clearTriggerCollisions();
+                    this.clearTriggerCollisions();
                 }
                 
             }
@@ -94,7 +72,7 @@ function Ball (objData, bodyData) {
         this.velocity.y += this.vyAdjustment;
     }
 
-    this.clearTriggerCollisions = function() {
+    clearTriggerCollisions() {
         const removeEntities = [];
         // eslint-disable-next-line guard-for-in
         for (const datetime in this.triggersCollided) {
@@ -110,7 +88,7 @@ function Ball (objData, bodyData) {
         }
     }
 
-    const respondsTo = function (type) {
+    respondsTo(type) {
         switch (type) {
             case ENTITY_TYPE.Ball:
             case ENTITY_TYPE.CircleBumper:
@@ -126,29 +104,29 @@ function Ball (objData, bodyData) {
         }
     }
 
-    const respondToCircularCollision = function(collision) {
+    respondToCircularCollision(collision) {
         let {reflectance} = collision.otherEntity;
-        self.xAdjustment += (collision.distance) * collision.direction.x;
-        self.yAdjustment += (collision.distance) * collision.direction.y;
+        this.xAdjustment += (collision.distance) * collision.direction.x;
+        this.yAdjustment += (collision.distance) * collision.direction.y;
 
-        const speed = Math.sqrt((self.velocity.x) * (self.velocity.x) + (self.velocity.y) * (self.velocity.y));
+        const speed = Math.sqrt((this.velocity.x) * (this.velocity.x) + (this.velocity.y) * (this.velocity.y));
 
         if (collision.body.reflectance) {
             reflectance = 1.1;
         }
-        self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
-        self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
+        this.vxAdjustment += speed * reflectance * collision.direction.x - this.velocity.x;
+        this.vyAdjustment += speed * reflectance * collision.direction.y - this.velocity.y;
         if (collision.otherEntity.type === ENTITY_TYPE.CircleBumper) {
             bumperSound.play();        
         }
     }
 
-    const respondToPolygonCollision = function(collision) {
+    respondToPolygonCollision(collision) {
         const {reflectance} = collision.edge;
-        const velDot = self.velocity.x * collision.direction.x + self.velocity.y * collision.direction.y;
+        const velDot = this.velocity.x * collision.direction.x + this.velocity.y * collision.direction.y;
 
-        let xPosAdjust = (self.radius - collision.distance) * collision.direction.x;
-        let yPosAdjust = (self.radius - collision.distance) * collision.direction.y;
+        let xPosAdjust = (this.radius - collision.distance) * collision.direction.x;
+        let yPosAdjust = (this.radius - collision.distance) * collision.direction.y;
         let xVelAdjust = -(2 * reflectance * velDot * collision.direction.x);
         let yVelAdjust = -(2 * reflectance * velDot * collision.direction.y);
 
@@ -158,13 +136,9 @@ function Ball (objData, bodyData) {
             yVelAdjust *= reflectedVelocity;       
         }
 
-        self.xAdjustment += xPosAdjust;
-        self.yAdjustment += yPosAdjust;
-        self.vxAdjustment += xVelAdjust;
-        self.vyAdjustment += yVelAdjust;
-    }
-
-    this.didCollideWith = function() {
-
+        this.xAdjustment += xPosAdjust;
+        this.yAdjustment += yPosAdjust;
+        this.vxAdjustment += xVelAdjust;
+        this.vyAdjustment += yVelAdjust;
     }
 }
