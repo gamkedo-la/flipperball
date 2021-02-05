@@ -257,6 +257,12 @@
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -268,7 +274,13 @@
                  "gid":37,
                  "height":54,
                  "id":97,
-                 "name":"circle_bumper_small_green",
+                 "name": "circle_bumper_small_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -280,7 +292,13 @@
                  "gid":36,
                  "height":54,
                  "id":100,
-                 "name":"circle_bumper_small_blue",
+                 "name": "circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -292,7 +310,13 @@
                  "gid":35,
                  "height":54,
                  "id":101,
-                 "name":"circle_bumper_small_yellow",
+                 "name": "circle_bumper_small_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
