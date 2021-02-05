@@ -158,42 +158,6 @@
                  "y":180
                 }, 
                 {
-                 "gid":35,
-                 "height":54,
-                 "id":87,
-                 "name":"circle_bumper_small_yellow",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":430,
-                 "y":310
-                }, 
-                {
-                 "gid":36,
-                 "height":54,
-                 "id":88,
-                 "name":"circle_bumper_small_blue",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":710,
-                 "y":310
-                }, 
-                {
-                 "gid":37,
-                 "height":54,
-                 "id":89,
-                 "name":"circle_bumper_small_green",
-                 "rotation":0,
-                 "type":"circle_bumper_small",
-                 "visible":true,
-                 "width":54,
-                 "x":710,
-                 "y":120
-                }, 
-                {
                  "gid":26,
                  "height":48,
                  "id":90,
@@ -293,12 +257,84 @@
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":54,
                  "x":430,
                  "y":120
+                }, 
+                {
+                 "gid":37,
+                 "height":54,
+                 "id":97,
+                 "name": "circle_bumper_small_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":120
+                }, 
+                {
+                 "gid":36,
+                 "height":54,
+                 "id":100,
+                 "name": "circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":710,
+                 "y":310
+                }, 
+                {
+                 "gid":35,
+                 "height":54,
+                 "id":101,
+                 "name": "circle_bumper_small_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":430,
+                 "y":310
+                }, 
+                {
+                 "gid":38,
+                 "height":96,
+                 "id":103,
+                 "name":"cyclone",
+                 "rotation":0,
+                 "type":"cyclone",
+                 "visible":true,
+                 "width":96,
+                 "x":550,
+                 "y":470
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -758,6 +794,54 @@
                  "width":53,
                  "x":430,
                  "y":66
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":96,
+                 "name":"circle_bumper_small_green",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":710,
+                 "y":66
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":98,
+                 "name":"circle_bumper_small_blue",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":710,
+                 "y":256
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":102,
+                 "name":"circle_bumper_small_yellow",
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":430,
+                 "y":256
+                }, 
+                {
+                 "ellipse":true,
+                 "height":96,
+                 "id":104,
+                 "name":"cyclone",
+                 "rotation":0,
+                 "type":"cyclone",
+                 "visible":true,
+                 "width":96,
+                 "x":550,
+                 "y":373
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -766,7 +850,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":96,
+ "nextobjectid":105,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -986,7 +1070,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":13,
+         "tilecount":14,
          "tileheight":600,
          "tiles":[
                 {
@@ -1066,6 +1150,12 @@
                  "image":"..\/img\/tables\/circle_bumper_small_green.png",
                  "imageheight":54,
                  "imagewidth":54
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/img\/tables\/cyclone.png",
+                 "imageheight":96,
+                 "imagewidth":96
                 }],
          "tilewidth":720
         }],

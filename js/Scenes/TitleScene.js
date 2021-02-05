@@ -152,16 +152,17 @@ function TitleScene() {
         drawRect(0, 0, canvas.width, canvas.height);
 
         if (SceneManager.scenes[SCENE.GAME].gameHasFinished) {
-            colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+            colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         }
         
+        colorText("Flipper Ball", canvas.width / 2, canvas.height / 2 - PADDING*2.5, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
         colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*3, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'k' = sfx volume down", canvas.width / 2, canvas.height / 2 + PADDING*4, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'l' = sfx volume up", canvas.width / 2, canvas.height / 2 + PADDING*5, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'f' = toggle flash", canvas.width / 2, canvas.height / 2 + PADDING*6, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING*1.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*2.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*3.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'k' = sfx volume down", canvas.width / 2, canvas.height / 2 + PADDING*4.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'l' = sfx volume up", canvas.width / 2, canvas.height / 2 + PADDING*5.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'f' = toggle flash", canvas.width / 2, canvas.height / 2 + PADDING*6.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
 
       }
         

@@ -85,8 +85,11 @@ function loadImages() {
         {imgName: "circle_bumper_small_red", theFile: "tables/circle_bumper_small_red.png"},
         {imgName: "circle_bumper_small_red_anim", theFile: "animations/circle_bumper_small_red_anim.png"},
         {imgName: "circle_bumper_small_yellow", theFile: "tables/circle_bumper_small_yellow.png"},
+        {imgName: "circle_bumper_small_yellow_anim", theFile: "animations/circle_bumper_small_yellow_anim.png"},
         {imgName: "circle_bumper_small_blue", theFile: "tables/circle_bumper_small_blue.png"},
+        {imgName: "circle_bumper_small_blue_anim", theFile: "animations/circle_bumper_small_blue_anim.png"},
         {imgName: "circle_bumper_small_green", theFile: "tables/circle_bumper_small_green.png"},
+        {imgName: "circle_bumper_small_green_anim", theFile: "animations/circle_bumper_small_green_anim.png"},
 
         {imgName: "cloud_bg", theFile: "tables/cloud_bg.png"},
         {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"},
@@ -112,6 +115,9 @@ function loadImages() {
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
+
+        {imgName: "cyclone", theFile: "tables/cyclone.png"},
+        {imgName: "cyclone_anim", theFile: "animations/cyclone_anim.png"},
 
         {imgName: "plane_red", theFile: "tables/plane_red.png"},
         {imgName: "plane_blue", theFile: "tables/plane_blue.png"},

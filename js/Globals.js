@@ -92,7 +92,8 @@ const ENTITY_TYPE = {
 	FlipperBumper: 'flipper_bumper',
 	Plunger: 'plunger',
 	Wall: 'wall',
-	Trigger: 'trigger'
+	Trigger: 'trigger',
+	Cyclone: 'cyclone'
 };
 
 const TRIGGER_TYPE = {
@@ -109,7 +110,8 @@ const ENTITY_NAME = {
 	CircleBumperSmallYellow: 'circle_bumper_small_yellow',
 	CircleBumperSmallGreen: 'circle_bumper_small_green',
 	FlipperBumperRight: 'flipper_bumper_right',
-	FlipperBumperLeft: 'flipper_bumper_left'
+	FlipperBumperLeft: 'flipper_bumper_left',
+	Cyclone: 'cyclone'
 }
 
 const COLLISION_TYPE = {
@@ -139,10 +141,11 @@ const TextAlignment = {
 };
 
 const Fonts = {
-	MainTitle:"40px Tahoma",
-	Subtitle:"30px Tahoma",
-	ButtonTitle:"20px Tahoma",
-	CreditsText:"16px Tahoma"
+	MainTitle:"800 60px Poppins",
+	Subtitle:"800 26px Poppins",
+	BodyText:"400 20px Poppins",
+	ButtonTitle:"400 20px Poppins",
+	CreditsText:"400 16px Poppins"
 };
 
 const fontOverhangRatio = 4/5; // Currently 4/5 is correct for "Tahoma" font. Change if font changes
@@ -164,7 +167,10 @@ const ANIMATIONS = {
 	},
 	CIRCLE_BUMPER_SMALL: {
 		imageNames: {
-			"circle_bumper_small_red": "circle_bumper_small_red_anim"	
+			"circle_bumper_small_red": "circle_bumper_small_red_anim",
+			"circle_bumper_small_yellow": "circle_bumper_small_yellow_anim",
+			"circle_bumper_small_blue": "circle_bumper_small_blue_anim",
+			"circle_bumper_small_green": "circle_bumper_small_green_anim"	
 		},
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 54,
@@ -206,5 +212,16 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
+	},
+	CYCLONE_SPIN: {
+		imageNames: {
+			"cyclone": "cyclone_anim"
+		},
+		frames: [0, 1, 2, 3],
+		frameWidth: 96,
+		frameHeight: 96,
+		frameTimes: [64, 64, 64, 64],
+		reverses: false,
+		loops: true
 	}
 };

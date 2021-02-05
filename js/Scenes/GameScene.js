@@ -24,7 +24,7 @@ function GameScene() {
 
     // eslint-disable-next-line consistent-this
     const self = this
-    const TEXT_LEFT_OFFSET = 20
+    const TEXT_LEFT_OFFSET = 0
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
