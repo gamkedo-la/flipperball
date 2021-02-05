@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 //Main for Flipperball
-//please ignore, just checking in as instructed :)
 window.onload = function() {
     window.addEventListener("focus", windowOnFocus);
     window.addEventListener("blur", windowOnBlur);
