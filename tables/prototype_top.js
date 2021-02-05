@@ -299,6 +299,18 @@
                  "width":54,
                  "x":430,
                  "y":310
+                }, 
+                {
+                 "gid":38,
+                 "height":96,
+                 "id":103,
+                 "name":"cyclone",
+                 "rotation":0,
+                 "type":"cyclone",
+                 "visible":true,
+                 "width":96,
+                 "x":550,
+                 "y":470
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -794,6 +806,18 @@
                  "width":53,
                  "x":430,
                  "y":256
+                }, 
+                {
+                 "ellipse":true,
+                 "height":96,
+                 "id":104,
+                 "name":"cyclone",
+                 "rotation":0,
+                 "type":"cyclone",
+                 "visible":true,
+                 "width":96,
+                 "x":550,
+                 "y":373
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -802,7 +826,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":103,
+ "nextobjectid":105,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1022,7 +1046,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":13,
+         "tilecount":14,
          "tileheight":600,
          "tiles":[
                 {
@@ -1102,6 +1126,12 @@
                  "image":"..\/img\/tables\/circle_bumper_small_green.png",
                  "imageheight":54,
                  "imagewidth":54
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/img\/tables\/cyclone.png",
+                 "imageheight":96,
+                 "imagewidth":96
                 }],
          "tilewidth":720
         }],

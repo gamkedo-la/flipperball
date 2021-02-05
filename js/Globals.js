@@ -92,7 +92,8 @@ const ENTITY_TYPE = {
 	FlipperBumper: 'flipper_bumper',
 	Plunger: 'plunger',
 	Wall: 'wall',
-	Trigger: 'trigger'
+	Trigger: 'trigger',
+	Cyclone: 'cyclone'
 };
 
 const TRIGGER_TYPE = {
@@ -109,7 +110,8 @@ const ENTITY_NAME = {
 	CircleBumperSmallYellow: 'circle_bumper_small_yellow',
 	CircleBumperSmallGreen: 'circle_bumper_small_green',
 	FlipperBumperRight: 'flipper_bumper_right',
-	FlipperBumperLeft: 'flipper_bumper_left'
+	FlipperBumperLeft: 'flipper_bumper_left',
+	Cyclone: 'cyclone'
 }
 
 const COLLISION_TYPE = {
@@ -210,5 +212,16 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
+	},
+	CYCLONE_SPIN: {
+		imageNames: {
+			"cyclone": "cyclone_anim"
+		},
+		frames: [0, 1, 2, 3],
+		frameWidth: 96,
+		frameHeight: 96,
+		frameTimes: [64, 64, 64, 64],
+		reverses: false,
+		loops: true
 	}
 };
