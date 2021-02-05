@@ -12,6 +12,7 @@ let musicVolume;
 let effectsVolume;
 let currentBackgroundMusic;
 let currentBackgroundMusicInitialized = false;
+let defaultPlayDelta = 100;
 
 const VOLUME_INCREMENT = 0.05;
 const MILLESECOND_MULTIPLIER = 1000;
@@ -35,8 +36,8 @@ function loadAudio() {
 	pauseSound = new SoundOverlapsClass(assetPath.Audio + "PauseSoundLow");
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
-	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX");
-	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding");
+	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 10);
+	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50);
 
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
@@ -97,22 +98,29 @@ function BackgroundMusicClass(filenameWithPath) {
 	}
 }
 
-function SoundOverlapsClass(filenameWithPath) {
-    setFormat();
-
+function SoundOverlapsClass(filenameWithPath, minDeltaBtwPlays) {
+	setFormat();
+	let minTimeElapsed = defaultPlayDelta;
+	let lastPlayed = 0;
+	if (minDeltaBtwPlays) {
+		minTimeElapsed = minDeltaBtwPlays;		
+	}
     const fullFilename = filenameWithPath;
 	let soundIndex = 0;
     const sounds = [new Audio(fullFilename + audioFormat), new Audio(fullFilename + audioFormat)];
 
-    this.play = function() {
-				if(!sounds[soundIndex].paused) {
-					sounds.splice(soundIndex, 0, new Audio(fullFilename + audioFormat));
-				}
-        sounds[soundIndex].currentTime = 0;
-        sounds[soundIndex].volume = Math.pow(getRandomVolume() * effectsVolume * !isMuted, 2);
-        sounds[soundIndex].play();
+	this.play = function () {
+		if ((Date.now() - lastPlayed) > minTimeElapsed) {
+			if (!sounds[soundIndex].paused) {
+				sounds.splice(soundIndex, 0, new Audio(fullFilename + audioFormat));
+			}
+			sounds[soundIndex].currentTime = 0;
+			sounds[soundIndex].volume = Math.pow(getRandomVolume() * effectsVolume * !isMuted, 2);
+			sounds[soundIndex].play();
 
-		soundIndex = (++soundIndex) % sounds.length;
+			soundIndex = (++soundIndex) % sounds.length;
+			lastPlayed = Date.now();
+		}
 	}
 
 	this.duration = function() {

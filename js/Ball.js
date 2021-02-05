@@ -21,8 +21,6 @@ function Ball (objData, bodyData) {
     this.body = new CollisionBody(bodyData);
     this.center = this.body.center;
     this.triggersCollided = {};
-    this.lastBumperSound = 0;
-    this.bumperSoundMinDelta = 50;
 
     this.update = function(deltaTime) {
         this.oldX = this.x;
@@ -141,12 +139,7 @@ function Ball (objData, bodyData) {
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
         self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
         if (collision.otherEntity.type === ENTITY_TYPE.CircleBumper) {
-            const bumperSoundDelta = Date.now() - self.lastBumperSound;
-            //console.log("bumperSoundDelta:" + bumperSoundDelta + "self.lastSound:" + self.lastSound);
-            if (bumperSoundDelta > self.bumperSoundMinDelta) {
-                bumperSound.play();
-                self.lastBumperSound = Date.now();
-            }
+            bumperSound.play();        
         }
     }
 
