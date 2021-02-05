@@ -141,11 +141,11 @@ function Ball (objData, bodyData) {
         self.vxAdjustment += speed * reflectance * collision.direction.x - self.velocity.x;
         self.vyAdjustment += speed * reflectance * collision.direction.y - self.velocity.y;
         if (collision.otherEntity.type === ENTITY_TYPE.CircleBumper) {
-            const bumperSoundDelta = Date.now() - self.lastSound;
+            const bumperSoundDelta = Date.now() - self.lastBumperSound;
             //console.log("bumperSoundDelta:" + bumperSoundDelta + "self.lastSound:" + self.lastSound);
             if (bumperSoundDelta > self.bumperSoundMinDelta) {
                 bumperSound.play();
-                self.lastSound = Date.now();
+                self.lastBumperSound = Date.now();
             }
         }
     }
