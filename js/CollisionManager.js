@@ -6,6 +6,7 @@ function CollisionManager () {
     this.balls = new Set();
     this.flippers = new Set();
     this.entities = new Set();
+    // this.plunger = null;
     this.collisions = [];
 
     this.registerBall = function(ball) {
@@ -23,6 +24,14 @@ function CollisionManager () {
     this.unregisterFlipper = function(flipper) {
         this.flippers.delete(flipper);
     }
+
+    // this.registerPlunger = function(plunger) {
+    //     this.plunger = plunger
+    // }
+
+    // this.unregisterPlunger = function() {
+    //     this.plunger = null
+    // }
 
     this.registerEntity = function (entity) {
         this.entities.add(entity);
@@ -51,6 +60,18 @@ function CollisionManager () {
                     }
                 }
             }
+
+            // if (this.plunger) {
+            //     //check plunger collisions
+            //     const distance = squaredDistance(ball.body.center.x, ball.body.center.y, this.plunger.body.center.x, this.plunger.body.center.y);
+            //     const squaredRadii = (ball.body.radius + this.plunger.body.radius) * (ball.body.radius + this.plunger.body.radius);
+            //     if (distance <= squaredRadii) {
+            //         const circleLine = circlePolygonCollision(ball, this.plunger);
+            //         if (circleLine && circleLine.length > 0) {
+            //             this.collisions.push(...circleLine);
+            //         }
+            //     } 
+            // }
 
             for (const flipper of this.flippers.values()) {
                 const tipDistance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.tipBody.center.x, flipper.tipBody.center.y);

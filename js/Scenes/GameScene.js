@@ -50,6 +50,8 @@ function GameScene() {
             this.collisionManager.registerFlipper(flipper);
         }
 
+        // if (self.table.plunger) {this.collisionManager.registerPlunger(self.table.plunger);}
+
         if (this.properties.ball) {
             // we are moving the balls inbetween table scenes?
             self.table.balls.length = 0
@@ -327,6 +329,8 @@ function GameScene() {
                 ball.update(deltaTime / self.collisionRate);
             }
 
+            // if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
+
             self.collisionManager.checkBallFlipperCollisions();
         }
 
@@ -347,6 +351,8 @@ function GameScene() {
             for (const ball of self.table.balls) {
                 ball.update(deltaTime / self.collisionRate);
             }
+
+            // if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
 
             self.collisionManager.checkBallFlipperCollisions();
         }
@@ -391,6 +397,8 @@ function GameScene() {
         for (const flipper of self.table.flippers) {
             flipper.draw();
         }
+
+        // if (self.table.plunger) {self.table.plunger.draw();}
 
         for (const ball of self.table.balls) {
             ball.draw();
