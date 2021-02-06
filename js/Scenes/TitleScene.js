@@ -148,7 +148,7 @@ function TitleScene() {
 	
 	const drawBG = function() {
         // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
-        const PADDING = 40;
+        const PADDING = 35;
         drawRect(0, 0, canvas.width, canvas.height);
 
         if (SceneManager.scenes[SCENE.GAME].gameHasFinished) {
@@ -157,12 +157,16 @@ function TitleScene() {
         
         colorText("Flipper Ball", canvas.width / 2, canvas.height / 2 - PADDING*2.5, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
         colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
-        colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING*1.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*2.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*3.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("'k' = sfx volume down", canvas.width / 2, canvas.height / 2 + PADDING*4.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("'l' = sfx volume up", canvas.width / 2, canvas.height / 2 + PADDING*5.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("'f' = toggle flash", canvas.width / 2, canvas.height / 2 + PADDING*6.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'Left Arrow' = left flipper", canvas.width / 2, canvas.height / 2 + PADDING * 1.25, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'Right Arrow' = right flipper", canvas.width / 2, canvas.height / 2 + PADDING*2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'Down Arrow' = plunger", canvas.width / 2, canvas.height / 2 + PADDING*2.75, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'Space Bar' = bump table", canvas.width / 2, canvas.height / 2 + PADDING*3.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'M' = mute", canvas.width / 2, canvas.height / 2 + PADDING*4.25, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'<' = volume down", canvas.width / 2, canvas.height / 2 + PADDING*5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'>' = volume up", canvas.width / 2, canvas.height / 2 + PADDING*5.75, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'k' = sfx volume down", canvas.width / 2, canvas.height / 2 + PADDING*6.5, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'l' = sfx volume up", canvas.width / 2, canvas.height / 2 + PADDING*7.25, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("'f' = toggle flash", canvas.width / 2, canvas.height / 2 + PADDING*8, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
 
       }
         
