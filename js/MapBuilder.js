@@ -58,7 +58,16 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } 
             else {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
-                result.push(new GameObject(obj, bodyData));
+                if (obj.type === ENTITY_TYPE.CircleBumper) {
+                    const newGameObject = new GameObject(obj, bodyData, {
+                        ...ANIMATIONS.CIRCLE_BUMPER,
+                        animationSpritesheet: images[ANIMATIONS.CIRCLE_BUMPER.imageNames[obj.name]],
+                    });
+                    result.push(newGameObject);
+
+                } else {
+                    result.push(new GameObject(obj, bodyData));
+                }
             }
         }
 
