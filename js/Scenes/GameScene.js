@@ -193,6 +193,7 @@ function GameScene() {
     
     function shakeCanvasMovement() {
 		if (shakeStartTime === -1) { // shake ended -> no move
+			currentShakes = 0;
 			return;
 		}
 
@@ -202,6 +203,7 @@ function GameScene() {
 		const dt = Date.now() - shakeStartTime; // actual shake duration
 
 		if (dt > shakeDuration) { // shake duration limit reached -> stop
+			currentShakes = 0;
             shakeStartTime = -1; 
             return;
 		}
@@ -288,7 +290,7 @@ function GameScene() {
             self.numberOfRemainingBalls--;
             self.transitionIn();
         } else {            
-            self.gameHasFinished = true
+            self.gameHasFinished = true;
             //TODO: This should be a game over scene once we've got it
             SceneManager.setState(SCENE.TITLE);
         }
@@ -422,6 +424,8 @@ function GameScene() {
         
         if (tilt) {
             colorText("[GAME TILT]", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
+        } else if (currentShakes > 0) {
+	        colorText("Warning...", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
         }
 
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
