@@ -1,7 +1,8 @@
-class Ball extends BaseEntity {
+class Ball extends GameObject {
     constructor(...props) {
         super(...props);
-
+        
+        this.radius = (this.width + this.height) / 4; //Average of half width and half height
         this.triggersCollided = {};
     }
 

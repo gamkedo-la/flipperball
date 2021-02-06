@@ -58,7 +58,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } 
             else {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
-                result.push(new DynamicMapObject(obj, bodyData));
+                result.push(new GameObject(obj, bodyData));
             }
         }
 
@@ -93,25 +93,6 @@ function StaticMapObject (objData) {
 
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
-    }
-}
-
-function DynamicMapObject (objData, bodyData) {
-    this.x = objData.x;
-    this.y = objData.y - objData.height;
-    this.width = objData.width;
-    this.height = objData.height;
-    
-    this.type = objData.type;
-    this.image = images[objData.name];
-    this.body = new CollisionBody(bodyData);
-    this.reflectance = objData.reflectance || 1;
-    this.score = objData.properties ? objData.properties[0].value: 0;
-
-    this.update = function(deltaTime) {}
-    this.draw = function() {
-        canvasContext.drawImage(this.image, this.x, this.y);
-        this.body.draw();
     }
 }
 
