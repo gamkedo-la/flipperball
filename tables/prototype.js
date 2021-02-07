@@ -471,8 +471,8 @@
                          "y":-2
                         }, 
                         {
-                         "x":-123.303,
-                         "y":-102.575
+                         "x":-126.636333333333,
+                         "y":-104.575
                         }, 
                         {
                          "x":-154.242,
@@ -499,16 +499,16 @@
                          "y":9.66666
                         }, 
                         {
-                         "x":-130.789,
-                         "y":103.516
+                         "x":-133.789,
+                         "y":104.182666666667
                         }, 
                         {
-                         "x":-117.515,
-                         "y":122.788
+                         "x":-120.515,
+                         "y":123.454666666667
                         }, 
                         {
-                         "x":24.5151,
-                         "y":48.7273
+                         "x":21.8484333333333,
+                         "y":51.3939666666666
                         }],
                  "rotation":0,
                  "type":"flipper",
@@ -811,13 +811,13 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":60,
                  "name":"flipper_right",
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
+                 "width":23,
                  "x":636.674,
                  "y":509.959
                 }, 
@@ -831,17 +831,17 @@
                  "visible":true,
                  "width":55,
                  "x":751.341,
-                 "y":409.292
+                 "y":410.292
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":62,
                  "name":"flipper_left",
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
+                 "width":23,
                  "x":526.667,
                  "y":510
                 }, 
@@ -979,7 +979,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
