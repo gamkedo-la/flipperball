@@ -39,35 +39,6 @@ function toggleFullScreen() {
   }
 }
 
-debugButton.innerHTML = 'DEBUG';
-debugButton.style.borderRadius = 0;
-debugButton.onclick = function () {
-	FEATURE_FLAGS.useDebugWindow = !FEATURE_FLAGS.useDebugWindow;
-	toggleDebugWindow();
-}
-
-var debugWindow = null;
-function toggleDebugWindow() {
-	if (FEATURE_FLAGS.useDebugWindow) {
-		debugWindow = window.open('', 'DEBUG flipperball', 'width=300,height=300');
-		var timer = setInterval(function () {
-			if (debugWindow.closed) {
-				clearInterval(timer);
-				FEATURE_FLAGS.useDebugWindow = !FEATURE_FLAGS.useDebugWindow;
-				console.log(debugWindow.closed);
-			}
-		}, 3000);
-	} else {
-		debugWindow.close();
-		clearInterval(timer);
-		console.log(debugWindow.closed);
-	}
-}
-if (debugWindow) {
-	debugWindow.onload = function () {
-	}
-}
-
 function loadingDoneSoStartGame() {
 	timer = new Chronogram();
 	// fontRenderer = new FontBuilder(fontSheet, CHAR_WIDTH, CHAR_HEIGHT);
