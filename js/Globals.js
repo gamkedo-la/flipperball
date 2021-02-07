@@ -8,6 +8,11 @@ const FEATURE_FLAGS = {
 	 * false: canvas is always fullscreen
 	 */
 	useCanvasContainer: true,
+	/**
+	 * true: debug window opens
+	 * false: debug window closes
+	 */
+	useDebugWindow: false,
 };
 
 //----------Drawing and Canvas---------//
@@ -63,6 +68,7 @@ const SCENE = {
 
 let canvasContainer = document.getElementById('canvas-container');
 let fullScreenButton = document.createElement('BUTTON');
+let debugButton = document.createElement('BUTTON');
 let firstLoad = localStorage.getItem(localStorageKey.FirstLoad);
 let timer;
 let worldSpeed = 1;
