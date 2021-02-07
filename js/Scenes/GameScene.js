@@ -337,7 +337,7 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.update(deltaTime);
+            dynamicObj.update(deltaTime / 2);
         }
 
         self.collisionManager.checkCollisions();
@@ -358,6 +358,12 @@ function GameScene() {
 
             self.collisionManager.checkBallFlipperCollisions();
         }
+
+        for (const dynamicObj of self.table.dynamicObjects) {
+            dynamicObj.update(deltaTime / 2);
+        }
+
+        self.collisionManager.checkCollisions();
 
         for (let i = self.table.animations.length - 1; i >= 0; i--) {
             //Need to iterate backwards to avoid skipping anything or going

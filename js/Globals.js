@@ -19,7 +19,7 @@ let CHEATS_ACTIVE = false;
 
 const GAME_SCALE = 1;
 const GRAVITY = 300;
-const MAX_BALL_SPEED = 800;
+const MAX_BALL_SPEED = 1000;
 const ROTATION_RATE = 5;
 const MAX_ROTATION_ANGLE = Math.PI / 4;
 
