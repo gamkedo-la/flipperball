@@ -53,6 +53,10 @@ class Ball extends GameObject {
                         this.triggersCollided[Date.now()] = collision.otherEntity;
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     } 
+                } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
+                    this.respondToPolygonCollision(collision);
+                    this.vxAdjustment = -this.velocity.x;
+                    this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
                 } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     if (collision.edge) {

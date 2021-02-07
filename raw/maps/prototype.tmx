@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="69">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="70">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
@@ -99,10 +99,14 @@
   <object id="40" name="angled_wall_2" gid="9" x="290" y="53" width="52" height="52"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
-  <object id="13" name="plunger" gid="1" x="912" y="552" width="68" height="289"/>
+  <object id="13" name="plunger" gid="1" x="912" y="552" width="68" height="289">
+   <properties>
+    <property name="stop" type="int" value="535"/>
+   </properties>
+  </object>
   <object id="14" name="flipper_left" gid="2" x="381" y="532" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="636" y="533" width="170" height="124"/>
-  <object id="16" name="ball" gid="16" x="761.167" y="88.8333" width="26" height="26"/>
+  <object id="16" name="ball" gid="16" x="932.803" y="256.985" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="363" y="360.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="758.5" y="360" width="55" height="186"/>
   <object id="32" name="circle_bumper_red" gid="15" x="541" y="291.5" width="94" height="95">
@@ -128,7 +132,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="3" name="Collision">
+ <objectgroup id="3" name="Collision" visible="0">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="445.784" y="61.98" width="94.652" height="95.4154">
    <ellipse/>
   </object>
@@ -150,7 +154,7 @@
   <object id="43" name="flipper_right" type="flipper" x="772.545" y="409.333">
    <polygon points="-13.6667,9.66666 -130.789,103.516 -117.515,122.788 24.5151,48.7273"/>
   </object>
-  <object id="45" name="ball" type="ball" x="761.47" y="62.5149" width="25.4545" height="26">
+  <object id="45" name="ball" type="ball" x="932.318" y="230.394" width="25.4545" height="26">
    <ellipse/>
   </object>
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
@@ -194,6 +198,9 @@
   </object>
   <object id="68" name="right" type="wall" x="893.5" y="7">
    <polygon points="1.5,-3 -43.5,45.5 10,136 9,-84.5 0.5,-84.5"/>
+  </object>
+  <object id="69" name="left" type="wall" x="335.5" y="53">
+   <polygon points="0,0 -47.5,-49.5 -48,-130.5 -57,-130.5 -55.5,89"/>
   </object>
  </objectgroup>
 </map>

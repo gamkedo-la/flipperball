@@ -42,18 +42,16 @@ function CollisionBody (data) {
     }
 
     this.update = function (deltaX, deltaY) {
-        this.center.x += deltaX;
-        this.center.y += deltaY;
-        // if (this.type === BODY_TYPE.Circle) {
-        //     this.center.x += deltaX;
-        //     this.center.y += deltaY;    
-        // } else {
-        //     for (const edge of this.edges) {
-        //         edge.update(deltaX, deltaY);
-        //         this.center.x += deltaX;
-        //         this.center.y += deltaY;
-        //     }
-        // }
+        if (this.type === BODY_TYPE.Circle) {
+            this.center.x += deltaX;
+            this.center.y += deltaY;    
+        } else {
+            for (const edge of this.edges) {
+                edge.update(deltaX, deltaY);
+            }
+            this.center.x += deltaX;
+            this.center.y += deltaY;
+        }
     }
 
     this.rotate = function (center, angle) {
@@ -156,13 +154,12 @@ function Edge (start, end, x, y) {
     }
     this.recalculate();
 
-    // this.update = function(deltaX, deltaY) {
-    //     this.start.x += deltaX;
-    //     this.end.x += deltaX;
-    //     this.start.y += deltaY;
-    //     this.end.y += deltaY;
-    //     // this.recalculate();
-    // }
+    this.update = function(deltaX, deltaY) {
+        this.start.x += deltaX;
+        this.end.x += deltaX;
+        this.start.y += deltaY;
+        this.end.y += deltaY;
+    }
 
     this.rotate = function(center, angle) {
         if (Math.abs(angle) < Number.EPSILON) {

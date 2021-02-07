@@ -10,7 +10,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.balls = [];
     this.flippers = [];
     this.animations = [];
-    // this.plunger = null;
+    this.plunger = null;
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {
@@ -56,9 +56,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'trigger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new TriggerMapObject(obj, bodyData));
-            // } else if (obj.type === 'plunger') {
-            //     const bodyData = collisionData.find((data) => data.name === obj.name);
-            //     self.plunger = new Plunger(obj, bodyData);
+            } else if (obj.type === 'plunger') {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
+                self.plunger = new Plunger(obj, bodyData);
             } else {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 if (obj.type === ENTITY_TYPE.CircleBumper) {

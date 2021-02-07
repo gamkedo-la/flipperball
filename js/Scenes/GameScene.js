@@ -50,7 +50,7 @@ function GameScene() {
             this.collisionManager.registerFlipper(flipper);
         }
 
-        // if (self.table.plunger) {this.collisionManager.registerPlunger(self.table.plunger);}
+        if (self.table.plunger) {this.collisionManager.registerPlunger(self.table.plunger);}
 
         if (this.properties.ball) {
             // we are moving the balls inbetween table scenes?
@@ -297,12 +297,12 @@ function GameScene() {
     }
 
     this.releasePlunger = function() {
-        if(!this.hasPlungerReleased) {
-            this.hasPlungerReleased = true;
-            // eslint-disable-next-line no-console
-            console.log("Plunger Activated");
-            this.playAnimation("plunger", ANIMATIONS.PLUNGER_RELEASE, 912, 552);
-        }
+        // if(!this.hasPlungerReleased) {
+        //     this.hasPlungerReleased = true;
+        //     // eslint-disable-next-line no-console
+        //     console.log("Plunger Activated");
+        //     this.playAnimation("plunger", ANIMATIONS.PLUNGER_RELEASE, 912, 552);
+        // }
     }
 
     this.restartScene = function(force=false) {
@@ -331,7 +331,7 @@ function GameScene() {
                 ball.update(deltaTime / self.collisionRate);
             }
 
-            // if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
+            if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
 
             self.collisionManager.checkBallFlipperCollisions();
         }
@@ -354,7 +354,7 @@ function GameScene() {
                 ball.update(deltaTime / self.collisionRate);
             }
 
-            // if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
+            if (self.table.plunger) {self.table.plunger.update(deltaTime/self.collisionRate);}
 
             self.collisionManager.checkBallFlipperCollisions();
         }
@@ -400,7 +400,7 @@ function GameScene() {
             flipper.draw();
         }
 
-        // if (self.table.plunger) {self.table.plunger.draw();}
+        if (self.table.plunger) {self.table.plunger.draw();}
 
         for (const ball of self.table.balls) {
             ball.draw();
