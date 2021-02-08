@@ -92,9 +92,16 @@ function GameScene() {
                 CHEATS_ACTIVE = !CHEATS_ACTIVE;
                 return true;
             case ALIAS.DEBUG:
-                DEBUG = !DEBUG;
+                if (pressed) {
+                    DEBUG = !DEBUG;
+                    console.log("Debug? " + DEBUG);
+                    if (DEBUG) {
+                        canvasContainer.appendChild(debugButton);
+                    } else {
+                        canvasContainer.removeChild(debugButton);
+                    }
+                }
                 // eslint-disable-next-line no-console
-                console.log("Debug? " + DEBUG);
                 return true;
             case ALIAS.PAUSE:
             case ALIAS.PAUSE2:
