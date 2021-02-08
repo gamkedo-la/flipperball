@@ -264,9 +264,10 @@ function GameScene() {
     const loseBall = function(ball) {
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
+            //Setting properties.ball to undefined so it doesn´t propagate to the next TransitionIn()
+            self.properties.ball = undefined;
             self.collisionManager.unregisterBall(ball);
             self.table.balls.splice(ballIndex, 1);
-            
             // reset flipper input (in case of tilt)
             if (tilt) {
                 tilt = false;
