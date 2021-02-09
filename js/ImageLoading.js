@@ -129,6 +129,10 @@ function loadImages() {
 
         {imgName: "ball_catch", theFile: "tables/ball_catch.png"},
         {imgName: "ball_catch_arrow", theFile: "tables/ball_catch_arrow.png"},
+
+        {imgName: "habitrail1", theFile: "tables/habitrail1.png"},
+        {imgName: "habitrail2", theFile: "tables/habitrail2.png"},
+        {imgName: "habitrail3", theFile: "tables/habitrail3.png"}
         
     ];
 
