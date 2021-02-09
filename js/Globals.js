@@ -202,8 +202,8 @@ const ANIMATIONS = {
 			"plunger": "plunger_anim"
 		},
 		frames: [0, 1, 2, 3, 4],
-		frameWidth: 66,
-		frameHeight: 288,
+		frameWidth: 30,
+		frameHeight: 255,
 		frameTimes: [64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
@@ -213,8 +213,8 @@ const ANIMATIONS = {
 			"plunger": "plunger_anim"
 		},
 		frames: [4, 3, 2, 1, 0],
-		frameWidth: 66,
-		frameHeight: 288,
+		frameWidth: 30,
+		frameHeight: 255,
 		frameTimes: [64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
