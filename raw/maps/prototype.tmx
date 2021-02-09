@@ -99,14 +99,14 @@
   <object id="40" name="angled_wall_2" gid="9" x="290" y="53" width="52" height="52"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
-  <object id="13" name="plunger" gid="1" x="934" y="552" width="30" height="255">
+  <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="535"/>
    </properties>
   </object>
   <object id="14" name="flipper_left" gid="2" x="381" y="532" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="636" y="533" width="170" height="124"/>
-  <object id="16" name="ball" gid="16" x="928" y="294" width="26" height="26"/>
+  <object id="16" name="ball" gid="16" x="931" y="290" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="363" y="360.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="758.5" y="360" width="55" height="186"/>
   <object id="32" name="circle_bumper_red" gid="15" x="541" y="291.5" width="94" height="95">
@@ -145,7 +145,7 @@
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="362" y="180.5">
    <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
   </object>
-  <object id="41" name="plunger" type="plunger" x="912.25" y="263.25">
+  <object id="41" name="plunger" type="plunger" x="908" y="261">
    <polygon points="17.75,36.75 17.75,46.75 47.75,46.75 47.75,36.75 37.75,36.75"/>
   </object>
   <object id="42" name="flipper_left" type="flipper" x="545.485" y="515.667">
@@ -154,7 +154,7 @@
   <object id="43" name="flipper_right" type="flipper" x="772.545" y="409.333">
    <polygon points="-13.6667,9.66666 -133.789,104.183 -120.515,123.455 21.8484,51.394"/>
   </object>
-  <object id="45" name="ball" type="ball" x="928" y="270" width="25.4545" height="26">
+  <object id="45" name="ball" type="ball" x="931" y="266" width="25.4545" height="26">
    <ellipse/>
   </object>
   <object id="50" name="right" type="wall" x="892.5" y="404.5">

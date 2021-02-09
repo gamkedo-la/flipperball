@@ -159,8 +159,8 @@
                  "type":"plunger",
                  "visible":true,
                  "width":30,
-                 "x":934,
-                 "y":552
+                 "x":930,
+                 "y":550
                 }, 
                 {
                  "gid":2,
@@ -195,8 +195,8 @@
                  "type":"ball",
                  "visible":true,
                  "width":26,
-                 "x":928,
-                 "y":294
+                 "x":931,
+                 "y":290
                 }, 
                 {
                  "gid":17,
@@ -458,8 +458,8 @@
                  "type":"plunger",
                  "visible":true,
                  "width":0,
-                 "x":912.25,
-                 "y":263.25
+                 "x":908,
+                 "y":261
                 }, 
                 {
                  "height":0,
@@ -526,8 +526,8 @@
                  "type":"ball",
                  "visible":true,
                  "width":25.4545,
-                 "x":928,
-                 "y":270
+                 "x":931,
+                 "y":266
                 }, 
                 {
                  "height":0,

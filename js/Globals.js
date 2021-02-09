@@ -229,5 +229,19 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64],
 		reverses: false,
 		loops: true
+	},
+	PLANE_EXPLOSION: {
+		imageNames: {
+			"plane_blue": "plane_blue_explosion_anim",
+			"plane_red": "plane_red_explosion_anim",
+			"plane_green": "plane_green_explosion_anim",
+			"plane_yellow": "plane_yellow_explosion_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+		frameWidth: 51,
+		frameHeight: 48,
+		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
+		reverses: false,
+		loops: false
 	}
 };
