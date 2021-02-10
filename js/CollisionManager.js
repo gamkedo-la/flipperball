@@ -134,9 +134,13 @@ function CollisionManager () {
                             direction
                         ));
                     } else {
-                        const circleLine = circlePolygonCollision(ball, entity);
-                        if (circleLine && circleLine.length > 0) {
-                            this.collisions.push(...circleLine);
+                        if (entity.type == ENTITY_TYPE.Gate){
+                            // Add handling of one way collisions
+                        } else {
+                            const circleLine = circlePolygonCollision(ball, entity);
+                            if (circleLine && circleLine.length > 0) {
+                                this.collisions.push(...circleLine);
+                            }
                         }
                     }
                 }                

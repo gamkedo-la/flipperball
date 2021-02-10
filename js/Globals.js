@@ -87,7 +87,7 @@ const TABLE_LAYERS = {
 
 const BODY_TYPE = {
 	Circle: 'circle',
-	Polygon: 'polygon'
+	Polygon: 'polygon',
 };
 
 const ENTITY_TYPE = {
@@ -99,7 +99,8 @@ const ENTITY_TYPE = {
 	Plunger: 'plunger',
 	Wall: 'wall',
 	Trigger: 'trigger',
-	Cyclone: 'cyclone'
+	Cyclone: 'cyclone',
+	Gate: 'gate'
 };
 
 const TRIGGER_TYPE = {
