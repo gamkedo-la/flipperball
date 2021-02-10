@@ -12,6 +12,7 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.hasPlungerReleased = false;
     this.score = 0;
+    this.scoreIncrementForExtraBall = 0;
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
@@ -25,6 +26,7 @@ function GameScene() {
     // eslint-disable-next-line consistent-this
     const self = this
     const TEXT_LEFT_OFFSET = 0
+    const SCORE_NEEDED_FOR_EXTRA_BALL = 750;
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
@@ -254,7 +256,7 @@ function GameScene() {
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
                     //TODO: FM: Determine when extra ball should actually be given to player
                     //Probably at some number of points and under some special circumstances
-                    extraBall();
+                    //extraBall();
                 }
             } else if (ball.y > canvas.height) {
                 if (self.currentTableIndex == 0) {
@@ -456,7 +458,8 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
-                self.score += otherEntity.score;   
+                self.score += otherEntity.score;  
+                self.scoreIncrementForExtraBall += otherEntity.score; 
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
                 } else {
@@ -466,6 +469,7 @@ function GameScene() {
             case ENTITY_TYPE.CircleBumperSmall:
                 self.flash = true;
                 self.score += otherEntity.score;   
+                self.scoreIncrementForExtraBall += otherEntity.score; 
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)
                 break;
             case ENTITY_TYPE.FlipperBumper:
@@ -477,6 +481,12 @@ function GameScene() {
             default:
                 break;
         }
+        if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
+            extraBall();
+            //Maybe add a SFX to tell the player they got an extra ball?
+            this.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
+        }
+        
     }
 
     this.playAnimation = function(imageName, animationData, x, y) {
@@ -498,5 +508,6 @@ function GameScene() {
 
     this.handleTriggerCollision = function(triggerEntity) {
         self.score += triggerEntity.score;
+        self.scoreIncrementForExtraBall += otherEntity.score; 
     }
 }
