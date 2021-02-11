@@ -19,10 +19,11 @@ function getTextWidth(txt) {
   return fontRenderer.getWidthOfText (txt, GAME_SCALE);
 }
 
-function drawImageCenteredWithRotation(image, atX, atY, withAng) {
+// "ForTiled" since for whatever reason Tiled seems to pivot rotations from the bottom :)
+function drawImageForTiledWithRotation(image, atX, atY, withAng) {
   canvasContext.save();
-  canvasContext.translate(atX, atY);
+  canvasContext.translate(atX, atY+image.height);
   canvasContext.rotate(withAng);
-  canvasContext.drawImage(image, -image.width/2, -image.height/2);
+  canvasContext.drawImage(image, 0, -image.height);
   canvasContext.restore();
 }

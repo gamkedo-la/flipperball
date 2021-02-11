@@ -106,7 +106,7 @@ function StaticMapObject (objData) {
 
     this.draw = function() {
         if (this.rotation > 0) {
-            drawImageCenteredWithRotation(this.image, this.x, this.y, this.rotation);
+            drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
         } else {
             canvasContext.drawImage(this.image, this.x, this.y);
         }
