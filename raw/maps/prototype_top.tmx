@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="105">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="124">
  <editorsettings>
   <export target="../../tables/prototype_top.js" format="js"/>
  </editorsettings>
@@ -141,6 +141,15 @@
   <object id="90" name="plane_red" gid="26" x="350" y="178" width="51" height="48"/>
   <object id="91" name="ball_catch" gid="31" x="310" y="80" width="54" height="54"/>
   <object id="92" name="ball_catch_arrow" gid="30" x="350" y="90" width="24" height="24"/>
+  <object id="105" name="habitrail1" gid="22" x="775.667" y="309.333" width="36" height="75"/>
+  <object id="106" name="habitrail2" gid="23" x="783.667" y="184" width="36" height="125"/>
+  <object id="107" name="habitrail3" gid="24" x="792.497" y="96.3983" width="36" height="75" rotation="305.886"/>
+  <object id="108" name="habitrail2" gid="23" x="750.547" y="61.0016" width="36" height="125" rotation="269.849"/>
+  <object id="110" name="habitrail2" gid="23" x="649.898" y="44.5914" width="36" height="125" rotation="237.033"/>
+  <object id="112" name="habitrail3" gid="24" x="565.475" y="93.5745" width="36" height="75" rotation="214.686"/>
+  <object id="113" name="habitrail3" gid="24" x="539.567" y="127.065" width="36" height="75" rotation="185.055"/>
+  <object id="114" name="habitrail3" gid="24" x="775" y="248" width="36" height="75"/>
+  <object id="115" name="habitrail3" gid="24" x="534.809" y="180.287" width="36" height="75" rotation="186.521"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="292" y="590" width="170" height="124"/>
@@ -210,6 +219,12 @@
   </object>
   <object id="104" name="cyclone" type="cyclone" x="550" y="373" width="96" height="96">
    <ellipse/>
+  </object>
+  <object id="122" name="habitrail" type="wall" x="811.667" y="305.667">
+   <polygon points="0,0 0,-122 -5,-128 8.66667,-145 9.33333,-239 -48.3333,-275.333 -64.3333,-268.667 -74.6667,-277.333 -176.667,-280 -196,-279.667 -280.333,-231 -311.667,-184.667 -321,-68.3333 -318,-69.6667 -307.333,-182.333 -277.333,-230.333 -193.667,-277.333 -77.6667,-274 -66,-265.667 -49.6667,-271 3,-237.667 4.33333,-147 -7.66667,-129.333 -3.33333,-120.667 -6.33333,-0.666667"/>
+  </object>
+  <object id="123" name="habitrail" type="wall" x="777.333" y="306.333">
+   <polygon points="0,0 -1.33333,-50 -3.66667,-110.333 5,-139 16.3333,-152.333 17,-218.667 -20.6667,-239.333 -48.6667,-250 -62.3333,-256 -139.333,-249 -158.333,-253.333 -217.667,-216.333 -237.333,-176.667 -241.667,-133.333 -250.333,-78 -255,-66 -263.667,-67.6667 -244,-171.333 -225,-216.667 -163,-257 -67,-259.667 18.6667,-226.333 22.6667,-203.667 23,-153.667 6,-129.333 0.666667,-108.333 3.66667,-2"/>
   </object>
  </objectgroup>
 </map>

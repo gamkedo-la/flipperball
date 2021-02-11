@@ -18,3 +18,11 @@ function colorText(showWords,textX,textY,fillColor,fontface,textAlign = 'left',o
 function getTextWidth(txt) {
   return fontRenderer.getWidthOfText (txt, GAME_SCALE);
 }
+
+function drawImageCenteredWithRotation(image, atX, atY, withAng) {
+  canvasContext.save();
+  canvasContext.translate(atX, atY);
+  canvasContext.rotate(withAng);
+  canvasContext.drawImage(image, -image.width/2, -image.height/2);
+  canvasContext.restore();
+}
