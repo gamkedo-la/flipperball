@@ -42,7 +42,11 @@ function toggleFullScreen() {
 function loadingDoneSoStartGame() {
 	timer = new Chronogram();
 	// fontRenderer = new FontBuilder(fontSheet, CHAR_WIDTH, CHAR_HEIGHT);
-	SceneManager.setState(SCENE.TITLE);
+	if(skipToGameDEBUG) {
+        SceneManager.setState(SCENE.GAME, TABLES.Prototype);
+    } else {
+		SceneManager.setState(SCENE.TITLE);
+	}
 	requestAnimationFrame(update);
 }
 

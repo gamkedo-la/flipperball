@@ -22,7 +22,11 @@ htgdLogoPic.onload = function() {
     }
 
     startTime = Date.now();
-    animateHTGDLogo();
+    if(skipToGameDEBUG) {
+        loadImages();
+    } else {
+        animateHTGDLogo();
+    }
 }
 
 

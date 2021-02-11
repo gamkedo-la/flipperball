@@ -93,7 +93,11 @@ function BackgroundMusicClass(filenameWithPath) {
 		if(musicSound.volume == 0) {
 			musicSound.pause();
 		} else if (musicSound.paused) {
-			musicSound.play();
+			if(skipToGameDEBUG == false) {
+				musicSound.play();
+			} else {
+				console.log("using skipToGameDEBUG from globals.js for quicker testing loop, music not playing since code reached before first user interaction");
+			}
 		}
 	}
 }
