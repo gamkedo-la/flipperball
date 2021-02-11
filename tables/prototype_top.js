@@ -299,7 +299,17 @@
                  "visible":true,
                  "width":36,
                  "x":534.808891563948,
-                 "y":180.286765604418
+                 "y":180.286765604418,
+                 "gid":7,
+                 "height":113,
+                 "id":106,
+                 "name":"plunger_gate",
+                 "rotation":0,
+                 "type":"gate",
+                 "visible":true,
+                 "width":14,
+                 "x":894,
+                 "y":127
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -365,12 +375,6 @@
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":50
-                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -382,13 +386,7 @@
                  "gid":37,
                  "height":54,
                  "id":97,
-                 "name": "circle_bumper_small_green",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":50
-                        }],
+                 "name":"circle_bumper_small_green",
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -400,13 +398,7 @@
                  "gid":36,
                  "height":54,
                  "id":100,
-                 "name": "circle_bumper_small_blue",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":50
-                        }],
+                 "name":"circle_bumper_small_blue",
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -418,13 +410,7 @@
                  "gid":35,
                  "height":54,
                  "id":101,
-                 "name": "circle_bumper_small_yellow",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":50
-                        }],
+                 "name":"circle_bumper_small_yellow",
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -1190,7 +1176,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":124,
+ "nextobjectid":107,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
