@@ -478,6 +478,8 @@ function GameScene() {
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity);
                 break;
+            case ENTITY_TYPE.Habitrail:
+                self.handleHabitrailCollision(otherEntity);
             default:
                 break;
         }
@@ -509,5 +511,15 @@ function GameScene() {
     this.handleTriggerCollision = function(triggerEntity) {
         self.score += triggerEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score; 
+    }
+
+    this.handleHabitrailCollision = function(habitrailEntity) {
+        for (const collider of habitrailEntity.relatedCollisionObjects) {
+            for (var entity of this.collisionManager.entities) {
+                if (entity.id == collider) {
+                    entity.type = "wall";
+                }
+            }
+        }
     }
 }

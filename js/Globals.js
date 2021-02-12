@@ -101,7 +101,8 @@ const ENTITY_TYPE = {
 	Wall: 'wall',
 	Trigger: 'trigger',
 	Cyclone: 'cyclone',
-	Gate: 'gate'
+	Gate: 'gate',
+	Habitrail: 'habitrail'
 };
 
 const TRIGGER_TYPE = {
