@@ -508,6 +508,6 @@ function GameScene() {
 
     this.handleTriggerCollision = function(triggerEntity) {
         self.score += triggerEntity.score;
-        self.scoreIncrementForExtraBall += otherEntity.score; 
+        self.scoreIncrementForExtraBall += triggerEntity.score; 
     }
 }
