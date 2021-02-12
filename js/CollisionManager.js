@@ -117,10 +117,11 @@ function CollisionManager () {
         }
     }
 
-    this.checkCollisions = function() {
+    this.checkCollisions = function(deltaTime) {
         for (const ball of this.balls.values()) {
             this.collisions.length = 0; //empty the collisions array
             for (const entity of this.entities.values()) {
+                // const willCollide = ball.willCollideWith(entity, deltaTime);
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
                 const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
                 if (distance <= squaredRadii) {

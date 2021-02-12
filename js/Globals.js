@@ -21,7 +21,7 @@ let canvasContext;
 
 let DEBUG = false;
 let CHEATS_ACTIVE = false;
-let skipToGameDEBUG = true;
+let skipToGameDEBUG = false;
 
 const GAME_SCALE = 1;
 const GRAVITY = 300;

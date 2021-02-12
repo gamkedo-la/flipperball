@@ -161,6 +161,9 @@ class GameObject {
     respondToPolygonCollision() {}
 
     /** @interface */
+    willCollideWith() {}
+
+    /** @interface */
     didCollideWith() {}
 
     /**

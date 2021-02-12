@@ -1,3 +1,6 @@
+const squaredDistance = function (x1, y1, x2, y2) {
+    return (((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+}
 class Ball extends GameObject {
     constructor(...props) {
         super(...props);
@@ -39,6 +42,34 @@ class Ball extends GameObject {
         this.body.update(this.x - this.oldX, this.y - this.oldY);
         this.oldX = this.x;
         this.oldY = this.y;
+    }
+
+    /**
+     * estimates based on velocity what the ball's next position will be
+     * 
+     * @param {Number} deltaTime
+     * @returns {Point}
+     */
+    getNextPosition(deltaTime) {
+        const nextVelocity = {
+            x: this.velocity.x,
+            y: this.velocity.y,
+        }
+
+        nextVelocity.y += GRAVITY * deltaTime / 1000;
+
+        const speed = Math.sqrt((this.velocity.x) * (this.velocity.x) + (this.velocity.y) * (this.velocity.y));
+        if (speed > MAX_BALL_SPEED) {
+            nextVelocity.x = this.velocity.x * (MAX_BALL_SPEED / speed);
+            nextVelocity.y = this.velocity.y * (MAX_BALL_SPEED / speed);
+        }
+
+        const deltaX = nextVelocity.x * deltaTime / 1000;
+        const deltaY = nextVelocity.y * deltaTime / 1000;
+        return {
+            x: this.x + deltaX,
+            y: this.y + deltaY,
+        }
     }
 
     resolveCollisions(collisions) {
@@ -145,5 +176,21 @@ class Ball extends GameObject {
         this.yAdjustment += yPosAdjust;
         this.vxAdjustment += xVelAdjust;
         this.vyAdjustment += yVelAdjust;
+    }
+
+    /**
+     * @param {GameObject} gameObject
+     * @param {Time} deltaTime
+     * @returns {Boolean}
+     */
+    willCollideWith(gameObject, deltaTime) {
+        if (deltaTime === undefined) return false;
+
+        if (this.velocity.x === 0 && this.velocity.y === 0) return false;
+
+        const nextPosition = this.getNextPosition(deltaTime);
+        const distance = squaredDistance(nextPosition.x, nextPosition.y, gameObject.body.center.x, gameObject.body.center.y);
+        const squaredRadii = (this.body.radius + gameObject.body.radius) * (this.body.radius + gameObject.body.radius);
+        return distance <= squaredRadii;
     }
 }
