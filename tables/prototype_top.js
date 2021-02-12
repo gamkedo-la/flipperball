@@ -194,18 +194,6 @@
                  "y":90
                 }, 
                 {
-                 "gid":22,
-                 "height":75,
-                 "id":105,
-                 "name":"habitrail1",
-                 "rotation":0,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":775.666666666666,
-                 "y":309.333333333333
-                }, 
-                {
                  "gid":23,
                  "height":125,
                  "id":106,
@@ -391,8 +379,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":54,
-                 "x":710,
-                 "y":120
+                 "x":695,
+                 "y":100
                 }, 
                 {
                  "gid":36,
@@ -429,6 +417,24 @@
                  "width":96,
                  "x":550,
                  "y":470
+                }, 
+                {
+                 "gid":22,
+                 "height":75,
+                 "id":105,
+                 "name":"habitrail1",
+                 "properties":[
+                        {
+                         "name":"relatedCollisionObjects",
+                         "type":"string",
+                         "value":"122,123"
+                }],
+                 "rotation":0,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":36,
+                 "x":775.667,
+                 "y":309.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -898,8 +904,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":53,
-                 "x":710,
-                 "y":66
+                 "x":695,
+                 "y":46
                 }, 
                 {
                  "ellipse":true,
@@ -1166,8 +1172,20 @@
                  "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":777.333333333333,
-                 "y":306.333333333333
+                 "x":777.333,
+                 "y":306.333
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.3333333333334,
+                 "id":107,
+                 "name":"habitrail1",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":35.3333333333334,
+                 "x":777,
+                 "y":296.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1176,7 +1194,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":107,
+ "nextobjectid":108,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
