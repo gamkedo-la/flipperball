@@ -350,7 +350,7 @@ function GameScene() {
             dynamicObj.update(deltaTime / 2);
         }
 
-        self.collisionManager.checkCollisions(deltaTime);
+        self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
@@ -373,7 +373,7 @@ function GameScene() {
             dynamicObj.update(deltaTime / 2);
         }
 
-        self.collisionManager.checkCollisions(deltaTime);
+        self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = self.table.animations.length - 1; i >= 0; i--) {
             //Need to iterate backwards to avoid skipping anything or going
