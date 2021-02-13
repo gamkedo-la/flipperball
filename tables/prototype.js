@@ -817,15 +817,15 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":25.9091,
+                 "height":26,
                  "id":59,
                  "name":"lane_trigger",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":5.09091,
-                 "x":827.18,
-                 "y":216.909
+                 "width":26,
+                 "x":816.452727272727,
+                 "y":216.727181818182
                 }, 
                 {
                  "ellipse":true,

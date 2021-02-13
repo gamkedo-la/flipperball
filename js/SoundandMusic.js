@@ -127,6 +127,16 @@ function SoundOverlapsClass(filenameWithPath, minDeltaBtwPlays) {
 		}
 	}
 
+	this.isPlaying = function() {
+		for (const sound of sounds) {
+			if (!sound.paused) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	this.duration = function() {
 		//return duration in milleseconds
 		return sounds[0].duration * MILLESECOND_MULTIPLIER;

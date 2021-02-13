@@ -183,7 +183,7 @@
   <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="813.273" y="314.455">
    <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
   </object>
-  <object id="59" name="lane_trigger" type="trigger" x="827.18" y="216.909" width="5.09091" height="25.9091">
+  <object id="59" name="lane_trigger" type="trigger" x="816.453" y="216.727" width="26" height="26">
    <ellipse/>
   </object>
   <object id="60" name="flipper_right" type="flipper_tip" x="636.674" y="509.959" width="23" height="23">
