@@ -141,6 +141,7 @@ function GameScene() {
                         // force restart when in pause menu
                         self.paused = false;
                         this.restartScene(true);
+                        tilt = false;
                     } else {
                         this.restartScene();
                     }
@@ -478,7 +479,7 @@ function GameScene() {
         
     }
 
-    this.notifyBallCollision = function(otherEntity) {        
+    this.notifyBallCollision = function(otherEntity) {    
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
@@ -543,7 +544,7 @@ function GameScene() {
     this.handleRotatingGateCollision = function(rotatingEntity) {
         //TODO: Add rotating gate score increasing logic
         self.score += rotatingEntity.score;
-        self.scoreIncrementForExtraBall += triggerEntity.score; 
+        self.scoreIncrementForExtraBall += rotatingEntity.score; 
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         for (const collider of habitrailEntity.relatedCollisionObjects) {
