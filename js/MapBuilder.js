@@ -33,7 +33,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     const buildStaticObjects = function(objData) {
         const result = [];
 
-        for (const obj of objData) {
+        for (const obj of objData) {     
             result.push(new StaticMapObject(obj));
         }
         return result;
@@ -62,8 +62,19 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'rotating_gate'){ 
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new GameObject(obj, bodyData));
+            } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
+                var habitrail = new HabitrailMapObject(obj, bodyData);
+                var habitrailCollisionData = [];
+                for (const collisionId of habitrail.relatedCollisionObjects) {
+                    var foundCollisionData = collisionData.find((data) => data.id == collisionId);
+                    foundCollisionData.type = 'NA';
+                    habitrailCollisionData.push(foundCollisionData);
+                }
+                habitrail.collisionData = habitrailCollisionData;
+                result.push(habitrail);
             }
-            else{
+             else {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
@@ -93,7 +104,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         return result;
     }
 
-    this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
+    this.staticObjects = buildStaticObjects(this.fixedLayerData.objects, this.collisionLayerData.objects);
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);
 }
@@ -117,7 +128,33 @@ function StaticMapObject (objData) {
     }
 }
 
+function HabitrailMapObject (objData, bodyData, collisionData = undefined) {
+    this.x = objData.x;
+    this.y = objData.y - objData.height;
+    this.width = objData.width;
+    this.height = objData.height;
+    this.type = objData.type;
+    this.reflectance = objData.reflectance || 0.75;
+    this.image = images[objData.name];
+    this.rotation = objData.rotation * (Math.PI/180) || 0;
+    this.body = new CollisionBody(bodyData);
+    this.collisionData = collisionData;
+    this.relatedCollisionObjects = String(objData.properties[0].value).split(',');
+
+    this.draw = function() {
+        if (this.rotation > 0) {
+            drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
+        } else {
+            canvasContext.drawImage(this.image, this.x, this.y);
+        }
+    }
+    
+    this.update = function(deltaTime) {}
+
+}
+
 function TableObject (objData) {
+    this.id = objData.id;
     this.x = objData.x;
     this.y = objData.y - objData.height;
     this.width = objData.width;

@@ -88,6 +88,8 @@ class Ball extends GameObject {
                     this.respondToPolygonCollision(collision);
                     this.vxAdjustment = -this.velocity.x;
                     this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
+                } else if (collision.otherEntity.type === ENTITY_TYPE.Habitrail) {
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                 } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     if (collision.edge) {
@@ -134,6 +136,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Plunger:
             case ENTITY_TYPE.Wall:
             case ENTITY_TYPE.Trigger:
+            case ENTITY_TYPE.Habitrail:
                 return true;
             default:
                 return false;

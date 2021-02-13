@@ -481,6 +481,8 @@ function GameScene() {
             case ENTITY_TYPE.RotatingGate:
                 self.handleRotatingGateCollision(otherEntity);
                 break;
+            case ENTITY_TYPE.Habitrail:
+                self.handleHabitrailCollision(otherEntity);
             default:
                 break;
         }
@@ -518,5 +520,14 @@ function GameScene() {
         //TODO: Add rotating gate score increasing logic
         self.score += rotatingEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score; 
+    }
+    this.handleHabitrailCollision = function(habitrailEntity) {
+        for (const collider of habitrailEntity.relatedCollisionObjects) {
+            for (var entity of this.collisionManager.entities) {
+                if (entity.id == collider) {
+                    entity.type = "wall";
+                }
+            }
+        }
     }
 }

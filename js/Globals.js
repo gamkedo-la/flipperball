@@ -102,7 +102,8 @@ const ENTITY_TYPE = {
 	Trigger: 'trigger',
 	Cyclone: 'cyclone',
 	Gate: 'gate',
-	RotatingGate: 'rotating_gate'
+	RotatingGate: 'rotating_gate',
+	Habitrail: 'habitrail'
 };
 
 const TRIGGER_TYPE = {
