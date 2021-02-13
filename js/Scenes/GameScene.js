@@ -140,6 +140,7 @@ function GameScene() {
                         // force restart when in pause menu
                         self.paused = false;
                         this.restartScene(true);
+                        tilt = false;
                     } else {
                         this.restartScene();
                     }
