@@ -352,6 +352,12 @@
                  "height":95.4154,
                  "id":3,
                  "name":"circle_bumper_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -364,6 +370,12 @@
                  "height":95.4154,
                  "id":4,
                  "name":"circle_bumper_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -376,6 +388,12 @@
                  "height":95.4154,
                  "id":5,
                  "name":"circle_bumper_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,

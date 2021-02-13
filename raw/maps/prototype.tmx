@@ -142,12 +142,21 @@
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="445.784" y="61.98" width="94.652" height="95.4154">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="4" name="circle_bumper_yellow" type="circle_bumper" x="634.561" y="61.98" width="94.652" height="95.4154">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="5" name="circle_bumper_red" type="circle_bumper" x="539.909" y="195.946" width="94.652" height="95.4154">
+   <properties>
+    <property name="score" type="int" value="100"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="185.5">

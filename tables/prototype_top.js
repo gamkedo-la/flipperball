@@ -890,6 +890,12 @@
                  "height":53,
                  "id":94,
                  "name":"circle_bumper_small_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -902,6 +908,12 @@
                  "height":53,
                  "id":96,
                  "name":"circle_bumper_small_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -914,6 +926,12 @@
                  "height":53,
                  "id":98,
                  "name":"circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -926,6 +944,12 @@
                  "height":53,
                  "id":102,
                  "name":"circle_bumper_small_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,

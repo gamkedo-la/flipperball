@@ -214,15 +214,27 @@
    <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
   </object>
   <object id="94" name="circle_bumper_small_red" type="circle_bumper_small" x="430" y="66" width="53" height="53">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="96" name="circle_bumper_small_green" type="circle_bumper_small" x="711" y="89" width="53" height="53">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="98" name="circle_bumper_small_blue" type="circle_bumper_small" x="710" y="256" width="53" height="53">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="102" name="circle_bumper_small_yellow" type="circle_bumper_small" x="430" y="256" width="53" height="53">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="104" name="cyclone" type="cyclone" x="550" y="373" width="96" height="96">
