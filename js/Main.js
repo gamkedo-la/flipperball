@@ -30,7 +30,7 @@ fullScreenButton.onclick = function () {
 	FEATURE_FLAGS.useCanvasContainer = !FEATURE_FLAGS.useCanvasContainer;
 	toggleFullScreen();
 }
-
+// Practice Commit, will remove [Himar]
 function toggleFullScreen() {
 	if (FEATURE_FLAGS.useCanvasContainer) {
 		canvas.style.height = '';
