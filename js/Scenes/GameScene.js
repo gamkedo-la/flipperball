@@ -36,6 +36,7 @@ function GameScene() {
             // Reset numberOfRemainingBalls when we transition into a new game
             this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
             this.score = 0;
+            this.currentTableIndex = 0;
 
             this.gameHasFinished = false;
         }
@@ -73,7 +74,7 @@ function GameScene() {
     }
 
     this.transitionOut = function() {
-
+        
     }
 
     this.run = function(deltaTime) {
@@ -248,18 +249,34 @@ function GameScene() {
         }
     }
 
-    const determineBallAndTableState = function() {
-        for (const ball of self.table.balls) {
+    const determineBallAndTableState = function() {        
+        for (const ball of self.table.balls) {            
             if (ball.y < 0) {
+                if (DEBUG) {
+                    console.log("if(ball.y < 0)");
+                    outputTableBallState(ball);
+                }
                 if (self.currentTableIndex < self.tablesForScene.length - 1) {
                     self.currentTableIndex++;
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
                     //TODO: FM: Determine when extra ball should actually be given to player
                     //Probably at some number of points and under some special circumstances
                     //extraBall();
+                    if (DEBUG) {
+                        console.log("if(self.currentTableIndex < self.tablesForScene.length - 1)");
+                        outputTableBallState(ball);
+                    }
                 }
             } else if (ball.y > canvas.height) {
+                if (DEBUG) {
+                    console.log("else if (ball.y > canvas.height)");
+                    outputTableBallState(ball);
+                }
                 if (self.currentTableIndex == 0) {
+                    if (DEBUG) {
+                        console.log("if (self.currentTableIndex == 0)");
+                        outputTableBallState(ball);
+                    }
                     loseBall(ball);
                     playRemainingBall();
                 } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
@@ -269,7 +286,13 @@ function GameScene() {
             }
         }
     }
-        
+    const outputTableBallState = function (ball) {
+        console.log("Ball Y:" + ball.y);
+        console.log("self.currenTableIndex:" + self.currentTableIndex);
+        console.log("self.tablesForScene.length:" + self.tablesForScene.length);
+        console.log("self.table.balls.length:" + self.table.balls.length);
+        console.log("-----");
+    }        
     const loseBall = function(ball) {
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
@@ -392,7 +415,8 @@ function GameScene() {
 
         //TODO: We'll need to change to figure out what to do about multi-ball
         if (DEBUG) {
-            originalBallAndTableTransition();
+            //originalBallAndTableTransition();
+            determineBallAndTableState();
         } else {
             determineBallAndTableState();
         }
