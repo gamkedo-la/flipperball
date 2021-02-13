@@ -10,6 +10,7 @@ function CollisionManager () {
     this.collisions = [];
 
     this.registerBall = function(ball) {
+        //x: 358.0000735, y: 237.817785
         this.balls.add(ball);
     }
 
@@ -128,6 +129,14 @@ function CollisionManager () {
                     if(entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate){
                         //TODO: Add handling of rotating way collision
                         console.log("CollisionManager: checkCollision: "+ entity.type);
+                        const direction = normalize(ball.body.center, entity.body.center);
+                        this.collisions.push(new Collision(
+                            COLLISION_TYPE.Polygon,
+                            entity,
+                            entity.body,
+                            Math.sqrt(distance) - entity.body.radius,
+                            direction
+                        ));
                     } else if (entity.body.type === BODY_TYPE.Circle) {
                         const direction = normalize(ball.body.center, entity.body.center);
                         this.collisions.push(new Collision(
