@@ -478,6 +478,9 @@ function GameScene() {
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity);
                 break;
+            case ENTITY_TYPE.RotatingGate:
+                self.handleRotatingGateCollision(otherEntity);
+                break;
             default:
                 break;
         }
@@ -508,6 +511,12 @@ function GameScene() {
 
     this.handleTriggerCollision = function(triggerEntity) {
         self.score += triggerEntity.score;
+        self.scoreIncrementForExtraBall += triggerEntity.score; 
+    }
+
+    this.handleRotatingGateCollision = function(rotatingEntity) {
+        //TODO: Add rotating gate score increasing logic
+        self.score += rotatingEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score; 
     }
 }

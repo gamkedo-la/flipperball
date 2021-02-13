@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":22,
+                 "gid":24,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -297,8 +297,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":322,
-                 "y":417
+                 "x":321.636,
+                 "y":417.182
                 }, 
                 {
                  "gid":21,
@@ -317,6 +317,24 @@
                  "width":5,
                  "x":827.18,
                  "y":242.818
+                }, 
+                {
+                 "gid":23,
+                 "height":13.5454,
+                 "id":73,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":335.091,
+                 "y":242.727
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -976,6 +994,42 @@
                  "width":0,
                  "x":335.5,
                  "y":53
+                }, 
+                {
+                 "height":0,
+                 "id":75,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":335.029,
+                 "y":236.512
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -984,7 +1038,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":70,
+ "nextobjectid":78,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1002,7 +1056,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":21,
+         "tilecount":22,
          "tileheight":598,
          "tiles":[
                 {
@@ -1151,12 +1205,18 @@
                  "imageheight":26,
                  "imagewidth":5,
                  "type":"trigger"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
+                 "imageheight":9,
+                 "imagewidth":20
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":22,
+         "firstgid":24,
          "grid":
             {
              "height":1,
@@ -1179,7 +1239,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":23,
+         "firstgid":25,
          "grid":
             {
              "height":1,

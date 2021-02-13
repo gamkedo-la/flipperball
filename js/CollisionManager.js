@@ -125,7 +125,10 @@ function CollisionManager () {
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
                 const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
                 if (distance <= squaredRadii) {
-                    if (entity.body.type === BODY_TYPE.Circle) {
+                    if(entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate){
+                        //TODO: Add handling of rotating way collision
+                        console.log("CollisionManager: checkCollision: "+ entity.type);
+                    } else if (entity.body.type === BODY_TYPE.Circle) {
                         const direction = normalize(ball.body.center, entity.body.center);
                         this.collisions.push(new Collision(
                             COLLISION_TYPE.Circle, 

@@ -122,6 +122,8 @@ function loadImages() {
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
+        {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
+
         {imgName: "cyclone", theFile: "tables/cyclone.png"},
         {imgName: "cyclone_anim", theFile: "animations/cyclone_anim.png"},
 

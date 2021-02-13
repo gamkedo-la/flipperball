@@ -59,7 +59,11 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'plunger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.plunger = new Plunger(obj, bodyData);
-            } else {
+            } else if (obj.type === 'rotating_gate'){ 
+                const bodyData = collisionData.find((data) => data.name === obj.name);
+                result.push(new GameObject(obj, bodyData));
+            }
+            else{
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
