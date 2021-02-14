@@ -132,56 +132,80 @@ class GameObject {
     /** @interface */
     draw() {
         if (this.hasMotionTrail) {
-            let absVelo = Math.abs(this.velocity.x) + Math.abs(this.velocity.y)
-            if (DEBUG) {
-                //console.log("Absolute Velocity:" + absVelo)
-            }
-            if (absVelo > this.minTrailVelocity) {
-                 //store the position of the object each frame to use as a trail point 
-                let ballCenterX = this.x + this.width / 2;
-                let ballCenterY = this.y + this.height / 2;
-                this.trailPositions.push({ x: this.x, y: this.y, width: this.width * this.trailFadeStrength, height: this.height * this.trailFadeStrength, centerX: ballCenterX, centerY: ballCenterY });
-            } else {
-                // if we're moving to slow to create a trail, let's also rapidly speed up the removal of any existing trails to cut down on how long it will 'hang around'...
-                // each frame we're not generating a motion trail, we'll shift the array by half of it's length for a faster decay
-                for (var i = this.trailPositions.length - 1; i > this.trailPositions.length / 2; i--){
-                    this.trailPositions.shift();
-                }
-            }
-            if (this.trailPositions.length > this.motionTrailLength) {
-                this.trailPositions.shift(); // remove that oldest position once there are more positions than the motion trail length
-            }
-            let saveAlpha = canvasContext.globalAlpha; // we're going to dial down the trail's alpha using the globalAlpha channel, so let's store the current value to make restoring it easy
-            for (var i = this.trailPositions.length - 1; i > 0; i--) {
-                canvasContext.globalAlpha *= .90;
-                //TBD: Offset the x,y to follow closer to the 'center' of the object. right now the trail pulls left due to objects being placed by their upper left coord
-                this.trailPositions[i].x = this.trailPositions[i].centerX - (this.trailPositions[i].width / 2);
-                this.trailPositions[i].y = this.trailPositions[i].centerY - (this.trailPositions[i].height / 2);
-                if (DEBUG) {
-                    //Draw a pixel where the center of the trail should be for debugging
-                    drawRect(this.trailPositions[i].centerX, this.trailPositions[i].centerY, 1, 1, Color.Red);
-                }
-                canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, this.trailPositions[i].width, this.trailPositions[i].height);
-                this.trailPositions[i].width *= this.trailFadeStrength;
-                this.trailPositions[i].height *= this.trailFadeStrength;
-            }
-            canvasContext.globalAlpha = saveAlpha; // restore previous globalAlpha
+            this.drawMotionTrail();
         }
+
         if (this.isAnimating) {
             const thisFrameRect = this.getCurrentFrameRect();
-            canvasContext.drawImage(this.animationSpritesheet, 
-                                    thisFrameRect.x, thisFrameRect.y, thisFrameRect.width, thisFrameRect.height,
-                                    this.x, this.y, thisFrameRect.width * this.scale, thisFrameRect.height * this.scale);
+            canvasContext.drawImage(this.animationSpritesheet,
+                thisFrameRect.x, thisFrameRect.y, thisFrameRect.width, thisFrameRect.height,
+                this.x, this.y, thisFrameRect.width * this.scale, thisFrameRect.height * this.scale);
 
         } else {
             canvasContext.drawImage(this.sprite, this.x, this.y, this.width, this.height);
         }
 
         if (this.body) {
-          this.body.draw();
+            this.body.draw();
         }
     }
 
+    /** @interface */
+    drawMotionTrail() {
+        let absVelo = Math.abs(this.velocity.x) + Math.abs(this.velocity.y);
+        let ballCenterX = this.x + this.width / 2;
+        let ballCenterY = this.y + this.height / 2;
+        if (DEBUG) {
+            //console.log("Absolute Velocity:" + absVelo)
+        }
+        if (absVelo > this.minTrailVelocity) {
+            //store the position of the object each frame to use as a trail point
+            this.trailPositions.push({ x: this.x, y: this.y, width: this.width * this.trailFadeStrength, height: this.height * this.trailFadeStrength, centerX: ballCenterX, centerY: ballCenterY });
+        } else {
+            // if we're moving to slow to create a trail, let's also rapidly speed up the removal of any existing trails to cut down on how long it will 'hang around'...
+            // each frame we're not generating a motion trail, we'll shift the array by half of it's length for a faster decay
+            for (var i = this.trailPositions.length - 1; i > this.trailPositions.length / 2; i--) {
+                this.trailPositions.shift();
+            }
+        }
+        if (this.trailPositions.length > this.motionTrailLength) {
+            this.trailPositions.shift(); // remove that oldest position once there are more positions than the motion trail length
+        }
+        let saveAlpha = canvasContext.globalAlpha; // we're going to dial down the trail's alpha using the globalAlpha channel, so let's store the current value to make restoring it easy
+        let curLineWidth = canvasContext.lineWidth;
+        canvasContext.lineWidth = this.width / 2;
+        canvasContext.beginPath();
+        canvasContext.moveTo(ballCenterX, ballCenterY);
+        for (var i = this.trailPositions.length - 1; i > 0; i--) {
+            if (i > 2) {
+                // avoid connecting bezier curve effect to really far points, usually occuring in screen transition
+                if (this.trailPositions[i].centerY - this.trailPositions[i - 1].centerY < this.height) {
+                    canvasContext.lineWidth *= this.trailFadeStrength;
+                    canvasContext.quadraticCurveTo(this.trailPositions[i].centerX, this.trailPositions[i].centerY, this.trailPositions[i - 1].centerX, this.trailPositions[i - 1].centerY);
+                    canvasContext.strokeStyle = Color.White;
+                    let tempAlpha = canvasContext.globalAlpha;
+                    canvasContext.globalAlpha *= .25;
+                    canvasContext.stroke();
+                    canvasContext.globalAlpha = tempAlpha;
+                    canvasContext.moveTo(this.trailPositions[i].centerX, this.trailPositions[i].centerY);
+                }
+            }
+            canvasContext.globalAlpha *= .90;
+            //TBD: Offset the x,y to follow closer to the 'center' of the object. right now the trail pulls left due to objects being placed by their upper left coord
+            this.trailPositions[i].x = this.trailPositions[i].centerX - (this.trailPositions[i].width / 2);
+            this.trailPositions[i].y = this.trailPositions[i].centerY - (this.trailPositions[i].height / 2);
+            if (DEBUG) {
+                //Draw a pixel where the center of the trail should be for debugging
+                drawRect(this.trailPositions[i].centerX, this.trailPositions[i].centerY, 1, 1, Color.Red);
+            }
+            canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, this.trailPositions[i].width, this.trailPositions[i].height);
+            this.trailPositions[i].width *= this.trailFadeStrength;
+            this.trailPositions[i].height *= this.trailFadeStrength;
+        }
+        canvasContext.lineWidth = curLineWidth;
+        canvasContext.globalAlpha = saveAlpha; // restore previous globalAlpha
+    }
+    
     /** @interface */
     animate(frame) {
         this.currFrame = Number.isInteger(frame) ? frame : this.currFrame;
