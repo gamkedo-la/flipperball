@@ -7,6 +7,7 @@ class Ball extends GameObject {
         
         this.radius = (this.width + this.height) / 4; //Average of half width and half height
         this.triggersCollided = {};
+        this.hasMotionTrail = true;
     }
 
     update(deltaTime) {

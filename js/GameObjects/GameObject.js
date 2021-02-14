@@ -39,6 +39,9 @@ class GameObject {
         this.frameTimes = animationData.frameTimes || [64]; //array of milliseconds to show each frame
         this.reverses = animationData.reverses || false; //boolean indicates if animation reverses (true)
         this.loops = animationData.loops || false; //boolean indicates if animation loops (true) 
+        this.hasMotionTrail = false; // draw this object with a motion trail
+        this.trailPositions = []; // array of previous object positions to be used to maintain the trail
+        this.motionTrailLength = 20; // default trail length of 20
 
         if (bodyData) {
           this.body = new CollisionBody(bodyData);
@@ -126,6 +129,16 @@ class GameObject {
 
     /** @interface */
     draw() {
+        if (this.hasMotionTrail) {
+            this.trailPositions.push({ x: this.x, y: this.y });
+            if (this.trailPositions.length > this.motionTrailLength) {
+                this.trailPositions.shift();
+            }
+            
+            for (var i = 0; i < this.trailPositions.length; i++){
+                canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, this.width, this.height);
+            }
+        }
         if (this.isAnimating) {
             const thisFrameRect = this.getCurrentFrameRect();
             canvasContext.drawImage(this.animationSpritesheet, 
