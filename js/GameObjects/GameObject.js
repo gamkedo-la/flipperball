@@ -134,9 +134,13 @@ class GameObject {
             if (this.trailPositions.length > this.motionTrailLength) {
                 this.trailPositions.shift();
             }
-            
-            for (var i = 0; i < this.trailPositions.length; i++){
-                canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, this.width, this.height);
+            let trailWidth = this.width * .90;
+            let trailHeight = this.height * .90;
+            for (var i = this.trailPositions.length - 1; i > 0; i--){
+                canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, trailWidth, trailHeight);
+                trailWidth *= .90;
+                trailHeight *= .90;
+                
             }
         }
         if (this.isAnimating) {
