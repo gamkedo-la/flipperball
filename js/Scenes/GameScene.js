@@ -13,6 +13,7 @@ function GameScene() {
     this.hasPlungerReleased = false;
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
+    this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
@@ -339,6 +340,23 @@ function GameScene() {
         // }
     }
 
+    var checkForRotatingGateScore = function(){
+        if(self.remainingRotatingScore > 0){
+            self.score++;
+            self.scoreIncrementForExtraBall++; 
+            self.remainingRotatingScore --;
+            console.log(self.remainingRotatingScore);
+        }   
+    }
+
+    var checkForExtraBall = function(){
+        if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
+            extraBall();
+            //Maybe add a SFX to tell the player they got an extra ball?
+            self.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
+        }
+    }
+
     this.restartScene = function(force=false) {
         if (isGameOver() || force) {
             self.gameHasFinished = true;
@@ -413,6 +431,10 @@ function GameScene() {
                 // when we just want to play the same animation again?
             }
         }
+
+        checkForRotatingGateScore();
+
+        checkForExtraBall();
 
         //TODO: We'll need to change to figure out what to do about multi-ball
         if (DEBUG) {
@@ -517,11 +539,6 @@ function GameScene() {
             default:
                 break;
         }
-        if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
-            extraBall();
-            //Maybe add a SFX to tell the player they got an extra ball?
-            this.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
-        }
         
     }
 
@@ -549,8 +566,12 @@ function GameScene() {
 
     this.handleRotatingGateCollision = function(rotatingEntity) {
         //TODO: Add rotating gate score increasing logic
-        self.score += rotatingEntity.score;
-        self.scoreIncrementForExtraBall += rotatingEntity.score; 
+        const rate = 0.01;
+        let ballSpeed = Math.sqrt((this.properties.ball.velocity.x) * (this.properties.ball.velocity.x)
+         + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
+
+        self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
+        
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         for (const collider of habitrailEntity.relatedCollisionObjects) {
