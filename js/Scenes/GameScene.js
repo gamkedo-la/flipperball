@@ -483,6 +483,9 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
+                if (DEBUG) {
+                    console.log("otherEntity.score:" + otherEntity.score);
+                }
                 self.score += otherEntity.score;  
                 self.scoreIncrementForExtraBall += otherEntity.score; 
                 if (otherEntity.hasAnimation) {
@@ -493,6 +496,9 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.CircleBumperSmall:
                 self.flash = true;
+                if (DEBUG) {
+                    console.log("otherEntity.score:" + otherEntity.score);
+                }
                 self.score += otherEntity.score;   
                 self.scoreIncrementForExtraBall += otherEntity.score; 
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)

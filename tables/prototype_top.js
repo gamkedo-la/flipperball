@@ -365,6 +365,12 @@
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -377,6 +383,12 @@
                  "height":54,
                  "id":97,
                  "name":"circle_bumper_small_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -389,6 +401,12 @@
                  "height":54,
                  "id":100,
                  "name":"circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -401,6 +419,12 @@
                  "height":54,
                  "id":101,
                  "name":"circle_bumper_small_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -635,11 +659,11 @@
                          "y":14.5
                         }, 
                         {
-                         "x":-21.4868331,
+                         "x":-21.4868,
                          "y":99.876
                         }, 
                         {
-                         "x":-19.833333,
+                         "x":-19.8333,
                          "y":726.833
                         }, 
                         {
@@ -890,12 +914,6 @@
                  "height":53,
                  "id":94,
                  "name":"circle_bumper_small_red",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":150
-                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -908,12 +926,6 @@
                  "height":53,
                  "id":96,
                  "name":"circle_bumper_small_green",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":150
-                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -926,12 +938,6 @@
                  "height":53,
                  "id":98,
                  "name":"circle_bumper_small_blue",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":150
-                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -944,12 +950,6 @@
                  "height":53,
                  "id":102,
                  "name":"circle_bumper_small_yellow",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":150
-                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -1370,14 +1370,14 @@
                 {
                  "id":18,
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
-                 "imageheight":240,
+                 "imageheight":270,
                  "imagewidth":82,
                  "type":"wall"
                 }, 
                 {
                  "id":19,
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
-                 "imageheight":240,
+                 "imageheight":270,
                  "imagewidth":82,
                  "type":"wall"
                 }, 

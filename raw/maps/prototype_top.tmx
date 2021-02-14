@@ -60,10 +60,10 @@
    <image width="55" height="186" source="../img/backgrounds/flipper_bumper_right.png"/>
   </tile>
   <tile id="18" type="wall">
-   <image width="82" height="240" source="../img/backgrounds/drain_rail_left.png"/>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_left.png"/>
   </tile>
   <tile id="19" type="wall">
-   <image width="82" height="240" source="../img/backgrounds/drain_rail_right.png"/>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_right.png"/>
   </tile>
   <tile id="20" type="wall">
    <image width="598" height="14" source="../../img/tables/horizontal_wall.png"/>
@@ -159,10 +159,26 @@
   <object id="15" name="flipper_right" gid="3" x="723" y="593" width="170" height="124"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="322" y="410.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="428" width="55" height="186"/>
-  <object id="93" name="circle_bumper_small_red" type="circle_bumper_small" gid="35" x="430" y="120" width="54" height="54"/>
-  <object id="97" name="circle_bumper_small_green" type="circle_bumper_small" gid="38" x="711" y="143.5" width="54" height="54"/>
-  <object id="100" name="circle_bumper_small_blue" type="circle_bumper_small" gid="37" x="710" y="310" width="54" height="54"/>
-  <object id="101" name="circle_bumper_small_yellow" type="circle_bumper_small" gid="36" x="430" y="310" width="54" height="54"/>
+  <object id="93" name="circle_bumper_small_red" type="circle_bumper_small" gid="35" x="430" y="120" width="54" height="54">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
+  </object>
+  <object id="97" name="circle_bumper_small_green" type="circle_bumper_small" gid="38" x="711" y="143.5" width="54" height="54">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
+  </object>
+  <object id="100" name="circle_bumper_small_blue" type="circle_bumper_small" gid="37" x="710" y="310" width="54" height="54">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
+  </object>
+  <object id="101" name="circle_bumper_small_yellow" type="circle_bumper_small" gid="36" x="430" y="310" width="54" height="54">
+   <properties>
+    <property name="score" type="int" value="150"/>
+   </properties>
+  </object>
   <object id="103" name="cyclone" type="cyclone" gid="39" x="550" y="470" width="96" height="96"/>
   <object id="105" name="habitrail1" gid="23" x="775.667" y="309.333" width="36" height="75">
    <properties>
@@ -214,27 +230,15 @@
    <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
   </object>
   <object id="94" name="circle_bumper_small_red" type="circle_bumper_small" x="430" y="66" width="53" height="53">
-   <properties>
-    <property name="score" type="int" value="150"/>
-   </properties>
    <ellipse/>
   </object>
   <object id="96" name="circle_bumper_small_green" type="circle_bumper_small" x="711" y="89" width="53" height="53">
-   <properties>
-    <property name="score" type="int" value="150"/>
-   </properties>
    <ellipse/>
   </object>
   <object id="98" name="circle_bumper_small_blue" type="circle_bumper_small" x="710" y="256" width="53" height="53">
-   <properties>
-    <property name="score" type="int" value="150"/>
-   </properties>
    <ellipse/>
   </object>
   <object id="102" name="circle_bumper_small_yellow" type="circle_bumper_small" x="430" y="256" width="53" height="53">
-   <properties>
-    <property name="score" type="int" value="150"/>
-   </properties>
    <ellipse/>
   </object>
   <object id="104" name="cyclone" type="cyclone" x="550" y="373" width="96" height="96">
