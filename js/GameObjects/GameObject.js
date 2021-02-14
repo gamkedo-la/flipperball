@@ -42,6 +42,7 @@ class GameObject {
         this.hasMotionTrail = false; // draw this object with a motion trail
         this.trailPositions = []; // array of previous object positions to be used to maintain the trail
         this.motionTrailLength = 20; // default trail length of 20
+        this.minTrailVelocity = 500; // minimum "absolute" velocity required for an object to drop a motion trail
 
         if (bodyData) {
           this.body = new CollisionBody(bodyData);
@@ -130,18 +131,29 @@ class GameObject {
     /** @interface */
     draw() {
         if (this.hasMotionTrail) {
-            this.trailPositions.push({ x: this.x, y: this.y });
-            if (this.trailPositions.length > this.motionTrailLength) {
-                this.trailPositions.shift();
+            let absVelo = Math.abs(this.velocity.x) + Math.abs(this.velocity.y)
+            if (DEBUG) {
+                console.log("Absolute Velocity:" + absVelo)
             }
-            let trailWidth = this.width * .90;
+            if (absVelo > this.minTrailVelocity) {
+                this.trailPositions.push({ x: this.x, y: this.y }); //store the position of the object each frame to use as a trail point    
+            } else {
+                this.trailPositions.shift(); // if we didn't add a new trail position, let's drop one anyhow to avoid the trail going 'stagnant'
+            }
+            if (this.trailPositions.length > this.motionTrailLength) {
+                this.trailPositions.shift(); // remove that oldest position once there are more positions than the motion trail length
+            }
+            let trailWidth = this.width * .90; // each trail sprite is 90% the size of the previous to create a 'taper'
             let trailHeight = this.height * .90;
-            for (var i = this.trailPositions.length - 1; i > 0; i--){
+            let saveAlpha = canvasContext.globalAlpha; // we're going to dial down the trail's alpha using the globalAlpha channel, so let's store the current value to make restoring it easy
+            for (var i = this.trailPositions.length - 1; i > 0; i--) {
+                canvasContext.globalAlpha *= .90;
+                //TBD: Offset the x,y to follow closer to the 'center' of the object. right now the trail pulls left due to objects being placed by their upper left coord
                 canvasContext.drawImage(this.sprite, this.trailPositions[i].x, this.trailPositions[i].y, trailWidth, trailHeight);
                 trailWidth *= .90;
                 trailHeight *= .90;
-                
             }
+            canvasContext.globalAlpha = saveAlpha; // restore previous globalAlpha
         }
         if (this.isAnimating) {
             const thisFrameRect = this.getCurrentFrameRect();
