@@ -145,7 +145,9 @@ function loadImages() {
 
         {imgName: "habitrail1", theFile: "tables/habitrail1.png"},
         {imgName: "habitrail2", theFile: "tables/habitrail2.png"},
-        {imgName: "habitrail3", theFile: "tables/habitrail3.png"}
+        {imgName: "habitrail3", theFile: "tables/habitrail3.png"},
+        {imgName: "flipper_title_medium", theFile: "screens/Flipperball_Title_Image_Medium.png"},
+        {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"}
         
     ];
 

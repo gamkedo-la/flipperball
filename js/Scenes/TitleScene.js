@@ -150,6 +150,9 @@ function TitleScene() {
         // canvasContext.drawImage(uiMenuBorderPic, 0, 0, uiMenuBorderPic.width, uiMenuBorderPic.height, 200, 250, uiMenuBorderPic.width * GAME_SCALE, uiMenuBorderPic.height * GAME_SCALE);
 //        fontRenderer.drawString(canvasContext, 220, 260, "START", GAME_SCALE);
         drawMenu();        
+        const titlePic = images['flipper_title_small']
+        canvasContext.drawImage(titlePic,  canvas.width/2 - titlePic.width/2, 0);
+
 	}
 	
 	const drawBG = function() {
@@ -161,7 +164,6 @@ function TitleScene() {
             colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         }
         
-        colorText("Flipper Ball", canvas.width / 2, canvas.height / 2 - PADDING*2.5, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
         colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         colorText("'Left Arrow' = left flipper", canvas.width / 2, canvas.height / 2 + PADDING * 1.25, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         colorText("'Right Arrow' = right flipper", canvas.width / 2, canvas.height / 2 + PADDING*2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
