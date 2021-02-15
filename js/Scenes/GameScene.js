@@ -343,10 +343,18 @@ function GameScene() {
 
     var checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
-            self.score++;
-            self.scoreIncrementForExtraBall++; 
-            self.remainingRotatingScore --;
             console.log(self.remainingRotatingScore);
+            if(self.remainingRotatingScore > 150){
+                self.score+=10;
+                self.scoreIncrementForExtraBall+=10; 
+                self.remainingRotatingScore-=10;
+            } else {
+            
+                self.score++;
+                self.scoreIncrementForExtraBall++; 
+                self.remainingRotatingScore--;
+                
+            }
         }   
     }
 
