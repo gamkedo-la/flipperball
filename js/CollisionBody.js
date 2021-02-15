@@ -114,14 +114,6 @@ function Edge (start, end, x, y) {
         const deltaX = (this.end.x - this.start.x);
         const deltaY = (this.end.y - this.start.y);
         this.length = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
-    
-        /*
-            (x < 0, y < 0) [left-up] -> (x > 0, y < 0) [right-up]
-            (x < 0, y > 0) [left-down] -> (x < 0, y < 0) [left-up]
-            (x > 0, y > 0) [right-down] -> (x < 0, y > 0) [left-down]
-            (x > 0, y < 0) [right-up] -> (x > 0, y > 0) [right-down]
-            left -> up, down -> left, right -> down, up -> right
-        */
 
         const normalizedX = deltaX / this.length;
         const normalizedY = deltaY / this.length;
@@ -137,15 +129,6 @@ function Edge (start, end, x, y) {
             } else { // left -> up
                 this.normal = {x: 0, y: -1};
             }
-        // } else if((deltaX < 0) && (deltaY < 0)) { //left-up -> right-up
-        //     this.normal = {x: -normalizedY, y: normalizedX};
-        // } else if((deltaX < 0) && (deltaY > 0)) { //left-down -> left-up
-        //     this.normal = {x: -normalizedY, y: normalizedX};
-        // } else if((deltaX > 0) && (deltaY > 0)) { // right-down -> left-down
-        //     this.normal = {x: -normalizedY, y: normalizedX};
-        // } else if((deltaX > 0) && (deltaY < 0)) { // right-up -> right-down
-        //     this.normal = {x: -normalizedY, y: normalizedX};
-        // }
         } else {
             this.normal = {x: -normalizedY, y: normalizedX};
         }

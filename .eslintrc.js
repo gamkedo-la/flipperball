@@ -27,6 +27,7 @@ module.exports = {
         "DEBUG": true,
         "effectsVolume": true,
         "ENTITY_TYPE": true,
+        "ENTITY_NAME": true,
         "FEATURE_FLAGS": true,
         "firstLoad": true,
         "flipperSound": true,
