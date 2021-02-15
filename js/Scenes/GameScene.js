@@ -346,7 +346,7 @@ function GameScene() {
             self.score++;
             self.scoreIncrementForExtraBall++; 
             self.remainingRotatingScore --;
-            console.log(self.remainingRotatingScore);
+            // console.log(self.remainingRotatingScore);
         }   
     }
 
