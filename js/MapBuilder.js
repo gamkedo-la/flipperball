@@ -62,13 +62,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
             }  else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
-                var habitrailCollisionData = [];
                 for (const collisionId of habitrail.relatedCollisionObjects) {
                     var foundCollisionData = collisionData.find((data) => data.id == collisionId);
                     foundCollisionData.type = 'NA';
-                    habitrailCollisionData.push(foundCollisionData);
                 }
-                habitrail.collisionData = habitrailCollisionData;
                 result.push(habitrail);
             }
              else {
@@ -93,7 +90,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of collisionData) {
-            if (obj.type === 'wall') {
+            if (obj.type === 'wall'|| obj.type === 'NA') {
                 result.push(new TableObject(obj));
             }
         }
@@ -101,7 +98,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         return result;
     }
 
-    this.staticObjects = buildStaticObjects(this.fixedLayerData.objects, this.collisionLayerData.objects);
+    this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);
 }
@@ -135,7 +132,6 @@ function HabitrailMapObject (objData, bodyData, collisionData = undefined) {
     this.image = images[objData.name];
     this.rotation = objData.rotation * (Math.PI/180) || 0;
     this.body = new CollisionBody(bodyData);
-    this.collisionData = collisionData;
     this.relatedCollisionObjects = String(objData.properties[0].value).split(',');
 
     this.draw = function() {

@@ -16,6 +16,7 @@ function GameScene() {
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
+    this.activeHabitrails = [];
    
     let shakeStartTime = -1;
     const shakeDuration = 500;
@@ -483,12 +484,17 @@ function GameScene() {
             default:
                 break;
         }
-        if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
+
+        if (self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
             extraBall();
             //Maybe add a SFX to tell the player they got an extra ball?
             this.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
         }
         
+        if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
+            this.disableHabitrailColliders();
+    }
+
     }
 
     this.playAnimation = function(imageName, animationData, x, y) {
@@ -514,12 +520,30 @@ function GameScene() {
     }
 
     this.handleHabitrailCollision = function(habitrailEntity) {
-        for (const collider of habitrailEntity.relatedCollisionObjects) {
-            for (var entity of this.collisionManager.entities) {
-                if (entity.id == collider) {
-                    entity.type = "wall";
+        for (var collider of habitrailEntity.relatedCollisionObjects) {
+            for (var entity of this.collisionManager.entities.values()) {
+                if ('id' in entity) {
+                    if (entity.id == collider) {
+                        entity.type = 'wall';
+                    }
                 }
             }
         }
+        this.activeHabitrails.push(habitrailEntity);
+    }
+
+    this.disableHabitrailColliders = function() {
+        for (const habitrail of this.activeHabitrails) {
+            for (var collider of habitrail.relatedCollisionObjects) {
+                for (var entity of this.collisionManager.entities.values()) {
+                    if ('id' in entity) {
+                if (entity.id == collider) {
+                            entity.type = 'NA';
+                }
+            }
+        }
+            }
+        }
+        this.activeHabitrails = [];
     }
 }
