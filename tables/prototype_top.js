@@ -1212,6 +1212,62 @@
                  "width":35.3333,
                  "x":777,
                  "y":296.333
+                }, 
+                {
+                 "height":0,
+                 "id":115,
+                 "name":"right_pipe",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0.5,
+                         "y":-77
+                        }, 
+                        {
+                         "x":-38,
+                         "y":-50.5
+                        }, 
+                        {
+                         "x":-38,
+                         "y":-0.5
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":893.5,
+                 "y":178.5
+                }, 
+                {
+                 "height":0,
+                 "id":116,
+                 "name":"left_pipe",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":38,
+                         "y":0
+                        }, 
+                        {
+                         "x":38,
+                         "y":-52
+                        }, 
+                        {
+                         "x":0,
+                         "y":-76.5
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":290.5,
+                 "y":178.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1220,7 +1276,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":112,
+ "nextobjectid":117,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

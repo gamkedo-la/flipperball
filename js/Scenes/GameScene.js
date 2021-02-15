@@ -27,8 +27,6 @@ function GameScene() {
 
     // eslint-disable-next-line consistent-this
     const self = this
-    const TEXT_LEFT_OFFSET = 0
-    const SCORE_NEEDED_FOR_EXTRA_BALL = 750;
 
     this.transitionIn = function() {
         this.table = new MapBuilder(this.properties.tableName);
@@ -552,7 +550,7 @@ function GameScene() {
         if (self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
             extraBall();
             //Maybe add a SFX to tell the player they got an extra ball?
-            this.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
+            this.scoreIncrementForExtraBall-= SCORE_NEEDED_FOR_EXTRA_BALL;
         }
         
         if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
