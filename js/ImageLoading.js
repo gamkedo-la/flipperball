@@ -117,10 +117,13 @@ function loadImages() {
         {imgName: "plunger_retracted", theFile: "tables/plunger_retracted.png"},
         {imgName: "plunger_anim", theFile: "animations/plunger_anim.png"},
         {imgName: "plunger_gate", theFile: "tables/plunger_gate.png"},
+        {imgName: "chute_wall", theFile: "tables/chute_wall.png"},
 
         {imgName: "vertical_wall", theFile: "tables/vertical_wall.png"},
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
+
+        {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
 
         {imgName: "cyclone", theFile: "tables/cyclone.png"},
         {imgName: "cyclone_anim", theFile: "animations/cyclone_anim.png"},

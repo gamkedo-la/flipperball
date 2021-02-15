@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":22,
+                 "gid":24,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -171,7 +171,7 @@
                  "type":"left_flipper",
                  "visible":true,
                  "width":170,
-                 "x":381,
+                 "x":391,
                  "y":532
                 }, 
                 {
@@ -183,7 +183,7 @@
                  "type":"right_flipper",
                  "visible":true,
                  "width":170,
-                 "x":636,
+                 "x":626,
                  "y":533
                 }, 
                 {
@@ -195,8 +195,8 @@
                  "type":"ball",
                  "visible":true,
                  "width":26,
-                 "x":931,
-                 "y":290
+                 "x":931.667,
+                 "y":290.333
                 }, 
                 {
                  "gid":17,
@@ -207,8 +207,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":363,
-                 "y":360.5
+                 "x":373,
+                 "y":365.5
                 }, 
                 {
                  "gid":18,
@@ -219,8 +219,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":758.5,
-                 "y":360
+                 "x":748.5,
+                 "y":377
                 }, 
                 {
                  "gid":15,
@@ -278,27 +278,27 @@
                 }, 
                 {
                  "gid":20,
-                 "height":240,
+                 "height":270,
                  "id":48,
                  "name":"drain_rail_right",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":775,
-                 "y":416
+                 "x":765,
+                 "y":460
                 }, 
                 {
                  "gid":19,
-                 "height":240,
+                 "height":270,
                  "id":49,
                  "name":"drain_rail_left",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":322,
-                 "y":417
+                 "x":331.636,
+                 "y":448.182
                 }, 
                 {
                  "gid":21,
@@ -315,8 +315,26 @@
                  "type":"trigger",
                  "visible":true,
                  "width":5,
-                 "x":827.18,
+                 "x":816.18,
                  "y":242.818
+                }, 
+                {
+                 "gid":23,
+                 "height":13.5454,
+                 "id":73,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":345.091,
+                 "y":243.727
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -334,6 +352,12 @@
                  "height":95.4154,
                  "id":3,
                  "name":"circle_bumper_green",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -346,6 +370,12 @@
                  "height":95.4154,
                  "id":4,
                  "name":"circle_bumper_yellow",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -358,6 +388,12 @@
                  "height":95.4154,
                  "id":5,
                  "name":"circle_bumper_red",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper",
                  "visible":true,
@@ -426,8 +462,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":362,
-                 "y":180.5
+                 "x":372,
+                 "y":185.5
                 }, 
                 {
                  "height":0,
@@ -436,30 +472,30 @@
                  "polygon":[
                         {
                          "x":17.75,
-                         "y":36.75
+                         "y":46.7727
                         }, 
                         {
                          "x":17.75,
-                         "y":46.75
+                         "y":59.5
                         }, 
                         {
                          "x":47.75,
-                         "y":46.75
+                         "y":59.5
                         }, 
                         {
                          "x":47.75,
-                         "y":36.75
+                         "y":46.7727
                         }, 
                         {
                          "x":37.75,
-                         "y":36.75
+                         "y":46.7727
                         }],
                  "rotation":0,
                  "type":"plunger",
                  "visible":true,
                  "width":0,
-                 "x":908,
-                 "y":261
+                 "x":912,
+                 "y":248.25
                 }, 
                 {
                  "height":0,
@@ -486,7 +522,7 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":545.485,
+                 "x":555.485,
                  "y":515.667
                 }, 
                 {
@@ -514,7 +550,7 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":772.545,
+                 "x":762.545,
                  "y":409.333
                 }, 
                 {
@@ -525,9 +561,9 @@
                  "rotation":0,
                  "type":"ball",
                  "visible":true,
-                 "width":25.4545,
-                 "x":931,
-                 "y":266
+                 "width":26,
+                 "x":931.333,
+                 "y":264.667
                 }, 
                 {
                  "height":0,
@@ -551,20 +587,20 @@
                          "y":-484
                         }, 
                         {
-                         "x":87.736,
-                         "y":-484
-                        }, 
-                        {
-                         "x":90.5,
-                         "y":141.5
-                        }, 
-                        {
-                         "x":16,
-                         "y":141.5
-                        }, 
-                        {
-                         "x":11.736,
+                         "x":70.236,
                          "y":-484.5
+                        }, 
+                        {
+                         "x":70.3182,
+                         "y":147.682
+                        }, 
+                        {
+                         "x":34.9091,
+                         "y":147.318
+                        }, 
+                        {
+                         "x":34.986,
+                         "y":-484
                         }, 
                         {
                          "x":-0.5,
@@ -611,19 +647,19 @@
                          "y":231.432
                         }, 
                         {
-                         "x":-73.3409,
-                         "y":238.886
+                         "x":-49.3409,
+                         "y":260.886
                         }, 
                         {
                          "x":-0.25,
-                         "y":165.159
+                         "y":169.159
                         }],
                  "rotation":0,
                  "type":"drain_divider",
                  "visible":true,
                  "width":0,
-                 "x":856.25,
-                 "y":175.75
+                 "x":842.25,
+                 "y":188.75
                 }, 
                 {
                  "height":0,
@@ -639,8 +675,8 @@
                          "y":164.364
                         }, 
                         {
-                         "x":72.5455,
-                         "y":237.818
+                         "x":60.5455,
+                         "y":277.818
                         }, 
                         {
                          "x":80.1818,
@@ -656,9 +692,9 @@
                         }],
                  "rotation":0,
                  "type":"drain_divider",
-                 "visible":true,
+                 "visible":false,
                  "width":0,
-                 "x":323,
+                 "x":333,
                  "y":177.182
                 }, 
                 {
@@ -794,20 +830,20 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":813.273,
-                 "y":314.455
+                 "x":803.273,
+                 "y":330.455
                 }, 
                 {
                  "ellipse":true,
-                 "height":25.9091,
+                 "height":26,
                  "id":59,
                  "name":"lane_trigger",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":5.09091,
-                 "x":827.18,
-                 "y":216.909
+                 "width":26,
+                 "x":805.453,
+                 "y":216.727
                 }, 
                 {
                  "ellipse":true,
@@ -818,7 +854,7 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":23,
-                 "x":636.674,
+                 "x":626.674,
                  "y":509.959
                 }, 
                 {
@@ -830,7 +866,7 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":55,
-                 "x":751.341,
+                 "x":741.341,
                  "y":410.292
                 }, 
                 {
@@ -842,7 +878,7 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":23,
-                 "x":526.667,
+                 "x":536.667,
                  "y":510
                 }, 
                 {
@@ -854,7 +890,7 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":55,
-                 "x":379.833,
+                 "x":389.833,
                  "y":409.5
                 }, 
                 {
@@ -882,7 +918,7 @@
                  "type":"flipper_inner",
                  "visible":true,
                  "width":0,
-                 "x":770,
+                 "x":760,
                  "y":398.667
                 }, 
                 {
@@ -910,7 +946,7 @@
                  "type":"flipper_inner",
                  "visible":true,
                  "width":0,
-                 "x":546,
+                 "x":556,
                  "y":515
                 }, 
                 {
@@ -976,6 +1012,42 @@
                  "width":0,
                  "x":335.5,
                  "y":53
+                }, 
+                {
+                 "height":0,
+                 "id":75,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":345.029,
+                 "y":236.512
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -984,7 +1056,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":70,
+ "nextobjectid":78,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1002,7 +1074,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":21,
+         "tilecount":22,
          "tileheight":598,
          "tiles":[
                 {
@@ -1028,7 +1100,7 @@
                 }, 
                 {
                  "id":3,
-                 "image":"..\/raw\/img\/backgrounds\/plunger_chute.png",
+                 "image":"..\/img\/tables\/plunger_chute.png",
                  "imageheight":598,
                  "imagewidth":105,
                  "type":"wall"
@@ -1134,14 +1206,14 @@
                 {
                  "id":18,
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
-                 "imageheight":240,
+                 "imageheight":270,
                  "imagewidth":82,
                  "type":"wall"
                 }, 
                 {
                  "id":19,
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
-                 "imageheight":240,
+                 "imageheight":270,
                  "imagewidth":82,
                  "type":"wall"
                 }, 
@@ -1151,12 +1223,18 @@
                  "imageheight":26,
                  "imagewidth":5,
                  "type":"trigger"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
+                 "imageheight":9,
+                 "imagewidth":20
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":22,
+         "firstgid":24,
          "grid":
             {
              "height":1,
@@ -1179,7 +1257,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":23,
+         "firstgid":25,
          "grid":
             {
              "height":1,

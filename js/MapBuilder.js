@@ -59,7 +59,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'plunger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.plunger = new Plunger(obj, bodyData);
-            }  else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
+            } else if (obj.type === 'rotating_gate'){ 
+                const bodyData = collisionData.find((data) => data.name === obj.name);
+                result.push(new GameObject(obj, bodyData));
+            } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {

@@ -7,6 +7,7 @@ class Ball extends GameObject {
         
         this.radius = (this.width + this.height) / 4; //Average of half width and half height
         this.triggersCollided = {};
+        this.hasMotionTrail = true;
     }
 
     update(deltaTime) {
@@ -90,7 +91,10 @@ class Ball extends GameObject {
                     this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Habitrail) {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
-                } else {
+                } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate){
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                }
+                else{
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
                     if (collision.edge) {
                         this.respondToPolygonCollision(collision);
@@ -137,6 +141,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Wall:
             case ENTITY_TYPE.Trigger:
             case ENTITY_TYPE.Habitrail:
+            case ENTITY_TYPE.RotatingGate:
                 return true;
             default:
                 return false;

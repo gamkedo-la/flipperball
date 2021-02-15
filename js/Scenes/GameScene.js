@@ -13,6 +13,7 @@ function GameScene() {
     this.hasPlungerReleased = false;
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
+    this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
@@ -37,6 +38,7 @@ function GameScene() {
             // Reset numberOfRemainingBalls when we transition into a new game
             this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
             this.score = 0;
+            this.currentTableIndex = 0;
 
             this.gameHasFinished = false;
         }
@@ -74,7 +76,7 @@ function GameScene() {
     }
 
     this.transitionOut = function() {
-
+        
     }
 
     this.run = function(deltaTime) {
@@ -141,6 +143,7 @@ function GameScene() {
                         // force restart when in pause menu
                         self.paused = false;
                         this.restartScene(true);
+                        tilt = false;
                     } else {
                         this.restartScene();
                     }
@@ -249,18 +252,34 @@ function GameScene() {
         }
     }
 
-    const determineBallAndTableState = function() {
-        for (const ball of self.table.balls) {
+    const determineBallAndTableState = function() {        
+        for (const ball of self.table.balls) {            
             if (ball.y < 0) {
+                if (DEBUG) {
+                    console.log("if(ball.y < 0)");
+                    outputTableBallState(ball);
+                }
                 if (self.currentTableIndex < self.tablesForScene.length - 1) {
                     self.currentTableIndex++;
                     SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
                     //TODO: FM: Determine when extra ball should actually be given to player
                     //Probably at some number of points and under some special circumstances
                     //extraBall();
+                    if (DEBUG) {
+                        console.log("if(self.currentTableIndex < self.tablesForScene.length - 1)");
+                        outputTableBallState(ball);
+                    }
                 }
             } else if (ball.y > canvas.height) {
+                if (DEBUG) {
+                    console.log("else if (ball.y > canvas.height)");
+                    outputTableBallState(ball);
+                }
                 if (self.currentTableIndex == 0) {
+                    if (DEBUG) {
+                        console.log("if (self.currentTableIndex == 0)");
+                        outputTableBallState(ball);
+                    }
                     loseBall(ball);
                     playRemainingBall();
                 } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
@@ -270,7 +289,13 @@ function GameScene() {
             }
         }
     }
-        
+    const outputTableBallState = function (ball) {
+        console.log("Ball Y:" + ball.y);
+        console.log("self.currenTableIndex:" + self.currentTableIndex);
+        console.log("self.tablesForScene.length:" + self.tablesForScene.length);
+        console.log("self.table.balls.length:" + self.table.balls.length);
+        console.log("-----");
+    }        
     const loseBall = function(ball) {
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
@@ -316,6 +341,23 @@ function GameScene() {
         // }
     }
 
+    var checkForRotatingGateScore = function(){
+        if(self.remainingRotatingScore > 0){
+            self.score++;
+            self.scoreIncrementForExtraBall++; 
+            self.remainingRotatingScore --;
+            console.log(self.remainingRotatingScore);
+        }   
+    }
+
+    var checkForExtraBall = function(){
+        if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
+            extraBall();
+            //Maybe add a SFX to tell the player they got an extra ball?
+            self.scoreIncrementForExtraBall-=SCORE_NEEDED_FOR_EXTRA_BALL;
+        }
+    }
+
     this.restartScene = function(force=false) {
         if (isGameOver() || force) {
             self.gameHasFinished = true;
@@ -351,7 +393,7 @@ function GameScene() {
             dynamicObj.update(deltaTime / 2);
         }
 
-        self.collisionManager.checkCollisions(deltaTime);
+        self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
             for (const flipper of self.table.flippers) {
@@ -374,7 +416,7 @@ function GameScene() {
             dynamicObj.update(deltaTime / 2);
         }
 
-        self.collisionManager.checkCollisions(deltaTime);
+        self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = self.table.animations.length - 1; i >= 0; i--) {
             //Need to iterate backwards to avoid skipping anything or going
@@ -391,9 +433,14 @@ function GameScene() {
             }
         }
 
+        checkForRotatingGateScore();
+
+        checkForExtraBall();
+
         //TODO: We'll need to change to figure out what to do about multi-ball
         if (DEBUG) {
-            originalBallAndTableTransition();
+            //originalBallAndTableTransition();
+            determineBallAndTableState();
         } else {
             determineBallAndTableState();
         }
@@ -455,10 +502,13 @@ function GameScene() {
         
     }
 
-    this.notifyBallCollision = function(otherEntity) {        
+    this.notifyBallCollision = function(otherEntity) {    
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
+                if (DEBUG) {
+                    console.log("otherEntity.score:" + otherEntity.score);
+                }
                 self.score += otherEntity.score;  
                 self.scoreIncrementForExtraBall += otherEntity.score; 
                 if (otherEntity.hasAnimation) {
@@ -469,6 +519,9 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.CircleBumperSmall:
                 self.flash = true;
+                if (DEBUG) {
+                    console.log("otherEntity.score:" + otherEntity.score);
+                }
                 self.score += otherEntity.score;   
                 self.scoreIncrementForExtraBall += otherEntity.score; 
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)
@@ -478,6 +531,9 @@ function GameScene() {
                 break;  
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity);
+                break;
+            case ENTITY_TYPE.RotatingGate:
+                self.handleRotatingGateCollision(otherEntity);
                 break;
             case ENTITY_TYPE.Habitrail:
                 self.handleHabitrailCollision(otherEntity);
@@ -493,7 +549,7 @@ function GameScene() {
         
         if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
             this.disableHabitrailColliders();
-    }
+        }
 
     }
 
@@ -519,6 +575,15 @@ function GameScene() {
         self.scoreIncrementForExtraBall += triggerEntity.score; 
     }
 
+    this.handleRotatingGateCollision = function(rotatingEntity) {
+        //TODO: Add rotating gate score increasing logic
+        const rate = 0.01;
+        let ballSpeed = Math.sqrt((this.properties.ball.velocity.x) * (this.properties.ball.velocity.x)
+         + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
+
+        self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
+        
+    }
     this.handleHabitrailCollision = function(habitrailEntity) {
         for (var collider of habitrailEntity.relatedCollisionObjects) {
             for (var entity of this.collisionManager.entities.values()) {
@@ -537,11 +602,11 @@ function GameScene() {
             for (var collider of habitrail.relatedCollisionObjects) {
                 for (var entity of this.collisionManager.entities.values()) {
                     if ('id' in entity) {
-                if (entity.id == collider) {
+                        if (entity.id == collider) {
                             entity.type = 'NA';
+                        }
+                    }
                 }
-            }
-        }
             }
         }
         this.activeHabitrails = [];
