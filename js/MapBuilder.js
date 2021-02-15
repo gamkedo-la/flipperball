@@ -53,26 +53,25 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     if (bodyData.length === 4) {break;}
                 }
                 self.flippers.push(new Flipper(obj, bodyData));
-            } else if (obj.type === ENTITY_TYPE.Trigger) {
+            } else if (obj.type === 'trigger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new TriggerMapObject(obj, bodyData));
-            } else if (obj.type === ENTITY_TYPE.Plunger) {
+            } else if (obj.type === 'plunger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.plunger = new Plunger(obj, bodyData);
-            } else if (obj.type === ENTITY_TYPE.RotatingGate){ 
+            } else if (obj.type === 'rotating_gate'){ 
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new GameObject(obj, bodyData));
-            } else if (obj.type === ENTITY_TYPE.Habitrail && obj.name === "habitrail1") {
+            } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {
-                    const foundCollisionData = collisionData.find((data) => data.id === parseInt(collisionId));
+                    var foundCollisionData = collisionData.find((data) => data.id == collisionId);
                     foundCollisionData.type = 'NA';
                 }
                 result.push(habitrail);
-            } else if (obj.type === ENTITY_TYPE.FlipperBumper) {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
-            } else {
+            }
+             else {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
@@ -80,6 +79,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                         animationSpritesheet: images[ANIMATIONS.CIRCLE_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newGameObject);
+
                 } else {
                     result.push(new GameObject(obj, bodyData));
                 }
