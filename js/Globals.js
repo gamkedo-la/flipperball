@@ -253,5 +253,16 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: false,
 		loops: false
+	},
+	LETTER_LGHT_GLOW: {
+		imageNames: {
+			"letter_light_glow": "letter_light_anim"
+		},
+		frames: [0, 1, 2, 3, 4],
+		frameWidth: 24,
+		frameHeight: 24,
+		frameTimes: [64, 64, 64, 64, 64],
+		reveres: false,
+		loops: true
 	}
 };
