@@ -341,7 +341,9 @@ function GameScene() {
 
     var checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
-            console.log(self.remainingRotatingScore);
+            if(DEBUG){
+                console.log(self.remainingRotatingScore);   
+            }
             if(self.remainingRotatingScore > 150){
                 self.score+=10;
                 self.scoreIncrementForExtraBall+=10; 
@@ -546,12 +548,6 @@ function GameScene() {
             default:
                 break;
         }
-
-        if (self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
-            extraBall();
-            //Maybe add a SFX to tell the player they got an extra ball?
-            this.scoreIncrementForExtraBall-= SCORE_NEEDED_FOR_EXTRA_BALL;
-        }
         
         if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
             this.disableHabitrailColliders();
@@ -588,6 +584,11 @@ function GameScene() {
          + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
+        if (rotatingEntity.hasAnimation) {
+            rotatingEntity.animate(0);
+        } else {
+            self.playAnimation(rotatingEntity.body.name, ANIMATIONS.ROTATING_GATE, rotatingEntity.x, rotatingEntity.y)
+        }
         
     }
     this.handleHabitrailCollision = function(habitrailEntity) {

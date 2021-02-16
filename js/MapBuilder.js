@@ -60,8 +60,14 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.plunger = new Plunger(obj, bodyData);
             } else if (obj.type === 'rotating_gate'){ 
+                /*const bodyData = collisionData.find((data) => data.name === obj.name);
+                result.push(new GameObject(obj, bodyData));*/
                 const bodyData = collisionData.find((data) => data.name === obj.name);
-                result.push(new GameObject(obj, bodyData));
+                const newGameObject = new GameObject(obj, bodyData, {
+                    ...ANIMATIONS.ROTATING_GATE,
+                    animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);

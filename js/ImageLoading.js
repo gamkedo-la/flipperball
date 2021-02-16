@@ -135,6 +135,7 @@ function loadImages() {
         { imgName: "lane_light_anim", theFile: "animations/letter_light_anim.png" },   
 
         {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
+        {imgName: "rotating_gate_animation", theFile: "animations/rotating_gate_animation.png"},
 
         {imgName: "cyclone", theFile: "tables/cyclone.png"},
         {imgName: "cyclone_anim", theFile: "animations/cyclone_anim.png"},
