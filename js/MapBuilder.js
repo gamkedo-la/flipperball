@@ -106,7 +106,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);
 }
 
-function StaticMapObject (objData) {
+function StaticMapObject(objData) {
+    this.gid = objData.gid;
+    this.id = objData.id;
     this.x = objData.x;
     this.y = objData.y - objData.height;
     this.width = objData.width;
@@ -115,7 +117,7 @@ function StaticMapObject (objData) {
     this.reflectance = objData.reflectance || 0.75;
     this.image = images[objData.name];
     this.rotation = objData.rotation * (Math.PI/180) || 0;
-
+    console.log("Object: " + objData.name + " id: " + this.id);
     this.draw = function() {
         if (this.rotation > 0) {
             drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
@@ -125,7 +127,9 @@ function StaticMapObject (objData) {
     }
 }
 
-function HabitrailMapObject (objData, bodyData, collisionData = undefined) {
+function HabitrailMapObject(objData, bodyData, collisionData = undefined) {
+    this.gid = objData.gid;
+    this.id = objData.id;
     this.x = objData.x;
     this.y = objData.y - objData.height;
     this.width = objData.width;
@@ -149,7 +153,8 @@ function HabitrailMapObject (objData, bodyData, collisionData = undefined) {
 
 }
 
-function TableObject (objData) {
+function TableObject(objData) {
+    this.gid = objData.gid;
     this.id = objData.id;
     this.x = objData.x;
     this.y = objData.y - objData.height;
@@ -164,6 +169,8 @@ function TableObject (objData) {
 }
 
 function TriggerMapObject(objData, bodyData) {
+    this.gid = objData.gid;
+    this.id = objData.id;
     this.x = objData.x;
     this.y = objData.y - objData.height;
     this.width = objData.width;
@@ -175,8 +182,24 @@ function TriggerMapObject(objData, bodyData) {
     this.body = new CollisionBody(bodyData);
     this.reflectance = objData.reflectance || 1;
     this.hasCollided = false;
-    this.score = objData.properties[0].value || 0;
-
+    this.score = 0;
+    
+    for (i = 0; i < objData.properties.length; i++) {
+        switch (objData.properties[i].name) {
+            case "score":
+                this.score = objData.properties[i].value;
+                console.log("Score set to " + this.score + " for " + objData.name);
+                break;
+            case "targ_light":
+                this.targ_light = objData.properties[i].value;
+                console.log("Target Light set to " + this.targ_light + " for " + objData.name);
+                break;
+            default:
+                break;
+        }
+        console.log("Name: " + objData.name + " Properties: " + objData.properties[i].name);
+    }
+    
     this.update = function(deltaTime) {}
     this.draw = function() {
         canvasContext.drawImage(this.image, this.x, this.y);
