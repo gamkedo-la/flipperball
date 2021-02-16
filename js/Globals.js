@@ -266,5 +266,16 @@ const ANIMATIONS = {
 		frameTimes: [64, 64, 64, 64, 64],
 		reveres: false,
 		loops: true
+	},
+	ROTATING_GATE: {
+		imageNames: {
+			"rotating_gate": "rotating_gate_animation"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6],
+		frameWidth: 20,
+		frameHeight: 29,
+		frameTimes: [64, 64, 64, 64, 64, 64, 64],
+		reverses: false,
+		loops: true
 	}
 };

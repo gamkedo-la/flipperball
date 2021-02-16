@@ -582,6 +582,11 @@ function GameScene() {
          + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
+        if (rotatingEntity.hasAnimation) {
+            rotatingEntity.animate(0);
+        } else {
+            self.playAnimation(rotatingEntity.body.name, ANIMATIONS.ROTATING_GATE, rotatingEntity.x, rotatingEntity.y)
+        }
         
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
