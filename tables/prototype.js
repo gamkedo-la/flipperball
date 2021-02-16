@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":27,
+                 "gid":28,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -144,6 +144,30 @@
                  "width":24,
                  "x":540.333333333333,
                  "y":123
+                }, 
+                {
+                 "gid":27,
+                 "height":24,
+                 "id":98,
+                 "name":"demo_letter_lights",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":637.5625,
+                 "y":123.3125
+                }, 
+                {
+                 "gid":27,
+                 "height":24,
+                 "id":99,
+                 "name":"demo_letter_lights",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":511.090909090909,
+                 "y":122.181818181818
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -350,7 +374,7 @@
                 }, 
                 {
                  "gid":21,
-                 "height":13.9512614938624,
+                 "height":5.51376149386239,
                  "id":92,
                  "name":"light_trigger_A",
                  "properties":[
@@ -369,11 +393,11 @@
                  "visible":true,
                  "width":2.68293490266584,
                  "x":550.958968540179,
-                 "y":138.477090909091
+                 "y":130
                 }, 
                 {
                  "gid":21,
-                 "height":13.9512614938624,
+                 "height":5.51,
                  "id":94,
                  "name":"light_trigger_B",
                  "properties":[
@@ -392,11 +416,11 @@
                  "visible":true,
                  "width":2.68293490266584,
                  "x":585.322604903816,
-                 "y":138.658909090909
+                 "y":130
                 }, 
                 {
                  "gid":21,
-                 "height":13.9512614938624,
+                 "height":5.51,
                  "id":97,
                  "name":"light_trigger_C",
                  "properties":[
@@ -415,7 +439,7 @@
                  "visible":true,
                  "width":2.68293490266584,
                  "x":618.322604903816,
-                 "y":138.658909090909
+                 "y":130
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1116,7 +1140,7 @@
                  "visible":true,
                  "width":13.9512614938624,
                  "x":545.203,
-                 "y":124.477
+                 "y":120
                 }, 
                 {
                  "ellipse":true,
@@ -1128,7 +1152,7 @@
                  "visible":true,
                  "width":13.9512614938624,
                  "x":579.566636363636,
-                 "y":124.658818181818
+                 "y":120
                 }, 
                 {
                  "ellipse":true,
@@ -1140,7 +1164,7 @@
                  "visible":true,
                  "width":13.9512614938624,
                  "x":612.566636363636,
-                 "y":124.658818181818
+                 "y":120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1149,7 +1173,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":98,
+ "nextobjectid":100,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1167,7 +1191,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":25,
+         "tilecount":26,
          "tileheight":598,
          "tiles":[
                 {
@@ -1342,12 +1366,18 @@
                  "image":"..\/img\/tables\/letter_light_unlit.png",
                  "imageheight":24,
                  "imagewidth":24
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/letter_light_lit.png",
+                 "imageheight":24,
+                 "imagewidth":24
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":27,
+         "firstgid":28,
          "grid":
             {
              "height":1,
@@ -1370,7 +1400,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":28,
+         "firstgid":29,
          "grid":
             {
              "height":1,
