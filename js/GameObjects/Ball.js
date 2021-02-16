@@ -88,7 +88,7 @@ class Ball extends GameObject {
                         }                        
                     }
                     if (collision.otherEntity.subType === TRIGGER_TYPE.Light) {
-                        console.log("Light Trigger Hit");
+                        if (DEBUG) { console.log("Light Trigger Hit"); }
                     }
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
