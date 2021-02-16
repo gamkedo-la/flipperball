@@ -546,12 +546,6 @@ function GameScene() {
             default:
                 break;
         }
-
-        if (self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
-            extraBall();
-            //Maybe add a SFX to tell the player they got an extra ball?
-            this.scoreIncrementForExtraBall-= SCORE_NEEDED_FOR_EXTRA_BALL;
-        }
         
         if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
             this.disableHabitrailColliders();
