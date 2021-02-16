@@ -74,6 +74,8 @@ function loadImages() {
         {imgName: "angled_wall_2", theFile: "tables/angled_wall_2.png"},
         {imgName: "angled_wall_3", theFile: "tables/angled_wall_3.png"},
         {imgName: "angled_wall_4", theFile: "tables/angled_wall_4.png"},
+        {imgName: "angled_wall_5", theFile: "tables/angled_wall_5.png"},
+        {imgName: "angled_wall_6", theFile: "tables/angled_wall_6.png"},
 
         {imgName: "ball", theFile: "tables/ball.png"},
 

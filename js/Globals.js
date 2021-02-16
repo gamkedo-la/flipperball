@@ -28,6 +28,8 @@ const GRAVITY = 300;
 const MAX_BALL_SPEED = 1000;
 const ROTATION_RATE = 5;
 const MAX_ROTATION_ANGLE = Math.PI / 4;
+const TEXT_LEFT_OFFSET = 0
+const SCORE_NEEDED_FOR_EXTRA_BALL = 10000;
 
 const canvasClearColor = "black";
 

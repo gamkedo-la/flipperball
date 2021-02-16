@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="78">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="80">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="22" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="24" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
@@ -71,14 +71,20 @@
   <tile id="22">
    <image width="20" height="9" source="../img/backgrounds/rotating_gate_provisional.png"/>
   </tile>
+  <tile id="23" type="wall">
+   <image width="140" height="142" source="../../img/tables/angled_wall_5.png"/>
+  </tile>
+  <tile id="24" type="wall">
+   <image width="140" height="142" source="../../img/tables/angled_wall_6.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="24" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="1" columns="0">
+ <tileset firstgid="26" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="1" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="600" source="../img/backgrounds/cloud_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="25" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="27" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <image width="36" height="75" source="../img/backgrounds/habitrail1.png"/>
@@ -91,15 +97,13 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="56" name="cloud_bg" gid="24" x="280" y="600" width="720" height="600" visible="0"/>
+  <object id="56" name="cloud_bg" gid="26" x="280" y="600" width="720" height="600" visible="0"/>
   <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
   <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
   <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
-  <object id="36" name="angled_wall_4" gid="11" x="843" y="138" width="52" height="86"/>
-  <object id="37" name="angled_wall_1" gid="8" x="290" y="138" width="52" height="86"/>
-  <object id="39" name="angled_wall_3" gid="10" x="842.667" y="52.3333" width="52" height="52"/>
-  <object id="40" name="angled_wall_2" gid="9" x="290" y="53" width="52" height="52"/>
+  <object id="78" name="angled_wall_5" gid="24" x="290.333" y="132" width="140" height="142"/>
+  <object id="79" name="angled_wall_6" gid="25" x="752.667" y="132" width="140" height="142"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
@@ -175,16 +179,16 @@
    <ellipse/>
   </object>
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
-   <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 0.5,-404.5 -49.5,-352.5 0,-270.5"/>
+   <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 -139.5,-414 0,-299"/>
   </object>
   <object id="51" name="drain_rail_right" type="drain_divider" x="842.25" y="188.75">
    <polygon points="0,0 -10.5,1.5 -10.25,161.159 -80.9773,231.432 -49.3409,260.886 -0.25,169.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="333" y="177.182" visible="0">
+  <object id="52" name="drain_rail_left" type="drain_divider" x="333" y="177.182">
    <polygon points="0,0 0,164.364 60.5455,277.818 80.1818,230.909 10.1818,161.091 9.81818,1.63636"/>
   </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,-80 -1,599.5 210.5,598.5 13.5,401.5 13,136.5 64.5,52 13.6667,0.5 13.0214,-80.4187"/>
+   <polygon points="0,-80 -1,599.5 210.5,598.5 13.5,401.5 14,105.5 153.5,-11 13.0214,-80.4187"/>
   </object>
   <object id="54" name="drain" type="drain" x="443.5" y="600">
    <polygon points="0,0 -0.5,41 312,39 312.5,-0.5"/>
@@ -214,10 +218,10 @@
    <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
   </object>
   <object id="68" name="right" type="wall" x="893.5" y="7">
-   <polygon points="1.5,-3 -43.5,45.5 10,136 9,-84.5 0.5,-84.5"/>
+   <polygon points="-132,-17 0.5,93 0.5,-84.5"/>
   </object>
   <object id="69" name="left" type="wall" x="335.5" y="53">
-   <polygon points="0,0 -47.5,-49.5 -48,-130.5 -57,-130.5 -55.5,89"/>
+   <polygon points="86,-63.5 -48,-129.5 -48.5,48"/>
   </object>
   <object id="75" name="rotating_gate" type="rotating_gate" x="345.029" y="236.512">
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>

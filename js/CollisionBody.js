@@ -29,7 +29,7 @@ function CollisionBody (data) {
 
         const width = maxX - minX;
         const height = maxY - minY;
-        self.radius = Math.sqrt((width) * (width) + (height) * (height)) / 2;
+        self.radius = 1.1 * Math.sqrt((width) * (width) + (height) * (height)) / 2; // 1.1 is a small fudge factor
         self.center = {x: data.x + minX + width / 2, y: data.y + minY + height / 2};
     }
 

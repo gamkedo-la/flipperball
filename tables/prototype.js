@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":24,
+                 "gid":26,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -86,52 +86,28 @@
                  "y":598
                 }, 
                 {
-                 "gid":11,
-                 "height":86,
-                 "id":36,
-                 "name":"angled_wall_4",
+                 "gid":24,
+                 "height":142,
+                 "id":78,
+                 "name":"angled_wall_5",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":52,
-                 "x":843,
-                 "y":138
+                 "width":140,
+                 "x":290.333333333333,
+                 "y":132
                 }, 
                 {
-                 "gid":8,
-                 "height":86,
-                 "id":37,
-                 "name":"angled_wall_1",
+                 "gid":25,
+                 "height":142,
+                 "id":79,
+                 "name":"angled_wall_6",
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":52,
-                 "x":290,
-                 "y":138
-                }, 
-                {
-                 "gid":10,
-                 "height":52,
-                 "id":39,
-                 "name":"angled_wall_3",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":842.667,
-                 "y":52.3333
-                }, 
-                {
-                 "gid":9,
-                 "height":52,
-                 "id":40,
-                 "name":"angled_wall_2",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":290,
-                 "y":53
+                 "width":140,
+                 "x":752.666666666667,
+                 "y":132
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -607,16 +583,12 @@
                          "y":-484.223
                         }, 
                         {
-                         "x":0.5,
-                         "y":-404.5
-                        }, 
-                        {
-                         "x":-49.5,
-                         "y":-352.5
+                         "x":-139.5,
+                         "y":-414
                         }, 
                         {
                          "x":0,
-                         "y":-270.5
+                         "y":-299
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -692,7 +664,7 @@
                         }],
                  "rotation":0,
                  "type":"drain_divider",
-                 "visible":false,
+                 "visible":true,
                  "width":0,
                  "x":333,
                  "y":177.182
@@ -719,16 +691,12 @@
                          "y":401.5
                         }, 
                         {
-                         "x":13,
-                         "y":136.5
+                         "x":14,
+                         "y":105.5
                         }, 
                         {
-                         "x":64.5,
-                         "y":52
-                        }, 
-                        {
-                         "x":13.6667,
-                         "y":0.5
+                         "x":153.5,
+                         "y":-11
                         }, 
                         {
                          "x":13.0214,
@@ -955,20 +923,12 @@
                  "name":"right",
                  "polygon":[
                         {
-                         "x":1.5,
-                         "y":-3
+                         "x":-132,
+                         "y":-17
                         }, 
                         {
-                         "x":-43.5,
-                         "y":45.5
-                        }, 
-                        {
-                         "x":10,
-                         "y":136
-                        }, 
-                        {
-                         "x":9,
-                         "y":-84.5
+                         "x":0.5,
+                         "y":93
                         }, 
                         {
                          "x":0.5,
@@ -987,24 +947,16 @@
                  "name":"left",
                  "polygon":[
                         {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-47.5,
-                         "y":-49.5
+                         "x":86,
+                         "y":-63.5
                         }, 
                         {
                          "x":-48,
-                         "y":-130.5
+                         "y":-129.5
                         }, 
                         {
-                         "x":-57,
-                         "y":-130.5
-                        }, 
-                        {
-                         "x":-55.5,
-                         "y":89
+                         "x":-48.5,
+                         "y":48
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -1056,7 +1008,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":78,
+ "nextobjectid":80,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1074,7 +1026,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":24,
          "tileheight":598,
          "tiles":[
                 {
@@ -1229,12 +1181,26 @@
                  "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
                  "imageheight":9,
                  "imagewidth":20
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/angled_wall_5.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "type":"wall"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/angled_wall_6.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "type":"wall"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":24,
+         "firstgid":26,
          "grid":
             {
              "height":1,
@@ -1257,7 +1223,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":25,
+         "firstgid":27,
          "grid":
             {
              "height":1,
