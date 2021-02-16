@@ -105,11 +105,13 @@ const ENTITY_TYPE = {
 	Cyclone: 'cyclone',
 	Gate: 'gate',
 	RotatingGate: 'rotating_gate',
-	Habitrail: 'habitrail'
+	Habitrail: 'habitrail',
+	LetterLight: 'letter_light'
 };
 
 const TRIGGER_TYPE = {
-	Lane: 'lane_trigger'
+	Lane: 'lane_trigger',
+	Light: 'light_trigger'
 }
 
 const ENTITY_NAME = {
@@ -124,6 +126,7 @@ const ENTITY_NAME = {
 	FlipperBumperRight: 'flipper_bumper_right',
 	FlipperBumperLeft: 'flipper_bumper_left',
 	Cyclone: 'cyclone',
+	LetterLight: 'letter_light',
 	RotatingGate: 'rotating_gate'
 }
 

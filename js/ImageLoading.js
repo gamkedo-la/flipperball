@@ -125,6 +125,12 @@ function loadImages() {
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
+        { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
+        { imgName: "light_trigger", theFile: "tables/lane_trigger.png" },        
+        { imgName: "lane_light_unlit", theFile: "tables/letter_light_unlit.png" },
+        { imgName: "lane_light_lit", theFile: "tables/letter_light_lit.png" },
+        { imgName: "lane_light_anim", theFile: "animations/letter_light_anim.png" },   
+
         {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
 
         {imgName: "cyclone", theFile: "tables/cyclone.png"},
@@ -143,7 +149,7 @@ function loadImages() {
         {imgName: "plane_pipe_left", theFile: "tables/plane_pipe_left.png"},        
 
         {imgName: "ball_catch", theFile: "tables/ball_catch.png"},
-        {imgName: "ball_catch_arrow", theFile: "tables/ball_catch_arrow.png"},
+        {imgName: "ball_catch_arrow", theFile: "tables/ball_catch_arrow.png"},     
 
         {imgName: "habitrail1", theFile: "tables/habitrail1.png"},
         {imgName: "habitrail2", theFile: "tables/habitrail2.png"},

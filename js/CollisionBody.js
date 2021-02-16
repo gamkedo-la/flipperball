@@ -38,7 +38,8 @@ function CollisionBody (data) {
     } else if (data.polygon) {
         buildPolygonBody(this, data);
     } else {
-        console.log(`Some other type?`)
+        console.log(`Some other type?`);
+        console.log("Data: " + data.name);
     }
 
     this.update = function (deltaX, deltaY) {

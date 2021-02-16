@@ -79,12 +79,17 @@ class Ball extends GameObject {
             //     collision.otherEntity.didCollideWith(this);
             // }
             if (this.respondsTo(collision.otherEntity.type)) {
-                if (collision.otherEntity.type === ENTITY_TYPE.Trigger && collision.otherEntity.subType === TRIGGER_TYPE.Lane) {
-                    if (!collision.otherEntity.hasCollided) {
-                        collision.otherEntity.hasCollided = true;
-                        this.triggersCollided[Date.now()] = collision.otherEntity;
-                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
-                    } 
+                if (collision.otherEntity.type === ENTITY_TYPE.Trigger) {
+                    if (collision.otherEntity.subType === TRIGGER_TYPE.Lane) {
+                        if (!collision.otherEntity.hasCollided) {
+                            collision.otherEntity.hasCollided = true;
+                            this.triggersCollided[Date.now()] = collision.otherEntity;
+                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                        }                        
+                    }
+                    if (collision.otherEntity.subType === TRIGGER_TYPE.Light) {
+                        console.log("Light Trigger Hit");
+                    }
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
                     this.vxAdjustment = -this.velocity.x;

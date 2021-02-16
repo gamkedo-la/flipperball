@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":26,
+                 "gid":27,
                  "height":600,
                  "id":56,
                  "name":"cloud_bg",
@@ -94,7 +94,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":290.333333333333,
+                 "x":290.333,
                  "y":132
                 }, 
                 {
@@ -106,8 +106,44 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":752.666666666667,
+                 "x":752.667,
                  "y":132
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":89,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":607.333333333333,
+                 "y":123
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":90,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":574,
+                 "y":123.333333333333
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":91,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":540.333333333333,
+                 "y":123
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -213,8 +249,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":541,
-                 "y":291.5
+                 "x":691,
+                 "y":164.166666666667
                 }, 
                 {
                  "gid":12,
@@ -231,8 +267,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":635.5,
-                 "y":158
+                 "x":620.833333333333,
+                 "y":288.666666666667
                 }, 
                 {
                  "gid":13,
@@ -249,8 +285,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":446.5,
-                 "y":157
+                 "x":414.5,
+                 "y":108.333333333333
                 }, 
                 {
                  "gid":20,
@@ -311,6 +347,75 @@
                  "width":26.5455,
                  "x":345.091,
                  "y":243.727
+                }, 
+                {
+                 "gid":21,
+                 "height":13.9512614938624,
+                 "id":92,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":91
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293490266584,
+                 "x":550.958968540179,
+                 "y":138.477090909091
+                }, 
+                {
+                 "gid":21,
+                 "height":13.9512614938624,
+                 "id":94,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":90
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293490266584,
+                 "x":585.322604903816,
+                 "y":138.658909090909
+                }, 
+                {
+                 "gid":21,
+                 "height":13.9512614938624,
+                 "id":97,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":89
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293490266584,
+                 "x":618.322604903816,
+                 "y":138.658909090909
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -338,8 +443,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":445.784,
-                 "y":61.98
+                 "x":413.784,
+                 "y":13.3133333333333
                 }, 
                 {
                  "ellipse":true,
@@ -356,8 +461,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":634.561,
-                 "y":61.98
+                 "x":619.894333333333,
+                 "y":192.646666666667
                 }, 
                 {
                  "ellipse":true,
@@ -374,8 +479,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":539.909,
-                 "y":195.946
+                 "x":689.909,
+                 "y":68.6126666666667
                 }, 
                 {
                  "height":0,
@@ -1000,6 +1105,42 @@
                  "width":0,
                  "x":345.029,
                  "y":236.512
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.9512614938624,
+                 "id":93,
+                 "name":"light_trigger",
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":13.9512614938624,
+                 "x":545.203,
+                 "y":124.477
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.9512614938624,
+                 "id":95,
+                 "name":"light_trigger",
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":13.9512614938624,
+                 "x":579.566636363636,
+                 "y":124.658818181818
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.9512614938624,
+                 "id":96,
+                 "name":"light_trigger",
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":13.9512614938624,
+                 "x":612.566636363636,
+                 "y":124.658818181818
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1007,8 +1148,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":6,
- "nextobjectid":80,
+ "nextlayerid":7,
+ "nextobjectid":98,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1026,7 +1167,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":24,
+         "tilecount":25,
          "tileheight":598,
          "tiles":[
                 {
@@ -1195,12 +1336,18 @@
                  "imageheight":142,
                  "imagewidth":140,
                  "type":"wall"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/letter_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":26,
+         "firstgid":27,
          "grid":
             {
              "height":1,
@@ -1223,7 +1370,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":27,
+         "firstgid":28,
          "grid":
             {
              "height":1,
