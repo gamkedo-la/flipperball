@@ -341,7 +341,9 @@ function GameScene() {
 
     var checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
-            console.log(self.remainingRotatingScore);
+            if(DEBUG){
+                console.log(self.remainingRotatingScore);   
+            }
             if(self.remainingRotatingScore > 150){
                 self.score+=10;
                 self.scoreIncrementForExtraBall+=10; 
