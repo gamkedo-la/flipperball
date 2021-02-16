@@ -149,19 +149,19 @@
     <property name="score" type="int" value="5"/>
    </properties>
   </object>
-  <object id="92" name="light_trigger" gid="21" x="550.959" y="138.477" width="2.68293" height="13.9513">
+  <object id="92" name="light_trigger_A" gid="21" x="550.959" y="138.477" width="2.68293" height="13.9513">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="91"/>
    </properties>
   </object>
-  <object id="94" name="light_trigger" gid="21" x="585.323" y="138.659" width="2.68293" height="13.9513">
+  <object id="94" name="light_trigger_B" gid="21" x="585.323" y="138.659" width="2.68293" height="13.9513">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="90"/>
    </properties>
   </object>
-  <object id="97" name="light_trigger" gid="21" x="618.323" y="138.659" width="2.68293" height="13.9513">
+  <object id="97" name="light_trigger_C" gid="21" x="618.323" y="138.659" width="2.68293" height="13.9513">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="89"/>
@@ -250,13 +250,13 @@
   <object id="75" name="rotating_gate" type="rotating_gate" x="345.029" y="236.512">
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
   </object>
-  <object id="93" name="light_trigger" type="trigger" x="545.203" y="124.477" width="13.9513" height="13.9513">
+  <object id="93" name="light_trigger_A" type="trigger" x="545.203" y="124.477" width="13.9513" height="13.9513">
    <ellipse/>
   </object>
-  <object id="95" name="light_trigger" type="trigger" x="579.567" y="124.659" width="13.9513" height="13.9513">
+  <object id="95" name="light_trigger_B" type="trigger" x="579.567" y="124.659" width="13.9513" height="13.9513">
    <ellipse/>
   </object>
-  <object id="96" name="light_trigger" type="trigger" x="612.567" y="124.659" width="13.9513" height="13.9513">
+  <object id="96" name="light_trigger_C" type="trigger" x="612.567" y="124.659" width="13.9513" height="13.9513">
    <ellipse/>
   </object>
  </objectgroup>

@@ -352,7 +352,7 @@
                  "gid":21,
                  "height":13.9512614938624,
                  "id":92,
-                 "name":"light_trigger",
+                 "name":"light_trigger_A",
                  "properties":[
                         {
                          "name":"score",
@@ -375,7 +375,7 @@
                  "gid":21,
                  "height":13.9512614938624,
                  "id":94,
-                 "name":"light_trigger",
+                 "name":"light_trigger_B",
                  "properties":[
                         {
                          "name":"score",
@@ -398,7 +398,7 @@
                  "gid":21,
                  "height":13.9512614938624,
                  "id":97,
-                 "name":"light_trigger",
+                 "name":"light_trigger_C",
                  "properties":[
                         {
                          "name":"score",
@@ -1110,7 +1110,7 @@
                  "ellipse":true,
                  "height":13.9512614938624,
                  "id":93,
-                 "name":"light_trigger",
+                 "name":"light_trigger_A",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
@@ -1122,7 +1122,7 @@
                  "ellipse":true,
                  "height":13.9512614938624,
                  "id":95,
-                 "name":"light_trigger",
+                 "name":"light_trigger_B",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
@@ -1134,7 +1134,7 @@
                  "ellipse":true,
                  "height":13.9512614938624,
                  "id":96,
-                 "name":"light_trigger",
+                 "name":"light_trigger_C",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
