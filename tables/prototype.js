@@ -110,42 +110,6 @@
                  "y":132
                 }, 
                 {
-                 "gid":26,
-                 "height":24,
-                 "id":89,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":607.333333333333,
-                 "y":123
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":90,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":574,
-                 "y":123.333333333333
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":91,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":540.333333333333,
-                 "y":123
-                }, 
-                {
                  "gid":27,
                  "height":24,
                  "id":98,
@@ -154,8 +118,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":637.5625,
-                 "y":123.3125
+                 "x":637.563,
+                 "y":123.313
                 }, 
                 {
                  "gid":27,
@@ -166,8 +130,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":511.090909090909,
-                 "y":122.181818181818
+                 "x":511.091,
+                 "y":122.182
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -274,7 +238,7 @@
                  "visible":true,
                  "width":94,
                  "x":691,
-                 "y":164.166666666667
+                 "y":164.167
                 }, 
                 {
                  "gid":12,
@@ -291,8 +255,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":620.833333333333,
-                 "y":288.666666666667
+                 "x":620.833,
+                 "y":288.667
                 }, 
                 {
                  "gid":13,
@@ -310,7 +274,7 @@
                  "visible":true,
                  "width":94,
                  "x":414.5,
-                 "y":108.333333333333
+                 "y":108.333
                 }, 
                 {
                  "gid":20,
@@ -374,7 +338,7 @@
                 }, 
                 {
                  "gid":21,
-                 "height":5.51376149386239,
+                 "height":5.51376,
                  "id":92,
                  "name":"light_trigger_A",
                  "properties":[
@@ -391,8 +355,8 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293490266584,
-                 "x":550.958968540179,
+                 "width":2.68293,
+                 "x":550.959,
                  "y":130
                 }, 
                 {
@@ -414,8 +378,8 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293490266584,
-                 "x":585.322604903816,
+                 "width":2.68293,
+                 "x":585.323,
                  "y":130
                 }, 
                 {
@@ -437,9 +401,45 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293490266584,
-                 "x":618.322604903816,
+                 "width":2.68293,
+                 "x":618.323,
                  "y":130
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":89,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":607.333,
+                 "y":123
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":90,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":574,
+                 "y":123.333
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":91,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":540.333,
+                 "y":123
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -468,7 +468,7 @@
                  "visible":true,
                  "width":94.652,
                  "x":413.784,
-                 "y":13.3133333333333
+                 "y":13.3133
                 }, 
                 {
                  "ellipse":true,
@@ -485,8 +485,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":619.894333333333,
-                 "y":192.646666666667
+                 "x":619.894,
+                 "y":192.647
                 }, 
                 {
                  "ellipse":true,
@@ -504,7 +504,7 @@
                  "visible":true,
                  "width":94.652,
                  "x":689.909,
-                 "y":68.6126666666667
+                 "y":68.6127
                 }, 
                 {
                  "height":0,
@@ -1132,39 +1132,51 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9512614938624,
+                 "height":13.9513,
                  "id":93,
                  "name":"light_trigger_A",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":13.9512614938624,
+                 "width":13.9513,
                  "x":545.203,
                  "y":120
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9512614938624,
+                 "height":13.9513,
                  "id":95,
                  "name":"light_trigger_B",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":13.9512614938624,
-                 "x":579.566636363636,
+                 "width":13.9513,
+                 "x":579.567,
                  "y":120
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9512614938624,
+                 "height":13.9513,
                  "id":96,
                  "name":"light_trigger_C",
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":13.9512614938624,
-                 "x":612.566636363636,
+                 "width":13.9513,
+                 "x":612.567,
                  "y":120
+                }, 
+                {
+                 "ellipse":true,
+                 "height":0,
+                 "id":101,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":589.5,
+                 "y":563.25
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1173,7 +1185,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":100,
+ "nextobjectid":102,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

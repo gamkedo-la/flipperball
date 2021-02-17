@@ -59,13 +59,20 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'plunger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 self.plunger = new Plunger(obj, bodyData);
-            } else if (obj.type === 'rotating_gate'){ 
+            } else if (obj.type === 'rotating_gate'){
                 /*const bodyData = collisionData.find((data) => data.name === obj.name);
                 result.push(new GameObject(obj, bodyData));*/
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 const newGameObject = new GameObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
+            } else if (obj.type === 'letter_light') {
+                const bodyData = collisionData.find((data) => data.name === obj.name);
+                const newGameObject = new GameObject(obj, bodyData, {
+                    ...ANIMATIONS.LETTER_LGHT_GLOW,
+                    animationSpritesheet: images[ANIMATIONS.LETTER_LGHT_GLOW.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {

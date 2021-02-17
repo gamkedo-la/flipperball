@@ -126,7 +126,9 @@ class GameObject {
         this.oldY = this.y;
         this.x = x;
         this.y = y;
-        this.body.update(this.x - this.oldX, this.y - this.oldY);
+        if (this.body) {
+            this.body.update(this.x - this.oldX, this.y - this.oldY);
+        }
     }
 
     /** @interface */
