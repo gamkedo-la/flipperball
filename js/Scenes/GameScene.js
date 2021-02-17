@@ -38,6 +38,9 @@ function GameScene() {
             this.score = 0;
             this.currentTableIndex = 0;
 
+            // Restart music
+            restartBackgroundMusic()
+
             this.gameHasFinished = false;
         }
 

@@ -226,6 +226,13 @@ function playBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") {
 	}
 }
 
+function restartBackgroundMusic() {
+	if (!isMuted) {
+		musicSound.currentTime = 0
+		musicSound.play()
+	}
+}
+
 function playStartGameSound() {
 	if(!isMuted) {
 		startGameSound.play();
