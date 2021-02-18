@@ -126,9 +126,7 @@ function loadImages() {
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
         { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
-        { imgName: "light_trigger_A", theFile: "tables/lane_trigger.png" },        
-        { imgName: "light_trigger_B", theFile: "tables/lane_trigger.png" },        
-        { imgName: "light_trigger_C", theFile: "tables/lane_trigger.png" },        
+        { imgName: "light_trigger", theFile: "tables/lane_trigger.png" },               
         { imgName: "lane_light_unlit", theFile: "tables/letter_light_unlit.png" },
         { imgName: "lane_light_lit", theFile: "tables/letter_light_lit.png" },
         { imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png" },

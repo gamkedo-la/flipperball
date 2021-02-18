@@ -21,7 +21,7 @@ let canvasContext;
 
 let DEBUG = false;
 let CHEATS_ACTIVE = false;
-let skipToGameDEBUG = false;
+let skipToGameDEBUG = true;
 
 const GAME_SCALE = 1;
 const GRAVITY = 300;
@@ -111,9 +111,7 @@ const ENTITY_TYPE = {
 
 const TRIGGER_TYPE = {
 	Lane: 'lane_trigger',
-	Light: 'light_trigger_A',
-	Light: 'light_trigger_B',
-	Light: 'light_trigger_C'
+	Light: 'light_trigger'
 }
 
 const ENTITY_NAME = {

@@ -307,6 +307,11 @@
                  "name":"lane_trigger",
                  "properties":[
                         {
+                         "name":"collBody",
+                         "type":"object",
+                         "value":59
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":25
@@ -340,8 +345,13 @@
                  "gid":21,
                  "height":5.51376,
                  "id":92,
-                 "name":"light_trigger_A",
+                 "name":"light_trigger",
                  "properties":[
+                        {
+                         "name":"collBody",
+                         "type":"object",
+                         "value":93
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -356,15 +366,20 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":550.959,
-                 "y":130
+                 "x":943.959,
+                 "y":129.5
                 }, 
                 {
                  "gid":21,
                  "height":5.51,
                  "id":94,
-                 "name":"light_trigger_B",
+                 "name":"light_trigger",
                  "properties":[
+                        {
+                         "name":"collBody",
+                         "type":"object",
+                         "value":95
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -386,8 +401,13 @@
                  "gid":21,
                  "height":5.51,
                  "id":97,
-                 "name":"light_trigger_C",
+                 "name":"light_trigger",
                  "properties":[
+                        {
+                         "name":"collBody",
+                         "type":"object",
+                         "value":96
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -438,8 +458,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":540.333,
-                 "y":123
+                 "x":933.333,
+                 "y":122.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -936,7 +956,7 @@
                  "id":59,
                  "name":"lane_trigger",
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"",
                  "visible":true,
                  "width":26,
                  "x":805.453,
@@ -1134,21 +1154,21 @@
                  "ellipse":true,
                  "height":13.9513,
                  "id":93,
-                 "name":"light_trigger_A",
+                 "name":"light_trigger",
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":545.203,
-                 "y":120
+                 "x":938.203,
+                 "y":119.5
                 }, 
                 {
                  "ellipse":true,
                  "height":13.9513,
                  "id":95,
-                 "name":"light_trigger_B",
+                 "name":"light_trigger",
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"",
                  "visible":true,
                  "width":13.9513,
                  "x":579.567,
@@ -1158,9 +1178,9 @@
                  "ellipse":true,
                  "height":13.9513,
                  "id":96,
-                 "name":"light_trigger_C",
+                 "name":"light_trigger",
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"",
                  "visible":true,
                  "width":13.9513,
                  "x":612.567,

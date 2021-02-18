@@ -49,12 +49,17 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
                 const bodyData = []
                 for (const colData of collisionData) {
-                    if (colData.name === obj.name) {bodyData.push(colData);}
-                    if (bodyData.length === 4) {break;}
+                    if (colData.name === obj.name) { bodyData.push(colData); }
+                    if (bodyData.length === 4) { break; }
                 }
                 self.flippers.push(new Flipper(obj, bodyData));
             } else if (obj.type === 'trigger') {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
+                const trigProps = {};
+                for (const property of obj.properties) {
+                    trigProps[property['name']] = property['value'];
+                }
+                if (DEBUG) { console.log("Trigger: " + obj.name + " building using collider " + trigProps.collBody); }
+                const bodyData = collisionData.find((data) => data.id === trigProps.collBody);
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
@@ -130,7 +135,7 @@ function StaticMapObject(objData) {
     this.reflectance = objData.reflectance || 0.75;
     this.image = images[objData.name];
     this.rotation = objData.rotation * (Math.PI/180) || 0;
-    console.log("Object: " + objData.name + " id: " + this.id);
+    //console.log("Object: " + objData.name + " id: " + this.id);
     this.draw = function() {
         if (this.rotation > 0) {
             drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
@@ -201,7 +206,7 @@ function TriggerMapObject(objData, bodyData) {
         switch (objData.properties[i].name) {
             case "score":
                 this.score = objData.properties[i].value;
-                console.log("Score set to " + this.score + " for " + objData.name);
+                //console.log("Score set to " + this.score + " for " + objData.name);
                 break;
             case "targ_light":
                 this.targ_light = objData.properties[i].value;
@@ -210,7 +215,7 @@ function TriggerMapObject(objData, bodyData) {
             default:
                 break;
         }
-        console.log("Name: " + objData.name + " Properties: " + objData.properties[i].name);
+        //console.log("Name: " + objData.name + " Properties: " + objData.properties[i].name);
     }
     
     this.update = function(deltaTime) {}

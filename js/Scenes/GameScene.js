@@ -579,6 +579,10 @@ function GameScene() {
         self.score += triggerEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score; 
        //TBD: Add reaction for lighting the light if this trigger is connected to one
+        console.log(triggerEntity);
+        if (triggerEntity.targ_light) {
+            console.log("targ_light hit: " + triggerEntity.targ_light);
+        }
     }
 
     this.handleRotatingGateCollision = function(rotatingEntity) {
