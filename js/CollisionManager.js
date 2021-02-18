@@ -149,6 +149,19 @@ function CollisionManager () {
                     } else {
                         if (entity.type == ENTITY_TYPE.Gate){
                             // Add handling of one way collisions
+                            //console.log("Ball velocity:" + ball.velocity.x + "," + ball.velocity.y)
+                            if (ball.velocity.x > 0) {
+                                //console.log(entity.body)
+                                const direction = normalize(ball.body.center, entity.body.center);
+                                //console.log(direction)
+                                this.collisions.push(new Collision(
+                                    COLLISION_TYPE.Polygon,
+                                    entity,
+                                    entity.body,
+                                    Math.sqrt(distance) - entity.body.radius,
+                                    direction
+                                ));
+                            }
                         } else {
                             const circleLine = circlePolygonCollision(ball, entity);
                             if (circleLine && circleLine.length > 0) {
