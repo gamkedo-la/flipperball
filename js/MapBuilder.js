@@ -77,7 +77,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 const newGameObject = new GameObject(obj, bodyData, {
                     ...ANIMATIONS.LETTER_LGHT_GLOW,
-                    animationSpritesheet: images[ANIMATIONS.LETTER_LGHT_GLOW.imageNames[obj.name]],
+                    animationSpritesheet: images[ANIMATIONS.LETTER_LIGHT.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {

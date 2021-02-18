@@ -254,9 +254,9 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: false
 	},
-	LETTER_LGHT_GLOW: {
+	LETTER_LIGHT: {
 		imageNames: {
-			"letter_light_glow": "letter_light_anim"
+			"letter_light": "letter_light_anim"
 		},
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 24,

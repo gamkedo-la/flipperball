@@ -127,10 +127,10 @@ function loadImages() {
 
         { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
         { imgName: "light_trigger", theFile: "tables/lane_trigger.png" },               
-        { imgName: "lane_light_unlit", theFile: "tables/letter_light_unlit.png" },
-        { imgName: "lane_light_lit", theFile: "tables/letter_light_lit.png" },
+        { imgName: "letter_light_unlit", theFile: "tables/letter_light_unlit.png" },
+        { imgName: "letter_light_lit", theFile: "tables/letter_light_lit.png" },
         { imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png" },
-        { imgName: "lane_light_anim", theFile: "animations/letter_light_anim.png" },   
+        { imgName: "letter_light_anim", theFile: "animations/letter_light_anim.png" },   
 
         {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
         {imgName: "rotating_gate_animation", theFile: "animations/rotating_gate_animation.png"},

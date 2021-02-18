@@ -575,13 +575,12 @@ function GameScene() {
        self.table.animations.push(newAnimation);
     }
 
-    this.handleTriggerCollision = function(triggerEntity) {
+    this.handleTriggerCollision = function (triggerEntity) {
         self.score += triggerEntity.score;
-        self.scoreIncrementForExtraBall += triggerEntity.score; 
-       //TBD: Add reaction for lighting the light if this trigger is connected to one
-        console.log(triggerEntity);
+        self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
-            console.log("targ_light hit: " + triggerEntity.targ_light);
+            const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);
+            self.playAnimation(lightTarget.body.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
         }
     }
 
@@ -595,7 +594,7 @@ function GameScene() {
         if (rotatingEntity.hasAnimation) {
             rotatingEntity.animate(0);
         } else {
-            self.playAnimation(rotatingEntity.body.name, ANIMATIONS.ROTATING_GATE, rotatingEntity.x, rotatingEntity.y)
+            self.playAnimation(rotatingEntity.body.name, ANIMATIONS.ROTATING_GATE, rotatingEntity.x, rotatingEntity.y);
         }
         
     }

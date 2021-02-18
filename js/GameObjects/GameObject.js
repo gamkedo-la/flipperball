@@ -7,7 +7,8 @@ class GameObject {
     constructor(objData, bodyData = {}, animationData = {}) {
         this.type = objData.type;
         this.name = objData.name;
-
+        this.gid = objData.gid;
+        this.id = objData.id;
         this.width = objData.width;
         this.height = objData.height;
         this.scale = 1;
