@@ -165,11 +165,7 @@ class GameObject {
             //store the position of the object each frame to use as a trail point
             this.trailPositions.push({ x: this.x, y: this.y, width: this.width * this.trailFadeStrength, height: this.height * this.trailFadeStrength, centerX: motionTrailCenterX, centerY: motionTrailCenterY });
         } else {
-            // if we're moving to slow to create a trail, let's also rapidly speed up the removal of any existing trails to cut down on how long it will 'hang around'...
-            // each frame we're not generating a motion trail, we'll shift the array by half of it's length for a faster decay
-            for (var i = this.trailPositions.length - 1; i > this.trailPositions.length / 2; i--) {
-                this.trailPositions.shift();
-            }
+            this.trailPositions = []; // Just kill the trail entirely to avoid odd artifacts lingering after the GameObject slows
         }
         if (this.trailPositions.length > this.motionTrailLength) {
             this.trailPositions.shift(); // remove that oldest position once there are more positions than the motion trail length
