@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="136">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="143">
  <editorsettings>
   <export target="../../tables/prototype_top.js" format="js"/>
  </editorsettings>
@@ -120,13 +120,13 @@
  <tileset firstgid="37" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
-   <image source="../../../../../../The Haad/Documents/habitrail_gate.png"/>
+   <image width="42" height="75" source="../../img/tables/habitrail_gateway.png"/>
   </tile>
   <tile id="1" type="habitrail">
-   <image source="../../../../../../The Haad/Documents/habitrail_track.png"/>
+   <image width="42" height="75" source="../../img/tables/habitrail_small_track.png"/>
   </tile>
   <tile id="2" type="habitrail">
-   <image source="../../../../../../The Haad/Documents/habitrail_small_track.png"/>
+   <image width="42" height="125" source="../../img/tables/habitrail_track.png"/>
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
@@ -144,12 +144,12 @@
   <object id="92" name="ball_catch_arrow" gid="28" x="350" y="90" width="24" height="24"/>
   <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
   <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
-  <object id="123" name="habitrail_track" gid="38" x="451.493" y="18.5211" width="42" height="125" rotation="89.9807"/>
-  <object id="124" name="habitrail_small_track" gid="39" x="386.667" y="132.333" width="42" height="75"/>
-  <object id="125" name="habitrail_small_track" gid="39" x="385.082" y="53.8599" width="42" height="75" rotation="63.8278"/>
-  <object id="126" name="habitrail_track" gid="38" x="575.744" y="18.0997" width="42" height="125" rotation="89.756"/>
-  <object id="127" name="habitrail_small_track" gid="39" x="698.543" y="17.3813" width="42" height="75" rotation="101.028"/>
-  <object id="128" name="habitrail_small_track" gid="39" x="771.222" y="32.2357" width="42" height="75" rotation="132.99"/>
+  <object id="137" name="habitrail_small_track" gid="38" x="385" y="128" width="42" height="75"/>
+  <object id="138" name="habitrail_small_track" gid="38" x="387.409" y="50.3171" width="42" height="75" rotation="63.6624"/>
+  <object id="139" name="habitrail_track" gid="39" x="456.646" y="17.4" width="42" height="125" rotation="89.4813"/>
+  <object id="140" name="habitrail_track" gid="39" x="581.081" y="17.0891" width="42" height="125" rotation="89.7657"/>
+  <object id="141" name="habitrail_small_track" gid="38" x="703.882" y="15.507" width="42" height="75" rotation="105.005"/>
+  <object id="142" name="habitrail_small_track" gid="38" x="772.063" y="32.6423" width="42" height="75" rotation="134.164"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="292" y="590" width="170" height="124"/>
@@ -177,12 +177,12 @@
    </properties>
   </object>
   <object id="103" name="cyclone" type="cyclone" gid="36" x="550" y="470" width="96" height="96"/>
-  <object id="122" name="habitrail_gateway" type="habitrail" gid="37" x="438.305" y="188.003" width="42" height="75" rotation="319.61">
+  <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
+  <object id="136" name="habitrail_gateway" gid="37" x="438.021" y="188.12" width="42" height="75" rotation="320.447">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="321" y="230.5">
@@ -248,7 +248,7 @@
   <object id="116" name="left_pipe" type="wall" x="290.5" y="178.5">
    <polygon points="0,0 38,0 38,-52 0,-76.5"/>
   </object>
-  <object id="131" name="habitrail_gateway" x="435.441" y="184.682" width="43.3333" height="5.33333" rotation="319.588">
+  <object id="131" name="habitrail_gateway" x="432.279" y="180.968" width="43.3333" height="15.7464" rotation="319.588">
    <ellipse/>
   </object>
   <object id="132" name="habitrail" type="wall" x="435" y="185.667">

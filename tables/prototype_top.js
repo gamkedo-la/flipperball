@@ -195,75 +195,75 @@
                 }, 
                 {
                  "gid":38,
-                 "height":125,
-                 "id":123,
-                 "name":"habitrail_track",
-                 "rotation":89.9807,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":42,
-                 "x":451.493,
-                 "y":18.5211
-                }, 
-                {
-                 "gid":39,
                  "height":75,
-                 "id":124,
+                 "id":137,
                  "name":"habitrail_small_track",
                  "rotation":0,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":386.667,
-                 "y":132.333
-                }, 
-                {
-                 "gid":39,
-                 "height":75,
-                 "id":125,
-                 "name":"habitrail_small_track",
-                 "rotation":63.8278,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":42,
-                 "x":385.082,
-                 "y":53.8599
+                 "x":385,
+                 "y":128
                 }, 
                 {
                  "gid":38,
+                 "height":75,
+                 "id":138,
+                 "name":"habitrail_small_track",
+                 "rotation":63.6624220712771,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":42,
+                 "x":387.409156285278,
+                 "y":50.3171063362548
+                }, 
+                {
+                 "gid":39,
                  "height":125,
-                 "id":126,
+                 "id":139,
                  "name":"habitrail_track",
-                 "rotation":89.756,
+                 "rotation":89.4812604397328,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":575.744,
-                 "y":18.0997
+                 "x":456.645769488138,
+                 "y":17.4000433595042
                 }, 
                 {
                  "gid":39,
-                 "height":75,
-                 "id":127,
-                 "name":"habitrail_small_track",
-                 "rotation":101.028,
+                 "height":125,
+                 "id":140,
+                 "name":"habitrail_track",
+                 "rotation":89.765660193004,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":698.543,
-                 "y":17.3813
+                 "x":581.081299633621,
+                 "y":17.0891333405904
                 }, 
                 {
-                 "gid":39,
+                 "gid":38,
                  "height":75,
-                 "id":128,
+                 "id":141,
                  "name":"habitrail_small_track",
-                 "rotation":132.99,
+                 "rotation":105.005359014327,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":771.222,
-                 "y":32.2357
+                 "x":703.8824533153,
+                 "y":15.5069640026628
+                }, 
+                {
+                 "gid":38,
+                 "height":75,
+                 "id":142,
+                 "name":"habitrail_small_track",
+                 "rotation":134.163501468405,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":42,
+                 "x":772.063410742399,
+                 "y":32.6423270381178
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -409,24 +409,6 @@
                  "y":470
                 }, 
                 {
-                 "gid":37,
-                 "height":75,
-                 "id":122,
-                 "name":"habitrail_gateway",
-                 "properties":[
-                        {
-                         "name":"relatedCollisionObjects",
-                         "type":"string",
-                         "value":"132,133"
-                        }],
-                 "rotation":319.61,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":42,
-                 "x":438.305,
-                 "y":188.003
-                }, 
-                {
                  "gid":7,
                  "height":113,
                  "id":106,
@@ -437,6 +419,24 @@
                  "width":14,
                  "x":894,
                  "y":127
+                }, 
+                {
+                 "gid":37,
+                 "height":75,
+                 "id":136,
+                 "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"relatedCollisionObjects",
+                         "type":"string",
+                         "value":"132,133"
+                        }],
+                 "rotation":320.447493644602,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":42,
+                 "x":438.02090531927,
+                 "y":188.11987063495
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1003,15 +1003,15 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":5.33333,
+                 "height":15.7464129450806,
                  "id":131,
                  "name":"habitrail_gateway",
                  "rotation":319.588,
                  "type":"",
                  "visible":true,
                  "width":43.3333,
-                 "x":435.441,
-                 "y":184.682
+                 "x":432.279130641994,
+                 "y":180.968392176801
                 }, 
                 {
                  "height":0,
@@ -1155,16 +1155,16 @@
                          "y":0
                         }, 
                         {
-                         "x":0.666666666666742,
+                         "x":0.666667,
                          "y":112
                         }, 
                         {
-                         "x":15.3333333333334,
+                         "x":15.3333,
                          "y":112
                         }, 
                         {
-                         "x":14.6666666666667,
-                         "y":-0.666666666666666
+                         "x":14.6667,
+                         "y":-0.666667
                         }],
                  "rotation":0,
                  "type":"gate",
@@ -1180,7 +1180,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":136,
+ "nextobjectid":143,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1475,17 +1475,23 @@
          "tiles":[
                 {
                  "id":0,
-                 "image":"..\/..\/..\/..\/..\/The Haad\/Documents\/habitrail_gate.png",
+                 "image":"..\/img\/tables\/habitrail_gateway.png",
+                 "imageheight":75,
+                 "imagewidth":42,
                  "type":"habitrail"
                 }, 
                 {
                  "id":1,
-                 "image":"..\/..\/..\/..\/..\/The Haad\/Documents\/habitrail_track.png",
+                 "image":"..\/img\/tables\/habitrail_small_track.png",
+                 "imageheight":75,
+                 "imagewidth":42,
                  "type":"habitrail"
                 }, 
                 {
                  "id":2,
-                 "image":"..\/..\/..\/..\/..\/The Haad\/Documents\/habitrail_small_track.png",
+                 "image":"..\/img\/tables\/habitrail_track.png",
+                 "imageheight":125,
+                 "imagewidth":42,
                  "type":"habitrail"
                 }],
          "tilewidth":42
