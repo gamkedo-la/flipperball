@@ -72,19 +72,7 @@
    <image width="34" height="598" source="../../img/tables/chute_wall.png"/>
   </tile>
  </tileset>
- <tileset firstgid="23" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="0" type="habitrail">
-   <image width="36" height="75" source="../img/backgrounds/habitrail1.png"/>
-  </tile>
-  <tile id="1" type="habitrail">
-   <image width="36" height="125" source="../img/backgrounds/habitrail2.png"/>
-  </tile>
-  <tile id="2" type="habitrail">
-   <image width="36" height="75" source="../img/backgrounds/habitrail3.png"/>
-  </tile>
- </tileset>
- <tileset firstgid="26" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="14" columns="0">
+ <tileset firstgid="23" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="14" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="600" source="../img/backgrounds/cloud_bg_top.png"/>
@@ -130,62 +118,48 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="75" name="cloud_bg_top" gid="26" x="279.132" y="599.714" width="720" height="600" visible="0"/>
+  <object id="75" name="cloud_bg_top" gid="23" x="279.132" y="599.714" width="720" height="600" visible="0"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
   <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
   <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
   <object id="70" name="angled_wall_3" gid="10" x="842" y="467" width="52" height="52"/>
   <object id="72" name="angled_wall_2" gid="9" x="290.25" y="465.5" width="52" height="52"/>
-  <object id="77" name="plane_pipe_right" gid="33" x="855" y="180" width="39" height="54"/>
-  <object id="78" name="plane_pipe_left" gid="34" x="290" y="180" width="39" height="54"/>
-  <object id="90" name="plane_red" gid="27" x="350" y="178" width="51" height="48"/>
-  <object id="91" name="ball_catch" gid="32" x="310" y="80" width="54" height="54"/>
-  <object id="92" name="ball_catch_arrow" gid="31" x="350" y="90" width="24" height="24"/>
-  <object id="106" name="habitrail2" gid="24" x="861.667" y="241.333" width="36" height="125"/>
-  <object id="107" name="habitrail3" gid="25" x="872.497" y="139.398" width="36" height="75" rotation="305.886"/>
-  <object id="108" name="habitrail2" gid="24" x="835.986" y="103.039" width="36" height="125" rotation="285.663"/>
-  <object id="110" name="habitrail2" gid="24" x="736.308" y="65.4869" width="36" height="125" rotation="270.601"/>
-  <object id="112" name="habitrail3" gid="25" x="630.137" y="65.5923" width="36" height="75" rotation="264.162"/>
-  <object id="113" name="habitrail3" gid="25" x="586.309" y="67.3757" width="36" height="75" rotation="251.091"/>
-  <object id="114" name="habitrail3" gid="25" x="857.333" y="303.667" width="36" height="75"/>
-  <object id="115" name="habitrail3" gid="25" x="546.426" y="70.6825" width="36" height="75" rotation="187.531"/>
+  <object id="77" name="plane_pipe_right" gid="30" x="855" y="180" width="39" height="54"/>
+  <object id="78" name="plane_pipe_left" gid="31" x="290" y="180" width="39" height="54"/>
+  <object id="90" name="plane_red" gid="24" x="350" y="178" width="51" height="48"/>
+  <object id="91" name="ball_catch" gid="29" x="310" y="80" width="54" height="54"/>
+  <object id="92" name="ball_catch_arrow" gid="28" x="350" y="90" width="24" height="24"/>
   <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
   <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
   <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
-  <object id="117" name="habitrail3" gid="25" x="859.667" y="355.333" width="36" height="75"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="292" y="590" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="723" y="593" width="170" height="124"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="322" y="410.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="428" width="55" height="186"/>
-  <object id="93" name="circle_bumper_small_red" type="circle_bumper_small" gid="35" x="430" y="120" width="54" height="54">
+  <object id="93" name="circle_bumper_small_red" type="circle_bumper_small" gid="32" x="430" y="120" width="54" height="54">
    <properties>
     <property name="score" type="int" value="150"/>
    </properties>
   </object>
-  <object id="97" name="circle_bumper_small_green" type="circle_bumper_small" gid="38" x="711" y="143.5" width="54" height="54">
+  <object id="97" name="circle_bumper_small_green" type="circle_bumper_small" gid="35" x="711" y="143.5" width="54" height="54">
    <properties>
     <property name="score" type="int" value="150"/>
    </properties>
   </object>
-  <object id="100" name="circle_bumper_small_blue" type="circle_bumper_small" gid="37" x="710" y="310" width="54" height="54">
+  <object id="100" name="circle_bumper_small_blue" type="circle_bumper_small" gid="34" x="710" y="310" width="54" height="54">
    <properties>
     <property name="score" type="int" value="150"/>
    </properties>
   </object>
-  <object id="101" name="circle_bumper_small_yellow" type="circle_bumper_small" gid="36" x="430" y="310" width="54" height="54">
+  <object id="101" name="circle_bumper_small_yellow" type="circle_bumper_small" gid="33" x="430" y="310" width="54" height="54">
    <properties>
     <property name="score" type="int" value="150"/>
    </properties>
   </object>
-  <object id="103" name="cyclone" type="cyclone" gid="39" x="550" y="470" width="96" height="96"/>
-  <object id="105" name="habitrail1" gid="23" x="517.751" y="173.137" width="36" height="75" rotation="341.146">
-   <properties>
-    <property name="relatedCollisionObjects" value="120,121"/>
-   </properties>
-  </object>
+  <object id="103" name="cyclone" type="cyclone" gid="36" x="550" y="470" width="96" height="96"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="321" y="230.5">
@@ -245,20 +219,11 @@
   <object id="104" name="cyclone" type="cyclone" x="550" y="373" width="96" height="96">
    <ellipse/>
   </object>
-  <object id="107" name="habitrail1" x="516.117" y="160.941" width="35.3333" height="13.3333" rotation="339.504">
-   <ellipse/>
-  </object>
   <object id="115" name="right_pipe" type="wall" x="893.5" y="178.5">
    <polygon points="0,0 0.5,-77 -38,-50.5 -38,-0.5"/>
   </object>
   <object id="116" name="left_pipe" type="wall" x="290.5" y="178.5">
    <polygon points="0,0 38,0 38,-52 0,-76.5"/>
-  </object>
-  <object id="120" name="habitrail" type="wall" x="518" y="172.333">
-   <polygon points="0,0 -19.3333,-60.3333 -6.66667,-129 55.6667,-144 188.667,-148.667 292,-120 372.667,-69.6667 376,182 373.333,180 370,-67.3333 294,-115.667 191,-146.333 57.6667,-142 -2.33333,-127 -15.6667,-63 1.33333,-6.33333"/>
-  </object>
-  <object id="121" name="habitrail" type="wall" x="551.333" y="158">
-   <polygon points="0,0 -15.3333,-57 -8,-84 83,-104 171.333,-95 270.333,-61.3333 296.667,-42.3333 315,-25.3333 312.667,194.333 316,193.333 318.667,-29 261,-70.6667 149.333,-104.333 74,-107.333 -10.3333,-88 -17.3333,-57.6667"/>
   </object>
  </objectgroup>
 </map>

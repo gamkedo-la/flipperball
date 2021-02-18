@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":26,
+                 "gid":23,
                  "height":600,
                  "id":75,
                  "name":"cloud_bg_top",
@@ -110,7 +110,7 @@
                  "y":465.5
                 }, 
                 {
-                 "gid":33,
+                 "gid":30,
                  "height":54,
                  "id":77,
                  "name":"plane_pipe_right",
@@ -122,7 +122,7 @@
                  "y":180
                 }, 
                 {
-                 "gid":34,
+                 "gid":31,
                  "height":54,
                  "id":78,
                  "name":"plane_pipe_left",
@@ -134,7 +134,7 @@
                  "y":180
                 }, 
                 {
-                 "gid":27,
+                 "gid":24,
                  "height":48,
                  "id":90,
                  "name":"plane_red",
@@ -146,7 +146,7 @@
                  "y":178
                 }, 
                 {
-                 "gid":32,
+                 "gid":29,
                  "height":54,
                  "id":91,
                  "name":"ball_catch",
@@ -158,7 +158,7 @@
                  "y":80
                 }, 
                 {
-                 "gid":31,
+                 "gid":28,
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
@@ -168,102 +168,6 @@
                  "width":24,
                  "x":350,
                  "y":90
-                }, 
-                {
-                 "gid":24,
-                 "height":125,
-                 "id":106,
-                 "name":"habitrail2",
-                 "rotation":0,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":861.667,
-                 "y":241.333
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":107,
-                 "name":"habitrail3",
-                 "rotation":305.886,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":872.497,
-                 "y":139.398
-                }, 
-                {
-                 "gid":24,
-                 "height":125,
-                 "id":108,
-                 "name":"habitrail2",
-                 "rotation":285.663,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":835.986,
-                 "y":103.039
-                }, 
-                {
-                 "gid":24,
-                 "height":125,
-                 "id":110,
-                 "name":"habitrail2",
-                 "rotation":270.601,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":736.308,
-                 "y":65.4869
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":112,
-                 "name":"habitrail3",
-                 "rotation":264.161669069804,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":630.136604122629,
-                 "y":65.592282501216
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":113,
-                 "name":"habitrail3",
-                 "rotation":251.090893612209,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":586.309182885321,
-                 "y":67.3757117924642
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":114,
-                 "name":"habitrail3",
-                 "rotation":0,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":857.333,
-                 "y":303.667
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":115,
-                 "name":"habitrail3",
-                 "rotation":187.530511478018,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":546.425522489111,
-                 "y":70.6825262980702
                 }, 
                 {
                  "gid":7,
@@ -300,18 +204,6 @@
                  "width":34,
                  "x":894,
                  "y":725
-                }, 
-                {
-                 "gid":25,
-                 "height":75,
-                 "id":117,
-                 "name":"habitrail3",
-                 "rotation":0,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":859.667,
-                 "y":355.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -373,7 +265,7 @@
                  "y":428
                 }, 
                 {
-                 "gid":35,
+                 "gid":32,
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
@@ -391,7 +283,7 @@
                  "y":120
                 }, 
                 {
-                 "gid":38,
+                 "gid":35,
                  "height":54,
                  "id":97,
                  "name":"circle_bumper_small_green",
@@ -409,7 +301,7 @@
                  "y":143.5
                 }, 
                 {
-                 "gid":37,
+                 "gid":34,
                  "height":54,
                  "id":100,
                  "name":"circle_bumper_small_blue",
@@ -427,7 +319,7 @@
                  "y":310
                 }, 
                 {
-                 "gid":36,
+                 "gid":33,
                  "height":54,
                  "id":101,
                  "name":"circle_bumper_small_yellow",
@@ -445,7 +337,7 @@
                  "y":310
                 }, 
                 {
-                 "gid":39,
+                 "gid":36,
                  "height":96,
                  "id":103,
                  "name":"cyclone",
@@ -455,24 +347,6 @@
                  "width":96,
                  "x":550,
                  "y":470
-                }, 
-                {
-                 "gid":23,
-                 "height":75,
-                 "id":105,
-                 "name":"habitrail1",
-                 "properties":[
-                        {
-                         "name":"relatedCollisionObjects",
-                         "type":"string",
-                         "value":"120,121"
-                        }],
-                 "rotation":341.146374836514,
-                 "type":"habitrail",
-                 "visible":true,
-                 "width":36,
-                 "x":517.751018663308,
-                 "y":173.137458203715
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -982,18 +856,6 @@
                  "y":373
                 }, 
                 {
-                 "ellipse":true,
-                 "height":13.3333,
-                 "id":107,
-                 "name":"habitrail1",
-                 "rotation":339.504,
-                 "type":"",
-                 "visible":true,
-                 "width":35.3333,
-                 "x":516.117333333333,
-                 "y":160.940666666667
-                }, 
-                {
                  "height":0,
                  "id":115,
                  "name":"right_pipe",
@@ -1048,158 +910,6 @@
                  "width":0,
                  "x":290.5,
                  "y":178.5
-                }, 
-                {
-                 "height":0,
-                 "id":120,
-                 "name":"habitrail",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-19.3333333333334,
-                         "y":-60.3333333333333
-                        }, 
-                        {
-                         "x":-6.66666666666669,
-                         "y":-129
-                        }, 
-                        {
-                         "x":55.6666666666666,
-                         "y":-144
-                        }, 
-                        {
-                         "x":188.666666666667,
-                         "y":-148.666666666667
-                        }, 
-                        {
-                         "x":292,
-                         "y":-120
-                        }, 
-                        {
-                         "x":372.666666666667,
-                         "y":-69.6666666666667
-                        }, 
-                        {
-                         "x":376,
-                         "y":182
-                        }, 
-                        {
-                         "x":373.333333333333,
-                         "y":180
-                        }, 
-                        {
-                         "x":370,
-                         "y":-67.3333333333333
-                        }, 
-                        {
-                         "x":294,
-                         "y":-115.666666666667
-                        }, 
-                        {
-                         "x":191,
-                         "y":-146.333333333333
-                        }, 
-                        {
-                         "x":57.6666666666666,
-                         "y":-142
-                        }, 
-                        {
-                         "x":-2.33333333333337,
-                         "y":-127
-                        }, 
-                        {
-                         "x":-15.6666666666667,
-                         "y":-63
-                        }, 
-                        {
-                         "x":1.33333333333326,
-                         "y":-6.33333333333331
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":518,
-                 "y":172.333333333333
-                }, 
-                {
-                 "height":0,
-                 "id":121,
-                 "name":"habitrail",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-15.3333333333333,
-                         "y":-57
-                        }, 
-                        {
-                         "x":-8,
-                         "y":-84
-                        }, 
-                        {
-                         "x":83,
-                         "y":-104
-                        }, 
-                        {
-                         "x":171.333333333333,
-                         "y":-95
-                        }, 
-                        {
-                         "x":270.333333333333,
-                         "y":-61.3333333333333
-                        }, 
-                        {
-                         "x":296.666666666667,
-                         "y":-42.3333333333333
-                        }, 
-                        {
-                         "x":315,
-                         "y":-25.3333333333333
-                        }, 
-                        {
-                         "x":312.666666666667,
-                         "y":194.333333333333
-                        }, 
-                        {
-                         "x":316,
-                         "y":193.333333333333
-                        }, 
-                        {
-                         "x":318.666666666667,
-                         "y":-29
-                        }, 
-                        {
-                         "x":261,
-                         "y":-70.6666666666667
-                        }, 
-                        {
-                         "x":149.333333333333,
-                         "y":-104.333333333333
-                        }, 
-                        {
-                         "x":74,
-                         "y":-107.333333333333
-                        }, 
-                        {
-                         "x":-10.3333333333333,
-                         "y":-88
-                        }, 
-                        {
-                         "x":-17.3333333333333,
-                         "y":-57.6666666666667
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":551.333333333333,
-                 "y":158
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1388,44 +1098,6 @@
         {
          "columns":0,
          "firstgid":23,
-         "grid":
-            {
-             "height":1,
-             "orientation":"orthogonal",
-             "width":1
-            },
-         "margin":0,
-         "name":"habitrail",
-         "spacing":0,
-         "tilecount":3,
-         "tileheight":125,
-         "tiles":[
-                {
-                 "id":0,
-                 "image":"..\/raw\/img\/backgrounds\/habitrail1.png",
-                 "imageheight":75,
-                 "imagewidth":36,
-                 "type":"habitrail"
-                }, 
-                {
-                 "id":1,
-                 "image":"..\/raw\/img\/backgrounds\/habitrail2.png",
-                 "imageheight":125,
-                 "imagewidth":36,
-                 "type":"habitrail"
-                }, 
-                {
-                 "id":2,
-                 "image":"..\/raw\/img\/backgrounds\/habitrail3.png",
-                 "imageheight":75,
-                 "imagewidth":36,
-                 "type":"habitrail"
-                }],
-         "tilewidth":36
-        }, 
-        {
-         "columns":0,
-         "firstgid":26,
          "grid":
             {
              "height":1,
