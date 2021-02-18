@@ -593,6 +593,9 @@ function GameScene() {
         
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
+        if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {
+            return;
+        }
         for (var collider of habitrailEntity.relatedCollisionObjects) {
             for (var entity of this.collisionManager.entities.values()) {
                 if ('id' in entity) {
