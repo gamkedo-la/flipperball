@@ -75,7 +75,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     animationSpritesheet: images[ANIMATIONS.LETTER_LGHT_GLOW.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
-            } else if (obj.type === 'habitrail' && obj.name === "habitrail1") {
+            } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {

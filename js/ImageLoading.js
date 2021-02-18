@@ -155,9 +155,9 @@ function loadImages() {
         {imgName: "ball_catch", theFile: "tables/ball_catch.png"},
         {imgName: "ball_catch_arrow", theFile: "tables/ball_catch_arrow.png"},     
 
-        {imgName: "habitrail1", theFile: "tables/habitrail1.png"},
-        {imgName: "habitrail2", theFile: "tables/habitrail2.png"},
-        {imgName: "habitrail3", theFile: "tables/habitrail3.png"},
+        {imgName: "habitrail_gateway", theFile: "tables/habitrail_gateway.png"},
+        {imgName: "habitrail_small_track", theFile: "tables/habitrail_small_track.png"},
+        {imgName: "habitrail_track", theFile: "tables/habitrail_track.png"},
         {imgName: "flipper_title_medium", theFile: "screens/Flipperball_Title_Image_Medium.png"},
         {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"}
         
