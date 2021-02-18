@@ -27,3 +27,24 @@ function drawImageForTiledWithRotation(image, atX, atY, withAng) {
   canvasContext.drawImage(image, 0, -image.height);
   canvasContext.restore();
 }
+
+
+function renderControlsInfo (x, y, y_offset, align=TextAlignment.Center) {        
+  texts = [ 
+      "'Left Arrow' = left flipper",
+      "'Right Arrow' = right flipper",
+      "'Down Arrow' = plunger",
+      "'Space Bar' = bump table",
+      "'M' = mute",
+      "'<' = volume down",
+      "'>' = volume up",
+      "'k' = sfx volume down",
+      "'l' = sfx volume up",
+      "'f' = toggle flash"
+  ];
+
+  for (let i = 0; i < texts.length; i++) {
+      colorText(texts[i], x, y + y_offset*i, Color.White, Fonts.BodyText, align, 1);
+  }      
+
+}
