@@ -43,7 +43,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {
-            console.log("Building DynObj: " + obj.name + ":" + obj.id);
+            if (DEBUG) { console.log("Building DynObj: " + obj.name + ":" + obj.id); }
             
             // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
             let bodyData = [];
@@ -58,7 +58,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     }
                 }
             }
-            console.log("Colliders Found: " + bodyData.length);
+            if (DEBUG) { console.log("Colliders Found: " + bodyData.length); }
             if (bodyData.length === 1) {
                 bodyData = bodyData[0];
             }
