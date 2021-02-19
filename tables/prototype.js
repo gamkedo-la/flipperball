@@ -108,30 +108,6 @@
                  "width":140,
                  "x":752.667,
                  "y":132
-                }, 
-                {
-                 "gid":27,
-                 "height":24,
-                 "id":98,
-                 "name":"demo_letter_lights",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":637.563,
-                 "y":123.313
-                }, 
-                {
-                 "gid":27,
-                 "height":24,
-                 "id":99,
-                 "name":"demo_letter_lights",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":511.091,
-                 "y":122.182
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -356,8 +332,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":943.959,
-                 "y":129.5
+                 "x":551.959,
+                 "y":130
                 }, 
                 {
                  "gid":21,
@@ -438,8 +414,43 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":933.333,
-                 "y":122.5
+                 "x":541.333,
+                 "y":123
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":103,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":104
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":519.073,
+                 "y":130.375
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":104,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":508.083,
+                 "y":123.375
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1256,8 +1267,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":938.203,
-                 "y":119.5
+                 "x":546.203,
+                 "y":120
                 }, 
                 {
                  "ellipse":true,
@@ -1306,6 +1317,24 @@
                  "width":0,
                  "x":589.5,
                  "y":563.25
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.9513,
+                 "id":102,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":103
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":13.9513,
+                 "x":513.317,
+                 "y":120.375
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1314,7 +1343,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":102,
+ "nextobjectid":105,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

@@ -437,6 +437,24 @@
                  "width":42,
                  "x":438.021,
                  "y":188.12
+                }, 
+                {
+                 "gid":34,
+                 "height":54,
+                 "id":144,
+                 "name":"circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":150
+                        }],
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":54,
+                 "x":568.333333333333,
+                 "y":127.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1268,6 +1286,24 @@
                  "width":0,
                  "x":894,
                  "y":13
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53,
+                 "id":143,
+                 "name":"circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":144
+                        }],
+                 "rotation":0,
+                 "type":"circle_bumper_small",
+                 "visible":true,
+                 "width":53,
+                 "x":568.333333333333,
+                 "y":73.6666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1276,7 +1312,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":143,
+ "nextobjectid":145,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
