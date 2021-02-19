@@ -118,7 +118,7 @@ function CollisionManager () {
         }
     }
 
-    this.checkCollisions = function(deltaTime) {
+    this.checkCollisions = function (deltaTime) {
         for (const ball of this.balls.values()) {
             this.collisions.length = 0; //empty the collisions array
             for (const entity of this.entities.values()) {
@@ -126,7 +126,7 @@ function CollisionManager () {
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
                 const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
                 if (distance <= squaredRadii) {
-                    if(entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate){
+                    if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate) {
                         //TODO: Add handling of rotating way collision
                         // console.log("CollisionManager: checkCollision: "+ entity.type);
                         const direction = normalize(ball.body.center, entity.body.center);
@@ -140,20 +140,21 @@ function CollisionManager () {
                     } else if (entity.body.type === BODY_TYPE.Circle) {
                         const direction = normalize(ball.body.center, entity.body.center);
                         this.collisions.push(new Collision(
-                            COLLISION_TYPE.Circle, 
+                            COLLISION_TYPE.Circle,
                             entity,
                             entity.body,
                             Math.sqrt(distance) - entity.body.radius,
                             direction
                         ));
-                    } else {
-                        if (entity.type == ENTITY_TYPE.Gate){
-                            // Add handling of one way collisions
-                            //console.log("Ball velocity:" + ball.velocity.x + "," + ball.velocity.y)
-                            if (ball.velocity.x > 0) {
-                                //console.log(entity.body)
+                    } else if (entity.type == ENTITY_TYPE.Gate) {
+                        // Add handling of one way collisions
+                        //console.log("Ball velocity:" + ball.velocity.x + "," + ball.velocity.y)
+                        if (ball.velocity.x > 0) {
+                            //console.log(entity.body)
+                            const circleLine = circlePolygonCollision(ball, entity);
+                            if (circleLine && circleLine.length > 0) {
                                 const direction = normalize(ball.body.center, entity.body.center);
-                                //console.log(direction)
+                                //console.log(direction);                             
                                 this.collisions.push(new Collision(
                                     COLLISION_TYPE.Polygon,
                                     entity,
@@ -162,19 +163,19 @@ function CollisionManager () {
                                     direction
                                 ));
                             }
-                        } else {
-                            const circleLine = circlePolygonCollision(ball, entity);
-                            if (circleLine && circleLine.length > 0) {
-                                this.collisions.push(...circleLine);
-                            }
+                        }
+                    } else {
+                        const circleLine = circlePolygonCollision(ball, entity);
+                        if (circleLine && circleLine.length > 0) {
+                            this.collisions.push(...circleLine);
                         }
                     }
-                }                
+                }
             }
-
             ball.resolveCollisions(this.collisions);
         }
     }
+
 
     const squaredDistance = function (x1, y1, x2, y2) {
         return (((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));

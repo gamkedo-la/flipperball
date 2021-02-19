@@ -78,7 +78,13 @@ function CollisionBody (data) {
     this.draw = function () {
         if(!DEBUG) {return;}
         if(this.type === BODY_TYPE.Circle) {drawCircleBody(this.center, this.radius);}
-        if(this.type === BODY_TYPE.Polygon) {drawPolygonBody(this.edges);}
+        if (this.type === BODY_TYPE.Polygon) { drawPolygonBody(this.edges); }
+        canvasContext.save();
+        canvasContext.strokeStyle = Color.Green;
+        canvasContext.beginPath();
+        canvasContext.arc(this.center.x, this.center.y, this.radius, 0, 2 * Math.PI);
+        canvasContext.stroke();
+        canvasContext.restore();
     }
 
     const drawCircleBody = function (center, radius) {
