@@ -152,6 +152,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Trigger:
             case ENTITY_TYPE.Habitrail:
             case ENTITY_TYPE.RotatingGate:
+            case ENTITY_TYPE.Gate:
                 return true;
             default:
                 return false;
