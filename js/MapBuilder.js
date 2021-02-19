@@ -43,37 +43,43 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {
-            if (obj.type === 'ball') {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
+            console.log("Building DynObj: " + obj.name + ":" + obj.id);
+            
+            // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
+            let bodyData = [];
+            for (const colData of collisionData) {                
+                if (colData.properties) {
+                    const colProps = {};
+                    for (const property of colData.properties) {
+                        colProps[property['name']] = property['value'];
+                    }
+                    if (colProps.dynObjConn) {                        
+                        if (colProps.dynObjConn === obj.id) { bodyData.push(colData); }
+                    }
+                }
+            }
+            console.log("Colliders Found: " + bodyData.length);
+            if (bodyData.length === 1) {
+                bodyData = bodyData[0];
+            }
+            
+            if (obj.type === 'ball') {                
                 self.balls.push(new Ball(obj, bodyData));
-            } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
-                const bodyData = []
-                for (const colData of collisionData) {
-                    if (colData.name === obj.name) { bodyData.push(colData); }
-                    if (bodyData.length === 4) { break; }
-                }
+            } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {                
                 self.flippers.push(new Flipper(obj, bodyData));
-            } else if (obj.type === 'trigger') {
-                const trigProps = {};
-                for (const property of obj.properties) {
-                    trigProps[property['name']] = property['value'];
-                }
-                if (DEBUG) { console.log("Trigger: " + obj.name + " building using collider " + trigProps.collBody); }
-                const bodyData = collisionData.find((data) => data.id === trigProps.collBody);
+            } else if (obj.type === 'trigger') {                
                 result.push(new TriggerMapObject(obj, bodyData));
-            } else if (obj.type === 'plunger') {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
+            } else if (obj.type === 'plunger') {                
                 self.plunger = new Plunger(obj, bodyData);
             } else if (obj.type === 'rotating_gate'){
-                /*const bodyData = collisionData.find((data) => data.name === obj.name);
-                result.push(new GameObject(obj, bodyData));*/
-                const bodyData = collisionData.find((data) => data.name === obj.name);
                 const newGameObject = new GameObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'letter_light') {
+                // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
+                // We need the ability for a dynObj to be generated without a collider but still function to remove this
                 const bodyData = collisionData.find((data) => data.name === obj.name);
                 const newGameObject = new GameObject(obj, bodyData, {
                     ...ANIMATIONS.LETTER_LGHT_GLOW,
@@ -89,15 +95,13 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 }
                 result.push(habitrail);
             }
-             else {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
+             else {                
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
                         ...ANIMATIONS.CIRCLE_BUMPER,
                         animationSpritesheet: images[ANIMATIONS.CIRCLE_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newGameObject);
-
                 } else {
                     result.push(new GameObject(obj, bodyData));
                 }

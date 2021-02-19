@@ -210,60 +210,60 @@
                  "height":75,
                  "id":138,
                  "name":"habitrail_small_track",
-                 "rotation":63.6624220712771,
+                 "rotation":63.6624,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":387.409156285278,
-                 "y":50.3171063362548
+                 "x":387.409,
+                 "y":50.3171
                 }, 
                 {
                  "gid":39,
                  "height":125,
                  "id":139,
                  "name":"habitrail_track",
-                 "rotation":89.4812604397328,
+                 "rotation":89.4813,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":456.645769488138,
-                 "y":17.4000433595042
+                 "x":456.646,
+                 "y":17.4
                 }, 
                 {
                  "gid":39,
                  "height":125,
                  "id":140,
                  "name":"habitrail_track",
-                 "rotation":89.765660193004,
+                 "rotation":89.7657,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":581.081299633621,
-                 "y":17.0891333405904
+                 "x":581.081,
+                 "y":17.0891
                 }, 
                 {
                  "gid":38,
                  "height":75,
                  "id":141,
                  "name":"habitrail_small_track",
-                 "rotation":105.005359014327,
+                 "rotation":105.005,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":703.8824533153,
-                 "y":15.5069640026628
+                 "x":703.882,
+                 "y":15.507
                 }, 
                 {
                  "gid":38,
                  "height":75,
                  "id":142,
                  "name":"habitrail_small_track",
-                 "rotation":134.163501468405,
+                 "rotation":134.164,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":772.063410742399,
-                 "y":32.6423270381178
+                 "x":772.063,
+                 "y":32.6423
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -431,12 +431,12 @@
                          "type":"string",
                          "value":"132,133"
                         }],
-                 "rotation":320.447493644602,
+                 "rotation":320.447,
                  "type":"habitrail",
                  "visible":true,
                  "width":42,
-                 "x":438.02090531927,
-                 "y":188.11987063495
+                 "x":438.021,
+                 "y":188.12
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -505,6 +505,12 @@
                         {
                          "x":2,
                          "y":-4.25
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -617,6 +623,12 @@
                         {
                          "x":-2.18182,
                          "y":3.63636
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -746,6 +758,12 @@
                          "x":23.8484,
                          "y":51.7273
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper",
                  "visible":true,
@@ -758,6 +776,12 @@
                  "height":24,
                  "id":65,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
@@ -770,6 +794,12 @@
                  "height":55,
                  "id":66,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_base",
                  "visible":true,
@@ -798,6 +828,12 @@
                          "x":-11.8485,
                          "y":16.2727
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
+                        }],
                  "rotation":0,
                  "type":"flipper",
                  "visible":true,
@@ -810,6 +846,12 @@
                  "height":24,
                  "id":68,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
+                        }],
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
@@ -822,6 +864,12 @@
                  "height":55,
                  "id":69,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
+                        }],
                  "rotation":0,
                  "type":"flipper_base",
                  "visible":true,
@@ -849,6 +897,12 @@
                         {
                          "x":-16.3485,
                          "y":11.2727
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
                         }],
                  "rotation":0,
                  "type":"flipper_inner",
@@ -878,6 +932,12 @@
                          "x":-17.9849,
                          "y":77.144
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_inner",
                  "visible":true,
@@ -890,6 +950,12 @@
                  "height":53,
                  "id":94,
                  "name":"circle_bumper_small_red",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":93
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -902,6 +968,12 @@
                  "height":53,
                  "id":96,
                  "name":"circle_bumper_small_green",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":97
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -914,6 +986,12 @@
                  "height":53,
                  "id":98,
                  "name":"circle_bumper_small_blue",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -926,6 +1004,12 @@
                  "height":53,
                  "id":102,
                  "name":"circle_bumper_small_yellow",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":101
+                        }],
                  "rotation":0,
                  "type":"circle_bumper_small",
                  "visible":true,
@@ -938,6 +1022,12 @@
                  "height":96,
                  "id":104,
                  "name":"cyclone",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":103
+                        }],
                  "rotation":0,
                  "type":"cyclone",
                  "visible":true,
@@ -1003,15 +1093,15 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":15.7464129450806,
+                 "height":15.7464,
                  "id":131,
                  "name":"habitrail_gateway",
                  "rotation":319.588,
                  "type":"",
                  "visible":true,
                  "width":43.3333,
-                 "x":432.279130641994,
-                 "y":180.968392176801
+                 "x":432.279,
+                 "y":180.968
                 }, 
                 {
                  "height":0,
@@ -1165,6 +1255,12 @@
                         {
                          "x":14.6667,
                          "y":-0.666667
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":106
                         }],
                  "rotation":0,
                  "type":"gate",

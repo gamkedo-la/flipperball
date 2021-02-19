@@ -307,11 +307,6 @@
                  "name":"lane_trigger",
                  "properties":[
                         {
-                         "name":"collBody",
-                         "type":"object",
-                         "value":59
-                        }, 
-                        {
                          "name":"score",
                          "type":"int",
                          "value":25
@@ -348,11 +343,6 @@
                  "name":"light_trigger",
                  "properties":[
                         {
-                         "name":"collBody",
-                         "type":"object",
-                         "value":93
-                        }, 
-                        {
                          "name":"score",
                          "type":"int",
                          "value":25
@@ -376,11 +366,6 @@
                  "name":"light_trigger",
                  "properties":[
                         {
-                         "name":"collBody",
-                         "type":"object",
-                         "value":95
-                        }, 
-                        {
                          "name":"score",
                          "type":"int",
                          "value":25
@@ -403,11 +388,6 @@
                  "id":97,
                  "name":"light_trigger",
                  "properties":[
-                        {
-                         "name":"collBody",
-                         "type":"object",
-                         "value":96
-                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -479,6 +459,11 @@
                  "name":"circle_bumper_green",
                  "properties":[
                         {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":35
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":100
@@ -497,6 +482,11 @@
                  "name":"circle_bumper_yellow",
                  "properties":[
                         {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":34
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":100
@@ -514,6 +504,11 @@
                  "id":5,
                  "name":"circle_bumper_red",
                  "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":32
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -583,6 +578,12 @@
                          "x":2,
                          "y":-4.25
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -615,6 +616,12 @@
                          "x":37.75,
                          "y":46.7727
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":13
+                        }],
                  "rotation":0,
                  "type":"plunger",
                  "visible":true,
@@ -642,6 +649,12 @@
                         {
                          "x":-11.8485,
                          "y":16.2727
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
                         }],
                  "rotation":0,
                  "type":"flipper",
@@ -671,6 +684,12 @@
                          "x":21.8484,
                          "y":51.394
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper",
                  "visible":true,
@@ -683,6 +702,12 @@
                  "height":26,
                  "id":45,
                  "name":"ball",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":16
+                        }],
                  "rotation":0,
                  "type":"ball",
                  "visible":true,
@@ -775,6 +800,12 @@
                          "x":-0.25,
                          "y":169.159
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":48
+                        }],
                  "rotation":0,
                  "type":"drain_divider",
                  "visible":true,
@@ -810,6 +841,12 @@
                         {
                          "x":9.81818,
                          "y":1.63636
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":49
                         }],
                  "rotation":0,
                  "type":"drain_divider",
@@ -943,6 +980,12 @@
                          "x":-2.18182,
                          "y":3.63636
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -955,6 +998,12 @@
                  "height":26,
                  "id":59,
                  "name":"lane_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":58
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -967,6 +1016,12 @@
                  "height":23,
                  "id":60,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
@@ -979,6 +1034,12 @@
                  "height":55,
                  "id":61,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_base",
                  "visible":true,
@@ -991,6 +1052,12 @@
                  "height":23,
                  "id":62,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
+                        }],
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
@@ -1003,6 +1070,12 @@
                  "height":55,
                  "id":63,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
+                        }],
                  "rotation":0,
                  "type":"flipper_base",
                  "visible":true,
@@ -1031,6 +1104,12 @@
                          "x":-17.9849,
                          "y":77.144
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":15
+                        }],
                  "rotation":0,
                  "type":"flipper_inner",
                  "visible":true,
@@ -1058,6 +1137,12 @@
                         {
                          "x":-16.3485,
                          "y":11.2727
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":14
                         }],
                  "rotation":0,
                  "type":"flipper_inner",
@@ -1143,6 +1228,12 @@
                          "x":3.31818,
                          "y":7.99793
                         }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":73
+                        }],
                  "rotation":0,
                  "type":"rotating_gate",
                  "visible":true,
@@ -1155,6 +1246,12 @@
                  "height":13.9513,
                  "id":93,
                  "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":92
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1167,6 +1264,12 @@
                  "height":13.9513,
                  "id":95,
                  "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":94
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1179,6 +1282,12 @@
                  "height":13.9513,
                  "id":96,
                  "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":97
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
