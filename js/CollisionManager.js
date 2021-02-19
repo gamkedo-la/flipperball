@@ -125,6 +125,7 @@ function CollisionManager () {
                 // const willCollide = ball.willCollideWith(entity, deltaTime);
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
                 const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
+                if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { continue;}
                 if (distance <= squaredRadii) {
                     if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate) {
                         //TODO: Add handling of rotating way collision
@@ -146,24 +147,6 @@ function CollisionManager () {
                             Math.sqrt(distance) - entity.body.radius,
                             direction
                         ));
-                    } else if (entity.type == ENTITY_TYPE.Gate) {
-                        // Add handling of one way collisions
-                        //console.log("Ball velocity:" + ball.velocity.x + "," + ball.velocity.y)
-                        if (ball.velocity.x > 0) {
-                            //console.log(entity.body)
-                            const circleLine = circlePolygonCollision(ball, entity);
-                            if (circleLine && circleLine.length > 0) {
-                                const direction = normalize(ball.body.center, entity.body.center);
-                                //console.log(direction);                             
-                                this.collisions.push(new Collision(
-                                    COLLISION_TYPE.Polygon,
-                                    entity,
-                                    entity.body,
-                                    Math.sqrt(distance) - entity.body.radius,
-                                    direction
-                                ));
-                            }
-                        }
                     } else {
                         const circleLine = circlePolygonCollision(ball, entity);
                         if (circleLine && circleLine.length > 0) {
