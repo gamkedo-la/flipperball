@@ -72,7 +72,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
             } else if (obj.type === 'plunger') {                
                 self.plunger = new Plunger(obj, bodyData);
             } else if (obj.type === 'rotating_gate'){
-                const newGameObject = new GameObject(obj, bodyData, {
+                const newGameObject = new RotatingGateObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
                 });
