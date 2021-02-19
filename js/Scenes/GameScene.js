@@ -14,6 +14,7 @@ function GameScene() {
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
     this.remainingRotatingScore = 0;
+    this.rotationAnimationOn = false;
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
@@ -358,7 +359,9 @@ function GameScene() {
                 self.remainingRotatingScore--;
                 
             }
-        }   
+        }else{
+            self.rotationAnimationOn = false;
+        } 
     }
 
     var checkForExtraBall = function(){
@@ -593,10 +596,12 @@ function GameScene() {
          + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
-        if (rotatingEntity.hasAnimation) {
-            rotatingEntity.animate(0);
-        } else {
-            self.playAnimation(rotatingEntity.body.name, ANIMATIONS.ROTATING_GATE, rotatingEntity.x, rotatingEntity.y);
+
+        if(!self.rotationAnimationOn){
+            if (rotatingEntity.hasAnimation) {
+                rotatingEntity.animate(0, ballSpeed);
+                self.rotationAnimationOn = true;
+            }
         }
         
     }
