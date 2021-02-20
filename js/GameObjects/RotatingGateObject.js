@@ -7,7 +7,7 @@ class RotatingGateObject extends GameObject {
     }
 
     calculateRotatingCoefficient(){
-        this.rotatingCoefficient = this.rotatingSpeed / 100;
+        this.rotatingCoefficient = 100 / this.rotatingSpeed;
         if(DEBUG){
             console.log("[RotatingGameObject] calculateRotatingCoefficient: rotatingCoefficient -> " + this.rotatingCoefficient);
         }
@@ -18,7 +18,7 @@ class RotatingGateObject extends GameObject {
             console.log("[RotatingGameObject] updateFrameTimes: BEFORE frameTimes[0] -> " + this.frameTimes[0]);
         }
         for(var i = 0; i < this.frameTimes.length; i++){
-            this.frameTimes[i] = Math.round(this.originalFrameTimes[i] * this.rotatingCoefficient);
+            this.frameTimes[i] = Math.round(this.originalFrameTimes[i]*this.rotatingCoefficient);
         }
         if(DEBUG){
             console.log("[RotatingGameObject] updateFrameTimes: AFTER frameTimes[0] -> " + this.frameTimes[0]);
