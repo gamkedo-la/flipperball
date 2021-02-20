@@ -2,52 +2,72 @@ class RotatingGateObject extends GameObject {
     constructor(...props) {
         super(...props);
         this.rotatingSpeed = 0;
+        this.remainingRotatingScore = 0;
         this.rotatingCoefficient = 1;
         this.originalFrameTimes = this.frameTimes.slice();
+        this.deltaTime = 0;
+        this.currFrame = 0;
+        this.isInReverse = false;
+        this.isAnimating = true;
     }
 
     calculateRotatingCoefficient(){
-        this.rotatingCoefficient = 100 / this.rotatingSpeed;
+        if(this.remainingRotatingScore == 0){
+            this.rotatingCoefficient = 0;
+        }else{
+            this.rotatingCoefficient = 100 / this.remainingRotatingScore;
+        }
         if(DEBUG){
             console.log("[RotatingGameObject] calculateRotatingCoefficient: rotatingCoefficient -> " + this.rotatingCoefficient);
         }
     }
 
-    updateFrameTimes(){
+    updateCurrentFrameTime(){
         if(DEBUG){
-            console.log("[RotatingGameObject] updateFrameTimes: BEFORE frameTimes[0] -> " + this.frameTimes[0]);
+            console.log("[RotatingGameObject] updateCurrentFrameTime: BEFORE frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
         }
-        for(var i = 0; i < this.frameTimes.length; i++){
-            this.frameTimes[i] = Math.round(this.originalFrameTimes[i]*this.rotatingCoefficient);
-        }
+        
+        this.frameTimes[this.currFrame] = Math.round(this.originalFrameTimes[this.currFrame]*this.rotatingCoefficient);
+        
         if(DEBUG){
-            console.log("[RotatingGameObject] updateFrameTimes: AFTER frameTimes[0] -> " + this.frameTimes[0]);
+            console.log("[RotatingGameObject] updateCurrentFrameTime: AFTER frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
         }
     }
 
-    animate(frame, ballSpeed){
-        this.rotatingSpeed = Math.round(ballSpeed);
+
+    resetRotatingGate(){
         this.frameTimes = this.originalFrameTimes.slice();
+        this.remainingRotatingScore = 0;
+        this.rotatingCoefficient = 1;
+    }
+
+    updateAnimationTiedToScore(remainingRotatingScore){
+        //this.updateFrameTimes();
+        this.remainingRotatingScore = remainingRotatingScore;
         this.calculateRotatingCoefficient();
-        if(DEBUG){
-            console.log("[RotatingGameObject] animate: rotatingSpeed -> " + this.rotatingSpeed);
-        }
-        super.animate(frame);
+        this.updateCurrentFrameTime();
+        this.updateAnimation(this.deltaTime);
     }
 
     updateAnimation(deltaTime) {
-        if (!this.hasAnimation || !this.isAnimating || this.rotatingSpeed == 0) return;
+        if (!this.hasAnimation || !this.isAnimating || this.remainingRotatingScore == 0){
+            return;
+        }
         //Update the frameTime values depending on the ballSpeed and reduce the ballSpeed
-        this.updateFrameTimes();
 
         this.currTiming += deltaTime;
-
+        if(DEBUG){
+            console.log("[RotatingGameObject] updateAnimation: deltaTime -> " + deltaTime);
+            console.log("[RotatingGameObject] updateAnimation: currTiming -> " + this.currTiming);
+            console.log("[RotatingGameObject] updateAnimation: this.frameTimes[this.currFrame] -> " + this.frameTimes[this.currFrame]);
+        }
         if (this.currTiming >= this.frameTimes[this.currFrame]) {
             this.currTiming = 0;
             super.updateFrame();
         }
+    }
 
-        this.rotatingSpeed --;
-        this.calculateRotatingCoefficient();
+    update(deltaTime){
+        this.deltaTime = deltaTime;
     }
 }

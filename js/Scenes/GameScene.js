@@ -13,8 +13,8 @@ function GameScene() {
     this.hasPlungerReleased = false;
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
+    this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
-    this.rotationAnimationOn = false;
     this.gameHasFinished = false;
     this.flashEnabled = true;
     this.flash = false;
@@ -348,6 +348,9 @@ function GameScene() {
             if(DEBUG){
                 console.log(self.remainingRotatingScore);   
             }
+
+            self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
+
             if(self.remainingRotatingScore > 150){
                 self.score+=10;
                 self.scoreIncrementForExtraBall+=10; 
@@ -360,7 +363,8 @@ function GameScene() {
                 
             }
         }else{
-            self.rotationAnimationOn = false;
+            if(self.rotatingGateEntity != null)
+                self.rotatingGateEntity.resetRotatingGate();
         } 
     }
 
@@ -590,19 +594,13 @@ function GameScene() {
     }
 
     this.handleRotatingGateCollision = function(rotatingEntity) {
-        //TODO: Add rotating gate score increasing logic
+
         const rate = 0.01;
+        self.rotatingGateEntity = rotatingEntity;
         let ballSpeed = Math.sqrt((this.properties.ball.velocity.x) * (this.properties.ball.velocity.x)
          + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
-
-        if(!self.rotationAnimationOn){
-            if (rotatingEntity.hasAnimation) {
-                rotatingEntity.animate(0, ballSpeed);
-                self.rotationAnimationOn = true;
-            }
-        }
         
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
