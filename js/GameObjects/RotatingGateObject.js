@@ -3,7 +3,7 @@ class RotatingGateObject extends GameObject {
         super(...props);
         this.rotatingSpeed = 0;
         this.rotatingCoefficient = 1;
-        this.originalFrameTimes = this.frameTimes;
+        this.originalFrameTimes = this.frameTimes.slice();
     }
 
     calculateRotatingCoefficient(){
@@ -27,7 +27,7 @@ class RotatingGateObject extends GameObject {
 
     animate(frame, ballSpeed){
         this.rotatingSpeed = Math.round(ballSpeed);
-        this.frameTimes = this.originalFrameTimes;
+        this.frameTimes = this.originalFrameTimes.slice();
         this.calculateRotatingCoefficient();
         if(DEBUG){
             console.log("[RotatingGameObject] animate: rotatingSpeed -> " + this.rotatingSpeed);
