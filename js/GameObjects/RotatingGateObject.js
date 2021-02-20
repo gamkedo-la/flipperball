@@ -1,10 +1,13 @@
 class RotatingGateObject extends GameObject {
     constructor(...props) {
         super(...props);
+        if(DEBUG){
+            console.log("[RotatingGameObject] Constructor");
+        }
         this.rotatingSpeed = 0;
         this.remainingRotatingScore = 0;
         this.rotatingCoefficient = 1;
-        this.originalFrameTimes = this.frameTimes.slice();
+        this.originalFrameTimes = 64;
         this.deltaTime = 0;
         this.currFrame = 0;
         this.isInReverse = false;
@@ -24,25 +27,28 @@ class RotatingGateObject extends GameObject {
 
     updateCurrentFrameTime(){
         if(DEBUG){
+            console.log("[RotatingGameObject] updateCurrentFrameTime: BEFORE originalFrameTimes[" + this.currFrame + "] -> " + this.originalFrameTimes);
             console.log("[RotatingGameObject] updateCurrentFrameTime: BEFORE frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
         }
         
-        this.frameTimes[this.currFrame] = Math.round(this.originalFrameTimes[this.currFrame]*this.rotatingCoefficient);
+        this.frameTimes[this.currFrame] = Math.round(this.originalFrameTimes*this.rotatingCoefficient);
         
         if(DEBUG){
             console.log("[RotatingGameObject] updateCurrentFrameTime: AFTER frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
+            console.log("[RotatingGameObject] updateCurrentFrameTime: AFTER originalFrameTimes -> " + this.originalFrameTimes);
         }
     }
 
 
     resetRotatingGate(){
-        this.frameTimes = this.originalFrameTimes.slice();
+        for(var i = 0; i < this.frameTimes.length; i++){
+            this.frameTimes[i] = this.originalFrameTimes;
+        }
         this.remainingRotatingScore = 0;
         this.rotatingCoefficient = 1;
     }
 
     updateAnimationTiedToScore(remainingRotatingScore){
-        //this.updateFrameTimes();
         this.remainingRotatingScore = remainingRotatingScore;
         this.calculateRotatingCoefficient();
         this.updateCurrentFrameTime();
