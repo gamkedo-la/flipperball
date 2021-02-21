@@ -547,7 +547,7 @@ function GameScene() {
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)
                 break;
             case ENTITY_TYPE.FlipperBumper:
-                self.playAnimation(otherEntity.body.name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
+                self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
                 break;  
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity);

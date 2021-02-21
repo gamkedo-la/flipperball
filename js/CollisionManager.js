@@ -122,40 +122,92 @@ function CollisionManager () {
         for (const ball of this.balls.values()) {
             this.collisions.length = 0; //empty the collisions array
             for (const entity of this.entities.values()) {
+                if (entity.body) {
+                    this.checkSingleBodyCollisions(ball, entity);
+                } else {
+                    this.checkMultiBodyCollisions(ball, entity);
+                }
                 // const willCollide = ball.willCollideWith(entity, deltaTime);
-                const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
-                const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
-                if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { continue;}
-                if (distance <= squaredRadii) {
-                    if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate) {
-                        //TODO: Add handling of rotating way collision
-                        // console.log("CollisionManager: checkCollision: "+ entity.type);
-                        const direction = normalize(ball.body.center, entity.body.center);
-                        this.collisions.push(new Collision(
-                            COLLISION_TYPE.Polygon,
-                            entity,
-                            entity.body,
-                            Math.sqrt(distance) - entity.body.radius,
-                            direction
-                        ));
-                    } else if (entity.body.type === BODY_TYPE.Circle) {
-                        const direction = normalize(ball.body.center, entity.body.center);
-                        this.collisions.push(new Collision(
-                            COLLISION_TYPE.Circle,
-                            entity,
-                            entity.body,
-                            entity.body.radius + ball.body.radius - Math.sqrt(distance),
-                            direction
-                        ));
-                    } else {
-                        const circleLine = circlePolygonCollision(ball, entity);
-                        if (circleLine && circleLine.length > 0) {
-                            this.collisions.push(...circleLine);
+                
+            }
+            ball.resolveCollisions(this.collisions);
+        }
+    }
+
+    this.checkSingleBodyCollisions = function(ball, entity) {
+        const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
+        const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
+        if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { return;}
+        if (distance <= squaredRadii) {
+            if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate) {
+                //TODO: Add handling of rotating way collision
+                // console.log("CollisionManager: checkCollision: "+ entity.type);
+                const direction = normalize(ball.body.center, entity.body.center);
+                this.collisions.push(new Collision(
+                    COLLISION_TYPE.Polygon,
+                    entity,
+                    entity.body,
+                    Math.sqrt(distance) - entity.body.radius,
+                    direction
+                ));
+            } else if (entity.body.type === BODY_TYPE.Circle) {
+                const direction = normalize(ball.body.center, entity.body.center);
+                this.collisions.push(new Collision(
+                    COLLISION_TYPE.Circle,
+                    entity,
+                    entity.body,
+                    entity.body.radius + ball.body.radius - Math.sqrt(distance),
+                    direction
+                ));
+            } else {
+                const circleLine = circlePolygonCollision(ball, entity);
+                if (circleLine && circleLine.length > 0) {
+                    this.collisions.push(...circleLine);
+                }
+            }
+        }
+    }
+
+    this.checkMultiBodyCollisions = function(ball, entity) {
+        for (const entityBody of entity.bodies) {
+            const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entityBody.center.x, entityBody.center.y);
+            const squaredRadii = (ball.body.radius + entityBody.radius) * (ball.body.radius + entityBody.radius);
+            if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { continue;}
+            if (distance <= squaredRadii) {
+                if (entity.type == ENTITY_TYPE.RotatingGate || entityBody.name == ENTITY_NAME.RotatingGate) {
+                    //TODO: Add handling of rotating way collision
+                    // console.log("CollisionManager: checkCollision: "+ entity.type);
+                    const direction = normalize(ball.body.center, entityBody.center);
+                    this.collisions.push(new Collision(
+                        COLLISION_TYPE.Polygon,
+                        entity,
+                        entityBody,
+                        Math.sqrt(distance) - entityBody.radius,
+                        direction
+                    ));
+                } else if (entityBody.type === BODY_TYPE.Circle) {
+                    const direction = normalize(ball.body.center, entityBody.center);
+                    this.collisions.push(new Collision(
+                        COLLISION_TYPE.Circle,
+                        entity,
+                        entityBody,
+                        entityBody.radius + ball.body.radius - Math.sqrt(distance),
+                        direction
+                    ));
+                } else {
+                    const result = [];
+                    for (const edge of entityBody.edges) {
+                        const coll = circleLineCollision(ball, edge);
+                        if (coll != null) {
+                            result.push(new Collision(COLLISION_TYPE.Polygon, entity, edge, coll.dist, coll.dir, coll.point, edge));
                         }
+                    }
+                    // const circleLine = circlePolygonCollision(ball, entity);
+                    if (result.length > 0) {
+                        this.collisions.push(...result);
                     }
                 }
             }
-            ball.resolveCollisions(this.collisions);
         }
     }
 

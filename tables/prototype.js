@@ -538,56 +538,28 @@
                  "name":"flipper_bumper_left",
                  "polygon":[
                         {
-                         "x":0,
-                         "y":0
+                         "x":0.75,
+                         "y":3.76136
                         }, 
                         {
-                         "x":0.25,
+                         "x":0.875,
                          "y":134.75
                         }, 
                         {
-                         "x":2.5,
-                         "y":138.5
+                         "x":3.875,
+                         "y":138.375
                         }, 
                         {
                          "x":45.25,
-                         "y":178.25
-                        }, 
-                        {
-                         "x":48.5,
-                         "y":179.5
-                        }, 
-                        {
-                         "x":51.25,
-                         "y":179.5
-                        }, 
-                        {
-                         "x":54.75,
-                         "y":176.25
+                         "y":178.125
                         }, 
                         {
                          "x":55.25,
                          "y":172.75
                         }, 
                         {
-                         "x":19,
-                         "y":-0.25
-                        }, 
-                        {
-                         "x":17,
-                         "y":-4
-                        }, 
-                        {
-                         "x":13,
-                         "y":-6.25
-                        }, 
-                        {
-                         "x":6,
-                         "y":-6.25
-                        }, 
-                        {
-                         "x":2,
-                         "y":-4.25
+                         "x":19.3636,
+                         "y":0.659091
                         }],
                  "properties":[
                         {
@@ -646,8 +618,8 @@
                  "name":"flipper_left",
                  "polygon":[
                         {
-                         "x":0.855069130434799,
-                         "y":-2.47826086956525
+                         "x":0.855069,
+                         "y":-2.47826
                         }, 
                         {
                          "x":-125.261,
@@ -680,12 +652,12 @@
                  "name":"flipper_right",
                  "polygon":[
                         {
-                         "x":-10.9394272727274,
-                         "y":7.3030236363636
+                         "x":-10.9394,
+                         "y":7.30302
                         }, 
                         {
-                         "x":-132.006391304348,
-                         "y":103.400391304348
+                         "x":-132.006,
+                         "y":103.4
                         }, 
                         {
                          "x":-120.515,
@@ -800,12 +772,12 @@
                          "y":166.159
                         }, 
                         {
-                         "x":-90.9545727272728,
-                         "y":227.909272727273
+                         "x":-90.9546,
+                         "y":227.909
                         }, 
                         {
-                         "x":-50.7954454545454,
-                         "y":265.249636363636
+                         "x":-50.7954,
+                         "y":265.25
                         }, 
                         {
                          "x":-0.25,
@@ -948,40 +920,12 @@
                          "y":-134.545
                         }, 
                         {
-                         "x":-1.81818,
-                         "y":-138.545
-                        }, 
-                        {
-                         "x":-5.81818,
-                         "y":-140.545
-                        }, 
-                        {
-                         "x":-12.5455,
-                         "y":-140.727
-                        }, 
-                        {
-                         "x":-16.3636,
-                         "y":-138.727
-                        }, 
-                        {
                          "x":-18.7273,
                          "y":-134.545
                         }, 
                         {
                          "x":-54.3636,
                          "y":38
-                        }, 
-                        {
-                         "x":-54.5455,
-                         "y":42.3636
-                        }, 
-                        {
-                         "x":-51.6364,
-                         "y":45.2727
-                        }, 
-                        {
-                         "x":-48.3636,
-                         "y":45.2727
                         }, 
                         {
                          "x":-44.9091,
@@ -1335,6 +1279,78 @@
                  "width":13.9513,
                  "x":513.317,
                  "y":120.375
+                }, 
+                {
+                 "ellipse":true,
+                 "height":19,
+                 "id":105,
+                 "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":19,
+                 "x":372.667,
+                 "y":179.417
+                }, 
+                {
+                 "ellipse":true,
+                 "height":12,
+                 "id":106,
+                 "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":12,
+                 "x":415.375,
+                 "y":353
+                }, 
+                {
+                 "ellipse":true,
+                 "height":19,
+                 "id":108,
+                 "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":19,
+                 "x":784.166666666667,
+                 "y":189.5
+                }, 
+                {
+                 "ellipse":true,
+                 "height":12,
+                 "id":109,
+                 "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":12,
+                 "x":748.666666666667,
+                 "y":364
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1343,7 +1359,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":105,
+ "nextobjectid":110,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

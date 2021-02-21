@@ -63,11 +63,13 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 bodyData = bodyData[0];
             }
             
-            if (obj.type === 'ball') {                
+            if (obj.type === ENTITY_TYPE.Ball) {                
                 self.balls.push(new Ball(obj, bodyData));
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {                
                 self.flippers.push(new Flipper(obj, bodyData));
-            } else if (obj.type === 'trigger') {                
+            } else if (obj.type === ENTITY_TYPE.FlipperBumper) {
+                result.push(new FlipperBumper(obj, bodyData));
+            } else if (obj.type === ENTITY_TYPE.Trigger) {                
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {                
                 self.plunger = new Plunger(obj, bodyData);

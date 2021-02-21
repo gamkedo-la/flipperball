@@ -473,8 +473,8 @@
                  "name":"flipper_bumper_left",
                  "polygon":[
                         {
-                         "x":0,
-                         "y":0
+                         "x":0.75,
+                         "y":0.75
                         }, 
                         {
                          "x":0.25,
@@ -485,44 +485,16 @@
                          "y":138.5
                         }, 
                         {
-                         "x":45.25,
-                         "y":178.25
+                         "x":46.3409090909091,
+                         "y":178.795454545455
                         }, 
                         {
-                         "x":48.5,
-                         "y":179.5
-                        }, 
-                        {
-                         "x":51.25,
-                         "y":179.5
-                        }, 
-                        {
-                         "x":54.75,
-                         "y":176.25
-                        }, 
-                        {
-                         "x":55.25,
-                         "y":172.75
+                         "x":55.8863636363636,
+                         "y":173.75
                         }, 
                         {
                          "x":19,
                          "y":-0.25
-                        }, 
-                        {
-                         "x":17,
-                         "y":-4
-                        }, 
-                        {
-                         "x":13,
-                         "y":-6.25
-                        }, 
-                        {
-                         "x":6,
-                         "y":-6.25
-                        }, 
-                        {
-                         "x":2,
-                         "y":-4.25
                         }],
                  "properties":[
                         {
@@ -595,48 +567,20 @@
                          "y":0
                         }, 
                         {
-                         "x":0.181818,
-                         "y":-134.545
+                         "x":0.0909089090908992,
+                         "y":-131.726818181818
                         }, 
                         {
-                         "x":-1.81818,
-                         "y":-138.545
-                        }, 
-                        {
-                         "x":-5.81818,
-                         "y":-140.545
-                        }, 
-                        {
-                         "x":-12.5455,
-                         "y":-140.727
-                        }, 
-                        {
-                         "x":-16.3636,
-                         "y":-138.727
-                        }, 
-                        {
-                         "x":-18.7273,
-                         "y":-134.545
+                         "x":-18.4545727272728,
+                         "y":-134.090454545455
                         }, 
                         {
                          "x":-54.3636,
-                         "y":38
+                         "y":38.7272727272727
                         }, 
                         {
-                         "x":-54.5455,
-                         "y":42.3636
-                        }, 
-                        {
-                         "x":-51.6364,
-                         "y":45.2727
-                        }, 
-                        {
-                         "x":-48.3636,
-                         "y":45.2727
-                        }, 
-                        {
-                         "x":-44.9091,
-                         "y":44
+                         "x":-44.4545545454545,
+                         "y":44.6363636363637
                         }, 
                         {
                          "x":-2.18182,
@@ -1304,6 +1248,78 @@
                  "width":53,
                  "x":568.333,
                  "y":73.6667
+                }, 
+                {
+                 "ellipse":true,
+                 "height":19,
+                 "id":145,
+                 "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":19,
+                 "x":321.75,
+                 "y":224
+                }, 
+                {
+                 "ellipse":true,
+                 "height":12,
+                 "id":146,
+                 "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":12,
+                 "x":364.75,
+                 "y":398.25
+                }, 
+                {
+                 "ellipse":true,
+                 "height":19,
+                 "id":147,
+                 "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":19,
+                 "x":843.25,
+                 "y":241.25
+                }, 
+                {
+                 "ellipse":true,
+                 "height":12,
+                 "id":148,
+                 "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":31
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":12,
+                 "x":807.636363636364,
+                 "y":415.818181818182
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1312,7 +1328,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":145,
+ "nextobjectid":149,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

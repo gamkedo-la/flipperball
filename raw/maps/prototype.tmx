@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="105">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="110">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
@@ -204,7 +204,7 @@
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
-   <polygon points="0,0 0.25,134.75 2.5,138.5 45.25,178.25 48.5,179.5 51.25,179.5 54.75,176.25 55.25,172.75 19,-0.25 17,-4 13,-6.25 6,-6.25 2,-4.25"/>
+   <polygon points="0.75,3.76136 0.875,134.75 3.875,138.375 45.25,178.125 55.25,172.75 19.3636,0.659091"/>
   </object>
   <object id="41" name="plunger" type="plunger" x="912" y="248.25">
    <properties>
@@ -255,7 +255,7 @@
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
-   <polygon points="0,0 0.181818,-134.545 -1.81818,-138.545 -5.81818,-140.545 -12.5455,-140.727 -16.3636,-138.727 -18.7273,-134.545 -54.3636,38 -54.5455,42.3636 -51.6364,45.2727 -48.3636,45.2727 -44.9091,44 -2.18182,3.63636"/>
+   <polygon points="0,0 0.181818,-134.545 -18.7273,-134.545 -54.3636,38 -44.9091,44 -2.18182,3.63636"/>
   </object>
   <object id="59" name="lane_trigger" x="805.453" y="216.727" width="26" height="26">
    <properties>
@@ -335,6 +335,30 @@
   <object id="102" name="light_trigger" x="513.317" y="120.375" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="103"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="179.417" width="19" height="19">
+   <properties>
+    <property name="dynObjConn" type="object" value="30"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="106" name="flipper_bumper_left" type="flipper_bumper" x="415.375" y="353" width="12" height="12">
+   <properties>
+    <property name="dynObjConn" type="object" value="30"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="108" name="flipper_bumper_right" type="flipper_bumper" x="784.167" y="189.5" width="19" height="19">
+   <properties>
+    <property name="dynObjConn" type="object" value="31"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="109" name="flipper_bumper_right" type="flipper_bumper" x="748.667" y="364" width="12" height="12">
+   <properties>
+    <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
   </object>
