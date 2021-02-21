@@ -544,10 +544,10 @@ function GameScene() {
                 }
                 self.score += otherEntity.score;   
                 self.scoreIncrementForExtraBall += otherEntity.score; 
-                self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y)
+                self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y);
                 break;
             case ENTITY_TYPE.FlipperBumper:
-                self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
+                self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
                 break;  
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity, ball);
@@ -557,6 +557,13 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Habitrail:
                 self.handleHabitrailCollision(otherEntity);
+                break;
+            case ENTITY_TYPE.Plane:
+                this.collisionManager.unregisterEntity(otherEntity);
+                if (otherEntity.hasAnimation) {
+                    otherEntity.animate(0);
+                }
+                // self.playAnimation(otherEntity.body.name, ANIMATIONS.PLANE_EXPLOSION, otherEntity.x, otherEntity.y);
                 break;
             default:
                 break;
@@ -636,5 +643,10 @@ function GameScene() {
             }
         }
         this.activeHabitrails = [];
+    }
+
+    this.removeEntity = function (entityToRemove) {
+        // this.collisionManager.unregisterEntity(entityToRemove);
+        self.table.dynamicObjects.splice(self.table.dynamicObjects.indexOf(entityToRemove), 1);
     }
 }

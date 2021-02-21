@@ -106,7 +106,8 @@ const ENTITY_TYPE = {
 	Gate: 'gate',
 	RotatingGate: 'rotating_gate',
 	Habitrail: 'habitrail',
-	LetterLight: 'letter_light'
+	LetterLight: 'letter_light',
+	Plane: 'plane'
 };
 
 const TRIGGER_TYPE = {
@@ -128,7 +129,8 @@ const ENTITY_NAME = {
 	FlipperBumperLeft: 'flipper_bumper_left',
 	Cyclone: 'cyclone',
 	LetterLight: 'letter_light',
-	RotatingGate: 'rotating_gate'
+	RotatingGate: 'rotating_gate',
+	PlaneRed: 'plane_red'
 }
 
 const COLLISION_TYPE = {

@@ -32,6 +32,7 @@ class GameObject {
         this.animationSpritesheet = animationData.animationSpritesheet;
 
         this.isAnimating = animationData.isAnimating || false;
+        this.isFinished = false;
         this.frameWidth = animationData.frameWidth || 0;
         this.frameHeight = animationData.frameHeight || 0;
         this.currFrame = 0; // current frame index
@@ -254,6 +255,7 @@ class GameObject {
                     newFrameIndex = this.currFrame + 1;
                 } else {
                     this.isAnimating = false;
+                    this.isFinished = true;
                     newFrameIndex = 0;
                 }                
             } 
@@ -267,6 +269,7 @@ class GameObject {
                     newFrameIndex = 0;
                 } else {
                     this.isAnimating = false;
+                    this.isFinished = true;
                     newFrameIndex = 0;
                 }
             }

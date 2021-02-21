@@ -96,14 +96,19 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     foundCollisionData.type = 'NA';
                 }
                 result.push(habitrail);
-            }
-             else {                
+            } else {                
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
                         ...ANIMATIONS.CIRCLE_BUMPER,
                         animationSpritesheet: images[ANIMATIONS.CIRCLE_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newGameObject);
+                } else if (obj.type === ENTITY_TYPE.Plane) {
+                    const newPlane = new Plane(obj, bodyData, {
+                        ...ANIMATIONS.PLANE_EXPLOSION,
+                        animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[obj.name]],
+                    });
+                    result.push(newPlane);
                 } else {
                     result.push(new GameObject(obj, bodyData));
                 }
@@ -199,7 +204,6 @@ function TriggerMapObject(objData, bodyData) {
     this.y = objData.y - objData.height;
     this.width = objData.width;
     this.height = objData.height;
-    
     this.type = objData.type;
     this.image = images[objData.name];
     this.subType = objData.name;

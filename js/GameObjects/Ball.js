@@ -116,8 +116,7 @@ class Ball extends GameObject {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate){
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
-                }
-                else{
+                } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     if (collision.edge) {
                         this.respondToPolygonCollision(collision);
@@ -166,6 +165,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Habitrail:
             case ENTITY_TYPE.RotatingGate:
             case ENTITY_TYPE.Gate:
+            case ENTITY_TYPE.Plane:
                 return true;
             default:
                 return false;
