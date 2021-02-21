@@ -111,7 +111,8 @@ const ENTITY_TYPE = {
 
 const TRIGGER_TYPE = {
 	Lane: 'lane_trigger',
-	Light: 'light_trigger'
+	Light: 'light_trigger',
+	BallCatch: 'ball_catch'
 }
 
 const ENTITY_NAME = {

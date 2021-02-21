@@ -146,18 +146,6 @@
                  "y":178
                 }, 
                 {
-                 "gid":29,
-                 "height":54,
-                 "id":91,
-                 "name":"ball_catch",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":54,
-                 "x":310,
-                 "y":80
-                }, 
-                {
                  "gid":28,
                  "height":24,
                  "id":92,
@@ -455,6 +443,29 @@
                  "width":54,
                  "x":568.333,
                  "y":127.667
+                }, 
+                {
+                 "gid":29,
+                 "height":54,
+                 "id":91,
+                 "name":"ball_catch",
+                 "properties":[
+                        {
+                         "name":"ball_catch",
+                         "type":"object",
+                         "value":149
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":54,
+                 "x":307,
+                 "y":78.6666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1320,6 +1331,29 @@
                  "width":12,
                  "x":807.636363636364,
                  "y":415.818181818182
+                }, 
+                {
+                 "ellipse":true,
+                 "height":30,
+                 "id":149,
+                 "name":"ball_catch",
+                 "properties":[
+                        {
+                         "name":"catcher",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":91
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":30,
+                 "x":318.333333333333,
+                 "y":35.6666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1328,7 +1362,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":149,
+ "nextobjectid":150,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

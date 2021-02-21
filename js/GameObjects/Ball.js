@@ -8,6 +8,7 @@ class Ball extends GameObject {
         this.radius = (this.width + this.height) / 4; //Average of half width and half height
         this.triggersCollided = {};
         this.hasMotionTrail = true;
+        this.resetPos = {x: this.x, y: this.y};
     }
 
     update(deltaTime) {
@@ -43,6 +44,18 @@ class Ball extends GameObject {
         this.body.update(this.x - this.oldX, this.y - this.oldY);
         this.oldX = this.x;
         this.oldY = this.y;
+    }
+
+    setVelocity(x, y) {
+        this.velocity.x = x;
+        this.velocity.y = y;
+        this.oldVelocity.x = x;
+        this.oldVelocity.y = y;
+    }
+
+    reset() {
+        this.setPosition(this.resetPos.x, this.resetPos.y);
+        this.setVelocity(0, 0);
     }
 
     /**
@@ -84,15 +97,15 @@ class Ball extends GameObject {
                         if (!collision.otherEntity.hasCollided) {
                             collision.otherEntity.hasCollided = true;
                             this.triggersCollided[Date.now()] = collision.otherEntity;
-                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                         }                        
                     }
-                    if (collision.otherEntity.subType === TRIGGER_TYPE.Light) {
+                    if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
                         if (DEBUG) { console.log("Light Trigger Hit"); }
                         if (!collision.otherEntity.hasCollided) {
                             collision.otherEntity.hasCollided = true;
                             this.triggersCollided[Date.now()] = collision.otherEntity;
-                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                         }
                     }
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
@@ -100,12 +113,12 @@ class Ball extends GameObject {
                     this.vxAdjustment = -this.velocity.x;
                     this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Habitrail) {
-                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate){
-                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 }
                 else{
-                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity);
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     if (collision.edge) {
                         this.respondToPolygonCollision(collision);
                     } else {

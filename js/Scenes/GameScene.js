@@ -522,7 +522,7 @@ function GameScene() {
         
     }
 
-    this.notifyBallCollision = function(otherEntity) {    
+    this.notifyBallCollision = function(otherEntity, ball) {    
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
@@ -550,7 +550,7 @@ function GameScene() {
                 self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y)
                 break;  
             case ENTITY_TYPE.Trigger:
-                self.handleTriggerCollision(otherEntity);
+                self.handleTriggerCollision(otherEntity, ball);
                 break;
             case ENTITY_TYPE.RotatingGate:
                 self.handleRotatingGateCollision(otherEntity);
@@ -562,7 +562,7 @@ function GameScene() {
                 break;
         }
         
-        if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body.name != 'habitrail') {
+        if (otherEntity.type != ENTITY_TYPE.Habitrail && this.activeHabitrails.length > 0 && otherEntity.body?.name != 'habitrail') {
             this.disableHabitrailColliders();
         }
 
@@ -585,12 +585,15 @@ function GameScene() {
        self.table.animations.push(newAnimation);
     }
 
-    this.handleTriggerCollision = function (triggerEntity) {
+    this.handleTriggerCollision = function (triggerEntity, ball) {
         self.score += triggerEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);
             self.playAnimation(lightTarget.body.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
+        } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
+            ball.reset();
+            self.transitionIn();
         }
     }
 
