@@ -302,10 +302,10 @@
    <ellipse/>
   </object>
   <object id="115" name="right_pipe" type="wall" x="893.5" y="178.5">
-   <polygon points="0,0 0.5,-77 -38,-50.5 -38,-0.5"/>
+   <polygon points="0,0 0.166667,-53.6667 -38,-48.8333 -38,-0.5"/>
   </object>
   <object id="116" name="left_pipe" type="wall" x="290.5" y="178.5">
-   <polygon points="0,0 38,0 38,-52 0,-76.5"/>
+   <polygon points="0,0 38,0 37.6667,-49.6667 0.333333,-54.8333"/>
   </object>
   <object id="131" name="habitrail_gateway" x="432.279" y="180.968" width="43.3333" height="15.7464" rotation="319.588">
    <ellipse/>
