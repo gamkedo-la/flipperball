@@ -117,8 +117,8 @@
     <property name="stop" type="int" value="535"/>
    </properties>
   </object>
-  <object id="14" name="flipper_left" gid="2" x="391" y="532" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="626" y="533" width="170" height="124"/>
+  <object id="14" name="flipper_left" gid="2" x="386" y="532" width="170" height="124"/>
+  <object id="15" name="flipper_right" gid="3" x="631" y="533" width="170" height="124"/>
   <object id="16" name="ball" gid="16" x="931.667" y="290.333" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="373" y="365.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="748.5" y="377" width="55" height="186"/>
@@ -137,8 +137,8 @@
     <property name="score" type="int" value="100"/>
    </properties>
   </object>
-  <object id="48" name="drain_rail_right" gid="20" x="765" y="460" width="82" height="270"/>
-  <object id="49" name="drain_rail_left" gid="19" x="331.636" y="448.182" width="82" height="270"/>
+  <object id="48" name="drain_rail_right" gid="20" x="770" y="460" width="82" height="270"/>
+  <object id="49" name="drain_rail_left" gid="19" x="326.636" y="448.182" width="82" height="270"/>
   <object id="58" name="lane_trigger" gid="21" x="816.18" y="242.818" width="5" height="26">
    <properties>
     <property name="score" type="int" value="25"/>
@@ -212,17 +212,17 @@
    </properties>
    <polygon points="17.75,46.7727 17.75,59.5 47.75,59.5 47.75,46.7727 37.75,46.7727"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="555.485" y="515.667">
+  <object id="42" name="flipper_left" type="flipper" x="550.485" y="515.667">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
-   <polygon points="2.33333,-2 -126.636,-104.575 -154.242,-54.5455 -11.8485,16.2727"/>
+   <polygon points="0.855069,-2.47826 -125.261,-103.325 -154.992,-56.4205 -11.8485,16.2727"/>
   </object>
-  <object id="43" name="flipper_right" type="flipper" x="762.545" y="409.333">
+  <object id="43" name="flipper_right" type="flipper" x="767.545" y="409.333">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
-   <polygon points="-13.6667,9.66666 -133.789,104.183 -120.515,123.455 21.8484,51.394"/>
+   <polygon points="-10.9394,7.30302 -132.006,103.4 -120.515,123.455 21.8484,51.394"/>
   </object>
   <object id="45" name="ball" type="ball" x="931.333" y="264.667" width="26" height="26">
    <properties>
@@ -233,17 +233,17 @@
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
    <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 -139.5,-414 0,-299"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="842.25" y="188.75">
+  <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="188.75">
    <properties>
     <property name="dynObjConn" type="object" value="48"/>
    </properties>
-   <polygon points="0,0 -10.5,1.5 -10.25,161.159 -80.9773,231.432 -49.3409,260.886 -0.25,169.159"/>
+   <polygon points="0,0 -10.5,1.5 -12.75,166.159 -90.9546,227.909 -50.7954,265.25 -0.25,169.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="333" y="177.182">
+  <object id="52" name="drain_rail_left" type="drain_divider" x="328" y="177.182">
    <properties>
     <property name="dynObjConn" type="object" value="49"/>
    </properties>
-   <polygon points="0,0 0,164.364 60.5455,277.818 80.1818,230.909 10.1818,161.091 9.81818,1.63636"/>
+   <polygon points="0,0 1.5,172.864 62.7955,277.318 96.9318,235.159 15.4318,165.341 9.81818,1.63636"/>
   </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
    <polygon points="0,-80 -1,599.5 210.5,598.5 13.5,401.5 14,105.5 153.5,-11 13.0214,-80.4187"/>
@@ -263,37 +263,37 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="60" name="flipper_right" type="flipper_tip" x="626.674" y="509.959" width="23" height="23">
+  <object id="60" name="flipper_right" type="flipper_tip" x="631.674" y="509.959" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="61" name="flipper_right" type="flipper_base" x="741.341" y="410.292" width="55" height="55">
+  <object id="61" name="flipper_right" type="flipper_base" x="746.341" y="410.292" width="55" height="55">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="62" name="flipper_left" type="flipper_tip" x="536.667" y="510" width="23" height="23">
+  <object id="62" name="flipper_left" type="flipper_tip" x="531.667" y="510" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="63" name="flipper_left" type="flipper_base" x="389.833" y="409.5" width="55" height="55">
+  <object id="63" name="flipper_left" type="flipper_base" x="384.833" y="409.5" width="55" height="55">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="66" name="flipper_right" type="flipper_inner" x="760" y="398.667">
+  <object id="66" name="flipper_right" type="flipper_inner" x="765" y="398.667">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
   </object>
-  <object id="67" name="flipper_left" type="flipper_inner" x="556" y="515">
+  <object id="67" name="flipper_left" type="flipper_inner" x="551" y="515">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
