@@ -557,6 +557,7 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Habitrail:
                 self.handleHabitrailCollision(otherEntity);
+                break;
             default:
                 break;
         }

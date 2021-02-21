@@ -144,7 +144,7 @@ function CollisionManager () {
                             COLLISION_TYPE.Circle,
                             entity,
                             entity.body,
-                            Math.sqrt(distance) - entity.body.radius,
+                            entity.body.radius + ball.body.radius - Math.sqrt(distance),
                             direction
                         ));
                     } else {
