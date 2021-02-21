@@ -44,7 +44,7 @@ class GameObject {
         this.trailPositions = []; // array of previous object positions to be used to maintain the trail
         this.motionTrailLength = 20; // default trail length of 20
         this.minTrailVelocity = 650; // minimum "absolute" velocity required for an object to drop a motion trail
-        this.trailFadeStrength = .90; // Each segement of the trail will be 90% the size of the previous by default
+        this.trailFadeStrength = 0.90; // Each segement of the trail will be 90% the size of the previous by default
 
         if (bodyData) {
           this.body = new CollisionBody(bodyData);

@@ -208,7 +208,7 @@ function TriggerMapObject(objData, bodyData) {
     this.hasCollided = false;
     this.score = 0;
     
-    for (i = 0; i < objData.properties.length; i++) {
+    for (i = 0; i < objData.properties?.length; i++) {
         switch (objData.properties[i].name) {
             case "score":
                 this.score = objData.properties[i].value;
@@ -218,6 +218,9 @@ function TriggerMapObject(objData, bodyData) {
                 this.targ_light = objData.properties[i].value;
                 console.log("Target Light set to " + this.targ_light + " for " + objData.name);
                 break;
+            case "ball_catch":
+                this.ball_catch = objData.properties[i].value;
+                console.log("Ball Catch set to " + this.ball_catch + " for " + objData.name);
             default:
                 break;
         }
