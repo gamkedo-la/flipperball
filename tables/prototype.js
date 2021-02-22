@@ -26,16 +26,16 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":28,
+                 "gid":36,
                  "height":600,
-                 "id":56,
-                 "name":"cloud_bg",
+                 "id":110,
+                 "name":"cloud_bg_top_empty",
                  "rotation":0,
                  "type":"",
-                 "visible":false,
+                 "visible":true,
                  "width":720,
-                 "x":280,
-                 "y":600
+                 "x":276,
+                 "y":599
                 }, 
                 {
                  "gid":4,
@@ -120,6 +120,190 @@
          "id":4,
          "name":"Dynamic",
          "objects":[
+                {
+                 "gid":33,
+                 "height":96,
+                 "id":111,
+                 "name":"cloud_6",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":144,
+                 "x":415,
+                 "y":487
+                }, 
+                {
+                 "gid":34,
+                 "height":96,
+                 "id":112,
+                 "name":"cloud_7",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":144,
+                 "x":580,
+                 "y":484
+                }, 
+                {
+                 "gid":28,
+                 "height":78,
+                 "id":113,
+                 "name":"cloud_1",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":108,
+                 "x":278,
+                 "y":84
+                }, 
+                {
+                 "gid":29,
+                 "height":36,
+                 "id":114,
+                 "name":"cloud_2",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":15
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":51,
+                 "x":357,
+                 "y":165
+                }, 
+                {
+                 "gid":30,
+                 "height":54,
+                 "id":115,
+                 "name":"cloud_3",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":7
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":81,
+                 "x":441,
+                 "y":251
+                }, 
+                {
+                 "gid":31,
+                 "height":66,
+                 "id":116,
+                 "name":"cloud_4",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":108,
+                 "x":589,
+                 "y":143
+                }, 
+                {
+                 "gid":32,
+                 "height":39,
+                 "id":117,
+                 "name":"cloud_5",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":66,
+                 "x":682,
+                 "y":313
+                }, 
+                {
+                 "gid":32,
+                 "height":39,
+                 "id":118,
+                 "name":"cloud_5",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":66,
+                 "x":828,
+                 "y":129
+                }, 
                 {
                  "gid":1,
                  "height":255,
@@ -1359,7 +1543,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":110,
+ "nextobjectid":119,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1377,7 +1561,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":26,
+         "tilecount":33,
          "tileheight":598,
          "tiles":[
                 {
@@ -1558,12 +1742,138 @@
                  "image":"..\/img\/tables\/letter_light_lit.png",
                  "imageheight":24,
                  "imagewidth":24
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/cloud_1.png",
+                 "imageheight":78,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/cloud_2.png",
+                 "imageheight":36,
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":15
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/img\/tables\/cloud_3.png",
+                 "imageheight":54,
+                 "imagewidth":81,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":7
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/img\/tables\/cloud_4.png",
+                 "imageheight":66,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/img\/tables\/cloud_5.png",
+                 "imageheight":39,
+                 "imagewidth":66,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/img\/tables\/cloud_6.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/img\/tables\/cloud_7.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":28,
+         "firstgid":35,
          "grid":
             {
              "height":1,
@@ -1573,7 +1883,7 @@
          "margin":0,
          "name":"cloud_bg",
          "spacing":0,
-         "tilecount":1,
+         "tilecount":2,
          "tileheight":600,
          "tiles":[
                 {
@@ -1581,12 +1891,18 @@
                  "image":"..\/raw\/img\/backgrounds\/cloud_bg.png",
                  "imageheight":600,
                  "imagewidth":720
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/img\/tables\/cloud_bg_top_empty.png",
+                 "imageheight":600,
+                 "imagewidth":720
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":29,
+         "firstgid":37,
          "grid":
             {
              "height":1,

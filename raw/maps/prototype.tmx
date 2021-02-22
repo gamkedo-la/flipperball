@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="110">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="119">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="26" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="33" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
@@ -83,14 +83,66 @@
   <tile id="26">
    <image width="24" height="24" source="../../img/tables/letter_light_lit.png"/>
   </tile>
+  <tile id="27" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="10"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
+  </tile>
+  <tile id="28" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="15"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
+  </tile>
+  <tile id="29" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="7"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
+  </tile>
+  <tile id="30" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
+  </tile>
+  <tile id="31" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="25"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
+  </tile>
+  <tile id="32" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="144" height="96" source="../../img/tables/cloud_6.png"/>
+  </tile>
+  <tile id="33" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="144" height="96" source="../../img/tables/cloud_7.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="28" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="1" columns="0">
+ <tileset firstgid="35" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="600" source="../img/backgrounds/cloud_bg.png"/>
   </tile>
+  <tile id="1">
+   <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="29" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="37" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <image width="36" height="75" source="../img/backgrounds/habitrail1.png"/>
@@ -103,7 +155,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="56" name="cloud_bg" gid="28" x="280" y="600" width="720" height="600" visible="0"/>
+  <object id="110" name="cloud_bg_top_empty" gid="36" x="276" y="599" width="720" height="600"/>
   <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
   <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
   <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
@@ -112,6 +164,14 @@
   <object id="79" name="angled_wall_6" gid="25" x="752.667" y="132" width="140" height="142"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
+  <object id="111" name="cloud_6" gid="33" x="415" y="487" width="144" height="96"/>
+  <object id="112" name="cloud_7" gid="34" x="580" y="484" width="144" height="96"/>
+  <object id="113" name="cloud_1" gid="28" x="278" y="84" width="108" height="78"/>
+  <object id="114" name="cloud_2" gid="29" x="357" y="165" width="51" height="36"/>
+  <object id="115" name="cloud_3" gid="30" x="441" y="251" width="81" height="54"/>
+  <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66"/>
+  <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
+  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
   <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="535"/>

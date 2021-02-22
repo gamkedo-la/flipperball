@@ -105,6 +105,8 @@ function loadImages() {
         {imgName: "cloud_3", theFile: "tables/cloud_3.png"},
         {imgName: "cloud_4", theFile: "tables/cloud_4.png"},
         {imgName: "cloud_5", theFile: "tables/cloud_5.png"},
+        {imgName: "cloud_6", theFile: "tables/cloud_6.png"},
+        {imgName: "cloud_7", theFile: "tables/cloud_7.png"},
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
