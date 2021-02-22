@@ -230,11 +230,11 @@ function TriggerMapObject(objData, bodyData) {
                 break;
             case "targ_light":
                 this.targ_light = objData.properties[i].value;
-                console.log("Target Light set to " + this.targ_light + " for " + objData.name);
+                if (DEBUG) { console.log("Target Light set to " + this.targ_light + " for " + objData.name); }
                 break;
             case "ball_catch":
                 this.ball_catch = objData.properties[i].value;
-                console.log("Ball Catch set to " + this.ball_catch + " for " + objData.name);
+                if (DEBUG) { console.log("Ball Catch set to " + this.ball_catch + " for " + objData.name); }
             default:
                 break;
         }
