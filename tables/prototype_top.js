@@ -482,7 +482,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":30
+                         "value":10
                         }, 
                         {
                          "name":"yVelocity",
@@ -505,7 +505,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":25
+                         "value":7
                         }, 
                         {
                          "name":"yVelocity",
@@ -528,7 +528,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":35
+                         "value":15
                         }, 
                         {
                          "name":"yVelocity",
@@ -551,7 +551,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":45
+                         "value":25
                         }, 
                         {
                          "name":"yVelocity",
@@ -574,7 +574,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":20
+                         "value":5
                         }, 
                         {
                          "name":"yVelocity",
@@ -597,7 +597,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":45
+                         "value":25
                         }, 
                         {
                          "name":"yVelocity",
@@ -620,7 +620,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":35
+                         "value":15
                         }, 
                         {
                          "name":"yVelocity",
@@ -1832,7 +1832,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":30
+                         "value":10
                         }, 
                         {
                          "name":"yVelocity",
@@ -1850,7 +1850,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":35
+                         "value":15
                         }, 
                         {
                          "name":"yVelocity",
@@ -1868,7 +1868,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":25
+                         "value":7
                         }, 
                         {
                          "name":"yVelocity",
@@ -1886,7 +1886,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":20
+                         "value":5
                         }, 
                         {
                          "name":"yVelocity",
@@ -1904,7 +1904,7 @@
                         {
                          "name":"xVelocity",
                          "type":"int",
-                         "value":45
+                         "value":25
                         }, 
                         {
                          "name":"yVelocity",

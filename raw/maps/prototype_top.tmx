@@ -118,35 +118,35 @@
   </tile>
   <tile id="14" type="cloud">
    <properties>
-    <property name="xVelocity" type="int" value="30"/>
+    <property name="xVelocity" type="int" value="10"/>
     <property name="yVelocity" type="int" value="0"/>
    </properties>
    <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
   </tile>
   <tile id="15" type="cloud">
    <properties>
-    <property name="xVelocity" type="int" value="35"/>
+    <property name="xVelocity" type="int" value="15"/>
     <property name="yVelocity" type="int" value="0"/>
    </properties>
    <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
   </tile>
   <tile id="16" type="cloud">
    <properties>
-    <property name="xVelocity" type="int" value="25"/>
+    <property name="xVelocity" type="int" value="7"/>
     <property name="yVelocity" type="int" value="0"/>
    </properties>
    <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
   </tile>
   <tile id="17" type="cloud">
    <properties>
-    <property name="xVelocity" type="int" value="20"/>
+    <property name="xVelocity" type="int" value="5"/>
     <property name="yVelocity" type="int" value="0"/>
    </properties>
    <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
   </tile>
   <tile id="18" type="cloud">
    <properties>
-    <property name="xVelocity" type="int" value="45"/>
+    <property name="xVelocity" type="int" value="25"/>
     <property name="yVelocity" type="int" value="0"/>
    </properties>
    <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
