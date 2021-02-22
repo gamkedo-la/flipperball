@@ -26,16 +26,16 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":23,
+                 "gid":42,
                  "height":600,
-                 "id":75,
-                 "name":"cloud_bg_top",
+                 "id":151,
+                 "name":"cloud_bg_top_empty",
                  "rotation":0,
                  "type":"",
-                 "visible":false,
+                 "visible":true,
                  "width":720,
-                 "x":279.132,
-                 "y":599.714
+                 "x":277,
+                 "y":598
                 }, 
                 {
                  "gid":7,
@@ -170,7 +170,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":38,
+                 "gid":44,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -182,7 +182,7 @@
                  "y":128
                 }, 
                 {
-                 "gid":38,
+                 "gid":44,
                  "height":75,
                  "id":138,
                  "name":"habitrail_small_track",
@@ -194,7 +194,7 @@
                  "y":50.3171
                 }, 
                 {
-                 "gid":39,
+                 "gid":45,
                  "height":125,
                  "id":139,
                  "name":"habitrail_track",
@@ -206,7 +206,7 @@
                  "y":17.4
                 }, 
                 {
-                 "gid":39,
+                 "gid":45,
                  "height":125,
                  "id":140,
                  "name":"habitrail_track",
@@ -218,7 +218,7 @@
                  "y":17.0891
                 }, 
                 {
-                 "gid":38,
+                 "gid":44,
                  "height":75,
                  "id":141,
                  "name":"habitrail_small_track",
@@ -230,7 +230,7 @@
                  "y":15.507
                 }, 
                 {
-                 "gid":38,
+                 "gid":44,
                  "height":75,
                  "id":142,
                  "name":"habitrail_small_track",
@@ -397,7 +397,7 @@
                  "y":127
                 }, 
                 {
-                 "gid":37,
+                 "gid":43,
                  "height":75,
                  "id":136,
                  "name":"habitrail_gateway",
@@ -472,6 +472,167 @@
                  "width":51,
                  "x":289,
                  "y":175
+                }, 
+                {
+                 "gid":37,
+                 "height":78,
+                 "id":153,
+                 "name":"cloud_1",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":108,
+                 "x":325,
+                 "y":143
+                }, 
+                {
+                 "gid":39,
+                 "height":54,
+                 "id":154,
+                 "name":"cloud_3",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":81,
+                 "x":544,
+                 "y":196
+                }, 
+                {
+                 "gid":38,
+                 "height":36,
+                 "id":155,
+                 "name":"cloud_2",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":35
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":51,
+                 "x":346,
+                 "y":278
+                }, 
+                {
+                 "gid":41,
+                 "height":39,
+                 "id":156,
+                 "name":"cloud_5",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":45
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":66,
+                 "x":820,
+                 "y":156
+                }, 
+                {
+                 "gid":40,
+                 "height":66,
+                 "id":157,
+                 "name":"cloud_4",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":20
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":108,
+                 "x":686,
+                 "y":388
+                }, 
+                {
+                 "gid":41,
+                 "height":39,
+                 "id":158,
+                 "name":"cloud_5",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":45
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":66,
+                 "x":334,
+                 "y":490
+                }, 
+                {
+                 "gid":38,
+                 "height":36,
+                 "id":159,
+                 "name":"cloud_2",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":35
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"cloud",
+                 "visible":true,
+                 "width":51,
+                 "x":567,
+                 "y":521
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1386,7 +1547,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":151,
+ "nextobjectid":160,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1575,7 +1736,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":14,
+         "tilecount":20,
          "tileheight":600,
          "tiles":[
                 {
@@ -1661,12 +1822,108 @@
                  "image":"..\/img\/tables\/cyclone.png",
                  "imageheight":96,
                  "imagewidth":96
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/img\/tables\/cloud_1.png",
+                 "imageheight":78,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/img\/tables\/cloud_2.png",
+                 "imageheight":36,
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":35
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/img\/tables\/cloud_3.png",
+                 "imageheight":54,
+                 "imagewidth":81,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/img\/tables\/cloud_4.png",
+                 "imageheight":66,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":20
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/img\/tables\/cloud_5.png",
+                 "imageheight":39,
+                 "imagewidth":66,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":45
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/img\/tables\/cloud_bg_top_empty.png",
+                 "imageheight":600,
+                 "imagewidth":720
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":37,
+         "firstgid":43,
          "grid":
             {
              "height":1,

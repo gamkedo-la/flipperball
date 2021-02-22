@@ -46,7 +46,9 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            this.collisionManager.registerEntity(dynamicObj);
+            if (dynamicObj.body || dynamicObj.bodies) {
+                this.collisionManager.registerEntity(dynamicObj);
+            }
         }
 
         for (const wall of self.table.tableColliders) {
@@ -646,7 +648,6 @@ function GameScene() {
     }
 
     this.removeEntity = function (entityToRemove) {
-        // this.collisionManager.unregisterEntity(entityToRemove);
         self.table.dynamicObjects.splice(self.table.dynamicObjects.indexOf(entityToRemove), 1);
     }
 }

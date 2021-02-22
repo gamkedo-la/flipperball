@@ -107,7 +107,8 @@ const ENTITY_TYPE = {
 	RotatingGate: 'rotating_gate',
 	Habitrail: 'habitrail',
 	LetterLight: 'letter_light',
-	Plane: 'plane'
+	Plane: 'plane',
+	Cloud: 'cloud'
 };
 
 const TRIGGER_TYPE = {

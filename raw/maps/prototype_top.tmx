@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="151">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="160">
  <editorsettings>
   <export target="../../tables/prototype_top.js" format="js"/>
  </editorsettings>
@@ -72,7 +72,7 @@
    <image width="34" height="598" source="../../img/tables/chute_wall.png"/>
   </tile>
  </tileset>
- <tileset firstgid="23" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="14" columns="0">
+ <tileset firstgid="23" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="20" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="720" height="600" source="../img/backgrounds/cloud_bg_top.png"/>
@@ -116,8 +116,46 @@
   <tile id="13">
    <image width="96" height="96" source="../../img/tables/cyclone.png"/>
   </tile>
+  <tile id="14" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="30"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
+  </tile>
+  <tile id="15" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="35"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
+  </tile>
+  <tile id="16" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="25"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
+  </tile>
+  <tile id="17" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="20"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
+  </tile>
+  <tile id="18" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="45"/>
+    <property name="yVelocity" type="int" value="0"/>
+   </properties>
+   <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
+  </tile>
+  <tile id="19">
+   <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="37" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="43" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
    <image width="42" height="75" source="../../img/tables/habitrail_gateway.png"/>
@@ -130,7 +168,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="75" name="cloud_bg_top" gid="23" x="279.132" y="599.714" width="720" height="600" visible="0"/>
+  <object id="151" name="cloud_bg_top_empty" gid="42" x="277" y="598" width="720" height="600"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
   <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
@@ -142,12 +180,12 @@
   <object id="92" name="ball_catch_arrow" gid="28" x="350" y="90" width="24" height="24"/>
   <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
   <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
-  <object id="137" name="habitrail_small_track" gid="38" x="385" y="128" width="42" height="75"/>
-  <object id="138" name="habitrail_small_track" gid="38" x="387.409" y="50.3171" width="42" height="75" rotation="63.6624"/>
-  <object id="139" name="habitrail_track" gid="39" x="456.646" y="17.4" width="42" height="125" rotation="89.4813"/>
-  <object id="140" name="habitrail_track" gid="39" x="581.081" y="17.0891" width="42" height="125" rotation="89.7657"/>
-  <object id="141" name="habitrail_small_track" gid="38" x="703.882" y="15.507" width="42" height="75" rotation="105.005"/>
-  <object id="142" name="habitrail_small_track" gid="38" x="772.063" y="32.6423" width="42" height="75" rotation="134.164"/>
+  <object id="137" name="habitrail_small_track" gid="44" x="385" y="128" width="42" height="75"/>
+  <object id="138" name="habitrail_small_track" gid="44" x="387.409" y="50.3171" width="42" height="75" rotation="63.6624"/>
+  <object id="139" name="habitrail_track" gid="45" x="456.646" y="17.4" width="42" height="125" rotation="89.4813"/>
+  <object id="140" name="habitrail_track" gid="45" x="581.081" y="17.0891" width="42" height="125" rotation="89.7657"/>
+  <object id="141" name="habitrail_small_track" gid="44" x="703.882" y="15.507" width="42" height="75" rotation="105.005"/>
+  <object id="142" name="habitrail_small_track" gid="44" x="772.063" y="32.6423" width="42" height="75" rotation="134.164"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="299" y="586" width="170" height="124"/>
@@ -176,7 +214,7 @@
   </object>
   <object id="103" name="cyclone" type="cyclone" gid="36" x="550" y="470" width="96" height="96"/>
   <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
-  <object id="136" name="habitrail_gateway" gid="37" x="438.021" y="188.12" width="42" height="75" rotation="320.447">
+  <object id="136" name="habitrail_gateway" gid="43" x="438.021" y="188.12" width="42" height="75" rotation="320.447">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
@@ -197,6 +235,13 @@
     <property name="score" type="int" value="200"/>
    </properties>
   </object>
+  <object id="153" name="cloud_1" gid="37" x="325" y="143" width="108" height="78"/>
+  <object id="154" name="cloud_3" gid="39" x="544" y="196" width="81" height="54"/>
+  <object id="155" name="cloud_2" gid="38" x="346" y="278" width="51" height="36"/>
+  <object id="156" name="cloud_5" gid="41" x="820" y="156" width="66" height="39"/>
+  <object id="157" name="cloud_4" gid="40" x="686" y="388" width="108" height="66"/>
+  <object id="158" name="cloud_5" gid="41" x="334" y="490" width="66" height="39"/>
+  <object id="159" name="cloud_2" gid="38" x="567" y="521" width="51" height="36"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="321" y="230.5">

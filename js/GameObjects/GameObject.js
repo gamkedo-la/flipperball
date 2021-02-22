@@ -20,7 +20,7 @@ class GameObject {
         this.oldY = objData.y - objData.height;
         this.yAdjustment = 0;
         
-        this.velocity = {x: 0, y: 0};
+        this.velocity = {x: objData.xVelocity || 0, y: objData.yVelocity || 0};
         this.oldVelocity = {x: 0, y: 0};
         this.vxAdjustment = 0;
         this.vyAdjustment = 0;
@@ -128,7 +128,8 @@ class GameObject {
         this.oldY = this.y;
         this.x = x;
         this.y = y;
-        if (this.body) {
+
+        if (this.body || this.bodies) {
             this.body.update(this.x - this.oldX, this.y - this.oldY);
         }
     }

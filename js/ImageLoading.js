@@ -99,6 +99,12 @@ function loadImages() {
 
         {imgName: "cloud_bg", theFile: "tables/cloud_bg.png"},
         {imgName: "cloud_bg_top", theFile: "tables/cloud_bg_top.png"},
+        {imgName: "cloud_bg_top_empty", theFile: "tables/cloud_bg_top_empty.png"},
+        {imgName: "cloud_1", theFile: "tables/cloud_1.png"},
+        {imgName: "cloud_2", theFile: "tables/cloud_2.png"},
+        {imgName: "cloud_3", theFile: "tables/cloud_3.png"},
+        {imgName: "cloud_4", theFile: "tables/cloud_4.png"},
+        {imgName: "cloud_5", theFile: "tables/cloud_5.png"},
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},

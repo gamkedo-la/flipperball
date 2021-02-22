@@ -44,6 +44,12 @@ function MapBuilder (tableName = TABLES.Prototype) {
 
         for (const obj of objData) {
             if (DEBUG) { console.log("Building DynObj: " + obj.name + ":" + obj.id); }
+
+            if (obj.properties) {
+                for (const prop of obj.properties) {
+                    obj[prop.name] = prop.value
+                }
+            }
             
             // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
             let bodyData = [];
@@ -110,7 +116,11 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     });
                     result.push(newPlane);
                 } else {
-                    result.push(new GameObject(obj, bodyData));
+                    if (obj.type === ENTITY_TYPE.Cloud) {
+                        result.push(new GameObject(obj, null));
+                    } else {
+                        result.push(new GameObject(obj, bodyData));
+                    }
                 }
             }
         }
