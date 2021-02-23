@@ -332,7 +332,7 @@ function GameScene() {
         } else {            
             self.gameHasFinished = true;
             //TODO: This should be a game over scene once we've got it
-            SceneManager.setState(SCENE.TITLE);
+            SceneManager.setState(SCENE.GAMEOVER);
         }
     }
 

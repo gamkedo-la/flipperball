@@ -11,7 +11,7 @@ const SceneManager = {
 		[SCENE.CREDITS]: new CreditsScene(),
 		[SCENE.HELP]: new HelpScene(),
 		[SCENE.GAME]: new GameScene(),
-//		[SCENE.GAMEOVER]: new GameOverScene(),
+		[SCENE.GAMEOVER]: new GameOverScene(),
 //		[SCENE.ENDING]: new EndgameScene()
 	},
 	setState: function(newScene, properties) {
