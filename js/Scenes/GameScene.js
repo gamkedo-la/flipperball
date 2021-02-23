@@ -4,11 +4,14 @@ function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
     this.properties = TABLES.Prototype;
     this.table = null;
+    this.storedTables = [];
     this.collisionManager = null;
+    this.storedCollisionManagers = [];
     this.collisionRate = 100;
     this.paused = false;
     this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
     this.currentTableIndex = 0;
+    this.lastTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.hasPlungerReleased = false;
     this.score = 0;
@@ -29,10 +32,15 @@ function GameScene() {
     // eslint-disable-next-line consistent-this
     const self = this
 
-    this.transitionIn = function() {
-        this.table = new MapBuilder(this.properties.tableName);
-        this.collisionManager = new CollisionManager();
-        
+    this.transitionIn = function () {
+        console.log("Current Table Index: " + this.currentTableIndex);
+        if (this.storedTables[this.currentTableIndex]) {
+            this.table = this.storedTables[this.currentTableIndex];
+            this.collisionManager = this.storedCollisionManagers[this.currentTableIndex];
+        } else {
+            this.table = new MapBuilder(this.properties.tableName);
+            this.collisionManager = new CollisionManager();
+        }
         if (this.gameHasFinished) {
             // Reset numberOfRemainingBalls when we transition into a new game
             this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
@@ -79,8 +87,11 @@ function GameScene() {
         playBackgroundMusic();
     }
 
-    this.transitionOut = function() {
-        
+    this.transitionOut = function () {
+        console.log("Current Stored Tables: " + this.storedTables.length);
+        this.storedTables[this.lastTableIndex] = this.table;
+        this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
+        console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
     }
 
     this.run = function(deltaTime) {
@@ -264,8 +275,10 @@ function GameScene() {
                     outputTableBallState(ball);
                 }
                 if (self.currentTableIndex < self.tablesForScene.length - 1) {
+                    self.lastTableIndex = self.currentTableIndex;
                     self.currentTableIndex++;
-                    SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                    SceneManager.setState(SCENE.GAME, { tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: { x: 0, y: canvas.height } });
+                    
                     //TODO: FM: Determine when extra ball should actually be given to player
                     //Probably at some number of points and under some special circumstances
                     //extraBall();
@@ -287,8 +300,9 @@ function GameScene() {
                     loseBall(ball);
                     playRemainingBall();
                 } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
-                    self.currentTableIndex--;
-                    SceneManager.setState(SCENE.GAME, {tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: {x: 0, y: -canvas.height}});
+                    self.lastTableIndex = self.currentTableIndex;
+                    self.currentTableIndex--;                    
+                    SceneManager.setState(SCENE.GAME, { tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: { x: 0, y: -canvas.height } });                    
                 }
             }
         }
