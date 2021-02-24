@@ -165,7 +165,9 @@ function loadImages() {
         {imgName: "habitrail_small_track", theFile: "tables/habitrail_small_track.png"},
         {imgName: "habitrail_track", theFile: "tables/habitrail_track.png"},
         {imgName: "flipper_title_medium", theFile: "screens/Flipperball_Title_Image_Medium.png"},
-        {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"}
+        {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"},
+
+        {imgName: "spawner_plane", theFile: "tables/spawner_plane.png"}
         
     ];
 

@@ -108,7 +108,8 @@ const ENTITY_TYPE = {
 	Habitrail: 'habitrail',
 	LetterLight: 'letter_light',
 	Plane: 'plane',
-	Cloud: 'cloud'
+	Cloud: 'cloud', 
+	Spawner: 'spawner'
 };
 
 const TRIGGER_TYPE = {
@@ -131,7 +132,8 @@ const ENTITY_NAME = {
 	Cyclone: 'cyclone',
 	LetterLight: 'letter_light',
 	RotatingGate: 'rotating_gate',
-	PlaneRed: 'plane_red'
+	PlaneRed: 'plane_red',
+	SpawnerPlane: 'spawner_plane'
 }
 
 const COLLISION_TYPE = {

@@ -170,7 +170,7 @@
                  "y":180
                 }, 
                 {
-                 "gid":44,
+                 "gid":45,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -182,7 +182,7 @@
                  "y":128
                 }, 
                 {
-                 "gid":44,
+                 "gid":45,
                  "height":75,
                  "id":138,
                  "name":"habitrail_small_track",
@@ -194,7 +194,7 @@
                  "y":50.3171
                 }, 
                 {
-                 "gid":45,
+                 "gid":46,
                  "height":125,
                  "id":139,
                  "name":"habitrail_track",
@@ -206,7 +206,7 @@
                  "y":17.4
                 }, 
                 {
-                 "gid":45,
+                 "gid":46,
                  "height":125,
                  "id":140,
                  "name":"habitrail_track",
@@ -218,7 +218,7 @@
                  "y":17.0891
                 }, 
                 {
-                 "gid":44,
+                 "gid":45,
                  "height":75,
                  "id":141,
                  "name":"habitrail_small_track",
@@ -230,7 +230,7 @@
                  "y":15.507
                 }, 
                 {
-                 "gid":44,
+                 "gid":45,
                  "height":75,
                  "id":142,
                  "name":"habitrail_small_track",
@@ -558,7 +558,7 @@
                  "y":127
                 }, 
                 {
-                 "gid":43,
+                 "gid":44,
                  "height":75,
                  "id":136,
                  "name":"habitrail_gateway",
@@ -633,6 +633,18 @@
                  "width":51,
                  "x":289,
                  "y":175
+                }, 
+                {
+                 "gid":43,
+                 "height":54,
+                 "id":160,
+                 "name":"spawner_plane",
+                 "rotation":0,
+                 "type":"spawner",
+                 "visible":true,
+                 "width":54,
+                 "x":572,
+                 "y":306.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1185,12 +1197,12 @@
                          "y":0
                         }, 
                         {
-                         "x":0.166666666666629,
-                         "y":-53.6666666666667
+                         "x":0.166667,
+                         "y":-53.6667
                         }, 
                         {
                          "x":-38,
-                         "y":-48.8333333333333
+                         "y":-48.8333
                         }, 
                         {
                          "x":-38,
@@ -1217,12 +1229,12 @@
                          "y":0
                         }, 
                         {
-                         "x":37.6666666666667,
-                         "y":-49.6666666666667
+                         "x":37.6667,
+                         "y":-49.6667
                         }, 
                         {
-                         "x":0.333333333333371,
-                         "y":-54.8333333333333
+                         "x":0.333333,
+                         "y":-54.8333
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -1539,6 +1551,36 @@
                  "width":48,
                  "x":289.5,
                  "y":126.5
+                }, 
+                {
+                 "height":0,
+                 "id":162,
+                 "name":"spawner_plane",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":37.5,
+                         "y":-0.5
+                        }, 
+                        {
+                         "x":20,
+                         "y":36
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":160
+                        }],
+                 "rotation":0,
+                 "type":"spawner",
+                 "visible":true,
+                 "width":0,
+                 "x":579,
+                 "y":260
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1547,7 +1589,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":160,
+ "nextobjectid":163,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1736,7 +1778,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":600,
          "tiles":[
                 {
@@ -1918,12 +1960,18 @@
                  "image":"..\/img\/tables\/cloud_bg_top_empty.png",
                  "imageheight":600,
                  "imagewidth":720
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/img\/tables\/spawner_plane.png",
+                 "imageheight":54,
+                 "imagewidth":54
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":43,
+         "firstgid":44,
          "grid":
             {
              "height":1,
