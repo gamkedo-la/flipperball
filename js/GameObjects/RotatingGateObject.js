@@ -7,7 +7,7 @@ class RotatingGateObject extends GameObject {
         this.rotatingSpeed = 0;
         this.remainingRotatingScore = 0;
         this.rotatingCoefficient = 1;
-        this.originalFrameTimes = 64;
+        this.originalFrameTimes = 32;
         this.deltaTime = 0;
         this.currFrame = 0;
         this.isInReverse = false;

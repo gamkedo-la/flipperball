@@ -269,7 +269,7 @@ const ANIMATIONS = {
 		reveres: false,
 		loops: true
 	},
-	ROTATING_GATE: {
+	/*ROTATING_GATE: {
 		imageNames: {
 			"rotating_gate": "rotating_gate_animation"
 		},
@@ -277,6 +277,17 @@ const ANIMATIONS = {
 		frameWidth: 20,
 		frameHeight: 29,
 		frameTimes: [64, 64, 64, 64, 64, 64, 64],
+		reverses: false,
+		loops: true
+	}*/
+	ROTATING_GATE: {
+		imageNames: {
+			"rotating_gate": "rotating_gate_animation"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+		frameWidth: 31,
+		frameHeight: 17,
+		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64],
 		reverses: false,
 		loops: true
 	}
