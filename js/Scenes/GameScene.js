@@ -22,7 +22,6 @@ function GameScene() {
     this.flashEnabled = true;
     this.flash = false;
     this.activeHabitrails = [];
-   
     let shakeStartTime = -1;
     const shakeDuration = 500;
     let currentShakes = 0;
@@ -34,12 +33,13 @@ function GameScene() {
 
     this.transitionIn = function () {
         console.log("Current Table Index: " + this.currentTableIndex);
-        if (this.storedTables[this.currentTableIndex]) {
+        if (this.storedTables[this.currentTableIndex] && this.storedCollisionManagers[this.currentTableIndex]) {            
             this.table = this.storedTables[this.currentTableIndex];
             this.collisionManager = this.storedCollisionManagers[this.currentTableIndex];
         } else {
             this.table = new MapBuilder(this.properties.tableName);
             this.collisionManager = new CollisionManager();
+            this.savedBall = this.properties.ball;
         }
         if (this.gameHasFinished) {
             // Reset numberOfRemainingBalls when we transition into a new game
@@ -71,7 +71,7 @@ function GameScene() {
 
         if (this.properties.ball) {
             // we are moving the balls inbetween table scenes?
-            self.table.balls.length = 0
+            self.table.balls.length = 0;
             if (this.properties.ballOffset) {
                 this.properties.ball.setPosition(this.properties.ball.x + this.properties.ballOffset.x, this.properties.ball.y + this.properties.ballOffset.y);
             }
@@ -79,7 +79,7 @@ function GameScene() {
             this.collisionManager.registerBall(this.properties.ball);
         } else {
             // we lost the ball and are adding a new one to the scene? 
-            for (const ball of self.table.balls) {
+            for (const ball of self.table.balls) {                
                 this.collisionManager.registerBall(ball);
             }
         }
@@ -87,11 +87,13 @@ function GameScene() {
         playBackgroundMusic();
     }
 
-    this.transitionOut = function () {
-        console.log("Current Stored Tables: " + this.storedTables.length);
-        this.storedTables[this.lastTableIndex] = this.table;
-        this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
-        console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
+    this.transitionOut = function () {        
+        if (!this.gameHasFinished) {
+            console.log("Current Stored Tables: " + this.storedTables.length);
+            this.storedTables[this.lastTableIndex] = this.table;
+            this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
+            console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
+        }        
     }
 
     this.run = function(deltaTime) {
@@ -297,8 +299,13 @@ function GameScene() {
                         console.log("if (self.currentTableIndex == 0)");
                         outputTableBallState(ball);
                     }
+                    self.lastTableIndex = self.currentTableIndex;
                     loseBall(ball);
                     playRemainingBall();
+                    if (!self.gameHasFinished) {
+                        SceneManager.setState(SCENE.GAME, { tableName: self.tablesForScene[self.currentTableIndex], ball: ball, ballOffset: { x: 0, y: 0 } });
+                        ball.reset();
+                    }
                 } else if (self.currentTableIndex >= self.tablesForScene.length - 1) {
                     self.lastTableIndex = self.currentTableIndex;
                     self.currentTableIndex--;                    
@@ -317,10 +324,16 @@ function GameScene() {
     const loseBall = function(ball) {
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
+            //TODO: KYLE Get loseball back to working the way it did previously. I tore this up debugging other ball behavior
+            //      and just needed it out of the way, but now that it's working it can be put back in place.
             //Setting properties.ball to undefined so it doesn´t propagate to the next TransitionIn()
-            self.properties.ball = undefined;
-            self.collisionManager.unregisterBall(ball);
-            self.table.balls.splice(ballIndex, 1);
+            //self.properties.ball = undefined;
+            //self.collisionManager.unregisterBall(ball);            
+            //self.table.balls.splice(ballIndex, 1);
+            for (const ball of self.table.balls) {
+                ball.reset();
+            }
+            console.log("self.table.balls.length: " + self.table.balls.length);
             // reset flipper input (in case of tilt)
             if (tilt) {
                 tilt = false;
@@ -339,12 +352,13 @@ function GameScene() {
         self.numberOfRemainingBalls++;
     }
 
-    const playRemainingBall = function() {
-        if (self.numberOfRemainingBalls > 0) {
-            self.numberOfRemainingBalls--;
-            self.transitionIn();
-        } else {            
-            self.gameHasFinished = true;
+    const playRemainingBall = function () {        
+        if (self.numberOfRemainingBalls > 0) {            
+            self.numberOfRemainingBalls--;      
+        } else {
+            self.storedTables = [];
+            self.storedCollisionManagers = [];
+            self.gameHasFinished = true;            
             //TODO: This should be a game over scene once we've got it
             SceneManager.setState(SCENE.GAMEOVER);
         }
@@ -393,13 +407,15 @@ function GameScene() {
     }
 
     this.restartScene = function(force=false) {
-        if (isGameOver() || force) {
+        if (isGameOver() || force) {            
+            self.storedTables = [];
+            self.storedCollisionManagers = [];
             self.gameHasFinished = true;
             SceneManager.setState(SCENE.GAME, TABLES.Prototype);
         }
     }
 
-    const isGameOver = function() {
+    const isGameOver = function () {        
         return self.table.balls.length == 0;
     }
 
