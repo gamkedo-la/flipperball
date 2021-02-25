@@ -597,6 +597,11 @@ function GameScene() {
                 }
                 // self.playAnimation(otherEntity.body.name, ANIMATIONS.PLANE_EXPLOSION, otherEntity.x, otherEntity.y);
                 break;
+            case ENTITY_TYPE.Spawner:
+                
+                console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
+                
+                break;
             default:
                 break;
         }
