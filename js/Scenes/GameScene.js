@@ -634,7 +634,8 @@ function GameScene() {
         self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);
-            self.playAnimation(lightTarget.body.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
+            //lightTarget.currentFrame = lightTarget.frames;
+            self.playAnimation(lightTarget.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             self.transitionIn();
