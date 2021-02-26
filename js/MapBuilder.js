@@ -155,7 +155,6 @@ function StaticMapObject(objData) {
     this.y = objData.y - objData.height;
     this.width = objData.width;
     this.height = objData.height;
-    this.name = objData.name;
     this.type = objData.type;
     this.reflectance = objData.reflectance || 0.75;
     this.image = images[objData.name];

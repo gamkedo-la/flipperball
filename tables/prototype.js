@@ -108,54 +108,6 @@
                  "width":140,
                  "x":752.667,
                  "y":132
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":89,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":607.333,
-                 "y":123
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":90,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":574,
-                 "y":123.333
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":91,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":541.333,
-                 "y":123
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":104,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":508.083,
-                 "y":123.375
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -614,6 +566,42 @@
                  "y":130
                 }, 
                 {
+                 "gid":26,
+                 "height":24,
+                 "id":89,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":607.333,
+                 "y":123
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":90,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":574,
+                 "y":123.333
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":91,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":541.333,
+                 "y":123
+                }, 
+                {
                  "gid":21,
                  "height":5.51,
                  "id":103,
@@ -635,6 +623,18 @@
                  "width":2.68293,
                  "x":519.073,
                  "y":130.375
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":104,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":508.083,
+                 "y":123.375
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -944,12 +944,12 @@
                  "name":"drain_rail_right",
                  "polygon":[
                         {
-                         "x":1.66667,
-                         "y":-1.66667
+                         "x":1.66666666666663,
+                         "y":-1.66666666666666
                         }, 
                         {
                          "x":-10.5,
-                         "y":1.16667
+                         "y":1.16666666666666
                         }, 
                         {
                          "x":-12.75,
@@ -987,7 +987,7 @@
                  "polygon":[
                         {
                          "x":0,
-                         "y":-0.666667
+                         "y":-0.666666666666686
                         }, 
                         {
                          "x":1.5,
@@ -1006,8 +1006,8 @@
                          "y":165.341
                         }, 
                         {
-                         "x":14.8182,
-                         "y":2.30303
+                         "x":14.81818,
+                         "y":2.30302666666668
                         }],
                  "properties":[
                         {
@@ -1433,6 +1433,18 @@
                  "width":13.9513,
                  "x":612.567,
                  "y":120
+                }, 
+                {
+                 "ellipse":true,
+                 "height":0,
+                 "id":101,
+                 "name":"letter_light",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":589.5,
+                 "y":563.25
                 }, 
                 {
                  "ellipse":true,
