@@ -296,6 +296,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":10
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -621,7 +626,7 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":519.073,
+                 "x":942.073,
                  "y":130.375
                 }, 
                 {
@@ -629,11 +634,17 @@
                  "height":24,
                  "id":104,
                  "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":508.083,
+                 "x":931.083,
                  "y":123.375
                 }],
          "opacity":1,
@@ -944,12 +955,12 @@
                  "name":"drain_rail_right",
                  "polygon":[
                         {
-                         "x":1.66666666666663,
-                         "y":-1.66666666666666
+                         "x":1.66667,
+                         "y":-1.66667
                         }, 
                         {
                          "x":-10.5,
-                         "y":1.16666666666666
+                         "y":1.16667
                         }, 
                         {
                          "x":-12.75,
@@ -987,7 +998,7 @@
                  "polygon":[
                         {
                          "x":0,
-                         "y":-0.666666666666686
+                         "y":-0.666667
                         }, 
                         {
                          "x":1.5,
@@ -1006,8 +1017,8 @@
                          "y":165.341
                         }, 
                         {
-                         "x":14.81818,
-                         "y":2.30302666666668
+                         "x":14.8182,
+                         "y":2.30303
                         }],
                  "properties":[
                         {
@@ -1436,18 +1447,6 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":0,
-                 "id":101,
-                 "name":"letter_light",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":589.5,
-                 "y":563.25
-                }, 
-                {
-                 "ellipse":true,
                  "height":13.9513,
                  "id":102,
                  "name":"light_trigger",
@@ -1461,7 +1460,7 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":513.317,
+                 "x":936.317,
                  "y":120.375
                 }, 
                 {

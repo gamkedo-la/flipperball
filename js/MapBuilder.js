@@ -1,5 +1,8 @@
 // MapBuilder.js
 // eslint-disable-next-line no-unused-vars
+function compareZ(a,b){
+    return a.zOrder - b.zOrder;
+}
 function MapBuilder (tableName = TABLES.Prototype) {
     const mapData = TileMaps[tableName];
     // eslint-disable-next-line consistent-this
@@ -90,10 +93,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 result.push(new Spawner(obj, null));
             }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
-                // We need the ability for a dynObj to be generated without a collider but still function to remove this
-                const bodyData = collisionData.find((data) => data.name === obj.name);
-                const newGameObject = new GameObject(obj, bodyData, {
-                    ...ANIMATIONS.LETTER_LGHT_GLOW,
+                // We need the ability for a dynObj to be generated without a collider but still function to remove this                
+                const newGameObject = new GameObject(obj, null, {
+                    ...ANIMATIONS.LETTER_LIGHT,
                     animationSpritesheet: images[ANIMATIONS.LETTER_LIGHT.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
@@ -127,7 +129,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 }
             }
         }
-
+        result.sort(compareZ);
         return result;
     }
 

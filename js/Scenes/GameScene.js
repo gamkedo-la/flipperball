@@ -1,5 +1,6 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
+
 function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
     this.properties = TABLES.Prototype;
@@ -502,7 +503,7 @@ function GameScene() {
         for (const staticObj of self.table.staticObjects) {
             staticObj.draw();
         }
-
+        self.table.dynamicObjects.sort(compareZ);
         for (const dynamicObj of self.table.dynamicObjects) {
             dynamicObj.draw();
         }
@@ -635,7 +636,8 @@ function GameScene() {
         self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);
-            self.playAnimation(lightTarget.body.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
+            //lightTarget.currentFrame = lightTarget.frames;
+            self.playAnimation(lightTarget.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             self.transitionIn();
