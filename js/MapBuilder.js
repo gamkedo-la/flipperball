@@ -1,5 +1,8 @@
 // MapBuilder.js
 // eslint-disable-next-line no-unused-vars
+function compareZ(a,b){
+    return a.zOrder - b.zOrder;
+}
 function MapBuilder (tableName = TABLES.Prototype) {
     const mapData = TileMaps[tableName];
     // eslint-disable-next-line consistent-this
@@ -126,7 +129,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 }
             }
         }
-
+        result.sort(compareZ);
         return result;
     }
 

@@ -171,7 +171,11 @@
   <object id="115" name="cloud_3" gid="30" x="441" y="251" width="81" height="54"/>
   <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66"/>
   <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
-  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
+  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39">
+   <properties>
+    <property name="zOrder" type="int" value="10"/>
+   </properties>
+  </object>
   <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="535"/>
@@ -236,7 +240,11 @@
     <property name="targ_light" type="object" value="104"/>
    </properties>
   </object>
-  <object id="104" name="letter_light" type="letter_light" gid="26" x="931.083" y="123.375" width="24" height="24"/>
+  <object id="104" name="letter_light" type="letter_light" gid="26" x="931.083" y="123.375" width="24" height="24">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="413.784" y="13.3133" width="94.652" height="95.4154">

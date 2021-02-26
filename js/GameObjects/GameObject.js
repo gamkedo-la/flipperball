@@ -21,6 +21,11 @@ class GameObject {
         this.yAdjustment = 0;
         
         this.velocity = {x: objData.xVelocity || 0, y: objData.yVelocity || 0};
+        this.zOrder = objData.zOrder;
+        if (this.zOrder === undefined){
+            this.zOrder = 0;
+        }
+        console.log("z:"+this.zOrder);
         this.oldVelocity = {x: 0, y: 0};
         this.vxAdjustment = 0;
         this.vyAdjustment = 0;

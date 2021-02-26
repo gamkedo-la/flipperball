@@ -296,6 +296,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":10
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -629,6 +634,12 @@
                  "height":24,
                  "id":104,
                  "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"letter_light",
                  "visible":true,
