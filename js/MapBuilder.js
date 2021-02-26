@@ -53,7 +53,8 @@ function MapBuilder (tableName = TABLES.Prototype) {
             
             // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
             let bodyData = [];
-            for (const colData of collisionData) {                
+            for (const colData of collisionData) {        
+                //console.log("MapBuilder: " + obj.type);        
                 if (colData.properties) {
                     const colProps = {};
                     for (const property of colData.properties) {
@@ -86,7 +87,6 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if(obj.type === ENTITY_TYPE.Spawner){
-                console.log("[MapBuilder]: buildDynamicObjects" );
                 result.push(new Spawner(obj, null));
             }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
