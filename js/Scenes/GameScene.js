@@ -55,7 +55,6 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            console.log(dynamicObj.body);
             if (dynamicObj.body || dynamicObj.bodies) {
                 this.collisionManager.registerEntity(dynamicObj);
             }

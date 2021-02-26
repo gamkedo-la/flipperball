@@ -90,7 +90,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if(obj.type === ENTITY_TYPE.Spawner){
-                result.push(new Spawner(obj, null));
+                result.push(new Spawner(obj, bodyData));
             }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
                 // We need the ability for a dynObj to be generated without a collider but still function to remove this                

@@ -142,8 +142,11 @@ function CollisionManager () {
         if (distance <= squaredRadii) {
             if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate
                 || entity.type == ENTITY_TYPE.Spawner) {
-                // console.log("CollisionManager: checkCollision: "+ entity.type);
-                
+                    
+                if(DEBUG){
+                    console.log("CollisionManager: checkCollision: "+ entity.type);
+                }
+                 
                 const direction = normalize(ball.body.center, entity.body.center);
                 this.collisions.push(new Collision(
                     COLLISION_TYPE.Polygon,
