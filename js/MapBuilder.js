@@ -85,7 +85,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
-            } else if (obj.type === 'letter_light') {
+            } else if(obj.type === ENTITY_TYPE.Spawner){
+                console.log("[MapBuilder]: buildDynamicObjects" );
+                result.push(new Spawner(obj, null));
+            }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
                 // We need the ability for a dynObj to be generated without a collider but still function to remove this
                 const bodyData = collisionData.find((data) => data.name === obj.name);

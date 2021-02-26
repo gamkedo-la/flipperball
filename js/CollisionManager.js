@@ -139,7 +139,8 @@ function CollisionManager () {
         const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
         if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { return;}
         if (distance <= squaredRadii) {
-            if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate) {
+            if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate
+                || entity.body.type == ENTITY_TYPE.Spawner) {
                 //TODO: Add handling of rotating way collision
                 // console.log("CollisionManager: checkCollision: "+ entity.type);
                 const direction = normalize(ball.body.center, entity.body.center);
