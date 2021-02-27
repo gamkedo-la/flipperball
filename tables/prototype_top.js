@@ -30,6 +30,12 @@
                  "height":600,
                  "id":151,
                  "name":"cloud_bg_top_empty",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":false,
@@ -42,6 +48,12 @@
                  "height":598,
                  "id":26,
                  "name":"vertical_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -54,6 +66,12 @@
                  "height":86,
                  "id":59,
                  "name":"angled_wall_4",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -66,6 +84,12 @@
                  "height":14,
                  "id":61,
                  "name":"horizontal_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -78,6 +102,12 @@
                  "height":14,
                  "id":62,
                  "name":"horizontal_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -90,6 +120,12 @@
                  "height":52,
                  "id":70,
                  "name":"angled_wall_3",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -102,6 +138,12 @@
                  "height":52,
                  "id":72,
                  "name":"angled_wall_2",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -114,6 +156,12 @@
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -126,6 +174,12 @@
                  "height":598,
                  "id":110,
                  "name":"chute_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -138,6 +192,12 @@
                  "height":598,
                  "id":111,
                  "name":"chute_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -150,6 +210,12 @@
                  "height":54,
                  "id":77,
                  "name":"plane_pipe_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -162,6 +228,12 @@
                  "height":54,
                  "id":78,
                  "name":"plane_pipe_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -174,6 +246,12 @@
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"habitrail",
                  "visible":true,
@@ -186,6 +264,12 @@
                  "height":75,
                  "id":138,
                  "name":"habitrail_small_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":63.6624,
                  "type":"habitrail",
                  "visible":true,
@@ -198,6 +282,12 @@
                  "height":125,
                  "id":139,
                  "name":"habitrail_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":89.4813,
                  "type":"habitrail",
                  "visible":true,
@@ -210,6 +300,12 @@
                  "height":125,
                  "id":140,
                  "name":"habitrail_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":89.7657,
                  "type":"habitrail",
                  "visible":true,
@@ -222,6 +318,12 @@
                  "height":75,
                  "id":141,
                  "name":"habitrail_small_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":105.005,
                  "type":"habitrail",
                  "visible":true,
@@ -234,6 +336,12 @@
                  "height":75,
                  "id":142,
                  "name":"habitrail_small_track",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":134.164,
                  "type":"habitrail",
                  "visible":true,
@@ -267,6 +375,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -290,6 +403,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -313,6 +431,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -336,6 +459,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -359,6 +487,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -382,6 +515,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -405,6 +543,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -418,6 +561,12 @@
                  "height":124,
                  "id":14,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"left_flipper",
                  "visible":true,
@@ -430,6 +579,12 @@
                  "height":124,
                  "id":15,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"right_flipper",
                  "visible":true,
@@ -442,6 +597,12 @@
                  "height":186,
                  "id":30,
                  "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -454,6 +615,12 @@
                  "height":186,
                  "id":31,
                  "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -471,6 +638,11 @@
                          "name":"score",
                          "type":"int",
                          "value":150
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -489,6 +661,11 @@
                          "name":"score",
                          "type":"int",
                          "value":150
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -507,6 +684,11 @@
                          "name":"score",
                          "type":"int",
                          "value":150
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -525,6 +707,11 @@
                          "name":"score",
                          "type":"int",
                          "value":150
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -538,6 +725,12 @@
                  "height":96,
                  "id":103,
                  "name":"cyclone",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"cyclone",
                  "visible":true,
@@ -550,6 +743,12 @@
                  "height":113,
                  "id":106,
                  "name":"plunger_gate",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"gate",
                  "visible":true,
@@ -567,6 +766,11 @@
                          "name":"relatedCollisionObjects",
                          "type":"string",
                          "value":"132,133"
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
                         }],
                  "rotation":320.447,
                  "type":"habitrail",
@@ -585,6 +789,11 @@
                          "name":"score",
                          "type":"int",
                          "value":150
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -608,6 +817,11 @@
                          "name":"score",
                          "type":"int",
                          "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -626,6 +840,11 @@
                          "name":"score",
                          "type":"int",
                          "value":200
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
                         }],
                  "rotation":0,
                  "type":"plane",
@@ -639,12 +858,36 @@
                  "height":54,
                  "id":160,
                  "name":"spawner_plane",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"spawner",
                  "visible":true,
                  "width":54,
                  "x":572,
                  "y":306.5
+                }, 
+                {
+                 "gid":45,
+                 "height":75,
+                 "id":142,
+                 "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"relatedCollisionObjects",
+                         "type":"string",
+                         "value":"132,133"
+                        }],
+                 "rotation":134.164,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":42,
+                 "x":772.063,
+                 "y":32.6423
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1248,6 +1491,12 @@
                  "height":15.7464,
                  "id":131,
                  "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":136
+                        }],
                  "rotation":319.588,
                  "type":"",
                  "visible":true,
@@ -1581,6 +1830,24 @@
                  "width":0,
                  "x":579,
                  "y":260
+                }, 
+                {
+                 "ellipse":true,
+                 "height":21.1183046796248,
+                 "id":163,
+                 "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":142
+                        }],
+                 "rotation":320.180410924002,
+                 "type":"",
+                 "visible":true,
+                 "width":44.9341623675331,
+                 "x":786.607250797247,
+                 "y":104.3936320943
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1589,7 +1856,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":163,
+ "nextobjectid":164,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1615,6 +1882,12 @@
                  "image":"..\/raw\/img\/backgrounds\/plunger.png",
                  "imageheight":289,
                  "imagewidth":68,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"plunger"
                 }, 
                 {
@@ -1622,6 +1895,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_left.png",
                  "imageheight":124,
                  "imagewidth":170,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"left_flipper"
                 }, 
                 {
@@ -1629,6 +1908,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_right.png",
                  "imageheight":124,
                  "imagewidth":170,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"right_flipper"
                 }, 
                 {
@@ -1636,6 +1921,12 @@
                  "image":"..\/img\/tables\/plunger_chute.png",
                  "imageheight":598,
                  "imagewidth":105,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1643,6 +1934,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
                  "imageheight":195,
                  "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1650,6 +1947,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
                  "imageheight":195,
                  "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1657,6 +1960,12 @@
                  "image":"..\/img\/tables\/vertical_wall.png",
                  "imageheight":598,
                  "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1664,6 +1973,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
                  "imageheight":86,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1671,6 +1986,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
                  "imageheight":52,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1678,6 +1999,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
                  "imageheight":52,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1685,6 +2012,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
                  "imageheight":86,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1692,6 +2025,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1699,6 +2038,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1706,6 +2051,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1713,6 +2064,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1720,6 +2077,12 @@
                  "image":"..\/raw\/img\/backgrounds\/ball.png",
                  "imageheight":26,
                  "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
                  "type":"ball"
                 }, 
                 {
@@ -1727,6 +2090,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
                  "imageheight":186,
                  "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"flipper_bumper"
                 }, 
                 {
@@ -1734,6 +2103,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
                  "imageheight":186,
                  "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"flipper_bumper"
                 }, 
                 {
@@ -1741,6 +2116,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
                  "imageheight":270,
                  "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1748,6 +2129,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
                  "imageheight":270,
                  "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1755,6 +2142,12 @@
                  "image":"..\/img\/tables\/horizontal_wall.png",
                  "imageheight":14,
                  "imagewidth":598,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1762,6 +2155,12 @@
                  "image":"..\/img\/tables\/chute_wall.png",
                  "imageheight":598,
                  "imagewidth":34,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }],
          "tilewidth":598
@@ -1785,85 +2184,169 @@
                  "id":0,
                  "image":"..\/raw\/img\/backgrounds\/cloud_bg_top.png",
                  "imageheight":600,
-                 "imagewidth":720
+                 "imagewidth":720,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }]
                 }, 
                 {
                  "id":1,
                  "image":"..\/img\/tables\/plane_red.png",
                  "imageheight":48,
-                 "imagewidth":51
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
+                        }]
                 }, 
                 {
                  "id":2,
                  "image":"..\/img\/tables\/plane_blue.png",
                  "imageheight":48,
-                 "imagewidth":51
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
+                        }]
                 }, 
                 {
                  "id":3,
                  "image":"..\/img\/tables\/plane_green.png",
                  "imageheight":48,
-                 "imagewidth":51
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
+                        }]
                 }, 
                 {
                  "id":4,
                  "image":"..\/img\/tables\/plane_yellow.png",
                  "imageheight":48,
-                 "imagewidth":51
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
+                        }]
                 }, 
                 {
                  "id":5,
                  "image":"..\/img\/tables\/ball_catch_arrow.png",
                  "imageheight":24,
-                 "imagewidth":24
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":6,
                  "image":"..\/img\/tables\/ball_catch.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":7,
                  "image":"..\/img\/tables\/plane_pipe_right.png",
                  "imageheight":54,
-                 "imagewidth":39
+                 "imagewidth":39,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }]
                 }, 
                 {
                  "id":8,
                  "image":"..\/img\/tables\/plane_pipe_left.png",
                  "imageheight":54,
-                 "imagewidth":39
+                 "imagewidth":39,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }]
                 }, 
                 {
                  "id":9,
                  "image":"..\/img\/tables\/circle_bumper_small_red.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":10,
                  "image":"..\/img\/tables\/circle_bumper_small_yellow.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":11,
                  "image":"..\/img\/tables\/circle_bumper_small_blue.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":12,
                  "image":"..\/img\/tables\/circle_bumper_small_green.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":13,
                  "image":"..\/img\/tables\/cyclone.png",
                  "imageheight":96,
-                 "imagewidth":96
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":14,
@@ -1880,6 +2363,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1898,6 +2386,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1916,6 +2409,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1934,6 +2432,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1952,6 +2455,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1959,13 +2467,25 @@
                  "id":19,
                  "image":"..\/img\/tables\/cloud_bg_top_empty.png",
                  "imageheight":600,
-                 "imagewidth":720
+                 "imagewidth":720,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }]
                 }, 
                 {
                  "id":20,
                  "image":"..\/img\/tables\/spawner_plane.png",
                  "imageheight":54,
-                 "imagewidth":54
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }],
          "tilewidth":720
         }, 
@@ -1989,6 +2509,12 @@
                  "image":"..\/img\/tables\/habitrail_gateway.png",
                  "imageheight":75,
                  "imagewidth":42,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }, 
                 {
@@ -1996,6 +2522,12 @@
                  "image":"..\/img\/tables\/habitrail_small_track.png",
                  "imageheight":75,
                  "imagewidth":42,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }, 
                 {
@@ -2003,6 +2535,12 @@
                  "image":"..\/img\/tables\/habitrail_track.png",
                  "imageheight":125,
                  "imagewidth":42,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }],
          "tilewidth":42

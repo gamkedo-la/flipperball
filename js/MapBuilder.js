@@ -14,6 +14,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.flippers = [];
     this.animations = [];
     this.plunger = null;
+    this.drawOrder = [];
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {
@@ -36,8 +37,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
     const buildStaticObjects = function(objData) {
         const result = [];
 
-        for (const obj of objData) {     
+        for (const obj of objData) {    
             result.push(new StaticMapObject(obj));
+            
         }
         return result;
     }
@@ -100,7 +102,6 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {
                     var foundCollisionData = collisionData.find((data) => data.id == collisionId);
@@ -129,7 +130,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 }
             }
         }
-        result.sort(compareZ);
+        // result.sort(compareZ);
         return result;
     }
 
@@ -162,8 +163,22 @@ function MapBuilder (tableName = TABLES.Prototype) {
     }
 
     this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
+    this.drawOrder.push(...this.staticObjects);
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
+    this.drawOrder.push(...this.dynamicObjects);
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);
+    this.drawOrder.push(...this.tableColliders);
+
+    this.drawOrder.push(...this.balls);
+    this.drawOrder.push(...this.flippers)
+    if(this.plunger) this.drawOrder.push(this.plunger);
+
+    for (const obj of this.drawOrder) {
+        if (obj.zOrder === undefined) {
+            obj.zOrder = 0
+        }
+    }
+    this.drawOrder.sort(compareZ);
 }
 
 function StaticMapObject(objData) {
@@ -178,6 +193,11 @@ function StaticMapObject(objData) {
     this.image = images[objData.name];
     this.rotation = objData.rotation * (Math.PI/180) || 0;
     //console.log("Object: " + objData.name + " id: " + this.id);
+    if (objData.properties) {
+        for (const prop of objData.properties) {
+            this[prop.name] = prop.value
+        }
+    } 
     this.draw = function() {
         if (this.rotation > 0) {
             drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);

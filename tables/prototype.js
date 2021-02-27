@@ -30,9 +30,15 @@
                  "height":600,
                  "id":110,
                  "name":"cloud_bg_top_empty",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
                  "rotation":0,
                  "type":"",
-                 "visible":true,
+                 "visible":false,
                  "width":720,
                  "x":276,
                  "y":599
@@ -42,6 +48,12 @@
                  "height":598,
                  "id":23,
                  "name":"plunger_chute",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -54,6 +66,12 @@
                  "height":195,
                  "id":24,
                  "name":"drain_wall_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -66,6 +84,12 @@
                  "height":195,
                  "id":25,
                  "name":"drain_wall_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -78,6 +102,12 @@
                  "height":598,
                  "id":26,
                  "name":"vertical_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -90,6 +120,12 @@
                  "height":142,
                  "id":78,
                  "name":"angled_wall_5",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -102,6 +138,12 @@
                  "height":142,
                  "id":79,
                  "name":"angled_wall_6",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -135,6 +177,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -158,6 +205,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -181,6 +233,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -204,6 +261,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -227,6 +289,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -250,6 +317,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -273,6 +345,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -300,7 +377,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -319,6 +396,11 @@
                          "name":"stop",
                          "type":"int",
                          "value":535
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"plunger",
@@ -332,6 +414,12 @@
                  "height":124,
                  "id":14,
                  "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"left_flipper",
                  "visible":true,
@@ -344,6 +432,12 @@
                  "height":124,
                  "id":15,
                  "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"right_flipper",
                  "visible":true,
@@ -356,6 +450,12 @@
                  "height":26,
                  "id":16,
                  "name":"ball",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
                  "rotation":0,
                  "type":"ball",
                  "visible":true,
@@ -368,6 +468,12 @@
                  "height":186,
                  "id":30,
                  "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -380,6 +486,12 @@
                  "height":186,
                  "id":31,
                  "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
@@ -397,6 +509,11 @@
                          "name":"score",
                          "type":"int",
                          "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper",
@@ -415,6 +532,11 @@
                          "name":"score",
                          "type":"int",
                          "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper",
@@ -433,6 +555,11 @@
                          "name":"score",
                          "type":"int",
                          "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper",
@@ -446,6 +573,12 @@
                  "height":270,
                  "id":48,
                  "name":"drain_rail_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -458,6 +591,12 @@
                  "height":270,
                  "id":49,
                  "name":"drain_rail_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
@@ -475,6 +614,11 @@
                          "name":"score",
                          "type":"int",
                          "value":25
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -493,6 +637,11 @@
                          "name":"score",
                          "type":"int",
                          "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
                         }],
                  "rotation":0,
                  "type":"rotating_gate",
@@ -516,6 +665,11 @@
                          "name":"targ_light",
                          "type":"object",
                          "value":91
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -539,6 +693,11 @@
                          "name":"targ_light",
                          "type":"object",
                          "value":90
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -562,6 +721,11 @@
                          "name":"targ_light",
                          "type":"object",
                          "value":89
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -575,6 +739,12 @@
                  "height":24,
                  "id":89,
                  "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"letter_light",
                  "visible":true,
@@ -587,6 +757,12 @@
                  "height":24,
                  "id":90,
                  "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"letter_light",
                  "visible":true,
@@ -599,6 +775,12 @@
                  "height":24,
                  "id":91,
                  "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "rotation":0,
                  "type":"letter_light",
                  "visible":true,
@@ -621,6 +803,11 @@
                          "name":"targ_light",
                          "type":"object",
                          "value":104
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -1537,7 +1724,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
@@ -1568,6 +1755,12 @@
                  "image":"..\/raw\/img\/backgrounds\/plunger.png",
                  "imageheight":289,
                  "imagewidth":68,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"plunger"
                 }, 
                 {
@@ -1575,6 +1768,12 @@
                  "image":"..\/img\/tables\/flipper_left.png",
                  "imageheight":126,
                  "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"left_flipper"
                 }, 
                 {
@@ -1582,6 +1781,12 @@
                  "image":"..\/img\/tables\/flipper_right.png",
                  "imageheight":126,
                  "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"right_flipper"
                 }, 
                 {
@@ -1589,6 +1794,12 @@
                  "image":"..\/img\/tables\/plunger_chute.png",
                  "imageheight":598,
                  "imagewidth":105,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1596,6 +1807,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
                  "imageheight":195,
                  "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1603,6 +1820,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
                  "imageheight":195,
                  "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1610,6 +1833,12 @@
                  "image":"..\/raw\/img\/backgrounds\/vertical_wall.png",
                  "imageheight":598,
                  "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1617,6 +1846,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
                  "imageheight":86,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1624,6 +1859,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
                  "imageheight":52,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1631,6 +1872,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
                  "imageheight":52,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1638,6 +1885,12 @@
                  "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
                  "imageheight":86,
                  "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1645,6 +1898,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1652,6 +1911,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1659,6 +1924,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1666,6 +1937,12 @@
                  "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
                  "imageheight":95,
                  "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"circle_bumper"
                 }, 
                 {
@@ -1673,6 +1950,12 @@
                  "image":"..\/raw\/img\/backgrounds\/ball.png",
                  "imageheight":26,
                  "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
                  "type":"ball"
                 }, 
                 {
@@ -1680,6 +1963,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
                  "imageheight":186,
                  "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"flipper_bumper"
                 }, 
                 {
@@ -1687,6 +1976,12 @@
                  "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
                  "imageheight":186,
                  "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"flipper_bumper"
                 }, 
                 {
@@ -1694,6 +1989,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
                  "imageheight":270,
                  "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1701,6 +2002,12 @@
                  "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
                  "imageheight":270,
                  "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1708,19 +2015,37 @@
                  "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
                  "imageheight":26,
                  "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"trigger"
                 }, 
                 {
                  "id":22,
                  "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
                  "imageheight":9,
-                 "imagewidth":20
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }]
                 }, 
                 {
                  "id":23,
                  "image":"..\/img\/tables\/angled_wall_5.png",
                  "imageheight":142,
                  "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
@@ -1728,19 +2053,37 @@
                  "image":"..\/img\/tables\/angled_wall_6.png",
                  "imageheight":142,
                  "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
                  "type":"wall"
                 }, 
                 {
                  "id":25,
                  "image":"..\/img\/tables\/letter_light_unlit.png",
                  "imageheight":24,
-                 "imagewidth":24
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":26,
                  "image":"..\/img\/tables\/letter_light_lit.png",
                  "imageheight":24,
-                 "imagewidth":24
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
                 }, 
                 {
                  "id":27,
@@ -1757,6 +2100,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1775,6 +2123,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1793,6 +2146,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1811,6 +2169,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1829,6 +2192,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1847,6 +2215,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -1865,6 +2238,11 @@
                          "name":"yVelocity",
                          "type":"int",
                          "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
                         }],
                  "type":"cloud"
                 }],
@@ -1889,13 +2267,25 @@
                  "id":0,
                  "image":"..\/raw\/img\/backgrounds\/cloud_bg.png",
                  "imageheight":600,
-                 "imagewidth":720
+                 "imagewidth":720,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }]
                 }, 
                 {
                  "id":1,
                  "image":"..\/img\/tables\/cloud_bg_top_empty.png",
                  "imageheight":600,
-                 "imagewidth":720
+                 "imagewidth":720,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }]
                 }],
          "tilewidth":720
         }, 
@@ -1919,6 +2309,12 @@
                  "image":"..\/raw\/img\/backgrounds\/habitrail1.png",
                  "imageheight":75,
                  "imagewidth":36,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }, 
                 {
@@ -1926,6 +2322,12 @@
                  "image":"..\/raw\/img\/backgrounds\/habitrail2.png",
                  "imageheight":125,
                  "imagewidth":36,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }, 
                 {
@@ -1933,6 +2335,12 @@
                  "image":"..\/raw\/img\/backgrounds\/habitrail3.png",
                  "imageheight":75,
                  "imagewidth":36,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
+                        }],
                  "type":"habitrail"
                 }],
          "tilewidth":36
