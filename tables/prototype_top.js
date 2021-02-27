@@ -870,6 +870,24 @@
                  "width":54,
                  "x":572,
                  "y":306.5
+                }, 
+                {
+                 "gid":45,
+                 "height":75,
+                 "id":142,
+                 "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"relatedCollisionObjects",
+                         "type":"string",
+                         "value":"132,133"
+                        }],
+                 "rotation":134.164,
+                 "type":"habitrail",
+                 "visible":true,
+                 "width":42,
+                 "x":772.063,
+                 "y":32.6423
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1473,6 +1491,12 @@
                  "height":15.7464,
                  "id":131,
                  "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":136
+                        }],
                  "rotation":319.588,
                  "type":"",
                  "visible":true,
@@ -1806,6 +1830,24 @@
                  "width":0,
                  "x":579,
                  "y":260
+                }, 
+                {
+                 "ellipse":true,
+                 "height":21.1183046796248,
+                 "id":163,
+                 "name":"habitrail_gateway",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":142
+                        }],
+                 "rotation":320.180410924002,
+                 "type":"",
+                 "visible":true,
+                 "width":44.9341623675331,
+                 "x":786.607250797247,
+                 "y":104.3936320943
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1814,7 +1856,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":163,
+ "nextobjectid":164,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

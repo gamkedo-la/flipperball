@@ -102,7 +102,6 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
-                const bodyData = collisionData.find((data) => data.name === obj.name);
                 var habitrail = new HabitrailMapObject(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {
                     var foundCollisionData = collisionData.find((data) => data.id == collisionId);
