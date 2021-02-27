@@ -78,6 +78,14 @@ function GameScene() {
             }
             self.table.balls.push(this.properties.ball);
             this.collisionManager.registerBall(this.properties.ball);
+            if (self.table.drawOrder.indexOf(this.properties.ball) < 0) {
+                for (const obj of self.table.drawOrder) {
+                    if (obj.zOrder > this.properties.ball.zOrder) {
+                        self.table.drawOrder.splice(self.table.drawOrder.indexOf(obj), 0, this.properties.ball);
+                        break;
+                    }
+                }
+            }
         } else {
             // we lost the ball and are adding a new one to the scene? 
             for (const ball of self.table.balls) {                
@@ -499,26 +507,30 @@ function GameScene() {
 
     const draw = function() {
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
-        for (const staticObj of self.table.staticObjects) {
-            staticObj.draw();
-        }
-        self.table.dynamicObjects.sort(compareZ);
-        for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.draw();
-        }
+        // for (const staticObj of self.table.staticObjects) {
+        //     staticObj.draw();
+        // }
+        // self.table.dynamicObjects.sort(compareZ);
+        // for (const dynamicObj of self.table.dynamicObjects) {
+        //     dynamicObj.draw();
+        // }
 
-        for (const wall of self.table.tableColliders) {
-            wall.draw();
-        }
+        // for (const wall of self.table.tableColliders) {
+        //     wall.draw();
+        // }
 
-        for (const flipper of self.table.flippers) {
-            flipper.draw();
-        }
+        // for (const flipper of self.table.flippers) {
+        //     flipper.draw();
+        // }
 
-        if (self.table.plunger) {self.table.plunger.draw();}
+        // if (self.table.plunger) {self.table.plunger.draw();}
 
-        for (const ball of self.table.balls) {
-            ball.draw();
+        // for (const ball of self.table.balls) {
+        //     ball.draw();
+        // }
+
+        for (const obj of self.table.drawOrder) {
+            obj.draw();
         }
 
         for (const animation of self.table.animations) {
@@ -686,5 +698,6 @@ function GameScene() {
 
     this.removeEntity = function (entityToRemove) {
         self.table.dynamicObjects.splice(self.table.dynamicObjects.indexOf(entityToRemove), 1);
+        self.table.drawOrder.splice(self.table.drawOrder.indexOf(entityToRemove), 1);
     }
 }
