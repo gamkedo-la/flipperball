@@ -28,6 +28,7 @@ function GameScene() {
     let currentShakes = 0;
     const shakesBeforeTilt = 2;
     let tilt = false;
+    let spawnerCollisionOn = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -556,6 +557,10 @@ function GameScene() {
     }
 
     this.notifyBallCollision = function(otherEntity, ball) {    
+        if(otherEntity.type !== ENTITY_TYPE.Spawner){
+            //Not more collisions with the spawner so the spawner can be activated again (so it doesn´t spawn one entity per frame)
+            spawnerCollisionOn = false;
+        }
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
@@ -603,7 +608,10 @@ function GameScene() {
                 if(DEBUG){
                     console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
                 }
-                self.handleSpawnerCollision(otherEntity);
+                if(!spawnerCollisionOn){
+                    self.handleSpawnerCollision(otherEntity);
+                    spawnerCollisionOn = true;
+                }
                 break;
             default:
                 break;
@@ -657,15 +665,26 @@ function GameScene() {
     }
 
     this.handleSpawnerCollision = function(spawnerEntity){
-        /*var dynamicObj = self.table.getDynamicObject(spawnerEntity.type);
-        if(dynamicObj !== null && dynamicObj !== undefined){
-            dynamicObj.x = 10;
-            dynamicObj.y = 10;
-            self.table.dynamicObjects.push(dynamicObj);
-            if (dynamicObj.body || dynamicObj.bodies) {
-                this.collisionManager.registerEntity(dynamicObj);
+        
+        var type = null;
+
+        switch(spawnerEntity.name){
+            case "spawner_plane":
+                type = ENTITY_TYPE.Plane;
+            break;
+            default:
+                break;
+        }
+
+        if(type !== null){
+            var dynamicObj = self.table.getDynamicObject(ENTITY_TYPE.Plane);
+            if(dynamicObj !== null && dynamicObj !== undefined){
+                self.table.dynamicObjects.push(dynamicObj);
+                if (dynamicObj.body || dynamicObj.bodies) {
+                    this.collisionManager.registerEntity(dynamicObj);
+                }
             }
-        }*/
+        }
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {
