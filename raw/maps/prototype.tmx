@@ -7,91 +7,91 @@
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
   </tile>
   <tile id="1" type="left_flipper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="171" height="126" source="../../img/tables/flipper_left.png"/>
   </tile>
   <tile id="2" type="right_flipper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="171" height="126" source="../../img/tables/flipper_right.png"/>
   </tile>
   <tile id="3" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="105" height="598" source="../../img/tables/plunger_chute.png"/>
   </tile>
   <tile id="4" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="197" height="195" source="../img/backgrounds/drain_wall_left.png"/>
   </tile>
   <tile id="5" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="197" height="195" source="../img/backgrounds/drain_wall_right.png"/>
   </tile>
   <tile id="6" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="14" height="598" source="../img/backgrounds/vertical_wall.png"/>
   </tile>
   <tile id="7" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="52" height="86" source="../img/backgrounds/angled_wall_1.png"/>
   </tile>
   <tile id="8" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="52" height="52" source="../img/backgrounds/angled_wall_2.png"/>
   </tile>
   <tile id="9" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="52" height="52" source="../img/backgrounds/angled_wall_3.png"/>
   </tile>
   <tile id="10" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="52" height="86" source="../img/backgrounds/angled_wall_4.png"/>
   </tile>
   <tile id="11" type="circle_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="94" height="95" source="../img/backgrounds/circle_bumper_yellow.png"/>
   </tile>
   <tile id="12" type="circle_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="94" height="95" source="../img/backgrounds/circle_bumper_green.png"/>
   </tile>
   <tile id="13" type="circle_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="94" height="95" source="../img/backgrounds/circle_bumper_blue.png"/>
   </tile>
   <tile id="14" type="circle_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="94" height="95" source="../img/backgrounds/circle_bumper_red.png"/>
   </tile>
@@ -103,31 +103,31 @@
   </tile>
   <tile id="16" type="flipper_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="55" height="186" source="../img/backgrounds/flipper_bumper_left.png"/>
   </tile>
   <tile id="17" type="flipper_bumper">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="55" height="186" source="../img/backgrounds/flipper_bumper_right.png"/>
   </tile>
   <tile id="18" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="82" height="270" source="../img/backgrounds/drain_rail_left.png"/>
   </tile>
   <tile id="19" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="82" height="270" source="../img/backgrounds/drain_rail_right.png"/>
   </tile>
   <tile id="20" type="trigger">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="5" height="26" source="../img/backgrounds/lane_trigger.png"/>
   </tile>
@@ -139,25 +139,25 @@
   </tile>
   <tile id="23" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="140" height="142" source="../../img/tables/angled_wall_5.png"/>
   </tile>
   <tile id="24" type="wall">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="140" height="142" source="../../img/tables/angled_wall_6.png"/>
   </tile>
   <tile id="25">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="24" height="24" source="../../img/tables/letter_light_unlit.png"/>
   </tile>
   <tile id="26">
    <properties>
-    <property name="zOrder" type="int" value="20"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
    <image width="24" height="24" source="../../img/tables/letter_light_lit.png"/>
   </tile>
@@ -165,7 +165,7 @@
    <properties>
     <property name="xVelocity" type="int" value="10"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
   </tile>
@@ -173,7 +173,7 @@
    <properties>
     <property name="xVelocity" type="int" value="15"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
   </tile>
@@ -181,7 +181,7 @@
    <properties>
     <property name="xVelocity" type="int" value="7"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
   </tile>
@@ -189,7 +189,7 @@
    <properties>
     <property name="xVelocity" type="int" value="5"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
   </tile>
@@ -197,7 +197,7 @@
    <properties>
     <property name="xVelocity" type="int" value="25"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
   </tile>
@@ -205,7 +205,7 @@
    <properties>
     <property name="xVelocity" type="int" value="3"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="144" height="96" source="../../img/tables/cloud_6.png"/>
   </tile>
@@ -213,7 +213,7 @@
    <properties>
     <property name="xVelocity" type="int" value="3"/>
     <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="10"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
    <image width="144" height="96" source="../../img/tables/cloud_7.png"/>
   </tile>
@@ -271,11 +271,7 @@
   <object id="115" name="cloud_3" gid="30" x="441" y="251" width="81" height="54"/>
   <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66"/>
   <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
-  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39">
-   <properties>
-    <property name="zOrder" type="int" value="10"/>
-   </properties>
-  </object>
+  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
   <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="535"/>

@@ -158,6 +158,11 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.drawOrder.push(...this.flippers)
     if(this.plunger) this.drawOrder.push(this.plunger);
 
+    for (const obj of this.drawOrder) {
+        if (obj.zOrder === undefined) {
+            obj.zOrder = 0
+        }
+    }
     this.drawOrder.sort(compareZ);
 }
 

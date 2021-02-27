@@ -52,7 +52,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -70,7 +70,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -88,7 +88,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -106,7 +106,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -124,7 +124,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -142,7 +142,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -160,7 +160,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"",
@@ -178,7 +178,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -196,7 +196,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -379,7 +379,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -407,7 +407,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -435,7 +435,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -463,7 +463,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -491,7 +491,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -519,7 +519,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -547,7 +547,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
@@ -565,7 +565,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"left_flipper",
@@ -583,7 +583,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"right_flipper",
@@ -601,7 +601,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -619,7 +619,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -642,7 +642,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -665,7 +665,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -688,7 +688,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -711,7 +711,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -729,7 +729,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"cyclone",
@@ -747,7 +747,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"gate",
@@ -793,7 +793,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"circle_bumper_small",
@@ -821,7 +821,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"trigger",
@@ -862,7 +862,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"spawner",
@@ -1844,7 +1844,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"plunger"
                 }, 
@@ -1857,7 +1857,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"left_flipper"
                 }, 
@@ -1870,7 +1870,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"right_flipper"
                 }, 
@@ -1883,7 +1883,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1896,7 +1896,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1909,7 +1909,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1922,7 +1922,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1935,7 +1935,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1948,7 +1948,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1961,7 +1961,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1974,7 +1974,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -1987,7 +1987,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"circle_bumper"
                 }, 
@@ -2000,7 +2000,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"circle_bumper"
                 }, 
@@ -2013,7 +2013,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"circle_bumper"
                 }, 
@@ -2026,7 +2026,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"circle_bumper"
                 }, 
@@ -2052,7 +2052,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"flipper_bumper"
                 }, 
@@ -2065,7 +2065,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"flipper_bumper"
                 }, 
@@ -2078,7 +2078,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -2091,7 +2091,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -2104,7 +2104,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }, 
@@ -2117,7 +2117,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }],
                  "type":"wall"
                 }],
@@ -2207,7 +2207,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2219,7 +2219,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2255,7 +2255,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2267,7 +2267,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2279,7 +2279,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2291,7 +2291,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2303,7 +2303,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }, 
                 {
@@ -2325,7 +2325,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -2348,7 +2348,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -2371,7 +2371,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -2394,7 +2394,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -2417,7 +2417,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":10
+                         "value":-80
                         }],
                  "type":"cloud"
                 }, 
@@ -2442,7 +2442,7 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":20
+                         "value":0
                         }]
                 }],
          "tilewidth":720
