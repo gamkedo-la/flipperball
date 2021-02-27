@@ -145,6 +145,19 @@ function MapBuilder (tableName = TABLES.Prototype) {
         return result;
     }
 
+    this.getDynamicObject = function(type){
+        let dynamicObject = this.dynamicObjects.find(dObj => dObj.type === ENTITY_TYPE.Plane);
+        if(DEBUG){
+            console.log("[MapBuilder]: getDynamicObject -> " + dynamicObject);
+        }
+        let newPlane = new Plane(...dynamicObject, ...dynamicObject.body, {
+            ...ANIMATIONS.PLANE_EXPLOSION,
+            animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[dynamicObject.name]],
+        });
+
+        return newPlane;
+    }
+
     this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);

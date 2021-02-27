@@ -600,8 +600,10 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Spawner:
                 
-                console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
-                
+                if(DEBUG){
+                    console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
+                }
+                self.handleSpawnerCollision(otherEntity);
                 break;
             default:
                 break;
@@ -652,6 +654,18 @@ function GameScene() {
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
         
+    }
+
+    this.handleSpawnerCollision = function(spawnerEntity){
+        /*var dynamicObj = self.table.getDynamicObject(spawnerEntity.type);
+        if(dynamicObj !== null && dynamicObj !== undefined){
+            dynamicObj.x = 10;
+            dynamicObj.y = 10;
+            self.table.dynamicObjects.push(dynamicObj);
+            if (dynamicObj.body || dynamicObj.bodies) {
+                this.collisionManager.registerEntity(dynamicObj);
+            }
+        }*/
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {
