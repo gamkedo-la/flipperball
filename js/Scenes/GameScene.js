@@ -28,6 +28,7 @@ function GameScene() {
     let currentShakes = 0;
     const shakesBeforeTilt = 2;
     let tilt = false;
+    let spawnerCollisionOn = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -549,6 +550,10 @@ function GameScene() {
     }
 
     this.notifyBallCollision = function(otherEntity, ball) {    
+        if(otherEntity.type !== ENTITY_TYPE.Spawner){
+            //Not more collisions with the spawner so the spawner can be activated again (so it doesn´t spawn one entity per frame)
+            spawnerCollisionOn = false;
+        }
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
@@ -585,6 +590,8 @@ function GameScene() {
                 self.handleHabitrailCollision(otherEntity);
                 break;
             case ENTITY_TYPE.Plane:
+                self.score += otherEntity.score;  
+                self.scoreIncrementForExtraBall += otherEntity.score; 
                 this.collisionManager.unregisterEntity(otherEntity);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -593,8 +600,13 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Spawner:
                 
-                console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
-                
+                if(DEBUG){
+                    console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
+                }
+                if(!spawnerCollisionOn){
+                    self.handleSpawnerCollision(otherEntity);
+                    spawnerCollisionOn = true;
+                }
                 break;
             default:
                 break;
@@ -645,6 +657,30 @@ function GameScene() {
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
         
+    }
+
+    this.handleSpawnerCollision = function(spawnerEntity){
+        
+        var type = null;
+
+        switch(spawnerEntity.name){
+            case "spawner_plane":
+                type = ENTITY_TYPE.Plane;
+            break;
+            default:
+                break;
+        }
+
+        if(type !== null){
+            var dynamicObj = self.table.getDynamicObject(ENTITY_TYPE.Plane);
+            if(dynamicObj !== null && dynamicObj !== undefined){
+                self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
+                self.table.dynamicObjects.push(dynamicObj);
+                if (dynamicObj.body || dynamicObj.bodies) {
+                    this.collisionManager.registerEntity(dynamicObj);
+                }
+            }
+        }
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {

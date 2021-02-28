@@ -6,9 +6,4 @@ class Spawner extends GameObject {
 
     }
 
-    spawnEntity(entity, entityParameters){
-
-    }
-
-
 }
