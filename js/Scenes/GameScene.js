@@ -609,6 +609,8 @@ function GameScene() {
                 self.handleHabitrailCollision(otherEntity);
                 break;
             case ENTITY_TYPE.Plane:
+                self.score += otherEntity.score;  
+                self.scoreIncrementForExtraBall += otherEntity.score; 
                 this.collisionManager.unregisterEntity(otherEntity);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -691,6 +693,7 @@ function GameScene() {
         if(type !== null){
             var dynamicObj = self.table.getDynamicObject(ENTITY_TYPE.Plane);
             if(dynamicObj !== null && dynamicObj !== undefined){
+                self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
                 self.table.dynamicObjects.push(dynamicObj);
                 if (dynamicObj.body || dynamicObj.bodies) {
                     this.collisionManager.registerEntity(dynamicObj);

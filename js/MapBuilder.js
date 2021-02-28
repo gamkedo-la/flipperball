@@ -15,6 +15,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.animations = [];
     this.plunger = null;
     this.drawOrder = [];
+    this.dynamicObjectsFirstIndex = 0;
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {
@@ -148,7 +149,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
 
     this.getDynamicObject = function(type){
         let dynamicObject = [this.dynamicLayerData.objects.find(dObj => dObj.type === type)];
-        let dynamicObjectCollision = [this.collisionLayerData.objects.find(dObj => dObj.type === ENTITY_TYPE.Plane)];
+        let dynamicObjectCollision = [this.collisionLayerData.objects.find(dObj => dObj.type === type)];
         if(DEBUG){
             console.log("[MapBuilder]: getDynamicObject -> " + dynamicObject);
         }
@@ -157,13 +158,14 @@ function MapBuilder (tableName = TABLES.Prototype) {
             ...ANIMATIONS.PLANE_EXPLOSION,
             animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[dynamicObject.name]],
         });*/
-        let newPlane = buildDynamicObjects(dynamicObject, dynamicObjectCollision)[0];
+        let newEntity = buildDynamicObjects(dynamicObject, dynamicObjectCollision)[0];
 
-        return newPlane;
+        return newEntity;
     }
 
     this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
     this.drawOrder.push(...this.staticObjects);
+    this.dynamicObjectsFirstIndex = this.drawOrder.length;
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
     this.drawOrder.push(...this.dynamicObjects);
     this.tableColliders = buildTableColliders(this.collisionLayerData.objects);
