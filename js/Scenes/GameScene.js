@@ -507,27 +507,6 @@ function GameScene() {
 
     const draw = function() {
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
-        // for (const staticObj of self.table.staticObjects) {
-        //     staticObj.draw();
-        // }
-        // self.table.dynamicObjects.sort(compareZ);
-        // for (const dynamicObj of self.table.dynamicObjects) {
-        //     dynamicObj.draw();
-        // }
-
-        // for (const wall of self.table.tableColliders) {
-        //     wall.draw();
-        // }
-
-        // for (const flipper of self.table.flippers) {
-        //     flipper.draw();
-        // }
-
-        // if (self.table.plunger) {self.table.plunger.draw();}
-
-        // for (const ball of self.table.balls) {
-        //     ball.draw();
-        // }
 
         for (const obj of self.table.drawOrder) {
             obj.draw();
@@ -541,6 +520,8 @@ function GameScene() {
           drawRect(0, 0, canvas.width, canvas.height, Color.WhiteFlash);
           self.flash = false;
         }
+
+        drawRect(0, 0, self.table.minX, canvas.height, Color.Black);
 
         if (self.paused) {
           colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    

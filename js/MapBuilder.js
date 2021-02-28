@@ -15,6 +15,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.animations = [];
     this.plunger = null;
     this.drawOrder = [];
+    for (const property of mapData.properties) {
+        this[property.name] = property.value
+    }
 
     for (const layerData of mapData.layers) {
         switch(layerData.name) {
@@ -123,7 +126,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     result.push(newPlane);
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
-                        result.push(new GameObject(obj, null));
+                        result.push(new Cloud(self.minX, self.maxX, obj, null));
                     } else {
                         result.push(new GameObject(obj, bodyData));
                     }

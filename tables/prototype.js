@@ -58,8 +58,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":105,
-                 "x":893,
-                 "y":598
+                 "x":894,
+                 "y":599
                 }, 
                 {
                  "gid":6,
@@ -77,7 +77,7 @@
                  "visible":true,
                  "width":197,
                  "x":698,
-                 "y":598
+                 "y":599
                 }, 
                 {
                  "gid":5,
@@ -95,7 +95,7 @@
                  "visible":true,
                  "width":197,
                  "x":289,
-                 "y":598
+                 "y":599
                 }, 
                 {
                  "gid":7,
@@ -113,7 +113,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":598
+                 "y":599
                 }, 
                 {
                  "gid":24,
@@ -148,7 +148,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":752.667,
+                 "x":753.667,
                  "y":132
                 }],
          "opacity":1,
@@ -1731,6 +1731,17 @@
  "nextlayerid":7,
  "nextobjectid":119,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"maxX",
+         "type":"int",
+         "value":1000
+        }, 
+        {
+         "name":"minX",
+         "type":"int",
+         "value":275
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
  "tileheight":10,

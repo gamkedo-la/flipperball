@@ -881,6 +881,11 @@
                          "name":"relatedCollisionObjects",
                          "type":"string",
                          "value":"132,133"
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":100
                         }],
                  "rotation":134.164,
                  "type":"habitrail",
@@ -1858,6 +1863,17 @@
  "nextlayerid":6,
  "nextobjectid":164,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"maxX",
+         "type":"int",
+         "value":1000
+        }, 
+        {
+         "name":"minX",
+         "type":"int",
+         "value":275
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
  "tileheight":10,
