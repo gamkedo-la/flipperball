@@ -837,9 +837,24 @@
                  "name":"plane_red",
                  "properties":[
                         {
+                         "name":"SpawnX",
+                         "type":"int",
+                         "value":290
+                        }, 
+                        {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":860
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":200
+                        }, 
+                        {
+                         "name":"spawnX",
+                         "type":"int",
+                         "value":290
                         }, 
                         {
                          "name":"zOrder",
@@ -2215,6 +2230,16 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":860
+                        }, 
+                        {
+                         "name":"spawnX",
+                         "type":"int",
+                         "value":290
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
@@ -2226,6 +2251,16 @@
                  "imageheight":48,
                  "imagewidth":51,
                  "properties":[
+                        {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":860
+                        }, 
+                        {
+                         "name":"spawnX",
+                         "type":"int",
+                         "value":290
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
@@ -2239,6 +2274,16 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":860
+                        }, 
+                        {
+                         "name":"spawnX",
+                         "type":"int",
+                         "value":290
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
@@ -2250,6 +2295,16 @@
                  "imageheight":48,
                  "imagewidth":51,
                  "properties":[
+                        {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":860
+                        }, 
+                        {
+                         "name":"spawnX",
+                         "type":"int",
+                         "value":290
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",

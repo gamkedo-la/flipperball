@@ -22,7 +22,9 @@ class GameObject {
         
         this.velocity = {x: objData.xVelocity || 0, y: objData.yVelocity || 0};
         this.zOrder = objData.zOrder;
-        if (this.zOrder === undefined){
+        this.spawnX = objData.spawnX;
+        this.maxX = objData.maxX;
+        if (this.zOrder === undefined) {
             this.zOrder = 0;
         }
         console.log("z:"+this.zOrder);

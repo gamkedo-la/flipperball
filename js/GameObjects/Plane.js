@@ -10,8 +10,8 @@ class Plane extends GameObject {
         super.update(deltaTime);
         this.x += this.speed * deltaTime / 1000;
         this.body.update(this.speed * deltaTime / 1000, 0);
-        if (this.isFinished) {
+        if ((this.isFinished) || (this.x > this.maxX)) {
             SceneManager.scenes[SCENE.GAME].removeEntity(this)
-        }
+        } 
     }
 }
