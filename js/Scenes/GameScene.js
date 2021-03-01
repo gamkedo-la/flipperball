@@ -672,7 +672,7 @@ function GameScene() {
         }
 
         if(type !== null){
-            var dynamicObj = self.table.getDynamicObject(ENTITY_TYPE.Plane);
+            var dynamicObj = self.table.getDynamicObject(type);
             if(dynamicObj !== null && dynamicObj !== undefined){
                 self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
                 self.table.dynamicObjects.push(dynamicObj);
