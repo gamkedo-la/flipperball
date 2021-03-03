@@ -100,7 +100,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
             }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
                 // We need the ability for a dynObj to be generated without a collider but still function to remove this                
-                const newGameObject = new GameObject(obj, null, {
+                const newGameObject = new ToggleLight(obj, null, {
                     ...ANIMATIONS.LETTER_LIGHT,
                     animationSpritesheet: images[ANIMATIONS.LETTER_LIGHT.imageNames[obj.name]],
                 });
