@@ -48,6 +48,7 @@ class GameObject {
         this.frameTimes = animationData.frameTimes || [64]; //array of milliseconds to show each frame
         this.reverses = animationData.reverses || false; //boolean indicates if animation reverses (true)
         this.loops = animationData.loops || false; //boolean indicates if animation loops (true) 
+        this.holds = animationData.holds || false;
         this.hasMotionTrail = false; // draw this object with a motion trail
         this.trailPositions = []; // array of previous object positions to be used to maintain the trail
         this.motionTrailLength = 20; // default trail length of 20
@@ -275,6 +276,8 @@ class GameObject {
                     this.isInReverse = true;
                 } else if(this.loops) {
                     newFrameIndex = 0;
+                } else if (this.holds) {                    
+                    newFrameIndex = this.frames.length - 1;
                 } else {
                     this.isAnimating = false;
                     this.isFinished = true;

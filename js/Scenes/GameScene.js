@@ -106,7 +106,6 @@ function GameScene() {
         } else {
             stopBackgroundMusic();
         }
-        
     }
 
     this.run = function(deltaTime) {
@@ -410,6 +409,11 @@ function GameScene() {
                 self.rotatingGateEntity.resetRotatingGate();
         } 
     }
+    
+    var checkToggleLights = function () {
+        
+    
+    }
 
     var checkForExtraBall = function(){
         if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
@@ -642,9 +646,8 @@ function GameScene() {
         self.score += triggerEntity.score;
         self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
-            const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);
-            //lightTarget.currentFrame = lightTarget.frames;
-            self.playAnimation(lightTarget.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
+            const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
+            lightTarget.updateLightState(true);            
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             if (this.currentTableIndex > 0) {

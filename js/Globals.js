@@ -269,7 +269,8 @@ const ANIMATIONS = {
 		frameHeight: 24,
 		frameTimes: [64, 64, 64, 64, 64],
 		reveres: false,
-		loops: true
+		loops: false,
+		holds: true
 	},
 	/*ROTATING_GATE: {
 		imageNames: {
