@@ -106,7 +106,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
-                var habitrail = new HabitrailMapObject(obj, bodyData);
+                var habitrail = new Habitrail(obj, bodyData);
                 for (const collisionId of habitrail.relatedCollisionObjects) {
                     var foundCollisionData = collisionData.find((data) => data.id == collisionId);
                     foundCollisionData.type = 'NA';
@@ -210,32 +210,6 @@ function StaticMapObject(objData) {
             canvasContext.drawImage(this.image, this.x, this.y);
         }
     }
-}
-
-function HabitrailMapObject(objData, bodyData, collisionData = undefined) {
-    this.gid = objData.gid;
-    this.id = objData.id;
-    this.x = objData.x;
-    this.y = objData.y - objData.height;
-    this.width = objData.width;
-    this.height = objData.height;
-    this.type = objData.type;
-    this.reflectance = objData.reflectance || 0.75;
-    this.image = images[objData.name];
-    this.rotation = objData.rotation * (Math.PI/180) || 0;
-    this.body = new CollisionBody(bodyData);
-    this.relatedCollisionObjects = String(objData.properties[0].value).split(',');
-
-    this.draw = function() {
-        if (this.rotation > 0) {
-            drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
-        } else {
-            canvasContext.drawImage(this.image, this.x, this.y);
-        }
-    }
-    
-    this.update = function(deltaTime) {}
-
 }
 
 function TableObject(objData) {
