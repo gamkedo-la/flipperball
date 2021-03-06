@@ -34,7 +34,7 @@ function GameScene() {
     const self = this
 
     this.transitionIn = function () {
-        console.log("Current Table Index: " + this.currentTableIndex);
+        // console.log("Current Table Index: " + this.currentTableIndex);
         if (this.storedTables[this.currentTableIndex] && this.storedCollisionManagers[this.currentTableIndex]) {            
             this.table = this.storedTables[this.currentTableIndex];
             this.collisionManager = this.storedCollisionManagers[this.currentTableIndex];
@@ -99,10 +99,10 @@ function GameScene() {
 
     this.transitionOut = function () {        
         if (!this.gameHasFinished) {
-            console.log("Current Stored Tables: " + this.storedTables.length);
+            // console.log("Current Stored Tables: " + this.storedTables.length);
             this.storedTables[this.lastTableIndex] = this.table;
             this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
-            console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
+            // console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
         } else {
             stopBackgroundMusic();
         }
@@ -129,7 +129,7 @@ function GameScene() {
             case ALIAS.DEBUG:
                 if (pressed) {
                     DEBUG = !DEBUG;
-                    console.log("Debug? " + DEBUG);
+                    // console.log("Debug? " + DEBUG);
                     if (DEBUG) {
                         canvasContainer.appendChild(debugButton);
                     } else {
@@ -286,7 +286,7 @@ function GameScene() {
         for (const ball of self.table.balls) {            
             if (ball.y < 0) {
                 if (DEBUG) {
-                    console.log("if(ball.y < 0)");
+                    // console.log("if(ball.y < 0)");
                     outputTableBallState(ball);
                 }
                 if (self.currentTableIndex < self.tablesForScene.length - 1) {
@@ -298,18 +298,18 @@ function GameScene() {
                     //Probably at some number of points and under some special circumstances
                     //extraBall();
                     if (DEBUG) {
-                        console.log("if(self.currentTableIndex < self.tablesForScene.length - 1)");
+                        // console.log("if(self.currentTableIndex < self.tablesForScene.length - 1)");
                         outputTableBallState(ball);
                     }
                 }
             } else if (ball.y > canvas.height) {
                 if (DEBUG) {
-                    console.log("else if (ball.y > canvas.height)");
+                    // console.log("else if (ball.y > canvas.height)");
                     outputTableBallState(ball);
                 }
                 if (self.currentTableIndex == 0) {
                     if (DEBUG) {
-                        console.log("if (self.currentTableIndex == 0)");
+                        // console.log("if (self.currentTableIndex == 0)");
                         outputTableBallState(ball);
                     }
                     self.lastTableIndex = self.currentTableIndex;
@@ -328,11 +328,11 @@ function GameScene() {
         }
     }
     const outputTableBallState = function (ball) {
-        console.log("Ball Y:" + ball.y);
-        console.log("self.currenTableIndex:" + self.currentTableIndex);
-        console.log("self.tablesForScene.length:" + self.tablesForScene.length);
-        console.log("self.table.balls.length:" + self.table.balls.length);
-        console.log("-----");
+        // console.log("Ball Y:" + ball.y);
+        // console.log("self.currenTableIndex:" + self.currentTableIndex);
+        // console.log("self.tablesForScene.length:" + self.tablesForScene.length);
+        // console.log("self.table.balls.length:" + self.table.balls.length);
+        // console.log("-----");
     }        
     const loseBall = function(ball) {
         let ballIndex = self.table.balls.indexOf(ball);
@@ -346,7 +346,7 @@ function GameScene() {
             for (const ball of self.table.balls) {
                 ball.reset();
             }
-            console.log("self.table.balls.length: " + self.table.balls.length);
+            // console.log("self.table.balls.length: " + self.table.balls.length);
             // reset flipper input (in case of tilt)
             if (tilt) {
                 tilt = false;
@@ -389,7 +389,7 @@ function GameScene() {
     var checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
             if(DEBUG){
-                console.log(self.remainingRotatingScore);   
+                console.log(self.remainingRotatingScore);
             }
 
             self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
@@ -662,28 +662,43 @@ function GameScene() {
         
     }
 
-    this.handleSpawnerCollision = function(spawnerEntity){
-        
-        var type = null;
+    this.handleSpawnerCollision = function(spawnerEntity) {
+        // var type = null;
+        let newObjectData;
 
         switch(spawnerEntity.name){
             case "spawner_plane":
-                type = ENTITY_TYPE.Plane;
+                newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Plane);
+                newObjectData.dynamicObject.name = spawnerEntity.nextColor();
+                newObjectData.dynamicObject.score = spawnerEntity.nextScore();
             break;
             default:
                 break;
         }
 
-        if(type !== null){
-            var dynamicObj = self.table.getDynamicObject(type);
-            if(dynamicObj !== null && dynamicObj !== undefined){
-                self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
-                self.table.dynamicObjects.push(dynamicObj);
-                if (dynamicObj.body || dynamicObj.bodies) {
-                    this.collisionManager.registerEntity(dynamicObj);
+        if (newObjectData) {
+            const newObject = self.table.addDynamicObjectWithData(newObjectData.dynamicObject, newObjectData.collisionBody);
+            for (const obj of self.table.drawOrder) {
+                if (obj.zOrder > newObject.zOrder) {
+                    self.table.drawOrder.splice(self.table.drawOrder.indexOf(obj), 0, newObject);
+                    break;
                 }
             }
+            self.table.dynamicObjects.push(newObject);
+            if (newObject.body || newObject.bodies) {
+                this.collisionManager.registerEntity(newObject);
+            }
         }
+        // if(type !== null) {
+        //     const dynamicObj = self.table.getDynamicObject(type);
+        //     if(dynamicObj) {
+        //         self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
+        //         self.table.dynamicObjects.push(dynamicObj);
+        //         if (dynamicObj.body || dynamicObj.bodies) {
+        //             this.collisionManager.registerEntity(dynamicObj);
+        //         }
+        //     }
+        // }
     }
     this.handleHabitrailCollision = function(habitrailEntity) {
         if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {
@@ -719,5 +734,12 @@ function GameScene() {
     this.removeEntity = function (entityToRemove) {
         self.table.dynamicObjects.splice(self.table.dynamicObjects.indexOf(entityToRemove), 1);
         self.table.drawOrder.splice(self.table.drawOrder.indexOf(entityToRemove), 1);
+        if (entityToRemove.type === ENTITY_TYPE.Plane) {
+            for (const obj of self.table.dynamicObjects) {
+                if (obj.type === ENTITY_TYPE.Spawner && obj.name === ENTITY_NAME.SpawnerPlane) {
+                    obj.childWasHit(entityToRemove);
+                }
+            }
+        }
     }
 }

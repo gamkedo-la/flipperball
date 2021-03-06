@@ -842,6 +842,11 @@
                          "value":290
                         }, 
                         {
+                         "name":"color",
+                         "type":"string",
+                         "value":"plane_red"
+                        }, 
+                        {
                          "name":"maxX",
                          "type":"int",
                          "value":860
@@ -1871,7 +1876,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
@@ -2230,6 +2235,11 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"color",
+                         "type":"string",
+                         "value":"plane_red"
+                        }, 
+                        {
                          "name":"maxX",
                          "type":"int",
                          "value":860
@@ -2243,7 +2253,8 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }]
+                        }],
+                 "type":"plane"
                 }, 
                 {
                  "id":2,
@@ -2252,6 +2263,11 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"color",
+                         "type":"string",
+                         "value":"plane_blue"
+                        }, 
+                        {
                          "name":"maxX",
                          "type":"int",
                          "value":860
@@ -2265,7 +2281,8 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }]
+                        }],
+                 "type":"plane"
                 }, 
                 {
                  "id":3,
@@ -2274,6 +2291,11 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"color",
+                         "type":"string",
+                         "value":"plane_green"
+                        }, 
+                        {
                          "name":"maxX",
                          "type":"int",
                          "value":860
@@ -2287,7 +2309,8 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }]
+                        }],
+                 "type":"plane"
                 }, 
                 {
                  "id":4,
@@ -2296,6 +2319,11 @@
                  "imagewidth":51,
                  "properties":[
                         {
+                         "name":"color",
+                         "type":"string",
+                         "value":"plane_yellow"
+                        }, 
+                        {
                          "name":"maxX",
                          "type":"int",
                          "value":860
@@ -2309,7 +2337,8 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }]
+                        }],
+                 "type":"plane"
                 }, 
                 {
                  "id":5,

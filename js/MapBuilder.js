@@ -95,8 +95,12 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
-            } else if(obj.type === ENTITY_TYPE.Spawner){
-                result.push(new Spawner(obj, bodyData));
+            } else if(obj.type === ENTITY_TYPE.Spawner) {
+                if (obj.name === ENTITY_NAME.SpawnerPlane) {
+                    result.push(new PlaneSpawner(obj, bodyData))
+                } else {
+                    result.push(new Spawner(obj, bodyData));
+                }
             }else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
                 // We need the ability for a dynObj to be generated without a collider but still function to remove this                
@@ -150,9 +154,9 @@ function MapBuilder (tableName = TABLES.Prototype) {
         return result;
     }
 
-    this.getDynamicObject = function(type){
-        let dynamicObject = [this.dynamicLayerData.objects.find(dObj => dObj.type === type)];
-        let dynamicObjectCollision = [this.collisionLayerData.objects.find(dObj => dObj.type === type)];
+    this.getDynamicObject = function(type) {
+        let dynamicObject = this.dynamicLayerData.objects.find(dObj => dObj.type === type);
+        let dynamicObjectCollision = this.collisionLayerData.objects.find(dObj => dObj.type === type);
         if(DEBUG){
             console.log("[MapBuilder]: getDynamicObject -> " + dynamicObject);
         }
@@ -161,9 +165,16 @@ function MapBuilder (tableName = TABLES.Prototype) {
             ...ANIMATIONS.PLANE_EXPLOSION,
             animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[dynamicObject.name]],
         });*/
-        let newEntity = buildDynamicObjects(dynamicObject, dynamicObjectCollision)[0];
 
-        return newEntity;
+
+        // let newEntity = buildDynamicObjects(dynamicObject, dynamicObjectCollision)[0];
+
+        // return newEntity;
+        return { dynamicObject: dynamicObject, collisionBody: dynamicObjectCollision }
+    }
+
+    this.addDynamicObjectWithData = function(dynamicObject, dynamicObjectCollision) {
+        return buildDynamicObjects([dynamicObject], [dynamicObjectCollision])[0];
     }
 
     this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
