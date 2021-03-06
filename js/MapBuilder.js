@@ -42,7 +42,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {    
-            result.push(new StaticMapObject(obj));
+            result.push(new StaticObject(obj));
             
         }
         return result;
@@ -184,32 +184,6 @@ function MapBuilder (tableName = TABLES.Prototype) {
         }
     }
     this.drawOrder.sort(compareZ);
-}
-
-function StaticMapObject(objData) {
-    this.gid = objData.gid;
-    this.id = objData.id;
-    this.x = objData.x;
-    this.y = objData.y - objData.height;
-    this.width = objData.width;
-    this.height = objData.height;
-    this.type = objData.type;
-    this.reflectance = objData.reflectance || 0.75;
-    this.image = images[objData.name];
-    this.rotation = objData.rotation * (Math.PI/180) || 0;
-    //console.log("Object: " + objData.name + " id: " + this.id);
-    if (objData.properties) {
-        for (const prop of objData.properties) {
-            this[prop.name] = prop.value
-        }
-    } 
-    this.draw = function() {
-        if (this.rotation > 0) {
-            drawImageForTiledWithRotation(this.image, this.x, this.y, this.rotation);
-        } else {
-            canvasContext.drawImage(this.image, this.x, this.y);
-        }
-    }
 }
 
 function TableObject(objData) {
