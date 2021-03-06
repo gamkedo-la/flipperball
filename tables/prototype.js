@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":36,
+                 "gid":37,
                  "height":600,
                  "id":110,
                  "name":"cloud_bg_top_empty",
@@ -130,8 +130,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":290.333,
-                 "y":132
+                 "x":276.333,
+                 "y":105
                 }, 
                 {
                  "gid":25,
@@ -565,8 +565,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":414.5,
-                 "y":108.333
+                 "x":424.5,
+                 "y":169.333
                 }, 
                 {
                  "gid":20,
@@ -833,6 +833,24 @@
                  "width":24,
                  "x":931.083,
                  "y":123.375
+                }, 
+                {
+                 "gid":35,
+                 "height":54,
+                 "id":119,
+                 "name":"ball_catch",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":54,
+                 "x":354.25,
+                 "y":73.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -865,8 +883,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":413.784,
-                 "y":13.3133
+                 "x":422.784,
+                 "y":72.3133
                 }, 
                 {
                  "ellipse":true,
@@ -1243,11 +1261,11 @@
                         }, 
                         {
                          "x":14,
-                         "y":105.5
+                         "y":65.5
                         }, 
                         {
                          "x":153.5,
-                         "y":-11
+                         "y":-51
                         }, 
                         {
                          "x":13.0214,
@@ -1518,16 +1536,16 @@
                  "name":"left",
                  "polygon":[
                         {
-                         "x":86,
-                         "y":-63.5
+                         "x":83,
+                         "y":-100.5
                         }, 
                         {
-                         "x":-48,
-                         "y":-129.5
+                         "x":-50,
+                         "y":-127.5
                         }, 
                         {
-                         "x":-48.5,
-                         "y":48
+                         "x":-50.5,
+                         "y":12
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -1721,6 +1739,29 @@
                  "width":12,
                  "x":748.667,
                  "y":369
+                }, 
+                {
+                 "ellipse":true,
+                 "height":30,
+                 "id":120,
+                 "name":"ball_catch",
+                 "properties":[
+                        {
+                         "name":"catcher",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":119
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":30,
+                 "x":365.5,
+                 "y":32.25
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1729,7 +1770,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":119,
+ "nextobjectid":121,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1758,7 +1799,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":33,
+         "tilecount":34,
          "tileheight":598,
          "tiles":[
                 {
@@ -2256,12 +2297,25 @@
                          "value":-80
                         }],
                  "type":"cloud"
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/img\/tables\/ball_catch.png",
+                 "imageheight":54,
+                 "imagewidth":54,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"trigger"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":35,
+         "firstgid":36,
          "grid":
             {
              "height":1,
@@ -2302,7 +2356,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":37,
+         "firstgid":38,
          "grid":
             {
              "height":1,

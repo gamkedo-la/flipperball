@@ -647,7 +647,9 @@ function GameScene() {
             self.playAnimation(lightTarget.name, ANIMATIONS.LETTER_LIGHT, lightTarget.x, lightTarget.y);
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
-            self.transitionIn();
+            if (this.currentTableIndex > 0) {
+                self.transitionIn();
+            }
         }
     }
 

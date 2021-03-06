@@ -2362,7 +2362,8 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":0
-                        }]
+                        }],
+                 "type":"trigger"
                 }, 
                 {
                  "id":7,
