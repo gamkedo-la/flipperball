@@ -94,7 +94,7 @@ function GameScene() {
             }
         }
 
-        playBackgroundMusic();
+        playLoopBackgroundMusic();
     }
 
     this.transitionOut = function () {        
@@ -103,7 +103,10 @@ function GameScene() {
             this.storedTables[this.lastTableIndex] = this.table;
             this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
             console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
-        }        
+        } else {
+            stopBackgroundMusic();
+        }
+        
     }
 
     this.run = function(deltaTime) {

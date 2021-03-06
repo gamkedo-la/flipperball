@@ -18,7 +18,7 @@ const VOLUME_INCREMENT = 0.05;
 const MILLESECOND_MULTIPLIER = 1000;
 
 function configureGameAudio() {
-	currentBackgroundMusic = new BackgroundMusicClass(); 
+	currentBackgroundMusic = new BackgroundMusicClass();
 	musicVolume = parseFloat(localStorage.getItem(localStorageKey.MusicVolume));
 	effectsVolume = parseFloat(localStorage.getItem(localStorageKey.SFXVolume));
 	
@@ -62,6 +62,18 @@ function BackgroundMusicClass(filenameWithPath) {
 		}
         musicSound = new Audio(filenameWithPath + audioFormat);
         musicSound.loop = true;
+        this.setVolume(musicVolume);
+    }
+
+	this.playSong = function(filenameWithPath) {
+        setFormat(); // calling this to ensure that audioFormat is set before needed
+
+        if (musicSound != null) {
+            musicSound.pause();
+            musicSound = null;
+		}
+        musicSound = new Audio(filenameWithPath + audioFormat);
+        musicSound.loop = false;
         this.setVolume(musicVolume);
     }
 
@@ -219,11 +231,23 @@ function resumeSoundAndMusic() {
 	currentBackgroundMusic.resumeSound();
 }
 
-function playBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") { 
+function playLoopBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") { 
 	if (!currentBackgroundMusicInitialized) {
 		currentBackgroundMusicInitialized = true;
 		currentBackgroundMusic.loopSong(assetPath.Audio + trackToPlay);
 	}
+}
+
+function playBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") { 
+	if (!currentBackgroundMusicInitialized) {
+		currentBackgroundMusicInitialized = true;
+		currentBackgroundMusic.playSong(assetPath.Audio + trackToPlay);
+	}
+}
+
+function stopBackgroundMusic() {
+	currentBackgroundMusic.pauseSound();
+	currentBackgroundMusicInitialized = false;
 }
 
 function restartBackgroundMusic() {

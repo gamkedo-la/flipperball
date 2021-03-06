@@ -1,4 +1,4 @@
-//TitleScene
+//GameOverScene
 // eslint-disable-next-line no-unused-vars
 function GameOverScene() {
     let selectorPositionsIndex = 0;
@@ -11,7 +11,7 @@ function GameOverScene() {
     const START_GAME_TIME_BUFFER = 400; //milliseconds
 
     this.transitionIn = function() {
-
+        playBackgroundMusic("Game Over Music");
     };
 
     this.transitionOut = function() {
