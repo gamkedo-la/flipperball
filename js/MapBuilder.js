@@ -15,8 +15,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.animations = [];
     this.plunger = null;
     this.drawOrder = [];
-    for (const property of mapData.properties) {
-        this[property.name] = property.value
+    if (mapData.properties) {
+        for (const property of mapData.properties) {
+            this[property.name] = property.value
+        }
     }
     this.dynamicObjectsFirstIndex = 0;
 
@@ -62,14 +64,14 @@ function MapBuilder (tableName = TABLES.Prototype) {
             
             // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
             let bodyData = [];
-            for (const colData of collisionData) {        
+            for (const colData of collisionData) {
                 //console.log("MapBuilder: " + obj.type);        
                 if (colData.properties) {
                     const colProps = {};
                     for (const property of colData.properties) {
                         colProps[property['name']] = property['value'];
                     }
-                    if (colProps.dynObjConn) {                        
+                    if (colProps.dynObjConn) {
                         if (colProps.dynObjConn === obj.id) { bodyData.push(colData); }
                     }
                 }
@@ -79,35 +81,38 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 bodyData = bodyData[0];
             }
             
-            if (obj.type === ENTITY_TYPE.Ball) {                
+            if (obj.type === ENTITY_TYPE.Ball) {
                 self.balls.push(new Ball(obj, bodyData));
-            } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {                
+            } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
                 self.flippers.push(new Flipper(obj, bodyData));
             } else if (obj.type === ENTITY_TYPE.FlipperBumper) {
                 result.push(new FlipperBumper(obj, bodyData));
-            } else if (obj.type === ENTITY_TYPE.Trigger) {                
+            } else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));
-            } else if (obj.type === 'plunger') {                
+            } else if (obj.type === 'plunger') {
                 self.plunger = new Plunger(obj, bodyData);
-            } else if (obj.type === 'rotating_gate'){
+            } else if (obj.type === 'rotating_gate') {
                 const newGameObject = new RotatingGateObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,
                     animationSpritesheet: images[ANIMATIONS.ROTATING_GATE.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
-            } else if(obj.type === ENTITY_TYPE.Spawner) {
+            } else if (obj.type === ENTITY_TYPE.Spawner) {
                 if (obj.name === ENTITY_NAME.SpawnerPlane) {
                     result.push(new PlaneSpawner(obj, bodyData))
                 } else {
                     result.push(new Spawner(obj, bodyData));
                 }
-            }else if (obj.type === 'letter_light') {
+            } else if (obj.type === 'letter_light') {
                 // TBD: letter_light doesn't need a collider. This is the old way to load a collider, and it's just to keep other processes from crashing later. 
                 // We need the ability for a dynObj to be generated without a collider but still function to remove this                
                 const newGameObject = new ToggleLight(obj, null, {
                     ...ANIMATIONS.LETTER_LIGHT,
                     animationSpritesheet: images[ANIMATIONS.LETTER_LIGHT.imageNames[obj.name]],
                 });
+                result.push(newGameObject);
+            } else if (obj.type === 'status_light') {
+                const newGameObject = new ToggleLight(obj, null);
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
                 var habitrail = new Habitrail(obj, bodyData);
@@ -116,7 +121,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     foundCollisionData.type = 'NA';
                 }
                 result.push(habitrail);
-            } else {                
+            } else {
                 if (obj.type === ENTITY_TYPE.CircleBumper) {
                     const newGameObject = new GameObject(obj, bodyData, {
                         ...ANIMATIONS.CIRCLE_BUMPER,

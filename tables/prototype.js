@@ -58,8 +58,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":105,
-                 "x":894,
-                 "y":599
+                 "x":893,
+                 "y":598
                 }, 
                 {
                  "gid":6,
@@ -77,7 +77,7 @@
                  "visible":true,
                  "width":197,
                  "x":698,
-                 "y":599
+                 "y":598
                 }, 
                 {
                  "gid":5,
@@ -95,7 +95,7 @@
                  "visible":true,
                  "width":197,
                  "x":289,
-                 "y":599
+                 "y":598
                 }, 
                 {
                  "gid":7,
@@ -113,7 +113,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":599
+                 "y":598
                 }, 
                 {
                  "gid":24,
@@ -130,8 +130,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":276.333,
-                 "y":105
+                 "x":290.333,
+                 "y":132
                 }, 
                 {
                  "gid":25,
@@ -148,7 +148,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":753.667,
+                 "x":752.667,
                  "y":132
                 }],
          "opacity":1,
@@ -565,8 +565,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94,
-                 "x":424.5,
-                 "y":169.333
+                 "x":414.5,
+                 "y":108.333
                 }, 
                 {
                  "gid":20,
@@ -741,6 +741,11 @@
                  "name":"letter_light",
                  "properties":[
                         {
+                         "name":"bonus_1",
+                         "type":"object",
+                         "value":119
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -759,6 +764,11 @@
                  "name":"letter_light",
                  "properties":[
                         {
+                         "name":"bonus_1",
+                         "type":"object",
+                         "value":119
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -776,6 +786,11 @@
                  "id":91,
                  "name":"letter_light",
                  "properties":[
+                        {
+                         "name":"bonus_1",
+                         "type":"object",
+                         "value":119
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
@@ -813,7 +828,7 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":942.073,
+                 "x":519.073,
                  "y":130.375
                 }, 
                 {
@@ -823,6 +838,11 @@
                  "name":"letter_light",
                  "properties":[
                         {
+                         "name":"bonus_1",
+                         "type":"object",
+                         "value":119
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -831,26 +851,20 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":931.083,
+                 "x":508.083,
                  "y":123.375
                 }, 
                 {
                  "gid":35,
-                 "height":54,
+                 "height":24,
                  "id":119,
-                 "name":"ball_catch",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
+                 "name":"bonus_light_2x",
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"status_light",
                  "visible":true,
-                 "width":54,
-                 "x":354.25,
-                 "y":73.5
+                 "width":24,
+                 "x":515.636363636364,
+                 "y":400.363636363636
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -883,8 +897,8 @@
                  "type":"circle_bumper",
                  "visible":true,
                  "width":94.652,
-                 "x":422.784,
-                 "y":72.3133
+                 "x":413.784,
+                 "y":13.3133
                 }, 
                 {
                  "ellipse":true,
@@ -1261,11 +1275,11 @@
                         }, 
                         {
                          "x":14,
-                         "y":65.5
+                         "y":105.5
                         }, 
                         {
                          "x":153.5,
-                         "y":-51
+                         "y":-11
                         }, 
                         {
                          "x":13.0214,
@@ -1536,16 +1550,16 @@
                  "name":"left",
                  "polygon":[
                         {
-                         "x":83,
-                         "y":-100.5
+                         "x":86,
+                         "y":-63.5
                         }, 
                         {
-                         "x":-50,
-                         "y":-127.5
+                         "x":-48,
+                         "y":-129.5
                         }, 
                         {
-                         "x":-50.5,
-                         "y":12
+                         "x":-48.5,
+                         "y":48
                         }],
                  "rotation":0,
                  "type":"wall",
@@ -1665,7 +1679,7 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":936.317,
+                 "x":513.317,
                  "y":120.375
                 }, 
                 {
@@ -1739,50 +1753,16 @@
                  "width":12,
                  "x":748.667,
                  "y":369
-                }, 
-                {
-                 "ellipse":true,
-                 "height":30,
-                 "id":120,
-                 "name":"ball_catch",
-                 "properties":[
-                        {
-                         "name":"catcher",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":119
-                        }],
-                 "rotation":0,
-                 "type":"trigger",
-                 "visible":true,
-                 "width":30,
-                 "x":365.5,
-                 "y":32.25
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":121,
+ "nextobjectid":120,
  "orientation":"orthogonal",
- "properties":[
-        {
-         "name":"maxX",
-         "type":"int",
-         "value":1000
-        }, 
-        {
-         "name":"minX",
-         "type":"int",
-         "value":275
-        }],
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
  "tileheight":10,
@@ -2300,16 +2280,9 @@
                 }, 
                 {
                  "id":34,
-                 "image":"..\/img\/tables\/ball_catch.png",
-                 "imageheight":54,
-                 "imagewidth":54,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"trigger"
+                 "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24
                 }],
          "tilewidth":197
         }, 

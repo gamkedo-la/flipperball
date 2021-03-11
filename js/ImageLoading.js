@@ -70,6 +70,8 @@ let picsToLoad = 0;
 function loadImages() {
     const imageList = [
         // List them here alphabetically to make it easier to find the one you're looking for
+        {imgName: "bonus_light_2x", theFile: "tables/2x_bonus_light_unlit.png"},
+        
         {imgName: "angled_wall_1", theFile: "tables/angled_wall_1.png", image: {}},
         {imgName: "angled_wall_2", theFile: "tables/angled_wall_2.png"},
         {imgName: "angled_wall_3", theFile: "tables/angled_wall_3.png"},
