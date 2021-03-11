@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 //Main for Flipperball
-//Practice Commit - Hey it's Hamza! Watching Trayford's video (will remove)
 window.onload = function() {
     window.addEventListener("focus", windowOnFocus);
     window.addEventListener("blur", windowOnBlur);
