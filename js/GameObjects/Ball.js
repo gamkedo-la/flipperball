@@ -99,11 +99,9 @@ class Ball extends GameObject {
                         this.triggersCollided[Date.now()] = collision.otherEntity;
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     }
-                    if (DEBUG) {
-                        if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
-                            console.log("Light Trigger Hit");
-                        }     
-                    }                        
+                    if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
+                        DEBUG_LOG("Light Trigger Hit");
+                    }     
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
                     this.vxAdjustment = -this.velocity.x;
