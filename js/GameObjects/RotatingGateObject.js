@@ -1,9 +1,7 @@
 class RotatingGateObject extends GameObject {
     constructor(...props) {
         super(...props);
-        if(DEBUG){
-            console.log("[RotatingGameObject] Constructor");
-        }
+        DEBUG_LOG("[RotatingGameObject] Constructor");
         this.rotatingSpeed = 0;
         this.remainingRotatingScore = 0;
         this.rotatingCoefficient = 1;
@@ -20,23 +18,17 @@ class RotatingGateObject extends GameObject {
         }else{
             this.rotatingCoefficient = 100 / this.remainingRotatingScore;
         }
-        if(DEBUG){
-            console.log("[RotatingGameObject] calculateRotatingCoefficient: rotatingCoefficient -> " + this.rotatingCoefficient);
-        }
+        DEBUG_LOG("[RotatingGameObject] calculateRotatingCoefficient: rotatingCoefficient -> " + this.rotatingCoefficient);
     }
 
     updateCurrentFrameTime(){
-        if(DEBUG){
-            console.log("[RotatingGameObject] updateCurrentFrameTime: BEFORE originalFrameTimes[" + this.currFrame + "] -> " + this.originalFrameTimes);
-            console.log("[RotatingGameObject] updateCurrentFrameTime: BEFORE frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
-        }
-        
+        DEBUG_LOG("[RotatingGameObject] updateCurrentFrameTime: BEFORE originalFrameTimes[" + this.currFrame + "] -> " + this.originalFrameTimes);
+        DEBUG_LOG("[RotatingGameObject] updateCurrentFrameTime: BEFORE frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
+                
         this.frameTimes[this.currFrame] = Math.round(this.originalFrameTimes*this.rotatingCoefficient);
-        
-        if(DEBUG){
-            console.log("[RotatingGameObject] updateCurrentFrameTime: AFTER frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
-            console.log("[RotatingGameObject] updateCurrentFrameTime: AFTER originalFrameTimes -> " + this.originalFrameTimes);
-        }
+    
+        DEBUG_LOG("[RotatingGameObject] updateCurrentFrameTime: AFTER frameTimes[" + this.currFrame + "] -> " + this.frameTimes[this.currFrame]);
+        DEBUG_LOG("[RotatingGameObject] updateCurrentFrameTime: AFTER originalFrameTimes -> " + this.originalFrameTimes);
     }
 
 
@@ -62,11 +54,9 @@ class RotatingGateObject extends GameObject {
         //Update the frameTime values depending on the ballSpeed and reduce the ballSpeed
 
         this.currTiming += deltaTime;
-        if(DEBUG){
-            console.log("[RotatingGameObject] updateAnimation: deltaTime -> " + deltaTime);
-            console.log("[RotatingGameObject] updateAnimation: currTiming -> " + this.currTiming);
-            console.log("[RotatingGameObject] updateAnimation: this.frameTimes[this.currFrame] -> " + this.frameTimes[this.currFrame]);
-        }
+        DEBUG_LOG("[RotatingGameObject] updateAnimation: deltaTime -> " + deltaTime);
+        DEBUG_LOG("[RotatingGameObject] updateAnimation: currTiming -> " + this.currTiming);
+        DEBUG_LOG("[RotatingGameObject] updateAnimation: this.frameTimes[this.currFrame] -> " + this.frameTimes[this.currFrame]);
         if (this.currTiming >= this.frameTimes[this.currFrame]) {
             this.currTiming = 0;
             super.updateFrame();
