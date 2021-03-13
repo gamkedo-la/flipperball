@@ -460,6 +460,12 @@ function GameScene() {
             dynamicObj.update(deltaTime / 2);
         }
 
+        for (const staticObj of self.table.staticObjects) {
+            if (staticObj.type === ENTITY_TYPE.SlotMachine) {
+                staticObj.update(deltaTime / 2);
+            }
+        }
+
         self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
