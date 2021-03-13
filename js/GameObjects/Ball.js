@@ -94,21 +94,16 @@ class Ball extends GameObject {
 
             if (this.respondsTo(collision.otherEntity.type)) {
                 if (collision.otherEntity.type === ENTITY_TYPE.Trigger) {                    
-                    if (collision.otherEntity.subType === TRIGGER_TYPE.Lane) {
-                        if (!collision.otherEntity.hasCollided) {
-                            collision.otherEntity.hasCollided = true;
-                            this.triggersCollided[Date.now()] = collision.otherEntity;
-                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
-                        }                        
+                    if (!collision.otherEntity.hasCollided) {
+                        collision.otherEntity.hasCollided = true;
+                        this.triggersCollided[Date.now()] = collision.otherEntity;
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     }
-                    if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
-                        if (DEBUG) { console.log("Light Trigger Hit"); }
-                        if (!collision.otherEntity.hasCollided) {
-                            collision.otherEntity.hasCollided = true;
-                            this.triggersCollided[Date.now()] = collision.otherEntity;
-                            SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
-                        }
-                    }
+                    if (DEBUG) {
+                        if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
+                            console.log("Light Trigger Hit");
+                        }     
+                    }                        
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
                     this.vxAdjustment = -this.velocity.x;
