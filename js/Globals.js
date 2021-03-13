@@ -85,8 +85,8 @@ const TABLES = {
 };
 
 // Set these to easily test new table designs
-const DEFAULT_TABLE = TABLES.Space;
-const DEFAULT_TABLE_TOP = TABLES.SpaceTop;
+const DEFAULT_TABLE = TABLES.Prototype;
+const DEFAULT_TABLE_TOP = TABLES.PrototypeTop;
 
 const TABLE_LAYERS = {
 	Collision: 'Collision',
