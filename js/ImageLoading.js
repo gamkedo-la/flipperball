@@ -169,7 +169,11 @@ function loadImages() {
         {imgName: "flipper_title_medium", theFile: "screens/Flipperball_Title_Image_Medium.png"},
         {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"},
 
-        {imgName: "spawner_plane", theFile: "tables/spawner_plane.png"}
+        {imgName: "spawner_plane", theFile: "tables/spawner_plane.png"},
+
+        {imgName: "slot", theFile: "tables/slot.png"},
+        {imgName: "slot_animation", theFile: "animations/slot_frame_anim.png"},
+        {imgName: "slot_trigger", theFile: "tables/lane_trigger.png" }
         
     ];
 
