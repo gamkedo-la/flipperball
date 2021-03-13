@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":42,
+                 "gid":44,
                  "height":600,
                  "id":151,
                  "name":"cloud_bg_top_empty",
@@ -152,7 +152,7 @@
                  "y":465.5
                 }, 
                 {
-                 "gid":28,
+                 "gid":30,
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
@@ -206,7 +206,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":30,
+                 "gid":32,
                  "height":54,
                  "id":77,
                  "name":"plane_pipe_right",
@@ -224,7 +224,7 @@
                  "y":180
                 }, 
                 {
-                 "gid":31,
+                 "gid":33,
                  "height":54,
                  "id":78,
                  "name":"plane_pipe_left",
@@ -242,7 +242,7 @@
                  "y":180
                 }, 
                 {
-                 "gid":45,
+                 "gid":47,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -260,7 +260,7 @@
                  "y":128
                 }, 
                 {
-                 "gid":45,
+                 "gid":47,
                  "height":75,
                  "id":138,
                  "name":"habitrail_small_track",
@@ -278,7 +278,7 @@
                  "y":50.3171
                 }, 
                 {
-                 "gid":46,
+                 "gid":48,
                  "height":125,
                  "id":139,
                  "name":"habitrail_track",
@@ -296,7 +296,7 @@
                  "y":17.4
                 }, 
                 {
-                 "gid":46,
+                 "gid":48,
                  "height":125,
                  "id":140,
                  "name":"habitrail_track",
@@ -314,7 +314,7 @@
                  "y":17.0891
                 }, 
                 {
-                 "gid":45,
+                 "gid":47,
                  "height":75,
                  "id":141,
                  "name":"habitrail_small_track",
@@ -332,22 +332,16 @@
                  "y":15.507
                 }, 
                 {
-                 "gid":45,
-                 "height":75,
-                 "id":142,
-                 "name":"habitrail_small_track",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":100
-                        }],
-                 "rotation":134.164,
-                 "type":"habitrail",
+                 "gid":23,
+                 "height":45,
+                 "id":164,
+                 "name":"slot",
+                 "rotation":0,
+                 "type":"slot_machine",
                  "visible":true,
-                 "width":42,
-                 "x":772.063,
-                 "y":32.6423
+                 "width":31,
+                 "x":529,
+                 "y":356
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -361,7 +355,7 @@
          "name":"Dynamic",
          "objects":[
                 {
-                 "gid":37,
+                 "gid":39,
                  "height":78,
                  "id":153,
                  "name":"cloud_1",
@@ -389,7 +383,7 @@
                  "y":143
                 }, 
                 {
-                 "gid":39,
+                 "gid":41,
                  "height":54,
                  "id":154,
                  "name":"cloud_3",
@@ -417,7 +411,7 @@
                  "y":196
                 }, 
                 {
-                 "gid":38,
+                 "gid":40,
                  "height":36,
                  "id":155,
                  "name":"cloud_2",
@@ -445,7 +439,7 @@
                  "y":278
                 }, 
                 {
-                 "gid":41,
+                 "gid":43,
                  "height":39,
                  "id":156,
                  "name":"cloud_5",
@@ -473,7 +467,7 @@
                  "y":156
                 }, 
                 {
-                 "gid":40,
+                 "gid":42,
                  "height":66,
                  "id":157,
                  "name":"cloud_4",
@@ -501,7 +495,7 @@
                  "y":388
                 }, 
                 {
-                 "gid":41,
+                 "gid":43,
                  "height":39,
                  "id":158,
                  "name":"cloud_5",
@@ -529,7 +523,7 @@
                  "y":490
                 }, 
                 {
-                 "gid":38,
+                 "gid":40,
                  "height":36,
                  "id":159,
                  "name":"cloud_2",
@@ -629,7 +623,7 @@
                  "y":428
                 }, 
                 {
-                 "gid":32,
+                 "gid":34,
                  "height":54,
                  "id":93,
                  "name":"circle_bumper_small_red",
@@ -652,7 +646,7 @@
                  "y":129.667
                 }, 
                 {
-                 "gid":35,
+                 "gid":37,
                  "height":54,
                  "id":97,
                  "name":"circle_bumper_small_green",
@@ -675,7 +669,7 @@
                  "y":143.5
                 }, 
                 {
-                 "gid":34,
+                 "gid":36,
                  "height":54,
                  "id":100,
                  "name":"circle_bumper_small_blue",
@@ -698,7 +692,7 @@
                  "y":310
                 }, 
                 {
-                 "gid":33,
+                 "gid":35,
                  "height":54,
                  "id":101,
                  "name":"circle_bumper_small_yellow",
@@ -721,7 +715,7 @@
                  "y":310
                 }, 
                 {
-                 "gid":36,
+                 "gid":38,
                  "height":96,
                  "id":103,
                  "name":"cyclone",
@@ -757,7 +751,7 @@
                  "y":127
                 }, 
                 {
-                 "gid":44,
+                 "gid":46,
                  "height":75,
                  "id":136,
                  "name":"habitrail_gateway",
@@ -780,7 +774,7 @@
                  "y":188.12
                 }, 
                 {
-                 "gid":34,
+                 "gid":36,
                  "height":54,
                  "id":144,
                  "name":"circle_bumper_small_blue",
@@ -803,7 +797,7 @@
                  "y":127.667
                 }, 
                 {
-                 "gid":29,
+                 "gid":31,
                  "height":54,
                  "id":91,
                  "name":"ball_catch",
@@ -831,35 +825,15 @@
                  "y":78.6667
                 }, 
                 {
-                 "gid":24,
+                 "gid":26,
                  "height":48,
                  "id":90,
                  "name":"plane_red",
                  "properties":[
                         {
-                         "name":"SpawnX",
-                         "type":"int",
-                         "value":290
-                        }, 
-                        {
-                         "name":"color",
-                         "type":"string",
-                         "value":"plane_red"
-                        }, 
-                        {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":860
-                        }, 
-                        {
                          "name":"score",
                          "type":"int",
                          "value":200
-                        }, 
-                        {
-                         "name":"spawnX",
-                         "type":"int",
-                         "value":290
                         }, 
                         {
                          "name":"zOrder",
@@ -874,7 +848,7 @@
                  "y":175
                 }, 
                 {
-                 "gid":43,
+                 "gid":45,
                  "height":54,
                  "id":160,
                  "name":"spawner_plane",
@@ -892,7 +866,7 @@
                  "y":306.5
                 }, 
                 {
-                 "gid":45,
+                 "gid":47,
                  "height":75,
                  "id":142,
                  "name":"habitrail_gateway",
@@ -913,6 +887,24 @@
                  "width":42,
                  "x":772.063,
                  "y":32.6423
+                }, 
+                {
+                 "gid":24,
+                 "height":26,
+                 "id":165,
+                 "name":"slot_trigger",
+                 "properties":[
+                        {
+                         "name":"slot_target",
+                         "type":"object",
+                         "value":164
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":5,
+                 "x":703,
+                 "y":519.667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1858,7 +1850,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":21.1183046796248,
+                 "height":21.1183,
                  "id":163,
                  "name":"habitrail_gateway",
                  "properties":[
@@ -1867,33 +1859,40 @@
                          "type":"object",
                          "value":142
                         }],
-                 "rotation":320.180410924002,
+                 "rotation":320.18,
                  "type":"",
                  "visible":true,
-                 "width":44.9341623675331,
-                 "x":786.607250797247,
-                 "y":104.3936320943
+                 "width":44.9342,
+                 "x":786.607,
+                 "y":104.394
+                }, 
+                {
+                 "ellipse":true,
+                 "height":53.9999666666668,
+                 "id":166,
+                 "name":"slot_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":165
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":42.6666333333334,
+                 "x":685.000333333333,
+                 "y":481.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":164,
+ "nextobjectid":168,
  "orientation":"orthogonal",
- "properties":[
-        {
-         "name":"maxX",
-         "type":"int",
-         "value":1000
-        }, 
-        {
-         "name":"minX",
-         "type":"int",
-         "value":275
-        }],
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
  "tileheight":10,
@@ -1910,7 +1909,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":22,
+         "tilecount":24,
          "tileheight":598,
          "tiles":[
                 {
@@ -2198,12 +2197,26 @@
                          "value":0
                         }],
                  "type":"wall"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/img\/tables\/slot.png",
+                 "imageheight":45,
+                 "imagewidth":31,
+                 "type":"slot_machine"
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/lane_trigger.png",
+                 "imageheight":26,
+                 "imagewidth":5,
+                 "type":"trigger"
                 }],
          "tilewidth":598
         }, 
         {
          "columns":0,
-         "firstgid":23,
+         "firstgid":25,
          "grid":
             {
              "height":1,
@@ -2235,26 +2248,10 @@
                  "imagewidth":51,
                  "properties":[
                         {
-                         "name":"color",
-                         "type":"string",
-                         "value":"plane_red"
-                        }, 
-                        {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":860
-                        }, 
-                        {
-                         "name":"spawnX",
-                         "type":"int",
-                         "value":290
-                        }, 
-                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }],
-                 "type":"plane"
+                        }]
                 }, 
                 {
                  "id":2,
@@ -2263,26 +2260,10 @@
                  "imagewidth":51,
                  "properties":[
                         {
-                         "name":"color",
-                         "type":"string",
-                         "value":"plane_blue"
-                        }, 
-                        {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":860
-                        }, 
-                        {
-                         "name":"spawnX",
-                         "type":"int",
-                         "value":290
-                        }, 
-                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }],
-                 "type":"plane"
+                        }]
                 }, 
                 {
                  "id":3,
@@ -2291,26 +2272,10 @@
                  "imagewidth":51,
                  "properties":[
                         {
-                         "name":"color",
-                         "type":"string",
-                         "value":"plane_green"
-                        }, 
-                        {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":860
-                        }, 
-                        {
-                         "name":"spawnX",
-                         "type":"int",
-                         "value":290
-                        }, 
-                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }],
-                 "type":"plane"
+                        }]
                 }, 
                 {
                  "id":4,
@@ -2319,26 +2284,10 @@
                  "imagewidth":51,
                  "properties":[
                         {
-                         "name":"color",
-                         "type":"string",
-                         "value":"plane_yellow"
-                        }, 
-                        {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":860
-                        }, 
-                        {
-                         "name":"spawnX",
-                         "type":"int",
-                         "value":290
-                        }, 
-                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":25
-                        }],
-                 "type":"plane"
+                        }]
                 }, 
                 {
                  "id":5,
@@ -2362,8 +2311,7 @@
                          "name":"zOrder",
                          "type":"int",
                          "value":0
-                        }],
-                 "type":"trigger"
+                        }]
                 }, 
                 {
                  "id":7,
@@ -2592,7 +2540,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":44,
+         "firstgid":46,
          "grid":
             {
              "height":1,
