@@ -63,7 +63,7 @@ function TitleScene() {
 //                SceneManager.setState(selections[selectorPositionsIndex]);
                 if (!goingToGame) {
                     playStartGameSound();
-                    setTimeout(() => {SceneManager.setState(SCENE.GAME, TABLES.Prototype);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
+                    setTimeout(() => {SceneManager.setState(SCENE.GAME, DEFAULT_TABLE);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
                     goingToGame = true;    
                 }
                 return true;

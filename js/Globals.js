@@ -79,8 +79,14 @@ let worldSpeed = 1;
 //------------Tables----------//
 const TABLES = {
 	Prototype: 'prototype',
-	PrototypeTop: 'prototype_top'
+	PrototypeTop: 'prototype_top',
+	Space: 'space',
+	SpaceTop: 'space_top'
 };
+
+// Set these to easily test new table designs
+const DEFAULT_TABLE = TABLES.Space;
+const DEFAULT_TABLE_TOP = TABLES.SpaceTop;
 
 const TABLE_LAYERS = {
 	Collision: 'Collision',
