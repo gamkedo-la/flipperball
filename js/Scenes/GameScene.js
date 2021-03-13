@@ -388,10 +388,7 @@ function GameScene() {
 
     var checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
-            if(DEBUG){
-                console.log(self.remainingRotatingScore);
-            }
-
+            DEBUG_LOG(self.remainingRotatingScore);
             self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
 
             if(self.remainingRotatingScore > 150){ 
@@ -568,9 +565,7 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
-                if (DEBUG) {
-                    console.log("otherEntity.score:" + otherEntity.score);
-                }
+                DEBUG_LOG("otherEntity.score:" + otherEntity.score);
                 incrementScore(otherEntity.score);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -580,9 +575,7 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.CircleBumperSmall:
                 self.flash = true;
-                if (DEBUG) {
-                    console.log("otherEntity.score:" + otherEntity.score);
-                }
+                DEBUG_LOG("otherEntity.score:" + otherEntity.score);
                 incrementScore(otherEntity.score);
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y);
                 break;
@@ -606,11 +599,8 @@ function GameScene() {
                 }
                 // self.playAnimation(otherEntity.body.name, ANIMATIONS.PLANE_EXPLOSION, otherEntity.x, otherEntity.y);
                 break;
-            case ENTITY_TYPE.Spawner:
-                
-                if(DEBUG){
-                    console.log("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
-                }
+            case ENTITY_TYPE.Spawner:                
+                DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
                 if(!spawnerCollisionOn){
                     self.handleSpawnerCollision(otherEntity);
                     spawnerCollisionOn = true;
