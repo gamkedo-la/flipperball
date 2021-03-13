@@ -61,7 +61,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
         const result = [];
 
         for (const obj of objData) {
-            if (DEBUG) { console.log("Building DynObj: " + obj.name + ":" + obj.id); }
+            DEBUG_LOG("Building DynObj: " + obj.name + ":" + obj.id);
 
             if (obj.properties) {
                 for (const prop of obj.properties) {
@@ -83,7 +83,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
                     }
                 }
             }
-            if (DEBUG) { console.log("Colliders Found: " + bodyData.length); }
+            DEBUG_LOG("Colliders Found: " + bodyData.length);
             if (bodyData.length === 1) {
                 bodyData = bodyData[0];
             }
@@ -172,9 +172,7 @@ function MapBuilder (tableName = TABLES.Prototype) {
     this.getDynamicObject = function(type) {
         let dynamicObject = this.dynamicLayerData.objects.find(dObj => dObj.type === type);
         let dynamicObjectCollision = this.collisionLayerData.objects.find(dObj => dObj.type === type);
-        if(DEBUG){
-            console.log("[MapBuilder]: getDynamicObject -> " + dynamicObject);
-        }
+        DEBUG_LOG("[MapBuilder]: getDynamicObject -> " + dynamicObject);
         /*let dynObjectTarget = Object.assign({}, dynamicObject);
         let newPlane = new Plane(dynObjectTarget, dynObjectTarget.body, {
             ...ANIMATIONS.PLANE_EXPLOSION,
@@ -250,14 +248,14 @@ function TriggerMapObject(objData, bodyData) {
                 break;
             case "targ_light":
                 this.targ_light = objData.properties[i].value;
-                if (DEBUG) { console.log("Target Light set to " + this.targ_light + " for " + objData.name); }
+                DEBUG_LOG("Target Light set to " + this.targ_light + " for " + objData.name);
                 break;
             case "ball_catch":
                 this.ball_catch = objData.properties[i].value;
-                if (DEBUG) { console.log("Ball Catch set to " + this.ball_catch + " for " + objData.name); }
+                DEBUG_LOG("Ball Catch set to " + this.ball_catch + " for " + objData.name);
             case "slot_target":
                 this.slot_target = objData.properties[i].value;
-                if (DEBUG) { console.log("Slot Target set to " + this.slot_target + " for " + objData.name); }
+                DEBUG_LOG("Slot Target set to " + this.slot_target + " for " + objData.name);
             default:
                 break;
         }
