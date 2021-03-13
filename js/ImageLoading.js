@@ -125,6 +125,9 @@ function loadImages() {
         {imgName: "flipper_left", theFile: "tables/flipper_left.png"},
         {imgName: "flipper_right", theFile: "tables/flipper_right.png"},
 
+        {imgName: "flipper_left_short", theFile: "tables/flipper_left_short.png"},
+        {imgName: "flipper_right_short", theFile: "tables/flipper_right_short.png"},
+
         {imgName: "plunger_chute", theFile: "tables/plunger_chute.png"},
         {imgName: "plunger", theFile: "tables/plunger.png"},
         {imgName: "plunger_retracted", theFile: "tables/plunger_retracted.png"},
