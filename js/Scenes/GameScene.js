@@ -667,9 +667,9 @@ function GameScene() {
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
                         this.bonusLights.push(bonusTarg);
-                        this.bonusMultiplier = bonusTarg.bonusMult;
+                        this.bonusMultiplier = bonusTarg.bonusMult || 2;
                         this.bonusLive = true;
-                        this.bonusTime = bonusTarg.bonusTime;
+                        this.bonusTime = bonusTarg.bonusTime || 60;
                     }
                 }
             }
