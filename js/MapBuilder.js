@@ -119,7 +119,10 @@ function MapBuilder (tableName = TABLES.Prototype) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'status_light') {
-                const newGameObject = new ToggleLight(obj, null);
+                const newGameObject = new ToggleLight(obj, null, {
+                    ...ANIMATIONS.BONUS_LIGHT,
+                    animationSpritesheet: images[ANIMATIONS.BONUS_LIGHT.imageNames[obj.name]],
+                });
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
                 var habitrail = new Habitrail(obj, bodyData);

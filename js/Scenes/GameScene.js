@@ -653,7 +653,13 @@ function GameScene() {
         self.scoreIncrementForExtraBall += triggerEntity.score;
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
-            lightTarget.updateLightState(true);            
+            lightTarget.updateLightState(true);
+            
+            // Send bonus light a trigger signal if this light is attached to a bonus condition
+            if (lightTarget.bonusTargID) {
+                const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
+                bonusTarg.triggerBonus();
+            }
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             if (this.currentTableIndex > 0) {

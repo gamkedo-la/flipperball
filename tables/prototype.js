@@ -741,7 +741,7 @@
                  "name":"letter_light",
                  "properties":[
                         {
-                         "name":"bonus_1",
+                         "name":"bonus",
                          "type":"object",
                          "value":119
                         }, 
@@ -764,7 +764,7 @@
                  "name":"letter_light",
                  "properties":[
                         {
-                         "name":"bonus_1",
+                         "name":"bonus",
                          "type":"object",
                          "value":119
                         }, 
@@ -787,7 +787,7 @@
                  "name":"letter_light",
                  "properties":[
                         {
-                         "name":"bonus_1",
+                         "name":"bonus",
                          "type":"object",
                          "value":119
                         }, 
@@ -838,7 +838,7 @@
                  "name":"letter_light",
                  "properties":[
                         {
-                         "name":"bonus_1",
+                         "name":"bonus",
                          "type":"object",
                          "value":119
                         }, 
@@ -859,6 +859,12 @@
                  "height":24,
                  "id":119,
                  "name":"bonus_light_2x",
+                 "properties":[
+                        {
+                         "name":"requiredLights",
+                         "type":"int",
+                         "value":4
+                        }],
                  "rotation":0,
                  "type":"status_light",
                  "visible":true,

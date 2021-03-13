@@ -274,6 +274,18 @@ const ANIMATIONS = {
 		loops: false,
 		holds: true
 	},
+	BONUS_LIGHT: {
+			imageNames: {
+			"bonus_light_2x": "bonus_light_2x_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5],
+		frameWidth: 24,
+		frameHeight: 24,
+		frameTimes: [64, 64, 64, 32, 32, 256],
+		reveres: false,
+		loops: true,
+		holds: false	
+	},
 	/*ROTATING_GATE: {
 		imageNames: {
 			"rotating_gate": "rotating_gate_animation"

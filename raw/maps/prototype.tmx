@@ -332,17 +332,17 @@
   </object>
   <object id="89" name="letter_light" type="letter_light" gid="26" x="607.333" y="123" width="24" height="24">
    <properties>
-    <property name="bonus_1" type="object" value="119"/>
+    <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
   <object id="90" name="letter_light" type="letter_light" gid="26" x="574" y="123.333" width="24" height="24">
    <properties>
-    <property name="bonus_1" type="object" value="119"/>
+    <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
   <object id="91" name="letter_light" type="letter_light" gid="26" x="541.333" y="123" width="24" height="24">
    <properties>
-    <property name="bonus_1" type="object" value="119"/>
+    <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
   <object id="103" name="light_trigger" gid="21" x="519.073" y="130.375" width="2.68293" height="5.51">
@@ -353,11 +353,15 @@
   </object>
   <object id="104" name="letter_light" type="letter_light" gid="26" x="508.083" y="123.375" width="24" height="24">
    <properties>
-    <property name="bonus_1" type="object" value="119"/>
+    <property name="bonus" type="object" value="119"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="515.636" y="400.364" width="24" height="24"/>
+  <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="515.636" y="400.364" width="24" height="24">
+   <properties>
+    <property name="requiredLights" type="int" value="4"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="413.784" y="13.3133" width="94.652" height="95.4154">
