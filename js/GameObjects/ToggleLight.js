@@ -32,6 +32,15 @@ class ToggleLight extends GameObject {
         return false;
     }
     
+    turnOff() {
+        if (this.isLit) {
+            this.isLit = false;
+            this.isAnimating = false;
+            return true;
+        }
+        return false;
+    }
+    
     updateLightState(lightState) {
         if (lightState) {
             this.isLit = true;            

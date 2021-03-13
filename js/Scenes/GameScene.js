@@ -20,6 +20,7 @@ function GameScene() {
     this.bonusMultiplier = 1;
     this.bonusLive = false;
     this.bonusTime = 0;
+    this.bonusLights = [];
     this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
@@ -416,6 +417,10 @@ function GameScene() {
         self.bonusMultiplier = 1;
         self.bonusTime = 0;
         self.bonusLive = false;
+        for (const togLight of self.bonusLights) {
+            const togOff = togLight.turnOff();                        
+        }
+        self.bonusLights = [];
     }
     
     var checkForExtraBall = function(){
@@ -513,8 +518,7 @@ function GameScene() {
 
         checkForExtraBall();
         if (self.bonusLive) {
-            self.bonusTime -= deltaTime/1000;
-            console.log("Bonus time left: " + self.bonusTime);
+            self.bonusTime -= deltaTime/1000;            
             if (self.bonusTime <= 0) {
                 endBonusRound();
             }
@@ -654,6 +658,7 @@ function GameScene() {
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
             const targetLit = lightTarget.turnOn();
+            this.bonusLights.push(lightTarget);
             // If light wasn't already lit, `trigger` any attached bonus switches
             if (targetLit) {
                 // Send bonus light a trigger signal if this light is attached to a bonus condition
@@ -661,6 +666,7 @@ function GameScene() {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
+                        this.bonusLights.push(bonusTarg);
                         this.bonusMultiplier = bonusTarg.bonusMult;
                         this.bonusLive = true;
                         this.bonusTime = bonusTarg.bonusTime;
