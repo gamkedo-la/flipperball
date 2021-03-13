@@ -659,6 +659,9 @@ function GameScene() {
             if (this.currentTableIndex > 0) {
                 self.transitionIn();
             }
+        } else if (triggerEntity.slot_target) {
+            const slotTarget = self.table.staticObjects.find((data) => data.id === triggerEntity.slot_target);            
+            slotTarget.spin();
         }
     }
 
