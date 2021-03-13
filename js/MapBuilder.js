@@ -43,9 +43,16 @@ function MapBuilder (tableName = TABLES.Prototype) {
     const buildStaticObjects = function(objData) {
         const result = [];
 
-        for (const obj of objData) {    
-            result.push(new StaticObject(obj));
-            
+        for (const obj of objData) {
+            if (obj.type === ENTITY_TYPE.SlotMachine) {
+                const slotMachine = new SlotMachine(obj, null, {
+                    ...ANIMATIONS.SLOT_MACHINE,
+                    animationSpritesheet: images[ANIMATIONS.SLOT_MACHINE.imageNames[obj.name]],
+                })
+                result.push(slotMachine)
+            } else {
+                result.push(new StaticObject(obj));
+            }
         }
         return result;
     }
@@ -245,6 +252,9 @@ function TriggerMapObject(objData, bodyData) {
             case "ball_catch":
                 this.ball_catch = objData.properties[i].value;
                 if (DEBUG) { console.log("Ball Catch set to " + this.ball_catch + " for " + objData.name); }
+            case "slot_target":
+                this.slot_target = objData.properties[i].value;
+                if (DEBUG) { console.log("Slot Target set to " + this.slot_target + " for " + objData.name); }
             default:
                 break;
         }

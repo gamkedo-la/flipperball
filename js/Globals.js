@@ -109,13 +109,15 @@ const ENTITY_TYPE = {
 	LetterLight: 'letter_light',
 	Plane: 'plane',
 	Cloud: 'cloud', 
-	Spawner: 'spawner'
+	Spawner: 'spawner',
+	SlotMachine: 'slot_machine'
 };
 
 const TRIGGER_TYPE = {
 	Lane: 'lane_trigger',
 	Light: 'light_trigger',
-	BallCatch: 'ball_catch'
+	BallCatch: 'ball_catch',
+	SlotMachine: 'slot_trigger'
 }
 
 const ENTITY_NAME = {
