@@ -861,6 +861,16 @@
                  "name":"bonus_light_2x",
                  "properties":[
                         {
+                         "name":"bonusMult",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"bonusTime",
+                         "type":"int",
+                         "value":60
+                        }, 
+                        {
                          "name":"requiredLights",
                          "type":"int",
                          "value":4

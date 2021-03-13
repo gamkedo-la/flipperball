@@ -13,14 +13,13 @@ class ToggleLight extends GameObject {
             }            
         }
         
-        if (objData.bonus) {
-            this.bonusTargID = objData.bonus;
-        }
+        if (objData.bonus) { this.bonusTargID = objData.bonus; }
         if (objData.requiredLights) {
             this.reqLights = objData.requiredLights;
             this.origReqLights = this.reqLights;
         }
-
+        if (objData.bonusTime) { this.bonusTime = objData.bonusTime; }
+        if (objData.bonusMult) { this.bonusMult = objData.bonusMult }
         this.isLit = false;
     }
 

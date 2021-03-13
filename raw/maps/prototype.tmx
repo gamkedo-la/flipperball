@@ -359,6 +359,8 @@
   </object>
   <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="515.636" y="400.364" width="24" height="24">
    <properties>
+    <property name="bonusMult" type="int" value="2"/>
+    <property name="bonusTime" type="int" value="60"/>
     <property name="requiredLights" type="int" value="4"/>
    </properties>
   </object>

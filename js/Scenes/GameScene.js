@@ -18,6 +18,8 @@ function GameScene() {
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
     this.bonusMultiplier = 1;
+    this.bonusLive = false;
+    this.bonusTime = 0;
     this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
@@ -372,7 +374,7 @@ function GameScene() {
             self.storedTables = [];
             self.storedCollisionManagers = [];
             self.gameHasFinished = true;            
-            //TODO: This should be a game over scene once we've got it
+            endBonusRound();
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
@@ -408,6 +410,12 @@ function GameScene() {
     var incrementScore = function(increment){
         self.score += increment * self.bonusMultiplier;
         self.scoreIncrementForExtraBall += increment * self.bonusMultiplier;    
+    }
+    
+    var endBonusRound = function () {
+        self.bonusMultiplier = 1;
+        self.bonusTime = 0;
+        self.bonusLive = false;
     }
     
     var checkForExtraBall = function(){
@@ -504,7 +512,13 @@ function GameScene() {
         checkForRotatingGateScore();
 
         checkForExtraBall();
-
+        if (self.bonusLive) {
+            self.bonusTime -= deltaTime/1000;
+            console.log("Bonus time left: " + self.bonusTime);
+            if (self.bonusTime <= 0) {
+                endBonusRound();
+            }
+        }
         //TODO: We'll need to change to figure out what to do about multi-ball
         if (DEBUG) {
             //originalBallAndTableTransition();
@@ -546,7 +560,9 @@ function GameScene() {
         } else if (currentShakes > 0) {
 	        colorText("Warning...", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
         }
-
+        if (self.bonusLive) {
+            colorText("Bonus: " + self.bonusMultiplier + "X" + " (" + Math.round(self.bonusTime) + ")", TEXT_LEFT_OFFSET, canvas.height - 160, Color.Yellow, Fonts.Subtitle, TextAlignment.Left, 1);
+        }
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
         colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
@@ -645,7 +661,9 @@ function GameScene() {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
-                        this.bonusMultiplier *= 2;
+                        this.bonusMultiplier = bonusTarg.bonusMult;
+                        this.bonusLive = true;
+                        this.bonusTime = bonusTarg.bonusTime;
                     }
                 }
             }
