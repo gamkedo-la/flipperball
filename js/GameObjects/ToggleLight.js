@@ -7,6 +7,7 @@ class ToggleLight extends GameObject {
         }        
         this.isInReverse = false;
         this.isAnimating = false;
+        
         const objData = props[0];
         if (objData.properties) {
             for (const prop of objData.properties) {
@@ -19,11 +20,21 @@ class ToggleLight extends GameObject {
         }
         if (objData.requiredLights) {
             this.reqLights = objData.requiredLights;
+            this.origReqLights = this.reqLights;
         }
 
         this.isLit = false;
     }
 
+    turnOn() {
+        if (!this.isLit) {
+            this.isLit = true;
+            this.isAnimating = true;
+            return true;
+        }
+        return false;
+    }
+    
     updateLightState(lightState) {
         if (lightState) {
             this.isLit = true;            
@@ -39,7 +50,10 @@ class ToggleLight extends GameObject {
         console.log("Required Lights Left: " + this.reqLights);
         if (this.reqLights <= 0) {
             console.log("Bonus Light Triggered!");
-            this.updateLightState(true);            
+            this.updateLightState(true);
+            this.reqLights = this.origReqLights;
+            return true;
         }
+        return false;
     }
 }

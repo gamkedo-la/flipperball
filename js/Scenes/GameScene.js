@@ -17,6 +17,7 @@ function GameScene() {
     this.hasPlungerReleased = false;
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
+    this.bonusMultiplier = 1;
     this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
@@ -393,14 +394,11 @@ function GameScene() {
 
             self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
 
-            if(self.remainingRotatingScore > 150){
-                self.score+=10;
-                self.scoreIncrementForExtraBall+=10; 
+            if(self.remainingRotatingScore > 150){ 
+                incrementScore(10);
                 self.remainingRotatingScore-=10;
-            } else {
-            
-                self.score++;
-                self.scoreIncrementForExtraBall++; 
+            } else {                          
+                incrementScore(1);
                 self.remainingRotatingScore--;
                 
             }
@@ -410,11 +408,11 @@ function GameScene() {
         } 
     }
     
-    var checkToggleLights = function () {
-        
-    
+    var incrementScore = function(increment){
+        self.score += increment * self.bonusMultiplier;
+        self.scoreIncrementForExtraBall += increment * self.bonusMultiplier;    
     }
-
+    
     var checkForExtraBall = function(){
         if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
             extraBall();
@@ -573,8 +571,7 @@ function GameScene() {
                 if (DEBUG) {
                     console.log("otherEntity.score:" + otherEntity.score);
                 }
-                self.score += otherEntity.score;  
-                self.scoreIncrementForExtraBall += otherEntity.score; 
+                incrementScore(otherEntity.score);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
                 } else {
@@ -586,8 +583,7 @@ function GameScene() {
                 if (DEBUG) {
                     console.log("otherEntity.score:" + otherEntity.score);
                 }
-                self.score += otherEntity.score;   
-                self.scoreIncrementForExtraBall += otherEntity.score; 
+                incrementScore(otherEntity.score);
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y);
                 break;
             case ENTITY_TYPE.FlipperBumper:
@@ -603,8 +599,7 @@ function GameScene() {
                 self.handleHabitrailCollision(otherEntity);
                 break;
             case ENTITY_TYPE.Plane:
-                self.score += otherEntity.score;  
-                self.scoreIncrementForExtraBall += otherEntity.score; 
+                incrementScore(otherEntity.score);
                 this.collisionManager.unregisterEntity(otherEntity);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -649,16 +644,20 @@ function GameScene() {
     }
 
     this.handleTriggerCollision = function (triggerEntity, ball) {
-        self.score += triggerEntity.score;
-        self.scoreIncrementForExtraBall += triggerEntity.score;
+        incrementScore(triggerEntity.score);
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
-            lightTarget.updateLightState(true);
-            
-            // Send bonus light a trigger signal if this light is attached to a bonus condition
-            if (lightTarget.bonusTargID) {
-                const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
-                bonusTarg.triggerBonus();
+            const targetLit = lightTarget.turnOn();
+            // If light wasn't already lit, `trigger` any attached bonus switches
+            if (targetLit) {
+                // Send bonus light a trigger signal if this light is attached to a bonus condition
+                if (lightTarget.bonusTargID) {
+                    const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
+                    const bonusLit = bonusTarg.triggerBonus();
+                    if (bonusLit) {
+                        this.bonusMultiplier *= 2;
+                    }
+                }
             }
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
