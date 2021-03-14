@@ -80,6 +80,7 @@ let worldSpeed = 1;
 const TABLES = {
 	Prototype: 'prototype',
 	PrototypeTop: 'prototype_top',
+	ShortFlipperPrototype: 'prototype_short_flipper',
 	Space: 'space',
 	SpaceTop: 'space_top'
 };
@@ -114,7 +115,8 @@ const ENTITY_TYPE = {
 	Habitrail: 'habitrail',
 	LetterLight: 'letter_light',
 	Plane: 'plane',
-	Cloud: 'cloud', 
+	Cloud: 'cloud',
+	Star: 'star',
 	Spawner: 'spawner',
 	SlotMachine: 'slot_machine'
 };
@@ -141,7 +143,9 @@ const ENTITY_NAME = {
 	LetterLight: 'letter_light',
 	RotatingGate: 'rotating_gate',
 	PlaneRed: 'plane_red',
-	SpawnerPlane: 'spawner_plane'
+	SpawnerPlane: 'spawner_plane',
+	SmallStar: 'small_star',
+	TinyStar: 'tiny_star'
 }
 
 const COLLISION_TYPE = {
@@ -191,7 +195,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 		frameWidth: 96,
 		frameHeight: 96,
-		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: true,
 		loops: false
 	},
@@ -205,7 +209,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 54,
 		frameHeight: 54,
-		frameTimes: [64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false
 	},
@@ -217,9 +221,31 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 		frameWidth: 57,
 		frameHeight: 186,
-		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false
+	},
+	TINY_STAR: {
+		imageNames: {
+			"tiny_star": "tiny_star_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+		frameWidth: 1,
+		frameHeight: 1,
+		frameTimes: [128],
+		reverses: false,
+		loops: true
+	},
+	SMALL_STAR: {
+		imageNames: {
+			"small_star": "small_star_anim"	
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+		frameWidth: 5,
+		frameHeight: 5,
+		frameTimes: [128],
+		reverses: false,
+		loops: true
 	},
 	PLUNGER_RELEASE: {
 		imageNames: {
@@ -228,7 +254,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 30,
 		frameHeight: 255,
-		frameTimes: [64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false
 	},
@@ -239,7 +265,7 @@ const ANIMATIONS = {
 		frames: [4, 3, 2, 1, 0],
 		frameWidth: 30,
 		frameHeight: 255,
-		frameTimes: [64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false
 	},
@@ -250,7 +276,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3],
 		frameWidth: 96,
 		frameHeight: 96,
-		frameTimes: [64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: true
 	},
@@ -264,7 +290,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 		frameWidth: 51,
 		frameHeight: 48,
-		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false
 	},
@@ -310,7 +336,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
 		frameWidth: 31,
 		frameHeight: 17,
-		frameTimes: [64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes: [32],
 		reverses: false,
 		loops: true
 	},
@@ -321,7 +347,7 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
 		frameWidth: 31,
 		frameHeight: 45,
-		frameTimes:[64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64],
+		frameTimes:[64],
 		reverses: false,
 		loops: true
 	}

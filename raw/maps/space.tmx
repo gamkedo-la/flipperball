@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="122">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="164">
  <editorsettings>
   <export target="../../tables/space.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="34" columns="0">
+ <properties>
+  <property name="maxY" type="int" value="600"/>
+  <property name="minY" type="int" value="0"/>
+ </properties>
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="36" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -220,8 +224,24 @@
   <tile id="34">
    <image width="24" height="24" source="../../img/tables/2x_bonus_light_unlit.png"/>
   </tile>
+  <tile id="35" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="1" height="1" source="../../img/tables/tiny_star.png"/>
+  </tile>
+  <tile id="36" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="5"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="5" height="5" source="../../img/tables/small_star.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="36" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
+ <tileset firstgid="38" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -236,7 +256,7 @@
    <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
   </tile>
  </tileset>
- <tileset firstgid="38" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="40" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -402,6 +422,48 @@
     <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
+  <object id="122" name="small_star" gid="37" x="360" y="16.3333" width="5" height="5"/>
+  <object id="123" name="small_star" gid="37" x="337.333" y="106.333" width="5" height="5"/>
+  <object id="124" name="small_star" gid="37" x="496" y="118.333" width="5" height="5"/>
+  <object id="125" name="small_star" gid="37" x="604" y="37.6667" width="5" height="5"/>
+  <object id="126" name="small_star" gid="37" x="770" y="41" width="5" height="5"/>
+  <object id="127" name="small_star" gid="37" x="806" y="153.667" width="5" height="5"/>
+  <object id="128" name="small_star" gid="37" x="864.667" y="199" width="5" height="5"/>
+  <object id="129" name="small_star" gid="37" x="716.667" y="259" width="5" height="5"/>
+  <object id="130" name="small_star" gid="37" x="776.667" y="376.333" width="5" height="5"/>
+  <object id="131" name="small_star" gid="37" x="869.333" y="386.333" width="5" height="5"/>
+  <object id="132" name="small_star" gid="37" x="664.667" y="414.333" width="5" height="5"/>
+  <object id="133" name="small_star" gid="37" x="460" y="427" width="5" height="5"/>
+  <object id="134" name="small_star" gid="37" x="330" y="488.333" width="5" height="5"/>
+  <object id="135" name="small_star" gid="37" x="435.333" y="571.667" width="5" height="5"/>
+  <object id="136" name="small_star" gid="37" x="329.333" y="573.667" width="5" height="5"/>
+  <object id="137" name="small_star" gid="37" x="598.667" y="573.667" width="5" height="5"/>
+  <object id="138" name="small_star" gid="37" x="853.333" y="580.333" width="5" height="5"/>
+  <object id="139" name="tiny_star" gid="36" x="716.667" y="17" width="1" height="1"/>
+  <object id="140" name="tiny_star" gid="36" x="830.667" y="38.3333" width="1" height="1"/>
+  <object id="141" name="tiny_star" gid="36" x="780.667" y="89.6667" width="1" height="1"/>
+  <object id="142" name="tiny_star" gid="36" x="662.667" y="82.3333" width="1" height="1"/>
+  <object id="143" name="tiny_star" gid="36" x="676.667" y="169.667" width="1" height="1"/>
+  <object id="144" name="tiny_star" gid="36" x="564.667" y="169.667" width="1" height="1"/>
+  <object id="145" name="tiny_star" gid="36" x="499.333" y="169.667" width="1" height="1"/>
+  <object id="146" name="tiny_star" gid="36" x="496" y="31" width="1" height="1"/>
+  <object id="147" name="tiny_star" gid="36" x="424.667" y="49" width="1" height="1"/>
+  <object id="148" name="tiny_star" gid="36" x="354" y="131.667" width="1" height="1"/>
+  <object id="149" name="tiny_star" gid="36" x="316" y="137.667" width="1" height="1"/>
+  <object id="150" name="tiny_star" gid="36" x="506" y="225.667" width="1" height="1"/>
+  <object id="151" name="tiny_star" gid="36" x="490.667" y="287" width="1" height="1"/>
+  <object id="152" name="tiny_star" gid="36" x="568" y="346.333" width="1" height="1"/>
+  <object id="153" name="tiny_star" gid="36" x="690" y="329.667" width="1" height="1"/>
+  <object id="154" name="tiny_star" gid="36" x="713.333" y="404.333" width="1" height="1"/>
+  <object id="155" name="tiny_star" gid="36" x="855.333" y="462.333" width="1" height="1"/>
+  <object id="156" name="tiny_star" gid="36" x="551.333" y="453.667" width="1" height="1"/>
+  <object id="157" name="tiny_star" gid="36" x="508.667" y="475" width="1" height="1"/>
+  <object id="158" name="tiny_star" gid="36" x="693.333" y="475" width="1" height="1"/>
+  <object id="159" name="tiny_star" gid="36" x="312" y="259.667" width="1" height="1"/>
+  <object id="160" name="tiny_star" gid="36" x="310" y="366.333" width="1" height="1"/>
+  <object id="161" name="tiny_star" gid="36" x="633.333" y="510.333" width="1" height="1"/>
+  <object id="162" name="tiny_star" gid="36" x="471.333" y="586.333" width="1" height="1"/>
+  <object id="163" name="tiny_star" gid="36" x="716" y="581.667" width="1" height="1"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">

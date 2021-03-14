@@ -147,6 +147,18 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
                         result.push(new Cloud(self.minX, self.maxX, obj, null));
+                    } else if (obj.type === ENTITY_TYPE.Star) {
+                        if (obj.name === ENTITY_NAME.TinyStar) {
+                            result.push(new Star(self.minY, self.maxY, obj, null, {
+                                ...ANIMATIONS.TINY_STAR,
+                                animationSpritesheet: images[ANIMATIONS.TINY_STAR.imageNames[obj.name]],
+                            }));
+                        } else if (obj.name === ENTITY_NAME.SmallStar) {
+                            result.push(new Star(self.minY, self.maxY, obj, null, {
+                                ...ANIMATIONS.SMALL_STAR,
+                                animationSpritesheet: images[ANIMATIONS.SMALL_STAR.imageNames[obj.name]],
+                            }));
+                        }
                     } else {
                         result.push(new GameObject(obj, bodyData));
                     }

@@ -72,7 +72,7 @@ class GameObject {
 
     /** @type {Number} */
     get timeRemainingOnFrame() {
-        return this.frameTimes[this.currFrame] - this.currTiming;
+        return (this.frameTimes[this.currFrame] || this.frameTimes[0]) - this.currTiming;
     }
 
     /** @type {Number} */
@@ -88,8 +88,8 @@ class GameObject {
             return;
         }
 
-        const newFrameTimes = this.frames.map((frame, idx) => frameTimes[0] || 64);
-        this.frameTimes = newFrameTimes;
+        // const newFrameTimes = this.frames.map((frame, idx) => frameTimes[0] || 64);
+        // this.frameTimes = newFrameTimes;
     }
 
     /**
@@ -116,11 +116,14 @@ class GameObject {
     * @interface
     */
     updateAnimation(deltaTime) {
+        if (this.type === ENTITY_TYPE.Star) {
+            console.log("stopping")
+        }
         if (!this.hasAnimation || !this.isAnimating) return;
 
         this.currTiming += deltaTime;
 
-        if (this.currTiming >= this.frameTimes[this.currFrame]) {
+        if (this.currTiming >= (this.frameTimes[this.currFrame] || this.frameTimes[0])) {
             this.currTiming = 0;
             this.updateFrame();
         }

@@ -881,6 +881,75 @@
                  "width":24,
                  "x":515.636363636364,
                  "y":400.363636363636
+                }, 
+                {
+                 "gid":23,
+                 "height":13.5454,
+                 "id":121,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":527.636340909091,
+                 "y":175.772754545455
+                }, 
+                {
+                 "gid":23,
+                 "height":13.5454,
+                 "id":122,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":487.636340909091,
+                 "y":175.590936363636
+                }, 
+                {
+                 "gid":23,
+                 "height":13.5454,
+                 "id":125,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":586.909068181818,
+                 "y":177.2273
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1769,6 +1838,132 @@
                  "width":12,
                  "x":748.667,
                  "y":369
+                }, 
+                {
+                 "height":0,
+                 "id":120,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":121
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":528,
+                 "y":168
+                }, 
+                {
+                 "height":0,
+                 "id":123,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":122
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":488,
+                 "y":167.454545454545
+                }, 
+                {
+                 "height":0,
+                 "id":124,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":125
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":587.272727272727,
+                 "y":169.454545454545
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1777,7 +1972,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":120,
+ "nextobjectid":126,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

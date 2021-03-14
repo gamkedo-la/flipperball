@@ -110,6 +110,11 @@ function loadImages() {
         {imgName: "cloud_5", theFile: "tables/cloud_5.png"},
         {imgName: "cloud_6", theFile: "tables/cloud_6.png"},
         {imgName: "cloud_7", theFile: "tables/cloud_7.png"},
+        {imgName: "tiny_star", theFile: "tables/tiny_star.png"},
+        {imgName: "tiny_star_anim", theFile: "animations/tiny_star_anim.png"},
+        {imgName: "small_star", theFile: "tables/small_star.png"},
+        {imgName: "small_star_anim", theFile: "animations/small_star_anim.png"},
+
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
