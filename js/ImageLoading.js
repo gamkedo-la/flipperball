@@ -115,6 +115,12 @@ function loadImages() {
         {imgName: "small_star", theFile: "tables/small_star.png"},
         {imgName: "small_star_anim", theFile: "animations/small_star_anim.png"},
 
+        { imgName: "diamond_div_1", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_2", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_3", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_4", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_5", theFile: "tables/diamond_div.png" },
+        
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
@@ -145,7 +151,7 @@ function loadImages() {
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
         { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
-        { imgName: "light_trigger", theFile: "tables/lane_trigger.png" },               
+        { imgName: "light_trigger", theFile: "tables/light_trigger.png" },               
         { imgName: "letter_light_unlit", theFile: "tables/letter_light_unlit.png" },
         { imgName: "letter_light_lit", theFile: "tables/letter_light_lit.png" },
         { imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png" },
