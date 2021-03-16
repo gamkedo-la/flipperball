@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":37,
+                 "gid":38,
                  "height":600,
                  "id":110,
                  "name":"cloud_bg_top_empty",
@@ -150,6 +150,66 @@
                  "width":140,
                  "x":752.667,
                  "y":132
+                }, 
+                {
+                 "gid":36,
+                 "height":7,
+                 "id":120,
+                 "name":"diamond_div_2",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":556.75,
+                 "y":131.625
+                }, 
+                {
+                 "gid":36,
+                 "height":7,
+                 "id":121,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":527.75,
+                 "y":149.625
+                }, 
+                {
+                 "gid":36,
+                 "height":7,
+                 "id":122,
+                 "name":"diamond_div_3",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":590.75,
+                 "y":114.625
+                }, 
+                {
+                 "gid":36,
+                 "height":7,
+                 "id":123,
+                 "name":"diamond_div_4",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":622.75,
+                 "y":98.625
+                }, 
+                {
+                 "gid":36,
+                 "height":7,
+                 "id":124,
+                 "name":"diamond_div_5",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":655.75,
+                 "y":82.625
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -325,7 +385,7 @@
                         }],
                  "rotation":0,
                  "type":"cloud",
-                 "visible":true,
+                 "visible":false,
                  "width":108,
                  "x":589,
                  "y":143
@@ -675,7 +735,7 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":551.959,
+                 "x":575.959,
                  "y":130
                 }, 
                 {
@@ -703,8 +763,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":585.323,
-                 "y":130
+                 "x":609.323,
+                 "y":113
                 }, 
                 {
                  "gid":21,
@@ -731,8 +791,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":618.323,
-                 "y":130
+                 "x":642.323,
+                 "y":97
                 }, 
                 {
                  "gid":26,
@@ -754,8 +814,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":607.333,
-                 "y":123
+                 "x":631.333,
+                 "y":90
                 }, 
                 {
                  "gid":26,
@@ -777,8 +837,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":574,
-                 "y":123.333
+                 "x":598,
+                 "y":106.333
                 }, 
                 {
                  "gid":26,
@@ -800,7 +860,7 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":541.333,
+                 "x":565.333,
                  "y":123
                 }, 
                 {
@@ -828,8 +888,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":519.073,
-                 "y":130.375
+                 "x":543.073,
+                 "y":148.375
                 }, 
                 {
                  "gid":26,
@@ -851,8 +911,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":508.083,
-                 "y":123.375
+                 "x":532.083,
+                 "y":141.375
                 }, 
                 {
                  "gid":35,
@@ -879,77 +939,8 @@
                  "type":"status_light",
                  "visible":true,
                  "width":24,
-                 "x":515.636363636364,
-                 "y":400.363636363636
-                }, 
-                {
-                 "gid":23,
-                 "height":13.5454,
-                 "id":121,
-                 "name":"rotating_gate",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":75
-                        }],
-                 "rotation":0,
-                 "type":"rotating_gate",
-                 "visible":true,
-                 "width":26.5455,
-                 "x":527.636340909091,
-                 "y":175.772754545455
-                }, 
-                {
-                 "gid":23,
-                 "height":13.5454,
-                 "id":122,
-                 "name":"rotating_gate",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":75
-                        }],
-                 "rotation":0,
-                 "type":"rotating_gate",
-                 "visible":true,
-                 "width":26.5455,
-                 "x":487.636340909091,
-                 "y":175.590936363636
-                }, 
-                {
-                 "gid":23,
-                 "height":13.5454,
-                 "id":125,
-                 "name":"rotating_gate",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":75
-                        }],
-                 "rotation":0,
-                 "type":"rotating_gate",
-                 "visible":true,
-                 "width":26.5455,
-                 "x":586.909068181818,
-                 "y":177.2273
+                 "x":515.636,
+                 "y":400.364
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1710,7 +1701,7 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":546.203,
+                 "x":570.203,
                  "y":120
                 }, 
                 {
@@ -1728,8 +1719,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":579.567,
-                 "y":120
+                 "x":603.567,
+                 "y":103
                 }, 
                 {
                  "ellipse":true,
@@ -1746,8 +1737,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":612.567,
-                 "y":120
+                 "x":636.567,
+                 "y":87
                 }, 
                 {
                  "ellipse":true,
@@ -1764,8 +1755,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":513.317,
-                 "y":120.375
+                 "x":537.317,
+                 "y":138.375
                 }, 
                 {
                  "ellipse":true,
@@ -1841,129 +1832,143 @@
                 }, 
                 {
                  "height":0,
-                 "id":120,
-                 "name":"rotating_gate",
+                 "id":125,
+                 "name":"diamond_div_1",
                  "polygon":[
                         {
-                         "x":-0.301653,
-                         "y":-0.489669
-                        }, 
-                        {
-                         "x":3.01653,
-                         "y":-5.87603
-                        }, 
-                        {
-                         "x":23.0764,
-                         "y":-5.54959
-                        }, 
-                        {
-                         "x":26.2438,
+                         "x":0,
                          "y":0
                         }, 
                         {
-                         "x":22.4731,
-                         "y":8.4876
+                         "x":-3.04347826086962,
+                         "y":3.04347826086956
                         }, 
                         {
-                         "x":3.31818,
-                         "y":7.99793
-                        }],
-                 "properties":[
+                         "x":-0.217391304347871,
+                         "y":6.26086956521739
+                        }, 
                         {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":121
+                         "x":2.82608695652175,
+                         "y":3.1304347826087
                         }],
                  "rotation":0,
-                 "type":"rotating_gate",
+                 "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":528,
-                 "y":168
+                 "x":531.173913043478,
+                 "y":142.782608695652
                 }, 
                 {
                  "height":0,
-                 "id":123,
-                 "name":"rotating_gate",
+                 "id":126,
+                 "name":"diamond_div_2",
                  "polygon":[
                         {
-                         "x":-0.301653,
-                         "y":-0.489669
-                        }, 
-                        {
-                         "x":3.01653,
-                         "y":-5.87603
-                        }, 
-                        {
-                         "x":23.0764,
-                         "y":-5.54959
-                        }, 
-                        {
-                         "x":26.2438,
+                         "x":0,
                          "y":0
                         }, 
                         {
-                         "x":22.4731,
-                         "y":8.4876
+                         "x":-3,
+                         "y":3.21739130434783
                         }, 
                         {
-                         "x":3.31818,
-                         "y":7.99793
-                        }],
-                 "properties":[
+                         "x":-0.173913043478251,
+                         "y":6.34782608695652
+                        }, 
                         {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":122
+                         "x":3,
+                         "y":3.2608695652174
                         }],
                  "rotation":0,
-                 "type":"rotating_gate",
+                 "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":488,
-                 "y":167.454545454545
+                 "x":560.260869565217,
+                 "y":124.826086956522
                 }, 
                 {
                  "height":0,
-                 "id":124,
-                 "name":"rotating_gate",
+                 "id":127,
+                 "name":"diamond_div_3",
                  "polygon":[
                         {
-                         "x":-0.301653,
-                         "y":-0.489669
-                        }, 
-                        {
-                         "x":3.01653,
-                         "y":-5.87603
-                        }, 
-                        {
-                         "x":23.0764,
-                         "y":-5.54959
-                        }, 
-                        {
-                         "x":26.2438,
+                         "x":0,
                          "y":0
                         }, 
                         {
-                         "x":22.4731,
-                         "y":8.4876
+                         "x":-3.04347826086962,
+                         "y":3.04347826086956
                         }, 
                         {
-                         "x":3.31818,
-                         "y":7.99793
-                        }],
-                 "properties":[
+                         "x":-0.260869565217376,
+                         "y":6.43478260869566
+                        }, 
                         {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":125
+                         "x":2.82608695652175,
+                         "y":3.1304347826087
                         }],
                  "rotation":0,
-                 "type":"rotating_gate",
+                 "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":587.272727272727,
-                 "y":169.454545454545
+                 "x":594.347826086957,
+                 "y":107.913043478261
+                }, 
+                {
+                 "height":0,
+                 "id":128,
+                 "name":"diamond_div_4",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.13043478260863,
+                         "y":3.04347826086957
+                        }, 
+                        {
+                         "x":-0.217391304347757,
+                         "y":6.17391304347827
+                        }, 
+                        {
+                         "x":3.04347826086962,
+                         "y":2.8695652173913
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":626.217391304348,
+                 "y":91.9565217391304
+                }, 
+                {
+                 "height":0,
+                 "id":129,
+                 "name":"diamond_div_5",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-2.95652173913049,
+                         "y":3.17391304347826
+                        }, 
+                        {
+                         "x":-0.130434782608745,
+                         "y":6.26086956521739
+                        }, 
+                        {
+                         "x":3.13043478260863,
+                         "y":3.04347826086956
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":659.173913043478,
+                 "y":75.8695652173913
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1972,7 +1977,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":126,
+ "nextobjectid":131,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1990,7 +1995,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":34,
+         "tilecount":35,
          "tileheight":598,
          "tiles":[
                 {
@@ -2494,12 +2499,18 @@
                  "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
                  "imageheight":24,
                  "imagewidth":24
+                }, 
+                {
+                 "id":35,
+                 "image":"..\/img\/tables\/diamond_div.png",
+                 "imageheight":7,
+                 "imagewidth":7
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":36,
+         "firstgid":37,
          "grid":
             {
              "height":1,
@@ -2540,7 +2551,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":38,
+         "firstgid":39,
          "grid":
             {
              "height":1,

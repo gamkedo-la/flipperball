@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="120">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="131">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="34" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="35" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -220,8 +220,11 @@
   <tile id="34">
    <image width="24" height="24" source="../../img/tables/2x_bonus_light_unlit.png"/>
   </tile>
+  <tile id="35">
+   <image width="7" height="7" source="../../img/tables/diamond_div.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="36" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
+ <tileset firstgid="37" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -236,7 +239,7 @@
    <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
   </tile>
  </tileset>
- <tileset firstgid="38" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="39" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -258,13 +261,18 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="110" name="cloud_bg_top_empty" gid="37" x="276" y="599" width="720" height="600" visible="0"/>
+  <object id="110" name="cloud_bg_top_empty" gid="38" x="276" y="599" width="720" height="600" visible="0"/>
   <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
   <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
   <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="78" name="angled_wall_5" gid="24" x="290.333" y="132" width="140" height="142"/>
   <object id="79" name="angled_wall_6" gid="25" x="752.667" y="132" width="140" height="142"/>
+  <object id="120" name="diamond_div_2" type="wall" gid="36" x="556.75" y="131.625" width="7" height="7"/>
+  <object id="121" name="diamond_div_1" type="wall" gid="36" x="527.75" y="149.625" width="7" height="7"/>
+  <object id="122" name="diamond_div_3" type="wall" gid="36" x="590.75" y="114.625" width="7" height="7"/>
+  <object id="123" name="diamond_div_4" type="wall" gid="36" x="622.75" y="98.625" width="7" height="7"/>
+  <object id="124" name="diamond_div_5" type="wall" gid="36" x="655.75" y="82.625" width="7" height="7"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="111" name="cloud_6" gid="33" x="415" y="487" width="144" height="96"/>
@@ -272,7 +280,7 @@
   <object id="113" name="cloud_1" gid="28" x="278" y="84" width="108" height="78"/>
   <object id="114" name="cloud_2" gid="29" x="357" y="165" width="51" height="36"/>
   <object id="115" name="cloud_3" gid="30" x="441" y="251" width="81" height="54"/>
-  <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66"/>
+  <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66" visible="0"/>
   <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
   <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
   <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
@@ -312,46 +320,46 @@
     <property name="score" type="int" value="5"/>
    </properties>
   </object>
-  <object id="92" name="light_trigger" gid="21" x="551.959" y="130" width="2.68293" height="5.51376">
+  <object id="92" name="light_trigger" gid="21" x="575.959" y="130" width="2.68293" height="5.51376">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="91"/>
    </properties>
   </object>
-  <object id="94" name="light_trigger" gid="21" x="585.323" y="130" width="2.68293" height="5.51">
+  <object id="94" name="light_trigger" gid="21" x="609.323" y="113" width="2.68293" height="5.51">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="90"/>
    </properties>
   </object>
-  <object id="97" name="light_trigger" gid="21" x="618.323" y="130" width="2.68293" height="5.51">
+  <object id="97" name="light_trigger" gid="21" x="642.323" y="97" width="2.68293" height="5.51">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="89"/>
    </properties>
   </object>
-  <object id="89" name="letter_light" type="letter_light" gid="26" x="607.333" y="123" width="24" height="24">
+  <object id="89" name="letter_light" type="letter_light" gid="26" x="631.333" y="90" width="24" height="24">
    <properties>
     <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
-  <object id="90" name="letter_light" type="letter_light" gid="26" x="574" y="123.333" width="24" height="24">
+  <object id="90" name="letter_light" type="letter_light" gid="26" x="598" y="106.333" width="24" height="24">
    <properties>
     <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
-  <object id="91" name="letter_light" type="letter_light" gid="26" x="541.333" y="123" width="24" height="24">
+  <object id="91" name="letter_light" type="letter_light" gid="26" x="565.333" y="123" width="24" height="24">
    <properties>
     <property name="bonus" type="object" value="119"/>
    </properties>
   </object>
-  <object id="103" name="light_trigger" gid="21" x="519.073" y="130.375" width="2.68293" height="5.51">
+  <object id="103" name="light_trigger" gid="21" x="543.073" y="148.375" width="2.68293" height="5.51">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="104"/>
    </properties>
   </object>
-  <object id="104" name="letter_light" type="letter_light" gid="26" x="508.083" y="123.375" width="24" height="24">
+  <object id="104" name="letter_light" type="letter_light" gid="26" x="532.083" y="141.375" width="24" height="24">
    <properties>
     <property name="bonus" type="object" value="119"/>
     <property name="zOrder" type="int" value="0"/>
@@ -498,25 +506,25 @@
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
   </object>
-  <object id="93" name="light_trigger" x="546.203" y="120" width="13.9513" height="13.9513">
+  <object id="93" name="light_trigger" x="570.203" y="120" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="92"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="95" name="light_trigger" x="579.567" y="120" width="13.9513" height="13.9513">
+  <object id="95" name="light_trigger" x="603.567" y="103" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="94"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="96" name="light_trigger" x="612.567" y="120" width="13.9513" height="13.9513">
+  <object id="96" name="light_trigger" x="636.567" y="87" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="97"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="102" name="light_trigger" x="513.317" y="120.375" width="13.9513" height="13.9513">
+  <object id="102" name="light_trigger" x="537.317" y="138.375" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="103"/>
    </properties>
@@ -545,6 +553,21 @@
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
+  </object>
+  <object id="125" name="diamond_div_1" type="wall" x="531.174" y="142.783">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="126" name="diamond_div_2" type="wall" x="560.261" y="124.826">
+   <polygon points="0,0 -3,3.21739 -0.173913,6.34783 3,3.26087"/>
+  </object>
+  <object id="127" name="diamond_div_3" type="wall" x="594.348" y="107.913">
+   <polygon points="0,0 -3.04348,3.04348 -0.26087,6.43478 2.82609,3.13043"/>
+  </object>
+  <object id="128" name="diamond_div_4" type="wall" x="626.217" y="91.9565">
+   <polygon points="0,0 -3.13043,3.04348 -0.217391,6.17391 3.04348,2.86957"/>
+  </object>
+  <object id="129" name="diamond_div_5" type="wall" x="659.174" y="75.8696">
+   <polygon points="0,0 -2.95652,3.17391 -0.130435,6.26087 3.13043,3.04348"/>
   </object>
  </objectgroup>
 </map>
