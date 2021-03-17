@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="167">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="168">
  <editorsettings>
   <export target="../../tables/space.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="36" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="38" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -240,8 +240,14 @@
    </properties>
    <image width="5" height="5" source="../../img/tables/small_star.png"/>
   </tile>
+  <tile id="37">
+   <image width="16" height="16" source="../../img/tables/expanding_star.png"/>
+  </tile>
+  <tile id="38">
+   <image width="20" height="20" source="../../img/tables/expanding_star_2.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="38" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="40" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -262,7 +268,7 @@
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="42" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="44" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -314,7 +320,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="166" name="space_bottom_bg" gid="41" x="271.393" y="600.353" width="720" height="600"/>
+  <object id="166" name="space_bottom_bg" gid="43" x="271.393" y="600.353" width="720" height="600"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
@@ -471,6 +477,13 @@
   <object id="161" name="tiny_star" gid="36" x="633.333" y="510.333" width="1" height="1"/>
   <object id="162" name="tiny_star" gid="36" x="471.333" y="586.333" width="1" height="1"/>
   <object id="163" name="tiny_star" gid="36" x="716" y="581.667" width="1" height="1"/>
+  <object id="167" name="expanding_star" type="star" gid="39" x="433.556" y="191.328" width="20" height="20">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">

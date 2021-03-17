@@ -117,7 +117,7 @@ class GameObject {
     */
     updateAnimation(deltaTime) {
         if (this.type === ENTITY_TYPE.Star) {
-            console.log("stopping")
+            //console.log("stopping")
         }
         if (!this.hasAnimation || !this.isAnimating) return;
 

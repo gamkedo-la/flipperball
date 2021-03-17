@@ -145,7 +145,9 @@ const ENTITY_NAME = {
 	PlaneRed: 'plane_red',
 	SpawnerPlane: 'spawner_plane',
 	SmallStar: 'small_star',
-	TinyStar: 'tiny_star'
+	TinyStar: 'tiny_star',
+	ExpandingStar: 'expanding_star',
+	ExpandingStar_2: 'expanding_star_2'
 }
 
 const COLLISION_TYPE = {
@@ -244,6 +246,28 @@ const ANIMATIONS = {
 		frameWidth: 5,
 		frameHeight: 5,
 		frameTimes: [128],
+		reverses: false,
+		loops: true
+	},
+	EXPANDING_STAR: {
+		imageNames: {
+			"expanding_star": "expanding_star_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5],
+		frameWidth: 1,
+		frameHeight: 1,
+		frameTimes: [256],
+		reverses: false,
+		loops: true
+	},
+	EXPANDING_STAR_2: {
+		imageNames: {
+			"expanding_star_2": "expanding_star_2_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6],
+		frameWidth: 1,
+		frameHeight: 1,
+		frameTimes: [256],
 		reverses: false,
 		loops: true
 	},

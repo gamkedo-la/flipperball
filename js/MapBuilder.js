@@ -158,7 +158,20 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
                                 ...ANIMATIONS.SMALL_STAR,
                                 animationSpritesheet: images[ANIMATIONS.SMALL_STAR.imageNames[obj.name]],
                             }));
-                        }
+                        } else if (obj.name === ENTITY_NAME.ExpandingStar) {
+                            DEBUG_LOG("[Mapbuilder] BuildDynObjects -> ExpandingStar");
+                            result.push(new Star(self.minY, self.maxY, obj, null, {
+                                ...ANIMATIONS.EXPANDING_STAR,
+                                animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR.imageNames[obj.name]],
+                            }));
+                        } else if (obj.name === ENTITY_NAME.ExpandingStar_2) {
+                            DEBUG_LOG("[Mapbuilder] BuildDynObjects -> ExpandingStar2");
+                            result.push(new Star(self.minY, self.maxY, obj, null, {
+                                ...ANIMATIONS.EXPANDING_STAR_2,
+                                animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR_2.imageNames[obj.name]],
+                            }));
+                        } 
+                        
                     } else {
                         result.push(new GameObject(obj, bodyData));
                     }

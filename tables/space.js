@@ -134,7 +134,7 @@
                  "y":74
                 }, 
                 {
-                 "gid":41,
+                 "gid":43,
                  "height":600,
                  "id":166,
                  "name":"space_bottom_bg",
@@ -148,8 +148,8 @@
                  "type":"",
                  "visible":true,
                  "width":720,
-                 "x":271.392970057653,
-                 "y":600.353356890459
+                 "x":271.393,
+                 "y":600.353
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1764,6 +1764,34 @@
                  "width":1,
                  "x":716,
                  "y":581.667
+                }, 
+                {
+                 "gid":39,
+                 "height":20,
+                 "id":167,
+                 "name":"expanding_star",
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "rotation":0,
+                 "type":"star",
+                 "visible":true,
+                 "width":20,
+                 "x":433.555886181886,
+                 "y":191.327877998884
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2539,7 +2567,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":167,
+ "nextobjectid":168,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2568,7 +2596,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":36,
+         "tilecount":38,
          "tileheight":598,
          "tiles":[
                 {
@@ -3118,12 +3146,24 @@
                          "value":-80
                         }],
                  "type":"star"
+                }, 
+                {
+                 "id":37,
+                 "image":"..\/img\/tables\/expanding_star.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":38,
+                 "image":"..\/img\/tables\/expanding_star_2.png",
+                 "imageheight":20,
+                 "imagewidth":20
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":38,
+         "firstgid":40,
          "grid":
             {
              "height":1,
@@ -3176,7 +3216,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":42,
+         "firstgid":44,
          "grid":
             {
              "height":1,
