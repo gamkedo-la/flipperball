@@ -831,6 +831,11 @@
                  "name":"plane_red",
                  "properties":[
                         {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":850
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":200
@@ -845,25 +850,7 @@
                  "visible":true,
                  "width":51,
                  "x":289,
-                 "y":175
-                }, 
-                {
-                 "gid":45,
-                 "height":54,
-                 "id":160,
-                 "name":"spawner_plane",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"spawner",
-                 "visible":true,
-                 "width":54,
-                 "x":572,
-                 "y":306.5
+                 "y":176.333333333333
                 }, 
                 {
                  "gid":47,
@@ -905,6 +892,29 @@
                  "width":5,
                  "x":703,
                  "y":519.667
+                }, 
+                {
+                 "gid":45,
+                 "height":54,
+                 "id":168,
+                 "name":"spawner_plane",
+                 "properties":[
+                        {
+                         "name":"despawn",
+                         "type":"int",
+                         "value":850
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"spawner",
+                 "visible":true,
+                 "width":54,
+                 "x":571,
+                 "y":306.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1815,8 +1825,8 @@
                  "type":"plane",
                  "visible":true,
                  "width":48,
-                 "x":289.5,
-                 "y":126.5
+                 "x":291.5,
+                 "y":127.833333333333
                 }, 
                 {
                  "height":0,
@@ -1839,7 +1849,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":160
+                         "value":168
                         }],
                  "rotation":0,
                  "type":"spawner",
@@ -1886,12 +1896,12 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":168,
+ "nextobjectid":169,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1910,7 +1920,7 @@
          "name":"dynamic",
          "spacing":0,
          "tilecount":24,
-         "tileheight":598,
+         "tileheight":600,
          "tiles":[
                 {
                  "id":0,
@@ -1954,7 +1964,7 @@
                 {
                  "id":3,
                  "image":"..\/img\/tables\/plunger_chute.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":105,
                  "properties":[
                         {
@@ -1993,7 +2003,7 @@
                 {
                  "id":6,
                  "image":"..\/img\/tables\/vertical_wall.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":14,
                  "properties":[
                         {
@@ -2530,6 +2540,11 @@
                  "imageheight":54,
                  "imagewidth":54,
                  "properties":[
+                        {
+                         "name":"despawn",
+                         "type":"int",
+                         "value":850
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",

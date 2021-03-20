@@ -26,8 +26,26 @@
          "name":"Fixed",
          "objects":[
                 {
+                 "gid":43,
+                 "height":600,
+                 "id":166,
+                 "name":"space_bottom_bg",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":false,
+                 "width":720,
+                 "x":279.393,
+                 "y":600.353
+                }, 
+                {
                  "gid":4,
-                 "height":598,
+                 "height":600,
                  "id":23,
                  "name":"plunger_chute",
                  "properties":[
@@ -41,7 +59,7 @@
                  "visible":true,
                  "width":105,
                  "x":894,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":6,
@@ -81,7 +99,7 @@
                 }, 
                 {
                  "gid":7,
-                 "height":598,
+                 "height":600,
                  "id":26,
                  "name":"vertical_wall",
                  "properties":[
@@ -95,7 +113,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":24,
@@ -132,24 +150,6 @@
                  "width":140,
                  "x":754.667,
                  "y":74
-                }, 
-                {
-                 "gid":43,
-                 "height":600,
-                 "id":166,
-                 "name":"space_bottom_bg",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-100
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":720,
-                 "x":271.393,
-                 "y":600.353
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -272,7 +272,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":748.5,
+                 "x":753.5,
                  "y":442
                 }, 
                 {
@@ -290,7 +290,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":770,
+                 "x":773,
                  "y":520
                 }, 
                 {
@@ -331,7 +331,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":345.091,
+                 "x":343.091,
                  "y":333.727
                 }, 
                 {
@@ -359,8 +359,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":570.959,
-                 "y":130
+                 "x":584.125666666667,
+                 "y":130.833333333333
                 }, 
                 {
                  "gid":21,
@@ -387,59 +387,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":604.323,
-                 "y":130
-                }, 
-                {
-                 "gid":21,
-                 "height":5.51,
-                 "id":97,
-                 "name":"light_trigger",
-                 "properties":[
-                        {
-                         "name":"score",
-                         "type":"int",
-                         "value":25
-                        }, 
-                        {
-                         "name":"targ_light",
-                         "type":"object",
-                         "value":89
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"trigger",
-                 "visible":true,
-                 "width":2.68293,
-                 "x":637.323,
-                 "y":130
-                }, 
-                {
-                 "gid":26,
-                 "height":24,
-                 "id":89,
-                 "name":"letter_light",
-                 "properties":[
-                        {
-                         "name":"bonus",
-                         "type":"object",
-                         "value":119
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"letter_light",
-                 "visible":true,
-                 "width":24,
-                 "x":627.333,
-                 "y":123
+                 "x":636.156333333333,
+                 "y":134.25
                 }, 
                 {
                  "gid":26,
@@ -461,8 +410,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":594,
-                 "y":123.333
+                 "x":626,
+                 "y":127.749666666667
                 }, 
                 {
                  "gid":26,
@@ -484,8 +433,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":561.333,
-                 "y":123
+                 "x":573.499666666667,
+                 "y":124.666666666667
                 }, 
                 {
                  "gid":21,
@@ -512,8 +461,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":538.073,
-                 "y":130.375
+                 "x":532.406333333333,
+                 "y":134.708333333333
                 }, 
                 {
                  "gid":26,
@@ -535,8 +484,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":528.083,
-                 "y":123.375
+                 "x":521.833,
+                 "y":127.375
                 }, 
                 {
                  "gid":35,
@@ -586,7 +535,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":806.727,
+                 "x":803.727,
                  "y":334.227
                 }, 
                 {
@@ -2065,7 +2014,7 @@
                  "type":"drain_divider",
                  "visible":true,
                  "width":0,
-                 "x":847.25,
+                 "x":850.25,
                  "y":248.75
                 }, 
                 {
@@ -2189,7 +2138,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":803.273,
+                 "x":808.273,
                  "y":395.455
                 }, 
                 {
@@ -2371,8 +2320,8 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":0,
-                 "x":345.029,
-                 "y":326.512
+                 "x":343.529,
+                 "y":325.762
                 }, 
                 {
                  "ellipse":true,
@@ -2389,8 +2338,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":566.203,
-                 "y":120
+                 "x":578.786333333333,
+                 "y":121.583333333333
                 }, 
                 {
                  "ellipse":true,
@@ -2407,26 +2356,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":599.567,
-                 "y":120
-                }, 
-                {
-                 "ellipse":true,
-                 "height":13.9513,
-                 "id":96,
-                 "name":"light_trigger",
-                 "properties":[
-                        {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":97
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":13.9513,
-                 "x":632.567,
-                 "y":120
+                 "x":630.400333333333,
+                 "y":125.75
                 }, 
                 {
                  "ellipse":true,
@@ -2443,8 +2374,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":533.317,
-                 "y":120.375
+                 "x":526.983666666667,
+                 "y":125.041666666667
                 }, 
                 {
                  "ellipse":true,
@@ -2497,7 +2428,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":19,
-                 "x":784.167,
+                 "x":789.167,
                  "y":254.5
                 }, 
                 {
@@ -2515,7 +2446,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":12,
-                 "x":748.667,
+                 "x":751.667,
                  "y":429
                 }, 
                 {
@@ -2557,12 +2488,12 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":0,
-                 "x":807,
-                 "y":326
+                 "x":804,
+                 "y":325.75
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],

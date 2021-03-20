@@ -704,6 +704,7 @@ function GameScene() {
                 newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Plane);
                 newObjectData.dynamicObject.name = spawnerEntity.nextColor();
                 newObjectData.dynamicObject.score = spawnerEntity.nextScore();
+                newObjectData.dynamicObject.maxX = spawnerEntity.despawn;
             break;
             default:
                 break;
