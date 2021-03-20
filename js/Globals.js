@@ -289,9 +289,10 @@ const ANIMATIONS = {
 		frames: [4, 3, 2, 1, 0],
 		frameWidth: 30,
 		frameHeight: 255,
-		frameTimes: [64],
+		frameTimes: [128],
 		reverses: false,
-		loops: false
+		loops: false,
+		holds: true
 	},
 	CYCLONE_SPIN: {
 		imageNames: {

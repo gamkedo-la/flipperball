@@ -97,7 +97,10 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
             } else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {
-                self.plunger = new Plunger(obj, bodyData);
+                self.plunger = new Plunger(obj, bodyData, {
+                    ...ANIMATIONS.PLUNGER_CONTRACT,
+                    animationSpritesheet: images[ANIMATIONS.PLUNGER_CONTRACT.imageNames[obj.name]],
+                });
             } else if (obj.type === 'rotating_gate') {
                 const newGameObject = new RotatingGateObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,

@@ -455,7 +455,7 @@
                         {
                          "name":"stop",
                          "type":"int",
-                         "value":535
+                         "value":480
                         }, 
                         {
                          "name":"zOrder",
