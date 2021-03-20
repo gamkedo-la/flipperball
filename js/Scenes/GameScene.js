@@ -33,6 +33,7 @@ function GameScene() {
     const shakesBeforeTilt = 2;
     let tilt = false;
     let spawnerCollisionOn = false;
+    this.slotMachines = [];
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -74,6 +75,10 @@ function GameScene() {
         }
 
         if (self.table.plunger) {this.collisionManager.registerPlunger(self.table.plunger);}
+        
+        if (self.table.slotMachines.length > 0) {
+            this.slotMachines = self.table.slotMachines;
+        }
 
         if (this.properties.ball) {
             // we are moving the balls inbetween table scenes?
@@ -469,7 +474,7 @@ function GameScene() {
         }
 
         for (const staticObj of self.table.staticObjects) {
-            if (staticObj.type === ENTITY_TYPE.SlotMachine) {
+            if (staticObj.type === ENTITY_TYPE.Slot) {
                 staticObj.update(deltaTime / 2);
             }
         }
@@ -679,8 +684,8 @@ function GameScene() {
                 self.transitionIn();
             }
         } else if (triggerEntity.slot_target) {
-            const slotTarget = self.table.staticObjects.find((data) => data.id === triggerEntity.slot_target);            
-            slotTarget.spin();
+            const slotMachineTarget = self.slotMachines.find((data) => data.id === triggerEntity.slot_target);            
+            slotMachineTarget.spin();
         }
     }
 

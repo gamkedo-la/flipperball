@@ -335,12 +335,77 @@
                  "gid":23,
                  "height":45,
                  "id":164,
-                 "name":"slot",
+                 "name":"root_slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot"
+                        }, 
+                        {
+                         "name":"child_slots",
+                         "type":"string",
+                         "value":"168,169,170"
+                        }],
                  "rotation":0,
-                 "type":"slot_machine",
+                 "type":"slot",
                  "visible":true,
                  "width":31,
-                 "x":529,
+                 "x":536,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":168,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":566.666666666667,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":169,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":598,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":170,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":629,
                  "y":356
                 }],
          "opacity":1,
@@ -831,11 +896,6 @@
                  "name":"plane_red",
                  "properties":[
                         {
-                         "name":"maxX",
-                         "type":"int",
-                         "value":850
-                        }, 
-                        {
                          "name":"score",
                          "type":"int",
                          "value":200
@@ -850,7 +910,25 @@
                  "visible":true,
                  "width":51,
                  "x":289,
-                 "y":176.333333333333
+                 "y":175
+                }, 
+                {
+                 "gid":45,
+                 "height":54,
+                 "id":160,
+                 "name":"spawner_plane",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"spawner",
+                 "visible":true,
+                 "width":54,
+                 "x":572,
+                 "y":306.5
                 }, 
                 {
                  "gid":47,
@@ -892,29 +970,6 @@
                  "width":5,
                  "x":703,
                  "y":519.667
-                }, 
-                {
-                 "gid":45,
-                 "height":54,
-                 "id":168,
-                 "name":"spawner_plane",
-                 "properties":[
-                        {
-                         "name":"despawn",
-                         "type":"int",
-                         "value":850
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"spawner",
-                 "visible":true,
-                 "width":54,
-                 "x":571,
-                 "y":306.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1825,8 +1880,8 @@
                  "type":"plane",
                  "visible":true,
                  "width":48,
-                 "x":291.5,
-                 "y":127.833333333333
+                 "x":289.5,
+                 "y":126.5
                 }, 
                 {
                  "height":0,
@@ -1849,7 +1904,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":168
+                         "value":160
                         }],
                  "rotation":0,
                  "type":"spawner",
@@ -1878,7 +1933,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":53.9999666666668,
+                 "height":54,
                  "id":166,
                  "name":"slot_trigger",
                  "properties":[
@@ -1890,18 +1945,18 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":42.6666333333334,
-                 "x":685.000333333333,
-                 "y":481.333333333333
+                 "width":42.6666,
+                 "x":685,
+                 "y":481.333
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":169,
+ "nextobjectid":172,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -2540,11 +2595,6 @@
                  "imageheight":54,
                  "imagewidth":54,
                  "properties":[
-                        {
-                         "name":"despawn",
-                         "type":"int",
-                         "value":850
-                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
