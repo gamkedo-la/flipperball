@@ -3,14 +3,14 @@
 
 function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
-    this.properties = TABLES.Prototype;
+    this.properties = DEFAULT_TABLE;
     this.table = null;
     this.storedTables = [];
     this.collisionManager = null;
     this.storedCollisionManagers = [];
     this.collisionRate = 100;
     this.paused = false;
-    this.tablesForScene = [TABLES.Prototype, TABLES.PrototypeTop];
+    this.tablesForScene = [DEFAULT_TABLE, DEFAULT_TABLE_TOP];
     this.currentTableIndex = 0;
     this.lastTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
@@ -18,6 +18,9 @@ function GameScene() {
     this.score = 0;
     this.scoreIncrementForExtraBall = 0;
     this.bonusMultiplier = 1;
+    this.bonusLive = false;
+    this.bonusTime = 0;
+    this.bonusLights = [];
     this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
@@ -275,9 +278,9 @@ function GameScene() {
     const originalBallAndTableTransition = function() {
         for (const ball of self.table.balls) {
             if (ball.y < 0) {
-                SceneManager.setState(SCENE.GAME, {tableName: TABLES.PrototypeTop, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                SceneManager.setState(SCENE.GAME, {tableName: DEFAULT_TABLE_TOP, ball: ball, ballOffset: {x: 0, y: canvas.height}});
             } else if (ball.y > canvas.height) {
-                SceneManager.setState(SCENE.GAME, {tableName: TABLES.Prototype, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                SceneManager.setState(SCENE.GAME, {tableName: DEFAULT_TABLE, ball: ball, ballOffset: {x: 0, y: canvas.height}});
             }
         }
     }
@@ -372,7 +375,7 @@ function GameScene() {
             self.storedTables = [];
             self.storedCollisionManagers = [];
             self.gameHasFinished = true;            
-            //TODO: This should be a game over scene once we've got it
+            endBonusRound();
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
@@ -410,6 +413,16 @@ function GameScene() {
         self.scoreIncrementForExtraBall += increment * self.bonusMultiplier;    
     }
     
+    var endBonusRound = function () {
+        self.bonusMultiplier = 1;
+        self.bonusTime = 0;
+        self.bonusLive = false;
+        for (const togLight of self.bonusLights) {
+            const togOff = togLight.turnOff();                        
+        }
+        self.bonusLights = [];
+    }
+    
     var checkForExtraBall = function(){
         if(self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL){
             extraBall();
@@ -423,7 +436,7 @@ function GameScene() {
             self.storedTables = [];
             self.storedCollisionManagers = [];
             self.gameHasFinished = true;
-            SceneManager.setState(SCENE.GAME, TABLES.Prototype);
+            SceneManager.setState(SCENE.GAME, DEFAULT_TABLE);
         }
     }
 
@@ -504,7 +517,12 @@ function GameScene() {
         checkForRotatingGateScore();
 
         checkForExtraBall();
-
+        if (self.bonusLive) {
+            self.bonusTime -= deltaTime/1000;            
+            if (self.bonusTime <= 0) {
+                endBonusRound();
+            }
+        }
         //TODO: We'll need to change to figure out what to do about multi-ball
         if (DEBUG) {
             //originalBallAndTableTransition();
@@ -546,7 +564,9 @@ function GameScene() {
         } else if (currentShakes > 0) {
 	        colorText("Warning...", TEXT_LEFT_OFFSET, 60, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);
         }
-
+        if (self.bonusLive) {
+            colorText("Bonus: " + self.bonusMultiplier + "X" + " (" + Math.round(self.bonusTime) + ")", TEXT_LEFT_OFFSET, canvas.height - 160, Color.Yellow, Fonts.Subtitle, TextAlignment.Left, 1);
+        }
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
         colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
@@ -638,6 +658,7 @@ function GameScene() {
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
             const targetLit = lightTarget.turnOn();
+            this.bonusLights.push(lightTarget);
             // If light wasn't already lit, `trigger` any attached bonus switches
             if (targetLit) {
                 // Send bonus light a trigger signal if this light is attached to a bonus condition
@@ -645,7 +666,10 @@ function GameScene() {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
-                        this.bonusMultiplier *= 2;
+                        this.bonusLights.push(bonusTarg);
+                        this.bonusMultiplier = bonusTarg.bonusMult || 2;
+                        this.bonusLive = true;
+                        this.bonusTime = bonusTarg.bonusTime || 60;
                     }
                 }
             }

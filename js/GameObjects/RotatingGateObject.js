@@ -16,7 +16,7 @@ class RotatingGateObject extends GameObject {
         if(this.remainingRotatingScore == 0){
             this.rotatingCoefficient = 0;
         }else{
-            this.rotatingCoefficient = 100 / this.remainingRotatingScore;
+            this.rotatingCoefficient = 50 / this.remainingRotatingScore;
         }
         DEBUG_LOG("[RotatingGameObject] calculateRotatingCoefficient: rotatingCoefficient -> " + this.rotatingCoefficient);
     }
@@ -57,7 +57,7 @@ class RotatingGateObject extends GameObject {
         DEBUG_LOG("[RotatingGameObject] updateAnimation: deltaTime -> " + deltaTime);
         DEBUG_LOG("[RotatingGameObject] updateAnimation: currTiming -> " + this.currTiming);
         DEBUG_LOG("[RotatingGameObject] updateAnimation: this.frameTimes[this.currFrame] -> " + this.frameTimes[this.currFrame]);
-        if (this.currTiming >= this.frameTimes[this.currFrame]) {
+        if (this.currTiming >= (this.frameTimes[this.currFrame] || this.frameTimes[0])) {
             this.currTiming = 0;
             super.updateFrame();
         }

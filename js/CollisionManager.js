@@ -106,6 +106,7 @@ function CollisionManager () {
                 const distance = squaredDistance(ball.body.center.x, ball.body.center.y, flipper.body.center.x, flipper.body.center.y);
                 const squaredRadii = (ball.body.radius + flipper.body.radius) * (ball.body.radius + flipper.body.radius);
                 if (distance <= squaredRadii) {
+
                     const circleLine = circlePolygonCollision(ball, flipper);
                     if (circleLine && circleLine.length > 0) {
                         this.collisions.push(...circleLine);

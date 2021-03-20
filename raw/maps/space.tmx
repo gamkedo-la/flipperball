@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="131">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="168">
  <editorsettings>
-  <export target="../../tables/prototype.js" format="js"/>
+  <export target="../../tables/space.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="35" columns="0">
+ <properties>
+  <property name="maxY" type="int" value="600"/>
+  <property name="minY" type="int" value="0"/>
+ </properties>
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="38" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -220,11 +224,30 @@
   <tile id="34">
    <image width="24" height="24" source="../../img/tables/2x_bonus_light_unlit.png"/>
   </tile>
-  <tile id="35">
-   <image width="7" height="7" source="../../img/tables/diamond_div.png"/>
+  <tile id="35" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="1" height="1" source="../../img/tables/tiny_star.png"/>
+  </tile>
+  <tile id="36" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="5"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="5" height="5" source="../../img/tables/small_star.png"/>
+  </tile>
+  <tile id="37">
+   <image width="16" height="16" source="../../img/tables/expanding_star.png"/>
+  </tile>
+  <tile id="38">
+   <image width="20" height="20" source="../../img/tables/expanding_star_2.png"/>
   </tile>
  </tileset>
- <tileset firstgid="37" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="2" columns="0">
+ <tileset firstgid="40" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -238,8 +261,14 @@
    </properties>
    <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
   </tile>
+  <tile id="3">
+   <properties>
+    <property name="zOrder" type="int" value="-100"/>
+   </properties>
+   <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="39" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="44" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -261,141 +290,203 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="110" name="cloud_bg_top_empty" gid="38" x="276" y="599" width="720" height="600" visible="0"/>
-  <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
-  <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
-  <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
-  <object id="78" name="angled_wall_5" gid="24" x="290.333" y="132" width="140" height="142"/>
-  <object id="79" name="angled_wall_6" gid="25" x="752.667" y="132" width="140" height="142"/>
-  <object id="120" name="diamond_div_2" type="wall" gid="36" x="556.75" y="131.625" width="7" height="7"/>
-  <object id="121" name="diamond_div_1" type="wall" gid="36" x="527.75" y="149.625" width="7" height="7"/>
-  <object id="122" name="diamond_div_3" type="wall" gid="36" x="590.75" y="114.625" width="7" height="7"/>
-  <object id="123" name="diamond_div_4" type="wall" gid="36" x="622.75" y="98.625" width="7" height="7"/>
-  <object id="124" name="diamond_div_5" type="wall" gid="36" x="655.75" y="82.625" width="7" height="7"/>
+  <object id="23" name="plunger_chute" type="wall" gid="4" x="894" y="598" width="105" height="598">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="24" name="drain_wall_right" type="wall" gid="6" x="698" y="658" width="197" height="195">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="25" name="drain_wall_left" type="wall" gid="5" x="289" y="658" width="197" height="195">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="78" name="angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="79" name="angled_wall_6" type="wall" gid="25" x="754.667" y="74" width="140" height="142">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="166" name="space_bottom_bg" gid="43" x="271.393" y="600.353" width="720" height="600"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
-  <object id="111" name="cloud_6" gid="33" x="415" y="487" width="144" height="96"/>
-  <object id="112" name="cloud_7" gid="34" x="580" y="484" width="144" height="96"/>
-  <object id="113" name="cloud_1" gid="28" x="278" y="84" width="108" height="78"/>
-  <object id="114" name="cloud_2" gid="29" x="357" y="165" width="51" height="36"/>
-  <object id="115" name="cloud_3" gid="30" x="441" y="251" width="81" height="54"/>
-  <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66" visible="0"/>
-  <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
-  <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
-  <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
+  <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="535"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="14" name="flipper_left" gid="2" x="386" y="532" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="631" y="533" width="170" height="124"/>
-  <object id="16" name="ball" gid="16" x="931.667" y="290.333" width="26" height="26"/>
-  <object id="30" name="flipper_bumper_left" gid="17" x="373" y="370.5" width="55" height="186"/>
-  <object id="31" name="flipper_bumper_right" gid="18" x="748.5" y="382" width="55" height="186"/>
-  <object id="32" name="circle_bumper_red" gid="15" x="691" y="164.167" width="94" height="95">
+  <object id="14" name="flipper_left" type="left_flipper" gid="2" x="386" y="592" width="170" height="124">
    <properties>
-    <property name="score" type="int" value="100"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="34" name="circle_bumper_yellow" gid="12" x="620.833" y="288.667" width="94" height="95">
+  <object id="15" name="flipper_right" type="right_flipper" gid="3" x="631" y="593" width="170" height="124">
    <properties>
-    <property name="score" type="int" value="100"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="35" name="circle_bumper_green" gid="13" x="414.5" y="108.333" width="94" height="95">
+  <object id="16" name="ball" type="ball" gid="16" x="931.667" y="290.333" width="26" height="26">
    <properties>
-    <property name="score" type="int" value="100"/>
+    <property name="zOrder" type="int" value="50"/>
    </properties>
   </object>
-  <object id="48" name="drain_rail_right" gid="20" x="770" y="460" width="82" height="270"/>
-  <object id="49" name="drain_rail_left" gid="19" x="326.636" y="448.182" width="82" height="270"/>
-  <object id="58" name="lane_trigger" gid="21" x="816.18" y="242.818" width="5" height="26">
+  <object id="30" name="flipper_bumper_left" type="flipper_bumper" gid="17" x="373" y="430.5" width="55" height="186">
    <properties>
-    <property name="score" type="int" value="25"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="73" name="rotating_gate" type="rotating_gate" gid="23" x="345.091" y="243.727" width="26.5455" height="13.5454">
+  <object id="31" name="flipper_bumper_right" type="flipper_bumper" gid="18" x="748.5" y="442" width="55" height="186">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="48" name="drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="49" name="drain_rail_left" type="wall" gid="19" x="326.636" y="508.182" width="82" height="270">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="73" name="rotating_gate" type="rotating_gate" gid="23" x="345.091" y="333.727" width="26.5455" height="13.5454">
    <properties>
     <property name="score" type="int" value="5"/>
+    <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
-  <object id="92" name="light_trigger" gid="21" x="575.959" y="130" width="2.68293" height="5.51376">
+  <object id="92" name="light_trigger" type="trigger" gid="21" x="570.959" y="130" width="2.68293" height="5.51376">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="91"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="94" name="light_trigger" gid="21" x="609.323" y="113" width="2.68293" height="5.51">
+  <object id="94" name="light_trigger" type="trigger" gid="21" x="604.323" y="130" width="2.68293" height="5.51">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="90"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="97" name="light_trigger" gid="21" x="642.323" y="97" width="2.68293" height="5.51">
+  <object id="97" name="light_trigger" type="trigger" gid="21" x="637.323" y="130" width="2.68293" height="5.51">
    <properties>
     <property name="score" type="int" value="25"/>
     <property name="targ_light" type="object" value="89"/>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="89" name="letter_light" type="letter_light" gid="26" x="631.333" y="90" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-   </properties>
-  </object>
-  <object id="90" name="letter_light" type="letter_light" gid="26" x="598" y="106.333" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-   </properties>
-  </object>
-  <object id="91" name="letter_light" type="letter_light" gid="26" x="565.333" y="123" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-   </properties>
-  </object>
-  <object id="103" name="light_trigger" gid="21" x="543.073" y="148.375" width="2.68293" height="5.51">
-   <properties>
-    <property name="score" type="int" value="25"/>
-    <property name="targ_light" type="object" value="104"/>
-   </properties>
-  </object>
-  <object id="104" name="letter_light" type="letter_light" gid="26" x="532.083" y="141.375" width="24" height="24">
+  <object id="89" name="letter_light" type="letter_light" gid="26" x="627.333" y="123" width="24" height="24">
    <properties>
     <property name="bonus" type="object" value="119"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="515.636" y="400.364" width="24" height="24">
+  <object id="90" name="letter_light" type="letter_light" gid="26" x="594" y="123.333" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="119"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="91" name="letter_light" type="letter_light" gid="26" x="561.333" y="123" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="119"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="103" name="light_trigger" type="trigger" gid="21" x="538.073" y="130.375" width="2.68293" height="5.51">
+   <properties>
+    <property name="score" type="int" value="25"/>
+    <property name="targ_light" type="object" value="104"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="104" name="letter_light" type="letter_light" gid="26" x="528.083" y="123.375" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="119"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="572.636" y="399.364" width="24" height="24">
    <properties>
     <property name="bonusMult" type="int" value="2"/>
     <property name="bonusTime" type="int" value="60"/>
     <property name="requiredLights" type="int" value="4"/>
    </properties>
   </object>
+  <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="806.727" y="334.227" width="26.5455" height="13.5454">
+   <properties>
+    <property name="score" type="int" value="5"/>
+    <property name="zOrder" type="int" value="75"/>
+   </properties>
+  </object>
+  <object id="122" name="small_star" gid="37" x="360" y="16.3333" width="5" height="5"/>
+  <object id="123" name="small_star" gid="37" x="337.333" y="106.333" width="5" height="5"/>
+  <object id="124" name="small_star" gid="37" x="496" y="118.333" width="5" height="5"/>
+  <object id="125" name="small_star" gid="37" x="604" y="37.6667" width="5" height="5"/>
+  <object id="126" name="small_star" gid="37" x="770" y="41" width="5" height="5"/>
+  <object id="127" name="small_star" gid="37" x="806" y="153.667" width="5" height="5"/>
+  <object id="128" name="small_star" gid="37" x="864.667" y="199" width="5" height="5"/>
+  <object id="129" name="small_star" gid="37" x="716.667" y="259" width="5" height="5"/>
+  <object id="130" name="small_star" gid="37" x="776.667" y="376.333" width="5" height="5"/>
+  <object id="131" name="small_star" gid="37" x="869.333" y="386.333" width="5" height="5"/>
+  <object id="132" name="small_star" gid="37" x="664.667" y="414.333" width="5" height="5"/>
+  <object id="133" name="small_star" gid="37" x="460" y="427" width="5" height="5"/>
+  <object id="134" name="small_star" gid="37" x="330" y="488.333" width="5" height="5"/>
+  <object id="135" name="small_star" gid="37" x="435.333" y="571.667" width="5" height="5"/>
+  <object id="136" name="small_star" gid="37" x="329.333" y="573.667" width="5" height="5"/>
+  <object id="137" name="small_star" gid="37" x="598.667" y="573.667" width="5" height="5"/>
+  <object id="138" name="small_star" gid="37" x="853.333" y="580.333" width="5" height="5"/>
+  <object id="139" name="tiny_star" gid="36" x="716.667" y="17" width="1" height="1"/>
+  <object id="140" name="tiny_star" gid="36" x="830.667" y="38.3333" width="1" height="1"/>
+  <object id="141" name="tiny_star" gid="36" x="780.667" y="89.6667" width="1" height="1"/>
+  <object id="142" name="tiny_star" gid="36" x="662.667" y="82.3333" width="1" height="1"/>
+  <object id="143" name="tiny_star" gid="36" x="676.667" y="169.667" width="1" height="1"/>
+  <object id="144" name="tiny_star" gid="36" x="564.667" y="169.667" width="1" height="1"/>
+  <object id="145" name="tiny_star" gid="36" x="499.333" y="169.667" width="1" height="1"/>
+  <object id="146" name="tiny_star" gid="36" x="496" y="31" width="1" height="1"/>
+  <object id="147" name="tiny_star" gid="36" x="424.667" y="49" width="1" height="1"/>
+  <object id="148" name="tiny_star" gid="36" x="354" y="131.667" width="1" height="1"/>
+  <object id="149" name="tiny_star" gid="36" x="316" y="137.667" width="1" height="1"/>
+  <object id="150" name="tiny_star" gid="36" x="506" y="225.667" width="1" height="1"/>
+  <object id="151" name="tiny_star" gid="36" x="490.667" y="287" width="1" height="1"/>
+  <object id="152" name="tiny_star" gid="36" x="568" y="346.333" width="1" height="1"/>
+  <object id="153" name="tiny_star" gid="36" x="690" y="329.667" width="1" height="1"/>
+  <object id="154" name="tiny_star" gid="36" x="713.333" y="404.333" width="1" height="1"/>
+  <object id="155" name="tiny_star" gid="36" x="855.333" y="462.333" width="1" height="1"/>
+  <object id="156" name="tiny_star" gid="36" x="551.333" y="453.667" width="1" height="1"/>
+  <object id="157" name="tiny_star" gid="36" x="508.667" y="475" width="1" height="1"/>
+  <object id="158" name="tiny_star" gid="36" x="693.333" y="475" width="1" height="1"/>
+  <object id="159" name="tiny_star" gid="36" x="312" y="259.667" width="1" height="1"/>
+  <object id="160" name="tiny_star" gid="36" x="310" y="366.333" width="1" height="1"/>
+  <object id="161" name="tiny_star" gid="36" x="633.333" y="510.333" width="1" height="1"/>
+  <object id="162" name="tiny_star" gid="36" x="471.333" y="586.333" width="1" height="1"/>
+  <object id="163" name="tiny_star" gid="36" x="716" y="581.667" width="1" height="1"/>
+  <object id="167" name="expanding_star" type="star" gid="39" x="433.556" y="191.328" width="20" height="20">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
-  <object id="3" name="circle_bumper_green" type="circle_bumper" x="413.784" y="13.3133" width="94.652" height="95.4154">
-   <properties>
-    <property name="dynObjConn" type="object" value="35"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="4" name="circle_bumper_yellow" type="circle_bumper" x="619.894" y="192.647" width="94.652" height="95.4154">
-   <properties>
-    <property name="dynObjConn" type="object" value="34"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="5" name="circle_bumper_red" type="circle_bumper" x="689.909" y="68.6127" width="94.652" height="95.4154">
-   <properties>
-    <property name="dynObjConn" type="object" value="32"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="190.5">
+  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
@@ -407,13 +498,13 @@
    </properties>
    <polygon points="17.75,46.7727 17.75,59.5 47.75,59.5 47.75,46.7727 37.75,46.7727"/>
   </object>
-  <object id="42" name="flipper_left" type="flipper" x="550.485" y="515.667">
+  <object id="42" name="flipper_left" type="flipper" x="550.485" y="575.667">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <polygon points="0.855069,-2.47826 -125.261,-103.325 -154.992,-56.4205 -11.8485,16.2727"/>
   </object>
-  <object id="43" name="flipper_right" type="flipper" x="767.545" y="409.333">
+  <object id="43" name="flipper_right" type="flipper" x="767.545" y="469.333">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
@@ -426,148 +517,124 @@
    <ellipse/>
   </object>
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
-   <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 -139.5,-414 0,-299"/>
+   <polygon points="1,60 -135.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -2.5,-569.223 -135.5,-473 0,-356"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="188.75">
+  <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="248.75">
    <properties>
     <property name="dynObjConn" type="object" value="48"/>
    </properties>
    <polygon points="1.66667,-1.66667 -10.5,1.16667 -12.75,166.159 -90.9546,227.909 -50.7954,265.25 -0.25,169.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="328" y="177.182">
+  <object id="52" name="drain_rail_left" type="drain_divider" x="328" y="237.182">
    <properties>
     <property name="dynObjConn" type="object" value="49"/>
    </properties>
    <polygon points="0,-0.666667 1.5,172.864 62.7955,277.318 96.9318,235.159 15.4318,165.341 14.8182,2.30303"/>
   </object>
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,-80 -1,599.5 210.5,598.5 13.5,401.5 14,105.5 153.5,-11 13.0214,-80.4187"/>
+   <polygon points="0,-80 -1,599.5 150.5,599.5 14.5,465.5 15,50.5 152.5,-64 0.0214,-150.419"/>
   </object>
-  <object id="54" name="drain" type="drain" x="443.5" y="600">
-   <polygon points="0,0 -0.5,41 312,39 312.5,-0.5"/>
-  </object>
-  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="803.273" y="335.455">
+  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="803.273" y="395.455">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <polygon points="0,0 0.181818,-134.545 -18.7273,-134.545 -54.3636,38 -44.9091,44 -2.18182,3.63636"/>
   </object>
-  <object id="59" name="lane_trigger" x="805.453" y="216.727" width="26" height="26">
-   <properties>
-    <property name="dynObjConn" type="object" value="58"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="60" name="flipper_right" type="flipper_tip" x="631.674" y="509.959" width="23" height="23">
+  <object id="60" name="flipper_right" type="flipper_tip" x="631.674" y="569.959" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="61" name="flipper_right" type="flipper_base" x="746.341" y="410.292" width="55" height="55">
+  <object id="61" name="flipper_right" type="flipper_base" x="746.341" y="470.292" width="55" height="55">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="62" name="flipper_left" type="flipper_tip" x="531.667" y="510" width="23" height="23">
+  <object id="62" name="flipper_left" type="flipper_tip" x="531.667" y="570" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="63" name="flipper_left" type="flipper_base" x="384.833" y="409.5" width="55" height="55">
+  <object id="63" name="flipper_left" type="flipper_base" x="384.833" y="469.5" width="55" height="55">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="66" name="flipper_right" type="flipper_inner" x="765" y="398.667">
+  <object id="66" name="flipper_right" type="flipper_inner" x="765" y="458.667">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
    <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
   </object>
-  <object id="67" name="flipper_left" type="flipper_inner" x="551" y="515">
+  <object id="67" name="flipper_left" type="flipper_inner" x="551" y="575">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
    <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
   </object>
-  <object id="68" name="right" type="wall" x="893.5" y="7">
-   <polygon points="-132,-17 0.5,93 0.5,-84.5"/>
-  </object>
-  <object id="69" name="left" type="wall" x="335.5" y="53">
-   <polygon points="86,-63.5 -48,-129.5 -48.5,48"/>
-  </object>
-  <object id="75" name="rotating_gate" type="rotating_gate" x="345.029" y="236.512">
+  <object id="75" name="rotating_gate" type="rotating_gate" x="345.029" y="326.512">
    <properties>
     <property name="dynObjConn" type="object" value="73"/>
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
   </object>
-  <object id="93" name="light_trigger" x="570.203" y="120" width="13.9513" height="13.9513">
+  <object id="93" name="light_trigger" x="566.203" y="120" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="92"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="95" name="light_trigger" x="603.567" y="103" width="13.9513" height="13.9513">
+  <object id="95" name="light_trigger" x="599.567" y="120" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="94"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="96" name="light_trigger" x="636.567" y="87" width="13.9513" height="13.9513">
+  <object id="96" name="light_trigger" x="632.567" y="120" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="97"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="102" name="light_trigger" x="537.317" y="138.375" width="13.9513" height="13.9513">
+  <object id="102" name="light_trigger" x="533.317" y="120.375" width="13.9513" height="13.9513">
    <properties>
     <property name="dynObjConn" type="object" value="103"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="184.417" width="19" height="19">
+  <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="244.417" width="19" height="19">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="106" name="flipper_bumper_left" type="flipper_bumper" x="415.375" y="358" width="12" height="12">
+  <object id="106" name="flipper_bumper_left" type="flipper_bumper" x="415.375" y="418" width="12" height="12">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="108" name="flipper_bumper_right" type="flipper_bumper" x="784.167" y="194.5" width="19" height="19">
+  <object id="108" name="flipper_bumper_right" type="flipper_bumper" x="784.167" y="254.5" width="19" height="19">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="109" name="flipper_bumper_right" type="flipper_bumper" x="748.667" y="369" width="12" height="12">
+  <object id="109" name="flipper_bumper_right" type="flipper_bumper" x="748.667" y="429" width="12" height="12">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="125" name="diamond_div_1" type="wall" x="531.174" y="142.783">
-   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
-  </object>
-  <object id="126" name="diamond_div_2" type="wall" x="560.261" y="124.826">
-   <polygon points="0,0 -3,3.21739 -0.173913,6.34783 3,3.26087"/>
-  </object>
-  <object id="127" name="diamond_div_3" type="wall" x="594.348" y="107.913">
-   <polygon points="0,0 -3.04348,3.04348 -0.26087,6.43478 2.82609,3.13043"/>
-  </object>
-  <object id="128" name="diamond_div_4" type="wall" x="626.217" y="91.9565">
-   <polygon points="0,0 -3.13043,3.04348 -0.217391,6.17391 3.04348,2.86957"/>
-  </object>
-  <object id="129" name="diamond_div_5" type="wall" x="659.174" y="75.8696">
-   <polygon points="0,0 -2.95652,3.17391 -0.130435,6.26087 3.13043,3.04348"/>
+  <object id="120" name="rotating_gate" type="rotating_gate" x="807" y="326">
+   <properties>
+    <property name="dynObjConn" type="object" value="121"/>
+   </properties>
+   <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
   </object>
  </objectgroup>
 </map>

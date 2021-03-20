@@ -31,7 +31,7 @@ class SlotMachine extends GameObject {
             }
         }
 
-        if (this.currTiming >= this.frameTimes[this.currFrame]) {
+        if (this.currTiming >= (this.frameTimes[this.currFrame] || this.frameTimes[0])) {
             this.currTiming = 0;
             this.updateFrame();
         }

@@ -110,6 +110,22 @@ function loadImages() {
         {imgName: "cloud_5", theFile: "tables/cloud_5.png"},
         {imgName: "cloud_6", theFile: "tables/cloud_6.png"},
         {imgName: "cloud_7", theFile: "tables/cloud_7.png"},
+        {imgName: "space_bottom_bg", theFile: "tables/space_bottom_bg.png"},
+        {imgName: "expanding_star", theFile: "tables/expanding_star.png"},
+        {imgName: "expanding_star_anim", theFile: "animations/expanding_star_anim.png"},
+        {imgName: "expanding_star_2", theFile: "tables/expanding_star_2.png"},
+        {imgName: "expanding_star_2_anim", theFile: "animations/expanding_star_2_anim.png"},
+        {imgName: "tiny_star", theFile: "tables/tiny_star.png"},
+        {imgName: "tiny_star_anim", theFile: "animations/tiny_star_anim.png"},
+        {imgName: "small_star", theFile: "tables/small_star.png"},
+        {imgName: "small_star_anim", theFile: "animations/small_star_anim.png"},
+
+        { imgName: "diamond_div_1", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_2", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_3", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_4", theFile: "tables/diamond_div.png" },
+        { imgName: "diamond_div_5", theFile: "tables/diamond_div.png" },
+        
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
         {imgName: "drain_rail_right", theFile: "tables/drain_rail_right.png"},
@@ -125,6 +141,9 @@ function loadImages() {
         {imgName: "flipper_left", theFile: "tables/flipper_left.png"},
         {imgName: "flipper_right", theFile: "tables/flipper_right.png"},
 
+        {imgName: "flipper_left_short", theFile: "tables/flipper_left_short.png"},
+        {imgName: "flipper_right_short", theFile: "tables/flipper_right_short.png"},
+
         {imgName: "plunger_chute", theFile: "tables/plunger_chute.png"},
         {imgName: "plunger", theFile: "tables/plunger.png"},
         {imgName: "plunger_retracted", theFile: "tables/plunger_retracted.png"},
@@ -137,7 +156,7 @@ function loadImages() {
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
         { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
-        { imgName: "light_trigger", theFile: "tables/lane_trigger.png" },               
+        { imgName: "light_trigger", theFile: "tables/light_trigger.png" },               
         { imgName: "letter_light_unlit", theFile: "tables/letter_light_unlit.png" },
         { imgName: "letter_light_lit", theFile: "tables/letter_light_lit.png" },
         { imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png" },

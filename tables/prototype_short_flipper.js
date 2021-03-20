@@ -13,7 +13,8 @@
     {
      "export":
         {
-         "format":"js"
+         "format":"js",
+         "target":"prototype_short_flipper.js"
         }
     },
  "height":60,
@@ -533,7 +534,7 @@
                 }, 
                 {
                  "gid":20,
-                 "height":270,
+                 "height":310.5,
                  "id":48,
                  "name":"drain_rail_right",
                  "properties":[
@@ -545,13 +546,13 @@
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":82,
-                 "x":770,
-                 "y":460
+                 "width":129.5,
+                 "x":722.5,
+                 "y":500.5
                 }, 
                 {
                  "gid":19,
-                 "height":270,
+                 "height":324,
                  "id":49,
                  "name":"drain_rail_left",
                  "properties":[
@@ -563,9 +564,9 @@
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":82,
+                 "width":138.5,
                  "x":326.636,
-                 "y":448.182
+                 "y":502.182
                 }, 
                 {
                  "gid":21,
@@ -824,6 +825,16 @@
                  "name":"bonus_light_2x",
                  "properties":[
                         {
+                         "name":"bonusMult",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"bonusTime",
+                         "type":"int",
+                         "value":60
+                        }, 
+                        {
                          "name":"requiredLights",
                          "type":"int",
                          "value":4
@@ -850,8 +861,8 @@
                  "type":"left_flipper",
                  "visible":true,
                  "width":112,
-                 "x":381,
-                 "y":496.5
+                 "x":430,
+                 "y":538
                 }, 
                 {
                  "gid":37,
@@ -868,8 +879,8 @@
                  "type":"right_flipper",
                  "visible":true,
                  "width":112,
-                 "x":691.166666666667,
-                 "y":497.166666666667
+                 "x":629.667,
+                 "y":539.167
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1111,28 +1122,28 @@
                  "name":"drain_rail_right",
                  "polygon":[
                         {
-                         "x":1.66667,
-                         "y":-1.66667
+                         "x":2.75534,
+                         "y":-1.96639
                         }, 
                         {
-                         "x":-10.5,
-                         "y":1.16667
+                         "x":-17.3586,
+                         "y":1.37647
                         }, 
                         {
-                         "x":-12.75,
-                         "y":166.159
+                         "x":-21.0783,
+                         "y":196.04
                         }, 
                         {
-                         "x":-90.9546,
-                         "y":227.909
+                         "x":-150.366,
+                         "y":268.894
                         }, 
                         {
-                         "x":-50.7954,
-                         "y":265.25
+                         "x":-83.9748,
+                         "y":312.95
                         }, 
                         {
-                         "x":-0.25,
-                         "y":169.159
+                         "x":-0.413299,
+                         "y":199.579
                         }],
                  "properties":[
                         {
@@ -1144,8 +1155,8 @@
                  "type":"drain_divider",
                  "visible":true,
                  "width":0,
-                 "x":847.25,
-                 "y":188.75
+                 "x":846.161,
+                 "y":189.05
                 }, 
                 {
                  "height":0,
@@ -1154,27 +1165,27 @@
                  "polygon":[
                         {
                          "x":0,
-                         "y":-0.666667
+                         "y":-0.78298
                         }, 
                         {
-                         "x":1.5,
-                         "y":172.864
+                         "x":2.21184,
+                         "y":203.024
                         }, 
                         {
-                         "x":62.7955,
-                         "y":277.318
+                         "x":92.5958,
+                         "y":325.702
                         }, 
                         {
-                         "x":96.9318,
-                         "y":235.159
+                         "x":142.932,
+                         "y":276.187
                         }, 
                         {
-                         "x":15.4318,
-                         "y":165.341
+                         "x":22.7551,
+                         "y":194.188
                         }, 
                         {
-                         "x":14.8182,
-                         "y":2.30303
+                         "x":21.8503,
+                         "y":2.70484
                         }],
                  "properties":[
                         {
@@ -1187,7 +1198,7 @@
                  "visible":true,
                  "width":0,
                  "x":328,
-                 "y":177.182
+                 "y":177.298
                 }, 
                 {
                  "height":0,
@@ -1566,42 +1577,8 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":50,
-                 "x":384,
-                 "y":408.5
-                }, 
-                {
-                 "height":0,
-                 "id":124,
-                 "name":"flipper_left_short",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":30.5,
-                         "y":-39
-                        }, 
-                        {
-                         "x":93.5,
-                         "y":21.5
-                        }, 
-                        {
-                         "x":80.5,
-                         "y":37
-                        }],
-                 "properties":[
-                        {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":120
-                        }],
-                 "rotation":0,
-                 "type":"flipper",
-                 "visible":true,
-                 "width":0,
-                 "x":392,
-                 "y":452
+                 "x":433,
+                 "y":450
                 }, 
                 {
                  "height":0,
@@ -1609,20 +1586,20 @@
                  "name":"flipper_left_short",
                  "polygon":[
                         {
-                         "x":-1.33225065816614,
-                         "y":5.60563902960777
+                         "x":-1.33225,
+                         "y":5.60564
                         }, 
                         {
-                         "x":-49.0129127989117,
-                         "y":-36.6827549181406
+                         "x":-49.0129,
+                         "y":-36.6828
                         }, 
                         {
-                         "x":-56.4075806581662,
-                         "y":-22.994331299451
+                         "x":-56.4076,
+                         "y":-22.9943
                         }, 
                         {
-                         "x":-7.46752285484104,
-                         "y":6.16494508185946
+                         "x":-7.46752,
+                         "y":6.16495
                         }],
                  "properties":[
                         {
@@ -1634,8 +1611,8 @@
                  "type":"flipper_inner",
                  "visible":true,
                  "width":0,
-                 "x":484.415580658166,
-                 "y":477.107754918141
+                 "x":533.416,
+                 "y":518.608
                 }, 
                 {
                  "ellipse":true,
@@ -1652,8 +1629,8 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":16,
-                 "x":473.5,
-                 "y":474.5
+                 "x":522.5,
+                 "y":516
                 }, 
                 {
                  "ellipse":true,
@@ -1670,8 +1647,8 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":16,
-                 "x":694.5,
-                 "y":478
+                 "x":633,
+                 "y":520
                 }, 
                 {
                  "height":0,
@@ -1680,7 +1657,7 @@
                  "polygon":[
                         {
                          "x":-1.33225,
-                         "y":-36.12349
+                         "y":-36.1235
                         }, 
                         {
                          "x":-49.0129,
@@ -1704,42 +1681,8 @@
                  "type":"flipper_inner",
                  "visible":true,
                  "width":0,
-                 "x":700.26015,
-                 "y":447.98215
-                }, 
-                {
-                 "height":0,
-                 "id":131,
-                 "name":"flipper_right_short",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":-2
-                        }, 
-                        {
-                         "x":30.5,
-                         "y":37
-                        }, 
-                        {
-                         "x":93.5,
-                         "y":-23.5
-                        }, 
-                        {
-                         "x":80.5,
-                         "y":-39
-                        }],
-                 "properties":[
-                        {
-                         "name":"dynObjConn",
-                         "type":"object",
-                         "value":121
-                        }],
-                 "rotation":180,
-                 "type":"flipper",
-                 "visible":true,
-                 "width":0,
-                 "x":791.5,
-                 "y":451.5
+                 "x":638.76,
+                 "y":489.982
                 }, 
                 {
                  "ellipse":true,
@@ -1756,8 +1699,76 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":50,
-                 "x":754,
-                 "y":406
+                 "x":692.5,
+                 "y":448
+                }, 
+                {
+                 "height":0,
+                 "id":133,
+                 "name":"flipper_right_short",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":12.5,
+                         "y":15
+                        }, 
+                        {
+                         "x":98,
+                         "y":-22.5
+                        }, 
+                        {
+                         "x":57.5,
+                         "y":-59.25
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":121
+                        }],
+                 "rotation":0,
+                 "type":"flipper",
+                 "visible":true,
+                 "width":0,
+                 "x":636.25,
+                 "y":518
+                }, 
+                {
+                 "height":0,
+                 "id":136,
+                 "name":"flipper_left_short",
+                 "polygon":[
+                        {
+                         "x":0.994422,
+                         "y":-1.01877
+                        }, 
+                        {
+                         "x":-55.5239,
+                         "y":-55.7333
+                        }, 
+                        {
+                         "x":-69.4559,
+                         "y":-29.6369
+                        }, 
+                        {
+                         "x":-5.33544,
+                         "y":8.84164
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":120
+                        }],
+                 "rotation":0,
+                 "type":"flipper",
+                 "visible":true,
+                 "width":0,
+                 "x":530.759,
+                 "y":512.567
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1766,7 +1777,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":133,
+ "nextobjectid":137,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
