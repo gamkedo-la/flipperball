@@ -554,7 +554,7 @@
                         {
                          "name":"requiredLights",
                          "type":"int",
-                         "value":4
+                         "value":3
                         }],
                  "rotation":0,
                  "type":"status_light",
