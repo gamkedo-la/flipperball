@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="168">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="172">
  <editorsettings>
   <export target="../../tables/prototype_top.js" format="js"/>
  </editorsettings>
- <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="598" tilecount="24" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="600" tilecount="24" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -27,7 +27,7 @@
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
-   <image width="105" height="598" source="../../img/tables/plunger_chute.png"/>
+   <image width="105" height="600" source="../../img/tables/plunger_chute.png"/>
   </tile>
   <tile id="4" type="wall">
    <properties>
@@ -45,7 +45,7 @@
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
-   <image width="14" height="598" source="../../img/tables/vertical_wall.png"/>
+   <image width="14" height="600" source="../../img/tables/vertical_wall.png"/>
   </tile>
   <tile id="7" type="wall">
    <properties>
@@ -322,7 +322,27 @@
   <object id="139" name="habitrail_track" gid="48" x="456.646" y="17.4" width="42" height="125" rotation="89.4813"/>
   <object id="140" name="habitrail_track" gid="48" x="581.081" y="17.0891" width="42" height="125" rotation="89.7657"/>
   <object id="141" name="habitrail_small_track" gid="47" x="703.882" y="15.507" width="42" height="75" rotation="105.005"/>
-  <object id="164" name="slot" gid="23" x="529" y="356" width="31" height="45"/>
+  <object id="164" name="root_slot" type="slot" gid="23" x="536" y="356" width="31" height="45">
+   <properties>
+    <property name="animation" value="slot"/>
+    <property name="child_slots" value="168,169,170"/>
+   </properties>
+  </object>
+  <object id="168" name="slot" type="slot" gid="23" x="566.667" y="356" width="31" height="45">
+   <properties>
+    <property name="animation" value="slot_t"/>
+   </properties>
+  </object>
+  <object id="169" name="slot" type="slot" gid="23" x="598" y="356" width="31" height="45">
+   <properties>
+    <property name="animation" value="slot_g"/>
+   </properties>
+  </object>
+  <object id="170" name="slot" type="slot" gid="23" x="629" y="356" width="31" height="45">
+   <properties>
+    <property name="animation" value="slot_d"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="153" name="cloud_1" gid="39" x="325" y="143" width="108" height="78"/>

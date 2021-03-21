@@ -335,12 +335,77 @@
                  "gid":23,
                  "height":45,
                  "id":164,
-                 "name":"slot",
+                 "name":"root_slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot"
+                        }, 
+                        {
+                         "name":"child_slots",
+                         "type":"string",
+                         "value":"168,169,170"
+                        }],
                  "rotation":0,
-                 "type":"slot_machine",
+                 "type":"slot",
                  "visible":true,
                  "width":31,
-                 "x":529,
+                 "x":536,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":168,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot_t"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":566.667,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":169,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot_g"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":598,
+                 "y":356
+                }, 
+                {
+                 "gid":23,
+                 "height":45,
+                 "id":170,
+                 "name":"slot",
+                 "properties":[
+                        {
+                         "name":"animation",
+                         "type":"string",
+                         "value":"slot_d"
+                        }],
+                 "rotation":0,
+                 "type":"slot",
+                 "visible":true,
+                 "width":31,
+                 "x":629,
                  "y":356
                 }],
          "opacity":1,
@@ -1868,7 +1933,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":53.9999666666668,
+                 "height":54,
                  "id":166,
                  "name":"slot_trigger",
                  "properties":[
@@ -1880,9 +1945,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":42.6666333333334,
-                 "x":685.000333333333,
-                 "y":481.333333333333
+                 "width":42.6666,
+                 "x":685,
+                 "y":481.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1891,7 +1956,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":168,
+ "nextobjectid":172,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -1910,7 +1975,7 @@
          "name":"dynamic",
          "spacing":0,
          "tilecount":24,
-         "tileheight":598,
+         "tileheight":600,
          "tiles":[
                 {
                  "id":0,
@@ -1954,7 +2019,7 @@
                 {
                  "id":3,
                  "image":"..\/img\/tables\/plunger_chute.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":105,
                  "properties":[
                         {
@@ -1993,7 +2058,7 @@
                 {
                  "id":6,
                  "image":"..\/img\/tables\/vertical_wall.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":14,
                  "properties":[
                         {

@@ -1,68 +1,74 @@
-//Plunger.js
-// eslint-disable-next-line no-unused-vars
-function Plunger (objData, bodyData) {
-    this.objData = objData;
-    this.x = objData.x;
-    this.y = objData.y - objData.height;
-    this.width = objData.width;
-    this.height = objData.height;
+class Plunger extends GameObject {
+    constructor(...props) {
+        super(...props)
 
-    for (const prop of objData.properties) {
-        const {name, value} = prop;
-        if (name === 'stop') {
-            this.stop = value;
+        this.PULL_SPEED = 300;
+        this.RELEASE_SPEED = 1200;
+        this.objData = props[0];
+        for (const prop of this.objData.properties) {
+            const {name, value} = prop;
+            if (name === 'stop') {
+                this.stop = value;
+            }
         }
-    }
-    
-    this.type = ENTITY_TYPE.Plunger;
-    this.image = images[objData.name];
-    this.body = new CollisionBody(bodyData)
+        this.input = ALIAS.PLUNGER;
 
-    const PULL_SPEED = 300;
-    const RELEASE_SPEED = 1200;
-    
-    this.setInput = function(alias) {
-        this.input = alias;
+        this.reflectedVelocity = 15;
+        this.velocityRatio = 0;
+        this.positionRatio = 0;
+        this.isContracted = false;
+        this.isContracting = false;
+        this.startY = this.body.center.y;
+        this.DELTA_POS = this.stop - this.startY
     }
 
-    this.reflectance = objData.reflectance || 1.1;
-    this.reflectedVelocity = 15;
-    this.velocityRatio = 0;
-    let positionRatio = 0;
-    const DETLA_POS = this.stop - (this.objData.y - this.objData.height)
-
-    this.input = ALIAS.PLUNGER
-    this.setInput = function(alias) {
-        this.input = alias;
-    }
-
-    this.update = function(deltaTime) {
-        const oldY = this.y
+    update(deltaTime) {
+        const oldY = this.body.center.y;
+        let newY = this.body.center.y;
         if (heldButtons.includes(this.input)) {
-            this.y += PULL_SPEED*(deltaTime/1000);
-            if (this.y > this.stop) {
-                this.y = this.stop
+            newY += this.PULL_SPEED * (deltaTime / 1000);
+            console.log(`NewY: ${newY}, Stop: ${this.stop}`)
+            if (newY > this.stop) {
+                newY = this.stop
             }
             this.velocityRatio = 0;
-            positionRatio = (this.y - (this.objData.y - this.objData.height)) / DETLA_POS;
-        } else if (this.y > this.objData.y - this.objData.height) {
-            this.y -= RELEASE_SPEED*(deltaTime/1000);
-            if (this.y < this.objData.y - this.objData.height) {
-                this.y = this.objData.y - this.objData.height;
-                positionRatio = 0;
+            this.positionRatio = (newY - (this.objData.y - this.objData.height)) / this.DELTA_POS;
+        } else if (newY > this.startY) {
+            newY -= this.RELEASE_SPEED * (deltaTime / 1000);
+            if (newY < this.objData.y - this.objData.height) {
+                newY = this.objData.y - this.objData.height;
+                this.positionRatio = 0;
             }
             if (this.velocityRatio === 0) {
-                this.velocityRatio = positionRatio;
+                this.velocityRatio = this.positionRatio;
             }
         } else {
             this.velocityRatio = 0;
         }
 
-        this.body.update(0, this.y - oldY);
-    }
-    
-    this.draw = function() {
-        canvasContext.drawImage(this.image, this.x, this.y);
-        this.body.draw();
+        this.body.update(0, newY - oldY);
+
+        // this.oldVelocity.x = this.velocity.x;
+        // this.oldVelocity.y = this.velocity.y;
+
+        // const deltaX = this.velocity.x * deltaTime / 1000;
+        // const deltaY = this.velocity.y * deltaTime / 1000;
+
+        // const newX = this.x + deltaX;
+        // const newY = this.y + deltaY;
+        
+        // this.setPosition(newX, newY);
+
+        // this.body.update(0, this.y - oldY);
+
+
+        if (heldButtons.includes(this.input)) {
+            this.isContracting = true;
+            this.isContracted = true;
+            this.isAnimating = true;
+            this.updateAnimation(deltaTime);
+        } else {
+            this.isAnimating = false;
+        }        
     }
 }

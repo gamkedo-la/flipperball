@@ -118,6 +118,7 @@ const ENTITY_TYPE = {
 	Cloud: 'cloud',
 	Star: 'star',
 	Spawner: 'spawner',
+	Slot: 'slot',
 	SlotMachine: 'slot_machine'
 };
 
@@ -289,9 +290,10 @@ const ANIMATIONS = {
 		frames: [4, 3, 2, 1, 0],
 		frameWidth: 30,
 		frameHeight: 255,
-		frameTimes: [64],
+		frameTimes: [128],
 		reverses: false,
-		loops: false
+		loops: false,
+		holds: true
 	},
 	CYCLONE_SPIN: {
 		imageNames: {
@@ -364,9 +366,13 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: true
 	},
-	SLOT_MACHINE: {
+	SLOT: {
 		imageNames: {
-			"slot": "slot_animation"
+			"slot": "slot_animation",
+			"root_slot": "slot_animation",
+			"slot_t": "slot_animation_t",
+			"slot_g": "slot_animation_g",
+			"slot_d": "slot_animation_d"
 		},
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
 		frameWidth: 31,

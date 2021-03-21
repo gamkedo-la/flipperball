@@ -45,7 +45,7 @@
                 }, 
                 {
                  "gid":4,
-                 "height":598,
+                 "height":600,
                  "id":23,
                  "name":"plunger_chute",
                  "properties":[
@@ -59,7 +59,7 @@
                  "visible":true,
                  "width":105,
                  "x":893,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":6,
@@ -77,7 +77,7 @@
                  "visible":true,
                  "width":197,
                  "x":698,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":5,
@@ -95,11 +95,11 @@
                  "visible":true,
                  "width":197,
                  "x":289,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":7,
-                 "height":598,
+                 "height":600,
                  "id":26,
                  "name":"vertical_wall",
                  "properties":[
@@ -113,7 +113,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":24,
@@ -455,7 +455,7 @@
                         {
                          "name":"stop",
                          "type":"int",
-                         "value":535
+                         "value":480
                         }, 
                         {
                          "name":"zOrder",
@@ -1972,7 +1972,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
@@ -1996,7 +1996,7 @@
          "name":"dynamic",
          "spacing":0,
          "tilecount":35,
-         "tileheight":598,
+         "tileheight":600,
          "tiles":[
                 {
                  "id":0,
@@ -2040,7 +2040,7 @@
                 {
                  "id":3,
                  "image":"..\/img\/tables\/plunger_chute.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":105,
                  "properties":[
                         {

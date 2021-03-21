@@ -15,6 +15,8 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
     this.animations = [];
     this.plunger = null;
     this.drawOrder = [];
+    this.slotMachines = [];
+
     if (mapData.properties) {
         for (const property of mapData.properties) {
             this[property.name] = property.value
@@ -44,16 +46,23 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
         const result = [];
 
         for (const obj of objData) {
-            if (obj.type === ENTITY_TYPE.SlotMachine) {
-                const slotMachine = new SlotMachine(obj, null, {
-                    ...ANIMATIONS.SLOT_MACHINE,
-                    animationSpritesheet: images[ANIMATIONS.SLOT_MACHINE.imageNames[obj.name]],
+            if (obj.properties) {
+                for (const prop of obj.properties) {
+                    obj[prop.name] = prop.value
+                }
+            }
+            if (obj.type === ENTITY_TYPE.Slot) {
+                const slot = new Slot(obj, null, {
+                    ...ANIMATIONS.SLOT,
+                    animationSpritesheet: images[ANIMATIONS.SLOT.imageNames[obj.animation]],
                 })
-                result.push(slotMachine)
+                result.push(slot);
+
             } else {
                 result.push(new StaticObject(obj));
             }
         }
+
         return result;
     }
 
@@ -97,7 +106,10 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
             } else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {
-                self.plunger = new Plunger(obj, bodyData);
+                self.plunger = new Plunger(obj, bodyData, {
+                    ...ANIMATIONS.PLUNGER_CONTRACT,
+                    animationSpritesheet: images[ANIMATIONS.PLUNGER_CONTRACT.imageNames[obj.name]],
+                });
             } else if (obj.type === 'rotating_gate') {
                 const newGameObject = new RotatingGateObject(obj, bodyData, {
                     ...ANIMATIONS.ROTATING_GATE,
@@ -194,6 +206,26 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
         return result;
     }
 
+    const buildSlotMachines = function (objs) {
+        const slotMachines = [];
+        for (const obj of objs) { 
+            if (obj.type === ENTITY_TYPE.Slot && obj.name === 'root_slot') {
+                const finalSlots = [];
+                finalSlots.push(obj);
+                for (childSlotId of obj.childSlots) {
+                    const childSlot = objs.find((data) => data.id == childSlotId);
+                    if (childSlot) {
+                        finalSlots.push(childSlot);
+                    }
+                }
+                const slotMachine = new SlotMachine(finalSlots);
+                slotMachines.push(slotMachine);
+            }
+        }
+
+        return slotMachines;
+    }
+
     this.getDynamicObject = function(type) {
         let dynamicObject = this.dynamicLayerData.objects.find(dObj => dObj.type === type);
         let dynamicObjectCollision = this.collisionLayerData.objects.find(dObj => dObj.type === type);
@@ -216,6 +248,7 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
     }
 
     this.staticObjects = buildStaticObjects(this.fixedLayerData.objects);
+    this.slotMachines = buildSlotMachines(this.staticObjects);
     this.drawOrder.push(...this.staticObjects);
     this.dynamicObjectsFirstIndex = this.drawOrder.length;
     this.dynamicObjects = buildDynamicObjects(this.dynamicLayerData.objects, this.collisionLayerData.objects);
