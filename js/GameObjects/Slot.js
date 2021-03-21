@@ -22,7 +22,7 @@ class Slot extends GameObject {
     }
 
     setChoice(slotChoice) {
-        if (slotChoice != SLOTS.cherry || slotChoice != SLOTS.seven || slotChoice != SLOTS.theme || slotChoice != SLOTS.hometeam) {
+        if (slotChoice != SLOTS.cherry && slotChoice != SLOTS.seven && slotChoice != SLOTS.theme && slotChoice != SLOTS.hometeam) {
             this.randomizeChoice()
         } else {
             this.choice = slotChoice;
