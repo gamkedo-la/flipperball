@@ -80,6 +80,11 @@ function GameScene() {
             this.slotMachines = self.table.slotMachines;
         }
 
+        for (var i = 0; i < this.slotMachines.length; i++) {
+            const slotMachine = this.slotMachines[i];
+            slotMachine.setDelegate(this);
+        } 
+
         if (this.properties.ball) {
             // we are moving the balls inbetween table scenes?
             self.table.balls.length = 0;
@@ -780,5 +785,9 @@ function GameScene() {
                 }
             }
         }
+    }
+
+    this.slotMachineFinishedSpinning = function (slotMachine) {
+      
     }
 }
