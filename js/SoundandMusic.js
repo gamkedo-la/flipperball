@@ -40,7 +40,7 @@ function loadAudio() {
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
 	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 10);
 	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50);
-	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding");
+	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
 
 
