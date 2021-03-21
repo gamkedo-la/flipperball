@@ -38,6 +38,10 @@ class Slot extends GameObject {
         this.choice = SLOTS[Object.keys(SLOTS)[rand]];
     }
 
+    playSlotFinishedSound() {
+        slotDingSound.play();
+    }
+
     updateAnimation(deltaTime) {
 
         if (!this.hasAnimation || !this.isAnimating) return;

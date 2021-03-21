@@ -21,6 +21,7 @@ class SlotMachine {
 
     spin() {
         if (!this.isSpinning) {
+            slotCrankSound.play();        
             this.isSpinning = true;
             this.randomizeChoice();
             for (var i = 0; i < this.slots.length; i++) {
@@ -38,6 +39,7 @@ class SlotMachine {
 
     slotFinishedSpin(slot) {
         this.totalSlotsFinishedSpin++;
+        slot.playSlotFinishedSound();
         if (this.totalSlotsFinishedSpin == this.slots.length) {
             this.totalSlotsFinishedSpin = 0;
             if (this.delegate) {
