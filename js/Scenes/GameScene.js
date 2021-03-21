@@ -788,6 +788,28 @@ function GameScene() {
     }
 
     this.slotMachineFinishedSpinning = function (slotMachine) {
-      
+        var score = 0;
+        switch (slotMachine.choice) {
+            case SLOTMACHINE_CHOICES.random:
+                score += 100;
+                break;
+            case SLOTMACHINE_CHOICES.cherry:
+                score += 125;
+                break;
+            case SLOTMACHINE_CHOICES.seven:
+                score += 200;
+                break;
+            case SLOTMACHINE_CHOICES.theme:
+                score += 300;
+                break;
+            case SLOTMACHINE_CHOICES.hometeam:
+                score += 10000;
+                break;
+            default:
+                score += 50;
+                break;
+        }
+
+        incrementScore(score);
     }
 }
