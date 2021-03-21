@@ -14,12 +14,28 @@ class Slot extends GameObject {
         } else {
             this.childSlots = [];
         }
+        this.delegate = null;
     }
 
     spin() {
+        this.isAnimating = true;
+    }
+
+    setChoice(slotChoice) {
+        if (slotChoice != SLOTS.cherry || slotChoice != SLOTS.seven || slotChoice != SLOTS.theme || slotChoice != SLOTS.hometeam) {
+            this.randomizeChoice()
+        } else {
+            this.choice = slotChoice;
+        }
+    }
+
+    setDelegate(delegate) {
+        this.delegate = delegate;
+    }
+
+    randomizeChoice() {
         var rand = Math.floor(Math.random() * Object.keys(SLOTS).length);
         this.choice = SLOTS[Object.keys(SLOTS)[rand]];
-        this.isAnimating = true;
     }
 
     updateAnimation(deltaTime) {
@@ -33,6 +49,9 @@ class Slot extends GameObject {
             if (this.currFrame == this.choice) {
                 this.isAnimating = false;
                 this.totalAnimationDuration = 0.0;
+                if (this.delegate) {
+                    this.delegate.slotFinishedSpin(this);
+                } 
                 return;
             }
         }
