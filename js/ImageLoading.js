@@ -193,6 +193,9 @@ function loadImages() {
 
         {imgName: "slot", theFile: "tables/slot.png"},
         {imgName: "slot_animation", theFile: "animations/slot_frame_anim.png"},
+        {imgName: "slot_animation_t", theFile: "animations/slot_frame_anim_t.png"},
+        {imgName: "slot_animation_g", theFile: "animations/slot_frame_anim_g.png"},
+        {imgName: "slot_animation_d", theFile: "animations/slot_frame_anim_d.png"},
         {imgName: "slot_trigger", theFile: "tables/lane_trigger.png" }
         
     ];
