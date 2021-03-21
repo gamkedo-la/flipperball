@@ -12,6 +12,7 @@ class SlotMachine {
         }
          this.totalSlotsFinishedSpin = 0;
          this.delegate = null;
+         this.isSpinning = false;
     }
 
     setDelegate(delegate) {
@@ -19,11 +20,14 @@ class SlotMachine {
     }
 
     spin() {
-        this.randomizeChoice();
-         for (var i = 0; i < this.slots.length; i++) {
-            const slot = this.slots[i];
-            slot.setChoice(this.choice);
-            slot.spin();
+        if (!this.isSpinning) {
+            this.isSpinning = true;
+            this.randomizeChoice();
+            for (var i = 0; i < this.slots.length; i++) {
+               const slot = this.slots[i];
+               slot.setChoice(this.choice);
+               slot.spin();
+           }
         }
     }
 
@@ -39,6 +43,7 @@ class SlotMachine {
             if (this.delegate) {
                 this.delegate.slotMachineFinishedSpinning(this);
             }
+            this.isSpinning = false;
         }
     }
 }
