@@ -363,13 +363,13 @@
                         {
                          "name":"animation",
                          "type":"string",
-                         "value":"slot"
+                         "value":"slot_t"
                         }],
                  "rotation":0,
                  "type":"slot",
                  "visible":true,
                  "width":31,
-                 "x":566.666666666667,
+                 "x":566.667,
                  "y":356
                 }, 
                 {
@@ -381,7 +381,7 @@
                         {
                          "name":"animation",
                          "type":"string",
-                         "value":"slot"
+                         "value":"slot_g"
                         }],
                  "rotation":0,
                  "type":"slot",
@@ -399,7 +399,7 @@
                         {
                          "name":"animation",
                          "type":"string",
-                         "value":"slot"
+                         "value":"slot_d"
                         }],
                  "rotation":0,
                  "type":"slot",

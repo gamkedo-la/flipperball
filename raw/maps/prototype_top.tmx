@@ -330,17 +330,17 @@
   </object>
   <object id="168" name="slot" type="slot" gid="23" x="566.667" y="356" width="31" height="45">
    <properties>
-    <property name="animation" value="slot"/>
+    <property name="animation" value="slot_t"/>
    </properties>
   </object>
   <object id="169" name="slot" type="slot" gid="23" x="598" y="356" width="31" height="45">
    <properties>
-    <property name="animation" value="slot"/>
+    <property name="animation" value="slot_g"/>
    </properties>
   </object>
   <object id="170" name="slot" type="slot" gid="23" x="629" y="356" width="31" height="45">
    <properties>
-    <property name="animation" value="slot"/>
+    <property name="animation" value="slot_d"/>
    </properties>
   </object>
  </objectgroup>
