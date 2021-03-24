@@ -1980,7 +1980,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.5.0",
  "tileheight":10,
  "tilesets":[
         {
@@ -2682,6 +2682,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.4,
+ "version":1.5,
  "width":100
 });
