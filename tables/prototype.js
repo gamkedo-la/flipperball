@@ -1979,6 +1979,27 @@
  "nextlayerid":7,
  "nextobjectid":131,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"maxX",
+         "type":"float",
+         "value":1000
+        }, 
+        {
+         "name":"maxY",
+         "type":"float",
+         "value":600
+        }, 
+        {
+         "name":"minX",
+         "type":"float",
+         "value":275
+        }, 
+        {
+         "name":"minY",
+         "type":"float",
+         "value":0
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
  "tileheight":10,
