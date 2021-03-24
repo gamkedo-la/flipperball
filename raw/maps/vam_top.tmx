@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="213">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="690">
  <editorsettings>
   <export target="../../tables/vam_top.js" format="js"/>
  </editorsettings>
@@ -148,7 +148,7 @@
    <image width="5" height="26" source="../../img/tables/lane_trigger.png"/>
   </tile>
  </tileset>
- <tileset firstgid="25" name="cloud_bg_top" tilewidth="960" tileheight="600" tilecount="26" columns="0">
+ <tileset firstgid="25" name="cloud_bg_top" tilewidth="960" tileheight="600" tilecount="27" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -311,8 +311,11 @@
   <tile id="26">
    <image width="337" height="208" source="../../img/tables/vam/vam_logo.png"/>
   </tile>
+  <tile id="27">
+   <image width="32" height="32" source="../../img/tables/vam/asteroid.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="52" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="53" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
    <properties>
@@ -342,17 +345,17 @@
   <object id="92" name="ball_catch_arrow" gid="30" x="350" y="90" width="24" height="24"/>
   <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
   <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
-  <object id="137" name="habitrail_small_track" gid="53" x="348" y="552" width="42" height="75" rotation="310"/>
+  <object id="137" name="habitrail_small_track" gid="54" x="348" y="552" width="42" height="75" rotation="310"/>
   <object id="168" name="drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
-  <object id="170" name="habitrail_small_track" gid="53" x="291" y="503" width="42" height="75"/>
-  <object id="171" name="habitrail_small_track" gid="53" x="291" y="427.5" width="42" height="75"/>
-  <object id="172" name="habitrail_small_track" gid="53" x="291" y="352" width="42" height="75"/>
-  <object id="173" name="habitrail_gateway" type="habitrail" gid="52" x="405" y="600" width="42" height="75" rotation="310">
+  <object id="170" name="habitrail_small_track" gid="54" x="291" y="503" width="42" height="75"/>
+  <object id="171" name="habitrail_small_track" gid="54" x="291" y="427.5" width="42" height="75"/>
+  <object id="172" name="habitrail_small_track" gid="54" x="291" y="352" width="42" height="75"/>
+  <object id="173" name="habitrail_gateway" type="habitrail" gid="53" x="405" y="600" width="42" height="75" rotation="310">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="174" name="habitrail_gateway" gid="53" x="291" y="276.5" width="42" height="75">
+  <object id="174" name="habitrail_gateway" gid="54" x="291" y="276.5" width="42" height="75">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
@@ -413,6 +416,3142 @@
   <object id="211" name="empire_logo" type="empire_logo" gid="50" x="490.031" y="267.098" width="256" height="81">
    <properties>
     <property name="zOrder" type="int" value="-2"/>
+   </properties>
+  </object>
+  <object id="213" name="asteroid" type="cloud" gid="52" x="360.097" y="167.758" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="214" name="asteroid" type="cloud" gid="52" x="305.978" y="118.361" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="216" name="asteroid" type="cloud" gid="52" x="398.506" y="314.832" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="217" name="asteroid" type="cloud" gid="52" x="467.874" y="37.1" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="218" name="asteroid" type="cloud" gid="52" x="243.976" y="289.591" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="219" name="asteroid" type="cloud" gid="52" x="190.611" y="106.927" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="220" name="asteroid" type="cloud" gid="52" x="174.918" y="242.236" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="221" name="asteroid" type="cloud" gid="52" x="230.764" y="120.072" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="222" name="asteroid" type="cloud" gid="52" x="176.645" y="70.6755" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="223" name="asteroid" type="cloud" gid="52" x="269.173" y="267.146" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="224" name="asteroid" type="cloud" gid="52" x="198.42" y="347.271" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="225" name="asteroid" type="cloud" gid="52" x="114.643" y="241.905" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="226" name="asteroid" type="cloud" gid="52" x="61.278" y="59.2415" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="227" name="asteroid" type="cloud" gid="52" x="45.585" y="194.55" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="228" name="asteroid" type="cloud" gid="52" x="228.565" y="264.793" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="229" name="asteroid" type="cloud" gid="52" x="174.446" y="215.396" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="230" name="asteroid" type="cloud" gid="52" x="266.974" y="411.867" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="231" name="asteroid" type="cloud" gid="52" x="336.342" y="134.135" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="232" name="asteroid" type="cloud" gid="52" x="112.444" y="386.626" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="233" name="asteroid" type="cloud" gid="52" x="59.0786" y="203.962" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="234" name="asteroid" type="cloud" gid="52" x="43.3856" y="339.271" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="235" name="asteroid" type="cloud" gid="52" x="236.043" y="212.447" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="236" name="asteroid" type="cloud" gid="52" x="181.924" y="163.05" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="237" name="asteroid" type="cloud" gid="52" x="274.452" y="359.521" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="238" name="asteroid" type="cloud" gid="52" x="343.82" y="81.7892" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="239" name="asteroid" type="cloud" gid="52" x="119.922" y="334.28" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="240" name="asteroid" type="cloud" gid="52" x="66.5565" y="151.616" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="241" name="asteroid" type="cloud" gid="52" x="50.8635" y="286.925" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="242" name="asteroid" type="cloud" gid="52" x="505.523" y="115.29" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="243" name="asteroid" type="cloud" gid="52" x="435.461" y="136.742" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="244" name="asteroid" type="cloud" gid="52" x="651.677" y="157.065" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="245" name="asteroid" type="cloud" gid="52" x="314.571" y="311.803" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="246" name="asteroid" type="cloud" gid="52" x="551.314" y="277.248" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="247" name="asteroid" type="cloud" gid="52" x="366.913" y="230.238" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="248" name="asteroid" type="cloud" gid="52" x="475.408" y="312.6" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="249" name="asteroid" type="cloud" gid="52" x="398.661" y="202.361" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="250" name="asteroid" type="cloud" gid="52" x="328.599" y="223.814" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="251" name="asteroid" type="cloud" gid="52" x="544.814" y="244.136" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="252" name="asteroid" type="cloud" gid="52" x="341.027" y="43.0953" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="253" name="asteroid" type="cloud" gid="52" x="444.452" y="364.319" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="254" name="asteroid" type="cloud" gid="52" x="260.051" y="317.309" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="255" name="asteroid" type="cloud" gid="52" x="368.546" y="399.671" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="256" name="asteroid" type="cloud" gid="52" x="522.125" y="277.896" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="257" name="asteroid" type="cloud" gid="52" x="452.063" y="299.349" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="258" name="asteroid" type="cloud" gid="52" x="668.279" y="319.671" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="259" name="asteroid" type="cloud" gid="52" x="464.491" y="118.63" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="260" name="asteroid" type="cloud" gid="52" x="567.916" y="439.855" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="261" name="asteroid" type="cloud" gid="52" x="383.514" y="392.845" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="262" name="asteroid" type="cloud" gid="52" x="492.01" y="475.207" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="263" name="asteroid" type="cloud" gid="52" x="480.868" y="244.822" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="264" name="asteroid" type="cloud" gid="52" x="410.806" y="266.275" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="265" name="asteroid" type="cloud" gid="52" x="627.022" y="286.597" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="266" name="asteroid" type="cloud" gid="52" x="423.234" y="85.5562" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="267" name="asteroid" type="cloud" gid="52" x="526.659" y="406.781" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="268" name="asteroid" type="cloud" gid="52" x="342.257" y="359.771" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="269" name="asteroid" type="cloud" gid="52" x="450.753" y="442.133" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="298" name="asteroid" type="cloud" gid="52" x="131.949" y="274.939" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="299" name="asteroid" type="cloud" gid="52" x="83.8717" y="330.234" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="300" name="asteroid" type="cloud" gid="52" x="278.053" y="232.992" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="301" name="asteroid" type="cloud" gid="52" x="-1.27186" y="170.346" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="302" name="asteroid" type="cloud" gid="52" x="256.548" y="388.086" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="303" name="asteroid" type="cloud" gid="52" x="75.2247" y="445.843" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="304" name="asteroid" type="cloud" gid="52" x="210.873" y="458.267" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="305" name="asteroid" type="cloud" gid="52" x="87.397" y="405.385" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="306" name="asteroid" type="cloud" gid="52" x="39.3207" y="460.68" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="307" name="asteroid" type="cloud" gid="52" x="233.501" y="363.438" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="308" name="asteroid" type="cloud" gid="52" x="-45.8229" y="300.791" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="309" name="asteroid" type="cloud" gid="52" x="211.996" y="518.532" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="310" name="asteroid" type="cloud" gid="52" x="30.6736" y="576.289" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="311" name="asteroid" type="cloud" gid="52" x="166.321" y="588.713" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="312" name="asteroid" type="cloud" gid="52" x="232.129" y="404.091" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="313" name="asteroid" type="cloud" gid="52" x="184.052" y="459.386" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="314" name="asteroid" type="cloud" gid="52" x="378.233" y="362.145" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="315" name="asteroid" type="cloud" gid="52" x="98.9085" y="299.498" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="316" name="asteroid" type="cloud" gid="52" x="356.728" y="517.239" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="317" name="asteroid" type="cloud" gid="52" x="175.405" y="574.996" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="318" name="asteroid" type="cloud" gid="52" x="311.053" y="587.42" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="319" name="asteroid" type="cloud" gid="52" x="179.618" y="397.878" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="320" name="asteroid" type="cloud" gid="52" x="131.541" y="453.173" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="321" name="asteroid" type="cloud" gid="52" x="325.722" y="355.932" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="322" name="asteroid" type="cloud" gid="52" x="46.3975" y="293.285" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="323" name="asteroid" type="cloud" gid="52" x="304.217" y="511.026" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="324" name="asteroid" type="cloud" gid="52" x="122.894" y="568.783" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="325" name="asteroid" type="cloud" gid="52" x="258.542" y="581.207" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="326" name="asteroid" type="cloud" gid="52" x="75.987" y="130.821" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="327" name="asteroid" type="cloud" gid="52" x="99.1232" y="200.345" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="328" name="asteroid" type="cloud" gid="52" x="-39.8516" y="341.202" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="329" name="asteroid" type="cloud" gid="52" x="-81.8423" y="192.281" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="330" name="asteroid" type="cloud" gid="52" x="236.793" y="81.1355" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="331" name="asteroid" type="cloud" gid="52" x="194.246" y="266.617" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="332" name="asteroid" type="cloud" gid="52" x="273.966" y="156.166" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="333" name="asteroid" type="cloud" gid="52" x="165.611" y="235.551" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="334" name="asteroid" type="cloud" gid="52" x="188.748" y="305.075" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="335" name="asteroid" type="cloud" gid="52" x="203.847" y="88.4326" width="32" height="32" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="336" name="asteroid" type="cloud" gid="52" x="7.78229" y="297.011" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="337" name="asteroid" type="cloud" gid="52" x="326.417" y="185.866" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="338" name="asteroid" type="cloud" gid="52" x="283.87" y="371.347" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="339" name="asteroid" type="cloud" gid="52" x="363.59" y="260.896" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="340" name="asteroid" type="cloud" gid="52" x="238.145" y="110.3" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="341" name="asteroid" type="cloud" gid="52" x="261.282" y="179.824" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="342" name="asteroid" type="cloud" gid="52" x="132.394" y="319.405" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="343" name="asteroid" type="cloud" gid="52" x="80.316" y="171.76" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="344" name="asteroid" type="cloud" gid="52" x="398.952" y="60.615" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="345" name="asteroid" type="cloud" gid="52" x="356.405" y="246.098" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="346" name="asteroid" type="cloud" gid="52" x="436.125" y="135.646" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="347" name="asteroid" type="cloud" gid="52" x="206.076" y="152.343" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="348" name="asteroid" type="cloud" gid="52" x="229.213" y="221.867" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="349" name="asteroid" type="cloud" gid="52" x="183.169" y="74.2851" width="32" height="32" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="350" name="asteroid" type="cloud" gid="52" x="48.2473" y="213.803" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="351" name="asteroid" type="cloud" gid="52" x="366.883" y="102.658" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="352" name="asteroid" type="cloud" gid="52" x="324.336" y="288.141" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="353" name="asteroid" type="cloud" gid="52" x="404.056" y="177.689" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="354" name="asteroid" type="cloud" gid="52" x="648.235" y="188.625" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="355" name="asteroid" type="cloud" gid="52" x="594.116" y="139.228" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="356" name="asteroid" type="cloud" gid="52" x="686.644" y="335.699" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="357" name="asteroid" type="cloud" gid="52" x="756.012" y="57.9669" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="358" name="asteroid" type="cloud" gid="52" x="532.114" y="310.458" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="359" name="asteroid" type="cloud" gid="52" x="478.749" y="127.794" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="360" name="asteroid" type="cloud" gid="52" x="463.056" y="263.103" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="361" name="asteroid" type="cloud" gid="52" x="518.902" y="140.939" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="362" name="asteroid" type="cloud" gid="52" x="464.783" y="91.5424" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="363" name="asteroid" type="cloud" gid="52" x="557.311" y="288.013" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="364" name="asteroid" type="cloud" gid="52" x="626.679" y="10.2814" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="365" name="asteroid" type="cloud" gid="52" x="402.781" y="262.772" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="366" name="asteroid" type="cloud" gid="52" x="349.416" y="80.1084" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="367" name="asteroid" type="cloud" gid="52" x="333.723" y="215.417" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="368" name="asteroid" type="cloud" gid="52" x="516.703" y="285.66" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="369" name="asteroid" type="cloud" gid="52" x="462.584" y="236.263" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="370" name="asteroid" type="cloud" gid="52" x="555.112" y="432.734" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="371" name="asteroid" type="cloud" gid="52" x="624.48" y="155.002" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="372" name="asteroid" type="cloud" gid="52" x="400.582" y="407.493" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="373" name="asteroid" type="cloud" gid="52" x="347.217" y="224.829" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="374" name="asteroid" type="cloud" gid="52" x="331.524" y="360.138" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="375" name="asteroid" type="cloud" gid="52" x="524.181" y="233.314" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="376" name="asteroid" type="cloud" gid="52" x="470.062" y="183.917" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="377" name="asteroid" type="cloud" gid="52" x="562.59" y="380.388" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="378" name="asteroid" type="cloud" gid="52" x="631.958" y="102.656" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="379" name="asteroid" type="cloud" gid="52" x="408.06" y="355.147" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="380" name="asteroid" type="cloud" gid="52" x="354.694" y="172.483" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="381" name="asteroid" type="cloud" gid="52" x="339.001" y="307.792" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="382" name="asteroid" type="cloud" gid="52" x="793.661" y="136.157" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="383" name="asteroid" type="cloud" gid="52" x="723.599" y="157.609" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="384" name="asteroid" type="cloud" gid="52" x="939.815" y="177.932" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="385" name="asteroid" type="cloud" gid="52" x="620.633" y="333.968" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="386" name="asteroid" type="cloud" gid="52" x="839.452" y="298.115" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="387" name="asteroid" type="cloud" gid="52" x="655.051" y="251.105" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="388" name="asteroid" type="cloud" gid="52" x="763.546" y="333.467" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="389" name="asteroid" type="cloud" gid="52" x="686.799" y="223.228" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="390" name="asteroid" type="cloud" gid="52" x="616.737" y="244.681" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="391" name="asteroid" type="cloud" gid="52" x="832.952" y="265.003" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="392" name="asteroid" type="cloud" gid="52" x="629.165" y="63.9622" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="393" name="asteroid" type="cloud" gid="52" x="732.59" y="385.186" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="394" name="asteroid" type="cloud" gid="52" x="548.189" y="338.176" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="395" name="asteroid" type="cloud" gid="52" x="656.684" y="420.538" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="396" name="asteroid" type="cloud" gid="52" x="810.263" y="298.763" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="397" name="asteroid" type="cloud" gid="52" x="740.201" y="320.216" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="398" name="asteroid" type="cloud" gid="52" x="956.417" y="340.538" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="399" name="asteroid" type="cloud" gid="52" x="752.629" y="139.497" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="400" name="asteroid" type="cloud" gid="52" x="856.054" y="460.722" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="401" name="asteroid" type="cloud" gid="52" x="671.652" y="413.712" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="402" name="asteroid" type="cloud" gid="52" x="780.148" y="496.074" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="403" name="asteroid" type="cloud" gid="52" x="769.006" y="265.689" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="404" name="asteroid" type="cloud" gid="52" x="698.944" y="287.142" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="405" name="asteroid" type="cloud" gid="52" x="915.16" y="307.464" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="406" name="asteroid" type="cloud" gid="52" x="711.372" y="106.423" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="407" name="asteroid" type="cloud" gid="52" x="814.797" y="427.648" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="408" name="asteroid" type="cloud" gid="52" x="630.395" y="380.638" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="409" name="asteroid" type="cloud" gid="52" x="738.891" y="463" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="410" name="asteroid" type="cloud" gid="52" x="420.087" y="295.806" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="411" name="asteroid" type="cloud" gid="52" x="372.01" y="351.101" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="412" name="asteroid" type="cloud" gid="52" x="566.191" y="253.859" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="413" name="asteroid" type="cloud" gid="52" x="286.866" y="191.213" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="414" name="asteroid" type="cloud" gid="52" x="544.686" y="408.953" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="415" name="asteroid" type="cloud" gid="52" x="363.363" y="466.71" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="416" name="asteroid" type="cloud" gid="52" x="499.011" y="479.134" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="417" name="asteroid" type="cloud" gid="52" x="375.535" y="426.252" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="418" name="asteroid" type="cloud" gid="52" x="327.459" y="481.547" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="419" name="asteroid" type="cloud" gid="52" x="521.639" y="384.305" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="420" name="asteroid" type="cloud" gid="52" x="242.315" y="321.658" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="421" name="asteroid" type="cloud" gid="52" x="500.134" y="539.399" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="422" name="asteroid" type="cloud" gid="52" x="318.812" y="597.156" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="423" name="asteroid" type="cloud" gid="52" x="454.459" y="609.58" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="424" name="asteroid" type="cloud" gid="52" x="520.267" y="424.958" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="425" name="asteroid" type="cloud" gid="52" x="472.19" y="480.253" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="426" name="asteroid" type="cloud" gid="52" x="666.371" y="383.012" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="427" name="asteroid" type="cloud" gid="52" x="387.046" y="320.365" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="428" name="asteroid" type="cloud" gid="52" x="644.866" y="538.106" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="429" name="asteroid" type="cloud" gid="52" x="463.543" y="595.863" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="430" name="asteroid" type="cloud" gid="52" x="599.191" y="608.287" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="431" name="asteroid" type="cloud" gid="52" x="467.756" y="418.745" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="432" name="asteroid" type="cloud" gid="52" x="419.679" y="474.04" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="433" name="asteroid" type="cloud" gid="52" x="613.86" y="376.799" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="434" name="asteroid" type="cloud" gid="52" x="334.535" y="314.152" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="435" name="asteroid" type="cloud" gid="52" x="592.355" y="531.893" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="436" name="asteroid" type="cloud" gid="52" x="411.032" y="589.65" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="437" name="asteroid" type="cloud" gid="52" x="546.68" y="602.074" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="438" name="asteroid" type="cloud" gid="52" x="364.125" y="151.688" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="439" name="asteroid" type="cloud" gid="52" x="387.261" y="221.212" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="440" name="asteroid" type="cloud" gid="52" x="266.211" y="363.368" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="441" name="asteroid" type="cloud" gid="52" x="206.296" y="213.148" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="442" name="asteroid" type="cloud" gid="52" x="524.931" y="102.002" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="443" name="asteroid" type="cloud" gid="52" x="482.384" y="287.484" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="444" name="asteroid" type="cloud" gid="52" x="562.104" y="177.033" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="445" name="asteroid" type="cloud" gid="52" x="453.749" y="256.418" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="446" name="asteroid" type="cloud" gid="52" x="476.886" y="325.942" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="447" name="asteroid" type="cloud" gid="52" x="491.985" y="109.299" width="32" height="32" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="448" name="asteroid" type="cloud" gid="52" x="295.92" y="317.878" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="449" name="asteroid" type="cloud" gid="52" x="614.555" y="206.733" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="450" name="asteroid" type="cloud" gid="52" x="572.008" y="392.214" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="451" name="asteroid" type="cloud" gid="52" x="651.728" y="281.763" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="452" name="asteroid" type="cloud" gid="52" x="526.283" y="131.167" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="453" name="asteroid" type="cloud" gid="52" x="549.42" y="200.691" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="454" name="asteroid" type="cloud" gid="52" x="438.456" y="341.57" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="455" name="asteroid" type="cloud" gid="52" x="368.454" y="192.627" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="456" name="asteroid" type="cloud" gid="52" x="687.09" y="81.4819" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="457" name="asteroid" type="cloud" gid="52" x="644.543" y="266.965" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="458" name="asteroid" type="cloud" gid="52" x="724.263" y="156.513" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="459" name="asteroid" type="cloud" gid="52" x="494.214" y="173.21" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="460" name="asteroid" type="cloud" gid="52" x="517.351" y="242.734" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="461" name="asteroid" type="cloud" gid="52" x="404.393" y="386.229" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="462" name="asteroid" type="cloud" gid="52" x="336.385" y="234.67" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="463" name="asteroid" type="cloud" gid="52" x="655.021" y="123.525" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="464" name="asteroid" type="cloud" gid="52" x="612.474" y="309.008" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="465" name="asteroid" type="cloud" gid="52" x="692.194" y="198.556" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="466" name="asteroid" type="cloud" gid="52" x="113.159" y="368.837" width="33.9907" height="33.9907">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="467" name="asteroid" type="cloud" gid="52" x="55.6738" y="316.367" width="33.9907" height="33.9907" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="468" name="asteroid" type="cloud" gid="52" x="296.682" y="156.792" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="469" name="asteroid" type="cloud" gid="52" x="227.641" y="230.051" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="470" name="asteroid" type="cloud" gid="52" x="142.152" y="131.551" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="471" name="asteroid" type="cloud" gid="52" x="-66.87" y="304.222" width="33.9907" height="33.9907" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="472" name="asteroid" type="cloud" gid="52" x="73.0943" y="84.1955" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="473" name="asteroid" type="cloud" gid="52" x="-24.2191" y="318.184" width="33.9907" height="33.9907">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="474" name="asteroid" type="cloud" gid="52" x="-81.7048" y="265.715" width="33.9907" height="33.9907" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="475" name="asteroid" type="cloud" gid="52" x="167.349" y="109.106" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="476" name="asteroid" type="cloud" gid="52" x="90.2625" y="179.399" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="477" name="asteroid" type="cloud" gid="52" x="12.8193" y="83.8645" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="478" name="asteroid" type="cloud" gid="52" x="-204.249" y="253.57" width="33.9907" height="33.9907" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="479" name="asteroid" type="cloud" gid="52" x="-56.2387" y="36.5095" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="480" name="asteroid" type="cloud" gid="52" x="126.741" y="106.753" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="481" name="asteroid" type="cloud" gid="52" x="72.6223" y="57.3555" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="482" name="asteroid" type="cloud" gid="52" x="165.15" y="253.827" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="483" name="asteroid" type="cloud" gid="52" x="87.9267" y="333.122" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="484" name="asteroid" type="cloud" gid="52" x="10.6203" y="228.586" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="485" name="asteroid" type="cloud" gid="52" x="-42.7451" y="45.9215" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="486" name="asteroid" type="cloud" gid="52" x="-58.4381" y="181.231" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="487" name="asteroid" type="cloud" gid="52" x="134.219" y="54.4065" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="488" name="asteroid" type="cloud" gid="52" x="-76.0974" y="363.836" width="33.9907" height="33.9907" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="489" name="asteroid" type="cloud" gid="52" x="172.628" y="201.481" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="490" name="asteroid" type="cloud" gid="52" x="95.8699" y="277.52" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="491" name="asteroid" type="cloud" gid="52" x="18.0983" y="176.24" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="492" name="asteroid" type="cloud" gid="52" x="-198.642" y="351.691" width="33.9907" height="33.9907" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="493" name="asteroid" type="cloud" gid="52" x="-50.9602" y="128.885" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="494" name="asteroid" type="cloud" gid="52" x="267.632" y="313.105" width="33.9907" height="33.9907" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="495" name="asteroid" type="cloud" gid="52" x="193.212" y="335.891" width="33.9907" height="33.9907" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="496" name="asteroid" type="cloud" gid="52" x="422.878" y="357.479" width="33.9907" height="33.9907" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="497" name="asteroid" type="cloud" gid="52" x="206.413" y="143.931" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="498" name="asteroid" type="cloud" gid="52" x="449.49" y="119.208" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="499" name="asteroid" type="cloud" gid="52" x="265.089" y="72.1975" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="500" name="asteroid" type="cloud" gid="52" x="373.584" y="154.56" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="501" name="asteroid" type="cloud" gid="52" x="296.837" y="44.3205" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="502" name="asteroid" type="cloud" gid="52" x="226.775" y="65.7735" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="503" name="asteroid" type="cloud" gid="52" x="442.99" y="86.0955" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="504" name="asteroid" type="cloud" gid="52" x="92.9031" y="236.419" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="505" name="asteroid" type="cloud" gid="52" x="342.628" y="206.279" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="506" name="asteroid" type="cloud" gid="52" x="158.227" y="159.269" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="507" name="asteroid" type="cloud" gid="52" x="266.722" y="241.631" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="508" name="asteroid" type="cloud" gid="52" x="420.301" y="119.856" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="509" name="asteroid" type="cloud" gid="52" x="350.239" y="141.309" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="510" name="asteroid" type="cloud" gid="52" x="566.455" y="161.631" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="511" name="asteroid" type="cloud" gid="52" x="224.048" y="316.653" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="512" name="asteroid" type="cloud" gid="52" x="466.092" y="281.815" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="513" name="asteroid" type="cloud" gid="52" x="281.69" y="234.805" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="514" name="asteroid" type="cloud" gid="52" x="390.186" y="317.167" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="515" name="asteroid" type="cloud" gid="52" x="379.044" y="86.7815" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="516" name="asteroid" type="cloud" gid="52" x="308.982" y="108.235" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="517" name="asteroid" type="cloud" gid="52" x="525.198" y="128.557" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="518" name="asteroid" type="cloud" gid="52" x="180.224" y="281.521" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="519" name="asteroid" type="cloud" gid="52" x="424.835" y="248.741" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="520" name="asteroid" type="cloud" gid="52" x="240.433" y="201.731" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="521" name="asteroid" type="cloud" gid="52" x="348.929" y="284.093" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="522" name="asteroid" type="cloud" gid="52" x="30.1253" y="116.899" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="523" name="asteroid" type="cloud" gid="52" x="-17.952" y="172.194" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="524" name="asteroid" type="cloud" gid="52" x="176.229" y="74.9515" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="525" name="asteroid" type="cloud" gid="52" x="-270.69" y="371.586" width="33.9907" height="33.9907" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="526" name="asteroid" type="cloud" gid="52" x="154.724" y="230.046" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="527" name="asteroid" type="cloud" gid="52" x="-26.599" y="287.803" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="528" name="asteroid" type="cloud" gid="52" x="109.049" y="300.227" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="529" name="asteroid" type="cloud" gid="52" x="-14.4267" y="247.345" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="530" name="asteroid" type="cloud" gid="52" x="-62.503" y="302.64" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="531" name="asteroid" type="cloud" gid="52" x="131.677" y="205.398" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="532" name="asteroid" type="cloud" gid="52" x="-147.647" y="142.751" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="533" name="asteroid" type="cloud" gid="52" x="110.172" y="360.492" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="534" name="asteroid" type="cloud" gid="52" x="-71.1501" y="418.249" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="535" name="asteroid" type="cloud" gid="52" x="64.4973" y="430.673" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="536" name="asteroid" type="cloud" gid="52" x="130.305" y="246.051" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="537" name="asteroid" type="cloud" gid="52" x="82.2283" y="301.346" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="538" name="asteroid" type="cloud" gid="52" x="276.409" y="204.105" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="539" name="asteroid" type="cloud" gid="52" x="-2.91515" y="141.458" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="540" name="asteroid" type="cloud" gid="52" x="254.904" y="359.199" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="541" name="asteroid" type="cloud" gid="52" x="73.5813" y="416.956" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="542" name="asteroid" type="cloud" gid="52" x="209.229" y="429.38" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="543" name="asteroid" type="cloud" gid="52" x="77.7943" y="239.838" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="544" name="asteroid" type="cloud" gid="52" x="29.7173" y="295.133" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="545" name="asteroid" type="cloud" gid="52" x="223.898" y="197.892" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="546" name="asteroid" type="cloud" gid="52" x="-55.4262" y="135.245" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="547" name="asteroid" type="cloud" gid="52" x="202.393" y="352.986" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="548" name="asteroid" type="cloud" gid="52" x="21.0703" y="410.743" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="549" name="asteroid" type="cloud" gid="52" x="156.718" y="423.167" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="550" name="asteroid" type="cloud" gid="52" x="-188.625" y="329.602" width="33.9907" height="33.9907" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="551" name="asteroid" type="cloud" gid="52" x="-2.70045" y="42.3045" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="552" name="asteroid" type="cloud" gid="52" x="-148.01" y="173.331" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="553" name="asteroid" type="cloud" gid="52" x="-183.666" y="34.2405" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="554" name="asteroid" type="cloud" gid="52" x="-17.8151" y="276.826" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="555" name="asteroid" type="cloud" gid="52" x="92.4223" y="108.577" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="556" name="asteroid" type="cloud" gid="52" x="21.6704" y="356.524" width="33.9907" height="33.9907" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="557" name="asteroid" type="cloud" gid="52" x="63.7873" y="77.5105" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="558" name="asteroid" type="cloud" gid="52" x="86.9243" y="147.035" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="559" name="asteroid" type="cloud" gid="52" x="-52.8106" y="284.577" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="560" name="asteroid" type="cloud" gid="52" x="-94.0414" y="138.971" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="561" name="asteroid" type="cloud" gid="52" x="77.3843" y="388.071" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="562" name="asteroid" type="cloud" gid="52" x="182.046" y="213.307" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="563" name="asteroid" type="cloud" gid="52" x="261.766" y="102.856" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="564" name="asteroid" type="cloud" gid="52" x="-16.379" y="307.805" width="33.9907" height="33.9907" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="565" name="asteroid" type="cloud" gid="52" x="8.19733" y="381.653" width="33.9907" height="33.9907" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="566" name="asteroid" type="cloud" gid="52" x="24.2356" y="151.533" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="567" name="asteroid" type="cloud" gid="52" x="-184.026" y="373.088" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="568" name="asteroid" type="cloud" gid="52" x="154.432" y="255.029" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="569" name="asteroid" type="cloud" gid="52" x="254.581" y="88.0575" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="570" name="asteroid" type="cloud" gid="52" x="193.917" y="334.727" width="33.9907" height="33.9907" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="571" name="asteroid" type="cloud" gid="52" x="-50.4429" y="352.463" width="33.9907" height="33.9907" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="572" name="asteroid" type="cloud" gid="52" x="127.389" y="63.8265" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="573" name="asteroid" type="cloud" gid="52" x="-9.82728" y="196.192" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="574" name="asteroid" type="cloud" gid="52" x="-53.5764" y="55.7625" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="575" name="asteroid" type="cloud" gid="52" x="120.368" y="299.687" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="576" name="asteroid" type="cloud" gid="52" x="222.512" y="130.101" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="577" name="asteroid" type="cloud" gid="52" x="159.853" y="379.386" width="33.9907" height="33.9907" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="578" name="asteroid" type="cloud" gid="52" x="546.411" y="30.5845" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="579" name="asteroid" type="cloud" gid="52" x="361.736" y="338.532" width="33.9907" height="33.9907" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="580" name="asteroid" type="cloud" gid="52" x="584.82" y="177.659" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="581" name="asteroid" type="cloud" gid="52" x="533.704" y="252.216" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="582" name="asteroid" type="cloud" gid="52" x="430.29" y="152.418" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="583" name="asteroid" type="cloud" gid="52" x="239.193" y="326.387" width="33.9907" height="33.9907" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="584" name="asteroid" type="cloud" gid="52" x="361.232" y="105.063" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="585" name="asteroid" type="cloud" gid="52" x="281.843" y="340.35" width="33.9907" height="33.9907">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="586" name="asteroid" type="cloud" gid="52" x="224.358" y="287.88" width="33.9907" height="33.9907" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="587" name="asteroid" type="cloud" gid="52" x="455.487" y="129.973" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="588" name="asteroid" type="cloud" gid="52" x="396.325" y="201.564" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="589" name="asteroid" type="cloud" gid="52" x="300.957" y="104.732" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="590" name="asteroid" type="cloud" gid="52" x="101.814" y="275.735" width="33.9907" height="33.9907" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="591" name="asteroid" type="cloud" gid="52" x="231.899" y="57.3765" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="592" name="asteroid" type="cloud" gid="52" x="414.879" y="127.62" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="593" name="asteroid" type="cloud" gid="52" x="360.76" y="78.2225" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="594" name="asteroid" type="cloud" gid="52" x="453.288" y="274.694" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="595" name="asteroid" type="cloud" gid="52" x="522.656" y="-3.03847" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="596" name="asteroid" type="cloud" gid="52" x="298.758" y="249.453" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="597" name="asteroid" type="cloud" gid="52" x="245.393" y="66.7885" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="598" name="asteroid" type="cloud" gid="52" x="229.7" y="202.098" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="599" name="asteroid" type="cloud" gid="52" x="422.357" y="75.2735" width="32" height="32">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="600" name="asteroid" type="cloud" gid="52" x="368.238" y="25.8765" width="32" height="32" rotation="47.1438">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="601" name="asteroid" type="cloud" gid="52" x="460.766" y="222.348" width="32" height="32" rotation="52.0093">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="602" name="asteroid" type="cloud" gid="52" x="401.933" y="299.685" width="33.9907" height="33.9907" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="603" name="asteroid" type="cloud" gid="52" x="306.236" y="197.107" width="32" height="32" rotation="112.894">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="604" name="asteroid" type="cloud" gid="52" x="252.87" y="14.4425" width="32" height="32" rotation="86.2506">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="605" name="asteroid" type="cloud" gid="52" x="237.177" y="149.752" width="32" height="32" rotation="171.572">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="606" name="asteroid" type="cloud" gid="52" x="573.695" y="335.27" width="33.9907" height="33.9907" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="607" name="asteroid" type="cloud" gid="52" x="499.274" y="358.057" width="33.9907" height="33.9907" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="608" name="asteroid" type="cloud" gid="52" x="837.991" y="19.8915" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="609" name="asteroid" type="cloud" gid="52" x="512.475" y="166.096" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="610" name="asteroid" type="cloud" gid="52" x="737.628" y="140.075" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="611" name="asteroid" type="cloud" gid="52" x="553.227" y="93.0645" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="612" name="asteroid" type="cloud" gid="52" x="661.722" y="175.427" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="613" name="asteroid" type="cloud" gid="52" x="584.975" y="65.1875" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="614" name="asteroid" type="cloud" gid="52" x="514.913" y="86.6405" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="615" name="asteroid" type="cloud" gid="52" x="731.128" y="106.963" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="616" name="asteroid" type="cloud" gid="52" x="398.966" y="258.584" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="617" name="asteroid" type="cloud" gid="52" x="630.766" y="227.146" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="618" name="asteroid" type="cloud" gid="52" x="446.365" y="180.136" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="619" name="asteroid" type="cloud" gid="52" x="554.86" y="262.498" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="620" name="asteroid" type="cloud" gid="52" x="708.439" y="140.723" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="621" name="asteroid" type="cloud" gid="52" x="638.377" y="162.176" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="622" name="asteroid" type="cloud" gid="52" x="854.593" y="182.498" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="623" name="asteroid" type="cloud" gid="52" x="530.11" y="338.818" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="624" name="asteroid" type="cloud" gid="52" x="754.23" y="302.682" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="625" name="asteroid" type="cloud" gid="52" x="569.828" y="255.672" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="626" name="asteroid" type="cloud" gid="52" x="678.324" y="338.034" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="627" name="asteroid" type="cloud" gid="52" x="667.182" y="107.649" width="32" height="32" rotation="300.588">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="628" name="asteroid" type="cloud" gid="52" x="597.12" y="129.102" width="32" height="32" rotation="347.731">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="629" name="asteroid" type="cloud" gid="52" x="813.336" y="149.424" width="32" height="32" rotation="352.597">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="630" name="asteroid" type="cloud" gid="52" x="486.287" y="303.686" width="33.9907" height="33.9907" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="631" name="asteroid" type="cloud" gid="52" x="712.973" y="269.608" width="32" height="32" rotation="53.4816">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="632" name="asteroid" type="cloud" gid="52" x="528.571" y="222.598" width="32" height="32" rotation="26.8382">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="633" name="asteroid" type="cloud" gid="52" x="637.067" y="304.96" width="32" height="32" rotation="112.16">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="634" name="asteroid" type="cloud" gid="52" x="318.263" y="137.766" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="635" name="asteroid" type="cloud" gid="52" x="270.186" y="193.061" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="636" name="asteroid" type="cloud" gid="52" x="464.367" y="95.8185" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="637" name="asteroid" type="cloud" gid="52" x="185.042" y="33.1725" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="638" name="asteroid" type="cloud" gid="52" x="442.862" y="250.913" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="639" name="asteroid" type="cloud" gid="52" x="261.539" y="308.67" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="640" name="asteroid" type="cloud" gid="52" x="397.187" y="321.094" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="641" name="asteroid" type="cloud" gid="52" x="273.711" y="268.212" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="642" name="asteroid" type="cloud" gid="52" x="225.635" y="323.507" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="643" name="asteroid" type="cloud" gid="52" x="419.815" y="226.265" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="644" name="asteroid" type="cloud" gid="52" x="140.491" y="163.618" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="645" name="asteroid" type="cloud" gid="52" x="398.31" y="381.359" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="646" name="asteroid" type="cloud" gid="52" x="216.988" y="439.116" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="647" name="asteroid" type="cloud" gid="52" x="352.635" y="451.54" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="648" name="asteroid" type="cloud" gid="52" x="418.443" y="266.918" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="649" name="asteroid" type="cloud" gid="52" x="370.366" y="322.213" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="650" name="asteroid" type="cloud" gid="52" x="564.547" y="224.972" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="651" name="asteroid" type="cloud" gid="52" x="285.222" y="162.325" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="652" name="asteroid" type="cloud" gid="52" x="543.042" y="380.066" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="653" name="asteroid" type="cloud" gid="52" x="361.719" y="437.823" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="654" name="asteroid" type="cloud" gid="52" x="497.367" y="450.247" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="655" name="asteroid" type="cloud" gid="52" x="365.932" y="260.705" width="32" height="32" rotation="268.617">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="656" name="asteroid" type="cloud" gid="52" x="317.855" y="316" width="32" height="32" rotation="315.761">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="657" name="asteroid" type="cloud" gid="52" x="512.036" y="218.759" width="32" height="32" rotation="320.627">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="658" name="asteroid" type="cloud" gid="52" x="232.711" y="156.112" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="659" name="asteroid" type="cloud" gid="52" x="490.531" y="373.853" width="32" height="32" rotation="21.5114">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="660" name="asteroid" type="cloud" gid="52" x="309.208" y="431.61" width="32" height="32" rotation="354.868">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="661" name="asteroid" type="cloud" gid="52" x="444.856" y="444.034" width="32" height="32" rotation="80.1894">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="662" name="asteroid" type="cloud" gid="52" x="117.438" y="351.767" width="33.9907" height="33.9907" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="663" name="asteroid" type="cloud" gid="52" x="285.437" y="63.1715" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="664" name="asteroid" type="cloud" gid="52" x="158.053" y="195.496" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="665" name="asteroid" type="cloud" gid="52" x="104.472" y="55.1075" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="666" name="asteroid" type="cloud" gid="52" x="288.248" y="298.99" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="667" name="asteroid" type="cloud" gid="52" x="380.56" y="129.444" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="668" name="asteroid" type="cloud" gid="52" x="327.733" y="378.689" width="33.9907" height="33.9907" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="669" name="asteroid" type="cloud" gid="52" x="351.925" y="98.3775" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="670" name="asteroid" type="cloud" gid="52" x="375.062" y="167.902" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="671" name="asteroid" type="cloud" gid="52" x="253.252" y="306.741" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="672" name="asteroid" type="cloud" gid="52" x="194.096" y="159.838" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="673" name="asteroid" type="cloud" gid="52" x="512.731" y="48.6925" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="674" name="asteroid" type="cloud" gid="52" x="470.184" y="234.174" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="675" name="asteroid" type="cloud" gid="52" x="549.904" y="123.723" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="676" name="asteroid" type="cloud" gid="52" x="289.684" y="329.97" width="33.9907" height="33.9907" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="677" name="asteroid" type="cloud" gid="52" x="447.596" y="42.6505" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="678" name="asteroid" type="cloud" gid="52" x="330.298" y="173.698" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="679" name="asteroid" type="cloud" gid="52" x="122.036" y="395.253" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="680" name="asteroid" type="cloud" gid="52" x="460.494" y="277.194" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="681" name="asteroid" type="cloud" gid="52" x="542.719" y="108.925" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="682" name="asteroid" type="cloud" gid="52" x="499.98" y="356.892" width="33.9907" height="33.9907" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="683" name="asteroid" type="cloud" gid="52" x="392.39" y="15.1695" width="32" height="32" rotation="209.205">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="684" name="asteroid" type="cloud" gid="52" x="415.527" y="84.6935" width="32" height="32" rotation="256.348">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="685" name="asteroid" type="cloud" gid="52" x="296.235" y="218.357" width="33.9907" height="33.9907" rotation="261.214">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="686" name="asteroid" type="cloud" gid="52" x="234.561" y="76.6295" width="32" height="32" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="687" name="asteroid" type="cloud" gid="52" x="426.43" y="321.852" width="33.9907" height="33.9907" rotation="322.099">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="688" name="asteroid" type="cloud" gid="52" x="510.65" y="150.968" width="32" height="32" rotation="295.456">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
+   </properties>
+  </object>
+  <object id="689" name="asteroid" type="cloud" gid="52" x="590.37" y="40.5155" width="32" height="32" rotation="20.7774">
+   <properties>
+    <property name="xVelocity" type="int" value="2"/>
+    <property name="yVelocity" type="int" value="1"/>
+    <property name="zOrder" type="int" value="-20"/>
    </properties>
   </object>
  </objectgroup>

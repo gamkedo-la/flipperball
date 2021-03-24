@@ -201,6 +201,8 @@ function loadImages() {
         { imgName: "vam_logo", theFile: "tables/vam/vam_logo.png" },
         { imgName: "emp_inf_anim", theFile: "animations/emp_inf_anim.png" },
         { imgName: "empire_logo", theFile: "tables/vam/empire_logo.png" },
+        { imgName: "asteroid", theFile: "tables/vam/asteroid.png" },
+        { imgName: "starfield", theFile: "tables/vam/starfield.png" },
         { imgName: "backplate", theFile: "tables/vam/backplate.png" }
         
     ];

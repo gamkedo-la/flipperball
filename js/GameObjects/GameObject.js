@@ -11,6 +11,7 @@ class GameObject {
         this.id = objData.id;
         this.width = objData.width;
         this.height = objData.height;
+        this.rotation = objData.rotation;
         this.scale = 1;
 
         this.x = objData.x;
@@ -157,6 +158,14 @@ class GameObject {
                 thisFrameRect.x, thisFrameRect.y, thisFrameRect.width, thisFrameRect.height,
                 this.x, this.y, thisFrameRect.width * this.scale, thisFrameRect.height * this.scale);
 
+        }
+        else if (Math.abs(this.rotation) > 0) {
+            canvasContext.save();
+            canvasContext.translate(this.width * 0.5, this.height * 0, 5);
+            canvasContext.rotate(this.DegToRad(this.rotation));
+            canvasContext.translate(-this.width * 0.5, -this.height * 0.5);
+            canvasContext.drawImage(this.sprite, this.x, this.y, this.width, this.height);
+            canvasContext.restore();
         } else {
             canvasContext.drawImage(this.sprite, this.x, this.y, this.width, this.height);
         }
@@ -164,6 +173,11 @@ class GameObject {
         if (this.body) {
             this.body.draw();
         }
+    }
+    
+    DegToRad(d) {
+        // Converts degrees to radians
+        return d * 0.01745;
     }
 
     /** @interface */
