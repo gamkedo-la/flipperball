@@ -196,7 +196,12 @@ function loadImages() {
         {imgName: "slot_animation_t", theFile: "animations/slot_frame_anim_t.png"},
         {imgName: "slot_animation_g", theFile: "animations/slot_frame_anim_g.png"},
         {imgName: "slot_animation_d", theFile: "animations/slot_frame_anim_d.png"},
-        {imgName: "slot_trigger", theFile: "tables/lane_trigger.png" }
+        {imgName: "slot_trigger", theFile: "tables/lane_trigger.png"},
+        
+        { imgName: "vam_logo", theFile: "tables/vam/vam_logo.png" },
+        { imgName: "emp_inf_anim", theFile: "animations/emp_inf_anim.png" },
+        { imgName: "empire_logo", theFile: "tables/vam/empire_logo.png" },
+        { imgName: "backplate", theFile: "tables/vam/backplate.png" }
         
     ];
 

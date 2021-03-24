@@ -16,7 +16,7 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
     this.plunger = null;
     this.drawOrder = [];
     this.slotMachines = [];
-
+    console.log("Map Data: " + mapData);
     if (mapData.properties) {
         for (const property of mapData.properties) {
             this[property.name] = property.value
@@ -135,6 +135,13 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
                     ...ANIMATIONS.BONUS_LIGHT,
                     animationSpritesheet: images[ANIMATIONS.BONUS_LIGHT.imageNames[obj.name]],
                 });
+                result.push(newGameObject);
+            } else if (obj.type === 'empire_logo') {
+                const newGameObject = new GameObject(obj, null, {
+                    ...ANIMATIONS.EMPIRE_INF,
+                    animationSpritesheet: images[ANIMATIONS.EMPIRE_INF.imageNames[obj.name]],
+                });
+                newGameObject.isAnimating = true;
                 result.push(newGameObject);
             } else if (obj.type === 'habitrail' && obj.name === "habitrail_gateway") {
                 var habitrail = new Habitrail(obj, bodyData);

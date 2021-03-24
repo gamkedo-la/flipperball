@@ -27,7 +27,7 @@ class Plunger extends GameObject {
         let newY = this.body.center.y;
         if (heldButtons.includes(this.input)) {
             newY += this.PULL_SPEED * (deltaTime / 1000);
-            console.log(`NewY: ${newY}, Stop: ${this.stop}`)
+            DEBUG_LOG(`NewY: ${newY}, Stop: ${this.stop}`)
             if (newY > this.stop) {
                 newY = this.stop
             }

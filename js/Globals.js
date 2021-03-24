@@ -82,7 +82,9 @@ const TABLES = {
 	PrototypeTop: 'prototype_top',
 	ShortFlipperPrototype: 'prototype_short_flipper',
 	Space: 'space',
-	SpaceTop: 'space_top'
+	SpaceTop: 'space_top',
+	Vam: 'vam',
+	VamTop: 'vam_top'
 };
 
 // Set these to easily test new table designs
@@ -148,7 +150,8 @@ const ENTITY_NAME = {
 	SmallStar: 'small_star',
 	TinyStar: 'tiny_star',
 	ExpandingStar: 'expanding_star',
-	ExpandingStar_2: 'expanding_star_2'
+	ExpandingStar_2: 'expanding_star_2',
+	EmpireLogo: 'empire_logo'
 }
 
 const COLLISION_TYPE = {
@@ -328,7 +331,7 @@ const ANIMATIONS = {
 		frameWidth: 24,
 		frameHeight: 24,
 		frameTimes: [64, 64, 64, 64, 64],
-		reveres: false,
+		reverses: false,
 		loops: false,
 		holds: true
 	},
@@ -340,9 +343,21 @@ const ANIMATIONS = {
 		frameWidth: 24,
 		frameHeight: 24,
 		frameTimes: [64, 64, 64, 32, 32, 256],
-		reveres: false,
+		reverses: false,
 		loops: true,
 		holds: false	
+	},
+	EMPIRE_INF: {
+		imageNames: {
+			"empire_logo": "emp_inf_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+		frameWidth: 256,
+		frameHeight: 81,
+		frameTimes: [64],
+		reverses: false,
+		loops: true
+		
 	},
 	/*ROTATING_GATE: {
 		imageNames: {
