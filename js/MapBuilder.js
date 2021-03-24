@@ -102,7 +102,17 @@ function MapBuilder (tableName = DEFAULT_TABLE) {
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
                 self.flippers.push(new Flipper(obj, bodyData));
             } else if (obj.type === ENTITY_TYPE.FlipperBumper) {
-                result.push(new FlipperBumper(obj, bodyData));
+                const newGameObject = new FlipperBumper(obj, bodyData, {
+                    ...ANIMATIONS.FLIPPER_BUMPER,
+                    animationSpritesheet: images[ANIMATIONS.FLIPPER_BUMPER.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
+            } else if (obj.type === ENTITY_TYPE.WingBumper) {
+                const newGameObject = new FlipperBumper(obj, bodyData, {
+                    ...ANIMATIONS.WING_BUMPER,
+                    animationSpritesheet: images[ANIMATIONS.WING_BUMPER.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
             } else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {

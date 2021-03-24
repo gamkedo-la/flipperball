@@ -374,7 +374,7 @@
                  "gid":17,
                  "height":186,
                  "id":30,
-                 "name":"flipper_bumper_left",
+                 "name":"wing_bumper_left",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -382,17 +382,17 @@
                          "value":0
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
-                 "width":55,
+                 "width":75,
                  "x":334,
-                 "y":405.5
+                 "y":385
                 }, 
                 {
                  "gid":18,
                  "height":186,
                  "id":31,
-                 "name":"flipper_bumper_right",
+                 "name":"wing_bumper_right",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -400,11 +400,11 @@
                          "value":0
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":55,
                  "x":807.5,
-                 "y":391
+                 "y":385
                 }, 
                 {
                  "gid":7,
@@ -101738,7 +101738,7 @@
                 {
                  "height":0,
                  "id":9,
-                 "name":"flipper_bumper_left",
+                 "name":"wing_bumper_left",
                  "polygon":[
                         {
                          "x":0.75,
@@ -101771,11 +101771,11 @@
                          "value":30
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":0,
-                 "x":333,
-                 "y":225.5
+                 "x":338.454545454545,
+                 "y":205.227272727273
                 }, 
                 {
                  "height":0,
@@ -101808,7 +101808,7 @@
                 {
                  "height":0,
                  "id":55,
-                 "name":"flipper_bumper_right",
+                 "name":"wing_bumper_right",
                  "polygon":[
                         {
                          "x":0,
@@ -101841,7 +101841,7 @@
                          "value":31
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":0,
                  "x":862.273,
@@ -102287,7 +102287,7 @@
                  "ellipse":true,
                  "height":19,
                  "id":145,
-                 "name":"flipper_bumper_left",
+                 "name":"wing_bumper_left",
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -102295,17 +102295,17 @@
                          "value":30
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":19,
-                 "x":333.75,
-                 "y":219
+                 "x":337.75,
+                 "y":199.454545454545
                 }, 
                 {
                  "ellipse":true,
                  "height":12,
                  "id":146,
-                 "name":"flipper_bumper_left",
+                 "name":"wing_bumper_left",
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -102313,17 +102313,17 @@
                          "value":30
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":12,
-                 "x":376.75,
-                 "y":393.25
+                 "x":389.113636363636,
+                 "y":366.977272727273
                 }, 
                 {
                  "ellipse":true,
                  "height":19,
                  "id":147,
-                 "name":"flipper_bumper_right",
+                 "name":"wing_bumper_right",
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -102331,7 +102331,7 @@
                          "value":31
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":19,
                  "x":843.25,
@@ -102341,7 +102341,7 @@
                  "ellipse":true,
                  "height":12,
                  "id":148,
-                 "name":"flipper_bumper_right",
+                 "name":"wing_bumper_right",
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -102349,7 +102349,7 @@
                          "value":31
                         }],
                  "rotation":0,
-                 "type":"flipper_bumper",
+                 "type":"wing_bumper",
                  "visible":true,
                  "width":12,
                  "x":807.636,

@@ -354,12 +354,12 @@
     <property name="zOrder" type="int" value="50"/>
    </properties>
   </object>
-  <object id="30" name="flipper_bumper_left" type="flipper_bumper" gid="17" x="373" y="430.5" width="55" height="186">
+  <object id="30" name="wing_bumper_left" type="wing_bumper" gid="17" x="373" y="430" width="75" height="186">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="31" name="flipper_bumper_right" type="flipper_bumper" gid="18" x="748.5" y="442" width="55" height="186">
+  <object id="31" name="wing_bumper_right" type="wing_bumper" gid="18" x="748.5" y="430" width="55" height="186">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -18917,7 +18917,7 @@
   </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
-  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">
+  <object id="9" name="wing_bumper_left" type="wing_bumper" x="375" y="246.5">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
@@ -18965,7 +18965,7 @@
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
    <polygon points="0,-80 -1,599.5 150.5,599.5 14.5,465.5 15,50.5 152.5,-64 0.0214,-150.419"/>
   </object>
-  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="803.273" y="395.455">
+  <object id="55" name="wing_bumper_right" type="wing_bumper" x="803.273" y="386.455">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
@@ -19013,25 +19013,25 @@
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
   </object>
-  <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="244.417" width="19" height="19">
+  <object id="105" name="wing_bumper_left" type="wing_bumper" x="376.667" y="244.417" width="19" height="19">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="106" name="flipper_bumper_left" type="flipper_bumper" x="415.375" y="418" width="12" height="12">
+  <object id="106" name="wing_bumper_left" type="wing_bumper" x="435.375" y="418" width="12" height="12">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="108" name="flipper_bumper_right" type="flipper_bumper" x="784.167" y="254.5" width="19" height="19">
+  <object id="108" name="wing_bumper_right" type="wing_bumper" x="784.531" y="244.227" width="19" height="19">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="109" name="flipper_bumper_right" type="flipper_bumper" x="748.667" y="429" width="12" height="12">
+  <object id="109" name="wing_bumper_right" type="wing_bumper" x="748.667" y="418" width="12" height="12">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>

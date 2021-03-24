@@ -88,8 +88,8 @@ const TABLES = {
 };
 
 // Set these to easily test new table designs
-const DEFAULT_TABLE = TABLES.Prototype;
-const DEFAULT_TABLE_TOP = TABLES.PrototypeTop;
+const DEFAULT_TABLE = TABLES.Vam;
+const DEFAULT_TABLE_TOP = TABLES.VamTop;
 
 const TABLE_LAYERS = {
 	Collision: 'Collision',
@@ -108,6 +108,7 @@ const ENTITY_TYPE = {
 	CircleBumperSmall: 'circle_bumper_small',
 	Flipper: 'flipper',
 	FlipperBumper: 'flipper_bumper',
+	WingBumper: 'wing_bumper',
 	Plunger: 'plunger',
 	Wall: 'wall',
 	Trigger: 'trigger',
@@ -142,6 +143,8 @@ const ENTITY_NAME = {
 	CircleBumperSmallGreen: 'circle_bumper_small_green',
 	FlipperBumperRight: 'flipper_bumper_right',
 	FlipperBumperLeft: 'flipper_bumper_left',
+	WingBumperRight: 'wing_bumper_right',
+	WingBumperLeft: 'wing_bumper_left',
 	Cyclone: 'cyclone',
 	LetterLight: 'letter_light',
 	RotatingGate: 'rotating_gate',
@@ -222,7 +225,7 @@ const ANIMATIONS = {
 	FLIPPER_BUMPER: {
 		imageNames: {
 			"flipper_bumper_right": "flipper_bumper_right_anim",
-			"flipper_bumper_left": "flipper_bumper_left_anim"	
+			"flipper_bumper_left": "flipper_bumper_left_anim"		
 		},
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 		frameWidth: 57,
@@ -230,6 +233,19 @@ const ANIMATIONS = {
 		frameTimes: [64],
 		reverses: false,
 		loops: false
+	},
+	WING_BUMPER: {
+		imageNames: {
+			"wing_bumper_right": "wing_bumper_right_anim",
+			"wing_bumper_left": "wing_bumper_left_anim"		
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+		frameWidth: 75,
+		frameHeight: 186,
+		frameTimes: [64, 64, 64, 46, 46, 46, 46, 46, 64, 64],
+		reverses: false,
+		loops: false
+	
 	},
 	TINY_STAR: {
 		imageNames: {

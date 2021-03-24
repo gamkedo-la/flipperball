@@ -153,6 +153,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.CircleBumperSmall:
             case ENTITY_TYPE.Flipper:
             case ENTITY_TYPE.FlipperBumper:
+            case ENTITY_TYPE.WingBumper:
             case ENTITY_TYPE.Plunger:
             case ENTITY_TYPE.Wall:
             case ENTITY_TYPE.Trigger:

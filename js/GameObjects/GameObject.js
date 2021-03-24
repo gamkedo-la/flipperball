@@ -141,8 +141,11 @@ class GameObject {
         this.x = x;
         this.y = y;
 
-        if (this.body || this.bodies) {
+        if (this.body) {
             this.body.update(this.x - this.oldX, this.y - this.oldY);
+        }
+        if (this.bodies) {
+
         }
     }
 

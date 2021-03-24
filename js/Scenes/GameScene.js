@@ -610,8 +610,18 @@ function GameScene() {
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y);
                 break;
             case ENTITY_TYPE.FlipperBumper:
-                self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
-                break;  
+                //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
+                if (otherEntity.hasAnimation) {
+                    otherEntity.animate(0);
+                }
+                break;
+            case ENTITY_TYPE.WingBumper:
+                if (otherEntity.hasAnimation) {
+                    otherEntity.animate(0);
+                }
+                //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.WING_BUMPER, otherEntity.x, otherEntity.y);
+                //otherEntity.animating = true;
+                break;
             case ENTITY_TYPE.Trigger:
                 self.handleTriggerCollision(otherEntity, ball);
                 break;

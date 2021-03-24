@@ -203,6 +203,10 @@ function loadImages() {
         { imgName: "empire_logo", theFile: "tables/vam/empire_logo.png" },
         { imgName: "asteroid", theFile: "tables/vam/asteroid.png" },
         { imgName: "starfield", theFile: "tables/vam/starfield.png" },
+        { imgName: "wing_bumper_left", theFile: "tables/vam/wing_bumper_left.png" },
+        { imgName: "wing_bumper_right", theFile: "tables/vam/wing_bumper_right.png" },
+        { imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png" },
+        { imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png" },         
         { imgName: "backplate", theFile: "tables/vam/backplate.png" }
         
     ];
