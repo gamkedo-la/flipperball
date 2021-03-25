@@ -3,7 +3,7 @@
 function compareZ(a,b){
     return a.zOrder - b.zOrder;
 }
-function MapBuilder (tableName = DEFAULT_TABLE) {
+function MapBuilder (tableName = selected_table) {
     const mapData = TileMaps[tableName];
     // eslint-disable-next-line consistent-this
     const self = this;

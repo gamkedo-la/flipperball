@@ -3,14 +3,14 @@
 
 function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
-    this.properties = DEFAULT_TABLE;
+    this.properties = selected_table;
     this.table = null;
     this.storedTables = [];
     this.collisionManager = null;
     this.storedCollisionManagers = [];
     this.collisionRate = 100;
     this.paused = false;
-    this.tablesForScene = [DEFAULT_TABLE, DEFAULT_TABLE_TOP];
+    this.tablesForScene = [selected_table, selected_top_table];
     this.currentTableIndex = 0;
     this.lastTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
@@ -288,9 +288,9 @@ function GameScene() {
     const originalBallAndTableTransition = function() {
         for (const ball of self.table.balls) {
             if (ball.y < 0) {
-                SceneManager.setState(SCENE.GAME, {tableName: DEFAULT_TABLE_TOP, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                SceneManager.setState(SCENE.GAME, {tableName: selected_top_table, ball: ball, ballOffset: {x: 0, y: canvas.height}});
             } else if (ball.y > canvas.height) {
-                SceneManager.setState(SCENE.GAME, {tableName: DEFAULT_TABLE, ball: ball, ballOffset: {x: 0, y: canvas.height}});
+                SceneManager.setState(SCENE.GAME, {tableName: selected_table, ball: ball, ballOffset: {x: 0, y: canvas.height}});
             }
         }
     }
@@ -446,7 +446,7 @@ function GameScene() {
             self.storedTables = [];
             self.storedCollisionManagers = [];
             self.gameHasFinished = true;
-            SceneManager.setState(SCENE.GAME, DEFAULT_TABLE);
+            SceneManager.setState(SCENE.GAME, selected_table);
         }
     }
 

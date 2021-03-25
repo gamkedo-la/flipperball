@@ -7,6 +7,7 @@ const SceneManager = {
 	scenes: {
 //		[SCENE.LOADING]: new LoadingScreen(),
 		[SCENE.TITLE]: new TitleScene(),
+		[SCENE.TABLE_SELECTION]: new TableSelectionScene(),
         [SCENE.OPTIONS]: new OptionsScene(),
 		[SCENE.CREDITS]: new CreditsScene(),
 		[SCENE.HELP]: new HelpScene(),

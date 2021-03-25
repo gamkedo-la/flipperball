@@ -43,7 +43,7 @@ function loadingDoneSoStartGame() {
 	timer = new Chronogram();
 	// fontRenderer = new FontBuilder(fontSheet, CHAR_WIDTH, CHAR_HEIGHT);
 	if(skipToGameDEBUG) {
-        SceneManager.setState(SCENE.GAME, DEFAULT_TABLE);
+        SceneManager.setState(SCENE.GAME, selected_table);
     } else {
 		SceneManager.setState(SCENE.TITLE);
 	}

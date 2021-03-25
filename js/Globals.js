@@ -61,6 +61,7 @@ const localStorageKey = {
 const SCENE = {
 	LOADING:"loading",
 	TITLE:"title",
+	TABLE_SELECTION:"table_selection",
 	SETTINGS:"settings",
 	CREDITS:"credits",
 	HELP:"help",
@@ -90,6 +91,8 @@ const TABLES = {
 // Set these to easily test new table designs
 const DEFAULT_TABLE = TABLES.Vam;
 const DEFAULT_TABLE_TOP = TABLES.VamTop;
+var selected_table = DEFAULT_TABLE;
+var selected_top_table = DEFAULT_TABLE_TOP;
 
 const TABLE_LAYERS = {
 	Collision: 'Collision',

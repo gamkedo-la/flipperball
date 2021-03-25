@@ -52,6 +52,7 @@ function TitleScene() {
                 }
                 return true;
             case KEY_DOWN:
+                SceneManager.setState(SCENE.TABLE_SELECTION);
             case KEY_RIGHT:
                 selectorPositionsIndex++;
                 if (selectorPositionsIndex >= selections.length) {
@@ -63,7 +64,9 @@ function TitleScene() {
 //                SceneManager.setState(selections[selectorPositionsIndex]);
                 if (!goingToGame) {
                     playStartGameSound();
-                    setTimeout(() => {SceneManager.setState(SCENE.GAME, DEFAULT_TABLE);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
+                    console.log("TitleScene: " + selected_table);
+                    console.log("TitleScene: " + selected_top_table);
+                    setTimeout(() => {SceneManager.setState(SCENE.GAME, selected_table);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
                     goingToGame = true;    
                 }
                 return true;
