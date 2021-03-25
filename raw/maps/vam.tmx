@@ -339,12 +339,12 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="14" name="flipper_left" type="left_flipper" gid="2" x="386" y="592" width="170" height="124">
+  <object id="14" name="vam_flipper_left" type="left_flipper" gid="2" x="386" y="592" width="170" height="124">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="15" name="flipper_right" type="right_flipper" gid="3" x="631" y="593" width="170" height="124">
+  <object id="15" name="vam_flipper_right" type="right_flipper" gid="3" x="631" y="593" width="170" height="124">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -364,12 +364,12 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="48" name="drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270">
+  <object id="48" name="vam_drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="49" name="drain_rail_left" type="wall" gid="19" x="326.636" y="508.182" width="82" height="270">
+  <object id="49" name="vam_drain_rail_left" type="wall" gid="19" x="326.636" y="508.182" width="82" height="270">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -18950,13 +18950,13 @@
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
    <polygon points="1,60 -135.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -2.5,-569.223 -135.5,-473 0,-356"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="248.75">
+  <object id="51" name="vam_drain_rail_right" type="drain_divider" x="847.25" y="248.75">
    <properties>
     <property name="dynObjConn" type="object" value="48"/>
    </properties>
    <polygon points="1.66667,-1.66667 -10.5,1.16667 -12.75,166.159 -90.9546,227.909 -50.7954,265.25 -0.25,169.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="328" y="237.182">
+  <object id="52" name="vam_drain_rail_left" type="drain_divider" x="328" y="237.182">
    <properties>
     <property name="dynObjConn" type="object" value="49"/>
    </properties>

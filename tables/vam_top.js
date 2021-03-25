@@ -338,7 +338,7 @@
                  "gid":2,
                  "height":124,
                  "id":14,
-                 "name":"flipper_left",
+                 "name":"vam_flipper_left",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -356,7 +356,7 @@
                  "gid":3,
                  "height":124,
                  "id":15,
-                 "name":"flipper_right",
+                 "name":"vam_flipper_right",
                  "properties":[
                         {
                          "name":"zOrder",

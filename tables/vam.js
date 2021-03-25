@@ -189,7 +189,7 @@
                  "gid":2,
                  "height":124,
                  "id":14,
-                 "name":"flipper_left",
+                 "name":"vam_flipper_left",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -207,7 +207,7 @@
                  "gid":3,
                  "height":124,
                  "id":15,
-                 "name":"flipper_right",
+                 "name":"vam_flipper_right",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -255,7 +255,7 @@
                  "visible":true,
                  "width":75,
                  "x":373,
-                 "y":430.5
+                 "y":430
                 }, 
                 {
                  "gid":18,
@@ -273,13 +273,13 @@
                  "visible":true,
                  "width":55,
                  "x":748.5,
-                 "y":442
+                 "y":430
                 }, 
                 {
                  "gid":20,
                  "height":270,
                  "id":48,
-                 "name":"drain_rail_right",
+                 "name":"vam_drain_rail_right",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -297,7 +297,7 @@
                  "gid":19,
                  "height":270,
                  "id":49,
-                 "name":"drain_rail_left",
+                 "name":"vam_drain_rail_left",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -75531,8 +75531,8 @@
                  "type":"wing_bumper",
                  "visible":true,
                  "width":0,
-                 "x":372,
-                 "y":250.5
+                 "x":375,
+                 "y":246.5
                 }, 
                 {
                  "height":0,
@@ -75717,7 +75717,7 @@
                 {
                  "height":0,
                  "id":51,
-                 "name":"drain_rail_right",
+                 "name":"vam_drain_rail_right",
                  "polygon":[
                         {
                          "x":1.66667,
@@ -75759,7 +75759,7 @@
                 {
                  "height":0,
                  "id":52,
-                 "name":"drain_rail_left",
+                 "name":"vam_drain_rail_left",
                  "polygon":[
                         {
                          "x":0,
@@ -75878,7 +75878,7 @@
                  "visible":true,
                  "width":0,
                  "x":803.273,
-                 "y":395.455
+                 "y":386.455
                 }, 
                 {
                  "ellipse":true,
@@ -76077,7 +76077,7 @@
                  "type":"wing_bumper",
                  "visible":true,
                  "width":19,
-                 "x":372.667,
+                 "x":376.667,
                  "y":244.417
                 }, 
                 {
@@ -76095,7 +76095,7 @@
                  "type":"wing_bumper",
                  "visible":true,
                  "width":12,
-                 "x":415.375,
+                 "x":435.375,
                  "y":418
                 }, 
                 {
@@ -76113,8 +76113,8 @@
                  "type":"wing_bumper",
                  "visible":true,
                  "width":19,
-                 "x":784.167,
-                 "y":254.5
+                 "x":784.530636363636,
+                 "y":244.227272727273
                 }, 
                 {
                  "ellipse":true,
@@ -76132,7 +76132,7 @@
                  "visible":true,
                  "width":12,
                  "x":748.667,
-                 "y":429
+                 "y":418
                 }, 
                 {
                  "height":0,

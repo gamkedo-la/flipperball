@@ -370,8 +370,8 @@
   <properties>
    <property name="zOrder" type="int" value="1"/>
   </properties>
-  <object id="14" name="flipper_left" gid="2" x="339" y="526" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="725" y="528" width="170" height="124"/>
+  <object id="14" name="vam_flipper_left" gid="2" x="339" y="526" width="170" height="124"/>
+  <object id="15" name="vam_flipper_right" gid="3" x="725" y="528" width="170" height="124"/>
   <object id="30" name="wing_bumper_left" type="wing_bumper" gid="17" x="334" y="385" width="75" height="186"/>
   <object id="31" name="wing_bumper_right" type="wing_bumper" gid="18" x="807.5" y="385" width="55" height="186"/>
   <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>

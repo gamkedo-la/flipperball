@@ -198,6 +198,7 @@ function loadImages() {
         {imgName: "slot_animation_d", theFile: "animations/slot_frame_anim_d.png"},
         {imgName: "slot_trigger", theFile: "tables/lane_trigger.png"},
         
+        // V.A.M. Table Sprites
         { imgName: "vam_logo", theFile: "tables/vam/vam_logo.png" },
         { imgName: "emp_inf_anim", theFile: "animations/emp_inf_anim.png" },
         { imgName: "empire_logo", theFile: "tables/vam/empire_logo.png" },
@@ -205,6 +206,10 @@ function loadImages() {
         { imgName: "starfield", theFile: "tables/vam/starfield.png" },
         { imgName: "wing_bumper_left", theFile: "tables/vam/wing_bumper_left.png" },
         { imgName: "wing_bumper_right", theFile: "tables/vam/wing_bumper_right.png" },
+        { imgName: "vam_drain_rail_left", theFile: "tables/vam/vam_drain_rail_left.png" },
+        { imgName: "vam_drain_rail_right", theFile: "tables/vam/vam_drain_rail_right.png" },
+        { imgName: "vam_flipper_left", theFile: "tables/vam/vam_flipper_left.png" },
+        { imgName: "vam_flipper_right", theFile: "tables/vam/vam_flipper_right.png" },
         { imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png" },
         { imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png" },         
         { imgName: "backplate", theFile: "tables/vam/backplate.png" }
