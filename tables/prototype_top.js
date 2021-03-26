@@ -896,6 +896,11 @@
                  "name":"plane_red",
                  "properties":[
                         {
+                         "name":"maxX",
+                         "type":"int",
+                         "value":850
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":200
@@ -918,6 +923,11 @@
                  "id":160,
                  "name":"spawner_plane",
                  "properties":[
+                        {
+                         "name":"despawn",
+                         "type":"int",
+                         "value":850
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
@@ -1951,7 +1961,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
@@ -1961,26 +1971,26 @@
  "properties":[
         {
          "name":"maxX",
-         "type":"float",
+         "type":"int",
          "value":1000
         }, 
         {
          "name":"maxY",
-         "type":"float",
+         "type":"int",
          "value":600
         }, 
         {
          "name":"minX",
-         "type":"float",
+         "type":"int",
          "value":275
         }, 
         {
          "name":"minY",
-         "type":"float",
+         "type":"int",
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.4.3",
  "tileheight":10,
  "tilesets":[
         {
@@ -2682,6 +2692,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.5,
+ "version":1.4,
  "width":100
 });

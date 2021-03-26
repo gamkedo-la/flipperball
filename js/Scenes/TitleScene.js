@@ -52,8 +52,8 @@ function TitleScene() {
                 }
                 return true;
             case KEY_DOWN:
-                SceneManager.setState(SCENE.TABLE_SELECTION);
             case KEY_RIGHT:
+                SceneManager.setState(SCENE.TABLE_SELECTION);
                 selectorPositionsIndex++;
                 if (selectorPositionsIndex >= selections.length) {
                     selectorPositionsIndex = 0;

@@ -16,7 +16,7 @@ function MapBuilder (tableName = selected_table) {
     this.plunger = null;
     this.drawOrder = [];
     this.slotMachines = [];
-    console.log("Map Data: " + mapData);
+    console.log("Map Data: " + tableName);
     if (mapData.properties) {
         for (const property of mapData.properties) {
             this[property.name] = property.value

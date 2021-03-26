@@ -455,7 +455,7 @@
                         {
                          "name":"stop",
                          "type":"int",
-                         "value":535
+                         "value":480
                         }, 
                         {
                          "name":"zOrder",
@@ -1972,7 +1972,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
@@ -2001,7 +2001,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.4.3",
  "tileheight":10,
  "tilesets":[
         {
@@ -2628,6 +2628,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.5,
+ "version":1.4,
  "width":100
 });

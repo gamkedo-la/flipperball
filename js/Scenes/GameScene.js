@@ -3,14 +3,14 @@
 
 function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
-    this.properties = selected_table;
+    // this.properties = selected_table;
     this.table = null;
     this.storedTables = [];
     this.collisionManager = null;
     this.storedCollisionManagers = [];
     this.collisionRate = 100;
     this.paused = false;
-    this.tablesForScene = [selected_table, selected_top_table];
+    this.tablesForScene = [];
     this.currentTableIndex = 0;
     this.lastTableIndex = 0;
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
@@ -40,6 +40,7 @@ function GameScene() {
 
     this.transitionIn = function () {
         // console.log("Current Table Index: " + this.currentTableIndex);
+        this.tablesForScene = [selected_table, selected_top_table];
         if (this.storedTables[this.currentTableIndex] && this.storedCollisionManagers[this.currentTableIndex]) {            
             this.table = this.storedTables[this.currentTableIndex];
             this.collisionManager = this.storedCollisionManagers[this.currentTableIndex];
