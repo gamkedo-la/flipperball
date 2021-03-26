@@ -11,8 +11,10 @@ function TableSelectionScene() {
         topTable: TABLES.VamTop},
     ];
 
+    let arrow;
+
     this.transitionIn = function() {
-        
+        arrow = images["arrow_selection"];
     };
 
     this.transitionOut = function() {
@@ -63,6 +65,7 @@ function TableSelectionScene() {
 	const draw = function(deltaTime) {
         drawBG();
         drawSelection();
+        
 	}
 	
     
@@ -79,7 +82,8 @@ function TableSelectionScene() {
 
       const drawSelection = function() {
         const PADDING = 35;
-        colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        //colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        drawImageForTiledWithRotation(arrow, canvas.width / 2 - 100, canvas.height / 2 - 20 + PADDING * selectorPositionsIndex, 0);
       }
         
     return this;

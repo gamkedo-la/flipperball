@@ -212,7 +212,8 @@ function loadImages() {
         { imgName: "vam_flipper_right", theFile: "tables/vam/vam_flipper_right.png" },
         { imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png" },
         { imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png" },         
-        { imgName: "backplate", theFile: "tables/vam/backplate.png" }
+        { imgName: "backplate", theFile: "tables/vam/backplate.png" },
+        { imgName: "arrow_selection", theFile: "tables/arrow_selection.png"}
         
     ];
 
