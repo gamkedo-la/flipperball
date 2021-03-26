@@ -1971,22 +1971,22 @@
  "properties":[
         {
          "name":"maxX",
-         "type":"int",
+         "type":"float",
          "value":1000
         }, 
         {
          "name":"maxY",
-         "type":"int",
+         "type":"float",
          "value":600
         }, 
         {
          "name":"minX",
-         "type":"int",
+         "type":"float",
          "value":275
         }, 
         {
          "name":"minY",
-         "type":"int",
+         "type":"float",
          "value":0
         }],
  "renderorder":"right-down",

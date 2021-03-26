@@ -335,7 +335,7 @@
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
-    <property name="stop" type="int" value="535"/>
+    <property name="stop" type="int" value="480"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
