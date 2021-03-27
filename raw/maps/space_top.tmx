@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="210">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="212">
  <editorsettings>
   <export target="../../tables/space_top.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="598" tilecount="24" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="600" tilecount="24" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -31,7 +31,7 @@
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
-   <image width="105" height="598" source="../../img/tables/plunger_chute.png"/>
+   <image width="105" height="600" source="../../img/tables/plunger_chute.png"/>
   </tile>
   <tile id="4" type="wall">
    <properties>
@@ -49,7 +49,7 @@
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
-   <image width="14" height="598" source="../../img/tables/vertical_wall.png"/>
+   <image width="14" height="600" source="../../img/tables/vertical_wall.png"/>
   </tile>
   <tile id="7" type="wall">
    <properties>
@@ -148,7 +148,7 @@
    <image width="5" height="26" source="../../img/tables/lane_trigger.png"/>
   </tile>
  </tileset>
- <tileset firstgid="25" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="23" columns="0">
+ <tileset firstgid="25" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="24" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -302,8 +302,15 @@
    </properties>
    <image width="5" height="5" source="../../img/tables/small_star.png"/>
   </tile>
+  <tile id="23" type="planet">
+   <properties>
+    <property name="speed" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="128" height="128" source="../../img/tables/Planet.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="48" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="49" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
    <properties>
@@ -333,21 +340,22 @@
   <object id="92" name="ball_catch_arrow" gid="30" x="350" y="90" width="24" height="24"/>
   <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
   <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
-  <object id="137" name="habitrail_small_track" gid="49" x="348" y="552" width="42" height="75" rotation="310"/>
+  <object id="137" name="habitrail_small_track" gid="50" x="348" y="552" width="42" height="75" rotation="310"/>
   <object id="168" name="drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
-  <object id="170" name="habitrail_small_track" gid="49" x="291" y="503" width="42" height="75"/>
-  <object id="171" name="habitrail_small_track" gid="49" x="291" y="427.5" width="42" height="75"/>
-  <object id="172" name="habitrail_small_track" gid="49" x="291" y="352" width="42" height="75"/>
-  <object id="173" name="habitrail_gateway" type="habitrail" gid="48" x="405" y="600" width="42" height="75" rotation="310">
+  <object id="170" name="habitrail_small_track" gid="50" x="291" y="503" width="42" height="75"/>
+  <object id="171" name="habitrail_small_track" gid="50" x="291" y="427.5" width="42" height="75"/>
+  <object id="172" name="habitrail_small_track" gid="50" x="291" y="352" width="42" height="75"/>
+  <object id="173" name="habitrail_gateway" type="habitrail" gid="49" x="405" y="600" width="42" height="75" rotation="310">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="174" name="habitrail_gateway" gid="49" x="291" y="276.5" width="42" height="75">
+  <object id="174" name="habitrail_gateway" gid="50" x="291" y="276.5" width="42" height="75">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
+  <object id="211" name="planet" gid="48" x="529.333" y="246.667" width="128" height="128"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="14" name="flipper_left" gid="2" x="339" y="526" width="170" height="124"/>

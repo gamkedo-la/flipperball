@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="168">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="174">
  <editorsettings>
   <export target="../../tables/space.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="598" tilecount="38" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="41" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -31,7 +31,7 @@
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
-   <image width="105" height="598" source="../../img/tables/plunger_chute.png"/>
+   <image width="105" height="600" source="../../img/tables/plunger_chute.png"/>
   </tile>
   <tile id="4" type="wall">
    <properties>
@@ -246,8 +246,23 @@
   <tile id="38">
    <image width="20" height="20" source="../../img/tables/expanding_star_2.png"/>
   </tile>
+  <tile id="39" type="rocket">
+   <properties>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="96" height="96" source="../../img/tables/rocket.png"/>
+  </tile>
+  <tile id="40" type="shuttle">
+   <properties>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="96" height="96" source="../../img/tables/space_shuttle.png"/>
+  </tile>
+  <tile id="41" type="sputnik">
+   <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="40" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="43" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -268,7 +283,7 @@
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="44" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="47" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -320,12 +335,15 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="166" name="space_bottom_bg" gid="43" x="271.393" y="600.353" width="720" height="600"/>
+  <object id="166" name="space_bottom_bg" gid="46" x="271.393" y="600.353" width="720" height="600" visible="0"/>
+  <object id="171" name="rocket" gid="40" x="537" y="369.333" width="96" height="96"/>
+  <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
+  <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
    <properties>
-    <property name="stop" type="int" value="535"/>
+    <property name="stop" type="int" value="480"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
@@ -364,7 +382,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="73" name="rotating_gate" type="rotating_gate" gid="23" x="345.091" y="333.727" width="26.5455" height="13.5454">
+  <object id="73" name="rotating_gate" type="rotating_gate" gid="23" x="343.091" y="333.727" width="26.5455" height="13.5454">
    <properties>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
@@ -429,7 +447,7 @@
     <property name="requiredLights" type="int" value="4"/>
    </properties>
   </object>
-  <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="806.727" y="334.227" width="26.5455" height="13.5454">
+  <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="802.727" y="334.227" width="26.5455" height="13.5454">
    <properties>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
@@ -576,7 +594,7 @@
    </properties>
    <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
   </object>
-  <object id="75" name="rotating_gate" type="rotating_gate" x="345.029" y="326.512">
+  <object id="75" name="rotating_gate" type="rotating_gate" x="343.029" y="326.512">
    <properties>
     <property name="dynObjConn" type="object" value="73"/>
    </properties>
@@ -630,7 +648,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="120" name="rotating_gate" type="rotating_gate" x="807" y="326">
+  <object id="120" name="rotating_gate" type="rotating_gate" x="803" y="326">
    <properties>
     <property name="dynObjConn" type="object" value="121"/>
    </properties>

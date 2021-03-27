@@ -132,7 +132,10 @@ const ENTITY_TYPE = {
 	Star: 'star',
 	Spawner: 'spawner',
 	Slot: 'slot',
-	SlotMachine: 'slot_machine'
+	SlotMachine: 'slot_machine',
+	Planet: 'planet',
+	Rocket: 'rocket',
+	Shuttle: 'shuttle'
 };
 
 const TRIGGER_TYPE = {

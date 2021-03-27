@@ -170,7 +170,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -206,7 +206,7 @@
                  "y":680
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -224,7 +224,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -242,7 +242,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -260,7 +260,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":48,
+                 "gid":49,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -283,7 +283,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -304,6 +304,29 @@
                  "width":42,
                  "x":291,
                  "y":276.5
+                }, 
+                {
+                 "gid":48,
+                 "height":128,
+                 "id":211,
+                 "name":"planet",
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"planet",
+                 "visible":true,
+                 "width":128,
+                 "x":529.333333333333,
+                 "y":246.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -459,7 +482,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":448.666666666667,
+                 "x":448.667,
                  "y":40
                 }, 
                 {
@@ -487,8 +510,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":401.666666666667,
-                 "y":88.6666666666667
+                 "x":401.667,
+                 "y":88.6667
                 }, 
                 {
                  "gid":46,
@@ -515,7 +538,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":590.333333333333,
+                 "x":590.333,
                  "y":122
                 }, 
                 {
@@ -543,8 +566,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":422.333333333333,
-                 "y":208.333333333333
+                 "x":422.333,
+                 "y":208.333
                 }, 
                 {
                  "gid":46,
@@ -571,8 +594,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":553.666666666667,
-                 "y":249.666666666667
+                 "x":553.667,
+                 "y":249.667
                 }, 
                 {
                  "gid":46,
@@ -599,8 +622,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":666.333333333333,
-                 "y":148.333333333333
+                 "x":666.333,
+                 "y":148.333
                 }, 
                 {
                  "gid":46,
@@ -627,7 +650,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":691.666666666667,
+                 "x":691.667,
                  "y":62
                 }, 
                 {
@@ -656,7 +679,7 @@
                  "visible":true,
                  "width":1,
                  "x":767,
-                 "y":143.666666666667
+                 "y":143.667
                 }, 
                 {
                  "gid":46,
@@ -711,8 +734,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":783.666666666667,
-                 "y":323.333333333333
+                 "x":783.667,
+                 "y":323.333
                 }, 
                 {
                  "gid":46,
@@ -767,7 +790,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":605.666666666667,
+                 "x":605.667,
                  "y":390
                 }, 
                 {
@@ -795,8 +818,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":618.666666666667,
-                 "y":467.666666666667
+                 "x":618.667,
+                 "y":467.667
                 }, 
                 {
                  "gid":46,
@@ -823,8 +846,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":770.666666666667,
-                 "y":440.666666666667
+                 "x":770.667,
+                 "y":440.667
                 }, 
                 {
                  "gid":46,
@@ -852,7 +875,7 @@
                  "visible":true,
                  "width":1,
                  "x":494,
-                 "y":292.333333333333
+                 "y":292.333
                 }, 
                 {
                  "gid":46,
@@ -880,7 +903,7 @@
                  "visible":true,
                  "width":1,
                  "x":475,
-                 "y":426.666666666667
+                 "y":426.667
                 }, 
                 {
                  "gid":46,
@@ -907,7 +930,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":593.333333333333,
+                 "x":593.333,
                  "y":478
                 }, 
                 {
@@ -935,7 +958,7 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":517.333333333333,
+                 "x":517.333,
                  "y":555
                 }, 
                 {
@@ -964,7 +987,7 @@
                  "visible":true,
                  "width":1,
                  "x":466,
-                 "y":551.666666666667
+                 "y":551.667
                 }, 
                 {
                  "gid":46,
@@ -991,8 +1014,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":764.666666666667,
-                 "y":551.666666666667
+                 "x":764.667,
+                 "y":551.667
                 }, 
                 {
                  "gid":46,
@@ -1019,8 +1042,8 @@
                  "type":"star",
                  "visible":true,
                  "width":1,
-                 "x":753.333333333333,
-                 "y":595.666666666667
+                 "x":753.333,
+                 "y":595.667
                 }, 
                 {
                  "gid":47,
@@ -1047,8 +1070,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":424.666666666667,
-                 "y":76.3333333333333
+                 "x":424.667,
+                 "y":76.3333
                 }, 
                 {
                  "gid":47,
@@ -1076,7 +1099,7 @@
                  "visible":true,
                  "width":5,
                  "x":606,
-                 "y":88.6666666666667
+                 "y":88.6667
                 }, 
                 {
                  "gid":47,
@@ -1103,7 +1126,7 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":697.666666666667,
+                 "x":697.667,
                  "y":165
                 }, 
                 {
@@ -1131,7 +1154,7 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":785.666666666667,
+                 "x":785.667,
                  "y":69
                 }, 
                 {
@@ -1159,8 +1182,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":849.666666666667,
-                 "y":86.6666666666667
+                 "x":849.667,
+                 "y":86.6667
                 }, 
                 {
                  "gid":47,
@@ -1187,8 +1210,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":771.333333333333,
-                 "y":336.666666666667
+                 "x":771.333,
+                 "y":336.667
                 }, 
                 {
                  "gid":47,
@@ -1215,8 +1238,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":549.666666666667,
-                 "y":357.333333333333
+                 "x":549.667,
+                 "y":357.333
                 }, 
                 {
                  "gid":47,
@@ -1243,8 +1266,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":538.666666666667,
-                 "y":277.333333333333
+                 "x":538.667,
+                 "y":277.333
                 }, 
                 {
                  "gid":47,
@@ -1271,7 +1294,7 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":696.333333333333,
+                 "x":696.333,
                  "y":247
                 }, 
                 {
@@ -1299,8 +1322,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":620.333333333333,
-                 "y":546.333333333333
+                 "x":620.333,
+                 "y":546.333
                 }, 
                 {
                  "gid":47,
@@ -1327,8 +1350,8 @@
                  "type":"star",
                  "visible":true,
                  "width":5,
-                 "x":853.333333333333,
-                 "y":71.6666666666667
+                 "x":853.333,
+                 "y":71.6667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2009,7 +2032,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":210,
+ "nextobjectid":212,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2039,7 +2062,7 @@
          "name":"dynamic",
          "spacing":0,
          "tilecount":24,
-         "tileheight":598,
+         "tileheight":600,
          "tiles":[
                 {
                  "id":0,
@@ -2083,7 +2106,7 @@
                 {
                  "id":3,
                  "image":"..\/img\/tables\/plunger_chute.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":105,
                  "properties":[
                         {
@@ -2122,7 +2145,7 @@
                 {
                  "id":6,
                  "image":"..\/img\/tables\/vertical_wall.png",
-                 "imageheight":598,
+                 "imageheight":600,
                  "imagewidth":14,
                  "properties":[
                         {
@@ -2355,7 +2378,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":23,
+         "tilecount":24,
          "tileheight":600,
          "tiles":[
                 {
@@ -2710,12 +2733,30 @@
                          "value":-80
                         }],
                  "type":"star"
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/Planet.png",
+                 "imageheight":128,
+                 "imagewidth":128,
+                 "properties":[
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"planet"
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":48,
+         "firstgid":49,
          "grid":
             {
              "height":1,

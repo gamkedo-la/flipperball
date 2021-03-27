@@ -201,7 +201,8 @@ function MapBuilder (tableName = selected_table) {
                                 animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR_2.imageNames[obj.name]],
                             }));
                         } 
-                        
+                    } else if (obj.type === ENTITY_TYPE.Rocket || obj.type === ENTITY_TYPE.Planet || obj.type === ENTITY_TYPE.Shuttle) {
+
                     } else {
                         result.push(new GameObject(obj, bodyData));
                     }

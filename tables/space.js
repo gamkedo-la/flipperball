@@ -26,26 +26,8 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":44,
-                 "height":600,
-                 "id":166,
-                 "name":"space_bottom_bg",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-100
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":false,
-                 "width":720,
-                 "x":279.393,
-                 "y":600.353
-                }, 
-                {
                  "gid":4,
-                 "height":600,
+                 "height":598,
                  "id":23,
                  "name":"plunger_chute",
                  "properties":[
@@ -59,7 +41,7 @@
                  "visible":true,
                  "width":105,
                  "x":894,
-                 "y":600
+                 "y":598
                 }, 
                 {
                  "gid":6,
@@ -99,7 +81,7 @@
                 }, 
                 {
                  "gid":7,
-                 "height":600,
+                 "height":598,
                  "id":26,
                  "name":"vertical_wall",
                  "properties":[
@@ -113,7 +95,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":600
+                 "y":598
                 }, 
                 {
                  "gid":24,
@@ -152,52 +134,70 @@
                  "y":74
                 }, 
                 {
-                 "gid":40,
-                 "height":7,
-                 "id":168,
-                 "name":"diamond_div_1",
+                 "gid":46,
+                 "height":600,
+                 "id":166,
+                 "name":"space_bottom_bg",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
                  "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":7,
-                 "x":511.5,
-                 "y":118
+                 "type":"",
+                 "visible":false,
+                 "width":720,
+                 "x":271.393,
+                 "y":600.353
                 }, 
                 {
                  "gid":40,
-                 "height":7,
-                 "id":169,
-                 "name":"diamond_div_2",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":7,
-                 "x":556.5,
-                 "y":113.5
-                }, 
-                {
-                 "gid":40,
-                 "height":7,
-                 "id":170,
-                 "name":"diamond_div_3",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":7,
-                 "x":606.5,
-                 "y":113.25
-                }, 
-                {
-                 "gid":40,
-                 "height":7,
+                 "height":96,
                  "id":171,
-                 "name":"diamond_div_4",
+                 "name":"rocket",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
                  "rotation":0,
-                 "type":"wall",
+                 "type":"rocket",
                  "visible":true,
-                 "width":7,
-                 "x":651.25,
-                 "y":118.25
+                 "width":96,
+                 "x":537,
+                 "y":369.333333333333
+                }, 
+                {
+                 "gid":41,
+                 "height":96,
+                 "id":172,
+                 "name":"shuttle",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"shuttle",
+                 "visible":true,
+                 "width":96,
+                 "x":288.666666666667,
+                 "y":238.666666666667
+                }, 
+                {
+                 "gid":42,
+                 "height":96,
+                 "id":173,
+                 "name":"sputnik",
+                 "rotation":0,
+                 "type":"sputnik",
+                 "visible":true,
+                 "width":96,
+                 "x":724,
+                 "y":103.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -320,7 +320,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":753.5,
+                 "x":748.5,
                  "y":442
                 }, 
                 {
@@ -338,7 +338,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":773,
+                 "x":770,
                  "y":520
                 }, 
                 {
@@ -407,8 +407,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":584.125666666667,
-                 "y":130.833333333333
+                 "x":570.959,
+                 "y":130
                 }, 
                 {
                  "gid":21,
@@ -435,8 +435,59 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":636.156333333333,
-                 "y":134.25
+                 "x":604.323,
+                 "y":130
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":97,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":89
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":637.323,
+                 "y":130
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":89,
+                 "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"bonus",
+                         "type":"object",
+                         "value":119
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":627.333,
+                 "y":123
                 }, 
                 {
                  "gid":26,
@@ -458,8 +509,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":626,
-                 "y":127.749666666667
+                 "x":594,
+                 "y":123.333
                 }, 
                 {
                  "gid":26,
@@ -481,8 +532,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":573.499666666667,
-                 "y":124.666666666667
+                 "x":561.333,
+                 "y":123
                 }, 
                 {
                  "gid":21,
@@ -509,8 +560,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":532.406333333333,
-                 "y":134.708333333333
+                 "x":538.073,
+                 "y":130.375
                 }, 
                 {
                  "gid":26,
@@ -532,8 +583,8 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":521.833,
-                 "y":127.375
+                 "x":528.083,
+                 "y":123.375
                 }, 
                 {
                  "gid":35,
@@ -554,7 +605,7 @@
                         {
                          "name":"requiredLights",
                          "type":"int",
-                         "value":3
+                         "value":4
                         }],
                  "rotation":0,
                  "type":"status_light",
@@ -583,7 +634,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":803.727,
+                 "x":802.727,
                  "y":334.227
                 }, 
                 {
@@ -1787,8 +1838,8 @@
                  "type":"star",
                  "visible":true,
                  "width":20,
-                 "x":433.555886181886,
-                 "y":191.327877998884
+                 "x":433.556,
+                 "y":191.328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2062,7 +2113,7 @@
                  "type":"drain_divider",
                  "visible":true,
                  "width":0,
-                 "x":850.25,
+                 "x":847.25,
                  "y":248.75
                 }, 
                 {
@@ -2186,7 +2237,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":808.273,
+                 "x":803.273,
                  "y":395.455
                 }, 
                 {
@@ -2368,8 +2419,8 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":0,
-                 "x":343.529,
-                 "y":325.762
+                 "x":343.029,
+                 "y":326.512
                 }, 
                 {
                  "ellipse":true,
@@ -2386,8 +2437,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":578.786333333333,
-                 "y":121.583333333333
+                 "x":566.203,
+                 "y":120
                 }, 
                 {
                  "ellipse":true,
@@ -2404,8 +2455,26 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":630.400333333333,
-                 "y":125.75
+                 "x":599.567,
+                 "y":120
+                }, 
+                {
+                 "ellipse":true,
+                 "height":13.9513,
+                 "id":96,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":97
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":13.9513,
+                 "x":632.567,
+                 "y":120
                 }, 
                 {
                  "ellipse":true,
@@ -2422,8 +2491,8 @@
                  "type":"",
                  "visible":true,
                  "width":13.9513,
-                 "x":526.983666666667,
-                 "y":125.041666666667
+                 "x":533.317,
+                 "y":120.375
                 }, 
                 {
                  "ellipse":true,
@@ -2476,7 +2545,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":19,
-                 "x":789.167,
+                 "x":784.167,
                  "y":254.5
                 }, 
                 {
@@ -2494,7 +2563,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":12,
-                 "x":751.667,
+                 "x":748.667,
                  "y":429
                 }, 
                 {
@@ -2536,129 +2605,17 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":0,
-                 "x":804,
-                 "y":325.75
-                }, 
-                {
-                 "height":0,
-                 "id":173,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":515,
-                 "y":111.25
-                }, 
-                {
-                 "height":0,
-                 "id":174,
-                 "name":"diamond_div_2",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":560,
-                 "y":107
-                }, 
-                {
-                 "height":0,
-                 "id":175,
-                 "name":"diamond_div_3",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":610.25,
-                 "y":106.5
-                }, 
-                {
-                 "height":0,
-                 "id":176,
-                 "name":"diamond_div_4",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":655,
-                 "y":111.5
+                 "x":803,
+                 "y":326
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":177,
+ "nextobjectid":174,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2687,7 +2644,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":39,
+         "tilecount":41,
          "tileheight":600,
          "tiles":[
                 {
@@ -3252,16 +3209,42 @@
                 }, 
                 {
                  "id":39,
-                 "image":"..\/img\/tables\/diamond_div.png",
-                 "imageheight":7,
-                 "imagewidth":7,
-                 "type":"wall"
+                 "image":"..\/img\/tables\/rocket.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"rocket"
+                }, 
+                {
+                 "id":40,
+                 "image":"..\/img\/tables\/space_shuttle.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"shuttle"
+                }, 
+                {
+                 "id":41,
+                 "image":"..\/img\/tables\/sputniksatellite.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "type":"sputnik"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":41,
+         "firstgid":43,
          "grid":
             {
              "height":1,
@@ -3314,7 +3297,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":45,
+         "firstgid":47,
          "grid":
             {
              "height":1,
@@ -3367,531 +3350,6 @@
                  "type":"habitrail"
                 }],
          "tilewidth":36
-        }, 
-        {
-         "columns":0,
-         "firstgid":54,
-         "grid":
-            {
-             "height":1,
-             "orientation":"orthogonal",
-             "width":1
-            },
-         "margin":0,
-         "name":"dynamic",
-         "spacing":0,
-         "tilecount":35,
-         "tileheight":600,
-         "tiles":[
-                {
-                 "id":0,
-                 "image":"..\/raw\/img\/backgrounds\/plunger.png",
-                 "imageheight":289,
-                 "imagewidth":68,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"plunger"
-                }, 
-                {
-                 "id":1,
-                 "image":"..\/img\/tables\/flipper_left.png",
-                 "imageheight":126,
-                 "imagewidth":171,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"left_flipper"
-                }, 
-                {
-                 "id":2,
-                 "image":"..\/img\/tables\/flipper_right.png",
-                 "imageheight":126,
-                 "imagewidth":171,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"right_flipper"
-                }, 
-                {
-                 "id":3,
-                 "image":"..\/img\/tables\/plunger_chute.png",
-                 "imageheight":600,
-                 "imagewidth":105,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":4,
-                 "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
-                 "imageheight":195,
-                 "imagewidth":197,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":5,
-                 "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
-                 "imageheight":195,
-                 "imagewidth":197,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":6,
-                 "image":"..\/raw\/img\/backgrounds\/vertical_wall.png",
-                 "imageheight":598,
-                 "imagewidth":14,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":7,
-                 "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
-                 "imageheight":86,
-                 "imagewidth":52,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":8,
-                 "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
-                 "imageheight":52,
-                 "imagewidth":52,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":9,
-                 "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
-                 "imageheight":52,
-                 "imagewidth":52,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":10,
-                 "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
-                 "imageheight":86,
-                 "imagewidth":52,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":11,
-                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
-                 "imageheight":95,
-                 "imagewidth":94,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"circle_bumper"
-                }, 
-                {
-                 "id":12,
-                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
-                 "imageheight":95,
-                 "imagewidth":94,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"circle_bumper"
-                }, 
-                {
-                 "id":13,
-                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
-                 "imageheight":95,
-                 "imagewidth":94,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"circle_bumper"
-                }, 
-                {
-                 "id":14,
-                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
-                 "imageheight":95,
-                 "imagewidth":94,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"circle_bumper"
-                }, 
-                {
-                 "id":15,
-                 "image":"..\/raw\/img\/backgrounds\/ball.png",
-                 "imageheight":26,
-                 "imagewidth":26,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":50
-                        }],
-                 "type":"ball"
-                }, 
-                {
-                 "id":16,
-                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
-                 "imageheight":186,
-                 "imagewidth":55,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"flipper_bumper"
-                }, 
-                {
-                 "id":17,
-                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
-                 "imageheight":186,
-                 "imagewidth":55,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"flipper_bumper"
-                }, 
-                {
-                 "id":18,
-                 "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
-                 "imageheight":270,
-                 "imagewidth":82,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":19,
-                 "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
-                 "imageheight":270,
-                 "imagewidth":82,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":20,
-                 "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
-                 "imageheight":26,
-                 "imagewidth":5,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"trigger"
-                }, 
-                {
-                 "id":22,
-                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
-                 "imageheight":9,
-                 "imagewidth":20,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":75
-                        }]
-                }, 
-                {
-                 "id":23,
-                 "image":"..\/img\/tables\/angled_wall_5.png",
-                 "imageheight":142,
-                 "imagewidth":140,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":24,
-                 "image":"..\/img\/tables\/angled_wall_6.png",
-                 "imageheight":142,
-                 "imagewidth":140,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "type":"wall"
-                }, 
-                {
-                 "id":25,
-                 "image":"..\/img\/tables\/letter_light_unlit.png",
-                 "imageheight":24,
-                 "imagewidth":24,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }]
-                }, 
-                {
-                 "id":26,
-                 "image":"..\/img\/tables\/letter_light_lit.png",
-                 "imageheight":24,
-                 "imagewidth":24,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }]
-                }, 
-                {
-                 "id":27,
-                 "image":"..\/img\/tables\/cloud_1.png",
-                 "imageheight":78,
-                 "imagewidth":108,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":10
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":28,
-                 "image":"..\/img\/tables\/cloud_2.png",
-                 "imageheight":36,
-                 "imagewidth":51,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":15
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":29,
-                 "image":"..\/img\/tables\/cloud_3.png",
-                 "imageheight":54,
-                 "imagewidth":81,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":7
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":30,
-                 "image":"..\/img\/tables\/cloud_4.png",
-                 "imageheight":66,
-                 "imagewidth":108,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":5
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":31,
-                 "image":"..\/img\/tables\/cloud_5.png",
-                 "imageheight":39,
-                 "imagewidth":66,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":25
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":32,
-                 "image":"..\/img\/tables\/cloud_6.png",
-                 "imageheight":96,
-                 "imagewidth":144,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":3
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":33,
-                 "image":"..\/img\/tables\/cloud_7.png",
-                 "imageheight":96,
-                 "imagewidth":144,
-                 "properties":[
-                        {
-                         "name":"xVelocity",
-                         "type":"int",
-                         "value":3
-                        }, 
-                        {
-                         "name":"yVelocity",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-80
-                        }],
-                 "type":"cloud"
-                }, 
-                {
-                 "id":34,
-                 "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
-                 "imageheight":24,
-                 "imagewidth":24
-                }, 
-                {
-                 "id":35,
-                 "image":"..\/img\/tables\/diamond_div.png",
-                 "imageheight":7,
-                 "imagewidth":7
-                }],
-         "tilewidth":197
         }],
  "tilewidth":10,
  "type":"map",
