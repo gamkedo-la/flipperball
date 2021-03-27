@@ -17,17 +17,18 @@ function TitleScene() {
         scene: SCENE.TABLE_SELECTION},
         {selectionName: "Controls",
         selectionType: MENU_SELECTION_TYPE.SCENE,
-        scene: SCENE.TABLE_SELECTION //TODO: Controls scene
+        scene: SCENE.CONTROLS //TODO: Controls scene
         }
     ];
 
     const buttons = [];
     const START_GAME_TIME_BUFFER = 400; //milleseconds
-    const ARROW_HORIZONTAL_OFFSET = 120;
-    const ARROW_VERTICAL_OFFSET = 23;
+    const FLIPPER_HORIZONTAL_OFFSET = 120;
+    const FLIPPER_VERTICAL_OFFSET = 23;
 
     let goingToGame = false;
-    let arrow;
+    let left_flipper;
+    let right_flipper;
 
     this.transitionIn = function() {
         const mainMenuX = 235;
@@ -43,7 +44,8 @@ function TitleScene() {
 
         selectorPositionsIndex = 0;
         goingToGame = false;
-        arrow = images["arrow_selection"];
+        left_flipper = images["left_flipper_selector"];
+        right_flipper = images ["right_flipper_selector"];
     };
 
     this.transitionOut = function() {
@@ -214,7 +216,8 @@ function TitleScene() {
       const drawSelection = function() {
         const PADDING = 35;
         //colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        drawImageForTiledWithRotation(arrow, canvas.width / 2 - ARROW_HORIZONTAL_OFFSET, canvas.height / 2 - ARROW_VERTICAL_OFFSET + PADDING * (selectorPositionsIndex + 1), 0);
+        drawImageForTiledWithRotation(left_flipper, canvas.width / 2 - FLIPPER_HORIZONTAL_OFFSET, canvas.height / 2 - FLIPPER_VERTICAL_OFFSET + PADDING * (selectorPositionsIndex + 1), 0);
+        drawImageForTiledWithRotation(right_flipper, canvas.width / 2 + FLIPPER_HORIZONTAL_OFFSET * 0.7, canvas.height / 2  - FLIPPER_VERTICAL_OFFSET + PADDING * (selectorPositionsIndex + 1), 0);
       }
         
     return this;
