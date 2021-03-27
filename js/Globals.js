@@ -62,6 +62,7 @@ const SCENE = {
 	LOADING:"loading",
 	TITLE:"title",
 	TABLE_SELECTION:"table_selection",
+	CONTROLS: "controls",
 	SETTINGS:"settings",
 	CREDITS:"credits",
 	HELP:"help",
