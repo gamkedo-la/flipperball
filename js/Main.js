@@ -35,7 +35,7 @@ function toggleFullScreen() {
 	if (FEATURE_FLAGS.useCanvasContainer) {
 		canvas.style.height = '';
   } else {
-		 canvas.style.height = '100vh';	
+		 canvas.style.height = '100vh';
   }
 }
 
