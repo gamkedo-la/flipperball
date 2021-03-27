@@ -3,13 +3,19 @@
 function TableSelectionScene() {
     let selectorPositionsIndex = 0;
     const SELECTIONS = [
-        {bottomTable: TABLES.Prototype,
+        {selectionName: "Prototype",
+        bottomTable: TABLES.Prototype,
         topTable: TABLES.PrototypeTop},
-        {bottomTable: TABLES.Space,
+        {selectionName: "Space",
+        bottomTable: TABLES.Space,
         topTable: TABLES.SpaceTop},
-        {bottomTable: TABLES.Vam,
+        {selectionName: "Vam",
+        bottomTable: TABLES.Vam,
         topTable: TABLES.VamTop},
     ];
+
+    const ARROW_HORIZONTAL_OFFSET = 100;
+    const ARROW_VERTICAL_OFFSET = 23;
 
     let arrow;
 
@@ -53,6 +59,9 @@ function TableSelectionScene() {
                     console.log("DOWN: " + selectorPositionsIndex);
                 }
                 break;
+            case KEY_LEFT:
+                SceneManager.setState(SCENE.TITLE);  
+                return true;
         }
         
         return false;
@@ -73,17 +82,22 @@ function TableSelectionScene() {
 	const drawBG = function() {
         const PADDING = 35;
         drawRect(0, 0, canvas.width, canvas.height);
-        colorText("SELECT TABLE", canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);       
-        colorText("Prototype", canvas.width / 2, canvas.height / 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        colorText("SELECT TABLE", canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);   
+        
+        for(var i = 0; i < SELECTIONS.length; i++){
+            colorText(SELECTIONS[i].selectionName, canvas.width / 2, canvas.height / 2 + PADDING * i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        }
+        
+        /*colorText("Prototype", canvas.width / 2, canvas.height / 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         colorText("Space", canvas.width / 2, canvas.height / 2 + PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("Vam", canvas.width / 2, canvas.height / 2 + PADDING * 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        colorText("Press Enter to return to select a table", canvas.width / 2, canvas.height / 2 + PADDING * 4, Color.White, Fonts.BodyText, TextAlignment.Center, 1);       
+        colorText("Vam", canvas.width / 2, canvas.height / 2 + PADDING * 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);*/
+        colorText("Press Enter to select a table", canvas.width / 2, canvas.height / 2 + PADDING * ++i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);       
       }
 
       const drawSelection = function() {
         const PADDING = 35;
         //colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
-        drawImageForTiledWithRotation(arrow, canvas.width / 2 - 100, canvas.height / 2 - 20 + PADDING * selectorPositionsIndex, 0);
+        drawImageForTiledWithRotation(arrow, canvas.width / 2 - ARROW_HORIZONTAL_OFFSET, canvas.height / 2 - ARROW_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
       }
         
     return this;
