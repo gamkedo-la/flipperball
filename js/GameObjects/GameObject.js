@@ -117,9 +117,6 @@ class GameObject {
     * @interface
     */
     updateAnimation(deltaTime) {
-        if (this.type === ENTITY_TYPE.Star) {
-            //console.log("stopping")
-        }
         if (!this.hasAnimation || !this.isAnimating) return;
 
         this.currTiming += deltaTime;
