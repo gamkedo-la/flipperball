@@ -213,7 +213,10 @@ function loadImages() {
         { imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png" },
         { imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png" },         
         { imgName: "backplate", theFile: "tables/vam/backplate.png" },
-        { imgName: "arrow_selection", theFile: "tables/arrow_selection.png"}
+        { imgName: "arrow_selection", theFile: "tables/arrow_selection.png"},
+        { imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
+        { imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png"},
+
         
     ];
 
