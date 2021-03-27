@@ -4,12 +4,15 @@ function TableSelectionScene() {
     let selectorPositionsIndex = 0;
     const SELECTIONS = [
         {selectionName: "Prototype",
+        selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Prototype,
         topTable: TABLES.PrototypeTop},
         {selectionName: "Space",
+        selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Space,
         topTable: TABLES.SpaceTop},
         {selectionName: "Vam",
+        selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Vam,
         topTable: TABLES.VamTop},
     ];

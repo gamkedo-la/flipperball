@@ -70,6 +70,12 @@ const SCENE = {
 	ENDING:"ending"
 };
 
+const MENU_SELECTION_TYPE = {
+	SCENE: "Scene",
+	TABLE: "Table",
+	EXIT: "Exit"
+}
+
 let canvasContainer = document.getElementById('canvas-container');
 let fullScreenButton = document.createElement('BUTTON');
 let debugButton = document.createElement('BUTTON');

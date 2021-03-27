@@ -2,15 +2,32 @@
 // eslint-disable-next-line no-unused-vars
 function TitleScene() {
     let selectorPositionsIndex = 0;
-    const selections = [
+    /*const selections = [
         SCENE.GAME,
         SCENE.OPTIONS,
+    ];*/
+
+    const SELECTIONS = [
+        {selectionName: "Start Game",
+        selectionType: MENU_SELECTION_TYPE.SCENE,
+        scene: SCENE.GAME
+        },
+        {selectionName: "Table Selection",
+        selectionType: MENU_SELECTION_TYPE.SCENE,
+        scene: SCENE.TABLE_SELECTION},
+        {selectionName: "Controls",
+        selectionType: MENU_SELECTION_TYPE.SCENE,
+        scene: SCENE.TABLE_SELECTION //TODO: Controls scene
+        }
     ];
 
     const buttons = [];
     const START_GAME_TIME_BUFFER = 400; //milleseconds
+    const ARROW_HORIZONTAL_OFFSET = 120;
+    const ARROW_VERTICAL_OFFSET = 23;
 
     let goingToGame = false;
+    let arrow;
 
     this.transitionIn = function() {
         const mainMenuX = 235;
@@ -26,6 +43,7 @@ function TitleScene() {
 
         selectorPositionsIndex = 0;
         goingToGame = false;
+        arrow = images["arrow_selection"];
     };
 
     this.transitionOut = function() {
@@ -45,29 +63,43 @@ function TitleScene() {
 
         switch (newKeyEvent) {
             case KEY_UP:
+                if(selectorPositionsIndex > 0){
+                    selectorPositionsIndex--;
+                    console.log("UP: " + selectorPositionsIndex);
+                }
+                break;
             case KEY_LEFT:
-                selectorPositionsIndex--;
+                /*selectorPositionsIndex--;
                 if (selectorPositionsIndex < 0) {
                     selectorPositionsIndex += selections.length;
                 }
-                return true;
+                return true;*/
             case KEY_DOWN:
+                if(selectorPositionsIndex < SELECTIONS.length-1){
+                    selectorPositionsIndex++;
+                    console.log("DOWN: " + selectorPositionsIndex);
+                }
+                break;
             case KEY_RIGHT:
-                SceneManager.setState(SCENE.TABLE_SELECTION);
-                selectorPositionsIndex++;
+                /*selectorPositionsIndex++;
                 if (selectorPositionsIndex >= selections.length) {
                     selectorPositionsIndex = 0;
-                }
+                }*/
                 return true;
             case ALIAS.SELECT1:
                 // console.log("Activated the current button");
 //                SceneManager.setState(selections[selectorPositionsIndex]);
-                if (!goingToGame) {
-                    playStartGameSound();
-                    console.log("TitleScene: " + selected_table);
-                    console.log("TitleScene: " + selected_top_table);
-                    setTimeout(() => {SceneManager.setState(SCENE.GAME, selected_table);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
-                    goingToGame = true;    
+                if(SELECTIONS[selectorPositionsIndex].selectionType == MENU_SELECTION_TYPE.SCENE){
+
+                    if (SELECTIONS[selectorPositionsIndex].selectionName == "Start Game" && !goingToGame) {
+                        playStartGameSound();
+                        console.log("TitleScene: " + selected_table);
+                        console.log("TitleScene: " + selected_top_table);
+                        setTimeout(() => {SceneManager.setState(SCENE.GAME, selected_table);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
+                        goingToGame = true;    
+                    }else{
+                        SceneManager.setState(SELECTIONS[selectorPositionsIndex].scene);
+                    }
                 }
                 return true;
             case ALIAS.SELECT2:
@@ -148,7 +180,7 @@ function TitleScene() {
 	const draw = function(deltaTime, buttons, selectorPositionIndex) {
 		// render the menu background
         drawBG();
-
+        drawSelection();
         // render menu
         // canvasContext.drawImage(uiMenuBorderPic, 0, 0, uiMenuBorderPic.width, uiMenuBorderPic.height, 200, 250, uiMenuBorderPic.width * GAME_SCALE, uiMenuBorderPic.height * GAME_SCALE);
 //        fontRenderer.drawString(canvasContext, 220, 260, "START", GAME_SCALE);
@@ -169,10 +201,20 @@ function TitleScene() {
             colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         }
         
-        colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
+        /*colorText("Press Enter to Play", canvas.width / 2, canvas.height / 2, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);
         
-        renderControlsInfo(canvas.width / 2, canvas.height / 2 + PADDING * 1.25, PADDING*0.75)
+        renderControlsInfo(canvas.width / 2, canvas.height / 2 + PADDING * 1.25, PADDING*0.75)*/
+        
+        for(var i = 0; i < SELECTIONS.length; i++){
+            colorText(SELECTIONS[i].selectionName, canvas.width / 2, canvas.height / 2 + PADDING * (i + 1), Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        }
 
+      }
+
+      const drawSelection = function() {
+        const PADDING = 35;
+        //colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        drawImageForTiledWithRotation(arrow, canvas.width / 2 - ARROW_HORIZONTAL_OFFSET, canvas.height / 2 - ARROW_VERTICAL_OFFSET + PADDING * (selectorPositionsIndex + 1), 0);
       }
         
     return this;
