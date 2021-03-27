@@ -3,7 +3,7 @@
 window.onload = function() {
     window.addEventListener("focus", windowOnFocus);
     window.addEventListener("blur", windowOnBlur);
-// This is a test comment, will remove soon
+
 	canvas = document.createElement("canvas");
 	canvas.classList.add("game-canvas");
   canvasContext = canvas.getContext("2d");
