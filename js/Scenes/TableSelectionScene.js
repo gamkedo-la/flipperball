@@ -49,6 +49,7 @@ function TableSelectionScene() {
                     selected_top_table = SELECTIONS[selectorPositionsIndex].topTable;
                     console.log("Selected table: " + selected_table);
                     console.log("Selected top table: " + selected_top_table);
+                    flipperSoundMenu.play();
                     SceneManager.setState(SCENE.TITLE);  
                 return true;
             case KEY_UP:
@@ -56,16 +57,20 @@ function TableSelectionScene() {
                 if(selectorPositionsIndex > 0){
                     selectorPositionsIndex--;
                     console.log("UP: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
                 }
+
                 break;
             case KEY_DOWN:
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
                     console.log("DOWN: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
                 }
                 break;
             case KEY_LEFT:
                 SceneManager.setState(SCENE.TITLE);  
+                flipperSoundMenu.play();
                 return true;
         }
         

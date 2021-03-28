@@ -6,6 +6,7 @@ let pauseSound;
 let resumeSound;
 let startGameSound;
 let flipperSound;
+let flipperSoundMenu;
 let bumperSound;
 let slotDingSound;
 let slotCrankSound;
@@ -39,6 +40,7 @@ function loadAudio() {
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
 	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 10);
+	flipperSoundMenu = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 1, 0.05);
 	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50);
 	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
@@ -118,7 +120,7 @@ function BackgroundMusicClass(filenameWithPath) {
 	}
 }
 
-function SoundOverlapsClass(filenameWithPath, minDeltaBtwPlays) {
+function SoundOverlapsClass(filenameWithPath, minDeltaBtwPlays, volume) {
 	setFormat();
 	let minTimeElapsed = defaultPlayDelta;
 	let lastPlayed = 0;
@@ -135,8 +137,14 @@ function SoundOverlapsClass(filenameWithPath, minDeltaBtwPlays) {
 				sounds.splice(soundIndex, 0, new Audio(fullFilename + audioFormat));
 			}
 			sounds[soundIndex].currentTime = 0;
-			sounds[soundIndex].volume = Math.pow(getRandomVolume() * effectsVolume * !isMuted, 2);
-			sounds[soundIndex].play();
+			if(volume == null){
+				sounds[soundIndex].volume = Math.pow(getRandomVolume() * effectsVolume * !isMuted, 2);
+				sounds[soundIndex].play();
+			}else{
+				sounds[soundIndex].volume = volume;
+				sounds[soundIndex].play();
+			}
+			
 
 			soundIndex = (++soundIndex) % sounds.length;
 			lastPlayed = Date.now();

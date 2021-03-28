@@ -68,7 +68,9 @@ function TitleScene() {
                 if(selectorPositionsIndex > 0){
                     selectorPositionsIndex--;
                     console.log("UP: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
                 }
+                
                 break;
             case KEY_LEFT:
                 /*selectorPositionsIndex--;
@@ -80,7 +82,9 @@ function TitleScene() {
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
                     console.log("DOWN: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
                 }
+                
                 break;
             case KEY_RIGHT:
                 /*selectorPositionsIndex++;
@@ -100,6 +104,7 @@ function TitleScene() {
                         setTimeout(() => {SceneManager.setState(SCENE.GAME, selected_table);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
                         goingToGame = true;    
                     }else{
+                        flipperSoundMenu.play();
                         SceneManager.setState(SELECTIONS[selectorPositionsIndex].scene);
                     }
                 }
