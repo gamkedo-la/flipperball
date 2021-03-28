@@ -17,7 +17,11 @@ function TitleScene() {
         scene: SCENE.TABLE_SELECTION},
         {selectionName: "Controls",
         selectionType: MENU_SELECTION_TYPE.SCENE,
-        scene: SCENE.CONTROLS //TODO: Controls scene
+        scene: SCENE.CONTROLS
+        },
+        {selectionName: "Credits",
+        selectionType: MENU_SELECTION_TYPE.SCENE,
+        scene: SCENE.CREDITS //TODO: Credits scene
         }
     ];
 

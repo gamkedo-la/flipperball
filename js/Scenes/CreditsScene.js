@@ -11,13 +11,17 @@ function CreditsScene() {
     const buttonHeight = 25;//TODO: Adjust this size based on custom font
     const buttonTitlePadding = 2;
     const buttons = [];
+    const CREDITS_UPDATE_TIME = 20;
+    let timeCounter = 0;
+    let updateScreen = false;
+    let stringPosition;
 
 
     this.transitionIn = function() {
         let mainMenuX = 0;
         const mainMenuY = canvas.height - canvas.height / 20;
-        
-        if(buttons.length === 0) {
+        stringPosition = canvas.height;
+        /*if(buttons.length === 0) {
             buttons.push(buildBackButton(canvas.width / 40, mainMenuY, buttonHeight, buttonTitlePadding));
             buttons.push(buildPlayButton(mainMenuX, mainMenuY, buttonHeight, buttonTitlePadding));
 
@@ -25,7 +29,7 @@ function CreditsScene() {
             buttons[1].updateXPosition(mainMenuX);
         } 
 
-        selectorPositionsIndex = 0;
+        selectorPositionsIndex = 0;*/
     }
 
     this.transitionOut = function() {
@@ -75,34 +79,12 @@ function CreditsScene() {
     }
 
     const update = function(deltaTime) {
-
-    }
-
-    const checkButtons = function() {
-        let wasClicked = false;
-        for(let i = 0; i < buttons.length; i++) {
-            wasClicked = buttons[i].respondIfClicked(mouseX, mouseY);
-            if(wasClicked) {break;}
+        if(timeCounter >= CREDITS_UPDATE_TIME){
+            updateScreen = true;
         }
+        timeCounter+=deltaTime;
     }
 
-    const buildPlayButton = function(x, y, height, padding) {
-        const thisClick = function() {
-            // console.log("Clicked the Play Button");
-            SceneManager.setState(SCENE.GAME);
-        }
-
-        return new UIButton("PLAY", x, y, height, padding, thisClick, Color.Aqua);
-    }
-
-    const buildBackButton = function(x, y, height, padding) {
-        const thisClick = function() {
-            // console.log("Clicked the Back Button");
-            SceneManager.setState(SCENE.TITLE);
-        }
-
-        return new UIButton("BACK", x, y, height, padding, thisClick, Color.Purple);
-    }
 
     const printNavigation = function(navItems) {
         for(let i = 0; i < navItems.length; i++) {
@@ -114,7 +96,16 @@ function CreditsScene() {
 		// render the menu background
         drawBG();
         
-		drawTitle();
+		//drawTitle();
+        
+        if(updateScreen){
+            //do things to move things up
+            updateScreen = false;
+            timeCounter = 0;
+            stringPosition-=1;
+        }
+        //TODO read text from local file?
+        colorText("Credits Test", canvas.width / 2, stringPosition, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
 
         // render menu
         printNavigation(buttons, selectorPositionIndex);        
