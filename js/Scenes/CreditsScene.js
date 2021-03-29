@@ -23,7 +23,7 @@ function CreditsScene() {
     this.transitionIn = function() {
         let mainMenuX = 0;
         const mainMenuY = canvas.height - canvas.height / 20;
-        stringPosition = 0;
+        stringPositionOffset = 0;
 
         creditLines = [
             {line: "Lorem Ipsum", position: canvas.height},
@@ -55,11 +55,11 @@ function CreditsScene() {
         switch (newKeyEvent) {
             case ALIAS.UP:
             case ALIAS.LEFT:
-                stringPosition-=10;
+                stringPositionOffset-=10;
                 return true;
             case ALIAS.DOWN:
             case ALIAS.RIGHT:
-                stringPosition+=10;
+                stringPositionOffset+=10;
                 return true;
             case ALIAS.SELECT1:
 
@@ -102,7 +102,7 @@ function CreditsScene() {
             //do things to move things up
             updateScreen = false;
             timeCounter = 0;
-            stringPosition-=1;
+            stringPositionOffset-=1;
         }
         
 
@@ -118,7 +118,7 @@ function CreditsScene() {
     const drawLines = function(){
         for(var i = 0; i<creditLines.length ; i++){
             //TODO read text from local file?
-            colorText(creditLines[i].line, canvas.width / 2, creditLines[i].position + stringPosition, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
+            colorText(creditLines[i].line, canvas.width / 2, creditLines[i].position + stringPositionOffset, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
         }
         
     }
