@@ -4,32 +4,24 @@ function CreditsScene() {
     const CREDITS_BG_COLOR = "#010139";
 
     let selectorPositionsIndex = 0;
-    const selections = [
-        SCENE.TITLE,
-        SCENE.GAME
-    ];
-    const buttonHeight = 25;//TODO: Adjust this size based on custom font
-    const buttonTitlePadding = 2;
-    const buttons = [];
     const CREDITS_UPDATE_TIME = 20;
     const PADDING = 35;
+    let paused = false;
     let timeCounter = 0;
-    let updateScreen = false;
     let stringPositionOffset;
     let keyPressed = false;
     let creditLines;
 
 
     this.transitionIn = function() {
-        let mainMenuX = 0;
-        const mainMenuY = canvas.height - canvas.height / 20;
         stringPositionOffset = 0;
-
         creditLines = [
-            {line: "Lorem Ipsum", position: canvas.height},
-            {line: "Dolor sit amet", position: canvas.height + PADDING},
-            {line: "Consectetur", position: canvas.height + PADDING * 2},
-            {line: "Adipiscing elit", position: canvas.height + PADDING * 3},
+            {line: "Flipperball", position: canvas.height, font: Fonts.Subtitle},
+            {line: "Lorem Ipsum", position: canvas.height + PADDING * 2, font: Fonts.BodyText},
+            {line: "Dolor sit amet", position: canvas.height + PADDING * 3, font: Fonts.BodyText},
+            {line: "Consectetur", position: canvas.height + PADDING * 4, font: Fonts.BodyText},
+            {line: "Adipiscing elit", position: canvas.height + PADDING * 5, font: Fonts.BodyText},
+            {line: "Thanks for playing!!", position: canvas.height + PADDING * 8, font: Fonts.Subtitle},
         ];
 
     }
@@ -41,7 +33,7 @@ function CreditsScene() {
     this.run = function(deltaTime) {
         update(deltaTime);
 
-        draw(deltaTime, buttons, selectorPositionsIndex);
+        draw(deltaTime);
     }
 
     this.control = function(newKeyEvent, pressed) {
@@ -53,21 +45,48 @@ function CreditsScene() {
         }
         
         switch (newKeyEvent) {
-            case ALIAS.UP:
-            case ALIAS.LEFT:
-                stringPositionOffset-=10;
+            case KEY_UP:
+                if(!paused){
+                    console.log("up");
+                    stringPositionOffset-=10;
+                }
                 return true;
-            case ALIAS.DOWN:
-            case ALIAS.RIGHT:
-                stringPositionOffset+=10;
+            case KEY_LEFT:
+                if(!paused){
+                    console.log("left");
+                    stringPositionOffset-=10;
+                }
+                return true;
+            case KEY_DOWN:
+                if(!paused){
+                    console.log("down");
+                    stringPositionOffset+=10;
+                }
+                return true;
+            case KEY_RIGHT:
+                if(!paused){
+                    stringPositionOffset+=10;
+                }
                 return true;
             case ALIAS.SELECT1:
-
-                SceneManager.setState(SCENE.TITLE); 
+                if(!keyPressed){
+                    flipperSoundMenu.play(); //sounds twice with the setTimeout
+                    SceneManager.setState(SCENE.TITLE);
+                }
                 return true;
             case ALIAS.SELECT2:
                 // console.log("Selected the Play button");
-                SceneManager.setState(SCENE.TITLE); 
+                
+                if(!keyPressed){
+                    flipperSoundMenu.play();
+                    if(paused){
+                        console.log("not paused");
+                        paused = false;
+                    }else{
+                        console.log("pause");
+                        paused = true;
+                    }
+                }
                 return true;
             case ALIAS.POINTER:
                 return true;
@@ -77,53 +96,35 @@ function CreditsScene() {
     }
 
     const update = function(deltaTime) {
-        if(!keyPressed){
+        if(!keyPressed && !paused){
             if(timeCounter >= CREDITS_UPDATE_TIME){
-                updateScreen = true;
+                timeCounter = 0;
+                stringPositionOffset-=1;
             }
             timeCounter+=deltaTime;
         }
     }
 
 
-    const printNavigation = function(navItems) {
-        for(let i = 0; i < navItems.length; i++) {
-            navItems[i].draw();
-        }
-	}
-
-    const draw = function(deltaTime, buttons, selectorPositionIndex) {
-		// render the menu background
+    const draw = function(deltaTime) {
         drawBG();
         drawLines();
-		//drawTitle();
-        
-        if(updateScreen){
-            //do things to move things up
-            updateScreen = false;
-            timeCounter = 0;
-            stringPositionOffset-=1;
-        }
-        
-
-        // render menu
-        printNavigation(buttons, selectorPositionIndex);        
+         
 	}
 	
 	const drawBG = function() {
         // fill the background since there is no image for now
         drawRect(0, 0, canvas.width, canvas.height, CREDITS_BG_COLOR);
+        if(paused){
+            colorText("PAUSED", canvas.width - 75, canvas.height - 25, Color.Red, Fonts.BodyText, TextAlignment.Center, 1); 
+        }
     }
 
     const drawLines = function(){
         for(var i = 0; i<creditLines.length ; i++){
-            //TODO read text from local file?
-            colorText(creditLines[i].line, canvas.width / 2, creditLines[i].position + stringPositionOffset, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
+            colorText(creditLines[i].line, canvas.width / 2, creditLines[i].position + stringPositionOffset, Color.White, creditLines[i].font, TextAlignment.Center, 1);  
         }
         
     }
-    
-    const drawTitle = function() {
-        fontRenderer.drawString(canvasContext, canvas.width / 2, canvas.height / 3, "CREDITS", 2 * GAME_SCALE);
-    }
+
 }

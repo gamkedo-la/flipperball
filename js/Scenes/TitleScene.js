@@ -77,11 +77,6 @@ function TitleScene() {
                 
                 break;
             case KEY_LEFT:
-                /*selectorPositionsIndex--;
-                if (selectorPositionsIndex < 0) {
-                    selectorPositionsIndex += selections.length;
-                }
-                return true;*/
             case KEY_DOWN:
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
@@ -91,10 +86,6 @@ function TitleScene() {
                 
                 break;
             case KEY_RIGHT:
-                /*selectorPositionsIndex++;
-                if (selectorPositionsIndex >= selections.length) {
-                    selectorPositionsIndex = 0;
-                }*/
                 return true;
             case ALIAS.SELECT1:
                 // console.log("Activated the current button");
@@ -206,7 +197,7 @@ function TitleScene() {
 	const drawBG = function() {
         // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
         const PADDING = 35;
-        drawRect(0, 0, canvas.width, canvas.height);
+        drawRect(0, 0, canvas.width, canvas.height, Color.Black);
 
         if (SceneManager.scenes[SCENE.GAME].gameHasFinished) {
             colorText("Last Score: " + SceneManager.scenes[SCENE.GAME].score, canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
