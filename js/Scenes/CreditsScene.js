@@ -12,24 +12,26 @@ function CreditsScene() {
     const buttonTitlePadding = 2;
     const buttons = [];
     const CREDITS_UPDATE_TIME = 20;
+    const PADDING = 35;
     let timeCounter = 0;
     let updateScreen = false;
-    let stringPosition;
+    let stringPositionOffset;
+    let keyPressed = false;
+    let creditLines;
 
 
     this.transitionIn = function() {
         let mainMenuX = 0;
         const mainMenuY = canvas.height - canvas.height / 20;
-        stringPosition = canvas.height;
-        /*if(buttons.length === 0) {
-            buttons.push(buildBackButton(canvas.width / 40, mainMenuY, buttonHeight, buttonTitlePadding));
-            buttons.push(buildPlayButton(mainMenuX, mainMenuY, buttonHeight, buttonTitlePadding));
+        stringPosition = 0;
 
-            mainMenuX = canvas.width - (buttons[1].getBounds().width + canvas.width / 40);
-            buttons[1].updateXPosition(mainMenuX);
-        } 
+        creditLines = [
+            {line: "Lorem Ipsum", position: canvas.height},
+            {line: "Dolor sit amet", position: canvas.height + PADDING},
+            {line: "Consectetur", position: canvas.height + PADDING * 2},
+            {line: "Adipiscing elit", position: canvas.height + PADDING * 3},
+        ];
 
-        selectorPositionsIndex = 0;*/
     }
 
     this.transitionOut = function() {
@@ -44,34 +46,30 @@ function CreditsScene() {
 
     this.control = function(newKeyEvent, pressed) {
         if (pressed) {//only act on key released events => prevent multiple changes on single press
-            return false;
+            keyPressed = true;
+            //return false;
+        } else {
+            keyPressed = false;
         }
         
         switch (newKeyEvent) {
             case ALIAS.UP:
             case ALIAS.LEFT:
-                selectorPositionsIndex--;
-                if (selectorPositionsIndex < 0) {
-                    selectorPositionsIndex += selections.length;
-                }
+                stringPosition-=10;
                 return true;
             case ALIAS.DOWN:
             case ALIAS.RIGHT:
-                selectorPositionsIndex++;
-                if (selectorPositionsIndex >= selections.length) {
-                    selectorPositionsIndex = 0;
-                }
+                stringPosition+=10;
                 return true;
             case ALIAS.SELECT1:
-                // console.log("Activated the current button");
-                SceneManager.setState(selections[selectorPositionsIndex]);
+
+                SceneManager.setState(SCENE.TITLE); 
                 return true;
             case ALIAS.SELECT2:
                 // console.log("Selected the Play button");
-                SceneManager.setState(SCENE.GAME);
+                SceneManager.setState(SCENE.TITLE); 
                 return true;
             case ALIAS.POINTER:
-                checkButtons();
                 return true;
         }
         
@@ -79,10 +77,12 @@ function CreditsScene() {
     }
 
     const update = function(deltaTime) {
-        if(timeCounter >= CREDITS_UPDATE_TIME){
-            updateScreen = true;
+        if(!keyPressed){
+            if(timeCounter >= CREDITS_UPDATE_TIME){
+                updateScreen = true;
+            }
+            timeCounter+=deltaTime;
         }
-        timeCounter+=deltaTime;
     }
 
 
@@ -95,7 +95,7 @@ function CreditsScene() {
     const draw = function(deltaTime, buttons, selectorPositionIndex) {
 		// render the menu background
         drawBG();
-        
+        drawLines();
 		//drawTitle();
         
         if(updateScreen){
@@ -104,8 +104,7 @@ function CreditsScene() {
             timeCounter = 0;
             stringPosition-=1;
         }
-        //TODO read text from local file?
-        colorText("Credits Test", canvas.width / 2, stringPosition, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
+        
 
         // render menu
         printNavigation(buttons, selectorPositionIndex);        
@@ -114,6 +113,14 @@ function CreditsScene() {
 	const drawBG = function() {
         // fill the background since there is no image for now
         drawRect(0, 0, canvas.width, canvas.height, CREDITS_BG_COLOR);
+    }
+
+    const drawLines = function(){
+        for(var i = 0; i<creditLines.length ; i++){
+            //TODO read text from local file?
+            colorText(creditLines[i].line, canvas.width / 2, creditLines[i].position + stringPosition, Color.White, Fonts.BodyText, TextAlignment.Center, 1);  
+        }
+        
     }
     
     const drawTitle = function() {
