@@ -10,7 +10,7 @@ class Ball extends GameObject {
         this.hasMotionTrail = true;
         this.resetPos = {x: this.x, y: this.y};
     }
-
+//practice commit-will remove
     update(deltaTime) {
         this.oldX = this.x;
         this.oldY = this.y;
