@@ -92,7 +92,9 @@ const TABLES = {
 	Space: 'space',
 	SpaceTop: 'space_top',
 	Vam: 'vam',
-	VamTop: 'vam_top'
+	VamTop: 'vam_top',
+	Aquarium: 'aquarium',
+	AquariumTop: 'aquarium_top'
 };
 
 // Set these to easily test new table designs
