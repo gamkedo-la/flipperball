@@ -121,6 +121,7 @@ function GameScene() {
             // console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
         } else {
             stopBackgroundMusic();
+            this.bonusLive = false;
         }
     }
 
@@ -401,7 +402,7 @@ function GameScene() {
         // }
     }
 
-    var checkForRotatingGateScore = function(){
+    const checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
             DEBUG_LOG(self.remainingRotatingScore);
             self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
@@ -420,12 +421,12 @@ function GameScene() {
         } 
     }
     
-    var incrementScore = function(increment){
+    const incrementScore = function(increment){
         self.score += increment * self.bonusMultiplier;
         self.scoreIncrementForExtraBall += increment * self.bonusMultiplier;    
     }
     
-    var endBonusRound = function () {
+    const endBonusRound = function () {
         self.bonusMultiplier = 1;
         self.bonusTime = 0;
         self.bonusLive = false;
