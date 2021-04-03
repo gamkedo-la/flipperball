@@ -135,7 +135,10 @@ const ENTITY_TYPE = {
 	Spawner: 'spawner',
 	Slot: 'slot',
 	SlotMachine: 'slot_machine',
-	Planet: 'planet',
+	Earth: 'earth',
+	Mars: 'mars',
+	Jupiter: 'jupiter',
+	Saturn: 'saturn',
 	Rocket: 'rocket',
 	Shuttle: 'shuttle'
 };
@@ -362,10 +365,22 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 24,
 		frameHeight: 24,
-		frameTimes: [64, 64, 64, 64, 64],
+		frameTimes: [64],
 		reverses: false,
 		loops: false,
 		holds: true
+	},
+	ROCKET_LAUNCH: {
+		imageNames: {
+			"rocket": "rocket_anim"
+		},
+		frames: [0, 1, 2],
+		frameWidth: 58,
+		frameHeight: 96,
+		frameTimes: [64],
+		reverses: false,
+		loops: true,
+		holds: false
 	},
 	BONUS_LIGHT: {
 			imageNames: {

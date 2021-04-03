@@ -34,6 +34,7 @@ function GameScene() {
     let tilt = false;
     let spawnerCollisionOn = false;
     this.slotMachines = [];
+    this.bonusActivated = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -476,12 +477,12 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.update(deltaTime / 2);
+            dynamicObj.update(deltaTime / 2, self.bonusActivated);
         }
 
         for (const staticObj of self.table.staticObjects) {
             if (staticObj.type === ENTITY_TYPE.Slot) {
-                staticObj.update(deltaTime / 2);
+                staticObj.update(deltaTime / 2, self.bonusActivated);
             }
         }
 
@@ -505,7 +506,7 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.update(deltaTime / 2);
+            dynamicObj.update(deltaTime / 2, self.bonusActivated);
         }
 
         self.collisionManager.checkCollisions(deltaTime/2);
@@ -541,6 +542,8 @@ function GameScene() {
         } else {
             determineBallAndTableState();
         }
+
+        self.bonusActivated = false;
     }
 
     const draw = function() {
@@ -687,6 +690,9 @@ function GameScene() {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
+                        if (!this.bonusLive) {
+                            this.bonusActivated = true;
+                        }
                         this.bonusLights.push(bonusTarg);
                         this.bonusMultiplier = bonusTarg.bonusMult || 2;
                         this.bonusLive = true;

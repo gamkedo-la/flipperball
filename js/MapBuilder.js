@@ -200,8 +200,14 @@ function MapBuilder (tableName = selected_table) {
                                 ...ANIMATIONS.EXPANDING_STAR_2,
                                 animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR_2.imageNames[obj.name]],
                             }));
-                        } 
-                    } else if (obj.type === ENTITY_TYPE.Rocket || obj.type === ENTITY_TYPE.Planet || obj.type === ENTITY_TYPE.Shuttle) {
+                        }
+                    } else if (obj.type === ENTITY_TYPE.Rocket) {
+                        const newRocket = new Rocket(obj, null, {
+                            ...ANIMATIONS.ROCKET_LAUNCH,
+                            animationSpritesheet: images[ANIMATIONS.ROCKET_LAUNCH.imageNames[obj.name]],
+                        });
+                        result.push(newRocket);
+                    } else if (obj.type === ENTITY_TYPE.Earth || obj.type === ENTITY_TYPE.Mars || obj.type === ENTITY_TYPE.Jupiter || obj.type === ENTITY_TYPE.Saturn || obj.type === ENTITY_TYPE.Shuttle) {
 
                     } else {
                         result.push(new GameObject(obj, bodyData));

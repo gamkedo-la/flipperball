@@ -152,24 +152,6 @@
                  "y":600.353
                 }, 
                 {
-                 "gid":40,
-                 "height":96,
-                 "id":171,
-                 "name":"rocket",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"rocket",
-                 "visible":true,
-                 "width":96,
-                 "x":537,
-                 "y":369.333333333333
-                }, 
-                {
                  "gid":41,
                  "height":96,
                  "id":172,
@@ -1840,6 +1822,24 @@
                  "width":20,
                  "x":433.556,
                  "y":191.328
+                }, 
+                {
+                 "gid":40,
+                 "height":96,
+                 "id":174,
+                 "name":"rocket",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"rocket",
+                 "visible":true,
+                 "width":96,
+                 "x":537.333333333333,
+                 "y":394
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2615,7 +2615,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":174,
+ "nextobjectid":175,
  "orientation":"orthogonal",
  "properties":[
         {
