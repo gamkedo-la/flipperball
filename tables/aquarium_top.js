@@ -309,7 +309,7 @@
                  "gid":48,
                  "height":128,
                  "id":211,
-                 "name":"planet",
+                 "name":"saturn",
                  "properties":[
                         {
                          "name":"speed",
@@ -322,7 +322,7 @@
                          "value":-75
                         }],
                  "rotation":0,
-                 "type":"planet",
+                 "type":"saturn",
                  "visible":true,
                  "width":128,
                  "x":529.333,
@@ -2750,7 +2750,7 @@
                          "type":"int",
                          "value":-75
                         }],
-                 "type":"planet"
+                 "type":"saturn"
                 }],
          "tilewidth":720
         }, 
