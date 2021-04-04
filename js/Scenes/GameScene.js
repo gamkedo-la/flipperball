@@ -487,6 +487,8 @@ function GameScene() {
             }
         }
 
+        self.bonusActivated = false;
+
         self.collisionManager.checkCollisions(deltaTime/2);
 
         for (let i = 0; i < self.collisionRate / 2; i++) {
@@ -543,8 +545,6 @@ function GameScene() {
         } else {
             determineBallAndTableState();
         }
-
-        self.bonusActivated = false;
     }
 
     const draw = function() {

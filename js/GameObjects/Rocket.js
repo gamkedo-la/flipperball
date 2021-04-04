@@ -9,9 +9,9 @@ class Rocket extends GameObject {
         this.ySpawn = this.y;
     }
 
-    update (deltaTime, bonusActivated) {
+    update (deltaTime, activated) {
         super.update(deltaTime);
-        if (bonusActivated) {
+        if (activated) {
             this.acceleration = 1;
             this.isAnimating = true;
             this.x = this.xSpawn + 19;
