@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="212">
+ <editorsettings>
+  <export target="../../tables/forest_top.js" format="js"/>
+ </editorsettings>
+ <properties>
+  <property name="maxY" type="int" value="600"/>
+  <property name="minY" type="int" value="0"/>
+ </properties>
+ <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="600" tilecount="24" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0" type="plunger">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
+  </tile>
+  <tile id="1" type="left_flipper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="170" height="124" source="../img/backgrounds/flipper_left.png"/>
+  </tile>
+  <tile id="2" type="right_flipper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="170" height="124" source="../img/backgrounds/flipper_right.png"/>
+  </tile>
+  <tile id="3" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="105" height="600" source="../../img/tables/plunger_chute.png"/>
+  </tile>
+  <tile id="4" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_left.png"/>
+  </tile>
+  <tile id="5" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_right.png"/>
+  </tile>
+  <tile id="6" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="14" height="600" source="../../img/tables/vertical_wall.png"/>
+  </tile>
+  <tile id="7" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="86" source="../img/backgrounds/angled_wall_1.png"/>
+  </tile>
+  <tile id="8" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="52" source="../img/backgrounds/angled_wall_2.png"/>
+  </tile>
+  <tile id="9" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="52" source="../img/backgrounds/angled_wall_3.png"/>
+  </tile>
+  <tile id="10" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="86" source="../img/backgrounds/angled_wall_4.png"/>
+  </tile>
+  <tile id="11" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_yellow.png"/>
+  </tile>
+  <tile id="12" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_green.png"/>
+  </tile>
+  <tile id="13" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_blue.png"/>
+  </tile>
+  <tile id="14" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_red.png"/>
+  </tile>
+  <tile id="15" type="ball">
+   <properties>
+    <property name="zOrder" type="int" value="50"/>
+   </properties>
+   <image width="26" height="26" source="../img/backgrounds/ball.png"/>
+  </tile>
+  <tile id="16" type="flipper_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="55" height="186" source="../img/backgrounds/flipper_bumper_left.png"/>
+  </tile>
+  <tile id="17" type="flipper_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="55" height="186" source="../img/backgrounds/flipper_bumper_right.png"/>
+  </tile>
+  <tile id="18" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_left.png"/>
+  </tile>
+  <tile id="19" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_right.png"/>
+  </tile>
+  <tile id="20" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="598" height="14" source="../../img/tables/horizontal_wall.png"/>
+  </tile>
+  <tile id="21" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="34" height="598" source="../../img/tables/chute_wall.png"/>
+  </tile>
+  <tile id="22" type="slot_machine">
+   <image width="31" height="45" source="../../img/tables/slot.png"/>
+  </tile>
+  <tile id="23" type="trigger">
+   <image width="5" height="26" source="../../img/tables/lane_trigger.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="25" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="24" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="zOrder" type="int" value="-100"/>
+   </properties>
+   <image width="720" height="600" source="../img/backgrounds/cloud_bg_top.png"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="zOrder" type="int" value="25"/>
+   </properties>
+   <image width="51" height="48" source="../../img/tables/plane_red.png"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="zOrder" type="int" value="25"/>
+   </properties>
+   <image width="51" height="48" source="../../img/tables/plane_blue.png"/>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="zOrder" type="int" value="25"/>
+   </properties>
+   <image width="51" height="48" source="../../img/tables/plane_green.png"/>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="zOrder" type="int" value="25"/>
+   </properties>
+   <image width="51" height="48" source="../../img/tables/plane_yellow.png"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="24" height="24" source="../../img/tables/ball_catch_arrow.png"/>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/ball_catch.png"/>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="zOrder" type="int" value="30"/>
+   </properties>
+   <image width="39" height="54" source="../../img/tables/plane_pipe_right.png"/>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="zOrder" type="int" value="30"/>
+   </properties>
+   <image width="39" height="54" source="../../img/tables/plane_pipe_left.png"/>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/circle_bumper_small_red.png"/>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/circle_bumper_small_yellow.png"/>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/circle_bumper_small_blue.png"/>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/circle_bumper_small_green.png"/>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="96" height="96" source="../../img/tables/cyclone.png"/>
+  </tile>
+  <tile id="14" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="10"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
+  </tile>
+  <tile id="15" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="15"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
+  </tile>
+  <tile id="16" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="7"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
+  </tile>
+  <tile id="17" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
+  </tile>
+  <tile id="18" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="25"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="zOrder" type="int" value="-100"/>
+   </properties>
+   <image width="720" height="600" source="../../img/tables/cloud_bg_top_empty.png"/>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="54" height="54" source="../../img/tables/spawner_plane.png"/>
+  </tile>
+  <tile id="21" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="1" height="1" source="../../img/tables/tiny_star.png"/>
+  </tile>
+  <tile id="22" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="5"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="5" height="5" source="../../img/tables/small_star.png"/>
+  </tile>
+  <tile id="23" type="saturn">
+   <properties>
+    <property name="speed" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="128" height="128" source="../../img/tables/Planet.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0" type="habitrail">
+   <properties>
+    <property name="zOrder" type="int" value="100"/>
+   </properties>
+   <image width="42" height="75" source="../../img/tables/habitrail_gateway.png"/>
+  </tile>
+  <tile id="1" type="habitrail">
+   <properties>
+    <property name="zOrder" type="int" value="100"/>
+   </properties>
+   <image width="42" height="75" source="../../img/tables/habitrail_small_track.png"/>
+  </tile>
+  <tile id="2" type="habitrail">
+   <properties>
+    <property name="zOrder" type="int" value="100"/>
+   </properties>
+   <image width="42" height="125" source="../../img/tables/habitrail_track.png"/>
+  </tile>
+ </tileset>
+ <objectgroup id="5" name="Fixed">
+  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
+  <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
+  <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
+  <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
+  <object id="70" name="angled_wall_3" gid="10" x="854" y="407" width="52" height="52"/>
+  <object id="92" name="ball_catch_arrow" gid="30" x="350" y="90" width="24" height="24"/>
+  <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
+  <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
+  <object id="137" name="habitrail_small_track" gid="50" x="348" y="552" width="42" height="75" rotation="310"/>
+  <object id="168" name="drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
+  <object id="170" name="habitrail_small_track" gid="50" x="291" y="503" width="42" height="75"/>
+  <object id="171" name="habitrail_small_track" gid="50" x="291" y="427.5" width="42" height="75"/>
+  <object id="172" name="habitrail_small_track" gid="50" x="291" y="352" width="42" height="75"/>
+  <object id="173" name="habitrail_gateway" type="habitrail" gid="49" x="405" y="600" width="42" height="75" rotation="310">
+   <properties>
+    <property name="relatedCollisionObjects" value="132,133"/>
+   </properties>
+  </object>
+  <object id="174" name="habitrail_gateway" gid="50" x="291" y="276.5" width="42" height="75">
+   <properties>
+    <property name="relatedCollisionObjects" value="132,133"/>
+   </properties>
+  </object>
+  <object id="211" name="saturn" gid="48" x="529.333" y="246.667" width="128" height="128"/>
+ </objectgroup>
+ <objectgroup id="4" name="Dynamic">
+  <object id="14" name="flipper_left" gid="2" x="339" y="526" width="170" height="124"/>
+  <object id="15" name="flipper_right" gid="3" x="725" y="528" width="170" height="124"/>
+  <object id="30" name="flipper_bumper_left" gid="17" x="334" y="405.5" width="55" height="186"/>
+  <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="391" width="55" height="186"/>
+  <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
+  <object id="91" name="ball_catch" type="trigger" gid="31" x="307" y="78.6667" width="54" height="54">
+   <properties>
+    <property name="ball_catch" type="object" value="149"/>
+    <property name="score" type="int" value="100"/>
+   </properties>
+  </object>
+  <object id="175" name="tiny_star" gid="46" x="448.667" y="40" width="1" height="1"/>
+  <object id="176" name="tiny_star" gid="46" x="401.667" y="88.6667" width="1" height="1"/>
+  <object id="177" name="tiny_star" gid="46" x="590.333" y="122" width="1" height="1"/>
+  <object id="178" name="tiny_star" gid="46" x="422.333" y="208.333" width="1" height="1"/>
+  <object id="179" name="tiny_star" gid="46" x="553.667" y="249.667" width="1" height="1"/>
+  <object id="180" name="tiny_star" gid="46" x="666.333" y="148.333" width="1" height="1"/>
+  <object id="181" name="tiny_star" gid="46" x="691.667" y="62" width="1" height="1"/>
+  <object id="182" name="tiny_star" gid="46" x="767" y="143.667" width="1" height="1"/>
+  <object id="183" name="tiny_star" gid="46" x="788" y="223" width="1" height="1"/>
+  <object id="184" name="tiny_star" gid="46" x="783.667" y="323.333" width="1" height="1"/>
+  <object id="185" name="tiny_star" gid="46" x="708" y="366" width="1" height="1"/>
+  <object id="186" name="tiny_star" gid="46" x="605.667" y="390" width="1" height="1"/>
+  <object id="187" name="tiny_star" gid="46" x="618.667" y="467.667" width="1" height="1"/>
+  <object id="188" name="tiny_star" gid="46" x="770.667" y="440.667" width="1" height="1"/>
+  <object id="189" name="tiny_star" gid="46" x="494" y="292.333" width="1" height="1"/>
+  <object id="190" name="tiny_star" gid="46" x="475" y="426.667" width="1" height="1"/>
+  <object id="191" name="tiny_star" gid="46" x="593.333" y="478" width="1" height="1"/>
+  <object id="192" name="tiny_star" gid="46" x="517.333" y="555" width="1" height="1"/>
+  <object id="193" name="tiny_star" gid="46" x="466" y="551.667" width="1" height="1"/>
+  <object id="194" name="tiny_star" gid="46" x="764.667" y="551.667" width="1" height="1"/>
+  <object id="195" name="tiny_star" gid="46" x="753.333" y="595.667" width="1" height="1"/>
+  <object id="196" name="small_star" gid="47" x="424.667" y="76.3333" width="5" height="5"/>
+  <object id="197" name="small_star" gid="47" x="606" y="88.6667" width="5" height="5"/>
+  <object id="198" name="small_star" gid="47" x="697.667" y="165" width="5" height="5"/>
+  <object id="199" name="small_star" gid="47" x="785.667" y="69" width="5" height="5"/>
+  <object id="200" name="small_star" gid="47" x="849.667" y="86.6667" width="5" height="5"/>
+  <object id="201" name="small_star" gid="47" x="771.333" y="336.667" width="5" height="5"/>
+  <object id="202" name="small_star" gid="47" x="549.667" y="357.333" width="5" height="5"/>
+  <object id="203" name="small_star" gid="47" x="538.667" y="277.333" width="5" height="5"/>
+  <object id="204" name="small_star" gid="47" x="696.333" y="247" width="5" height="5"/>
+  <object id="205" name="small_star" gid="47" x="620.333" y="546.333" width="5" height="5"/>
+  <object id="207" name="small_star" gid="47" x="853.333" y="71.6667" width="5" height="5"/>
+ </objectgroup>
+ <objectgroup id="3" name="Collision">
+  <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="333" y="225.5">
+   <properties>
+    <property name="dynObjConn" type="object" value="30"/>
+   </properties>
+   <polygon points="0.75,0.75 0.25,134.75 2.5,138.5 46.3409,178.795 55.8864,173.75 19,-0.25"/>
+  </object>
+  <object id="53" name="left" type="wall" x="276.5" y="0.5">
+   <polygon points="0,0 -0.75,710.5 13.25,710.25 14,-0.5"/>
+  </object>
+  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="862.273" y="344.455">
+   <properties>
+    <property name="dynObjConn" type="object" value="31"/>
+   </properties>
+   <polygon points="0,0 0.0909089,-131.727 -18.4546,-134.09 -54.3636,38.7273 -44.4546,44.6364 -2.18182,3.63636"/>
+  </object>
+  <object id="58" name="right" type="wall" x="986.333" y="0">
+   <polygon points="-73.6667,14.5 -21.4868,99.876 -19.8333,726.833 12.6667,730.333 14.1667,14"/>
+  </object>
+  <object id="60" name="inner_right" type="wall" x="908.333" y="127.333">
+   <polygon points="20,-1 -14,0.843096 -13.9419,240.582 -58.3958,283.151 -14.1571,282.856 -14.3633,359.664 -128.645,472.663 -15,596.912 19,597.333"/>
+  </object>
+  <object id="63" name="top" type="wall" x="940" y="0">
+   <polygon points="0,0 -664.333,0.333333 -664.333,13.3333 4.66667,14"/>
+  </object>
+  <object id="64" name="flipper_right" type="flipper" x="860.219" y="403.677">
+   <properties>
+    <property name="dynObjConn" type="object" value="15"/>
+   </properties>
+   <polygon points="-9.52084,4.91666 -132.414,104.016 -117.515,122.788 23.8484,51.7273"/>
+  </object>
+  <object id="65" name="flipper_right" type="flipper_tip" x="722.348" y="504.303" width="24" height="24">
+   <properties>
+    <property name="dynObjConn" type="object" value="15"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="66" name="flipper_right" type="flipper_base" x="839.015" y="403.636" width="55" height="55">
+   <properties>
+    <property name="dynObjConn" type="object" value="15"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="67" name="flipper_left" type="flipper" x="505.234" y="507.584">
+   <properties>
+    <property name="dynObjConn" type="object" value="14"/>
+   </properties>
+   <polygon points="2.20833,-1.875 -123.303,-102.575 -154.242,-54.5455 -11.8485,16.2727"/>
+  </object>
+  <object id="68" name="flipper_left" type="flipper_tip" x="486.416" y="501.917" width="24" height="24">
+   <properties>
+    <property name="dynObjConn" type="object" value="14"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="69" name="flipper_left" type="flipper_base" x="339.584" y="401.417" width="55" height="55">
+   <properties>
+    <property name="dynObjConn" type="object" value="14"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="73" name="flipper_left" type="flipper_inner" x="505.75" y="505.5">
+   <properties>
+    <property name="dynObjConn" type="object" value="14"/>
+   </properties>
+   <polygon points="-2.91667,10.25 -107.303,-67.075 -123.492,-42.0455 -16.3485,11.2727"/>
+  </object>
+  <object id="74" name="flipper_right" type="flipper_inner" x="856" y="393.75">
+   <properties>
+    <property name="dynObjConn" type="object" value="15"/>
+   </properties>
+   <polygon points="-35.6667,58.0833 -126.456,124.766 -116.182,128.121 -17.9849,77.144"/>
+  </object>
+  <object id="131" name="habitrail_gateway" x="381.779" y="574.468" width="40" height="40" rotation="319.588">
+   <properties>
+    <property name="dynObjConn" type="object" value="136"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="132" name="habitrail" type="wall" x="435" y="215.667">
+   <polygon points="-32,385.5 -143.333,289.667 -143.5,-25.5 -141.5,-13 -141,286.167 -27.6667,380.5"/>
+  </object>
+  <object id="133" name="habitrail" type="wall" x="471.333" y="188">
+   <polygon points="-40,380.5 -136.5,296.5 -138.333,10.7917 -141.833,13.5 -141.167,297.333"/>
+  </object>
+  <object id="135" name="plunger_gate" type="gate" x="894" y="13">
+   <properties>
+    <property name="dynObjConn" type="object" value="106"/>
+   </properties>
+   <polygon points="0,0 0.666667,112 15.3333,112 14.6667,-0.666667"/>
+  </object>
+  <object id="145" name="flipper_bumper_left" type="flipper_bumper" x="333.75" y="219" width="19" height="19">
+   <properties>
+    <property name="dynObjConn" type="object" value="30"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="146" name="flipper_bumper_left" type="flipper_bumper" x="376.75" y="393.25" width="12" height="12">
+   <properties>
+    <property name="dynObjConn" type="object" value="30"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="147" name="flipper_bumper_right" type="flipper_bumper" x="843.25" y="204.25" width="19" height="19">
+   <properties>
+    <property name="dynObjConn" type="object" value="31"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="148" name="flipper_bumper_right" type="flipper_bumper" x="807.636" y="378.818" width="12" height="12">
+   <properties>
+    <property name="dynObjConn" type="object" value="31"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="149" name="ball_catch" type="trigger" x="318.333" y="35.6667" width="30" height="30">
+   <properties>
+    <property name="catcher" type="bool" value="true"/>
+    <property name="dynObjConn" type="object" value="91"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="163" name="habitrail_gateway" x="291.607" y="189.394" width="40" height="40">
+   <properties>
+    <property name="dynObjConn" type="object" value="142"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

@@ -19,6 +19,10 @@ function TableSelectionScene() {
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Aquarium,
         topTable: TABLES.AquariumTop},
+        {selectionName: "Forest",
+        selectionType: MENU_SELECTION_TYPE.TABLE,
+        bottomTable: TABLES.Forest,
+        topTable: TABLES.ForestTop}
     ];
 
     const FLIPPER_HORIZONTAL_OFFSET = 120;

@@ -94,7 +94,9 @@ const TABLES = {
 	Vam: 'vam',
 	VamTop: 'vam_top',
 	Aquarium: 'aquarium',
-	AquariumTop: 'aquarium_top'
+	AquariumTop: 'aquarium_top',
+	Forest: 'forest',
+	ForestTop: 'forest_top'
 };
 
 // Set these to easily test new table designs
