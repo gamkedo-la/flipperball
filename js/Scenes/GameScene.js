@@ -34,6 +34,7 @@ function GameScene() {
     let tilt = false;
     let spawnerCollisionOn = false;
     this.slotMachines = [];
+    this.bonusActivated = false;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -120,6 +121,7 @@ function GameScene() {
             // console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
         } else {
             stopBackgroundMusic();
+            this.bonusLive = false;
         }
     }
 
@@ -400,7 +402,7 @@ function GameScene() {
         // }
     }
 
-    var checkForRotatingGateScore = function(){
+    const checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
             DEBUG_LOG(self.remainingRotatingScore);
             self.rotatingGateEntity.updateAnimationTiedToScore(self.remainingRotatingScore);
@@ -419,12 +421,12 @@ function GameScene() {
         } 
     }
     
-    var incrementScore = function(increment){
+    const incrementScore = function(increment){
         self.score += increment * self.bonusMultiplier;
         self.scoreIncrementForExtraBall += increment * self.bonusMultiplier;    
     }
     
-    var endBonusRound = function () {
+    const endBonusRound = function () {
         self.bonusMultiplier = 1;
         self.bonusTime = 0;
         self.bonusLive = false;
@@ -476,14 +478,16 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.update(deltaTime / 2);
+            dynamicObj.update(deltaTime / 2, self.bonusActivated);
         }
 
         for (const staticObj of self.table.staticObjects) {
             if (staticObj.type === ENTITY_TYPE.Slot) {
-                staticObj.update(deltaTime / 2);
+                staticObj.update(deltaTime / 2, self.bonusActivated);
             }
         }
+
+        self.bonusActivated = false;
 
         self.collisionManager.checkCollisions(deltaTime/2);
 
@@ -505,7 +509,7 @@ function GameScene() {
         }
 
         for (const dynamicObj of self.table.dynamicObjects) {
-            dynamicObj.update(deltaTime / 2);
+            dynamicObj.update(deltaTime / 2, self.bonusActivated);
         }
 
         self.collisionManager.checkCollisions(deltaTime/2);
@@ -687,6 +691,9 @@ function GameScene() {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
                     if (bonusLit) {
+                        if (!this.bonusLive) {
+                            this.bonusActivated = true;
+                        }
                         this.bonusLights.push(bonusTarg);
                         this.bonusMultiplier = bonusTarg.bonusMult || 2;
                         this.bonusLive = true;

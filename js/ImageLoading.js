@@ -192,7 +192,11 @@ function loadImages() {
         {imgName: "spawner_plane", theFile: "tables/spawner_plane.png"},
 
         {imgName: "rocket", theFile: "tables/rocket.png"},
-        {imgName: "planet", theFile: "tables/planet.png"},
+        {imgName: "rocket_anim", theFile: "animations/rocket_anim.png"},
+        {imgName: "earth", theFile: "tables/earth.png"},
+        {imgName: "mars", theFile: "tables/mars.png"},
+        {imgName: "jupiter", theFile: "tables/jupiter.png"},
+        {imgName: "saturn", theFile: "tables/saturn.png"},
         {imgName: "shuttle", theFile: "tables/space_shuttle.png"},
         {imgName: "sputnik", theFile: "tables/sputniksatellite.png"},
 

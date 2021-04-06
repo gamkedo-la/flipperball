@@ -170,7 +170,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":50,
+                 "gid":53,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -206,7 +206,7 @@
                  "y":680
                 }, 
                 {
-                 "gid":50,
+                 "gid":53,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -224,7 +224,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":50,
+                 "gid":53,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -242,7 +242,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":50,
+                 "gid":53,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -260,7 +260,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":49,
+                 "gid":52,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -283,7 +283,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":50,
+                 "gid":53,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -306,10 +306,22 @@
                  "y":276.5
                 }, 
                 {
+                 "gid":51,
+                 "height":92,
+                 "id":216,
+                 "name":"jupiter",
+                 "rotation":0,
+                 "type":"jupiter",
+                 "visible":true,
+                 "width":94,
+                 "x":469,
+                 "y":122
+                }, 
+                {
                  "gid":48,
                  "height":128,
-                 "id":211,
-                 "name":"planet",
+                 "id":217,
+                 "name":"saturn",
                  "properties":[
                         {
                          "name":"speed",
@@ -322,11 +334,35 @@
                          "value":-75
                         }],
                  "rotation":0,
-                 "type":"planet",
+                 "type":"saturn",
                  "visible":true,
                  "width":128,
-                 "x":529.333333333333,
-                 "y":246.666666666667
+                 "x":316,
+                 "y":218.666666666667
+                }, 
+                {
+                 "gid":49,
+                 "height":23,
+                 "id":218,
+                 "name":"mars",
+                 "rotation":0,
+                 "type":"mars",
+                 "visible":true,
+                 "width":24,
+                 "x":653.333333333333,
+                 "y":100.5
+                }, 
+                {
+                 "gid":50,
+                 "height":23,
+                 "id":219,
+                 "name":"earth",
+                 "rotation":0,
+                 "type":"earth",
+                 "visible":true,
+                 "width":24,
+                 "x":792,
+                 "y":157.833333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1633,8 +1669,8 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":24,
-                 "x":722.348,
-                 "y":504.303
+                 "x":723.348,
+                 "y":505.303
                 }, 
                 {
                  "ellipse":true,
@@ -2032,7 +2068,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":212,
+ "nextobjectid":220,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2378,7 +2414,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":24,
+         "tilecount":27,
          "tileheight":600,
          "tiles":[
                 {
@@ -2750,13 +2786,34 @@
                          "type":"int",
                          "value":-75
                         }],
-                 "type":"planet"
+                 "type":"saturn"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/mars.png",
+                 "imageheight":23,
+                 "imagewidth":24,
+                 "type":"mars"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/earth.png",
+                 "imageheight":23,
+                 "imagewidth":24,
+                 "type":"earth"
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/jupiter.png",
+                 "imageheight":92,
+                 "imagewidth":94,
+                 "type":"jupiter"
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":49,
+         "firstgid":52,
          "grid":
             {
              "height":1,

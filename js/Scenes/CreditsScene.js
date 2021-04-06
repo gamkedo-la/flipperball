@@ -47,19 +47,19 @@ function CreditsScene() {
         switch (newKeyEvent) {
             case KEY_UP:
                 if(!paused){
-                    console.log("up");
+                    DEBUG_LOG("up");
                     stringPositionOffset-=10;
                 }
                 return true;
             case KEY_LEFT:
                 if(!paused){
-                    console.log("left");
+                    DEBUG_LOG("left");
                     stringPositionOffset-=10;
                 }
                 return true;
             case KEY_DOWN:
                 if(!paused){
-                    console.log("down");
+                    DEBUG_LOG("down");
                     stringPositionOffset+=10;
                 }
                 return true;
@@ -80,10 +80,10 @@ function CreditsScene() {
                 if(!keyPressed){
                     flipperSoundMenu.play();
                     if(paused){
-                        console.log("not paused");
+                        DEBUG_LOG("not paused");
                         paused = false;
                     }else{
-                        console.log("pause");
+                        DEBUG_LOG("pause");
                         paused = true;
                     }
                 }

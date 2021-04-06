@@ -7,14 +7,14 @@
  }
  if(typeof module === 'object' && module && module.exports) {
   module.exports = data;
- }})("space",
+ }})("aquarium",
 { "compressionlevel":-1,
  "editorsettings":
     {
      "export":
         {
          "format":"js",
-         "target":"space.js"
+         "target":"aquarium.js"
         }
     },
  "height":60,
@@ -150,6 +150,24 @@
                  "width":720,
                  "x":271.393,
                  "y":600.353
+                }, 
+                {
+                 "gid":40,
+                 "height":96,
+                 "id":171,
+                 "name":"rocket",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"rocket",
+                 "visible":true,
+                 "width":96,
+                 "x":537,
+                 "y":369.333
                 }, 
                 {
                  "gid":41,
@@ -1822,24 +1840,6 @@
                  "width":20,
                  "x":433.556,
                  "y":191.328
-                }, 
-                {
-                 "gid":40,
-                 "height":96,
-                 "id":174,
-                 "name":"rocket",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"rocket",
-                 "visible":true,
-                 "width":96,
-                 "x":536.666666666667,
-                 "y":391.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2615,7 +2615,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":175,
+ "nextobjectid":174,
  "orientation":"orthogonal",
  "properties":[
         {

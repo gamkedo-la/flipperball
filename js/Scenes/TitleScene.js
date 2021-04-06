@@ -71,7 +71,7 @@ function TitleScene() {
             case KEY_UP:
                 if(selectorPositionsIndex > 0){
                     selectorPositionsIndex--;
-                    console.log("UP: " + selectorPositionsIndex);
+                    DEBUG_LOG("UP: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }
                 
@@ -80,7 +80,7 @@ function TitleScene() {
             case KEY_DOWN:
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
-                    console.log("DOWN: " + selectorPositionsIndex);
+                    DEBUG_LOG("DOWN: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }
                 
@@ -94,8 +94,8 @@ function TitleScene() {
 
                     if (SELECTIONS[selectorPositionsIndex].selectionName == "Start Game" && !goingToGame) {
                         playStartGameSound();
-                        console.log("TitleScene: " + selected_table);
-                        console.log("TitleScene: " + selected_top_table);
+                        DEBUG_LOG("TitleScene: " + selected_table);
+                        DEBUG_LOG("TitleScene: " + selected_top_table);
                         setTimeout(() => {SceneManager.setState(SCENE.GAME, selected_table);}, startGameSound.duration() + START_GAME_TIME_BUFFER);
                         goingToGame = true;    
                     }else{
