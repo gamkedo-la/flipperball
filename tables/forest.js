@@ -134,24 +134,6 @@
                  "y":74
                 }, 
                 {
-                 "gid":46,
-                 "height":600,
-                 "id":166,
-                 "name":"space_bottom_bg",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-100
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":false,
-                 "width":720,
-                 "x":271.393,
-                 "y":600.353
-                }, 
-                {
                  "gid":40,
                  "height":96,
                  "id":171,
@@ -198,6 +180,24 @@
                  "width":96,
                  "x":724,
                  "y":103.333
+                }, 
+                {
+                 "gid":47,
+                 "height":600,
+                 "id":174,
+                 "name":"forest_bottom_bg",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":false,
+                 "width":720,
+                 "x":276.068845098528,
+                 "y":602.989440425709
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2615,7 +2615,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":174,
+ "nextobjectid":175,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2629,7 +2629,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.4.3",
  "tileheight":10,
  "tilesets":[
         {
@@ -3282,22 +3282,16 @@
                         }]
                 }, 
                 {
-                 "id":3,
-                 "image":"..\/img\/tables\/space_bottom_bg.png",
+                 "id":4,
+                 "image":"..\/raw\/img\/backgrounds\/forest_bottom_bg.png",
                  "imageheight":600,
-                 "imagewidth":720,
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-100
-                        }]
+                 "imagewidth":720
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":47,
+         "firstgid":48,
          "grid":
             {
              "height":1,
@@ -3353,6 +3347,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.5,
+ "version":1.4,
  "width":100
 });

@@ -111,6 +111,7 @@ function loadImages() {
         {imgName: "cloud_6", theFile: "tables/cloud_6.png"},
         {imgName: "cloud_7", theFile: "tables/cloud_7.png"},
         {imgName: "space_bottom_bg", theFile: "tables/space_bottom_bg.png"},
+        {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},
         {imgName: "expanding_star", theFile: "tables/expanding_star.png"},
         {imgName: "expanding_star_anim", theFile: "animations/expanding_star_anim.png"},
         {imgName: "expanding_star_2", theFile: "tables/expanding_star_2.png"},
