@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="175">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="179">
  <editorsettings>
   <export target="../../tables/forest.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="41" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="45" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -261,8 +261,20 @@
   <tile id="41" type="sputnik">
    <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
   </tile>
+  <tile id="42">
+   <image width="36" height="600" source="../../img/tables/forest_vertical_wall.png"/>
+  </tile>
+  <tile id="43">
+   <image width="132" height="180" source="../../img/tables/forest_drain_wall_left.png"/>
+  </tile>
+  <tile id="44">
+   <image width="132" height="132" source="../../img/tables/forest_drain_wall_right.png"/>
+  </tile>
+  <tile id="46">
+   <image width="198" height="600" source="../../img/tables/forest_plunger_chute.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="43" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="48" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -280,7 +292,7 @@
    <image width="720" height="600" source="../img/backgrounds/forest_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="48" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="53" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -302,26 +314,6 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="23" name="plunger_chute" type="wall" gid="4" x="894" y="598" width="105" height="598">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="24" name="drain_wall_right" type="wall" gid="6" x="698" y="658" width="197" height="195">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="25" name="drain_wall_left" type="wall" gid="5" x="289" y="658" width="197" height="195">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
   <object id="78" name="angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
    <properties>
     <property name="zOrder" type="int" value="0"/>
@@ -335,9 +327,29 @@
   <object id="171" name="rocket" gid="40" x="537" y="369.333" width="96" height="96"/>
   <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
   <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
-  <object id="174" name="forest_bottom_bg" gid="47" x="276.069" y="602.989" width="720" height="600" visible="0">
+  <object id="174" name="forest_bottom_bg" gid="52" x="276.069" y="602.989" width="720" height="600" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
+   </properties>
+  </object>
+  <object id="175" name="forest_vertical_wall" type="wall" gid="43" x="253.499" y="600.369" width="36" height="600">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="176" name="forest_drain_wall_left" type="wall" gid="44" x="289.039" y="601.406" width="132" height="180">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="177" name="forest_drain_wall_right" type="wall" gid="45" x="762.627" y="600.164" width="132" height="132">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="178" name="forest_plunger_chute" type="wall" gid="47" x="817.396" y="599.747" width="198" height="600">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
  </objectgroup>

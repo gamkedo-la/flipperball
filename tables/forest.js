@@ -26,78 +26,6 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":4,
-                 "height":598,
-                 "id":23,
-                 "name":"plunger_chute",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":105,
-                 "x":894,
-                 "y":598
-                }, 
-                {
-                 "gid":6,
-                 "height":195,
-                 "id":24,
-                 "name":"drain_wall_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":197,
-                 "x":698,
-                 "y":658
-                }, 
-                {
-                 "gid":5,
-                 "height":195,
-                 "id":25,
-                 "name":"drain_wall_left",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":197,
-                 "x":289,
-                 "y":658
-                }, 
-                {
-                 "gid":7,
-                 "height":598,
-                 "id":26,
-                 "name":"vertical_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":14,
-                 "x":276,
-                 "y":598
-                }, 
-                {
                  "gid":24,
                  "height":142,
                  "id":78,
@@ -182,7 +110,7 @@
                  "y":103.333
                 }, 
                 {
-                 "gid":47,
+                 "gid":52,
                  "height":600,
                  "id":174,
                  "name":"forest_bottom_bg",
@@ -198,6 +126,78 @@
                  "width":720,
                  "x":276.068845098528,
                  "y":602.989440425709
+                }, 
+                {
+                 "gid":43,
+                 "height":600,
+                 "id":175,
+                 "name":"forest_vertical_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":36,
+                 "x":253.498771498772,
+                 "y":600.36855036855
+                }, 
+                {
+                 "gid":44,
+                 "height":180,
+                 "id":176,
+                 "name":"forest_drain_wall_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":132,
+                 "x":289.039402737453,
+                 "y":601.406055578598
+                }, 
+                {
+                 "gid":45,
+                 "height":132,
+                 "id":177,
+                 "name":"forest_drain_wall_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":132,
+                 "x":762.626532580245,
+                 "y":600.164485466318
+                }, 
+                {
+                 "gid":47,
+                 "height":600,
+                 "id":178,
+                 "name":"forest_plunger_chute",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":198,
+                 "x":817.395810762008,
+                 "y":599.747201155652
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2615,7 +2615,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":175,
+ "nextobjectid":179,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2644,7 +2644,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":41,
+         "tilecount":45,
          "tileheight":600,
          "tiles":[
                 {
@@ -3239,12 +3239,36 @@
                  "imageheight":96,
                  "imagewidth":96,
                  "type":"sputnik"
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/img\/tables\/forest_vertical_wall.png",
+                 "imageheight":600,
+                 "imagewidth":36
+                }, 
+                {
+                 "id":43,
+                 "image":"..\/img\/tables\/forest_drain_wall_left.png",
+                 "imageheight":180,
+                 "imagewidth":132
+                }, 
+                {
+                 "id":44,
+                 "image":"..\/img\/tables\/forest_drain_wall_right.png",
+                 "imageheight":132,
+                 "imagewidth":132
+                }, 
+                {
+                 "id":46,
+                 "image":"..\/img\/tables\/forest_plunger_chute.png",
+                 "imageheight":600,
+                 "imagewidth":198
                 }],
-         "tilewidth":197
+         "tilewidth":198
         }, 
         {
          "columns":0,
-         "firstgid":43,
+         "firstgid":48,
          "grid":
             {
              "height":1,
@@ -3291,7 +3315,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":48,
+         "firstgid":53,
          "grid":
             {
              "height":1,

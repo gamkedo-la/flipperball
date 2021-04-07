@@ -111,7 +111,6 @@ function loadImages() {
         {imgName: "cloud_6", theFile: "tables/cloud_6.png"},
         {imgName: "cloud_7", theFile: "tables/cloud_7.png"},
         {imgName: "space_bottom_bg", theFile: "tables/space_bottom_bg.png"},
-        {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},
         {imgName: "expanding_star", theFile: "tables/expanding_star.png"},
         {imgName: "expanding_star_anim", theFile: "animations/expanding_star_anim.png"},
         {imgName: "expanding_star_2", theFile: "tables/expanding_star_2.png"},
@@ -227,6 +226,12 @@ function loadImages() {
         { imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
         { imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png"},
 
+        //Forest Table Sprites
+        {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},
+        {imgName: "forest_vertical_wall", theFile: "tables/forest_vertical_wall.png"},
+        {imgName: "forest_drain_wall_left", theFile: "tables/forest_drain_wall_left.png"},
+        {imgName: "forest_drain_wall_right", theFile: "tables/forest_drain_wall_right.png"},
+        {imgName: "forest_plunger_chute", theFile: "tables/forest_plunger_chute.png"},
         
     ];
 
