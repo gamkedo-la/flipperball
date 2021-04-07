@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="179">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="181">
  <editorsettings>
   <export target="../../tables/forest.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="45" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="47" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -273,8 +273,14 @@
   <tile id="46">
    <image width="198" height="600" source="../../img/tables/forest_plunger_chute.png"/>
   </tile>
+  <tile id="47">
+   <image width="138" height="132" source="../../img/tables/forest_angled_wall_5.png"/>
+  </tile>
+  <tile id="48">
+   <image width="138" height="132" source="../../img/tables/forest_angled_wall_6.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="48" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="50" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -292,7 +298,7 @@
    <image width="720" height="600" source="../img/backgrounds/forest_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="53" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="55" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -314,20 +320,10 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="78" name="angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="79" name="angled_wall_6" type="wall" gid="25" x="754.667" y="74" width="140" height="142">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
   <object id="171" name="rocket" gid="40" x="537" y="369.333" width="96" height="96"/>
   <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
   <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
-  <object id="174" name="forest_bottom_bg" gid="52" x="276.069" y="602.989" width="720" height="600" visible="0">
+  <object id="174" name="forest_bottom_bg" gid="54" x="276.069" y="602.989" width="720" height="600" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
    </properties>
@@ -348,6 +344,16 @@
    </properties>
   </object>
   <object id="178" name="forest_plunger_chute" type="wall" gid="47" x="817.396" y="599.747" width="198" height="600">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="179" name="forest_angled_wall_5" type="wall" gid="48" x="288" y="57.6667" width="138" height="132">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="180" name="forest_angled_wall_6" type="wall" gid="49" x="755.182" y="49.0909" width="138" height="132">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -464,55 +470,6 @@
    <properties>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
-   </properties>
-  </object>
-  <object id="122" name="small_star" gid="37" x="360" y="16.3333" width="5" height="5"/>
-  <object id="123" name="small_star" gid="37" x="337.333" y="106.333" width="5" height="5"/>
-  <object id="124" name="small_star" gid="37" x="496" y="118.333" width="5" height="5"/>
-  <object id="125" name="small_star" gid="37" x="604" y="37.6667" width="5" height="5"/>
-  <object id="126" name="small_star" gid="37" x="770" y="41" width="5" height="5"/>
-  <object id="127" name="small_star" gid="37" x="806" y="153.667" width="5" height="5"/>
-  <object id="128" name="small_star" gid="37" x="864.667" y="199" width="5" height="5"/>
-  <object id="129" name="small_star" gid="37" x="716.667" y="259" width="5" height="5"/>
-  <object id="130" name="small_star" gid="37" x="776.667" y="376.333" width="5" height="5"/>
-  <object id="131" name="small_star" gid="37" x="869.333" y="386.333" width="5" height="5"/>
-  <object id="132" name="small_star" gid="37" x="664.667" y="414.333" width="5" height="5"/>
-  <object id="133" name="small_star" gid="37" x="460" y="427" width="5" height="5"/>
-  <object id="134" name="small_star" gid="37" x="330" y="488.333" width="5" height="5"/>
-  <object id="135" name="small_star" gid="37" x="435.333" y="571.667" width="5" height="5"/>
-  <object id="136" name="small_star" gid="37" x="329.333" y="573.667" width="5" height="5"/>
-  <object id="137" name="small_star" gid="37" x="598.667" y="573.667" width="5" height="5"/>
-  <object id="138" name="small_star" gid="37" x="853.333" y="580.333" width="5" height="5"/>
-  <object id="139" name="tiny_star" gid="36" x="716.667" y="17" width="1" height="1"/>
-  <object id="140" name="tiny_star" gid="36" x="830.667" y="38.3333" width="1" height="1"/>
-  <object id="141" name="tiny_star" gid="36" x="780.667" y="89.6667" width="1" height="1"/>
-  <object id="142" name="tiny_star" gid="36" x="662.667" y="82.3333" width="1" height="1"/>
-  <object id="143" name="tiny_star" gid="36" x="676.667" y="169.667" width="1" height="1"/>
-  <object id="144" name="tiny_star" gid="36" x="564.667" y="169.667" width="1" height="1"/>
-  <object id="145" name="tiny_star" gid="36" x="499.333" y="169.667" width="1" height="1"/>
-  <object id="146" name="tiny_star" gid="36" x="496" y="31" width="1" height="1"/>
-  <object id="147" name="tiny_star" gid="36" x="424.667" y="49" width="1" height="1"/>
-  <object id="148" name="tiny_star" gid="36" x="354" y="131.667" width="1" height="1"/>
-  <object id="149" name="tiny_star" gid="36" x="316" y="137.667" width="1" height="1"/>
-  <object id="150" name="tiny_star" gid="36" x="506" y="225.667" width="1" height="1"/>
-  <object id="151" name="tiny_star" gid="36" x="490.667" y="287" width="1" height="1"/>
-  <object id="152" name="tiny_star" gid="36" x="568" y="346.333" width="1" height="1"/>
-  <object id="153" name="tiny_star" gid="36" x="690" y="329.667" width="1" height="1"/>
-  <object id="154" name="tiny_star" gid="36" x="713.333" y="404.333" width="1" height="1"/>
-  <object id="155" name="tiny_star" gid="36" x="855.333" y="462.333" width="1" height="1"/>
-  <object id="156" name="tiny_star" gid="36" x="551.333" y="453.667" width="1" height="1"/>
-  <object id="157" name="tiny_star" gid="36" x="508.667" y="475" width="1" height="1"/>
-  <object id="158" name="tiny_star" gid="36" x="693.333" y="475" width="1" height="1"/>
-  <object id="159" name="tiny_star" gid="36" x="312" y="259.667" width="1" height="1"/>
-  <object id="160" name="tiny_star" gid="36" x="310" y="366.333" width="1" height="1"/>
-  <object id="161" name="tiny_star" gid="36" x="633.333" y="510.333" width="1" height="1"/>
-  <object id="162" name="tiny_star" gid="36" x="471.333" y="586.333" width="1" height="1"/>
-  <object id="163" name="tiny_star" gid="36" x="716" y="581.667" width="1" height="1"/>
-  <object id="167" name="expanding_star" type="star" gid="39" x="433.556" y="191.328" width="20" height="20">
-   <properties>
-    <property name="xVelocity" type="int" value="0"/>
-    <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="-80"/>
    </properties>
   </object>
  </objectgroup>
