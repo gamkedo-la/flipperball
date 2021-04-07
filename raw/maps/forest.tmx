@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="181">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="185">
  <editorsettings>
   <export target="../../tables/forest.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="47" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="50" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -279,8 +279,17 @@
   <tile id="48">
    <image width="138" height="132" source="../../img/tables/forest_angled_wall_6.png"/>
   </tile>
+  <tile id="49">
+   <image width="78" height="270" source="../../img/tables/forest_drain_rail_left.png"/>
+  </tile>
+  <tile id="50">
+   <image width="78" height="270" source="../../img/tables/forest_drain_rail_right.png"/>
+  </tile>
+  <tile id="51">
+   <image width="54" height="186" source="../../img/tables/forest_flipper_bumper_left.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="50" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="53" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -298,7 +307,7 @@
    <image width="720" height="600" source="../img/backgrounds/forest_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="55" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="58" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -320,10 +329,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="171" name="rocket" gid="40" x="537" y="369.333" width="96" height="96"/>
-  <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
-  <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
-  <object id="174" name="forest_bottom_bg" gid="54" x="276.069" y="602.989" width="720" height="600" visible="0">
+  <object id="174" name="forest_bottom_bg" gid="57" x="276.069" y="602.989" width="720" height="600" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
    </properties>
@@ -381,22 +387,7 @@
     <property name="zOrder" type="int" value="50"/>
    </properties>
   </object>
-  <object id="30" name="flipper_bumper_left" type="flipper_bumper" gid="17" x="373" y="430.5" width="55" height="186">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
   <object id="31" name="flipper_bumper_right" type="flipper_bumper" gid="18" x="748.5" y="442" width="55" height="186">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="48" name="drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270">
-   <properties>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="49" name="drain_rail_left" type="wall" gid="19" x="326.636" y="508.182" width="82" height="270">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -472,11 +463,26 @@
     <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
+  <object id="181" name="forest_drain_rail_left" type="wall" gid="50" x="325" y="507" width="78" height="270">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="183" name="forest_drain_rail_right" type="wall" gid="51" x="775.5" y="517" width="78" height="270">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="184" name="forest_flipper_bumper_left" type="flipper_bumper" gid="52" x="368" y="431.5" width="54" height="186">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">
    <properties>
-    <property name="dynObjConn" type="object" value="30"/>
+    <property name="dynObjConn" type="object" value="184"/>
    </properties>
    <polygon points="0.75,3.76136 0.875,134.75 3.875,138.375 45.25,178.125 55.25,172.75 19.3636,0.659091"/>
   </object>
@@ -509,13 +515,13 @@
   </object>
   <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="248.75">
    <properties>
-    <property name="dynObjConn" type="object" value="48"/>
+    <property name="dynObjConn" type="object" value="183"/>
    </properties>
    <polygon points="1.66667,-1.66667 -10.5,1.16667 -12.75,166.159 -90.9546,227.909 -50.7954,265.25 -0.25,169.159"/>
   </object>
   <object id="52" name="drain_rail_left" type="drain_divider" x="328" y="237.182">
    <properties>
-    <property name="dynObjConn" type="object" value="49"/>
+    <property name="dynObjConn" type="object" value="181"/>
    </properties>
    <polygon points="0,-0.666667 1.5,172.864 62.7955,277.318 96.9318,235.159 15.4318,165.341 14.8182,2.30303"/>
   </object>
@@ -596,13 +602,13 @@
   </object>
   <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="244.417" width="19" height="19">
    <properties>
-    <property name="dynObjConn" type="object" value="30"/>
+    <property name="dynObjConn" type="object" value="184"/>
    </properties>
    <ellipse/>
   </object>
   <object id="106" name="flipper_bumper_left" type="flipper_bumper" x="415.375" y="418" width="12" height="12">
    <properties>
-    <property name="dynObjConn" type="object" value="30"/>
+    <property name="dynObjConn" type="object" value="184"/>
    </properties>
    <ellipse/>
   </object>

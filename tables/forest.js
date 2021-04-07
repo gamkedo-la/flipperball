@@ -26,55 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":40,
-                 "height":96,
-                 "id":171,
-                 "name":"rocket",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"rocket",
-                 "visible":true,
-                 "width":96,
-                 "x":537,
-                 "y":369.333
-                }, 
-                {
-                 "gid":41,
-                 "height":96,
-                 "id":172,
-                 "name":"shuttle",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"shuttle",
-                 "visible":true,
-                 "width":96,
-                 "x":288.667,
-                 "y":238.667
-                }, 
-                {
-                 "gid":42,
-                 "height":96,
-                 "id":173,
-                 "name":"sputnik",
-                 "rotation":0,
-                 "type":"sputnik",
-                 "visible":true,
-                 "width":96,
-                 "x":724,
-                 "y":103.333
-                }, 
-                {
-                 "gid":54,
+                 "gid":57,
                  "height":600,
                  "id":174,
                  "name":"forest_bottom_bg",
@@ -288,24 +240,6 @@
                  "y":290.333
                 }, 
                 {
-                 "gid":17,
-                 "height":186,
-                 "id":30,
-                 "name":"flipper_bumper_left",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"flipper_bumper",
-                 "visible":true,
-                 "width":55,
-                 "x":373,
-                 "y":430.5
-                }, 
-                {
                  "gid":18,
                  "height":186,
                  "id":31,
@@ -322,42 +256,6 @@
                  "width":55,
                  "x":748.5,
                  "y":442
-                }, 
-                {
-                 "gid":20,
-                 "height":270,
-                 "id":48,
-                 "name":"drain_rail_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":82,
-                 "x":770,
-                 "y":520
-                }, 
-                {
-                 "gid":19,
-                 "height":270,
-                 "id":49,
-                 "name":"drain_rail_left",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":82,
-                 "x":326.636,
-                 "y":508.182
                 }, 
                 {
                  "gid":23,
@@ -636,6 +534,60 @@
                  "width":26.5455,
                  "x":802.727,
                  "y":334.227
+                }, 
+                {
+                 "gid":50,
+                 "height":270,
+                 "id":181,
+                 "name":"forest_drain_rail_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":78,
+                 "x":325,
+                 "y":507
+                }, 
+                {
+                 "gid":51,
+                 "height":270,
+                 "id":183,
+                 "name":"forest_drain_rail_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":78,
+                 "x":775.5,
+                 "y":517
+                }, 
+                {
+                 "gid":52,
+                 "height":186,
+                 "id":184,
+                 "name":"forest_flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":54,
+                 "x":368,
+                 "y":431.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -681,7 +633,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":30
+                         "value":184
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -903,7 +855,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":48
+                         "value":183
                         }],
                  "rotation":0,
                  "type":"drain_divider",
@@ -945,7 +897,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":49
+                         "value":181
                         }],
                  "rotation":0,
                  "type":"drain_divider",
@@ -1299,7 +1251,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":30
+                         "value":184
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1317,7 +1269,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":30
+                         "value":184
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1411,7 +1363,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":181,
+ "nextobjectid":185,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1440,7 +1392,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":47,
+         "tilecount":50,
          "tileheight":600,
          "tiles":[
                 {
@@ -2071,12 +2023,30 @@
                  "image":"..\/img\/tables\/forest_angled_wall_6.png",
                  "imageheight":132,
                  "imagewidth":138
+                }, 
+                {
+                 "id":49,
+                 "image":"..\/img\/tables\/forest_drain_rail_left.png",
+                 "imageheight":270,
+                 "imagewidth":78
+                }, 
+                {
+                 "id":50,
+                 "image":"..\/img\/tables\/forest_drain_rail_right.png",
+                 "imageheight":270,
+                 "imagewidth":78
+                }, 
+                {
+                 "id":51,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_left.png",
+                 "imageheight":186,
+                 "imagewidth":54
                 }],
          "tilewidth":198
         }, 
         {
          "columns":0,
-         "firstgid":50,
+         "firstgid":53,
          "grid":
             {
              "height":1,
@@ -2123,7 +2093,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":55,
+         "firstgid":58,
          "grid":
             {
              "height":1,
