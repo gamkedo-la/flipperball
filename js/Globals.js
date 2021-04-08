@@ -254,6 +254,18 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: false
 	},
+	FOREST_FLIPPER_BUMPER: {
+		imageNames: {
+			"forest_flipper_bumper_right": "forest_flipper_bumper_right_anim",
+			"forest_flipper_bumper_left": "forest_flipper_bumper_left_anim"		
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+		frameWidth: 57,
+		frameHeight: 186,
+		frameTimes: [64],
+		reverses: false,
+		loops: false
+	},
 	WING_BUMPER: {
 		imageNames: {
 			"wing_bumper_right": "wing_bumper_right_anim",

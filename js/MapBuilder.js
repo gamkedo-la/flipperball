@@ -102,10 +102,18 @@ function MapBuilder (tableName = selected_table) {
             } else if ((obj.type === 'left_flipper') || (obj.type === 'right_flipper')) {
                 self.flippers.push(new Flipper(obj, bodyData));
             } else if (obj.type === ENTITY_TYPE.FlipperBumper) {
-                const newGameObject = new FlipperBumper(obj, bodyData, {
-                    ...ANIMATIONS.FLIPPER_BUMPER,
-                    animationSpritesheet: images[ANIMATIONS.FLIPPER_BUMPER.imageNames[obj.name]],
-                });
+                var newGameObject = null;
+                if(obj.name.includes("forest")){
+                    newGameObject = new FlipperBumper(obj, bodyData, {
+                        ...ANIMATIONS.FOREST_FLIPPER_BUMPER,
+                        animationSpritesheet: images[ANIMATIONS.FOREST_FLIPPER_BUMPER.imageNames[obj.name]],
+                    });
+                }else{
+                    newGameObject = new FlipperBumper(obj, bodyData, {
+                        ...ANIMATIONS.FLIPPER_BUMPER,
+                        animationSpritesheet: images[ANIMATIONS.FLIPPER_BUMPER.imageNames[obj.name]],
+                    });
+            }
                 result.push(newGameObject);
             } else if (obj.type === ENTITY_TYPE.WingBumper) {
                 const newGameObject = new FlipperBumper(obj, bodyData, {

@@ -238,7 +238,8 @@ function loadImages() {
         {imgName: "forest_drain_rail_right", theFile: "tables/forest_drain_rail_right.png"},
         {imgName: "forest_flipper_bumper_left", theFile: "tables/forest_flipper_bumper_left_v2.png"},
         {imgName: "forest_flipper_bumper_right", theFile: "tables/forest_flipper_bumper_right_v2.png"},
-        //{imgName: "flipper_bumper_left_anim", theFile: "animations/flipper_bumper_left_anim.png"},
+        {imgName: "forest_flipper_bumper_left_anim", theFile: "animations/forest_flipper_bumper_left_anim.png"},
+        {imgName: "forest_flipper_bumper_right_anim", theFile: "animations/forest_flipper_bumper_right_anim.png"},
         
     ];
 
