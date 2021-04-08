@@ -228,6 +228,7 @@ function loadImages() {
 
         //Forest Table Sprites
         {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},
+        {imgName: "forest_top_bg", theFile: "tables/forest_top_bg.png"},
         {imgName: "forest_vertical_wall", theFile: "tables/forest_vertical_wall.png"},
         {imgName: "forest_drain_wall_left", theFile: "tables/forest_drain_wall_left.png"},
         {imgName: "forest_drain_wall_right", theFile: "tables/forest_drain_wall_right.png"},
