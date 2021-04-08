@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":57,
+                 "gid":59,
                  "height":600,
                  "id":174,
                  "name":"forest_bottom_bg",
@@ -131,7 +131,7 @@
                  "visible":true,
                  "width":138,
                  "x":288,
-                 "y":57.6666666666667
+                 "y":57.6667
                 }, 
                 {
                  "gid":49,
@@ -148,8 +148,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":138,
-                 "x":755.181818181818,
-                 "y":49.0909090909091
+                 "x":755.182,
+                 "y":49.0909
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -238,24 +238,6 @@
                  "width":26,
                  "x":931.667,
                  "y":290.333
-                }, 
-                {
-                 "gid":18,
-                 "height":186,
-                 "id":31,
-                 "name":"flipper_bumper_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"flipper_bumper",
-                 "visible":true,
-                 "width":55,
-                 "x":748.5,
-                 "y":442
                 }, 
                 {
                  "gid":23,
@@ -572,9 +554,9 @@
                  "y":517
                 }, 
                 {
-                 "gid":52,
+                 "gid":53,
                  "height":186,
-                 "id":184,
+                 "id":185,
                  "name":"forest_flipper_bumper_left",
                  "properties":[
                         {
@@ -585,9 +567,27 @@
                  "rotation":0,
                  "type":"flipper_bumper",
                  "visible":true,
-                 "width":54,
-                 "x":368,
-                 "y":431.5
+                 "width":57,
+                 "x":374.262109663142,
+                 "y":430.349397590361
+                }, 
+                {
+                 "gid":54,
+                 "height":186,
+                 "id":186,
+                 "name":"forest_flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":57,
+                 "x":748.001967051881,
+                 "y":441.168182935825
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -633,7 +633,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":184
+                         "value":185
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -979,7 +979,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":31
+                         "value":186
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1251,7 +1251,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":184
+                         "value":185
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1269,7 +1269,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":184
+                         "value":185
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1287,7 +1287,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":31
+                         "value":186
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1305,7 +1305,7 @@
                         {
                          "name":"dynObjConn",
                          "type":"object",
-                         "value":31
+                         "value":186
                         }],
                  "rotation":0,
                  "type":"flipper_bumper",
@@ -1363,7 +1363,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":185,
+ "nextobjectid":187,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1377,7 +1377,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.4.3",
  "tileheight":10,
  "tilesets":[
         {
@@ -1392,7 +1392,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":50,
+         "tilecount":52,
          "tileheight":600,
          "tiles":[
                 {
@@ -2041,12 +2041,24 @@
                  "image":"..\/img\/tables\/forest_flipper_bumper_left.png",
                  "imageheight":186,
                  "imagewidth":54
+                }, 
+                {
+                 "id":52,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_v2.png",
+                 "imageheight":186,
+                 "imagewidth":57
+                }, 
+                {
+                 "id":53,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_right_v2.png",
+                 "imageheight":186,
+                 "imagewidth":57
                 }],
          "tilewidth":198
         }, 
         {
          "columns":0,
-         "firstgid":53,
+         "firstgid":55,
          "grid":
             {
              "height":1,
@@ -2093,7 +2105,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":58,
+         "firstgid":60,
          "grid":
             {
              "height":1,
@@ -2149,6 +2161,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.5,
+ "version":1.4,
  "width":100
 });
