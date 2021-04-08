@@ -116,7 +116,7 @@
                  "y":407
                 }, 
                 {
-                 "gid":30,
+                 "gid":31,
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
@@ -134,43 +134,7 @@
                  "y":90
                 }, 
                 {
-                 "gid":22,
-                 "height":598,
-                 "id":110,
-                 "name":"chute_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":34,
-                 "x":966,
-                 "y":597.5
-                }, 
-                {
-                 "gid":22,
-                 "height":598,
-                 "id":111,
-                 "name":"chute_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":34,
-                 "x":894,
-                 "y":725
-                }, 
-                {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -206,7 +170,7 @@
                  "y":680
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -224,7 +188,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -242,7 +206,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -260,7 +224,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -283,7 +247,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -306,7 +270,7 @@
                  "y":276.5
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":600,
                  "id":212,
                  "name":"forest_top_bg",
@@ -320,8 +284,44 @@
                  "type":"",
                  "visible":false,
                  "width":720,
-                 "x":277.634695876748,
-                 "y":600.115771662659
+                 "x":277.635,
+                 "y":600.116
+                }, 
+                {
+                 "gid":25,
+                 "height":598,
+                 "id":213,
+                 "name":"forest_chute_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":34,
+                 "x":894.333333333333,
+                 "y":725.666666666667
+                }, 
+                {
+                 "gid":25,
+                 "height":598,
+                 "id":214,
+                 "name":"forest_chute_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":34,
+                 "x":968,
+                 "y":599
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -425,7 +425,7 @@
                  "y":127
                 }, 
                 {
-                 "gid":31,
+                 "gid":32,
                  "height":54,
                  "id":91,
                  "name":"ball_catch",
@@ -1131,7 +1131,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":213,
+ "nextobjectid":215,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1145,7 +1145,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.5.0",
  "tileheight":10,
  "tilesets":[
         {
@@ -1160,7 +1160,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":24,
+         "tilecount":25,
          "tileheight":600,
          "tiles":[
                 {
@@ -1462,12 +1462,18 @@
                  "imageheight":26,
                  "imagewidth":5,
                  "type":"trigger"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/forest_chute_wall.png",
+                 "imageheight":598,
+                 "imagewidth":34
                 }],
          "tilewidth":598
         }, 
         {
          "columns":0,
-         "firstgid":25,
+         "firstgid":26,
          "grid":
             {
              "height":1,
@@ -1861,7 +1867,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":50,
+         "firstgid":51,
          "grid":
             {
              "height":1,
@@ -1917,6 +1923,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.4,
+ "version":1.5,
  "width":100
 });

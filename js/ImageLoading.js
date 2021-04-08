@@ -233,6 +233,7 @@ function loadImages() {
         {imgName: "forest_drain_wall_left", theFile: "tables/forest_drain_wall_left.png"},
         {imgName: "forest_drain_wall_right", theFile: "tables/forest_drain_wall_right.png"},
         {imgName: "forest_plunger_chute", theFile: "tables/forest_plunger_chute.png"},
+        {imgName: "forest_chute_wall", theFile: "tables/forest_chute_wall.png"},
         {imgName: "forest_angled_wall_5", theFile: "tables/forest_angled_wall_5.png"},
         {imgName: "forest_angled_wall_6", theFile: "tables/forest_angled_wall_6.png"},
         {imgName: "forest_drain_rail_left", theFile: "tables/forest_drain_rail_left.png"},
