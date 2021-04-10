@@ -306,18 +306,6 @@
                  "y":276.5
                 }, 
                 {
-                 "gid":51,
-                 "height":92,
-                 "id":216,
-                 "name":"jupiter",
-                 "rotation":0,
-                 "type":"jupiter",
-                 "visible":true,
-                 "width":94,
-                 "x":469,
-                 "y":122
-                }, 
-                {
                  "gid":48,
                  "height":128,
                  "id":217,
@@ -338,7 +326,7 @@
                  "visible":true,
                  "width":128,
                  "x":316,
-                 "y":218.666666666667
+                 "y":218.667
                 }, 
                 {
                  "gid":49,
@@ -349,7 +337,7 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":653.333333333333,
+                 "x":653.333,
                  "y":100.5
                 }, 
                 {
@@ -362,7 +350,7 @@
                  "visible":true,
                  "width":24,
                  "x":792,
-                 "y":157.833333333333
+                 "y":157.833
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1388,6 +1376,29 @@
                  "width":5,
                  "x":853.333,
                  "y":71.6667
+                }, 
+                {
+                 "gid":51,
+                 "height":92,
+                 "id":221,
+                 "name":"jupiter",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"jupiter",
+                 "visible":true,
+                 "width":94,
+                 "x":469,
+                 "y":122.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2060,15 +2071,33 @@
                  "width":40,
                  "x":291.607,
                  "y":189.394
+                }, 
+                {
+                 "ellipse":true,
+                 "height":90,
+                 "id":220,
+                 "name":"jupiter",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":221
+                        }],
+                 "rotation":0,
+                 "type":"jupiter",
+                 "visible":true,
+                 "width":90,
+                 "x":471.5,
+                 "y":31.5
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":220,
+ "nextobjectid":222,
  "orientation":"orthogonal",
  "properties":[
         {

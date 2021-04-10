@@ -325,6 +325,17 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: true
 	},
+	JUPITER: {
+		imageNames: {
+			"jupiter": "jupiter_anim"
+		},
+		frames: [1, 2, 3, 4, 5, 6, 7, 8],
+		frameWidth: 94,
+		frameHeight: 92,
+		frameTimes: [128, 128, 128, 128, 512, 128, 128, 128],
+		reverses: false,
+		loops: false
+	},
 	PLUNGER_RELEASE: {
 		imageNames: {
 			"plunger": "plunger_anim"

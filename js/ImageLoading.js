@@ -195,6 +195,7 @@ function loadImages() {
         {imgName: "earth", theFile: "tables/earth.png"},
         {imgName: "mars", theFile: "tables/mars.png"},
         {imgName: "jupiter", theFile: "tables/jupiter.png"},
+        {imgName: "jupiter_anim", theFile: "animations/jupiter_anim.png"},
         {imgName: "saturn", theFile: "tables/saturn.png"},
         {imgName: "shuttle", theFile: "tables/space_shuttle.png"},
         {imgName: "sputnik", theFile: "tables/sputniksatellite.png"},

@@ -620,6 +620,12 @@ function GameScene() {
                     otherEntity.animate(0);
                 }
                 break;
+            case ENTITY_TYPE.Jupiter:
+                //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
+                if (otherEntity.hasAnimation) {
+                    otherEntity.animate(0);
+                }
+                break;
             case ENTITY_TYPE.SideDrainBumper:
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);

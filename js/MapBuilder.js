@@ -188,6 +188,12 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.SIDE_DRAIN_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newBumper);
+                } else if (obj.type === ENTITY_TYPE.Jupiter) {
+                    const newJupiter = new Jupiter(obj, bodyData, {
+                        ...ANIMATIONS.JUPITER,
+                        animationSpritesheet: images[ANIMATIONS.JUPITER.imageNames[obj.name]],
+                    });
+                    result.push(newJupiter);
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
                         result.push(new Cloud(self.minX, self.maxX, obj, null));
