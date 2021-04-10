@@ -100,8 +100,8 @@ const TABLES = {
 };
 
 // Set these to easily test new table designs
-const DEFAULT_TABLE = TABLES.Vam;
-const DEFAULT_TABLE_TOP = TABLES.VamTop;
+const DEFAULT_TABLE = TABLES.Prototype;
+const DEFAULT_TABLE_TOP = TABLES.PrototypeTop;
 var selected_table = DEFAULT_TABLE;
 var selected_top_table = DEFAULT_TABLE_TOP;
 

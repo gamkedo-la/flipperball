@@ -3,7 +3,7 @@
 function TableSelectionScene() {
     let selectorPositionsIndex = 0;
     const SELECTIONS = [
-        {selectionName: "Prototype",
+        {selectionName: "Clouds",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Prototype,
         topTable: TABLES.PrototypeTop},
@@ -94,8 +94,6 @@ function TableSelectionScene() {
         drawSelection();
         
 	}
-	
-    
 	
 	const drawBG = function() {
         const PADDING = 35;
