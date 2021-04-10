@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="215">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="221">
  <editorsettings>
   <export target="../../tables/forest_top.js" format="js"/>
  </editorsettings>
@@ -151,7 +151,7 @@
    <image width="34" height="598" source="../../img/tables/forest_chute_wall.png"/>
   </tile>
  </tileset>
- <tileset firstgid="26" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="25" columns="0">
+ <tileset firstgid="26" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="30" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -315,8 +315,23 @@
   <tile id="24">
    <image width="720" height="600" source="../../img/tables/forest_top_bg.png"/>
   </tile>
+  <tile id="25">
+   <image width="52" height="52" source="../../img/tables/forest_angled_wall_3.png"/>
+  </tile>
+  <tile id="26">
+   <image width="598" height="14" source="../../img/tables/forest_horizontal_wall.png"/>
+  </tile>
+  <tile id="27">
+   <image width="36" height="600" source="../../img/tables/forest_vertical_wall.png"/>
+  </tile>
+  <tile id="28">
+   <image width="132" height="132" source="../../img/tables/forest_drain_wall_right.png"/>
+  </tile>
+  <tile id="30">
+   <image width="60" height="96" source="../../img/tables/forest_angled_wall_4.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="51" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="57" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
    <properties>
@@ -338,23 +353,17 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
-  <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
-  <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
-  <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
-  <object id="70" name="angled_wall_3" gid="10" x="854" y="407" width="52" height="52"/>
   <object id="92" name="ball_catch_arrow" gid="31" x="350" y="90" width="24" height="24"/>
-  <object id="137" name="habitrail_small_track" gid="52" x="348" y="552" width="42" height="75" rotation="310"/>
-  <object id="168" name="drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
-  <object id="170" name="habitrail_small_track" gid="52" x="291" y="503" width="42" height="75"/>
-  <object id="171" name="habitrail_small_track" gid="52" x="291" y="427.5" width="42" height="75"/>
-  <object id="172" name="habitrail_small_track" gid="52" x="291" y="352" width="42" height="75"/>
-  <object id="173" name="habitrail_gateway" type="habitrail" gid="51" x="405" y="600" width="42" height="75" rotation="310">
+  <object id="137" name="habitrail_small_track" gid="58" x="348" y="552" width="42" height="75" rotation="310"/>
+  <object id="170" name="habitrail_small_track" gid="58" x="291" y="503" width="42" height="75"/>
+  <object id="171" name="habitrail_small_track" gid="58" x="291" y="427.5" width="42" height="75"/>
+  <object id="172" name="habitrail_small_track" gid="58" x="291" y="352" width="42" height="75"/>
+  <object id="173" name="habitrail_gateway" type="habitrail" gid="57" x="405" y="600" width="42" height="75" rotation="310">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="174" name="habitrail_gateway" gid="52" x="291" y="276.5" width="42" height="75">
+  <object id="174" name="habitrail_gateway" gid="58" x="291" y="276.5" width="42" height="75">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
@@ -370,6 +379,36 @@
    </properties>
   </object>
   <object id="214" name="forest_chute_wall" type="wall" gid="25" x="968" y="599" width="34" height="598">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="215" name="forest_angled_wall_3" type="wall" gid="51" x="853.25" y="406.75" width="52" height="52">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="216" name="forest_horizontal_wall" type="wall" gid="52" x="277.667" y="12.33" width="598" height="14">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="217" name="forest_horizontal_wall" type="wall" gid="52" x="389" y="12.3333" width="598" height="14">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="218" name="forest_vertical_wall" type="wall" gid="53" x="253.333" y="601.333" width="36" height="600">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="219" name="forest_drain_wall_right" type="wall" gid="54" x="766" y="616.667" width="132" height="132">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="220" name="forest_angled_wall_4" type="wall" gid="56" x="910" y="108" width="60" height="96">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>

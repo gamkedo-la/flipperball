@@ -26,96 +26,6 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":7,
-                 "height":598,
-                 "id":26,
-                 "name":"vertical_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":14,
-                 "x":276,
-                 "y":598
-                }, 
-                {
-                 "gid":11,
-                 "height":86,
-                 "id":59,
-                 "name":"angled_wall_4",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":914,
-                 "y":100.333
-                }, 
-                {
-                 "gid":21,
-                 "height":14,
-                 "id":61,
-                 "name":"horizontal_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":598,
-                 "x":388,
-                 "y":14
-                }, 
-                {
-                 "gid":21,
-                 "height":14,
-                 "id":62,
-                 "name":"horizontal_wall",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":598,
-                 "x":278,
-                 "y":14
-                }, 
-                {
-                 "gid":10,
-                 "height":52,
-                 "id":70,
-                 "name":"angled_wall_3",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":52,
-                 "x":854,
-                 "y":407
-                }, 
-                {
                  "gid":31,
                  "height":24,
                  "id":92,
@@ -134,7 +44,7 @@
                  "y":90
                 }, 
                 {
-                 "gid":52,
+                 "gid":58,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -152,25 +62,7 @@
                  "y":552
                 }, 
                 {
-                 "gid":6,
-                 "height":195,
-                 "id":168,
-                 "name":"drain_wall_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":197,
-                 "x":698.5,
-                 "y":680
-                }, 
-                {
-                 "gid":52,
+                 "gid":58,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -188,7 +80,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":52,
+                 "gid":58,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -206,7 +98,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":52,
+                 "gid":58,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -224,7 +116,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":51,
+                 "gid":57,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -247,7 +139,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":52,
+                 "gid":58,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -302,8 +194,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":34,
-                 "x":894.333333333333,
-                 "y":725.666666666667
+                 "x":894.333,
+                 "y":725.667
                 }, 
                 {
                  "gid":25,
@@ -322,6 +214,114 @@
                  "width":34,
                  "x":968,
                  "y":599
+                }, 
+                {
+                 "gid":51,
+                 "height":52,
+                 "id":215,
+                 "name":"forest_angled_wall_3",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":52,
+                 "x":853.25,
+                 "y":406.75
+                }, 
+                {
+                 "gid":52,
+                 "height":14,
+                 "id":216,
+                 "name":"forest_horizontal_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":598,
+                 "x":277.666666666667,
+                 "y":12.33
+                }, 
+                {
+                 "gid":52,
+                 "height":14,
+                 "id":217,
+                 "name":"forest_horizontal_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":598,
+                 "x":389,
+                 "y":12.3333333333333
+                }, 
+                {
+                 "gid":53,
+                 "height":600,
+                 "id":218,
+                 "name":"forest_vertical_wall",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":36,
+                 "x":253.333333333333,
+                 "y":601.333333333333
+                }, 
+                {
+                 "gid":54,
+                 "height":132,
+                 "id":219,
+                 "name":"forest_drain_wall_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":132,
+                 "x":766,
+                 "y":616.666666666667
+                }, 
+                {
+                 "gid":56,
+                 "height":96,
+                 "id":220,
+                 "name":"forest_angled_wall_4",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":60,
+                 "x":910,
+                 "y":108
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1131,7 +1131,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":215,
+ "nextobjectid":221,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1483,7 +1483,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":25,
+         "tilecount":30,
          "tileheight":600,
          "tiles":[
                 {
@@ -1862,12 +1862,42 @@
                  "image":"..\/img\/tables\/forest_top_bg.png",
                  "imageheight":600,
                  "imagewidth":720
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/forest_angled_wall_3.png",
+                 "imageheight":52,
+                 "imagewidth":52
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/forest_horizontal_wall.png",
+                 "imageheight":14,
+                 "imagewidth":598
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/forest_vertical_wall.png",
+                 "imageheight":600,
+                 "imagewidth":36
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/forest_drain_wall_right.png",
+                 "imageheight":132,
+                 "imagewidth":132
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/img\/tables\/forest_angled_wall_4.png",
+                 "imageheight":96,
+                 "imagewidth":60
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":51,
+         "firstgid":57,
          "grid":
             {
              "height":1,
