@@ -245,6 +245,10 @@ function loadImages() {
         {imgName: "forest_flipper_bumper_right", theFile: "tables/forest_flipper_bumper_right_v2.png"},
         {imgName: "forest_flipper_bumper_left_anim", theFile: "animations/forest_flipper_bumper_left_anim.png"},
         {imgName: "forest_flipper_bumper_right_anim", theFile: "animations/forest_flipper_bumper_right_anim.png"},
+
+        //Aquarium Table Sprites
+        {imgName: "small_bubble", theFile: "tables/small_bubble.png"},
+
         
     ];
 
