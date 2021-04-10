@@ -142,7 +142,8 @@ const ENTITY_TYPE = {
 	Jupiter: 'jupiter',
 	Saturn: 'saturn',
 	Rocket: 'rocket',
-	Shuttle: 'shuttle'
+	Shuttle: 'shuttle',
+	Bubble: 'bubble',
 };
 
 const TRIGGER_TYPE = {
