@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="174">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="175">
  <editorsettings>
   <export target="../../tables/aquarium.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="41" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="42" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -261,8 +261,11 @@
   <tile id="41" type="sputnik">
    <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
   </tile>
+  <tile id="42" type="bubble">
+   <image width="5" height="5" source="../../img/tables/small_bubble.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="43" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="44" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -283,7 +286,7 @@
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="47" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="48" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -390,6 +393,7 @@
     <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
+  <object id="174" name="small_bubble" gid="43" x="698.276" y="352.399" width="5" height="5"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="372" y="250.5">

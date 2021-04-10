@@ -217,7 +217,10 @@ function MapBuilder (tableName = selected_table) {
                         result.push(newRocket);
                     } else if (obj.type === ENTITY_TYPE.Earth || obj.type === ENTITY_TYPE.Mars || obj.type === ENTITY_TYPE.Jupiter || obj.type === ENTITY_TYPE.Saturn || obj.type === ENTITY_TYPE.Shuttle) {
 
-                    } else {
+                    } else if (obj.type === ENTITY_TYPE.Bubble) {
+                        result.push(new Bubble(self.minY, self.maxY, obj, null));
+                    } 
+                    else {
                         result.push(new GameObject(obj, bodyData));
                     }
                 }
