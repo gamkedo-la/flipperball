@@ -335,10 +335,6 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="166" name="space_bottom_bg" gid="46" x="271.393" y="600.353" width="720" height="600" visible="0"/>
-  <object id="171" name="rocket" gid="40" x="537" y="369.333" width="96" height="96"/>
-  <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
-  <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
@@ -388,118 +384,10 @@
     <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
-  <object id="92" name="light_trigger" type="trigger" gid="21" x="570.959" y="130" width="2.68293" height="5.51376">
-   <properties>
-    <property name="score" type="int" value="25"/>
-    <property name="targ_light" type="object" value="91"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="94" name="light_trigger" type="trigger" gid="21" x="604.323" y="130" width="2.68293" height="5.51">
-   <properties>
-    <property name="score" type="int" value="25"/>
-    <property name="targ_light" type="object" value="90"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="97" name="light_trigger" type="trigger" gid="21" x="637.323" y="130" width="2.68293" height="5.51">
-   <properties>
-    <property name="score" type="int" value="25"/>
-    <property name="targ_light" type="object" value="89"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="89" name="letter_light" type="letter_light" gid="26" x="627.333" y="123" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="90" name="letter_light" type="letter_light" gid="26" x="594" y="123.333" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="91" name="letter_light" type="letter_light" gid="26" x="561.333" y="123" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="103" name="light_trigger" type="trigger" gid="21" x="538.073" y="130.375" width="2.68293" height="5.51">
-   <properties>
-    <property name="score" type="int" value="25"/>
-    <property name="targ_light" type="object" value="104"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="104" name="letter_light" type="letter_light" gid="26" x="528.083" y="123.375" width="24" height="24">
-   <properties>
-    <property name="bonus" type="object" value="119"/>
-    <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="119" name="bonus_light_2x" type="status_light" gid="35" x="572.636" y="399.364" width="24" height="24">
-   <properties>
-    <property name="bonusMult" type="int" value="2"/>
-    <property name="bonusTime" type="int" value="60"/>
-    <property name="requiredLights" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="802.727" y="334.227" width="26.5455" height="13.5454">
    <properties>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
-   </properties>
-  </object>
-  <object id="122" name="small_star" gid="37" x="360" y="16.3333" width="5" height="5"/>
-  <object id="123" name="small_star" gid="37" x="337.333" y="106.333" width="5" height="5"/>
-  <object id="124" name="small_star" gid="37" x="496" y="118.333" width="5" height="5"/>
-  <object id="125" name="small_star" gid="37" x="604" y="37.6667" width="5" height="5"/>
-  <object id="126" name="small_star" gid="37" x="770" y="41" width="5" height="5"/>
-  <object id="127" name="small_star" gid="37" x="806" y="153.667" width="5" height="5"/>
-  <object id="128" name="small_star" gid="37" x="864.667" y="199" width="5" height="5"/>
-  <object id="129" name="small_star" gid="37" x="716.667" y="259" width="5" height="5"/>
-  <object id="130" name="small_star" gid="37" x="776.667" y="376.333" width="5" height="5"/>
-  <object id="131" name="small_star" gid="37" x="869.333" y="386.333" width="5" height="5"/>
-  <object id="132" name="small_star" gid="37" x="664.667" y="414.333" width="5" height="5"/>
-  <object id="133" name="small_star" gid="37" x="460" y="427" width="5" height="5"/>
-  <object id="134" name="small_star" gid="37" x="330" y="488.333" width="5" height="5"/>
-  <object id="135" name="small_star" gid="37" x="435.333" y="571.667" width="5" height="5"/>
-  <object id="136" name="small_star" gid="37" x="329.333" y="573.667" width="5" height="5"/>
-  <object id="137" name="small_star" gid="37" x="598.667" y="573.667" width="5" height="5"/>
-  <object id="138" name="small_star" gid="37" x="853.333" y="580.333" width="5" height="5"/>
-  <object id="139" name="tiny_star" gid="36" x="716.667" y="17" width="1" height="1"/>
-  <object id="140" name="tiny_star" gid="36" x="830.667" y="38.3333" width="1" height="1"/>
-  <object id="141" name="tiny_star" gid="36" x="780.667" y="89.6667" width="1" height="1"/>
-  <object id="142" name="tiny_star" gid="36" x="662.667" y="82.3333" width="1" height="1"/>
-  <object id="143" name="tiny_star" gid="36" x="676.667" y="169.667" width="1" height="1"/>
-  <object id="144" name="tiny_star" gid="36" x="564.667" y="169.667" width="1" height="1"/>
-  <object id="145" name="tiny_star" gid="36" x="499.333" y="169.667" width="1" height="1"/>
-  <object id="146" name="tiny_star" gid="36" x="496" y="31" width="1" height="1"/>
-  <object id="147" name="tiny_star" gid="36" x="424.667" y="49" width="1" height="1"/>
-  <object id="148" name="tiny_star" gid="36" x="354" y="131.667" width="1" height="1"/>
-  <object id="149" name="tiny_star" gid="36" x="316" y="137.667" width="1" height="1"/>
-  <object id="150" name="tiny_star" gid="36" x="506" y="225.667" width="1" height="1"/>
-  <object id="151" name="tiny_star" gid="36" x="490.667" y="287" width="1" height="1"/>
-  <object id="152" name="tiny_star" gid="36" x="568" y="346.333" width="1" height="1"/>
-  <object id="153" name="tiny_star" gid="36" x="690" y="329.667" width="1" height="1"/>
-  <object id="154" name="tiny_star" gid="36" x="713.333" y="404.333" width="1" height="1"/>
-  <object id="155" name="tiny_star" gid="36" x="855.333" y="462.333" width="1" height="1"/>
-  <object id="156" name="tiny_star" gid="36" x="551.333" y="453.667" width="1" height="1"/>
-  <object id="157" name="tiny_star" gid="36" x="508.667" y="475" width="1" height="1"/>
-  <object id="158" name="tiny_star" gid="36" x="693.333" y="475" width="1" height="1"/>
-  <object id="159" name="tiny_star" gid="36" x="312" y="259.667" width="1" height="1"/>
-  <object id="160" name="tiny_star" gid="36" x="310" y="366.333" width="1" height="1"/>
-  <object id="161" name="tiny_star" gid="36" x="633.333" y="510.333" width="1" height="1"/>
-  <object id="162" name="tiny_star" gid="36" x="471.333" y="586.333" width="1" height="1"/>
-  <object id="163" name="tiny_star" gid="36" x="716" y="581.667" width="1" height="1"/>
-  <object id="167" name="expanding_star" type="star" gid="39" x="433.556" y="191.328" width="20" height="20">
-   <properties>
-    <property name="xVelocity" type="int" value="0"/>
-    <property name="yVelocity" type="int" value="0"/>
-    <property name="zOrder" type="int" value="-80"/>
    </properties>
   </object>
  </objectgroup>
@@ -599,30 +487,6 @@
     <property name="dynObjConn" type="object" value="73"/>
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
-  </object>
-  <object id="93" name="light_trigger" x="566.203" y="120" width="13.9513" height="13.9513">
-   <properties>
-    <property name="dynObjConn" type="object" value="92"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="95" name="light_trigger" x="599.567" y="120" width="13.9513" height="13.9513">
-   <properties>
-    <property name="dynObjConn" type="object" value="94"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="96" name="light_trigger" x="632.567" y="120" width="13.9513" height="13.9513">
-   <properties>
-    <property name="dynObjConn" type="object" value="97"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object id="102" name="light_trigger" x="533.317" y="120.375" width="13.9513" height="13.9513">
-   <properties>
-    <property name="dynObjConn" type="object" value="103"/>
-   </properties>
-   <ellipse/>
   </object>
   <object id="105" name="flipper_bumper_left" type="flipper_bumper" x="372.667" y="244.417" width="19" height="19">
    <properties>
