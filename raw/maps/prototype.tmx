@@ -289,14 +289,14 @@
   <object id="116" name="cloud_4" gid="31" x="589" y="143" width="108" height="66" visible="0"/>
   <object id="117" name="cloud_5" gid="32" x="682" y="313" width="66" height="39"/>
   <object id="118" name="cloud_5" gid="32" x="828" y="129" width="66" height="39"/>
-  <object id="13" name="plunger" gid="1" x="930" y="550" width="30" height="255">
+  <object id="13" name="plunger" gid="1" x="933" y="550" width="30" height="255">
    <properties>
     <property name="stop" type="int" value="480"/>
    </properties>
   </object>
   <object id="14" name="flipper_left" gid="2" x="386" y="532" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="631" y="533" width="170" height="124"/>
-  <object id="16" name="ball" gid="16" x="931.667" y="290.333" width="26" height="26"/>
+  <object id="16" name="ball" gid="16" x="934.667" y="290.333" width="26" height="26"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="373" y="370.5" width="55" height="186"/>
   <object id="31" name="flipper_bumper_right" gid="18" x="748.5" y="382" width="55" height="186"/>
   <object id="32" name="circle_bumper_red" gid="15" x="691" y="164.167" width="94" height="95">
@@ -379,7 +379,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="3" name="Collision" visible="0">
+ <objectgroup id="3" name="Collision">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="413.784" y="13.3133" width="94.652" height="95.4154">
    <properties>
     <property name="dynObjConn" type="object" value="35"/>
@@ -425,14 +425,14 @@
    </properties>
    <polygon points="-10.9394,7.30302 -132.006,103.4 -120.515,123.455 21.8484,51.394"/>
   </object>
-  <object id="45" name="ball" type="ball" x="931.333" y="264.667" width="26" height="26">
+  <object id="45" name="ball" type="ball" x="934.333" y="264.667" width="26" height="26">
    <properties>
     <property name="dynObjConn" type="object" value="16"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="50" name="right" type="wall" x="892.5" y="404.5">
-   <polygon points="0,0 -194.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 -139.5,-414 0,-299"/>
+  <object id="50" name="right" type="wall" x="894.5" y="404.5">
+   <polygon points="0,0 -194.5,195 107.5,194.5 106.281,-484.364 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -0.5,-484.223 -139.5,-414 0,-299"/>
   </object>
   <object id="51" name="drain_rail_right" type="drain_divider" x="847.25" y="188.75">
    <properties>
