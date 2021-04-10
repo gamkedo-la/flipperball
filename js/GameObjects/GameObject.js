@@ -12,6 +12,10 @@ class GameObject {
         this.width = objData.width;
         this.height = objData.height;
         this.rotation = objData.rotation;
+        this.active = objData.active;
+        if (this.type === 'side_drain_bumper') {
+            console.log('stopping')
+        }
         this.scale = 1;
 
         this.x = objData.x;

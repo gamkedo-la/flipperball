@@ -27,7 +27,7 @@
          "objects":[
                 {
                  "gid":4,
-                 "height":598,
+                 "height":600,
                  "id":23,
                  "name":"plunger_chute",
                  "properties":[
@@ -40,8 +40,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":105,
-                 "x":894,
-                 "y":598
+                 "x":895,
+                 "y":599
                 }, 
                 {
                  "gid":6,
@@ -81,7 +81,7 @@
                 }, 
                 {
                  "gid":7,
-                 "height":598,
+                 "height":600,
                  "id":26,
                  "name":"vertical_wall",
                  "properties":[
@@ -95,7 +95,7 @@
                  "visible":true,
                  "width":14,
                  "x":276,
-                 "y":598
+                 "y":600
                 }, 
                 {
                  "gid":24,
@@ -130,11 +130,11 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":754.667,
+                 "x":755.667,
                  "y":74
                 }, 
                 {
-                 "gid":46,
+                 "gid":47,
                  "height":600,
                  "id":166,
                  "name":"space_bottom_bg",
@@ -230,7 +230,7 @@
                  "type":"left_flipper",
                  "visible":true,
                  "width":170,
-                 "x":386,
+                 "x":391,
                  "y":592
                 }, 
                 {
@@ -284,7 +284,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":373,
+                 "x":378,
                  "y":430.5
                 }, 
                 {
@@ -318,7 +318,7 @@
                         }],
                  "rotation":0,
                  "type":"wall",
-                 "visible":true,
+                 "visible":false,
                  "width":82,
                  "x":770,
                  "y":520
@@ -338,7 +338,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":82,
-                 "x":326.636,
+                 "x":331.636,
                  "y":508.182
                 }, 
                 {
@@ -361,7 +361,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":343.091,
+                 "x":348.091,
                  "y":333.727
                 }, 
                 {
@@ -1838,8 +1838,54 @@
                  "type":"rocket",
                  "visible":true,
                  "width":96,
-                 "x":536.666666666667,
-                 "y":391.333333333333
+                 "x":536.667,
+                 "y":391.333
+                }, 
+                {
+                 "gid":43,
+                 "height":30,
+                 "id":175,
+                 "name":"side_drain_bumper",
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"side_drain_bumper",
+                 "visible":true,
+                 "width":40,
+                 "x":851,
+                 "y":318.333333333333
+                }, 
+                {
+                 "gid":43,
+                 "height":30,
+                 "id":176,
+                 "name":"side_drain_bumper",
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"side_drain_bumper",
+                 "visible":true,
+                 "width":40,
+                 "x":291.666666666667,
+                 "y":319
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1891,7 +1937,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":372,
+                 "x":377,
                  "y":250.5
                 }, 
                 {
@@ -1963,7 +2009,7 @@
                  "type":"flipper",
                  "visible":true,
                  "width":0,
-                 "x":550.485,
+                 "x":555.485,
                  "y":575.667
                 }, 
                 {
@@ -2155,7 +2201,7 @@
                  "type":"drain_divider",
                  "visible":true,
                  "width":0,
-                 "x":328,
+                 "x":333,
                  "y":237.182
                 }, 
                 {
@@ -2291,7 +2337,7 @@
                  "type":"flipper_tip",
                  "visible":true,
                  "width":23,
-                 "x":531.667,
+                 "x":536.667,
                  "y":570
                 }, 
                 {
@@ -2309,7 +2355,7 @@
                  "type":"flipper_base",
                  "visible":true,
                  "width":55,
-                 "x":384.833,
+                 "x":389.833,
                  "y":469.5
                 }, 
                 {
@@ -2377,7 +2423,7 @@
                  "type":"flipper_inner",
                  "visible":true,
                  "width":0,
-                 "x":551,
+                 "x":556,
                  "y":575
                 }, 
                 {
@@ -2419,7 +2465,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":0,
-                 "x":343.029,
+                 "x":348.029,
                  "y":326.512
                 }, 
                 {
@@ -2509,7 +2555,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":19,
-                 "x":372.667,
+                 "x":377.667,
                  "y":244.417
                 }, 
                 {
@@ -2527,7 +2573,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":12,
-                 "x":415.375,
+                 "x":420.375,
                  "y":418
                 }, 
                 {
@@ -2607,15 +2653,61 @@
                  "width":0,
                  "x":803,
                  "y":326
+                }, 
+                {
+                 "ellipse":true,
+                 "height":40,
+                 "id":178,
+                 "name":"side_drain_bumper",
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":175
+                        }],
+                 "rotation":0,
+                 "type":"side_drain_bumper",
+                 "visible":true,
+                 "width":40,
+                 "x":851.333333333333,
+                 "y":289
+                }, 
+                {
+                 "ellipse":true,
+                 "height":40,
+                 "id":179,
+                 "name":"side_drain_bumper",
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":176
+                        }],
+                 "rotation":0,
+                 "type":"side_drain_bumper",
+                 "visible":true,
+                 "width":40,
+                 "x":292,
+                 "y":290.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":175,
+ "nextobjectid":180,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2644,7 +2736,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":41,
+         "tilecount":42,
          "tileheight":600,
          "tiles":[
                 {
@@ -3239,12 +3331,30 @@
                  "imageheight":96,
                  "imagewidth":96,
                  "type":"sputnik"
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/raw\/img\/backgrounds\/side_drain_bumper.png",
+                 "imageheight":30,
+                 "imagewidth":40,
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"side_drain_bumper"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":43,
+         "firstgid":44,
          "grid":
             {
              "height":1,
@@ -3297,7 +3407,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":47,
+         "firstgid":48,
          "grid":
             {
              "height":1,

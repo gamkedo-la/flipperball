@@ -110,6 +110,11 @@ class Ball extends GameObject {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate || collision.otherEntity.type === ENTITY_TYPE.Spawner){
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
+                } else if(collision.otherEntity.type === ENTITY_TYPE.SideDrainBumper) {
+                    if(collision.otherEntity.active) {
+                        this.respondToCircularCollision(collision);
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);    
+                    }
                 } else {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     if (collision.edge) {
@@ -151,6 +156,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Ball:
             case ENTITY_TYPE.CircleBumper:
             case ENTITY_TYPE.CircleBumperSmall:
+            case ENTITY_TYPE.SideDrainBumper:
             case ENTITY_TYPE.Flipper:
             case ENTITY_TYPE.FlipperBumper:
             case ENTITY_TYPE.WingBumper:

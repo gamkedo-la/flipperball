@@ -182,6 +182,12 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[obj.name]],
                     });
                     result.push(newPlane);
+                } else if (obj.type === ENTITY_TYPE.SideDrainBumper) {
+                    const newBumper = new SideDrainBumper(obj, bodyData, {
+                        ...ANIMATIONS.SIDE_DRAIN_BUMPER,
+                        animationSpritesheet: images[ANIMATIONS.SIDE_DRAIN_BUMPER.imageNames[obj.name]],
+                    });
+                    result.push(newBumper);
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
                         result.push(new Cloud(self.minX, self.maxX, obj, null));
@@ -202,7 +208,7 @@ function MapBuilder (tableName = selected_table) {
                                 ...ANIMATIONS.EXPANDING_STAR,
                                 animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR.imageNames[obj.name]],
                             }));
-                        } else if (obj.name === ENTITY_NAME.ExpandingStar_2) {
+                        } else if (obj.name === ENTITY_NAME.ExpandingStar2) {
                             DEBUG_LOG("[Mapbuilder] BuildDynObjects -> ExpandingStar2");
                             result.push(new Star(self.minY, self.maxY, obj, null, {
                                 ...ANIMATIONS.EXPANDING_STAR_2,

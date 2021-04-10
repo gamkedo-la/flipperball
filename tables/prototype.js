@@ -45,7 +45,7 @@
                 }, 
                 {
                  "gid":4,
-                 "height":598,
+                 "height":600,
                  "id":23,
                  "name":"plunger_chute",
                  "properties":[
@@ -57,9 +57,9 @@
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":105,
-                 "x":893,
-                 "y":598
+                 "width":106,
+                 "x":895,
+                 "y":600
                 }, 
                 {
                  "gid":6,
@@ -76,8 +76,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":197,
-                 "x":698,
-                 "y":598
+                 "x":699,
+                 "y":599
                 }, 
                 {
                  "gid":5,
@@ -95,11 +95,11 @@
                  "visible":true,
                  "width":197,
                  "x":289,
-                 "y":598
+                 "y":599
                 }, 
                 {
                  "gid":7,
-                 "height":598,
+                 "height":600,
                  "id":26,
                  "name":"vertical_wall",
                  "properties":[
@@ -111,9 +111,9 @@
                  "rotation":0,
                  "type":"wall",
                  "visible":true,
-                 "width":14,
-                 "x":276,
-                 "y":598
+                 "width":15,
+                 "x":275,
+                 "y":600
                 }, 
                 {
                  "gid":24,
@@ -130,7 +130,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":290.333,
+                 "x":289.333,
                  "y":132
                 }, 
                 {
@@ -148,7 +148,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":752.667,
+                 "x":754.667,
                  "y":132
                 }, 
                 {

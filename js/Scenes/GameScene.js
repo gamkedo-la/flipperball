@@ -620,6 +620,11 @@ function GameScene() {
                     otherEntity.animate(0);
                 }
                 break;
+            case ENTITY_TYPE.SideDrainBumper:
+                if (otherEntity.hasAnimation) {
+                    otherEntity.animate(0);
+                }
+                break;
             case ENTITY_TYPE.WingBumper:
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);

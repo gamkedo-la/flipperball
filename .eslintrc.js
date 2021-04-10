@@ -66,6 +66,7 @@ module.exports = {
         "resumeSound": true,
         "ROTATION_RATE": true,
         "SCENE": true,
+        "skipToGameDEBUG": true,
         "startGameSound": true,
         "STARTING_BALLS_COUNT": true,
         "TABLES": true,

@@ -29,7 +29,6 @@ htgdLogoPic.onload = function() {
     }
 }
 
-
 //-----Animate the HTGD Logo-----//
 let htgdLogoScale = 0.5;
 function animateHTGDLogo () {
@@ -70,8 +69,8 @@ let picsToLoad = 0;
 function loadImages() {
     const imageList = [
         // List them here alphabetically to make it easier to find the one you're looking for
-        { imgName: "bonus_light_2x", theFile: "tables/2x_bonus_light_unlit.png" },
-        { imgName: "bonus_light_2x_anim", theFile: "animations/2x_bonus_light_anim.png"},
+        {imgName: "bonus_light_2x", theFile: "tables/2x_bonus_light_unlit.png"},
+        {imgName: "bonus_light_2x_anim", theFile: "animations/2x_bonus_light_anim.png"},
         
         {imgName: "angled_wall_1", theFile: "tables/angled_wall_1.png", image: {}},
         {imgName: "angled_wall_2", theFile: "tables/angled_wall_2.png"},
@@ -120,11 +119,11 @@ function loadImages() {
         {imgName: "small_star", theFile: "tables/small_star.png"},
         {imgName: "small_star_anim", theFile: "animations/small_star_anim.png"},
 
-        { imgName: "diamond_div_1", theFile: "tables/diamond_div.png" },
-        { imgName: "diamond_div_2", theFile: "tables/diamond_div.png" },
-        { imgName: "diamond_div_3", theFile: "tables/diamond_div.png" },
-        { imgName: "diamond_div_4", theFile: "tables/diamond_div.png" },
-        { imgName: "diamond_div_5", theFile: "tables/diamond_div.png" },
+        {imgName: "diamond_div_1", theFile: "tables/diamond_div.png"},
+        {imgName: "diamond_div_2", theFile: "tables/diamond_div.png"},
+        {imgName: "diamond_div_3", theFile: "tables/diamond_div.png"},
+        {imgName: "diamond_div_4", theFile: "tables/diamond_div.png"},
+        {imgName: "diamond_div_5", theFile: "tables/diamond_div.png"},
         
 
         {imgName: "drain_rail_left", theFile: "tables/drain_rail_left.png"},
@@ -155,12 +154,12 @@ function loadImages() {
         {imgName: "horizontal_wall", theFile: "tables/horizontal_wall.png"},
         {imgName: "lane_trigger", theFile: "tables/lane_trigger.png"},
 
-        { imgName: "letter_light", theFile: "tables/letter_light_unlit.png" },                
-        { imgName: "light_trigger", theFile: "tables/light_trigger.png" },               
-        { imgName: "letter_light_unlit", theFile: "tables/letter_light_unlit.png" },
-        { imgName: "letter_light_lit", theFile: "tables/letter_light_lit.png" },
-        { imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png" },
-        { imgName: "letter_light_anim", theFile: "animations/letter_light_anim.png" },   
+        {imgName: "letter_light", theFile: "tables/letter_light_unlit.png"},                
+        {imgName: "light_trigger", theFile: "tables/light_trigger.png"},               
+        {imgName: "letter_light_unlit", theFile: "tables/letter_light_unlit.png"},
+        {imgName: "letter_light_lit", theFile: "tables/letter_light_lit.png"},
+        {imgName: "demo_letter_lights", theFile: "tables/letter_light_lit.png"},
+        {imgName: "letter_light_anim", theFile: "animations/letter_light_anim.png"},   
 
         {imgName: "rotating_gate", theFile: "tables/rotating_gate_provisional.png"},
         {imgName: "rotating_gate_animation", theFile: "animations/rotating_gate_red_animation.png"},
@@ -200,6 +199,9 @@ function loadImages() {
         {imgName: "shuttle", theFile: "tables/space_shuttle.png"},
         {imgName: "sputnik", theFile: "tables/sputniksatellite.png"},
 
+        {imgName: "side_drain_bumper", theFile: "tables/side_drain_bumper.png"},
+        {imgName: "side_drain_bumper_anim", theFile: "animations/side_drain_bumper_anim.png"},
+
         {imgName: "slot", theFile: "tables/slot.png"},
         {imgName: "slot_animation", theFile: "animations/slot_frame_anim.png"},
         {imgName: "slot_animation_t", theFile: "animations/slot_frame_anim_t.png"},
@@ -208,23 +210,23 @@ function loadImages() {
         {imgName: "slot_trigger", theFile: "tables/lane_trigger.png"},
         
         // V.A.M. Table Sprites
-        { imgName: "vam_logo", theFile: "tables/vam/vam_logo.png" },
-        { imgName: "emp_inf_anim", theFile: "animations/emp_inf_anim.png" },
-        { imgName: "empire_logo", theFile: "tables/vam/empire_logo.png" },
-        { imgName: "asteroid", theFile: "tables/vam/asteroid.png" },
-        { imgName: "starfield", theFile: "tables/vam/starfield.png" },
-        { imgName: "wing_bumper_left", theFile: "tables/vam/wing_bumper_left.png" },
-        { imgName: "wing_bumper_right", theFile: "tables/vam/wing_bumper_right.png" },
-        { imgName: "vam_drain_rail_left", theFile: "tables/vam/vam_drain_rail_left.png" },
-        { imgName: "vam_drain_rail_right", theFile: "tables/vam/vam_drain_rail_right.png" },
-        { imgName: "vam_flipper_left", theFile: "tables/vam/vam_flipper_left.png" },
-        { imgName: "vam_flipper_right", theFile: "tables/vam/vam_flipper_right.png" },
-        { imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png" },
-        { imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png" },         
-        { imgName: "backplate", theFile: "tables/vam/backplate.png" },
-        { imgName: "arrow_selection", theFile: "tables/arrow_selection.png"},
-        { imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
-        { imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png"},
+        {imgName: "vam_logo", theFile: "tables/vam/vam_logo.png"},
+        {imgName: "emp_inf_anim", theFile: "animations/emp_inf_anim.png"},
+        {imgName: "empire_logo", theFile: "tables/vam/empire_logo.png"},
+        {imgName: "asteroid", theFile: "tables/vam/asteroid.png"},
+        {imgName: "starfield", theFile: "tables/vam/starfield.png"},
+        {imgName: "wing_bumper_left", theFile: "tables/vam/wing_bumper_left.png"},
+        {imgName: "wing_bumper_right", theFile: "tables/vam/wing_bumper_right.png"},
+        {imgName: "vam_drain_rail_left", theFile: "tables/vam/vam_drain_rail_left.png"},
+        {imgName: "vam_drain_rail_right", theFile: "tables/vam/vam_drain_rail_right.png"},
+        {imgName: "vam_flipper_left", theFile: "tables/vam/vam_flipper_left.png"},
+        {imgName: "vam_flipper_right", theFile: "tables/vam/vam_flipper_right.png"},
+        {imgName: "wing_bumper_left_anim", theFile: "animations/wing_bumper_left_anim.png"},
+        {imgName: "wing_bumper_right_anim", theFile: "animations/wing_bumper_right_anim.png"},         
+        {imgName: "backplate", theFile: "tables/vam/backplate.png"},
+        {imgName: "arrow_selection", theFile: "tables/arrow_selection.png"},
+        {imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
+        {imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png"},
 
         //Forest Table Sprites
         {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},

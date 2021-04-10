@@ -268,12 +268,12 @@
  </tileset>
  <objectgroup id="5" name="Fixed">
   <object id="110" name="cloud_bg_top_empty" gid="38" x="276" y="599" width="720" height="600" visible="0"/>
-  <object id="23" name="plunger_chute" gid="4" x="893" y="598" width="105" height="598"/>
-  <object id="24" name="drain_wall_right" gid="6" x="698" y="598" width="197" height="195"/>
-  <object id="25" name="drain_wall_left" gid="5" x="289" y="598" width="197" height="195"/>
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
-  <object id="78" name="angled_wall_5" gid="24" x="290.333" y="132" width="140" height="142"/>
-  <object id="79" name="angled_wall_6" gid="25" x="752.667" y="132" width="140" height="142"/>
+  <object id="23" name="plunger_chute" gid="4" x="895" y="600" width="106" height="600"/>
+  <object id="24" name="drain_wall_right" gid="6" x="699" y="599" width="197" height="195"/>
+  <object id="25" name="drain_wall_left" gid="5" x="289" y="599" width="197" height="195"/>
+  <object id="26" name="vertical_wall" type="wall" gid="7" x="275" y="600" width="15" height="600"/>
+  <object id="78" name="angled_wall_5" gid="24" x="289.333" y="132" width="140" height="142"/>
+  <object id="79" name="angled_wall_6" gid="25" x="754.667" y="132" width="140" height="142"/>
   <object id="120" name="diamond_div_2" type="wall" gid="36" x="556.75" y="131.625" width="7" height="7"/>
   <object id="121" name="diamond_div_1" type="wall" gid="36" x="527.75" y="149.625" width="7" height="7"/>
   <object id="122" name="diamond_div_3" type="wall" gid="36" x="590.75" y="114.625" width="7" height="7"/>

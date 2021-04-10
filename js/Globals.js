@@ -144,6 +144,7 @@ const ENTITY_TYPE = {
 	Rocket: 'rocket',
 	Shuttle: 'shuttle',
 	Bubble: 'bubble',
+	SideDrainBumper: 'side_drain_bumper'
 };
 
 const TRIGGER_TYPE = {
@@ -174,7 +175,7 @@ const ENTITY_NAME = {
 	SmallStar: 'small_star',
 	TinyStar: 'tiny_star',
 	ExpandingStar: 'expanding_star',
-	ExpandingStar_2: 'expanding_star_2',
+	ExpandingStar2: 'expanding_star_2',
 	EmpireLogo: 'empire_logo'
 }
 
@@ -369,6 +370,17 @@ const ANIMATIONS = {
 		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 		frameWidth: 51,
 		frameHeight: 48,
+		frameTimes: [64],
+		reverses: false,
+		loops: false
+	},
+	SIDE_DRAIN_BUMPER: {
+		imageNames: {
+			"side_drain_bumper": "side_drain_bumper_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+		frameWidth: 40,
+		frameHeight: 30,
 		frameTimes: [64],
 		reverses: false,
 		loops: false
