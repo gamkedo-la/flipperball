@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="598" tileheight="600" tilecount="25" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="960" tileheight="600" tilecount="29" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -150,8 +150,20 @@
   <tile id="24">
    <image width="34" height="598" source="../../img/tables/forest_chute_wall.png"/>
   </tile>
+  <tile id="25">
+   <image width="64" height="64" source="../../img/tables/forest_banana.png"/>
+  </tile>
+  <tile id="26">
+   <image width="512" height="64" source="../../img/tables/forest_banana_anim-sheet.png"/>
+  </tile>
+  <tile id="27">
+   <image width="960" height="64" source="../../img/tables/forest_banana_monkey-sheet.png"/>
+  </tile>
+  <tile id="28">
+   <image width="64" height="64" source="../../img/tables/forest_monkey_sprite.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="26" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="30" columns="0">
+ <tileset firstgid="30" name="cloud_bg_top" tilewidth="720" tileheight="600" tilecount="30" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -331,7 +343,7 @@
    <image width="60" height="96" source="../../img/tables/forest_angled_wall_4.png"/>
   </tile>
  </tileset>
- <tileset firstgid="57" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="61" name="habitrail" tilewidth="42" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="habitrail">
    <properties>
@@ -353,22 +365,22 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="92" name="ball_catch_arrow" gid="31" x="350" y="90" width="24" height="24"/>
-  <object id="137" name="habitrail_small_track" gid="58" x="348" y="552" width="42" height="75" rotation="310"/>
-  <object id="170" name="habitrail_small_track" gid="58" x="291" y="503" width="42" height="75"/>
-  <object id="171" name="habitrail_small_track" gid="58" x="291" y="427.5" width="42" height="75"/>
-  <object id="172" name="habitrail_small_track" gid="58" x="291" y="352" width="42" height="75"/>
-  <object id="173" name="habitrail_gateway" type="habitrail" gid="57" x="405" y="600" width="42" height="75" rotation="310">
+  <object id="92" name="ball_catch_arrow" gid="35" x="350" y="90" width="24" height="24"/>
+  <object id="137" name="habitrail_small_track" gid="62" x="348" y="552" width="42" height="75" rotation="310"/>
+  <object id="170" name="habitrail_small_track" gid="62" x="291" y="503" width="42" height="75"/>
+  <object id="171" name="habitrail_small_track" gid="62" x="291" y="427.5" width="42" height="75"/>
+  <object id="172" name="habitrail_small_track" gid="62" x="291" y="352" width="42" height="75"/>
+  <object id="173" name="habitrail_gateway" type="habitrail" gid="61" x="405" y="600" width="42" height="75" rotation="310">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="174" name="habitrail_gateway" gid="58" x="291" y="276.5" width="42" height="75">
+  <object id="174" name="habitrail_gateway" gid="62" x="291" y="276.5" width="42" height="75">
    <properties>
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="212" name="forest_top_bg" gid="50" x="277.635" y="600.116" width="720" height="600" visible="0">
+  <object id="212" name="forest_top_bg" gid="54" x="277.635" y="600.116" width="720" height="600" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
    </properties>
@@ -383,47 +395,34 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="215" name="forest_angled_wall_3" type="wall" gid="51" x="853.25" y="406.75" width="52" height="52">
+  <object id="215" name="forest_angled_wall_3" type="wall" gid="55" x="853.25" y="406.75" width="52" height="52">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="216" name="forest_horizontal_wall" type="wall" gid="52" x="277.667" y="12.33" width="598" height="14">
+  <object id="216" name="forest_horizontal_wall" type="wall" gid="56" x="277.667" y="12.33" width="598" height="14">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="217" name="forest_horizontal_wall" type="wall" gid="52" x="389" y="12.3333" width="598" height="14">
+  <object id="217" name="forest_horizontal_wall" type="wall" gid="56" x="389" y="12.3333" width="598" height="14">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="218" name="forest_vertical_wall" type="wall" gid="53" x="253.333" y="601.333" width="36" height="600">
+  <object id="218" name="forest_vertical_wall" type="wall" gid="57" x="253.333" y="601.333" width="36" height="600">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="219" name="forest_drain_wall_right" type="wall" gid="54" x="766" y="616.667" width="132" height="132">
+  <object id="219" name="forest_drain_wall_right" type="wall" gid="58" x="766" y="616.667" width="132" height="132">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="220" name="forest_angled_wall_4" type="wall" gid="56" x="910" y="108" width="60" height="96">
+  <object id="220" name="forest_angled_wall_4" type="wall" gid="60" x="910" y="108" width="60" height="96">
    <properties>
     <property name="zOrder" type="int" value="0"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup id="4" name="Dynamic">
-  <object id="14" name="flipper_left" gid="2" x="339" y="526" width="170" height="124"/>
-  <object id="15" name="flipper_right" gid="3" x="725" y="528" width="170" height="124"/>
-  <object id="30" name="flipper_bumper_left" gid="17" x="334" y="405.5" width="55" height="186"/>
-  <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="391" width="55" height="186"/>
-  <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
-  <object id="91" name="ball_catch" type="trigger" gid="32" x="307" y="78.6667" width="54" height="54">
-   <properties>
-    <property name="ball_catch" type="object" value="149"/>
-    <property name="score" type="int" value="100"/>
    </properties>
   </object>
  </objectgroup>
