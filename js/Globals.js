@@ -144,7 +144,9 @@ const ENTITY_TYPE = {
 	Rocket: 'rocket',
 	Shuttle: 'shuttle',
 	Bubble: 'bubble',
-	SideDrainBumper: 'side_drain_bumper'
+	SideDrainBumper: 'side_drain_bumper', 
+	Banana: 'banana',
+	BananaTaken: 'banana_taken'
 };
 
 const TRIGGER_TYPE = {
@@ -176,7 +178,9 @@ const ENTITY_NAME = {
 	TinyStar: 'tiny_star',
 	ExpandingStar: 'expanding_star',
 	ExpandingStar2: 'expanding_star_2',
-	EmpireLogo: 'empire_logo'
+	EmpireLogo: 'empire_logo',
+	Banana: 'forest_banana',
+	BananaTaken: 'forest_banana_taken'
 }
 
 const COLLISION_TYPE = {
@@ -469,5 +473,29 @@ const ANIMATIONS = {
 		frameTimes:[64],
 		reverses: false,
 		loops: true
+	},
+
+	BANANA: {
+		imageNames: {
+			"forest_banana": "forest_banana_anim"
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7],
+		frameWidth: 64,
+		frameHeight: 64,
+		frameTimes: [64],
+		reverses: false,
+		loops: false
+	},
+
+	BANANA_TAKEN: {
+		imageNames: {
+			"forest_banana_taken": "forest_banana_taken_anim"	
+		},
+		frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+		frameWidth: 64,
+		frameHeight: 64,
+		frameTimes: [64],
+		reverses: false,
+		loops: false
 	}
 };
