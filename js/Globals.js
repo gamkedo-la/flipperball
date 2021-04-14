@@ -484,7 +484,7 @@ const ANIMATIONS = {
 		frameHeight: 64,
 		frameTimes: [64],
 		reverses: false,
-		loops: false
+		loops: true
 	},
 
 	BANANA_TAKEN: {

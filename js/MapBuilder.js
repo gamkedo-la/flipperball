@@ -123,19 +123,19 @@ function MapBuilder (tableName = selected_table) {
                 result.push(newGameObject);
             }else if(obj.type === ENTITY_TYPE.Banana){
                 DEBUG_LOG("Banana");
-                /*const newGameObject = new BananaObject(obj, bodyData, {
+                const newGameObject = new BananaObject(obj, bodyData, {
                     ...ANIMATIONS.BANANA,
                     animationSpritesheet: images[ANIMATIONS.BANANA.imageNames[obj.name]],
                 });
-                result.push(newGameObject);*/
+                result.push(newGameObject);
             }
             else if(obj.type === ENTITY_TYPE.BananaTaken){
-                /*DEBUG_LOG("Banana Taken");
-                const newGameObject = new BananaObject(obj, bodyData, {
+                DEBUG_LOG("Banana Taken");
+                const newGameObject = new BananaTakenObject(obj, bodyData, {
                     ...ANIMATIONS.BANANA_TAKEN,
                     animationSpritesheet: images[ANIMATIONS.BANANA_TAKEN.imageNames[obj.name]],
                 });
-                result.push(newGameObject);*/
+                result.push(newGameObject);
             }
             else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));

@@ -298,10 +298,10 @@
    <image width="64" height="64" source="../../img/tables/forest_banana.png"/>
   </tile>
   <tile id="55">
-   <image width="512" height="64" source="../../img/tables/forest_banana_anim-sheet.png"/>
+   <image source="../../img/tables/forest_banana_anim-sheet.png"/>
   </tile>
   <tile id="56">
-   <image width="960" height="64" source="../../img/tables/forest_banana_monkey-sheet.png"/>
+   <image source="../../img/tables/forest_banana_monkey-sheet.png"/>
   </tile>
   <tile id="57">
    <image width="64" height="64" source="../../img/tables/forest_monkey_sprite.png"/>

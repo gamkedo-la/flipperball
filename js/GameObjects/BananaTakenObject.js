@@ -1,19 +1,14 @@
 class BananaTakenObject extends GameObject {
-    constructor(minY, maxY, ...props) {
+    constructor(...props) {
         super(...props);
-        this.minY = minY;
-        this.maxY = maxY;
+        this.isInReverse = false;
         this.isAnimating = true;
-        this.currFrame = Math.floor(this.frames.length * Math.random());
-        this.frameTimes[0] += (Math.floor((this.frameTimes[0] / 2) * Math.random()) - Math.floor(this.frameTimes[0]/4));
-        this.velocity.y += Math.random() * this.velocity.y / 2;
     }
 
     update (deltaTime) {
         super.update(deltaTime);
-        this.y += this.velocity.y * deltaTime / 1000;
-        if (this.y > this.maxY) {
-            this.y = this.minY - this.height;
+        if(this.currFrame == ANIMATIONS.BANANA_TAKEN.frames.length - 1){
+            SceneManager.scenes[SCENE.GAME].removeEntity(this)
         }
     }
 }

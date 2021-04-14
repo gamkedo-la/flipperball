@@ -656,6 +656,10 @@ function GameScene() {
                     spawnerCollisionOn = true;
                 }
                 break;
+            case ENTITY_TYPE.Banana:
+                DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Banana collision detected");
+
+                break;
             default:
                 break;
         }

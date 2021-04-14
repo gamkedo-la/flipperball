@@ -604,8 +604,8 @@
                  "type":"banana",
                  "visible":true,
                  "width":64,
-                 "x":649.666666666667,
-                 "y":375.333333333333
+                 "x":649.667,
+                 "y":375.333
                 }, 
                 {
                  "gid":55,
@@ -622,8 +622,8 @@
                  "type":"banana_taken",
                  "visible":true,
                  "width":64,
-                 "x":460.666666666667,
-                 "y":327.333333333333
+                 "x":460.667,
+                 "y":327.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1407,8 +1407,8 @@
                  "type":"banana",
                  "visible":true,
                  "width":28,
-                 "x":667.666666666667,
-                 "y":326.333333333333
+                 "x":667.667,
+                 "y":326.333
                 }, 
                 {
                  "ellipse":true,
@@ -2134,15 +2134,11 @@
                 }, 
                 {
                  "id":55,
-                 "image":"..\/img\/tables\/forest_banana_anim-sheet.png",
-                 "imageheight":64,
-                 "imagewidth":512
+                 "image":"..\/img\/tables\/forest_banana_anim-sheet.png"
                 }, 
                 {
                  "id":56,
-                 "image":"..\/img\/tables\/forest_banana_monkey-sheet.png",
-                 "imageheight":64,
-                 "imagewidth":960
+                 "image":"..\/img\/tables\/forest_banana_monkey-sheet.png"
                 }, 
                 {
                  "id":57,

@@ -108,7 +108,8 @@ class Ball extends GameObject {
                     this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Habitrail) {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
-                } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate || collision.otherEntity.type === ENTITY_TYPE.Spawner){
+                } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate || collision.otherEntity.type === ENTITY_TYPE.Spawner 
+                    || collision.otherEntity.type === ENTITY_TYPE.Banana || collision.otherEntity.type === ENTITY_TYPE.BananaTaken){
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if(collision.otherEntity.type === ENTITY_TYPE.SideDrainBumper) {
                     if(collision.otherEntity.active) {
@@ -168,6 +169,8 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Gate:
             case ENTITY_TYPE.Plane:
             case ENTITY_TYPE.Spawner:
+            case ENTITY_TYPE.Banana:
+            case ENTITY_TYPE.BananaTaken:
                 return true;
             default:
                 return false;
