@@ -732,7 +732,7 @@ function GameScene() {
         
     }
 
-    this.spawnEntity = function(spawnerEntity, otherType) {
+    this.spawnEntity = function(spawnerEntity, otherType, otherTypeSpawnInfo) {
         // var type = null;
         let newObjectData;
         if(spawnerEntity != null){
@@ -758,6 +758,13 @@ function GameScene() {
         }
 
         if (newObjectData) {
+
+            if(otherTypeSpawnInfo){
+                newObjectData.dynamicObject.x = otherTypeSpawnInfo.x;
+                newObjectData.dynamicObject.y = otherTypeSpawnInfo.y + newObjectData.dynamicObject.height;
+                newObjectData.collisionBody.x = otherTypeSpawnInfo.body.center.x;
+                newObjectData.collisionBody.y = otherTypeSpawnInfo.body.center.y;
+            }
             const newObject = self.table.addDynamicObjectWithData(newObjectData.dynamicObject, newObjectData.collisionBody);
             for (const obj of self.table.drawOrder) {
                 if (obj.zOrder > newObject.zOrder) {
