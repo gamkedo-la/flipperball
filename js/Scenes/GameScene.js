@@ -652,7 +652,7 @@ function GameScene() {
             case ENTITY_TYPE.Spawner:                
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Spawner collision detected");
                 if(!spawnerCollisionOn){
-                    self.handleSpawnerCollision(otherEntity);
+                    self.spawnEntity(otherEntity);
                     spawnerCollisionOn = true;
                 }
                 break;
@@ -732,19 +732,29 @@ function GameScene() {
         
     }
 
-    this.handleSpawnerCollision = function(spawnerEntity) {
+    this.spawnEntity = function(spawnerEntity, otherType) {
         // var type = null;
         let newObjectData;
-
-        switch(spawnerEntity.name){
-            case "spawner_plane":
-                newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Plane);
-                newObjectData.dynamicObject.name = spawnerEntity.nextColor();
-                newObjectData.dynamicObject.score = spawnerEntity.nextScore();
-                newObjectData.dynamicObject.maxX = spawnerEntity.despawn;
-            break;
-            default:
+        if(spawnerEntity != null){
+            switch(spawnerEntity.name){
+                case "spawner_plane":
+                    newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Plane);
+                    newObjectData.dynamicObject.name = spawnerEntity.nextColor();
+                    newObjectData.dynamicObject.score = spawnerEntity.nextScore();
+                    newObjectData.dynamicObject.maxX = spawnerEntity.despawn;
                 break;
+                default:
+                    break;
+            }
+        }else if(otherType != null){
+            switch(otherType){
+                case ENTITY_TYPE.BananaTaken:
+                    newObjectData = self.table.getDynamicObject(ENTITY_TYPE.BananaTaken);
+                    DEBUG_LOG("Spawning Banana Taken");
+                break;
+                default:
+                    break;
+            }
         }
 
         if (newObjectData) {
