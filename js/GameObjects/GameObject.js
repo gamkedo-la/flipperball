@@ -165,7 +165,7 @@ class GameObject {
         }
         else if (Math.abs(this.rotation) > 0) {
             canvasContext.save();
-            canvasContext.translate(this.width * 0.5, this.height * 0, 5);
+            canvasContext.translate(this.width * 0.5, this.height * 0.5);
             canvasContext.rotate(this.DegToRad(this.rotation));
             canvasContext.translate(-this.width * 0.5, -this.height * 0.5);
             canvasContext.drawImage(this.sprite, this.x, this.y, this.width, this.height);
