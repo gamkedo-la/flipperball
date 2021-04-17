@@ -620,12 +620,24 @@ function GameScene() {
                     otherEntity.animate(0);
                 }
                 break;
-            case ENTITY_TYPE.Jupiter:
-                //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
+            case ENTITY_TYPE.Mars:
                 if (otherEntity.hasAnimation) {
+                    incrementScore(otherEntity.score);
                     otherEntity.animate(0);
                 }
                 break;
+            case ENTITY_TYPE.Jupiter:
+                if (otherEntity.hasAnimation) {
+                    incrementScore(otherEntity.score);
+                    otherEntity.animate(0);
+                }
+                break;
+            case ENTITY_TYPE.Saturn:
+                if (otherEntity.hasAnimation) {
+                    incrementScore(otherEntity.score);
+                    otherEntity.animate(0);
+                }
+                break;    
             case ENTITY_TYPE.SideDrainBumper:
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);

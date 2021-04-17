@@ -38,7 +38,18 @@ class GameObject {
         this.vyAdjustment = 0;
 
         this.reflectance = objData.reflectance || 1;
-        this.score = objData.properties ? objData.properties[0].value : 0;
+        if (objData.properties) {
+            for (const property of objData.properties) {
+                if (property.name === 'score') {
+                    this.score = property.value;
+                }
+            }
+
+            if (!this.score) {
+                this.score = 0
+            }
+        }
+        // this.score = objData.properties ? objData.properties[0].value : 0;
 
         this.sprite = objData.sprite || images[objData.name];
         this.animationSpritesheet = animationData.animationSpritesheet;

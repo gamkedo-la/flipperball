@@ -41,7 +41,7 @@
                  "visible":true,
                  "width":105,
                  "x":895,
-                 "y":599
+                 "y":600
                 }, 
                 {
                  "gid":6,
@@ -76,7 +76,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":197,
-                 "x":289,
+                 "x":285,
                  "y":658
                 }, 
                 {
@@ -94,7 +94,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":14,
-                 "x":276,
+                 "x":271,
                  "y":600
                 }, 
                 {
@@ -112,7 +112,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":140,
-                 "x":289.333,
+                 "x":285.333,
                  "y":78
                 }, 
                 {
@@ -134,7 +134,7 @@
                  "y":74
                 }, 
                 {
-                 "gid":47,
+                 "gid":48,
                  "height":600,
                  "id":166,
                  "name":"space_bottom_bg",
@@ -180,6 +180,66 @@
                  "width":96,
                  "x":724,
                  "y":103.333
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":182,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":519,
+                 "y":127.5
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":183,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":553.25,
+                 "y":128.75
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":184,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":586.5,
+                 "y":128.5
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":185,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":619.75,
+                 "y":129.25
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":186,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":654.75,
+                 "y":129
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1862,7 +1922,7 @@
                  "visible":true,
                  "width":40,
                  "x":851,
-                 "y":318.333333333333
+                 "y":318.333
                 }, 
                 {
                  "gid":43,
@@ -1884,7 +1944,7 @@
                  "type":"side_drain_bumper",
                  "visible":true,
                  "width":40,
-                 "x":291.666666666667,
+                 "x":291.667,
                  "y":319
                 }],
          "opacity":1,
@@ -2222,12 +2282,12 @@
                          "y":599.5
                         }, 
                         {
-                         "x":14.5,
-                         "y":465.5
+                         "x":13.1666666666666,
+                         "y":462.166666666667
                         }, 
                         {
-                         "x":15,
-                         "y":50.5
+                         "x":13.0000000000001,
+                         "y":51.8333333333333
                         }, 
                         {
                          "x":152.5,
@@ -2241,7 +2301,7 @@
                  "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":276.5,
+                 "x":272.5,
                  "y":0.5
                 }, 
                 {
@@ -2674,7 +2734,7 @@
                  "type":"side_drain_bumper",
                  "visible":true,
                  "width":40,
-                 "x":851.333333333333,
+                 "x":851.333,
                  "y":289
                 }, 
                 {
@@ -2698,16 +2758,180 @@
                  "visible":true,
                  "width":40,
                  "x":292,
-                 "y":290.333333333333
+                 "y":290.333
+                }, 
+                {
+                 "height":0,
+                 "id":180,
+                 "name":"diamond_div_1",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.04348,
+                         "y":3.04348
+                        }, 
+                        {
+                         "x":-0.217391,
+                         "y":6.26087
+                        }, 
+                        {
+                         "x":2.82609,
+                         "y":3.13043
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":522.25,
+                 "y":120.75
+                }, 
+                {
+                 "height":0,
+                 "id":187,
+                 "name":"diamond_div_1",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.04348,
+                         "y":3.04348
+                        }, 
+                        {
+                         "x":-0.217391,
+                         "y":6.26087
+                        }, 
+                        {
+                         "x":2.82609,
+                         "y":3.13043
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":556.75,
+                 "y":122.25
+                }, 
+                {
+                 "height":0,
+                 "id":188,
+                 "name":"diamond_div_1",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.04348,
+                         "y":3.04348
+                        }, 
+                        {
+                         "x":-0.217391,
+                         "y":6.26087
+                        }, 
+                        {
+                         "x":2.82609,
+                         "y":3.13043
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":590,
+                 "y":121.75
+                }, 
+                {
+                 "height":0,
+                 "id":190,
+                 "name":"diamond_div_1",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.04348,
+                         "y":3.04348
+                        }, 
+                        {
+                         "x":-0.217391,
+                         "y":6.26087
+                        }, 
+                        {
+                         "x":2.82609,
+                         "y":3.13043
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":623.5,
+                 "y":122.5
+                }, 
+                {
+                 "height":0,
+                 "id":191,
+                 "name":"diamond_div_1",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-3.04348,
+                         "y":3.04348
+                        }, 
+                        {
+                         "x":-0.217391,
+                         "y":6.26087
+                        }, 
+                        {
+                         "x":2.82609,
+                         "y":3.13043
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":658.25,
+                 "y":122.25
+                }, 
+                {
+                 "ellipse":true,
+                 "height":20,
+                 "id":192,
+                 "name":"",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":20,
+                 "x":396,
+                 "y":-72
+                }, 
+                {
+                 "ellipse":true,
+                 "height":20,
+                 "id":194,
+                 "name":"",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":20,
+                 "x":766,
+                 "y":-78
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":180,
+ "nextobjectid":195,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2736,7 +2960,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":42,
+         "tilecount":43,
          "tileheight":600,
          "tiles":[
                 {
@@ -3349,12 +3573,18 @@
                          "value":0
                         }],
                  "type":"side_drain_bumper"
+                }, 
+                {
+                 "id":43,
+                 "image":"..\/img\/tables\/diamond_div.png",
+                 "imageheight":7,
+                 "imagewidth":7
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":44,
+         "firstgid":45,
          "grid":
             {
              "height":1,
@@ -3407,7 +3637,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":48,
+         "firstgid":49,
          "grid":
             {
              "height":1,

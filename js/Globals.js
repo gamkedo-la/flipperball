@@ -329,6 +329,17 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: true
 	},
+	MARS: {
+		imageNames: {
+			"mars": "mars_anim"
+		},
+		frames: [1, 2, 3, 4, 5, 6, 7],
+		frameWidth: 24,
+		frameHeight: 23,
+		frameTimes: [128, 128, 128, 128, 512, 128, 128],
+		reverses: true,
+		loops: false
+	},
 	JUPITER: {
 		imageNames: {
 			"jupiter": "jupiter_anim"
@@ -338,6 +349,17 @@ const ANIMATIONS = {
 		frameHeight: 92,
 		frameTimes: [128, 128, 128, 128, 512, 128, 128, 128],
 		reverses: false,
+		loops: false
+	},
+	SATURN: {
+		imageNames: {
+			"saturn": "saturn_anim"
+		},
+		frames: [1, 2, 3, 4, 5, 6, 7],
+		frameWidth: 120,
+		frameHeight: 80,
+		frameTimes: [128, 128, 128, 128, 512, 128, 128],
+		reverses: true,
 		loops: false
 	},
 	PLUNGER_RELEASE: {

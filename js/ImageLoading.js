@@ -194,9 +194,11 @@ function loadImages() {
         {imgName: "rocket_anim", theFile: "animations/rocket_anim.png"},
         {imgName: "earth", theFile: "tables/earth.png"},
         {imgName: "mars", theFile: "tables/mars.png"},
+        {imgName: "mars_anim", theFile: "animations/mars_anim.png"},
         {imgName: "jupiter", theFile: "tables/jupiter.png"},
         {imgName: "jupiter_anim", theFile: "animations/jupiter_anim.png"},
         {imgName: "saturn", theFile: "tables/saturn.png"},
+        {imgName: "saturn_anim", theFile: "animations/saturn_anim.png"},
         {imgName: "shuttle", theFile: "tables/space_shuttle.png"},
         {imgName: "sputnik", theFile: "tables/sputniksatellite.png"},
 

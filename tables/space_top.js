@@ -306,41 +306,6 @@
                  "y":276.5
                 }, 
                 {
-                 "gid":48,
-                 "height":128,
-                 "id":217,
-                 "name":"saturn",
-                 "properties":[
-                        {
-                         "name":"speed",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"saturn",
-                 "visible":true,
-                 "width":128,
-                 "x":316,
-                 "y":218.667
-                }, 
-                {
-                 "gid":49,
-                 "height":23,
-                 "id":218,
-                 "name":"mars",
-                 "rotation":0,
-                 "type":"mars",
-                 "visible":true,
-                 "width":24,
-                 "x":653.333,
-                 "y":100.5
-                }, 
-                {
                  "gid":50,
                  "height":23,
                  "id":219,
@@ -1389,6 +1354,11 @@
                          "value":100
                         }, 
                         {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -1397,8 +1367,64 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":94,
-                 "x":469,
-                 "y":122.5
+                 "x":500.5,
+                 "y":118
+                }, 
+                {
+                 "gid":48,
+                 "height":80,
+                 "id":222,
+                 "name":"saturn",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":200
+                        }, 
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"saturn",
+                 "visible":true,
+                 "width":114,
+                 "x":377,
+                 "y":209.5
+                }, 
+                {
+                 "gid":49,
+                 "height":23,
+                 "id":224,
+                 "name":"mars",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":300
+                        }, 
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"mars",
+                 "visible":true,
+                 "width":24,
+                 "x":653.5,
+                 "y":104
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2087,8 +2113,44 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":90,
-                 "x":471.5,
-                 "y":31.5
+                 "x":502.5,
+                 "y":27
+                }, 
+                {
+                 "ellipse":true,
+                 "height":60,
+                 "id":223,
+                 "name":"saturn",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":222
+                        }],
+                 "rotation":0,
+                 "type":"saturn",
+                 "visible":true,
+                 "width":60,
+                 "x":402,
+                 "y":146.5
+                }, 
+                {
+                 "ellipse":true,
+                 "height":24,
+                 "id":225,
+                 "name":"jupiter",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":224
+                        }],
+                 "rotation":0,
+                 "type":"jupiter",
+                 "visible":true,
+                 "width":24,
+                 "x":653,
+                 "y":80
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2097,7 +2159,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":222,
+ "nextobjectid":226,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2801,9 +2863,9 @@
                 }, 
                 {
                  "id":23,
-                 "image":"..\/img\/tables\/Planet.png",
-                 "imageheight":128,
-                 "imagewidth":128,
+                 "image":"..\/img\/tables\/saturn.png",
+                 "imageheight":80,
+                 "imagewidth":114,
                  "properties":[
                         {
                          "name":"speed",

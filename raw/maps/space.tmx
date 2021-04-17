@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="180">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="195">
  <editorsettings>
   <export target="../../tables/space.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="42" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="43" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -268,8 +268,11 @@
    </properties>
    <image width="40" height="30" source="../img/backgrounds/side_drain_bumper.png"/>
   </tile>
+  <tile id="43">
+   <image width="7" height="7" source="../../img/tables/diamond_div.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="44" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="45" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -290,7 +293,7 @@
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="48" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="49" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -312,7 +315,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="23" name="plunger_chute" type="wall" gid="4" x="895" y="599" width="105" height="600">
+  <object id="23" name="plunger_chute" type="wall" gid="4" x="895" y="600" width="105" height="600">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -322,17 +325,17 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="25" name="drain_wall_left" type="wall" gid="5" x="289" y="658" width="197" height="195">
+  <object id="25" name="drain_wall_left" type="wall" gid="5" x="285" y="658" width="197" height="195">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="600" width="14" height="600">
+  <object id="26" name="vertical_wall" type="wall" gid="7" x="271" y="600" width="14" height="600">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="78" name="angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
+  <object id="78" name="angled_wall_5" type="wall" gid="24" x="285.333" y="78" width="140" height="142">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -342,9 +345,14 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="166" name="space_bottom_bg" gid="47" x="271.393" y="600.353" width="720" height="600" visible="0"/>
+  <object id="166" name="space_bottom_bg" gid="48" x="271.393" y="600.353" width="720" height="600" visible="0"/>
   <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
   <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
+  <object id="182" name="diamond_div_1" type="wall" gid="44" x="519" y="127.5" width="7" height="7"/>
+  <object id="183" name="diamond_div_1" type="wall" gid="44" x="553.25" y="128.75" width="7" height="7"/>
+  <object id="184" name="diamond_div_1" type="wall" gid="44" x="586.5" y="128.5" width="7" height="7"/>
+  <object id="185" name="diamond_div_1" type="wall" gid="44" x="619.75" y="129.25" width="7" height="7"/>
+  <object id="186" name="diamond_div_1" type="wall" gid="44" x="654.75" y="129" width="7" height="7"/>
  </objectgroup>
  <objectgroup id="4" name="Dynamic">
   <object id="13" name="plunger" type="plunger" gid="1" x="930" y="550" width="30" height="255">
@@ -512,7 +520,7 @@
   <object id="175" name="side_drain_bumper" type="side_drain_bumper" gid="43" x="851" y="318.333" width="40" height="30"/>
   <object id="176" name="side_drain_bumper" gid="43" x="291.667" y="319" width="40" height="30"/>
  </objectgroup>
- <objectgroup id="3" name="Collision" visible="0">
+ <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="377" y="250.5">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
@@ -558,8 +566,8 @@
    </properties>
    <polygon points="0,-0.666667 1.5,172.864 62.7955,277.318 96.9318,235.159 15.4318,165.341 14.8182,2.30303"/>
   </object>
-  <object id="53" name="left" type="wall" x="276.5" y="0.5">
-   <polygon points="0,-80 -1,599.5 150.5,599.5 14.5,465.5 15,50.5 152.5,-64 0.0214,-150.419"/>
+  <object id="53" name="left" type="wall" x="272.5" y="0.5">
+   <polygon points="0,-80 -1,599.5 150.5,599.5 13.1667,462.167 13,51.8333 152.5,-64 0.0214,-150.419"/>
   </object>
   <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="803.273" y="395.455">
    <properties>
@@ -675,6 +683,27 @@
     <property name="active" type="bool" value="false"/>
     <property name="dynObjConn" type="object" value="176"/>
    </properties>
+   <ellipse/>
+  </object>
+  <object id="180" name="diamond_div_1" type="wall" x="522.25" y="120.75">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="187" name="diamond_div_1" type="wall" x="556.75" y="122.25">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="188" name="diamond_div_1" type="wall" x="590" y="121.75">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="190" name="diamond_div_1" type="wall" x="623.5" y="122.5">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="191" name="diamond_div_1" type="wall" x="658.25" y="122.25">
+   <polygon points="0,0 -3.04348,3.04348 -0.217391,6.26087 2.82609,3.13043"/>
+  </object>
+  <object id="192" type="wall" x="396" y="-72" width="20" height="20">
+   <ellipse/>
+  </object>
+  <object id="194" type="wall" x="766" y="-78" width="20" height="20">
    <ellipse/>
   </object>
  </objectgroup>

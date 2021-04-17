@@ -204,12 +204,24 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.SIDE_DRAIN_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newBumper);
+                } else if (obj.type === ENTITY_TYPE.Mars) {
+                    const newMars = new Mars(obj, bodyData, {
+                        ...ANIMATIONS.MARS,
+                        animationSpritesheet: images[ANIMATIONS.MARS.imageNames[obj.name]],
+                    });
+                    result.push(newMars);
                 } else if (obj.type === ENTITY_TYPE.Jupiter) {
                     const newJupiter = new Jupiter(obj, bodyData, {
                         ...ANIMATIONS.JUPITER,
                         animationSpritesheet: images[ANIMATIONS.JUPITER.imageNames[obj.name]],
                     });
                     result.push(newJupiter);
+                } else if (obj.type === ENTITY_TYPE.Saturn) {
+                    const newSaturn = new Saturn(obj, bodyData, {
+                        ...ANIMATIONS.SATURN,
+                        animationSpritesheet: images[ANIMATIONS.SATURN.imageNames[obj.name]],
+                    });
+                    result.push(newSaturn);
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
                         result.push(new Cloud(self.minX, self.maxX, obj, null));
