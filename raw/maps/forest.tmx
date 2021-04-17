@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="187">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="194">
  <editorsettings>
   <export target="../../tables/forest.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="198" tileheight="600" tilecount="52" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="960" tileheight="600" tilecount="56" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -294,8 +294,20 @@
   <tile id="53">
    <image width="57" height="186" source="../../img/tables/forest_flipper_bumper_right_v2.png"/>
   </tile>
+  <tile id="54">
+   <image width="64" height="64" source="../../img/tables/forest_banana.png"/>
+  </tile>
+  <tile id="55">
+   <image source="../../img/tables/forest_banana_anim-sheet.png"/>
+  </tile>
+  <tile id="56">
+   <image source="../../img/tables/forest_banana_monkey-sheet.png"/>
+  </tile>
+  <tile id="57">
+   <image width="64" height="64" source="../../img/tables/forest_monkey_sprite.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="56" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="59" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -313,7 +325,7 @@
    <image width="720" height="600" source="../img/backgrounds/forest_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="61" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="64" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -335,7 +347,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="174" name="forest_bottom_bg" gid="60" x="276.069" y="602.989" width="720" height="600" visible="0">
+  <object id="174" name="forest_bottom_bg" gid="63" x="276.069" y="602.989" width="720" height="600" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
    </properties>
@@ -480,6 +492,16 @@
    </properties>
   </object>
   <object id="186" name="forest_flipper_bumper_right" type="flipper_bumper" gid="54" x="748.002" y="441.168" width="57" height="186">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="188" name="forest_banana" type="banana" gid="55" x="649.667" y="375.333" width="64" height="64">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="192" name="forest_banana_taken" type="banana_taken" gid="55" x="460.667" y="327.333" width="64" height="64">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -635,6 +657,18 @@
     <property name="dynObjConn" type="object" value="121"/>
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
+  </object>
+  <object id="189" name="banana" type="banana" x="667.667" y="326.333" width="28" height="30">
+   <properties>
+    <property name="dynObjConn" type="object" value="188"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="193" name="banana_taken" type="banana_taken" x="482.5" y="280.5" width="22.25" height="28.5">
+   <properties>
+    <property name="dynObjConn" type="object" value="192"/>
+   </properties>
+   <ellipse/>
   </object>
  </objectgroup>
 </map>

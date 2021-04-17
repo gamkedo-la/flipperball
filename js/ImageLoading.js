@@ -248,6 +248,10 @@ function loadImages() {
         {imgName: "forest_flipper_bumper_right", theFile: "tables/forest_flipper_bumper_right_v2.png"},
         {imgName: "forest_flipper_bumper_left_anim", theFile: "animations/forest_flipper_bumper_left_anim.png"},
         {imgName: "forest_flipper_bumper_right_anim", theFile: "animations/forest_flipper_bumper_right_anim.png"},
+        {imgName: "forest_banana", theFile: "tables/forest_banana.png"},
+        {imgName: "forest_banana_anim", theFile: "animations/forest_banana_anim-sheet.png"},
+        {imgName: "forest_banana_taken", theFile: "tables/forest_banana.png"},
+        {imgName: "forest_banana_taken_anim", theFile: "animations/forest_banana_monkey-sheet.png"},
 
         //Aquarium Table Sprites
         {imgName: "small_bubble", theFile: "tables/small_bubble.png"},

@@ -121,7 +121,23 @@ function MapBuilder (tableName = selected_table) {
                     animationSpritesheet: images[ANIMATIONS.WING_BUMPER.imageNames[obj.name]],
                 });
                 result.push(newGameObject);
-            } else if (obj.type === ENTITY_TYPE.Trigger) {
+            }else if(obj.type === ENTITY_TYPE.Banana){
+                DEBUG_LOG("Banana");
+                const newGameObject = new BananaObject(obj, bodyData, {
+                    ...ANIMATIONS.BANANA,
+                    animationSpritesheet: images[ANIMATIONS.BANANA.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
+            }
+            else if(obj.type === ENTITY_TYPE.BananaTaken){
+                DEBUG_LOG("Banana Taken");
+                const newGameObject = new BananaTakenObject(obj, bodyData, {
+                    ...ANIMATIONS.BANANA_TAKEN,
+                    animationSpritesheet: images[ANIMATIONS.BANANA_TAKEN.imageNames[obj.name]],
+                });
+                result.push(newGameObject);
+            }
+            else if (obj.type === ENTITY_TYPE.Trigger) {
                 result.push(new TriggerMapObject(obj, bodyData));
             } else if (obj.type === 'plunger') {
                 self.plunger = new Plunger(obj, bodyData, {

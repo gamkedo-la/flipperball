@@ -142,7 +142,7 @@ function CollisionManager () {
         //console.log("[CollisionManager]: checkSingleBodyCollisions() -> entity.type: "+ entity.type);
         if (distance <= squaredRadii) {
             if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate
-                || entity.type == ENTITY_TYPE.Spawner) {    
+                || entity.type == ENTITY_TYPE.Spawner || entity.type == ENTITY_TYPE.Banana || entity.type == ENTITY_TYPE.BananaTaken) {    
                 DEBUG_LOG("CollisionManager: checkCollision: "+ entity.type); 
                 const direction = normalize(ball.body.center, entity.body.center);
                 this.collisions.push(new Collision(

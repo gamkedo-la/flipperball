@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":59,
+                 "gid":63,
                  "height":600,
                  "id":174,
                  "name":"forest_bottom_bg",
@@ -568,8 +568,8 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":57,
-                 "x":374.262109663142,
-                 "y":430.349397590361
+                 "x":374.262,
+                 "y":430.349
                 }, 
                 {
                  "gid":54,
@@ -586,8 +586,44 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":57,
-                 "x":748.001967051881,
-                 "y":441.168182935825
+                 "x":748.002,
+                 "y":441.168
+                }, 
+                {
+                 "gid":55,
+                 "height":64,
+                 "id":188,
+                 "name":"forest_banana",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"banana",
+                 "visible":true,
+                 "width":64,
+                 "x":649.667,
+                 "y":375.333
+                }, 
+                {
+                 "gid":55,
+                 "height":64,
+                 "id":192,
+                 "name":"forest_banana_taken",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"banana_taken",
+                 "visible":true,
+                 "width":64,
+                 "x":460.667,
+                 "y":327.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1355,6 +1391,42 @@
                  "width":0,
                  "x":803,
                  "y":326
+                }, 
+                {
+                 "ellipse":true,
+                 "height":30,
+                 "id":189,
+                 "name":"banana",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":188
+                        }],
+                 "rotation":0,
+                 "type":"banana",
+                 "visible":true,
+                 "width":28,
+                 "x":667.667,
+                 "y":326.333
+                }, 
+                {
+                 "ellipse":true,
+                 "height":28.5,
+                 "id":193,
+                 "name":"banana_taken",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":192
+                        }],
+                 "rotation":0,
+                 "type":"banana_taken",
+                 "visible":true,
+                 "width":22.25,
+                 "x":482.5,
+                 "y":280.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1363,7 +1435,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":187,
+ "nextobjectid":194,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1377,7 +1449,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.5.0",
  "tileheight":10,
  "tilesets":[
         {
@@ -1392,7 +1464,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":52,
+         "tilecount":56,
          "tileheight":600,
          "tiles":[
                 {
@@ -2044,7 +2116,7 @@
                 }, 
                 {
                  "id":52,
-                 "image":"..\/img\/tables\/forest_flipper_bumper_v2.png",
+                 "image":"..\/img\/tables\/forest_flipper_bumper_left_v2.png",
                  "imageheight":186,
                  "imagewidth":57
                 }, 
@@ -2053,12 +2125,32 @@
                  "image":"..\/img\/tables\/forest_flipper_bumper_right_v2.png",
                  "imageheight":186,
                  "imagewidth":57
+                }, 
+                {
+                 "id":54,
+                 "image":"..\/img\/tables\/forest_banana.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":55,
+                 "image":"..\/img\/tables\/forest_banana_anim-sheet.png"
+                }, 
+                {
+                 "id":56,
+                 "image":"..\/img\/tables\/forest_banana_monkey-sheet.png"
+                }, 
+                {
+                 "id":57,
+                 "image":"..\/img\/tables\/forest_monkey_sprite.png",
+                 "imageheight":64,
+                 "imagewidth":64
                 }],
-         "tilewidth":198
+         "tilewidth":960
         }, 
         {
          "columns":0,
-         "firstgid":55,
+         "firstgid":59,
          "grid":
             {
              "height":1,
@@ -2105,7 +2197,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":60,
+         "firstgid":64,
          "grid":
             {
              "height":1,
@@ -2161,6 +2253,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.4,
+ "version":1.5,
  "width":100
 });
