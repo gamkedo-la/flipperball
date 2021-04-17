@@ -55,8 +55,6 @@ function TableSelectionScene() {
                 // keeping it as a switch for now in case we want to add more functions to the scene
                     selected_table = SELECTIONS[selectorPositionsIndex].bottomTable;
                     selected_top_table = SELECTIONS[selectorPositionsIndex].topTable;
-                    console.log("Selected table: " + selected_table);
-                    console.log("Selected top table: " + selected_top_table);
                     flipperSoundMenu.play();
                     SceneManager.setState(SCENE.TITLE);  
                 return true;

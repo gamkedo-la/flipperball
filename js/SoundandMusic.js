@@ -10,6 +10,9 @@ let flipperSoundMenu;
 let bumperSound;
 let slotDingSound;
 let slotCrankSound;
+let wallSound;
+let ballCapturedSound;
+let passOverGateSound;
 let menuMusic;
 let musicVolume;
 let effectsVolume;
@@ -30,7 +33,7 @@ function configureGameAudio() {
 	}
 	
 	if(isNaN(effectsVolume)) {
-		effectsVolume = 1;
+		effectsVolume = 0.15;
 	}	
 }
 
@@ -44,7 +47,9 @@ function loadAudio() {
 	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50);
 	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
-
+	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 0.5);
+	ballCapturedSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Captured_SFX", 0.5);
+	passOverGateSound = new SoundOverlapsClass(assetPath.Audio + "Pass_Over_Gate_SFX", 0.5);
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }

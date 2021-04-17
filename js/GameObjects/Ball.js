@@ -99,8 +99,10 @@ class Ball extends GameObject {
                         this.triggersCollided[Date.now()] = collision.otherEntity;
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     }
-                    if ((collision.otherEntity.subType === TRIGGER_TYPE.Light) || (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch)) {
+                    if (collision.otherEntity.subType === TRIGGER_TYPE.Light) {
                         DEBUG_LOG("Light Trigger Hit");
+                    } else if (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch) {
+                        ballCapturedSound.play();
                     }     
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
@@ -108,15 +110,22 @@ class Ball extends GameObject {
                     this.vyAdjustment = (-this.velocity.y) - (collision.otherEntity.velocityRatio * MAX_BALL_SPEED);
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Habitrail) {
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
-                } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate || collision.otherEntity.type === ENTITY_TYPE.Spawner 
-                    || collision.otherEntity.type === ENTITY_TYPE.Banana || collision.otherEntity.type === ENTITY_TYPE.BananaTaken){
+                } else if(collision.otherEntity.type === ENTITY_TYPE.RotatingGate) {
+                    passOverGateSound.play();
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
+                } else if((collision.otherEntity.type === ENTITY_TYPE.Spawner) ||
+                    (collision.otherEntity.type === ENTITY_TYPE.Banana) ||
+                    (collision.otherEntity.type === ENTITY_TYPE.BananaTaken)) {
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if(collision.otherEntity.type === ENTITY_TYPE.SideDrainBumper) {
                     if(collision.otherEntity.active) {
                         this.respondToCircularCollision(collision);
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);    
                     }
                 } else {
+                    if (collision.otherEntity.type === ENTITY_TYPE.Wall) {
+                        wallSound.play();
+                    }
                     SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     if (collision.edge) {
                         this.respondToPolygonCollision(collision);

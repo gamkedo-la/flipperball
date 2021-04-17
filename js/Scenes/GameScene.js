@@ -110,7 +110,17 @@ function GameScene() {
             }
         }
 
-        playLoopBackgroundMusic();
+        let musicToPlay = "Honky_Tonk_Piano_Loop";
+        switch (selected_table) {
+            case TABLES.Vam:
+            case TABLES.Space:
+                musicToPlay = "Space_Table_Maybe";
+                break;
+            case TABLES.Forest:
+                musicToPlay = "Forest_table_Maybe";
+                break;
+        }
+        playLoopBackgroundMusic(musicToPlay);
     }
 
     this.transitionOut = function () {        
@@ -618,29 +628,34 @@ function GameScene() {
                 //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
+                    bumperSound.play();
                 }
                 break;
             case ENTITY_TYPE.Mars:
                 if (otherEntity.hasAnimation) {
                     incrementScore(otherEntity.score);
                     otherEntity.animate(0);
+                    bumperSound.play();
                 }
                 break;
             case ENTITY_TYPE.Jupiter:
                 if (otherEntity.hasAnimation) {
                     incrementScore(otherEntity.score);
                     otherEntity.animate(0);
+                    bumperSound.play();
                 }
                 break;
             case ENTITY_TYPE.Saturn:
                 if (otherEntity.hasAnimation) {
                     incrementScore(otherEntity.score);
                     otherEntity.animate(0);
+                    bumperSound.play();
                 }
                 break;    
             case ENTITY_TYPE.SideDrainBumper:
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
+                    bumperSound.play();
                 }
                 break;
             case ENTITY_TYPE.WingBumper:
