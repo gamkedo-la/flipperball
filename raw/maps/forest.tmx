@@ -498,11 +498,13 @@
   </object>
   <object id="188" name="forest_banana" type="banana" gid="55" x="649.667" y="375.333" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="100"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="192" name="forest_banana_taken" type="banana_taken" gid="55" x="460.667" y="327.333" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="300"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>

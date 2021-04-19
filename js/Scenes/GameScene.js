@@ -21,6 +21,7 @@ function GameScene() {
     this.bonusLive = false;
     this.bonusTime = 0;
     this.bonusLights = [];
+    this.isColliding = false;
     this.rotatingGateEntity = null;
     this.remainingRotatingScore = 0;
     this.gameHasFinished = false;
@@ -607,6 +608,11 @@ function GameScene() {
             //Not more collisions with the spawner so the spawner can be activated again (so it doesn´t spawn one entity per frame)
             spawnerCollisionOn = false;
         }
+
+        if(otherEntity.type !== ENTITY_TYPE.Banana && otherEntity.type !== ENTITY_TYPE.BananaTaken){
+            //Not more collisions with the spawner so the spawner can be activated again (so it doesn´t spawn one entity per frame)
+            this.isColliding = false;
+        }
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
@@ -691,7 +697,19 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Banana:
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Banana collision detected");
-
+                if(!this.isColliding){
+                    incrementScore(otherEntity.score);
+                    this.removeEntity(otherEntity);
+                    this.isColliding = true;
+                }
+                break;
+            case ENTITY_TYPE.BananaTaken:
+                DEBUG_LOG("[GameScene]: NotifyBallCollision() -> BananaTaken collision detected");
+                if(!this.isColliding){
+                    incrementScore(otherEntity.score);
+                    this.removeEntity(otherEntity);
+                    this.isColliding = true;
+                }
                 break;
             default:
                 break;

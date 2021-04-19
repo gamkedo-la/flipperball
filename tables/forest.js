@@ -596,6 +596,11 @@
                  "name":"forest_banana",
                  "properties":[
                         {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -613,6 +618,11 @@
                  "id":192,
                  "name":"forest_banana_taken",
                  "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":300
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",

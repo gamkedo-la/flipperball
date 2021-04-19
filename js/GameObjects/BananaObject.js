@@ -4,7 +4,7 @@ class BananaObject extends GameObject {
         this.currFrame = 0;
         this.isInReverse = false;
         this.isAnimating = true;
-        this.timeAlive = 5000;
+        this.timeAlive = 10000;
         this.timeCounter = 0;
     }
 
