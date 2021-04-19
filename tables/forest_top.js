@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":31,
+                 "gid":35,
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
@@ -44,7 +44,7 @@
                  "y":90
                 }, 
                 {
-                 "gid":58,
+                 "gid":62,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -62,7 +62,7 @@
                  "y":552
                 }, 
                 {
-                 "gid":58,
+                 "gid":62,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -80,7 +80,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":58,
+                 "gid":62,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -98,7 +98,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":58,
+                 "gid":62,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -116,7 +116,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":57,
+                 "gid":61,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -139,7 +139,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":58,
+                 "gid":62,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -162,7 +162,7 @@
                  "y":276.5
                 }, 
                 {
-                 "gid":50,
+                 "gid":54,
                  "height":600,
                  "id":212,
                  "name":"forest_top_bg",
@@ -216,7 +216,7 @@
                  "y":599
                 }, 
                 {
-                 "gid":51,
+                 "gid":55,
                  "height":52,
                  "id":215,
                  "name":"forest_angled_wall_3",
@@ -234,7 +234,7 @@
                  "y":406.75
                 }, 
                 {
-                 "gid":52,
+                 "gid":56,
                  "height":14,
                  "id":216,
                  "name":"forest_horizontal_wall",
@@ -248,11 +248,11 @@
                  "type":"wall",
                  "visible":true,
                  "width":598,
-                 "x":277.666666666667,
+                 "x":277.667,
                  "y":12.33
                 }, 
                 {
-                 "gid":52,
+                 "gid":56,
                  "height":14,
                  "id":217,
                  "name":"forest_horizontal_wall",
@@ -267,10 +267,10 @@
                  "visible":true,
                  "width":598,
                  "x":389,
-                 "y":12.3333333333333
+                 "y":12.3333
                 }, 
                 {
-                 "gid":53,
+                 "gid":57,
                  "height":600,
                  "id":218,
                  "name":"forest_vertical_wall",
@@ -284,11 +284,11 @@
                  "type":"wall",
                  "visible":true,
                  "width":36,
-                 "x":253.333333333333,
-                 "y":601.333333333333
+                 "x":253.333,
+                 "y":601.333
                 }, 
                 {
-                 "gid":54,
+                 "gid":58,
                  "height":132,
                  "id":219,
                  "name":"forest_drain_wall_right",
@@ -303,10 +303,10 @@
                  "visible":true,
                  "width":132,
                  "x":766,
-                 "y":616.666666666667
+                 "y":616.667
                 }, 
                 {
-                 "gid":56,
+                 "gid":60,
                  "height":96,
                  "id":220,
                  "name":"forest_angled_wall_4",
@@ -331,110 +331,38 @@
         }, 
         {
          "draworder":"topdown",
-         "id":4,
+         "id":6,
          "name":"Dynamic",
          "objects":[
                 {
-                 "gid":2,
-                 "height":124,
-                 "id":14,
-                 "name":"flipper_left",
+                 "gid":118,
+                 "height":64,
+                 "id":221,
+                 "name":"forest_banana_taken",
                  "properties":[
                         {
-                         "name":"zOrder",
+                         "name":"score",
                          "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"left_flipper",
-                 "visible":true,
-                 "width":170,
-                 "x":339,
-                 "y":526
-                }, 
-                {
-                 "gid":3,
-                 "height":124,
-                 "id":15,
-                 "name":"flipper_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"right_flipper",
-                 "visible":true,
-                 "width":170,
-                 "x":725,
-                 "y":528
-                }, 
-                {
-                 "gid":17,
-                 "height":186,
-                 "id":30,
-                 "name":"flipper_bumper_left",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"flipper_bumper",
-                 "visible":true,
-                 "width":55,
-                 "x":334,
-                 "y":405.5
-                }, 
-                {
-                 "gid":18,
-                 "height":186,
-                 "id":31,
-                 "name":"flipper_bumper_right",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"flipper_bumper",
-                 "visible":true,
-                 "width":55,
-                 "x":807.5,
-                 "y":391
-                }, 
-                {
-                 "gid":7,
-                 "height":113,
-                 "id":106,
-                 "name":"plunger_gate",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"gate",
-                 "visible":true,
-                 "width":14,
-                 "x":894,
-                 "y":127
-                }, 
-                {
-                 "gid":32,
-                 "height":54,
-                 "id":91,
-                 "name":"ball_catch",
-                 "properties":[
-                        {
-                         "name":"ball_catch",
-                         "type":"object",
-                         "value":149
+                         "value":300
                         }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"banana_taken",
+                 "visible":true,
+                 "width":64,
+                 "x":81.0000000000001,
+                 "y":245.4165
+                }, 
+                {
+                 "gid":118,
+                 "height":64,
+                 "id":223,
+                 "name":"forest_banana",
+                 "properties":[
                         {
                          "name":"score",
                          "type":"int",
@@ -446,11 +374,11 @@
                          "value":0
                         }],
                  "rotation":0,
-                 "type":"trigger",
+                 "type":"banana",
                  "visible":true,
-                 "width":54,
-                 "x":307,
-                 "y":78.6667
+                 "width":64,
+                 "x":54.5,
+                 "y":302
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1123,6 +1051,42 @@
                  "width":40,
                  "x":291.607,
                  "y":189.394
+                }, 
+                {
+                 "ellipse":true,
+                 "height":28.5,
+                 "id":222,
+                 "name":"banana_taken",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":221
+                        }],
+                 "rotation":0,
+                 "type":"banana_taken",
+                 "visible":true,
+                 "width":22.25,
+                 "x":102.833,
+                 "y":198.5835
+                }, 
+                {
+                 "ellipse":true,
+                 "height":30,
+                 "id":224,
+                 "name":"banana",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":223
+                        }],
+                 "rotation":0,
+                 "type":"banana",
+                 "visible":true,
+                 "width":28,
+                 "x":72.5,
+                 "y":253
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1130,8 +1094,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":6,
- "nextobjectid":221,
+ "nextlayerid":7,
+ "nextobjectid":225,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1160,7 +1124,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":25,
+         "tilecount":29,
          "tileheight":600,
          "tiles":[
                 {
@@ -1468,12 +1432,32 @@
                  "image":"..\/img\/tables\/forest_chute_wall.png",
                  "imageheight":598,
                  "imagewidth":34
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/forest_banana.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/forest_banana_anim-sheet.png"
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/forest_banana_monkey-sheet.png"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/forest_monkey_sprite.png",
+                 "imageheight":64,
+                 "imagewidth":64
                 }],
-         "tilewidth":598
+         "tilewidth":960
         }, 
         {
          "columns":0,
-         "firstgid":26,
+         "firstgid":30,
          "grid":
             {
              "height":1,
@@ -1897,7 +1881,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":57,
+         "firstgid":61,
          "grid":
             {
              "height":1,
@@ -1950,6 +1934,702 @@
                  "type":"habitrail"
                 }],
          "tilewidth":42
+        }, 
+        {
+         "columns":0,
+         "firstgid":64,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"dynamic",
+         "spacing":0,
+         "tilecount":56,
+         "tileheight":600,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/raw\/img\/backgrounds\/plunger.png",
+                 "imageheight":289,
+                 "imagewidth":68,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"plunger"
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/img\/tables\/flipper_left.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"left_flipper"
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/img\/tables\/flipper_right.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"right_flipper"
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/img\/tables\/plunger_chute.png",
+                 "imageheight":600,
+                 "imagewidth":105,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/raw\/img\/backgrounds\/vertical_wall.png",
+                 "imageheight":598,
+                 "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/raw\/img\/backgrounds\/ball.png",
+                 "imageheight":26,
+                 "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "type":"ball"
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
+                 "imageheight":26,
+                 "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"trigger"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
+                 "imageheight":9,
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }]
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/angled_wall_5.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/angled_wall_6.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/letter_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/letter_light_lit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/cloud_1.png",
+                 "imageheight":78,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/cloud_2.png",
+                 "imageheight":36,
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":15
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/img\/tables\/cloud_3.png",
+                 "imageheight":54,
+                 "imagewidth":81,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":7
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/img\/tables\/cloud_4.png",
+                 "imageheight":66,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/img\/tables\/cloud_5.png",
+                 "imageheight":39,
+                 "imagewidth":66,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/img\/tables\/cloud_6.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/img\/tables\/cloud_7.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24
+                }, 
+                {
+                 "id":35,
+                 "image":"..\/img\/tables\/tiny_star.png",
+                 "imageheight":1,
+                 "imagewidth":1,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"star"
+                }, 
+                {
+                 "id":36,
+                 "image":"..\/img\/tables\/small_star.png",
+                 "imageheight":5,
+                 "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"star"
+                }, 
+                {
+                 "id":37,
+                 "image":"..\/img\/tables\/expanding_star.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":38,
+                 "image":"..\/img\/tables\/expanding_star_2.png",
+                 "imageheight":20,
+                 "imagewidth":20
+                }, 
+                {
+                 "id":39,
+                 "image":"..\/img\/tables\/rocket.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"rocket"
+                }, 
+                {
+                 "id":40,
+                 "image":"..\/img\/tables\/space_shuttle.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"shuttle"
+                }, 
+                {
+                 "id":41,
+                 "image":"..\/img\/tables\/sputniksatellite.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "type":"sputnik"
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/img\/tables\/forest_vertical_wall.png",
+                 "imageheight":600,
+                 "imagewidth":36
+                }, 
+                {
+                 "id":43,
+                 "image":"..\/img\/tables\/forest_drain_wall_left.png",
+                 "imageheight":180,
+                 "imagewidth":132
+                }, 
+                {
+                 "id":44,
+                 "image":"..\/img\/tables\/forest_drain_wall_right.png",
+                 "imageheight":132,
+                 "imagewidth":132
+                }, 
+                {
+                 "id":46,
+                 "image":"..\/img\/tables\/forest_plunger_chute.png",
+                 "imageheight":600,
+                 "imagewidth":198
+                }, 
+                {
+                 "id":47,
+                 "image":"..\/img\/tables\/forest_angled_wall_5.png",
+                 "imageheight":132,
+                 "imagewidth":138
+                }, 
+                {
+                 "id":48,
+                 "image":"..\/img\/tables\/forest_angled_wall_6.png",
+                 "imageheight":132,
+                 "imagewidth":138
+                }, 
+                {
+                 "id":49,
+                 "image":"..\/img\/tables\/forest_drain_rail_left.png",
+                 "imageheight":270,
+                 "imagewidth":78
+                }, 
+                {
+                 "id":50,
+                 "image":"..\/img\/tables\/forest_drain_rail_right.png",
+                 "imageheight":270,
+                 "imagewidth":78
+                }, 
+                {
+                 "id":51,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_left.png",
+                 "imageheight":186,
+                 "imagewidth":54
+                }, 
+                {
+                 "id":52,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_left_v2.png",
+                 "imageheight":186,
+                 "imagewidth":57
+                }, 
+                {
+                 "id":53,
+                 "image":"..\/img\/tables\/forest_flipper_bumper_right_v2.png",
+                 "imageheight":186,
+                 "imagewidth":57
+                }, 
+                {
+                 "id":54,
+                 "image":"..\/img\/tables\/forest_banana.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":55,
+                 "image":"..\/img\/tables\/forest_banana_anim-sheet.png"
+                }, 
+                {
+                 "id":56,
+                 "image":"..\/img\/tables\/forest_banana_monkey-sheet.png"
+                }, 
+                {
+                 "id":57,
+                 "image":"..\/img\/tables\/forest_monkey_sprite.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }],
+         "tilewidth":960
         }],
  "tilewidth":10,
  "type":"map",

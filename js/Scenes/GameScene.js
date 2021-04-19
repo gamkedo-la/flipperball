@@ -36,6 +36,14 @@ function GameScene() {
     let spawnerCollisionOn = false;
     this.slotMachines = [];
     this.bonusActivated = false;
+    this.bananaCounter = 0;
+    this.bananaMinSpawnTime = 5000;
+    this.bananaMaxSpawnTime = 15000;
+    this.bananaRandomSpawnTime = 0;
+    this.bananaMinPositionX = 400;
+    this.bananaMaxPositionX = 750;
+    this.bananaMinPositionY = 100;
+    this.bananaMaxPositionY = 450;
 
     // eslint-disable-next-line consistent-this
     const self = this
@@ -122,6 +130,9 @@ function GameScene() {
                 break;
         }
         playLoopBackgroundMusic(musicToPlay);
+
+        this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(this.bananaMinSpawnTime, this.bananaMaxSpawnTime);
+        console.log(this.bananaRandomSpawnTime);
     }
 
     this.transitionOut = function () {        
@@ -556,6 +567,18 @@ function GameScene() {
         } else {
             determineBallAndTableState();
         }
+
+        if (selected_table == TABLES.Forest || selected_table == TABLES.ForestTop) {
+            self.bananaCounter+=deltaTime;
+            if(self.bananaCounter >= self.bananaRandomSpawnTime){
+                DEBUG_LOG("[GameScene] Update: Banana counter >= banana random spawn time");
+                self.bananaCounter = 0;
+                self.getRandomNumberBetweenTwo(self.bananaMinSpawnTime, self.bananaMaxSpawnTime);
+                var bananaEntity = {name: ENTITY_NAME.Banana};
+                self.spawnEntity(bananaEntity)
+            }
+        }
+            
     }
 
     const draw = function() {
@@ -794,6 +817,9 @@ function GameScene() {
                     newObjectData.dynamicObject.score = spawnerEntity.nextScore();
                     newObjectData.dynamicObject.maxX = spawnerEntity.despawn;
                 break;
+                case ENTITY_NAME.Banana:
+                    newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Banana);
+                break;
                 default:
                     break;
             }
@@ -815,6 +841,15 @@ function GameScene() {
                 newObjectData.dynamicObject.y = otherTypeSpawnInfo.y + newObjectData.dynamicObject.height;
                 newObjectData.collisionBody.x = otherTypeSpawnInfo.body.center.x;
                 newObjectData.collisionBody.y = otherTypeSpawnInfo.body.center.y;
+            } else if(spawnerEntity.name == ENTITY_NAME.Banana){
+
+                let randomPositionX = this.getRandomNumberBetweenTwo(this.bananaMinPositionX, this.bananaMaxPositionX);
+                let randomPositionY = this.getRandomNumberBetweenTwo(this.bananaMinPositionY, this.bananaMaxPositionY);
+
+                newObjectData.dynamicObject.x = randomPositionX;
+                newObjectData.dynamicObject.y = randomPositionY + newObjectData.dynamicObject.height;
+                newObjectData.collisionBody.x = randomPositionX;
+                newObjectData.collisionBody.y = randomPositionY;
             }
             const newObject = self.table.addDynamicObjectWithData(newObjectData.dynamicObject, newObjectData.collisionBody);
             for (const obj of self.table.drawOrder) {
@@ -907,4 +942,9 @@ function GameScene() {
 
         incrementScore(score);
     }
+
+    this.getRandomNumberBetweenTwo = function(min, max){
+        return Math.random() * (max - min) + min;
+    }
+
 }

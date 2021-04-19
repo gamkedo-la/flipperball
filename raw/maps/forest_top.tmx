@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="221">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="225">
  <editorsettings>
   <export target="../../tables/forest_top.js" format="js"/>
  </editorsettings>
@@ -154,10 +154,10 @@
    <image width="64" height="64" source="../../img/tables/forest_banana.png"/>
   </tile>
   <tile id="26">
-   <image width="512" height="64" source="../../img/tables/forest_banana_anim-sheet.png"/>
+   <image source="../../img/tables/forest_banana_anim-sheet.png"/>
   </tile>
   <tile id="27">
-   <image width="960" height="64" source="../../img/tables/forest_banana_monkey-sheet.png"/>
+   <image source="../../img/tables/forest_banana_monkey-sheet.png"/>
   </tile>
   <tile id="28">
    <image width="64" height="64" source="../../img/tables/forest_monkey_sprite.png"/>
@@ -364,6 +364,306 @@
    <image width="42" height="125" source="../../img/tables/habitrail_track.png"/>
   </tile>
  </tileset>
+ <tileset firstgid="64" name="dynamic" tilewidth="960" tileheight="600" tilecount="56" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0" type="plunger">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="68" height="289" source="../img/backgrounds/plunger.png"/>
+  </tile>
+  <tile id="1" type="left_flipper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="171" height="126" source="../../img/tables/flipper_left.png"/>
+  </tile>
+  <tile id="2" type="right_flipper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="171" height="126" source="../../img/tables/flipper_right.png"/>
+  </tile>
+  <tile id="3" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="105" height="600" source="../../img/tables/plunger_chute.png"/>
+  </tile>
+  <tile id="4" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_left.png"/>
+  </tile>
+  <tile id="5" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="197" height="195" source="../img/backgrounds/drain_wall_right.png"/>
+  </tile>
+  <tile id="6" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="14" height="598" source="../img/backgrounds/vertical_wall.png"/>
+  </tile>
+  <tile id="7" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="86" source="../img/backgrounds/angled_wall_1.png"/>
+  </tile>
+  <tile id="8" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="52" source="../img/backgrounds/angled_wall_2.png"/>
+  </tile>
+  <tile id="9" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="52" source="../img/backgrounds/angled_wall_3.png"/>
+  </tile>
+  <tile id="10" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="52" height="86" source="../img/backgrounds/angled_wall_4.png"/>
+  </tile>
+  <tile id="11" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_yellow.png"/>
+  </tile>
+  <tile id="12" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_green.png"/>
+  </tile>
+  <tile id="13" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_blue.png"/>
+  </tile>
+  <tile id="14" type="circle_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="94" height="95" source="../img/backgrounds/circle_bumper_red.png"/>
+  </tile>
+  <tile id="15" type="ball">
+   <properties>
+    <property name="zOrder" type="int" value="50"/>
+   </properties>
+   <image width="26" height="26" source="../img/backgrounds/ball.png"/>
+  </tile>
+  <tile id="16" type="flipper_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="55" height="186" source="../img/backgrounds/flipper_bumper_left.png"/>
+  </tile>
+  <tile id="17" type="flipper_bumper">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="55" height="186" source="../img/backgrounds/flipper_bumper_right.png"/>
+  </tile>
+  <tile id="18" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_left.png"/>
+  </tile>
+  <tile id="19" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="82" height="270" source="../img/backgrounds/drain_rail_right.png"/>
+  </tile>
+  <tile id="20" type="trigger">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="5" height="26" source="../img/backgrounds/lane_trigger.png"/>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="zOrder" type="int" value="75"/>
+   </properties>
+   <image width="20" height="9" source="../img/backgrounds/rotating_gate_provisional.png"/>
+  </tile>
+  <tile id="23" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="140" height="142" source="../../img/tables/angled_wall_5.png"/>
+  </tile>
+  <tile id="24" type="wall">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="140" height="142" source="../../img/tables/angled_wall_6.png"/>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="24" height="24" source="../../img/tables/letter_light_unlit.png"/>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+   <image width="24" height="24" source="../../img/tables/letter_light_lit.png"/>
+  </tile>
+  <tile id="27" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="10"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="108" height="78" source="../../img/tables/cloud_1.png"/>
+  </tile>
+  <tile id="28" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="15"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="51" height="36" source="../../img/tables/cloud_2.png"/>
+  </tile>
+  <tile id="29" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="7"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="81" height="54" source="../../img/tables/cloud_3.png"/>
+  </tile>
+  <tile id="30" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="5"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="108" height="66" source="../../img/tables/cloud_4.png"/>
+  </tile>
+  <tile id="31" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="25"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="66" height="39" source="../../img/tables/cloud_5.png"/>
+  </tile>
+  <tile id="32" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="144" height="96" source="../../img/tables/cloud_6.png"/>
+  </tile>
+  <tile id="33" type="cloud">
+   <properties>
+    <property name="xVelocity" type="int" value="3"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="144" height="96" source="../../img/tables/cloud_7.png"/>
+  </tile>
+  <tile id="34">
+   <image width="24" height="24" source="../../img/tables/2x_bonus_light_unlit.png"/>
+  </tile>
+  <tile id="35" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="0"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="1" height="1" source="../../img/tables/tiny_star.png"/>
+  </tile>
+  <tile id="36" type="star">
+   <properties>
+    <property name="xVelocity" type="int" value="0"/>
+    <property name="yVelocity" type="int" value="5"/>
+    <property name="zOrder" type="int" value="-80"/>
+   </properties>
+   <image width="5" height="5" source="../../img/tables/small_star.png"/>
+  </tile>
+  <tile id="37">
+   <image width="16" height="16" source="../../img/tables/expanding_star.png"/>
+  </tile>
+  <tile id="38">
+   <image width="20" height="20" source="../../img/tables/expanding_star_2.png"/>
+  </tile>
+  <tile id="39" type="rocket">
+   <properties>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="96" height="96" source="../../img/tables/rocket.png"/>
+  </tile>
+  <tile id="40" type="shuttle">
+   <properties>
+    <property name="zOrder" type="int" value="-75"/>
+   </properties>
+   <image width="96" height="96" source="../../img/tables/space_shuttle.png"/>
+  </tile>
+  <tile id="41" type="sputnik">
+   <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
+  </tile>
+  <tile id="42">
+   <image width="36" height="600" source="../../img/tables/forest_vertical_wall.png"/>
+  </tile>
+  <tile id="43">
+   <image width="132" height="180" source="../../img/tables/forest_drain_wall_left.png"/>
+  </tile>
+  <tile id="44">
+   <image width="132" height="132" source="../../img/tables/forest_drain_wall_right.png"/>
+  </tile>
+  <tile id="46">
+   <image width="198" height="600" source="../../img/tables/forest_plunger_chute.png"/>
+  </tile>
+  <tile id="47">
+   <image width="138" height="132" source="../../img/tables/forest_angled_wall_5.png"/>
+  </tile>
+  <tile id="48">
+   <image width="138" height="132" source="../../img/tables/forest_angled_wall_6.png"/>
+  </tile>
+  <tile id="49">
+   <image width="78" height="270" source="../../img/tables/forest_drain_rail_left.png"/>
+  </tile>
+  <tile id="50">
+   <image width="78" height="270" source="../../img/tables/forest_drain_rail_right.png"/>
+  </tile>
+  <tile id="51">
+   <image width="54" height="186" source="../../img/tables/forest_flipper_bumper_left.png"/>
+  </tile>
+  <tile id="52">
+   <image width="57" height="186" source="../../img/tables/forest_flipper_bumper_left_v2.png"/>
+  </tile>
+  <tile id="53">
+   <image width="57" height="186" source="../../img/tables/forest_flipper_bumper_right_v2.png"/>
+  </tile>
+  <tile id="54">
+   <image width="64" height="64" source="../../img/tables/forest_banana.png"/>
+  </tile>
+  <tile id="55">
+   <image source="../../img/tables/forest_banana_anim-sheet.png"/>
+  </tile>
+  <tile id="56">
+   <image source="../../img/tables/forest_banana_monkey-sheet.png"/>
+  </tile>
+  <tile id="57">
+   <image width="64" height="64" source="../../img/tables/forest_monkey_sprite.png"/>
+  </tile>
+ </tileset>
  <objectgroup id="5" name="Fixed">
   <object id="92" name="ball_catch_arrow" gid="35" x="350" y="90" width="24" height="24"/>
   <object id="137" name="habitrail_small_track" gid="62" x="348" y="552" width="42" height="75" rotation="310"/>
@@ -422,6 +722,20 @@
   </object>
   <object id="220" name="forest_angled_wall_4" type="wall" gid="60" x="910" y="108" width="60" height="96">
    <properties>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Dynamic">
+  <object id="221" name="forest_banana_taken" type="banana_taken" gid="118" x="81" y="245.416" width="64" height="64">
+   <properties>
+    <property name="score" type="int" value="300"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="223" name="forest_banana" type="banana" gid="118" x="54.5" y="302" width="64" height="64">
+   <properties>
+    <property name="score" type="int" value="100"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
@@ -551,6 +865,18 @@
   <object id="163" name="habitrail_gateway" x="291.607" y="189.394" width="40" height="40">
    <properties>
     <property name="dynObjConn" type="object" value="142"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="222" name="banana_taken" type="banana_taken" x="102.833" y="198.583" width="22.25" height="28.5">
+   <properties>
+    <property name="dynObjConn" type="object" value="221"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="224" name="banana" type="banana" x="72.5" y="253" width="28" height="30">
+   <properties>
+    <property name="dynObjConn" type="object" value="223"/>
    </properties>
    <ellipse/>
   </object>
