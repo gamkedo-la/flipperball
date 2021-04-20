@@ -34,6 +34,8 @@ function TitleScene() {
     let left_flipper;
     let right_flipper;
 
+    let debugSpinTest = 0;
+
     this.transitionIn = function() {
         const mainMenuX = 235;
         const mainMenuY = 260;
@@ -187,9 +189,14 @@ function TitleScene() {
         // canvasContext.drawImage(uiMenuBorderPic, 0, 0, uiMenuBorderPic.width, uiMenuBorderPic.height, 200, 250, uiMenuBorderPic.width * GAME_SCALE, uiMenuBorderPic.height * GAME_SCALE);
 //        fontRenderer.drawString(canvasContext, 220, 260, "START", GAME_SCALE);
         drawMenu();        
-        const titlePic = images['flipper_title_small']
+        const titlePic = images['flipper_title_small'];
+
         canvasContext.drawImage(titlePic,  canvas.width/2 - titlePic.width/2, 0);
 
+        /*debugSpinTest += deltaTime * 0.001;
+        const cardBack = images['card_back_hometeam_logo'];
+        const cardFace = images['card_heart_ace'];
+        drawImageForTiledWithVerticalSpin(cardFace, cardBack, 300, 10, debugSpinTest);*/
 	}
 	
     

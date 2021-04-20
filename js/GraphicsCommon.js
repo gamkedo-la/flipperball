@@ -28,6 +28,18 @@ function drawImageForTiledWithRotation(image, atX, atY, withAng) {
   canvasContext.restore();
 }
 
+//Only meant to be given imageFront and imageBack with the same dimensions
+function drawImageForTiledWithVerticalSpin(imageFront, imageBack, atX, atY, withAng) {
+
+  let spinScale = Math.cos(withAng);
+
+  canvasContext.save();
+  canvasContext.translate(atX + imageFront.width/2, atY+imageFront.height);
+  canvasContext.scale(Math.abs(spinScale), 1.0);
+  canvasContext.drawImage((spinScale < 0 ? imageBack : imageFront), -imageFront.width/2, -imageFront.height);
+  canvasContext.restore();
+}
+
 
 function renderControlsInfo (x, y, y_offset, align=TextAlignment.Center) {        
   texts = [ 
