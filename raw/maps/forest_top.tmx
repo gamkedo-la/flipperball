@@ -727,16 +727,27 @@
   </object>
  </objectgroup>
  <objectgroup id="6" name="Dynamic">
-  <object id="221" name="forest_banana_taken" type="banana_taken" gid="118" x="81" y="245.416" width="64" height="64">
+  <object id="221" name="forest_banana_taken" type="banana_taken" gid="118" x="90" y="681.416" width="64" height="64">
    <properties>
     <property name="score" type="int" value="300"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="223" name="forest_banana" type="banana" gid="118" x="54.5" y="302" width="64" height="64">
+  <object id="223" name="forest_banana" type="banana" gid="118" x="63.5" y="738" width="64" height="64">
    <properties>
     <property name="score" type="int" value="100"/>
     <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="14" name="flipper_left" gid="2" x="339" y="526" width="170" height="124"/>
+  <object id="15" name="flipper_right" gid="3" x="725" y="528" width="170" height="124"/>
+  <object id="30" name="flipper_bumper_left" gid="17" x="334" y="405.5" width="55" height="186"/>
+  <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="391" width="55" height="186"/>
+  <object id="106" name="plunger_gate" type="gate" gid="7" x="894" y="127" width="14" height="113"/>
+  <object id="91" name="ball_catch" type="trigger" gid="32" x="307" y="78.6667" width="54" height="54">
+   <properties>
+    <property name="ball_catch" type="object" value="149"/>
+    <property name="score" type="int" value="100"/>
    </properties>
   </object>
  </objectgroup>
@@ -868,13 +879,13 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="222" name="banana_taken" type="banana_taken" x="102.833" y="198.583" width="22.25" height="28.5">
+  <object id="222" name="banana_taken" type="banana_taken" x="111.833" y="634.583" width="22.25" height="28.5">
    <properties>
     <property name="dynObjConn" type="object" value="221"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="224" name="banana" type="banana" x="72.5" y="253" width="28" height="30">
+  <object id="224" name="banana" type="banana" x="81.5" y="689" width="28" height="30">
    <properties>
     <property name="dynObjConn" type="object" value="223"/>
    </properties>

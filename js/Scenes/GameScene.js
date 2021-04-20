@@ -722,7 +722,7 @@ function GameScene() {
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Banana collision detected");
                 if(!this.isColliding){
                     incrementScore(otherEntity.score);
-                    this.removeEntity(otherEntity);
+                    self.removeEntity(otherEntity);
                     this.isColliding = true;
                 }
                 break;
@@ -730,7 +730,7 @@ function GameScene() {
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> BananaTaken collision detected");
                 if(!this.isColliding){
                     incrementScore(otherEntity.score);
-                    this.removeEntity(otherEntity);
+                    self.removeEntity(otherEntity);
                     this.isColliding = true;
                 }
                 break;
@@ -848,8 +848,8 @@ function GameScene() {
 
                 newObjectData.dynamicObject.x = randomPositionX;
                 newObjectData.dynamicObject.y = randomPositionY + newObjectData.dynamicObject.height;
-                newObjectData.collisionBody.x = randomPositionX;
-                newObjectData.collisionBody.y = randomPositionY;
+                newObjectData.collisionBody.x = randomPositionX + 15;
+                newObjectData.collisionBody.y = randomPositionY + 12;
             }
             const newObject = self.table.addDynamicObjectWithData(newObjectData.dynamicObject, newObjectData.collisionBody);
             for (const obj of self.table.drawOrder) {
@@ -906,8 +906,10 @@ function GameScene() {
     }
 
     this.removeEntity = function (entityToRemove) {
+        DEBUG_LOG("[GameScene]: RemoveEntity -> Entity name: " + entityToRemove.name);
         self.table.dynamicObjects.splice(self.table.dynamicObjects.indexOf(entityToRemove), 1);
         self.table.drawOrder.splice(self.table.drawOrder.indexOf(entityToRemove), 1);
+        this.collisionManager.unregisterEntity(entityToRemove);
         if (entityToRemove.type === ENTITY_TYPE.Plane) {
             for (const obj of self.table.dynamicObjects) {
                 if (obj.type === ENTITY_TYPE.Spawner && obj.name === ENTITY_NAME.SpawnerPlane) {

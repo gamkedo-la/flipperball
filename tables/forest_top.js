@@ -354,8 +354,8 @@
                  "type":"banana_taken",
                  "visible":true,
                  "width":64,
-                 "x":81.0000000000001,
-                 "y":245.4165
+                 "x":90,
+                 "y":681.416
                 }, 
                 {
                  "gid":118,
@@ -377,8 +377,126 @@
                  "type":"banana",
                  "visible":true,
                  "width":64,
-                 "x":54.5,
-                 "y":302
+                 "x":63.5,
+                 "y":738
+                }, 
+                {
+                 "gid":2,
+                 "height":124,
+                 "id":14,
+                 "name":"flipper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"left_flipper",
+                 "visible":true,
+                 "width":170,
+                 "x":339,
+                 "y":526
+                }, 
+                {
+                 "gid":3,
+                 "height":124,
+                 "id":15,
+                 "name":"flipper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"right_flipper",
+                 "visible":true,
+                 "width":170,
+                 "x":725,
+                 "y":528
+                }, 
+                {
+                 "gid":17,
+                 "height":186,
+                 "id":30,
+                 "name":"flipper_bumper_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":55,
+                 "x":334,
+                 "y":405.5
+                }, 
+                {
+                 "gid":18,
+                 "height":186,
+                 "id":31,
+                 "name":"flipper_bumper_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"flipper_bumper",
+                 "visible":true,
+                 "width":55,
+                 "x":807.5,
+                 "y":391
+                }, 
+                {
+                 "gid":7,
+                 "height":113,
+                 "id":106,
+                 "name":"plunger_gate",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"gate",
+                 "visible":true,
+                 "width":14,
+                 "x":894,
+                 "y":127
+                }, 
+                {
+                 "gid":32,
+                 "height":54,
+                 "id":91,
+                 "name":"ball_catch",
+                 "properties":[
+                        {
+                         "name":"ball_catch",
+                         "type":"object",
+                         "value":149
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":25
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":54,
+                 "x":307,
+                 "y":78.6667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1067,8 +1185,8 @@
                  "type":"banana_taken",
                  "visible":true,
                  "width":22.25,
-                 "x":102.833,
-                 "y":198.5835
+                 "x":111.833,
+                 "y":634.583
                 }, 
                 {
                  "ellipse":true,
@@ -1085,8 +1203,8 @@
                  "type":"banana",
                  "visible":true,
                  "width":28,
-                 "x":72.5,
-                 "y":253
+                 "x":81.5,
+                 "y":689
                 }],
          "opacity":1,
          "type":"objectgroup",
