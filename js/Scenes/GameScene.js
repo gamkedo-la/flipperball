@@ -38,7 +38,7 @@ function GameScene() {
     this.bonusActivated = false;
     this.bananaCounter = 0;
     this.bananaMinSpawnTime = 5000;
-    this.bananaMaxSpawnTime = 15000;
+    this.bananaMaxSpawnTime = 10000;
     this.bananaRandomSpawnTime = 0;
     this.bananaMinPositionX = 400;
     this.bananaMaxPositionX = 750;
@@ -132,7 +132,6 @@ function GameScene() {
         playLoopBackgroundMusic(musicToPlay);
 
         this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(this.bananaMinSpawnTime, this.bananaMaxSpawnTime);
-        console.log(this.bananaRandomSpawnTime);
     }
 
     this.transitionOut = function () {        
