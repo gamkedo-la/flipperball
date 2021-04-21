@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="235">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="239">
  <editorsettings>
   <export target="../../tables/forest_top.js" format="js"/>
  </editorsettings>
@@ -1108,17 +1108,19 @@
     <property name="score" type="int" value="100"/>
    </properties>
   </object>
-  <object id="231" name="spawner_plane" type="spawner" gid="178" x="307" y="81" width="54" height="54">
+  <object id="231" name="spawner_plane" type="spawner" gid="178" x="574.333" y="121.667" width="54" height="54">
    <properties>
     <property name="despawn" type="int" value="850"/>
    </properties>
   </object>
-  <object id="233" name="plane_red" type="plane" gid="159" x="244" y="174.25" width="51" height="48">
+  <object id="233" name="plane_red" type="plane" gid="159" x="282.333" y="140.25" width="51" height="48">
    <properties>
     <property name="maxX" type="int" value="850"/>
     <property name="score" type="int" value="200"/>
    </properties>
   </object>
+  <object id="235" name="plane_pipe_left" gid="166" x="289.833" y="143.333" width="39" height="54"/>
+  <object id="237" name="plane_pipe_right" gid="165" x="855" y="179.5" width="39" height="54"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="333" y="225.5">
@@ -1260,17 +1262,29 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="232" name="spawner_plane" type="spawner" x="314" y="34.5">
+  <object id="232" name="spawner_plane" type="spawner" x="581.333" y="75.1667">
    <properties>
     <property name="dynObjConn" type="object" value="231"/>
    </properties>
    <polygon points="0,0 37.5,-0.5 20,36"/>
   </object>
-  <object id="234" name="plane_red" type="plane" x="244.5" y="125.75" width="48" height="48">
+  <object id="234" name="plane_red" type="plane" x="282.833" y="91.75" width="48" height="48">
    <properties>
     <property name="dynObjConn" type="object" value="233"/>
    </properties>
    <ellipse/>
+  </object>
+  <object id="236" name="left_pipe" type="wall" x="290.333" y="141.833">
+   <properties>
+    <property name="dynObjConn" type="object" value="235"/>
+   </properties>
+   <polygon points="0,0 38,0 37.6667,-49.6667 0.333333,-54.8333"/>
+  </object>
+  <object id="238" name="right_pipe" type="wall" x="893.5" y="178">
+   <properties>
+    <property name="dynObjConn" type="object" value="237"/>
+   </properties>
+   <polygon points="0,0 0.166667,-53.6667 -38,-48.8333 -38,-0.5"/>
   </object>
  </objectgroup>
 </map>

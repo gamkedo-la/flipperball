@@ -451,6 +451,11 @@ function GameScene() {
         self.bonusMultiplier = 1;
         self.bonusTime = 0;
         self.bonusLive = false;
+        if (selected_table == TABLES.Forest || selected_table == TABLES.ForestTop) {
+            self.bananaMinSpawnTime = 5000;
+            self.bananaMaxSpawnTime = 10000;
+        }
+        
         for (const togLight of self.bonusLights) {
             const togOff = togLight.turnOff();                        
         }
@@ -780,6 +785,11 @@ function GameScene() {
                         this.bonusMultiplier = bonusTarg.bonusMult || 2;
                         this.bonusLive = true;
                         this.bonusTime = bonusTarg.bonusTime || 60;
+                        if (selected_table == TABLES.Forest || selected_table == TABLES.ForestTop) {
+                            DEBUG_LOG("DOUBLE BANANA");
+                            self.bananaMinSpawnTime = 2000;
+                            self.bananaMaxSpawnTime = 4000;
+                        }
                     }
                 }
             }

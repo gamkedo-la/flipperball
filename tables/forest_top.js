@@ -473,7 +473,7 @@
                  "visible":true,
                  "width":94,
                  "x":557.358,
-                 "y":281.00985
+                 "y":281.01
                 }, 
                 {
                  "gid":178,
@@ -495,8 +495,8 @@
                  "type":"spawner",
                  "visible":true,
                  "width":54,
-                 "x":307,
-                 "y":81
+                 "x":574.333333333333,
+                 "y":121.666666666667
                 }, 
                 {
                  "gid":159,
@@ -523,8 +523,44 @@
                  "type":"plane",
                  "visible":true,
                  "width":51,
-                 "x":244,
-                 "y":174.25
+                 "x":282.333333333333,
+                 "y":140.25
+                }, 
+                {
+                 "gid":166,
+                 "height":54,
+                 "id":235,
+                 "name":"plane_pipe_left",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":289.833333333333,
+                 "y":143.333333333333
+                }, 
+                {
+                 "gid":165,
+                 "height":54,
+                 "id":237,
+                 "name":"plane_pipe_right",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":30
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":855,
+                 "y":179.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1232,7 +1268,7 @@
                  "visible":true,
                  "width":94.652,
                  "x":556.642,
-                 "y":185.99015
+                 "y":185.99
                 }, 
                 {
                  "height":0,
@@ -1261,8 +1297,8 @@
                  "type":"spawner",
                  "visible":true,
                  "width":0,
-                 "x":314,
-                 "y":34.5
+                 "x":581.333333333333,
+                 "y":75.1666666666667
                 }, 
                 {
                  "ellipse":true,
@@ -1279,8 +1315,76 @@
                  "type":"plane",
                  "visible":true,
                  "width":48,
-                 "x":244.5,
-                 "y":125.75
+                 "x":282.833333333333,
+                 "y":91.75
+                }, 
+                {
+                 "height":0,
+                 "id":236,
+                 "name":"left_pipe",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":38,
+                         "y":0
+                        }, 
+                        {
+                         "x":37.6667,
+                         "y":-49.6667
+                        }, 
+                        {
+                         "x":0.333333,
+                         "y":-54.8333
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":235
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":290.333333333333,
+                 "y":141.833333333333
+                }, 
+                {
+                 "height":0,
+                 "id":238,
+                 "name":"right_pipe",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0.166667,
+                         "y":-53.6667
+                        }, 
+                        {
+                         "x":-38,
+                         "y":-48.8333
+                        }, 
+                        {
+                         "x":-38,
+                         "y":-0.5
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":237
+                        }],
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":0,
+                 "x":893.5,
+                 "y":178
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1289,7 +1393,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":235,
+ "nextobjectid":239,
  "orientation":"orthogonal",
  "properties":[
         {
