@@ -224,6 +224,14 @@ function GameScene() {
                   this.flashEnabled = !this.flashEnabled;
                 }
                 return true;
+            case ALIAS.EXIT:
+                if(self.paused){
+                    self.storedTables = [];
+                    self.storedCollisionManagers = [];
+                    self.gameHasFinished = true;
+                    self.paused = false;
+                    SceneManager.setState(SCENE.TITLE);  
+                }
         }
         
         return false;
@@ -607,7 +615,8 @@ function GameScene() {
           colorText("[GAME PAUSED]" , TEXT_LEFT_OFFSET, 120, Color.Red, Fonts.Subtitle, TextAlignment.Left, 1);    
           colorText("press P to resume" , TEXT_LEFT_OFFSET, 150, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);    
           colorText("press R to restart" , TEXT_LEFT_OFFSET, 180, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);   
-          renderControlsInfo(TEXT_LEFT_OFFSET, 205, 20, TextAlignment.Left)
+          colorText("press X to exit" , TEXT_LEFT_OFFSET, 210, Color.Red, Fonts.ButtonTitle, TextAlignment.Left, 1);   
+          renderControlsInfo(TEXT_LEFT_OFFSET, 235, 20, TextAlignment.Left)
 
           drawRect(0,0,canvas.width,canvas.height, Color.BlackOverlay);
         }
