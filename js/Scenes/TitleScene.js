@@ -75,6 +75,10 @@ function TitleScene() {
                     selectorPositionsIndex--;
                     DEBUG_LOG("UP: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
+                }else if(selectorPositionsIndex == 0){
+                    selectorPositionsIndex = SELECTIONS.length - 1;
+                    DEBUG_LOG("BACK DOWN: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
                 }
                 
                 break;
@@ -83,6 +87,10 @@ function TitleScene() {
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
                     DEBUG_LOG("DOWN: " + selectorPositionsIndex);
+                    flipperSoundMenu.play();
+                }else if(selectorPositionsIndex == SELECTIONS.length-1){
+                    selectorPositionsIndex = 0;
+                    DEBUG_LOG("BACK UP: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }
                 
