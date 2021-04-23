@@ -161,7 +161,15 @@ function GameScene() {
                 this.releasePlunger();
                 return true;
             case ALIAS.CHEATS:
-                CHEATS_ACTIVE = !CHEATS_ACTIVE;
+                CHEATS_ACTIVE = true; //not toggling because key is rapid fire
+                console.log("cheats on? "+ CHEATS_ACTIVE);
+                return true;
+            case ALIAS.CHEATS_ADD_POINTS:
+                if(CHEATS_ACTIVE){
+                    console.log ("adding cheat points");
+                    incrementScore(3000);
+                    checkForExtraBall();
+                }
                 return true;
             case ALIAS.DEBUG:
                 if (pressed) {
