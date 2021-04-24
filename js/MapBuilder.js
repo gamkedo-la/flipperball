@@ -204,6 +204,12 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.SIDE_DRAIN_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newBumper);
+                } else if (obj.type === ENTITY_TYPE.Earth) {
+                    const newEarth = new Earth(obj, bodyData, {
+                        ...ANIMATIONS.EARTH,
+                        animationSpritesheet: images[ANIMATIONS.EARTH.imageNames[obj.name]],
+                    });
+                    result.push(newEarth);
                 } else if (obj.type === ENTITY_TYPE.Mars) {
                     const newMars = new Mars(obj, bodyData, {
                         ...ANIMATIONS.MARS,

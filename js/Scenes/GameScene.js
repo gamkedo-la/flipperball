@@ -684,6 +684,13 @@ function GameScene() {
                     bumperSound.play();
                 }
                 break;
+            case ENTITY_TYPE.Earth:
+                if (otherEntity.hasAnimation) {
+                    incrementScore(otherEntity.score);
+                    otherEntity.animate(0);
+                    bumperSound.play();
+                }
+                break;
             case ENTITY_TYPE.Mars:
                 if (otherEntity.hasAnimation) {
                     incrementScore(otherEntity.score);

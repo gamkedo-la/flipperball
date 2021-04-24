@@ -178,6 +178,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Gate:
             case ENTITY_TYPE.Plane:
             case ENTITY_TYPE.Spawner:
+            case ENTITY_TYPE.Earth:
             case ENTITY_TYPE.Mars:
             case ENTITY_TYPE.Jupiter:
             case ENTITY_TYPE.Saturn:

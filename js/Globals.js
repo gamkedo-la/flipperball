@@ -329,6 +329,17 @@ const ANIMATIONS = {
 		reverses: false,
 		loops: true
 	},
+	EARTH: {
+		imageNames: {
+			"earth": "earth_anim"
+		},
+		frames: [1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7],
+		frameWidth: 24,
+		frameHeight: 23,
+		frameTimes: [128],
+		reverses: false,
+		loops: false
+	},
 	MARS: {
 		imageNames: {
 			"mars": "mars_anim"
@@ -336,7 +347,7 @@ const ANIMATIONS = {
 		frames: [1, 2, 3, 4, 5, 6, 7],
 		frameWidth: 24,
 		frameHeight: 23,
-		frameTimes: [128, 128, 128, 128, 512, 128, 128],
+		frameTimes: [128],
 		reverses: true,
 		loops: false
 	},

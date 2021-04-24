@@ -215,6 +215,7 @@ function loadImages() {
         {imgName: "rocket", theFile: "tables/rocket.png"},
         {imgName: "rocket_anim", theFile: "animations/rocket_anim.png"},
         {imgName: "earth", theFile: "tables/earth.png"},
+        {imgName: "earth_anim", theFile: "animations/earth_anim.png"},
         {imgName: "mars", theFile: "tables/mars.png"},
         {imgName: "mars_anim", theFile: "animations/mars_anim.png"},
         {imgName: "jupiter", theFile: "tables/jupiter.png"},

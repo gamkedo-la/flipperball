@@ -304,18 +304,6 @@
                  "width":42,
                  "x":291,
                  "y":276.5
-                }, 
-                {
-                 "gid":50,
-                 "height":23,
-                 "id":219,
-                 "name":"earth",
-                 "rotation":0,
-                 "type":"earth",
-                 "visible":true,
-                 "width":24,
-                 "x":792,
-                 "y":157.833
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1425,6 +1413,34 @@
                  "width":24,
                  "x":653.5,
                  "y":104
+                }, 
+                {
+                 "gid":50,
+                 "height":23,
+                 "id":226,
+                 "name":"earth",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":300
+                        }, 
+                        {
+                         "name":"speed",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"earth",
+                 "visible":true,
+                 "width":24,
+                 "x":799,
+                 "y":152
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2132,13 +2148,13 @@
                  "visible":true,
                  "width":60,
                  "x":402,
-                 "y":146.5
+                 "y":138.5
                 }, 
                 {
                  "ellipse":true,
                  "height":24,
                  "id":225,
-                 "name":"jupiter",
+                 "name":"mars",
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -2146,20 +2162,38 @@
                          "value":224
                         }],
                  "rotation":0,
-                 "type":"jupiter",
+                 "type":"mars",
                  "visible":true,
                  "width":24,
                  "x":653,
                  "y":80
+                }, 
+                {
+                 "ellipse":true,
+                 "height":24,
+                 "id":227,
+                 "name":"earth",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":226
+                        }],
+                 "rotation":0,
+                 "type":"earth",
+                 "visible":true,
+                 "width":24,
+                 "x":799,
+                 "y":128.5
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":226,
+ "nextobjectid":228,
  "orientation":"orthogonal",
  "properties":[
         {
