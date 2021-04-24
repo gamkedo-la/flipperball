@@ -43,13 +43,13 @@ function loadAudio() {
 	resumeSound = new SoundOverlapsClass(assetPath.Audio + "ResumeSoundLow");
 	startGameSound = new SoundOverlapsClass(assetPath.Audio + "BeepBox-Song");
 	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 10);
-	flipperSoundMenu = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 1, 0.005);
-	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50);
+	flipperSoundMenu = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 1, 0.05);
+	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50, 0.35);
 	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
-	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 200, 0.03125);
-	ballCapturedSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Captured_SFX", 1, 0.03125);
-	passOverGateSound = new SoundOverlapsClass(assetPath.Audio + "Pass_Over_Gate_SFX", 200, 0.03125);
+	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 200, 0.06125);
+	ballCapturedSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Captured_SFX", 1, 0.06125);
+	passOverGateSound = new SoundOverlapsClass(assetPath.Audio + "Pass_Over_Gate_SFX", 200, 0.06125);
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
