@@ -128,6 +128,9 @@ function GameScene() {
             case TABLES.Forest:
                 musicToPlay = "Forest_table_Maybe";
                 break;
+            case TABLES.Aquarium:
+                    musicToPlay = "Aquarium Table Music Loop";
+                    break;
         }
         playLoopBackgroundMusic(musicToPlay);
 
