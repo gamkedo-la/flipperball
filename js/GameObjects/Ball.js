@@ -122,6 +122,11 @@ class Ball extends GameObject {
                         this.respondToCircularCollision(collision);
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);    
                     }
+                } else if(collision.otherEntity.type === ENTITY_TYPE.Plug) {
+                    if(collision.otherEntity.active) {
+                        this.respondToCircularCollision(collision);
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);    
+                    }
                 } else {
                     if (collision.otherEntity.type === ENTITY_TYPE.Wall) {
                         wallSound.play();
@@ -182,6 +187,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Mars:
             case ENTITY_TYPE.Jupiter:
             case ENTITY_TYPE.Saturn:
+            case ENTITY_TYPE.Plug:
             case ENTITY_TYPE.Banana:
             case ENTITY_TYPE.BananaTaken:
                 return true;

@@ -223,10 +223,12 @@ function loadImages() {
         {imgName: "saturn", theFile: "tables/saturn.png"},
         {imgName: "saturn_anim", theFile: "animations/saturn_anim.png"},
         {imgName: "shuttle", theFile: "tables/space_shuttle.png"},
+        {imgName: "shuttle_anim", theFile: "animations/space_shuttle_anim.png"},
         {imgName: "sputnik", theFile: "tables/sputniksatellite.png"},
 
         {imgName: "side_drain_bumper", theFile: "tables/side_drain_bumper.png"},
         {imgName: "side_drain_bumper_anim", theFile: "animations/side_drain_bumper_anim.png"},
+        {imgName: "plug", theFile: "tables/plug.png"},
 
         {imgName: "slot", theFile: "tables/slot.png"},
         {imgName: "slot_animation", theFile: "animations/slot_frame_anim.png"},

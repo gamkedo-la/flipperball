@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="195">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="211">
  <editorsettings>
   <export target="../../tables/space.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="43" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="44" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -256,7 +256,7 @@
    <properties>
     <property name="zOrder" type="int" value="-75"/>
    </properties>
-   <image width="96" height="96" source="../../img/tables/space_shuttle.png"/>
+   <image width="75" height="75" source="../../img/tables/space_shuttle.png"/>
   </tile>
   <tile id="41" type="sputnik">
    <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
@@ -271,8 +271,14 @@
   <tile id="43">
    <image width="7" height="7" source="../../img/tables/diamond_div.png"/>
   </tile>
+  <tile id="44" type="plug">
+   <properties>
+    <property name="zOrder" type="int" value="-50"/>
+   </properties>
+   <image width="196" height="61" source="../../img/tables/plug.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="45" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="46" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -293,7 +299,7 @@
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
  </tileset>
- <tileset firstgid="49" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="50" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -345,8 +351,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="166" name="space_bottom_bg" gid="48" x="271.393" y="600.353" width="720" height="600" visible="0"/>
-  <object id="172" name="shuttle" gid="41" x="288.667" y="238.667" width="96" height="96"/>
+  <object id="166" name="space_bottom_bg" gid="49" x="290" y="600.353" width="720" height="600" visible="0"/>
   <object id="173" name="sputnik" gid="42" x="724" y="103.333" width="96" height="96"/>
   <object id="182" name="diamond_div_1" type="wall" gid="44" x="519" y="127.5" width="7" height="7"/>
   <object id="183" name="diamond_div_1" type="wall" gid="44" x="553.25" y="128.75" width="7" height="7"/>
@@ -386,7 +391,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="48" name="drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270" visible="0">
+  <object id="48" name="drain_rail_right" type="wall" gid="20" x="770" y="520" width="82" height="270">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
@@ -398,6 +403,7 @@
   </object>
   <object id="73" name="rotating_gate" type="rotating_gate" gid="23" x="348.091" y="333.727" width="26.5455" height="13.5454">
    <properties>
+    <property name="isLeft" type="bool" value="true"/>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
    </properties>
@@ -463,6 +469,7 @@
   </object>
   <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="802.727" y="334.227" width="26.5455" height="13.5454">
    <properties>
+    <property name="isLeft" type="bool" value="false"/>
     <property name="score" type="int" value="5"/>
     <property name="zOrder" type="int" value="75"/>
    </properties>
@@ -519,6 +526,71 @@
   <object id="174" name="rocket" gid="40" x="536.667" y="391.333" width="96" height="96"/>
   <object id="175" name="side_drain_bumper" type="side_drain_bumper" gid="43" x="851" y="318.333" width="40" height="30"/>
   <object id="176" name="side_drain_bumper" gid="43" x="291.667" y="319" width="40" height="30"/>
+  <object id="195" name="light_trigger" type="trigger" gid="21" x="290" y="80" width="2.68293" height="5.51">
+   <properties>
+    <property name="score" type="int" value="25"/>
+    <property name="subtype" value="knockdown"/>
+    <property name="targ_light" type="object" value="196"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="196" name="letter_light" type="letter_light" gid="26" x="349" y="42.1667" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="202"/>
+    <property name="zOrder" type="int" value="-200"/>
+   </properties>
+  </object>
+  <object id="198" name="letter_light" type="letter_light" gid="26" x="350.167" y="80.1667" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="202"/>
+    <property name="zOrder" type="int" value="-200"/>
+   </properties>
+  </object>
+  <object id="199" name="light_trigger" type="trigger" gid="21" x="290" y="95" width="2.68293" height="5.51">
+   <properties>
+    <property name="score" type="int" value="25"/>
+    <property name="subtype" value="knockdown"/>
+    <property name="targ_light" type="object" value="198"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="202" name="shuttle" type="status_light" gid="41" x="316.833" y="218.5" width="75" height="75">
+   <properties>
+    <property name="bonusMult" type="int" value="2"/>
+    <property name="bonusTime" type="int" value="60"/>
+    <property name="requiredLights" type="int" value="4"/>
+    <property name="subtype" value="knockdown"/>
+   </properties>
+  </object>
+  <object id="204" name="plug" gid="45" x="494.667" y="600.333" width="196" height="61"/>
+  <object id="205" name="light_trigger" type="trigger" gid="21" x="290" y="110" width="2.68293" height="5.51">
+   <properties>
+    <property name="score" type="int" value="25"/>
+    <property name="subtype" value="knockdown"/>
+    <property name="targ_light" type="object" value="206"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="206" name="letter_light" type="letter_light" gid="26" x="350" y="115.5" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="202"/>
+    <property name="zOrder" type="int" value="-200"/>
+   </properties>
+  </object>
+  <object id="208" name="light_trigger" type="trigger" gid="21" x="290" y="125" width="2.68293" height="5.51">
+   <properties>
+    <property name="score" type="int" value="25"/>
+    <property name="subtype" value="knockdown"/>
+    <property name="targ_light" type="object" value="209"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="209" name="letter_light" type="letter_light" gid="26" x="349" y="146" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="202"/>
+    <property name="zOrder" type="int" value="-200"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="377" y="250.5">
@@ -704,6 +776,37 @@
    <ellipse/>
   </object>
   <object id="194" type="wall" x="766" y="-78" width="20" height="20">
+   <ellipse/>
+  </object>
+  <object id="200" name="light_trigger" x="288.024" y="74.3577" width="6" height="6">
+   <properties>
+    <property name="dynObjConn" type="object" value="195"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="201" name="light_trigger" x="287.024" y="88.5243" width="6" height="6">
+   <properties>
+    <property name="dynObjConn" type="object" value="199"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="203" name="plug" type="plug" x="545" y="539" width="100" height="100">
+   <properties>
+    <property name="active" type="bool" value="false"/>
+    <property name="dynObjConn" type="object" value="204"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="207" name="light_trigger" x="288" y="119.191" width="60" height="60">
+   <properties>
+    <property name="dynObjConn" type="object" value="208"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="210" name="light_trigger" x="287" y="104.191" width="6" height="6">
+   <properties>
+    <property name="dynObjConn" type="object" value="205"/>
+   </properties>
    <ellipse/>
   </object>
  </objectgroup>

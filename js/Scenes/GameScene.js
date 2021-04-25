@@ -391,6 +391,10 @@ function GameScene() {
         // console.log("-----");
     }        
     const loseBall = function(ball) {
+        const plug = self.table.dynamicObjects.find((data) => data.type === ENTITY_TYPE.Plug);
+        if (plug) {
+            plug.inactivate();
+        }
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
             //TODO: KYLE Get loseball back to working the way it did previously. I tore this up debugging other ball behavior
@@ -793,6 +797,7 @@ function GameScene() {
     }
 
     this.handleTriggerCollision = function (triggerEntity, ball) {
+        if (!triggerEntity.active) return;
         incrementScore(triggerEntity.score);
         if (triggerEntity.targ_light) {
             const lightTarget = self.table.dynamicObjects.find((data) => data.id === triggerEntity.targ_light);            
@@ -804,7 +809,12 @@ function GameScene() {
                 if (lightTarget.bonusTargID) {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
-                    if (bonusLit) {
+                    if (bonusLit && bonusTarg.subtype === 'knockdown') {
+                        const plug = self.table.dynamicObjects.find((data) => data.type === ENTITY_TYPE.Plug);
+                        if (plug) {
+                            plug.activate();
+                        }
+                    } else if (bonusLit) {
                         if (!this.bonusLive) {
                             this.bonusActivated = true;
                         }
@@ -820,6 +830,7 @@ function GameScene() {
                     }
                 }
             }
+            if (triggerEntity.subtype === 'knockdown') triggerEntity.active = false;
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             if (this.currentTableIndex > 0) {
@@ -839,6 +850,12 @@ function GameScene() {
          + (this.properties.ball.velocity.y) * (this.properties.ball.velocity.y));
 
         self.remainingRotatingScore += Math.ceil(ballSpeed * rate) * rotatingEntity.score;
+        if (rotatingEntity.isLeft) {
+            const plug = self.table.dynamicObjects.find((data) => data.type === ENTITY_TYPE.Plug);
+            if (plug) {
+                plug.inactivate();
+            }
+        }
         
     }
 

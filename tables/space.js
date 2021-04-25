@@ -134,7 +134,7 @@
                  "y":74
                 }, 
                 {
-                 "gid":48,
+                 "gid":49,
                  "height":600,
                  "id":166,
                  "name":"space_bottom_bg",
@@ -148,26 +148,8 @@
                  "type":"",
                  "visible":false,
                  "width":720,
-                 "x":271.393,
+                 "x":290,
                  "y":600.353
-                }, 
-                {
-                 "gid":41,
-                 "height":96,
-                 "id":172,
-                 "name":"shuttle",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":-75
-                        }],
-                 "rotation":0,
-                 "type":"shuttle",
-                 "visible":true,
-                 "width":96,
-                 "x":288.667,
-                 "y":238.667
                 }, 
                 {
                  "gid":42,
@@ -378,7 +360,7 @@
                         }],
                  "rotation":0,
                  "type":"wall",
-                 "visible":false,
+                 "visible":true,
                  "width":82,
                  "x":770,
                  "y":520
@@ -407,6 +389,11 @@
                  "id":73,
                  "name":"rotating_gate",
                  "properties":[
+                        {
+                         "name":"isLeft",
+                         "type":"bool",
+                         "value":true
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -662,6 +649,11 @@
                  "id":121,
                  "name":"rotating_gate",
                  "properties":[
+                        {
+                         "name":"isLeft",
+                         "type":"bool",
+                         "value":false
+                        }, 
                         {
                          "name":"score",
                          "type":"int",
@@ -1946,6 +1938,286 @@
                  "width":40,
                  "x":291.667,
                  "y":319
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":195,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"knockdown"
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":196
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":290,
+                 "y":80
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":196,
+                 "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"bonus",
+                         "type":"object",
+                         "value":202
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-200
+                        }],
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":349,
+                 "y":42.1666666666667
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":198,
+                 "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"bonus",
+                         "type":"object",
+                         "value":202
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-200
+                        }],
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":350.166666666667,
+                 "y":80.1666666666667
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":199,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"knockdown"
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":198
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":290,
+                 "y":95
+                }, 
+                {
+                 "gid":41,
+                 "height":75,
+                 "id":202,
+                 "name":"shuttle",
+                 "properties":[
+                        {
+                         "name":"bonusMult",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"bonusTime",
+                         "type":"int",
+                         "value":60
+                        }, 
+                        {
+                         "name":"requiredLights",
+                         "type":"int",
+                         "value":4
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"knockdown"
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "rotation":0,
+                 "type":"status_light",
+                 "visible":true,
+                 "width":75,
+                 "x":316.833333333333,
+                 "y":218.5
+                }, 
+                {
+                 "gid":45,
+                 "height":61,
+                 "id":204,
+                 "name":"plug",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-50
+                        }],
+                 "rotation":0,
+                 "type":"plug",
+                 "visible":true,
+                 "width":196,
+                 "x":494.666666666667,
+                 "y":600.333333333333
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":205,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"knockdown"
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":206
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":290,
+                 "y":110
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":206,
+                 "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"bonus",
+                         "type":"object",
+                         "value":202
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-200
+                        }],
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":350,
+                 "y":115.5
+                }, 
+                {
+                 "gid":21,
+                 "height":5.51,
+                 "id":208,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"knockdown"
+                        }, 
+                        {
+                         "name":"targ_light",
+                         "type":"object",
+                         "value":209
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"trigger",
+                 "visible":true,
+                 "width":2.68293,
+                 "x":290,
+                 "y":125
+                }, 
+                {
+                 "gid":26,
+                 "height":24,
+                 "id":209,
+                 "name":"letter_light",
+                 "properties":[
+                        {
+                         "name":"bonus",
+                         "type":"object",
+                         "value":202
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-200
+                        }],
+                 "rotation":0,
+                 "type":"letter_light",
+                 "visible":true,
+                 "width":24,
+                 "x":349,
+                 "y":146
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2282,12 +2554,12 @@
                          "y":599.5
                         }, 
                         {
-                         "x":13.1666666666666,
-                         "y":462.166666666667
+                         "x":13.1667,
+                         "y":462.167
                         }, 
                         {
-                         "x":13.0000000000001,
-                         "y":51.8333333333333
+                         "x":13,
+                         "y":51.8333
                         }, 
                         {
                          "x":152.5,
@@ -2923,6 +3195,101 @@
                  "width":20,
                  "x":766,
                  "y":-78
+                }, 
+                {
+                 "ellipse":true,
+                 "height":6,
+                 "id":200,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":195
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":6,
+                 "x":288.02435,
+                 "y":74.3576833333333
+                }, 
+                {
+                 "ellipse":true,
+                 "height":6,
+                 "id":201,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":199
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":6,
+                 "x":287.02435,
+                 "y":88.52435
+                }, 
+                {
+                 "ellipse":true,
+                 "height":100,
+                 "id":203,
+                 "name":"plug",
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":204
+                        }],
+                 "rotation":0,
+                 "type":"plug",
+                 "visible":true,
+                 "width":100,
+                 "x":545,
+                 "y":539
+                }, 
+                {
+                 "ellipse":true,
+                 "height":60,
+                 "id":207,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":208
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":60,
+                 "x":288,
+                 "y":119.191
+                }, 
+                {
+                 "ellipse":true,
+                 "height":6,
+                 "id":210,
+                 "name":"light_trigger",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":205
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":6,
+                 "x":287,
+                 "y":104.191
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2931,7 +3298,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":195,
+ "nextobjectid":211,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2960,7 +3327,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":43,
+         "tilecount":44,
          "tileheight":600,
          "tiles":[
                 {
@@ -3539,8 +3906,8 @@
                 {
                  "id":40,
                  "image":"..\/img\/tables\/space_shuttle.png",
-                 "imageheight":96,
-                 "imagewidth":96,
+                 "imageheight":75,
+                 "imagewidth":75,
                  "properties":[
                         {
                          "name":"zOrder",
@@ -3579,12 +3946,25 @@
                  "image":"..\/img\/tables\/diamond_div.png",
                  "imageheight":7,
                  "imagewidth":7
+                }, 
+                {
+                 "id":44,
+                 "image":"..\/img\/tables\/plug.png",
+                 "imageheight":61,
+                 "imagewidth":196,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-50
+                        }],
+                 "type":"plug"
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":45,
+         "firstgid":46,
          "grid":
             {
              "height":1,
@@ -3637,7 +4017,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":49,
+         "firstgid":50,
          "grid":
             {
              "height":1,

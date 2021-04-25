@@ -20,6 +20,7 @@ class ToggleLight extends GameObject {
         }
         if (objData.bonusTime) { this.bonusTime = objData.bonusTime; }
         if (objData.bonusMult) { this.bonusMult = objData.bonusMult }
+        if (objData.subtype) { this.subtype = objData.subtype }
         this.isLit = false;
     }
 
@@ -42,6 +43,11 @@ class ToggleLight extends GameObject {
     }
     
     updateLightState(lightState) {
+        if (this.subtype) {
+            this.velocity.x = 380
+            this.velocity.y = -60
+        }
+
         if (lightState) {
             this.isLit = true;            
             this.isAnimating = true;            
@@ -53,9 +59,9 @@ class ToggleLight extends GameObject {
     
     triggerBonus() {
         this.reqLights -= 1;
-        console.log("Required Lights Left: " + this.reqLights);
+        DEBUG_LOG("Required Lights Left: " + this.reqLights);
         if (this.reqLights <= 0) {
-            console.log("Bonus Light Triggered!");
+            DEBUG_LOG("Bonus Light Triggered!");
             this.updateLightState(true);
             this.reqLights = this.origReqLights;
             return true;

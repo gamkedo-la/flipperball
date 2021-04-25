@@ -10,6 +10,7 @@ class RotatingGateObject extends GameObject {
         this.currFrame = 0;
         this.isInReverse = false;
         this.isAnimating = true;
+        this.isLeft = props[0].isLeft;
     }
 
     calculateRotatingCoefficient(){

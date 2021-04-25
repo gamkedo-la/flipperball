@@ -166,11 +166,19 @@ function MapBuilder (tableName = selected_table) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'status_light') {
-                const newGameObject = new ToggleLight(obj, null, {
-                    ...ANIMATIONS.BONUS_LIGHT,
-                    animationSpritesheet: images[ANIMATIONS.BONUS_LIGHT.imageNames[obj.name]],
-                });
-                result.push(newGameObject);
+                if (obj.subtype === 'knockdown') {
+                    const newGameObject = new ToggleLight(obj, null, {
+                        ...ANIMATIONS.SHUTTLE,
+                        animationSpritesheet: images[ANIMATIONS.SHUTTLE.imageNames[obj.name]],
+                    });
+                    result.push(newGameObject);    
+                } else {
+                    const newGameObject = new ToggleLight(obj, null, {
+                        ...ANIMATIONS.BONUS_LIGHT,
+                        animationSpritesheet: images[ANIMATIONS.BONUS_LIGHT.imageNames[obj.name]],
+                    });
+                    result.push(newGameObject);    
+                }
             } else if (obj.type === 'empire_logo') {
                 const newGameObject = new GameObject(obj, null, {
                     ...ANIMATIONS.EMPIRE_INF,
@@ -203,6 +211,9 @@ function MapBuilder (tableName = selected_table) {
                         ...ANIMATIONS.SIDE_DRAIN_BUMPER,
                         animationSpritesheet: images[ANIMATIONS.SIDE_DRAIN_BUMPER.imageNames[obj.name]],
                     });
+                    result.push(newBumper);
+                } else if (obj.type === ENTITY_TYPE.Plug) {
+                    const newBumper = new Plug(obj, bodyData);
                     result.push(newBumper);
                 } else if (obj.type === ENTITY_TYPE.Earth) {
                     const newEarth = new Earth(obj, bodyData, {
@@ -376,9 +387,11 @@ function TriggerMapObject(objData, bodyData) {
     this.image = images[objData.name];
     this.subType = objData.name;
     this.body = new CollisionBody(bodyData);
+    this.subtype = objData.subtype;
     this.reflectance = objData.reflectance || 1;
     this.hasCollided = false;
     this.score = 0;
+    this.active = true;
     
     for (i = 0; i < objData.properties?.length; i++) {
         switch (objData.properties[i].name) {
@@ -404,7 +417,9 @@ function TriggerMapObject(objData, bodyData) {
     
     this.update = function(deltaTime) {}
     this.draw = function() {
-        canvasContext.drawImage(this.image, this.x, this.y);
-        this.body.draw();
+        if (this.active) {
+            canvasContext.drawImage(this.image, this.x, this.y);
+            this.body.draw();
+        }
     }
 }

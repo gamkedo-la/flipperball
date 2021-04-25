@@ -146,7 +146,8 @@ const ENTITY_TYPE = {
 	Bubble: 'bubble',
 	SideDrainBumper: 'side_drain_bumper', 
 	Banana: 'banana',
-	BananaTaken: 'banana_taken'
+	BananaTaken: 'banana_taken',
+	Plug: 'plug'
 };
 
 const TRIGGER_TYPE = {
@@ -469,6 +470,18 @@ const ANIMATIONS = {
 		loops: true,
 		holds: false	
 	},
+	SHUTTLE: {
+		imageNames: {
+		"shuttle": "shuttle_anim"
+	},
+	frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+	frameWidth: 75,
+	frameHeight: 75,
+	frameTimes: [64],
+	reverses: false,
+	loops: false,
+	holds: true	
+},
 	EMPIRE_INF: {
 		imageNames: {
 			"empire_logo": "emp_inf_anim"
