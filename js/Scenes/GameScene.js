@@ -391,10 +391,14 @@ function GameScene() {
         // console.log("-----");
     }        
     const loseBall = function(ball) {
-        const plug = self.table.dynamicObjects.find((data) => data.type === ENTITY_TYPE.Plug);
-        if (plug) {
-            plug.inactivate();
-        }
+        self.table.dynamicObjects.forEach((data) => {
+            if (data.type === ENTITY_TYPE.Plug) {
+                data.inactivate();
+            } else if (data.subtype === 'knockdown') {
+                data.active = true
+            }
+        })
+
         let ballIndex = self.table.balls.indexOf(ball);
         if (ballIndex !== -1) {
             //TODO: KYLE Get loseball back to working the way it did previously. I tore this up debugging other ball behavior

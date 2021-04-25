@@ -3257,7 +3257,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":60,
+                 "height":6,
                  "id":207,
                  "name":"light_trigger",
                  "properties":[
@@ -3269,7 +3269,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":60,
+                 "width":6,
                  "x":288,
                  "y":119.191
                 }, 
