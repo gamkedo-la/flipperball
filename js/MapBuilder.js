@@ -200,6 +200,9 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.CIRCLE_BUMPER.imageNames[obj.name]],
                     });
                     result.push(newGameObject);
+                } else if (obj.type === ENTITY_TYPE.AsteroidBumper) {
+                    const newAstBumper = new AsteroidBumper(obj, bodyData);
+                    result.push(newAstBumper);
                 } else if (obj.type === ENTITY_TYPE.Plane) {
                     const newPlane = new Plane(obj, bodyData, {
                         ...ANIMATIONS.PLANE_EXPLOSION,

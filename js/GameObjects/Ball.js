@@ -190,6 +190,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Plug:
             case ENTITY_TYPE.Banana:
             case ENTITY_TYPE.BananaTaken:
+            case ENTITY_TYPE.AsteroidBumper:
                 return true;
             default:
                 return false;

@@ -117,6 +117,7 @@ const BODY_TYPE = {
 };
 
 const ENTITY_TYPE = {
+	AsteroidBumper: 'asteroid_bumper',
 	Ball: 'ball',
 	CircleBumper: 'circle_bumper',
 	CircleBumperSmall: 'circle_bumper_small',
@@ -158,6 +159,7 @@ const TRIGGER_TYPE = {
 }
 
 const ENTITY_NAME = {
+	AsteroidBumper: 'asteroid_bumnper',
 	CircleBumperRed: 'circle_bumper_red',
 	CircleBumperBlue: 'circle_bumper_blue',
 	CircleBumperYellow: 'circle_bumper_yellow',
