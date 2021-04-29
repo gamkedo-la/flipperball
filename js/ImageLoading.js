@@ -254,7 +254,17 @@ function loadImages() {
         {imgName: "backplate", theFile: "tables/vam/backplate.png"},
         {imgName: "arrow_selection", theFile: "tables/arrow_selection.png"},
         {imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
-        {imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png"},
+        { imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png" },
+        { imgName: "mat_copper", theFile: "tables/vam/mat-copper.png" },
+        { imgName: "mat_diamond", theFile: "tables/vam/mat-diamond.png" },
+        { imgName: "mat_gold", theFile: "tables/vam/mat-gold.png" },
+        { imgName: "mat_ice", theFile: "tables/vam/mat-ice.png" },
+        { imgName: "mat_iron", theFile: "tables/vam/mat-iron.png" },
+        { imgName: "mat_peridot", theFile: "tables/vam/mat-peridot.png" },
+        { imgName: "mat_platinum", theFile: "tables/vam/mat-platinum.png" },
+        { imgName: "mat_silver", theFile: "tables/vam/mat-silver.png" },
+        { imgName: "mat_vanadinite", theFile: "tables/vam/mat-vanadinite.png" },
+        { imgName: "asteroid_bumper", theFile: "tables/vam/asteroid_bumper.png" },
 
         //Forest Table Sprites
         {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},
