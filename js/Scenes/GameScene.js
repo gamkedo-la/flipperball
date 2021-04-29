@@ -687,7 +687,9 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.AsteroidBumper:
                 incrementScore(otherEntity.score);
-                otherEntity.spawnMineral();
+                //otherEntity.spawnMineral();
+                asteroidBumperSound.play();
+                
                 break;
             case ENTITY_TYPE.FlipperBumper:
                 //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);

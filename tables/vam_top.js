@@ -101679,6 +101679,11 @@
                  "name":"asteroid_bumper",
                  "properties":[
                         {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -101696,6 +101701,11 @@
                  "id":3827,
                  "name":"asteroid_bumper",
                  "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
@@ -101715,6 +101725,11 @@
                  "name":"asteroid_bumper",
                  "properties":[
                         {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -101732,6 +101747,11 @@
                  "id":3829,
                  "name":"asteroid_bumper",
                  "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",
@@ -101751,6 +101771,11 @@
                  "name":"asteroid_bumper",
                  "properties":[
                         {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -101768,6 +101793,11 @@
                  "id":3831,
                  "name":"asteroid_bumper",
                  "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":250
+                        }, 
                         {
                          "name":"zOrder",
                          "type":"int",

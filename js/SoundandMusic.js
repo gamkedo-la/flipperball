@@ -8,6 +8,7 @@ let startGameSound;
 let flipperSound;
 let flipperSoundMenu;
 let bumperSound;
+let asteroidBumperSound;
 let slotDingSound;
 let slotCrankSound;
 let wallSound;
@@ -45,6 +46,7 @@ function loadAudio() {
 	flipperSound = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 10);
 	flipperSoundMenu = new SoundOverlapsClass(assetPath.Audio + "Flipper_Activated_SFX", 1, 0.05);
 	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50, 0.35);
+	asteroidBumperSound = new SoundOverlapsClass(assetPath.Audio + "asteroidbumper_hit", 59, 0.50);
 	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
 	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 200, 0.06125);

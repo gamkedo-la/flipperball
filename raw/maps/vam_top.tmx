@@ -25504,31 +25504,37 @@
   </object>
   <object id="3826" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="408.5" y="201" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="3827" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="750" y="196" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="3828" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="657" y="369" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="3829" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="483" y="350" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="3830" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="617" y="111" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
   <object id="3831" name="asteroid_bumper" type="asteroid_bumper" gid="25" x="325" y="133.5" width="64" height="64">
    <properties>
+    <property name="score" type="int" value="250"/>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
