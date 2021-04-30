@@ -255,6 +255,7 @@ function loadImages() {
         {imgName: "arrow_selection", theFile: "tables/arrow_selection.png"},
         {imgName: "left_flipper_selector", theFile: "tables/left_flipper_selector.png"},
         { imgName: "right_flipper_selector", theFile: "tables/right_flipper_selector.png" },
+        { imgName: "vam_mineral", theFile: "tables/vam/mat-copper.png" },
         { imgName: "min_copper", theFile: "tables/vam/mat-copper.png" },
         { imgName: "min_diamond", theFile: "tables/vam/mat-diamond.png" },
         { imgName: "min_gold", theFile: "tables/vam/mat-gold.png" },

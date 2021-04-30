@@ -148,6 +148,7 @@ const ENTITY_TYPE = {
 	SideDrainBumper: 'side_drain_bumper', 
 	Banana: 'banana',
 	BananaTaken: 'banana_taken',
+	VamMineral: 'vam_mineral',
 	Plug: 'plug'
 };
 
@@ -183,7 +184,8 @@ const ENTITY_NAME = {
 	ExpandingStar2: 'expanding_star_2',
 	EmpireLogo: 'empire_logo',
 	Banana: 'forest_banana',
-	BananaTaken: 'forest_banana_taken'
+	BananaTaken: 'forest_banana_taken',
+	VamMineral: 'vam_mineral'
 }
 
 const COLLISION_TYPE = {

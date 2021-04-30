@@ -104,6 +104,8 @@ class Ball extends GameObject {
                     } else if (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch) {
                         ballCapturedSound.play();
                     }     
+                } else if (collision.otherEntity.type === ENTITY_TYPE.VamMineral) {
+                    SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                 } else if (collision.otherEntity.type === ENTITY_TYPE.Plunger) {
                     this.respondToPolygonCollision(collision);
                     this.vxAdjustment = -this.velocity.x;
@@ -191,6 +193,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Banana:
             case ENTITY_TYPE.BananaTaken:
             case ENTITY_TYPE.AsteroidBumper:
+            case ENTITY_TYPE.VamMineral:
                 return true;
             default:
                 return false;

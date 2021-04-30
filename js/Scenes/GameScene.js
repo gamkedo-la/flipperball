@@ -688,8 +688,17 @@ function GameScene() {
             case ENTITY_TYPE.AsteroidBumper:
                 incrementScore(otherEntity.score);
                 //otherEntity.spawnMineral();
+                
+                self.spawnEntity(otherEntity);
                 asteroidBumperSound.play();
                 
+                break;
+            case ENTITY_TYPE.VamMineral:
+                console.log(otherEntity, otherEntity.score);                
+                incrementScore(otherEntity.score);
+                this.collisionManager.unregisterEntity(otherEntity);
+                self.removeEntity(otherEntity);
+                mineralPickupSound.play();
                 break;
             case ENTITY_TYPE.FlipperBumper:
                 //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
@@ -882,7 +891,10 @@ function GameScene() {
                 break;
                 case ENTITY_NAME.Banana:
                     newObjectData = self.table.getDynamicObject(ENTITY_TYPE.Banana);
-                break;
+                    break;
+                case ENTITY_TYPE.AsteroidBumper:
+                    newObjectData = self.table.getDynamicObject(ENTITY_TYPE.VamMineral);
+                    break;
                 default:
                     break;
             }
@@ -891,7 +903,7 @@ function GameScene() {
                 case ENTITY_TYPE.BananaTaken:
                     newObjectData = self.table.getDynamicObject(ENTITY_TYPE.BananaTaken);
                     DEBUG_LOG("Spawning Banana Taken");
-                break;
+                    break;
                 default:
                     break;
             }
