@@ -694,7 +694,7 @@ function GameScene() {
                 
                 break;
             case ENTITY_TYPE.VamMineral:
-                console.log(otherEntity, otherEntity.score);                
+                //console.log(otherEntity, otherEntity.score);                
                 incrementScore(otherEntity.score);
                 this.collisionManager.unregisterEntity(otherEntity);
                 self.removeEntity(otherEntity);
