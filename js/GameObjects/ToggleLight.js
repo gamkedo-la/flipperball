@@ -6,21 +6,21 @@ class ToggleLight extends GameObject {
         this.isInReverse = false;
         this.isAnimating = false;
         
-        const objData = props[0];
-        if (objData.properties) {
-            for (const prop of objData.properties) {
-                objData[prop.name] = prop.value;
+        this.objData = props[0];
+        if (this.objData.properties) {
+            for (const prop of this.objData.properties) {
+                this.objData[prop.name] = prop.value;
             }            
         }
         
-        if (objData.bonus) { this.bonusTargID = objData.bonus; }
-        if (objData.requiredLights) {
-            this.reqLights = objData.requiredLights;
+        if (this.objData.bonus) { this.bonusTargID = this.objData.bonus; }
+        if (this.objData.requiredLights) {
+            this.reqLights = this.objData.requiredLights;
             this.origReqLights = this.reqLights;
         }
-        if (objData.bonusTime) { this.bonusTime = objData.bonusTime; }
-        if (objData.bonusMult) { this.bonusMult = objData.bonusMult }
-        if (objData.subtype) { this.subtype = objData.subtype }
+        if (this.objData.bonusTime) { this.bonusTime = this.objData.bonusTime; }
+        if (this.objData.bonusMult) { this.bonusMult = this.objData.bonusMult }
+        if (this.objData.subtype) { this.subtype = this.objData.subtype }
         this.isLit = false;
     }
 

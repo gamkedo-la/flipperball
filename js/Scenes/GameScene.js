@@ -123,14 +123,14 @@ function GameScene() {
         switch (selected_table) {
             case TABLES.Vam:
             case TABLES.Space:
-                musicToPlay = "Space_Table_Maybe";
+                musicToPlay = "Space_Table_Music_Loop";
                 break;
             case TABLES.Forest:
-                musicToPlay = "Forest_table_Maybe";
+                musicToPlay = "Forest_Table_Loop";
                 break;
             case TABLES.Aquarium:
-                    musicToPlay = "Aquarium Table Music Loop";
-                    break;
+                musicToPlay = "Aquarium_Table_Music_Loop";
+                break;
         }
         playLoopBackgroundMusic(musicToPlay);
 
