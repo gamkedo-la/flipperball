@@ -55,6 +55,9 @@ function GameScene() {
             this.table = this.storedTables[this.currentTableIndex];
             this.collisionManager = this.storedCollisionManagers[this.currentTableIndex];
         } else {
+            if (this.currentTableIndex === 0) {
+                stopBackgroundMusic()
+            }
             this.table = new MapBuilder(this.properties.tableName);
             this.collisionManager = new CollisionManager();
             this.savedBall = this.properties.ball;
@@ -134,7 +137,7 @@ function GameScene() {
                 musicToPlay = "Aquarium_Table_Music_Loop";
                 break;
         }
-        stopBackgroundMusic()
+        // stopBackgroundMusic()
         playLoopBackgroundMusic(musicToPlay);
 
         this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(this.bananaMinSpawnTime, this.bananaMaxSpawnTime);
