@@ -11,7 +11,7 @@ function GameOverScene() {
     const START_GAME_TIME_BUFFER = 400; //milliseconds
 
     this.transitionIn = function() {
-        playBackgroundMusic("Game Over Music");
+        playBackgroundMusic("Game_Over_Music");
     };
 
     this.transitionOut = function() {

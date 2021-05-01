@@ -132,6 +132,7 @@ function GameScene() {
                 musicToPlay = "Aquarium_Table_Music_Loop";
                 break;
         }
+        stopBackgroundMusic()
         playLoopBackgroundMusic(musicToPlay);
 
         this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(this.bananaMinSpawnTime, this.bananaMaxSpawnTime);
