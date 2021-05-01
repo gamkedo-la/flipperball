@@ -122,6 +122,8 @@ function GameScene() {
         let musicToPlay = "Honky_Tonk_Piano_Loop";
         switch (selected_table) {
             case TABLES.Vam:
+                musicToPlay = "VAM_Empire_Table_Loop";
+                break;
             case TABLES.Space:
                 musicToPlay = "Space_Table_Music_Loop";
                 break;
