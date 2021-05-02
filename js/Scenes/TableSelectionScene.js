@@ -6,23 +6,28 @@ function TableSelectionScene() {
         {selectionName: "Clouds",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Prototype,
-        topTable: TABLES.PrototypeTop},
+        topTable: TABLES.PrototypeTop,
+        image: "clouds_screenshot"},
         {selectionName: "Space",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Space,
-        topTable: TABLES.SpaceTop},
+        topTable: TABLES.SpaceTop,
+        image: "space_screenshot"},
         {selectionName: "Vam",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Vam,
-        topTable: TABLES.VamTop},
+        topTable: TABLES.VamTop,
+        image: "vam_screenshot"},
         {selectionName: "Aquarium",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Aquarium,
-        topTable: TABLES.AquariumTop},
+        topTable: TABLES.AquariumTop,
+        image: "aquarium_screenshot"},
         {selectionName: "Forest",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Forest,
-        topTable: TABLES.ForestTop}
+        topTable: TABLES.ForestTop,
+        image: "forest_screenshot"}
     ];
 
     const FLIPPER_HORIZONTAL_OFFSET = 120;
@@ -98,22 +103,23 @@ function TableSelectionScene() {
 	const draw = function(deltaTime) {
         drawBG();
         drawSelection();
-        
+        drawTableImage();
 	}
 	
 	const drawBG = function() {
         const PADDING = 35;
         drawRect(0, 0, canvas.width, canvas.height);
-        colorText("SELECT TABLE", canvas.width / 2, canvas.height / 2 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);   
+        colorText("SELECT TABLE", canvas.width / 2, 2 * canvas.height / 3 - PADDING, Color.White, Fonts.Subtitle, TextAlignment.Center, 1);   
         
         for(var i = 0; i < SELECTIONS.length; i++){
-            colorText(SELECTIONS[i].selectionName, canvas.width / 2, canvas.height / 2 + PADDING * i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+            colorText(SELECTIONS[i].selectionName, canvas.width / 2, 2 * canvas.height / 3 + PADDING * i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         }
         
         /*colorText("Prototype", canvas.width / 2, canvas.height / 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         colorText("Space", canvas.width / 2, canvas.height / 2 + PADDING, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         colorText("Vam", canvas.width / 2, canvas.height / 2 + PADDING * 2, Color.White, Fonts.BodyText, TextAlignment.Center, 1);*/
-        colorText("Press Enter to select a table", canvas.width / 2, canvas.height / 2 + PADDING * ++i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);       
+        colorText("Press Enter to", 3 * canvas.width / 4, PADDING * ++i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);       
+        colorText("select a table", 3 * canvas.width / 4, PADDING * ++i, Color.White, Fonts.BodyText, TextAlignment.Center, 1);       
       }
 
       const drawSelection = function() {
@@ -121,8 +127,14 @@ function TableSelectionScene() {
         //colorText("-------------", canvas.width / 2, canvas.height / 2 + PADDING * selectorPositionsIndex + 14, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
         //drawImageForTiledWithRotation(arrow, canvas.width / 2 - ARROW_HORIZONTAL_OFFSET, canvas.height / 2 - ARROW_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
 
-        drawImageForTiledWithRotation(left_flipper, canvas.width / 2 - FLIPPER_HORIZONTAL_OFFSET, canvas.height / 2 - FLIPPER_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
-        drawImageForTiledWithRotation(right_flipper, canvas.width / 2 + FLIPPER_HORIZONTAL_OFFSET * 0.7, canvas.height / 2  - FLIPPER_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
+        drawImageForTiledWithRotation(left_flipper, canvas.width / 2 - FLIPPER_HORIZONTAL_OFFSET, 2 * canvas.height / 3 - FLIPPER_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
+        drawImageForTiledWithRotation(right_flipper, canvas.width / 2 + FLIPPER_HORIZONTAL_OFFSET * 0.7, 2 * canvas.height / 3 - FLIPPER_VERTICAL_OFFSET + PADDING * selectorPositionsIndex, 0);
+      }
+
+      const drawTableImage = function() {
+          const imageName = SELECTIONS[selectorPositionsIndex].image
+          const image = images[imageName];
+          canvasContext.drawImage(image, (canvas.width - image.width) / 2, 0);
       }
         
     return this;

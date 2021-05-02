@@ -209,6 +209,11 @@ function loadImages() {
         {imgName: "habitrail_track", theFile: "tables/habitrail_track.png"},
         {imgName: "flipper_title_medium", theFile: "screens/Flipperball_Title_Image_Medium.png"},
         {imgName: "flipper_title_small", theFile: "screens/Flipperball_Title_Image_Small.png"},
+        {imgName: "clouds_screenshot", theFile: "screens/clouds_screenshot.png"},
+        {imgName: "space_screenshot", theFile: "screens/space_screenshot.png"},
+        {imgName: "vam_screenshot", theFile: "screens/vam_screenshot.png"},
+        {imgName: "aquarium_screenshot", theFile: "screens/aquarium_screenshot.png"},
+        {imgName: "forest_screenshot", theFile: "screens/forest_screenshot.png"},
 
         {imgName: "spawner_plane", theFile: "tables/spawner_plane.png"},
 
