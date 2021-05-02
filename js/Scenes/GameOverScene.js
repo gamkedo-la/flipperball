@@ -15,7 +15,7 @@ function GameOverScene() {
     };
 
     this.transitionOut = function() {
-
+        stopBackgroundMusic()
     };
 
     this.run = function(deltaTime) {

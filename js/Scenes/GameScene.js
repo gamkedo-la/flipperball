@@ -443,6 +443,7 @@ function GameScene() {
             self.storedCollisionManagers = [];
             self.gameHasFinished = true;            
             endBonusRound();
+            stopBackgroundMusic()
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
