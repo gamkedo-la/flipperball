@@ -436,6 +436,7 @@ function GameScene() {
 
     const extraBall = function() {
         self.numberOfRemainingBalls++;
+        freePlaySound.play();
     }
 
     const playRemainingBall = function () {        
@@ -681,7 +682,6 @@ function GameScene() {
         switch (otherEntity.type) {
             case ENTITY_TYPE.CircleBumper:
                 self.flash = true;
-                DEBUG_LOG("otherEntity.score:" + otherEntity.score);
                 incrementScore(otherEntity.score);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -691,9 +691,9 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.CircleBumperSmall:
                 self.flash = true;
-                DEBUG_LOG("otherEntity.score:" + otherEntity.score);
                 incrementScore(otherEntity.score);
                 self.playAnimation(otherEntity.body.name, ANIMATIONS.CIRCLE_BUMPER_SMALL, otherEntity.x, otherEntity.y);
+                bumperSound.play();
                 break;
             case ENTITY_TYPE.AsteroidBumper:
                 incrementScore(otherEntity.score);
@@ -704,14 +704,12 @@ function GameScene() {
                 
                 break;
             case ENTITY_TYPE.VamMineral:
-                //console.log(otherEntity, otherEntity.score);                
                 incrementScore(otherEntity.score);
                 this.collisionManager.unregisterEntity(otherEntity);
                 self.removeEntity(otherEntity);
                 mineralPickupSound.play();
                 break;
             case ENTITY_TYPE.FlipperBumper:
-                //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.FLIPPER_BUMPER, otherEntity.x, otherEntity.y);
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
                     bumperSound.play();
@@ -774,6 +772,7 @@ function GameScene() {
             case ENTITY_TYPE.Plane:
                 incrementScore(otherEntity.score);
                 this.collisionManager.unregisterEntity(otherEntity);
+                explosionSound.play();
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
                 }

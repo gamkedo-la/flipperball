@@ -53,6 +53,9 @@ function loadAudio() {
 	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 200, 0.06125);
 	ballCapturedSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Captured_SFX", 1, 0.06125);
 	passOverGateSound = new SoundOverlapsClass(assetPath.Audio + "Pass_Over_Gate_SFX", 200, 0.06125);
+	explosionSound = new SoundOverlapsClass(assetPath.Audio + "Explosion");
+	waterSound = new SoundOverlapsClass(assetPath.Audio + "AquariumWater");
+	freePlaySound = new SoundOverlapsClass(assetPath.Audio + "FreePlay");
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
