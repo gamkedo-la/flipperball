@@ -152,18 +152,6 @@
                  "y":600.353
                 }, 
                 {
-                 "gid":42,
-                 "height":96,
-                 "id":173,
-                 "name":"sputnik",
-                 "rotation":0,
-                 "type":"sputnik",
-                 "visible":true,
-                 "width":96,
-                 "x":724,
-                 "y":103.333
-                }, 
-                {
                  "gid":44,
                  "height":7,
                  "id":182,
@@ -173,7 +161,7 @@
                  "visible":true,
                  "width":7,
                  "x":519,
-                 "y":127.5
+                 "y":127
                 }, 
                 {
                  "gid":44,
@@ -185,7 +173,7 @@
                  "visible":true,
                  "width":7,
                  "x":553.25,
-                 "y":128.75
+                 "y":127
                 }, 
                 {
                  "gid":44,
@@ -197,7 +185,7 @@
                  "visible":true,
                  "width":7,
                  "x":586.5,
-                 "y":128.5
+                 "y":127
                 }, 
                 {
                  "gid":44,
@@ -209,7 +197,7 @@
                  "visible":true,
                  "width":7,
                  "x":619.75,
-                 "y":129.25
+                 "y":127
                 }, 
                 {
                  "gid":44,
@@ -220,8 +208,68 @@
                  "type":"wall",
                  "visible":true,
                  "width":7,
-                 "x":654.75,
-                 "y":129
+                 "x":652.931818181818,
+                 "y":127
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":220,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":653,
+                 "y":103
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":222,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":619,
+                 "y":103
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":223,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":586,
+                 "y":103
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":224,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":553,
+                 "y":103
+                }, 
+                {
+                 "gid":44,
+                 "height":7,
+                 "id":225,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":7,
+                 "x":519,
+                 "y":103
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -423,6 +471,11 @@
                          "value":25
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
+                        }, 
+                        {
                          "name":"targ_light",
                          "type":"object",
                          "value":91
@@ -436,7 +489,7 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":570.959,
+                 "x":572.049909090909,
                  "y":130
                 }, 
                 {
@@ -449,6 +502,11 @@
                          "name":"score",
                          "type":"int",
                          "value":25
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }, 
                         {
                          "name":"targ_light",
@@ -479,6 +537,11 @@
                          "value":25
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
+                        }, 
+                        {
                          "name":"targ_light",
                          "type":"object",
                          "value":89
@@ -492,8 +555,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":637.323,
-                 "y":130
+                 "x":638.050272727273,
+                 "y":129.818181818182
                 }, 
                 {
                  "gid":26,
@@ -505,6 +568,11 @@
                          "name":"bonus",
                          "type":"object",
                          "value":119
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }, 
                         {
                          "name":"zOrder",
@@ -530,6 +598,11 @@
                          "value":119
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":0
@@ -551,6 +624,11 @@
                          "name":"bonus",
                          "type":"object",
                          "value":119
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }, 
                         {
                          "name":"zOrder",
@@ -576,6 +654,11 @@
                          "value":25
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
+                        }, 
+                        {
                          "name":"targ_light",
                          "type":"object",
                          "value":104
@@ -589,7 +672,7 @@
                  "type":"trigger",
                  "visible":true,
                  "width":2.68293,
-                 "x":538.073,
+                 "x":538.800272727273,
                  "y":130.375
                 }, 
                 {
@@ -602,6 +685,11 @@
                          "name":"bonus",
                          "type":"object",
                          "value":119
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }, 
                         {
                          "name":"zOrder",
@@ -635,6 +723,11 @@
                          "name":"requiredLights",
                          "type":"int",
                          "value":4
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }],
                  "rotation":0,
                  "type":"status_light",
@@ -1941,7 +2034,7 @@
                 }, 
                 {
                  "gid":21,
-                 "height":5.51,
+                 "height":20,
                  "id":195,
                  "name":"light_trigger",
                  "properties":[
@@ -1953,7 +2046,7 @@
                         {
                          "name":"subtype",
                          "type":"string",
-                         "value":"knockdown"
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"targ_light",
@@ -1968,9 +2061,9 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293,
+                 "width":5,
                  "x":290,
-                 "y":80
+                 "y":70
                 }, 
                 {
                  "gid":26,
@@ -1984,6 +2077,11 @@
                          "value":202
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":-200
@@ -1993,7 +2091,7 @@
                  "visible":true,
                  "width":24,
                  "x":349,
-                 "y":42.1666666666667
+                 "y":42.1667
                 }, 
                 {
                  "gid":26,
@@ -2007,6 +2105,11 @@
                          "value":202
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":-200
@@ -2015,12 +2118,12 @@
                  "type":"letter_light",
                  "visible":true,
                  "width":24,
-                 "x":350.166666666667,
-                 "y":80.1666666666667
+                 "x":350.167,
+                 "y":80.1667
                 }, 
                 {
                  "gid":21,
-                 "height":5.51,
+                 "height":20,
                  "id":199,
                  "name":"light_trigger",
                  "properties":[
@@ -2032,7 +2135,7 @@
                         {
                          "name":"subtype",
                          "type":"string",
-                         "value":"knockdown"
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"targ_light",
@@ -2047,7 +2150,7 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293,
+                 "width":5,
                  "x":290,
                  "y":95
                 }, 
@@ -2075,7 +2178,7 @@
                         {
                          "name":"subtype",
                          "type":"string",
-                         "value":"knockdown"
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"zOrder",
@@ -2086,7 +2189,7 @@
                  "type":"status_light",
                  "visible":true,
                  "width":75,
-                 "x":316.833333333333,
+                 "x":316.833,
                  "y":218.5
                 }, 
                 {
@@ -2104,12 +2207,12 @@
                  "type":"plug",
                  "visible":true,
                  "width":196,
-                 "x":494.666666666667,
-                 "y":600.333333333333
+                 "x":512.667,
+                 "y":600.333
                 }, 
                 {
                  "gid":21,
-                 "height":5.51,
+                 "height":20,
                  "id":205,
                  "name":"light_trigger",
                  "properties":[
@@ -2121,7 +2224,7 @@
                         {
                          "name":"subtype",
                          "type":"string",
-                         "value":"knockdown"
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"targ_light",
@@ -2136,9 +2239,9 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293,
-                 "x":290,
-                 "y":110
+                 "width":5,
+                 "x":289.818181818182,
+                 "y":120
                 }, 
                 {
                  "gid":26,
@@ -2150,6 +2253,11 @@
                          "name":"bonus",
                          "type":"object",
                          "value":202
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"zOrder",
@@ -2165,7 +2273,7 @@
                 }, 
                 {
                  "gid":21,
-                 "height":5.51,
+                 "height":20,
                  "id":208,
                  "name":"light_trigger",
                  "properties":[
@@ -2177,7 +2285,7 @@
                         {
                          "name":"subtype",
                          "type":"string",
-                         "value":"knockdown"
+                         "value":"shuttle"
                         }, 
                         {
                          "name":"targ_light",
@@ -2192,9 +2300,9 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":2.68293,
+                 "width":5,
                  "x":290,
-                 "y":125
+                 "y":145
                 }, 
                 {
                  "gid":26,
@@ -2208,6 +2316,11 @@
                          "value":202
                         }, 
                         {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
+                        }, 
+                        {
                          "name":"zOrder",
                          "type":"int",
                          "value":-200
@@ -2218,6 +2331,29 @@
                  "width":24,
                  "x":349,
                  "y":146
+                }, 
+                {
+                 "gid":42,
+                 "height":96,
+                 "id":228,
+                 "name":"sputnik",
+                 "properties":[
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "type":"sputnik",
+                 "visible":true,
+                 "width":96,
+                 "x":777,
+                 "y":195
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2458,8 +2594,8 @@
                  "name":"drain_rail_right",
                  "polygon":[
                         {
-                         "x":1.66667,
-                         "y":-1.66667
+                         "x":1.16666999999995,
+                         "y":-7.66667000000001
                         }, 
                         {
                          "x":-10.5,
@@ -2501,7 +2637,7 @@
                  "polygon":[
                         {
                          "x":0,
-                         "y":-0.666667
+                         "y":-8.66666699999999
                         }, 
                         {
                          "x":1.5,
@@ -2802,7 +2938,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9513,
+                 "height":20,
                  "id":93,
                  "name":"light_trigger",
                  "properties":[
@@ -2810,17 +2946,22 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":92
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":13.9513,
-                 "x":566.203,
-                 "y":120
+                 "width":20,
+                 "x":563.112090909091,
+                 "y":107.090909090909
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9513,
+                 "height":20,
                  "id":95,
                  "name":"light_trigger",
                  "properties":[
@@ -2828,17 +2969,22 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":94
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":13.9513,
-                 "x":599.567,
-                 "y":120
+                 "width":20,
+                 "x":595.203363636364,
+                 "y":106.909090909091
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9513,
+                 "height":20,
                  "id":96,
                  "name":"light_trigger",
                  "properties":[
@@ -2846,17 +2992,22 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":97
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":13.9513,
-                 "x":632.567,
-                 "y":120
+                 "width":20,
+                 "x":629.112454545455,
+                 "y":107.090909090909
                 }, 
                 {
                  "ellipse":true,
-                 "height":13.9513,
+                 "height":20,
                  "id":102,
                  "name":"light_trigger",
                  "properties":[
@@ -2864,13 +3015,18 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":103
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"rocket"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":13.9513,
-                 "x":533.317,
-                 "y":120.375
+                 "width":20,
+                 "x":529.680636363636,
+                 "y":107.647727272727
                 }, 
                 {
                  "ellipse":true,
@@ -3001,6 +3157,11 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":175
+                        }, 
+                        {
+                         "name":"reflectance",
+                         "type":"float",
+                         "value":2
                         }],
                  "rotation":0,
                  "type":"side_drain_bumper",
@@ -3024,6 +3185,11 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":176
+                        }, 
+                        {
+                         "name":"reflectance",
+                         "type":"float",
+                         "value":2
                         }],
                  "rotation":0,
                  "type":"side_drain_bumper",
@@ -3031,146 +3197,6 @@
                  "width":40,
                  "x":292,
                  "y":290.333
-                }, 
-                {
-                 "height":0,
-                 "id":180,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":522.25,
-                 "y":120.75
-                }, 
-                {
-                 "height":0,
-                 "id":187,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":556.75,
-                 "y":122.25
-                }, 
-                {
-                 "height":0,
-                 "id":188,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":590,
-                 "y":121.75
-                }, 
-                {
-                 "height":0,
-                 "id":190,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":623.5,
-                 "y":122.5
-                }, 
-                {
-                 "height":0,
-                 "id":191,
-                 "name":"diamond_div_1",
-                 "polygon":[
-                        {
-                         "x":0,
-                         "y":0
-                        }, 
-                        {
-                         "x":-3.04348,
-                         "y":3.04348
-                        }, 
-                        {
-                         "x":-0.217391,
-                         "y":6.26087
-                        }, 
-                        {
-                         "x":2.82609,
-                         "y":3.13043
-                        }],
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":0,
-                 "x":658.25,
-                 "y":122.25
                 }, 
                 {
                  "ellipse":true,
@@ -3198,7 +3224,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":6,
+                 "height":20,
                  "id":200,
                  "name":"light_trigger",
                  "properties":[
@@ -3206,17 +3232,22 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":195
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":6,
-                 "x":288.02435,
-                 "y":74.3576833333333
+                 "width":20,
+                 "x":282.569454545455,
+                 "y":49.9940636363636
                 }, 
                 {
                  "ellipse":true,
-                 "height":6,
+                 "height":20,
                  "id":201,
                  "name":"light_trigger",
                  "properties":[
@@ -3224,13 +3255,18 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":199
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":6,
-                 "x":287.02435,
-                 "y":88.52435
+                 "width":20,
+                 "x":282.660363636364,
+                 "y":74.8879363636364
                 }, 
                 {
                  "ellipse":true,
@@ -3257,7 +3293,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":6,
+                 "height":20,
                  "id":207,
                  "name":"light_trigger",
                  "properties":[
@@ -3265,17 +3301,22 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":208
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":6,
-                 "x":288,
-                 "y":119.191
+                 "width":20,
+                 "x":282.363636363636,
+                 "y":125.009181818182
                 }, 
                 {
                  "ellipse":true,
-                 "height":6,
+                 "height":20,
                  "id":210,
                  "name":"light_trigger",
                  "properties":[
@@ -3283,13 +3324,156 @@
                          "name":"dynObjConn",
                          "type":"object",
                          "value":205
+                        }, 
+                        {
+                         "name":"subtype",
+                         "type":"string",
+                         "value":"shuttle"
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":6,
-                 "x":287,
-                 "y":104.191
+                 "width":20,
+                 "x":282.272727272727,
+                 "y":100.009181818182
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":211,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":520.454545454545,
+                 "y":121.454545454545
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":212,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":554.818181818182,
+                 "y":121.272727272727
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":213,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":588,
+                 "y":121.636363636364
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":214,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":621.181818181818,
+                 "y":121.454545454545
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":215,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":654.090909090909,
+                 "y":121.272727272727
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":216,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":520.454545454545,
+                 "y":97.4545454545455
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":217,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":554.454545454545,
+                 "y":97.6363636363636
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":218,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":587.454545454545,
+                 "y":97.4545454545455
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":219,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":620.272727272727,
+                 "y":97.4545454545455
+                }, 
+                {
+                 "ellipse":true,
+                 "height":4,
+                 "id":221,
+                 "name":"diamond_div_1",
+                 "rotation":0,
+                 "type":"wall",
+                 "visible":true,
+                 "width":4,
+                 "x":654.272727272727,
+                 "y":97.4545454545455
+                }, 
+                {
+                 "ellipse":true,
+                 "height":30,
+                 "id":227,
+                 "name":"sputnik",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":228
+                        }],
+                 "rotation":0,
+                 "type":"sputnik",
+                 "visible":true,
+                 "width":30,
+                 "x":834,
+                 "y":111
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3298,7 +3482,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":211,
+ "nextobjectid":229,
  "orientation":"orthogonal",
  "properties":[
         {

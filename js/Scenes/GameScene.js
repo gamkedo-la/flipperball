@@ -400,8 +400,11 @@ function GameScene() {
         self.table.dynamicObjects.forEach((data) => {
             if (data.type === ENTITY_TYPE.Plug) {
                 data.inactivate();
-            } else if (data.subtype === 'knockdown') {
+            } else if (data.subtype === 'shuttle') {
                 data.active = true
+                if (data.updateLightState) {
+                    data.updateLightState(false)
+                }
             }
         })
 
@@ -741,7 +744,11 @@ function GameScene() {
                     otherEntity.animate(0);
                     bumperSound.play();
                 }
-                break;    
+                break;
+            case ENTITY_TYPE.Sputnik:
+                incrementScore(otherEntity.score);
+                bumperSound.play();
+                break;  
             case ENTITY_TYPE.SideDrainBumper:
                 if (otherEntity.hasAnimation) {
                     otherEntity.animate(0);
@@ -835,7 +842,7 @@ function GameScene() {
                 if (lightTarget.bonusTargID) {
                     const bonusTarg = self.table.dynamicObjects.find((data) => data.id === lightTarget.bonusTargID);
                     const bonusLit = bonusTarg.triggerBonus();
-                    if (bonusLit && bonusTarg.subtype === 'knockdown') {
+                    if (bonusLit && bonusTarg.subtype === 'shuttle') {
                         const plug = self.table.dynamicObjects.find((data) => data.type === ENTITY_TYPE.Plug);
                         if (plug) {
                             plug.activate();
@@ -856,7 +863,7 @@ function GameScene() {
                     }
                 }
             }
-            if (triggerEntity.subtype === 'knockdown') triggerEntity.active = false;
+            if (triggerEntity.subtype === 'shuttle') triggerEntity.active = false;
         } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
             ball.reset();
             if (this.currentTableIndex > 0) {

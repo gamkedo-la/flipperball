@@ -116,24 +116,6 @@
                  "y":407
                 }, 
                 {
-                 "gid":30,
-                 "height":24,
-                 "id":92,
-                 "name":"ball_catch_arrow",
-                 "properties":[
-                        {
-                         "name":"zOrder",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":350,
-                 "y":90
-                }, 
-                {
                  "gid":22,
                  "height":598,
                  "id":110,
@@ -431,8 +413,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":54,
-                 "x":307,
-                 "y":78.6667
+                 "x":594,
+                 "y":589.1667
                 }, 
                 {
                  "gid":46,
@@ -1355,8 +1337,8 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":94,
-                 "x":500.5,
-                 "y":118
+                 "x":687,
+                 "y":227.5
                 }, 
                 {
                  "gid":48,
@@ -1383,8 +1365,8 @@
                  "type":"saturn",
                  "visible":true,
                  "width":114,
-                 "x":377,
-                 "y":209.5
+                 "x":421,
+                 "y":170
                 }, 
                 {
                  "gid":49,
@@ -1411,8 +1393,8 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":653.5,
-                 "y":104
+                 "x":500.5,
+                 "y":369.5
                 }, 
                 {
                  "gid":50,
@@ -1439,8 +1421,64 @@
                  "type":"earth",
                  "visible":true,
                  "width":24,
-                 "x":799,
-                 "y":152
+                 "x":669.5,
+                 "y":302
+                }, 
+                {
+                 "gid":77,
+                 "height":13.5454,
+                 "id":229,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"isLeft",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":297.72725,
+                 "y":305.7273
+                }, 
+                {
+                 "gid":77,
+                 "height":13.5454,
+                 "id":232,
+                 "name":"rotating_gate",
+                 "properties":[
+                        {
+                         "name":"isLeft",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":26.5455,
+                 "x":866.72725,
+                 "y":279.7273
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2075,7 +2113,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":30,
+                 "height":15,
                  "id":149,
                  "name":"ball_catch",
                  "properties":[
@@ -2092,9 +2130,9 @@
                  "rotation":0,
                  "type":"trigger",
                  "visible":true,
-                 "width":30,
-                 "x":318.333,
-                 "y":35.6667
+                 "width":15,
+                 "x":613.333,
+                 "y":556.1667
                 }, 
                 {
                  "ellipse":true,
@@ -2129,8 +2167,8 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":90,
-                 "x":502.5,
-                 "y":27
+                 "x":688.5,
+                 "y":135.5
                 }, 
                 {
                  "ellipse":true,
@@ -2147,8 +2185,8 @@
                  "type":"saturn",
                  "visible":true,
                  "width":60,
-                 "x":402,
-                 "y":138.5
+                 "x":446.5,
+                 "y":98
                 }, 
                 {
                  "ellipse":true,
@@ -2165,8 +2203,8 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":653,
-                 "y":80
+                 "x":500,
+                 "y":345
                 }, 
                 {
                  "ellipse":true,
@@ -2183,8 +2221,92 @@
                  "type":"earth",
                  "visible":true,
                  "width":24,
-                 "x":799,
-                 "y":128.5
+                 "x":669,
+                 "y":278
+                }, 
+                {
+                 "height":0,
+                 "id":230,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":229
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":299,
+                 "y":297
+                }, 
+                {
+                 "height":0,
+                 "id":231,
+                 "name":"rotating_gate",
+                 "polygon":[
+                        {
+                         "x":-0.301653,
+                         "y":-0.489669
+                        }, 
+                        {
+                         "x":3.01653,
+                         "y":-5.87603
+                        }, 
+                        {
+                         "x":23.0764,
+                         "y":-5.54959
+                        }, 
+                        {
+                         "x":26.2438,
+                         "y":0
+                        }, 
+                        {
+                         "x":22.4731,
+                         "y":8.4876
+                        }, 
+                        {
+                         "x":3.31818,
+                         "y":7.99793
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":232
+                        }],
+                 "rotation":0,
+                 "type":"rotating_gate",
+                 "visible":true,
+                 "width":0,
+                 "x":865.5,
+                 "y":271.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2193,7 +2315,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":228,
+ "nextobjectid":233,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2991,6 +3113,653 @@
                  "type":"habitrail"
                 }],
          "tilewidth":42
+        }, 
+        {
+         "columns":0,
+         "firstgid":55,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"dynamic",
+         "spacing":0,
+         "tilecount":44,
+         "tileheight":600,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/raw\/img\/backgrounds\/plunger.png",
+                 "imageheight":289,
+                 "imagewidth":68,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"plunger"
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/img\/tables\/flipper_left.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"left_flipper"
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/img\/tables\/flipper_right.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"right_flipper"
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/img\/tables\/plunger_chute.png",
+                 "imageheight":600,
+                 "imagewidth":105,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/raw\/img\/backgrounds\/vertical_wall.png",
+                 "imageheight":598,
+                 "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/raw\/img\/backgrounds\/ball.png",
+                 "imageheight":26,
+                 "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "type":"ball"
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
+                 "imageheight":26,
+                 "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"trigger"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
+                 "imageheight":9,
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }]
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/angled_wall_5.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/angled_wall_6.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/letter_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/letter_light_lit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/cloud_1.png",
+                 "imageheight":78,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/cloud_2.png",
+                 "imageheight":36,
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":15
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/img\/tables\/cloud_3.png",
+                 "imageheight":54,
+                 "imagewidth":81,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":7
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/img\/tables\/cloud_4.png",
+                 "imageheight":66,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/img\/tables\/cloud_5.png",
+                 "imageheight":39,
+                 "imagewidth":66,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/img\/tables\/cloud_6.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/img\/tables\/cloud_7.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24
+                }, 
+                {
+                 "id":35,
+                 "image":"..\/img\/tables\/tiny_star.png",
+                 "imageheight":1,
+                 "imagewidth":1,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"star"
+                }, 
+                {
+                 "id":36,
+                 "image":"..\/img\/tables\/small_star.png",
+                 "imageheight":5,
+                 "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"star"
+                }, 
+                {
+                 "id":37,
+                 "image":"..\/img\/tables\/expanding_star.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":38,
+                 "image":"..\/img\/tables\/expanding_star_2.png",
+                 "imageheight":20,
+                 "imagewidth":20
+                }, 
+                {
+                 "id":39,
+                 "image":"..\/img\/tables\/rocket.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"rocket"
+                }, 
+                {
+                 "id":40,
+                 "image":"..\/img\/tables\/space_shuttle.png",
+                 "imageheight":75,
+                 "imagewidth":75,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-75
+                        }],
+                 "type":"shuttle"
+                }, 
+                {
+                 "id":41,
+                 "image":"..\/img\/tables\/sputniksatellite.png",
+                 "imageheight":96,
+                 "imagewidth":96,
+                 "type":"sputnik"
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/raw\/img\/backgrounds\/side_drain_bumper.png",
+                 "imageheight":30,
+                 "imagewidth":40,
+                 "properties":[
+                        {
+                         "name":"active",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"side_drain_bumper"
+                }, 
+                {
+                 "id":43,
+                 "image":"..\/img\/tables\/diamond_div.png",
+                 "imageheight":7,
+                 "imagewidth":7
+                }, 
+                {
+                 "id":44,
+                 "image":"..\/img\/tables\/plug.png",
+                 "imageheight":61,
+                 "imagewidth":196,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-50
+                        }],
+                 "type":"plug"
+                }],
+         "tilewidth":197
         }],
  "tilewidth":10,
  "type":"map",

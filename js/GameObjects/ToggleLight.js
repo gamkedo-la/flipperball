@@ -18,10 +18,11 @@ class ToggleLight extends GameObject {
             this.reqLights = this.objData.requiredLights;
             this.origReqLights = this.reqLights;
         }
-        if (this.objData.bonusTime) { this.bonusTime = this.objData.bonusTime; }
-        if (this.objData.bonusMult) { this.bonusMult = this.objData.bonusMult }
-        if (this.objData.subtype) { this.subtype = this.objData.subtype }
+        if (this.objData.bonusTime) {this.bonusTime = this.objData.bonusTime;}
+        if (this.objData.bonusMult) {this.bonusMult = this.objData.bonusMult;}
+        if (this.objData.subtype) {this.subtype = this.objData.subtype;}
         this.isLit = false;
+        this.start = {x: this.x, y: this.y};
     }
 
     turnOn() {
@@ -43,17 +44,24 @@ class ToggleLight extends GameObject {
     }
     
     updateLightState(lightState) {
-        if (this.subtype) {
-            this.velocity.x = 380
-            this.velocity.y = -60
-        }
-
         if (lightState) {
             this.isLit = true;            
-            this.isAnimating = true;            
+            this.isAnimating = true; 
+            if (this.subtype === 'shuttle') {
+                this.velocity.x = 380
+                this.velocity.y = -60
+            }           
         } else {
             this.isLit = false;
-            this.currFrame = 0;            
+            this.currFrame = 0;
+            if (this.subtype) {
+                this.x = this.start.x;
+                this.y = this.start.y;
+                this.isAnimating = false;
+                this.velocity.x = 0;
+                this.velocity.y = 0;
+                this.reqLights = this.origReqLights;
+            }         
         }
     }
     

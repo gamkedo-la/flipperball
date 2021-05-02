@@ -169,7 +169,7 @@ function MapBuilder (tableName = selected_table) {
                 });
                 result.push(newGameObject);
             } else if (obj.type === 'status_light') {
-                if (obj.subtype === 'knockdown') {
+                if (obj.subtype === 'shuttle') {
                     const newGameObject = new ToggleLight(obj, null, {
                         ...ANIMATIONS.SHUTTLE,
                         animationSpritesheet: images[ANIMATIONS.SHUTTLE.imageNames[obj.name]],
@@ -245,6 +245,9 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.SATURN.imageNames[obj.name]],
                     });
                     result.push(newSaturn);
+                } else if (obj.type === ENTITY_TYPE.Sputnik) {
+                    const newSputnik = new Sputnik(obj, bodyData);
+                    result.push(newSputnik);
                 } else {
                     if (obj.type === ENTITY_TYPE.Cloud) {
                         result.push(new Cloud(self.minX, self.maxX, obj, null));
@@ -278,7 +281,7 @@ function MapBuilder (tableName = selected_table) {
                             animationSpritesheet: images[ANIMATIONS.ROCKET_LAUNCH.imageNames[obj.name]],
                         });
                         result.push(newRocket);
-                    } else if (obj.type === ENTITY_TYPE.Earth || obj.type === ENTITY_TYPE.Mars || obj.type === ENTITY_TYPE.Jupiter || obj.type === ENTITY_TYPE.Saturn || obj.type === ENTITY_TYPE.Shuttle) {
+                    } else if (obj.type === ENTITY_TYPE.Earth || obj.type === ENTITY_TYPE.Mars || obj.type === ENTITY_TYPE.Jupiter || obj.type === ENTITY_TYPE.Saturn || obj.type === ENTITY_TYPE.Shuttle || obj.type === ENTITY_TYPE.Sputnik) {
 
                     } else if (obj.type === ENTITY_TYPE.Bubble) {
                         result.push(new Bubble(self.minY, self.maxY, obj, null));
@@ -424,7 +427,11 @@ function TriggerMapObject(objData, bodyData) {
     this.update = function(deltaTime) {}
     this.draw = function() {
         if (this.active) {
-            canvasContext.drawImage(this.image, this.x, this.y);
+            if (this.subtype === 'shuttle') {
+                canvasContext.drawImage(this.image, this.x, this.y, this.width, this.height);
+            } else {
+                canvasContext.drawImage(this.image, this.x, this.y);
+            }
             this.body.draw();
         }
     }

@@ -140,6 +140,7 @@ const ENTITY_TYPE = {
 	SlotMachine: 'slot_machine',
 	Earth: 'earth',
 	Mars: 'mars',
+	Sputnik: 'sputnik',
 	Jupiter: 'jupiter',
 	Saturn: 'saturn',
 	Rocket: 'rocket',

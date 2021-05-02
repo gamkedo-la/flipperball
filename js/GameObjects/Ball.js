@@ -189,6 +189,7 @@ class Ball extends GameObject {
             case ENTITY_TYPE.Mars:
             case ENTITY_TYPE.Jupiter:
             case ENTITY_TYPE.Saturn:
+            case ENTITY_TYPE.Sputnik:
             case ENTITY_TYPE.Plug:
             case ENTITY_TYPE.Banana:
             case ENTITY_TYPE.BananaTaken:
