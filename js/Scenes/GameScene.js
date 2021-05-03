@@ -791,6 +791,7 @@ function GameScene() {
                     incrementScore(otherEntity.score);
                     self.removeEntity(otherEntity);
                     this.isColliding = true;
+                    bananaSound.play();
                 }
                 break;
             case ENTITY_TYPE.BananaTaken:
@@ -799,6 +800,7 @@ function GameScene() {
                     incrementScore(otherEntity.score);
                     self.removeEntity(otherEntity);
                     this.isColliding = true;
+                    bananaSound.play();
                 }
                 break;
             default:

@@ -14,6 +14,7 @@ let slotCrankSound;
 let wallSound;
 let ballCapturedSound;
 let passOverGateSound;
+let bananaSound;
 let menuMusic;
 let musicVolume;
 let effectsVolume;
@@ -56,6 +57,7 @@ function loadAudio() {
 	explosionSound = new SoundOverlapsClass(assetPath.Audio + "Explosion");
 	waterSound = new SoundOverlapsClass(assetPath.Audio + "AquariumWater");
 	freePlaySound = new SoundOverlapsClass(assetPath.Audio + "FreePlay");
+	bananaSound = new SoundOverlapsClass(assetPath.Audio + "mineral_pickup", 10, 1);
 
 	//	menuMusic = assetPath.Audio + "beeblebrox";
 }
