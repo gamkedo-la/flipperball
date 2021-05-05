@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":38,
+                 "gid":39,
                  "height":600,
                  "id":110,
                  "name":"cloud_bg_top_empty",
@@ -941,6 +941,18 @@
                  "width":24,
                  "x":515.636,
                  "y":400.364
+                }, 
+                {
+                 "gid":37,
+                 "height":56,
+                 "id":131,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":40,
+                 "x":459.667,
+                 "y":291.667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1206,8 +1218,8 @@
                          "y":194.5
                         }, 
                         {
-                         "x":106.281454545454,
-                         "y":-484.363636363636
+                         "x":106.281,
+                         "y":-484.364
                         }, 
                         {
                          "x":70.236,
@@ -1969,6 +1981,23 @@
                  "width":0,
                  "x":659.174,
                  "y":75.8696
+                }, 
+                {
+                 "height":55.8788,
+                 "id":132,
+                 "name":"card",
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":131
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":39.7879,
+                 "x":459.545,
+                 "y":235.455
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1977,7 +2006,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":131,
+ "nextobjectid":133,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -2016,7 +2045,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":35,
+         "tilecount":36,
          "tileheight":600,
          "tiles":[
                 {
@@ -2526,12 +2555,18 @@
                  "image":"..\/img\/tables\/diamond_div.png",
                  "imageheight":7,
                  "imagewidth":7
+                }, 
+                {
+                 "id":36,
+                 "image":"..\/img\/tables\/card_back_hometeam_logo.png",
+                 "imageheight":98,
+                 "imagewidth":70
                 }],
          "tilewidth":197
         }, 
         {
          "columns":0,
-         "firstgid":37,
+         "firstgid":38,
          "grid":
             {
              "height":1,
@@ -2572,7 +2607,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":39,
+         "firstgid":40,
          "grid":
             {
              "height":1,
