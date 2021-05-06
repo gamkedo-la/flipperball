@@ -1983,9 +1983,26 @@
                  "y":75.8696
                 }, 
                 {
-                 "height":55.8788,
-                 "id":132,
+                 "height":0,
+                 "id":133,
                  "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-0.181818181818187,
+                         "y":53.8181818181818
+                        }, 
+                        {
+                         "x":38,
+                         "y":53.8181818181818
+                        }, 
+                        {
+                         "x":38.7272727272727,
+                         "y":-0.545454545454533
+                        }],
                  "properties":[
                         {
                          "name":"dynObjConn",
@@ -1995,9 +2012,9 @@
                  "rotation":0,
                  "type":"card",
                  "visible":true,
-                 "width":39.7879,
-                 "x":459.545,
-                 "y":235.455
+                 "width":0,
+                 "x":460.727272727273,
+                 "y":236.181818181818
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2006,7 +2023,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":133,
+ "nextobjectid":134,
  "orientation":"orthogonal",
  "properties":[
         {

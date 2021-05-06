@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="133">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="134">
  <editorsettings>
   <export target="../../tables/prototype.js" format="js"/>
  </editorsettings>
@@ -579,10 +579,11 @@
   <object id="129" name="diamond_div_5" type="wall" x="659.174" y="75.8696">
    <polygon points="0,0 -2.95652,3.17391 -0.130435,6.26087 3.13043,3.04348"/>
   </object>
-  <object id="132" name="card" type="card" x="459.545" y="235.455" width="39.7879" height="55.8788">
+  <object id="133" name="card" type="card" x="460.727" y="236.182">
    <properties>
     <property name="dynObjConn" type="object" value="131"/>
    </properties>
+   <polygon points="0,0 -0.181818,53.8182 38,53.8182 38.7273,-0.545455"/>
   </object>
  </objectgroup>
 </map>

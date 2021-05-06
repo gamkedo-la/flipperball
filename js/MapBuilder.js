@@ -285,8 +285,8 @@ function MapBuilder (tableName = selected_table) {
 
                     } else if (obj.type === ENTITY_TYPE.Bubble) {
                         result.push(new Bubble(self.minY, self.maxY, obj, null));
-                    } else if (obj.type === 'card'){
-                        const newGameObject = new PlayingCard(obj, null,);
+                    } else if (obj.type === 'card') {                        
+                        const newGameObject = new PlayingCard(obj, bodyData);
                         result.push(newGameObject);    
                     } else {
                         result.push(new GameObject(obj, bodyData));
