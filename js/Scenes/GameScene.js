@@ -18,7 +18,7 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.hasPlungerReleased = false;
     this.score = 0;
-    this.highScore = 0;
+    this.highScore = localStorage.getItem('highScoreStorage');
     this.highScoreStorage = localStorage.getItem('highScoreStorage');
     this.scoreIncrementForExtraBall = 0;
     this.bonusMultiplier = 1;
