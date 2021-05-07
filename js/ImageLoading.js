@@ -298,6 +298,8 @@ function loadImages() {
 
         //Aquarium Table Sprites
         {imgName: "small_bubble", theFile: "tables/small_bubble.png"},
+        {imgName: "atlantis_bottom_bg", theFile: "tables/atlantis_bottom.png"},
+        {imgName: "atlantis_top_bg", theFile: "tables/atlantis_top.png"},
 
         
     ];
