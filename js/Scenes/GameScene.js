@@ -451,6 +451,10 @@ function GameScene() {
             self.gameHasFinished = true;            
             endBonusRound();
             stopBackgroundMusic()
+            //console.log(localStorage.getItem('highScore'));
+            localStorage.setItem('highScore', self.score);
+            console.log('lets see if I can just log the data to the screen');
+            console.log(self.highScore);
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
@@ -669,9 +673,7 @@ function GameScene() {
         colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
        
         if (isGameOver()) {
-            colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
-            //console.log(self.score);
-            //localStorage.setItem('highScore', self.score);
+            colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);            
         }
         
     }
