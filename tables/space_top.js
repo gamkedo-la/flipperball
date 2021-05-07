@@ -413,8 +413,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":54,
-                 "x":594,
-                 "y":589.1667
+                 "x":783,
+                 "y":555.167
                 }, 
                 {
                  "gid":46,
@@ -1319,14 +1319,24 @@
                  "name":"jupiter",
                  "properties":[
                         {
+                         "name":"centerX",
+                         "type":"int",
+                         "value":590
+                        }, 
+                        {
+                         "name":"centerY",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":100
                         }, 
                         {
                          "name":"speed",
-                         "type":"int",
-                         "value":0
+                         "type":"float",
+                         "value":0.05
                         }, 
                         {
                          "name":"zOrder",
@@ -1337,8 +1347,8 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":94,
-                 "x":687,
-                 "y":227.5
+                 "x":705.5,
+                 "y":203.5
                 }, 
                 {
                  "gid":48,
@@ -1347,14 +1357,24 @@
                  "name":"saturn",
                  "properties":[
                         {
+                         "name":"centerX",
+                         "type":"int",
+                         "value":590
+                        }, 
+                        {
+                         "name":"centerY",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":200
                         }, 
                         {
                          "name":"speed",
-                         "type":"int",
-                         "value":0
+                         "type":"float",
+                         "value":0.2
                         }, 
                         {
                          "name":"zOrder",
@@ -1365,8 +1385,8 @@
                  "type":"saturn",
                  "visible":true,
                  "width":114,
-                 "x":421,
-                 "y":170
+                 "x":472.333333333333,
+                 "y":209.333333333333
                 }, 
                 {
                  "gid":49,
@@ -1375,14 +1395,24 @@
                  "name":"mars",
                  "properties":[
                         {
+                         "name":"centerX",
+                         "type":"int",
+                         "value":590
+                        }, 
+                        {
+                         "name":"centerY",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":300
                         }, 
                         {
                          "name":"speed",
-                         "type":"int",
-                         "value":0
+                         "type":"float",
+                         "value":0.35
                         }, 
                         {
                          "name":"zOrder",
@@ -1393,8 +1423,8 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":500.5,
-                 "y":369.5
+                 "x":549.666666666667,
+                 "y":261
                 }, 
                 {
                  "gid":50,
@@ -1403,14 +1433,24 @@
                  "name":"earth",
                  "properties":[
                         {
+                         "name":"centerX",
+                         "type":"int",
+                         "value":590
+                        }, 
+                        {
+                         "name":"centerY",
+                         "type":"int",
+                         "value":250
+                        }, 
+                        {
                          "name":"score",
                          "type":"int",
                          "value":300
                         }, 
                         {
                          "name":"speed",
-                         "type":"int",
-                         "value":0
+                         "type":"float",
+                         "value":0.5
                         }, 
                         {
                          "name":"zOrder",
@@ -1421,8 +1461,8 @@
                  "type":"earth",
                  "visible":true,
                  "width":24,
-                 "x":669.5,
-                 "y":302
+                 "x":611.333333333333,
+                 "y":207.333333333333
                 }, 
                 {
                  "gid":77,
@@ -1449,8 +1489,8 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":297.72725,
-                 "y":305.7273
+                 "x":297.727,
+                 "y":305.727
                 }, 
                 {
                  "gid":77,
@@ -1477,8 +1517,8 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":866.72725,
-                 "y":279.7273
+                 "x":866.727,
+                 "y":279.727
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2131,8 +2171,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":15,
-                 "x":613.333,
-                 "y":556.1667
+                 "x":803.333,
+                 "y":521.667
                 }, 
                 {
                  "ellipse":true,
@@ -2167,8 +2207,8 @@
                  "type":"jupiter",
                  "visible":true,
                  "width":90,
-                 "x":688.5,
-                 "y":135.5
+                 "x":707.5,
+                 "y":112
                 }, 
                 {
                  "ellipse":true,
@@ -2185,8 +2225,8 @@
                  "type":"saturn",
                  "visible":true,
                  "width":60,
-                 "x":446.5,
-                 "y":98
+                 "x":497.166666666667,
+                 "y":138
                 }, 
                 {
                  "ellipse":true,
@@ -2203,8 +2243,8 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":500,
-                 "y":345
+                 "x":549.666666666667,
+                 "y":236.5
                 }, 
                 {
                  "ellipse":true,
@@ -2221,8 +2261,8 @@
                  "type":"earth",
                  "visible":true,
                  "width":24,
-                 "x":669,
-                 "y":278
+                 "x":611.5,
+                 "y":183.166666666667
                 }, 
                 {
                  "height":0,
@@ -2310,12 +2350,12 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":233,
+ "nextobjectid":238,
  "orientation":"orthogonal",
  "properties":[
         {
