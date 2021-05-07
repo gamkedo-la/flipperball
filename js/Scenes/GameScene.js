@@ -452,9 +452,13 @@ function GameScene() {
             self.gameHasFinished = true;            
             endBonusRound();
             stopBackgroundMusic()
-            localStorage.setItem('highScoreStorage', self.score); //sets the high score to the last score, just for now
-            self.highScore = self.highScoreStorage;
-            self.highScore = self.score;
+
+            if(self.score > self.highScore){
+                self.highScore = self.score;
+                localStorage.setItem('highScoreStorage', self.score);
+            } //set the new high score both as a property and as storage
+            //just work with this rn, don't worry about "getting"
+
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
