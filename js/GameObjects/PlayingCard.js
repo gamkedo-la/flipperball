@@ -7,10 +7,11 @@ class PlayingCard extends GameObject {
         this.spin = 0;
         this.isSpinning = false;
         this.isFaceUp = false;
+        this.score = 100;
     }
 
     update (deltaTime) {
-        
+
         super.update(deltaTime);
         if(this.isSpinning){
 
@@ -19,6 +20,7 @@ class PlayingCard extends GameObject {
             if (Math.cos(this.spin) < -0.9){
                 this.spin = Math.PI;
                 this.isSpinning = false;
+                this.isFaceUp = true;
             }
 
         }

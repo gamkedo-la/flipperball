@@ -818,6 +818,10 @@ function GameScene() {
                 break;
             case ENTITY_TYPE.Card:
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Card collision detected");
+                if(!otherEntity.isSpinning && !otherEntity.isFaceUp){
+                    otherEntity.flipCard();
+                    incrementScore(otherEntity.score);
+                }
                 otherEntity.flipCard();
                 break;
             default:
