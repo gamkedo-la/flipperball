@@ -1,5 +1,7 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
+//sorry guys idk where to put this rn!
+//localStorage.setItem('highScore', '000000')
 
 function GameScene() {
     // this.properties gets overwritten with SceneManager.js->setState([..], properties)
@@ -16,6 +18,7 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.hasPlungerReleased = false;
     this.score = 0;
+    this.highScore = localStorage.getItem('highScore');
     this.scoreIncrementForExtraBall = 0;
     this.bonusMultiplier = 1;
     this.bonusLive = false;
@@ -659,12 +662,16 @@ function GameScene() {
         if (self.bonusLive) {
             colorText("Bonus: " + self.bonusMultiplier + "X" + " (" + Math.round(self.bonusTime) + ")", TEXT_LEFT_OFFSET, canvas.height - 160, Color.Yellow, Fonts.Subtitle, TextAlignment.Left, 1);
         }
-        colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
+        colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 160, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
+
+        colorText("High Score: " + self.highScore, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
         colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
        
         if (isGameOver()) {
             colorText("Press 'r' to Restart", 135, canvas.height / 2, Color.Red, Fonts.Subtitle, TextAlignment.Center, 1);
+            //console.log(self.score);
+            //localStorage.setItem('highScore', self.score);
         }
         
     }
@@ -802,6 +809,10 @@ function GameScene() {
                     this.isColliding = true;
                     bananaSound.play();
                 }
+                break;
+            case ENTITY_TYPE.Card:
+                DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Card collision detected");
+                otherEntity.flipCard();
                 break;
             default:
                 break;

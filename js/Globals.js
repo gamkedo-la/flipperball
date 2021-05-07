@@ -33,7 +33,7 @@ const SCORE_NEEDED_FOR_EXTRA_BALL = 10000;
 
 const canvasClearColor = "black";
 
-const STARTING_BALLS_COUNT = 2;
+const STARTING_BALLS_COUNT = 0;
 
 const LANE_TRIGGER_TIMEOUT = 3000;
 
@@ -150,7 +150,8 @@ const ENTITY_TYPE = {
 	Banana: 'banana',
 	BananaTaken: 'banana_taken',
 	VamMineral: 'vam_mineral',
-	Plug: 'plug'
+	Plug: 'plug',
+	Card: 'card'
 };
 
 const TRIGGER_TYPE = {

@@ -36,7 +36,7 @@ function drawImageForTiledWithVerticalSpin(imageFront, imageBack, atX, atY, with
   canvasContext.save();
   canvasContext.translate(atX + imageFront.width/2, atY+imageFront.height);
   canvasContext.scale(Math.abs(spinScale), 1.0);
-  canvasContext.drawImage((spinScale < 0 ? imageBack : imageFront), -imageFront.width/2, -imageFront.height);
+  canvasContext.drawImage((spinScale > 0 ? imageBack : imageFront), -imageFront.width/2, -imageFront.height);
   canvasContext.restore();
 }
 
