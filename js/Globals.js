@@ -33,7 +33,7 @@ const SCORE_NEEDED_FOR_EXTRA_BALL = 10000;
 
 const canvasClearColor = "black";
 
-const STARTING_BALLS_COUNT = 0;
+const STARTING_BALLS_COUNT = 2;
 
 const LANE_TRIGGER_TIMEOUT = 3000;
 
