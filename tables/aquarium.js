@@ -26,6 +26,18 @@
          "name":"Fixed",
          "objects":[
                 {
+                 "gid":51,
+                 "height":600,
+                 "id":185,
+                 "name":"atlantis_bottom_bg",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":720,
+                 "x":278.182534989158,
+                 "y":600.118273211118
+                }, 
+                {
                  "gid":4,
                  "height":598,
                  "id":23,
@@ -382,8 +394,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":484.884190814114,
-                 "y":298.111078257441
+                 "x":484.884,
+                 "y":298.111
                 }, 
                 {
                  "gid":43,
@@ -405,8 +417,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":619.419968460477,
-                 "y":337.535481963335
+                 "x":619.42,
+                 "y":337.535
                 }, 
                 {
                  "gid":43,
@@ -428,8 +440,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":541.556771141337,
-                 "y":343.449142519219
+                 "x":541.557,
+                 "y":343.449
                 }, 
                 {
                  "gid":43,
@@ -451,8 +463,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":626.812044155332,
-                 "y":404.064163217031
+                 "x":626.812,
+                 "y":404.064
                 }, 
                 {
                  "gid":43,
@@ -474,8 +486,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":541.556771141337,
-                 "y":409.977823772915
+                 "x":541.557,
+                 "y":409.978
                 }, 
                 {
                  "gid":43,
@@ -497,8 +509,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":448.909422432486,
-                 "y":345.420362704514
+                 "x":448.909,
+                 "y":345.42
                 }, 
                 {
                  "gid":43,
@@ -520,8 +532,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":711.08170707668,
-                 "y":279.384486497142
+                 "x":711.082,
+                 "y":279.384
                 }, 
                 {
                  "gid":43,
@@ -543,8 +555,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":558.804947762665,
-                 "y":235.032032328011
+                 "x":558.805,
+                 "y":235.032
                 }, 
                 {
                  "gid":43,
@@ -566,8 +578,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":638.6393652671,
-                 "y":271.992410802287
+                 "x":638.639,
+                 "y":271.992
                 }, 
                 {
                  "gid":43,
@@ -589,8 +601,8 @@
                  "type":"bubble",
                  "visible":true,
                  "width":5,
-                 "x":590.34447072738,
-                 "y":279.384486497142
+                 "x":590.344,
+                 "y":279.384
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1294,7 +1306,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":185,
+ "nextobjectid":186,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1940,7 +1952,7 @@
          "margin":0,
          "name":"cloud_bg",
          "spacing":0,
-         "tilecount":3,
+         "tilecount":5,
          "tileheight":600,
          "tiles":[
                 {
@@ -1978,12 +1990,24 @@
                          "type":"int",
                          "value":-100
                         }]
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/img\/tables\/atlantis_bottom.png",
+                 "imageheight":600,
+                 "imagewidth":720
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/img\/tables\/atlantis_top.png",
+                 "imageheight":600,
+                 "imagewidth":720
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":48,
+         "firstgid":53,
          "grid":
             {
              "height":1,

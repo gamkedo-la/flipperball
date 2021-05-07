@@ -26,6 +26,18 @@
          "name":"Fixed",
          "objects":[
                 {
+                 "gid":49,
+                 "height":600,
+                 "id":212,
+                 "name":"atlantis_top_bg",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":720,
+                 "x":276.211314803864,
+                 "y":599.625468164794
+                }, 
+                {
                  "gid":7,
                  "height":598,
                  "id":26,
@@ -170,7 +182,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -206,7 +218,7 @@
                  "y":680
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -224,7 +236,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -242,7 +254,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -260,7 +272,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -283,7 +295,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -1113,7 +1125,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":212,
+ "nextobjectid":213,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1459,7 +1471,7 @@
          "margin":0,
          "name":"cloud_bg_top",
          "spacing":0,
-         "tilecount":24,
+         "tilecount":25,
          "tileheight":600,
          "tiles":[
                 {
@@ -1832,12 +1844,18 @@
                          "value":-75
                         }],
                  "type":"saturn"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/atlantis_top.png",
+                 "imageheight":600,
+                 "imagewidth":720
                 }],
          "tilewidth":720
         }, 
         {
          "columns":0,
-         "firstgid":49,
+         "firstgid":50,
          "grid":
             {
              "height":1,

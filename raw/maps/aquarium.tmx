@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="185">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="186">
  <editorsettings>
   <export target="../../tables/aquarium.js" format="js"/>
  </editorsettings>
@@ -265,7 +265,7 @@
    <image width="5" height="5" source="../../img/tables/small_bubble.png"/>
   </tile>
  </tileset>
- <tileset firstgid="44" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="3" columns="0">
+ <tileset firstgid="44" name="cloud_bg" tilewidth="720" tileheight="600" tilecount="5" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -285,8 +285,14 @@
    </properties>
    <image width="720" height="600" source="../../img/tables/space_bottom_bg.png"/>
   </tile>
+  <tile id="7">
+   <image width="720" height="600" source="../../img/tables/atlantis_bottom.png"/>
+  </tile>
+  <tile id="8">
+   <image width="720" height="600" source="../../img/tables/atlantis_top.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="48" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="53" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -308,6 +314,7 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
+  <object id="185" name="atlantis_bottom_bg" gid="51" x="278.183" y="600.118" width="720" height="600"/>
   <object id="23" name="plunger_chute" type="wall" gid="4" x="894" y="598" width="105" height="598">
    <properties>
     <property name="zOrder" type="int" value="0"/>
