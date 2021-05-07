@@ -810,6 +810,10 @@ function GameScene() {
                     bananaSound.play();
                 }
                 break;
+            case ENTITY_TYPE.Card:
+                DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Card collision detected");
+                otherEntity.flipCard();
+                break;
             default:
                 break;
         }

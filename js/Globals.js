@@ -150,7 +150,8 @@ const ENTITY_TYPE = {
 	Banana: 'banana',
 	BananaTaken: 'banana_taken',
 	VamMineral: 'vam_mineral',
-	Plug: 'plug'
+	Plug: 'plug',
+	Card: 'card'
 };
 
 const TRIGGER_TYPE = {
