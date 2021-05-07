@@ -18,7 +18,8 @@ function GameScene() {
     this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
     this.hasPlungerReleased = false;
     this.score = 0;
-    this.highScore = localStorage.getItem('highScore');
+    this.highScore = 0;
+    this.highScoreStorage = localStorage.getItem('highScoreStorage');
     this.scoreIncrementForExtraBall = 0;
     this.bonusMultiplier = 1;
     this.bonusLive = false;
@@ -451,10 +452,9 @@ function GameScene() {
             self.gameHasFinished = true;            
             endBonusRound();
             stopBackgroundMusic()
-            //console.log(localStorage.getItem('highScore'));
-            localStorage.setItem('highScore', self.score);
-            console.log('lets see if I can just log the data to the screen');
-            console.log(self.highScore);
+            localStorage.setItem('highScoreStorage', self.score); //sets the high score to the last score, just for now
+            self.highScore = self.highScoreStorage;
+            self.highScore = self.score;
             SceneManager.setState(SCENE.GAMEOVER);
         }
     }
@@ -669,7 +669,7 @@ function GameScene() {
         colorText("Score: " + self.score, TEXT_LEFT_OFFSET, canvas.height - 160, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
 
         colorText("High Score: " + self.highScore, TEXT_LEFT_OFFSET, canvas.height - 120, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);    
-
+    
         colorText("No. of plays left: " + self.numberOfRemainingBalls, TEXT_LEFT_OFFSET, canvas.height - 80, Color.White, Fonts.Subtitle, TextAlignment.Left, 1);
        
         if (isGameOver()) {
