@@ -18,7 +18,7 @@ function TableSelectionScene() {
         bottomTable: TABLES.Vam,
         topTable: TABLES.VamTop,
         image: "vam_screenshot"},
-        {selectionName: "Aquarium",
+        {selectionName: "Atlantis",
         selectionType: MENU_SELECTION_TYPE.TABLE,
         bottomTable: TABLES.Aquarium,
         topTable: TABLES.AquariumTop,
