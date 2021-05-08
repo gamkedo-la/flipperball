@@ -61,6 +61,7 @@ class PlayingCard extends GameObject {
 
     flipCard(){
         if (!this.isFaceUp) this.setRandomFaceValue();
+        slotCrankSound.play();
         this.isSpinning = true;
     }
 
@@ -72,6 +73,7 @@ class PlayingCard extends GameObject {
             }
         }
 
+        slotDingSound.play();
         return true;
     }
 
