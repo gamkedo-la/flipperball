@@ -34,6 +34,12 @@ class Ball extends GameObject {
         this.x += deltaX;
         this.y += deltaY;
         this.body.update(deltaX, deltaY);
+
+        if (this.x < 290) {
+            this.velocity.x = Math.abs(this.velocity.x)
+        } else if (this.x > 895 && this.velocity.x > Math.abs(this.velocity.y)) {
+            this.velocity.x = -Math.abs(this.velocity.x)
+        }
     }
 
     setPosition(x, y) {
