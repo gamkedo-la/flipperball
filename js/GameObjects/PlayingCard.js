@@ -1,3 +1,5 @@
+let cards = []
+
 class PlayingCard extends GameObject {
     constructor(...props) {
         super(...props);
@@ -7,7 +9,9 @@ class PlayingCard extends GameObject {
         this.spin = 0;
         this.isSpinning = false;
         this.isFaceUp = false;
-        this.score = 100;
+        this.score = 1000;
+
+        cards.push(this);
     }
 
     update (deltaTime) {
@@ -21,13 +25,27 @@ class PlayingCard extends GameObject {
                 this.spin = Math.PI;
                 this.isSpinning = false;
                 this.isFaceUp = true;
-            }
 
+                if (this.areAllCardsFaceUp()){
+                    SceneManager.scenes[SCENE.GAME].incrementScoreFromObject(this.score);
+                }
+            }
         }
     }
 
     flipCard(){
         this.isSpinning = true;
+    }
+
+    areAllCardsFaceUp(){
+
+        for (const card of cards){
+            if (!card.isFaceUp){
+                return false;
+            }
+        }
+
+        return true;
     }
 
     draw(){

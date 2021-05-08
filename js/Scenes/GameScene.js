@@ -472,6 +472,10 @@ function GameScene() {
         // }
     }
 
+    this.incrementScoreFromObject = function(score) {
+        incrementScore(score);
+    }
+
     const checkForRotatingGateScore = function(){
         if(self.remainingRotatingScore > 0){
             DEBUG_LOG(self.remainingRotatingScore);
@@ -820,9 +824,7 @@ function GameScene() {
                 DEBUG_LOG("[GameScene]: NotifyBallCollision() -> Card collision detected");
                 if(!otherEntity.isSpinning && !otherEntity.isFaceUp){
                     otherEntity.flipCard();
-                    incrementScore(otherEntity.score);
                 }
-                otherEntity.flipCard();
                 break;
             default:
                 break;
