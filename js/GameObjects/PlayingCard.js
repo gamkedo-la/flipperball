@@ -1,11 +1,33 @@
 let cards = []
+const cardImages = [
+    'card_club_10',
+    'card_club_ace',
+    'card_club_jack',
+    'card_club_king',
+    'card_club_queen',
+    'card_diamond_10',
+    'card_diamond_ace',
+    'card_diamond_jack',
+    'card_diamond_king',
+    'card_diamond_queen',
+    'card_heart_10',
+    'card_heart_ace',
+    'card_heart_jack',
+    'card_heart_king',
+    'card_heart_queen',
+    'card_spade_10',
+    'card_spade_ace',
+    'card_spade_jack',
+    'card_spade_king',
+    'card_spade_queen'
+]
 
 class PlayingCard extends GameObject {
     constructor(...props) {
         super(...props);
 
         this.cardBack = images['card_back_hometeam_logo'];
-        this.cardFace = images['card_heart_ace'];
+        this.cardFace = images[cardImages[Math.floor(Math.random() * cardImages.length)]];
         this.spin = 0;
         this.isSpinning = false;
         this.isFaceUp = false;
