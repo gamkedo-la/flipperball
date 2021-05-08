@@ -2,7 +2,6 @@ class PlaneSpawner extends Spawner {
     constructor(...props) {
         super(...props);
 
-        console.log(Object.keys(props));
         this.colorIndex = 0;
         this.colors = ['plane_red', 'plane_blue', 'plane_green', 'plane_yellow'];
         this.score = 100;
@@ -15,7 +14,6 @@ class PlaneSpawner extends Spawner {
     }
 
     nextScore () {
-        console.log(`Spawner Score: ${this.score}`)
         return this.score;
     }
 

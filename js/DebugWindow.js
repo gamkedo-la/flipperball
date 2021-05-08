@@ -17,13 +17,11 @@ function toggleDebugWindow() {
 			if (debugWindow.closed) {
 				clearInterval(timer);
 				FEATURE_FLAGS.useDebugWindow = !FEATURE_FLAGS.useDebugWindow;
-				console.log(debugWindow.closed);
 			}
 		}, 3000);
 	} else {
 		debugWindow.close();
 		clearInterval(timer);
-		console.log(debugWindow.closed);
 	}
 }
 

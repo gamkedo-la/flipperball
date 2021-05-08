@@ -16,7 +16,6 @@ function MapBuilder (tableName = selected_table) {
     this.plunger = null;
     this.drawOrder = [];
     this.slotMachines = [];
-    console.log("Map Data: " + tableName);
     if (mapData.properties) {
         for (const property of mapData.properties) {
             this[property.name] = property.value
@@ -70,8 +69,6 @@ function MapBuilder (tableName = selected_table) {
         const result = [];
 
         for (const obj of objData) {
-            DEBUG_LOG("Building DynObj: " + obj.name + ":" + obj.id);
-
             if (obj.properties) {
                 for (const prop of obj.properties) {
                     obj[prop.name] = prop.value
@@ -81,7 +78,6 @@ function MapBuilder (tableName = selected_table) {
             // Find all colliders that are connected to this DynamicObject. (Have dynObjConn property -> obj.id)
             let bodyData = [];
             for (const colData of collisionData) {
-                //console.log("MapBuilder: " + obj.type);        
                 if (colData.properties) {
                     const colProps = {};
                     for (const property of colData.properties) {
@@ -92,7 +88,6 @@ function MapBuilder (tableName = selected_table) {
                     }
                 }
             }
-            DEBUG_LOG("Colliders Found: " + bodyData.length);
             if (bodyData.length === 1) {
                 bodyData = bodyData[0];
             }
@@ -122,7 +117,6 @@ function MapBuilder (tableName = selected_table) {
                 });
                 result.push(newGameObject);
             }else if(obj.type === ENTITY_TYPE.Banana){
-                DEBUG_LOG("Banana");
                 const newGameObject = new BananaObject(obj, bodyData, {
                     ...ANIMATIONS.BANANA,
                     animationSpritesheet: images[ANIMATIONS.BANANA.imageNames[obj.name]],
@@ -130,7 +124,6 @@ function MapBuilder (tableName = selected_table) {
                 result.push(newGameObject);
             }
             else if(obj.type === ENTITY_TYPE.BananaTaken){
-                DEBUG_LOG("Banana Taken");
                 const newGameObject = new BananaTakenObject(obj, bodyData, {
                     ...ANIMATIONS.BANANA_TAKEN,
                     animationSpritesheet: images[ANIMATIONS.BANANA_TAKEN.imageNames[obj.name]],
@@ -263,13 +256,11 @@ function MapBuilder (tableName = selected_table) {
                                 animationSpritesheet: images[ANIMATIONS.SMALL_STAR.imageNames[obj.name]],
                             }));
                         } else if (obj.name === ENTITY_NAME.ExpandingStar) {
-                            DEBUG_LOG("[Mapbuilder] BuildDynObjects -> ExpandingStar");
                             result.push(new Star(self.minY, self.maxY, obj, null, {
                                 ...ANIMATIONS.EXPANDING_STAR,
                                 animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR.imageNames[obj.name]],
                             }));
                         } else if (obj.name === ENTITY_NAME.ExpandingStar2) {
-                            DEBUG_LOG("[Mapbuilder] BuildDynObjects -> ExpandingStar2");
                             result.push(new Star(self.minY, self.maxY, obj, null, {
                                 ...ANIMATIONS.EXPANDING_STAR_2,
                                 animationSpritesheet: images[ANIMATIONS.EXPANDING_STAR_2.imageNames[obj.name]],
@@ -333,15 +324,6 @@ function MapBuilder (tableName = selected_table) {
     this.getDynamicObject = function(type) {
         let dynamicObject = this.dynamicLayerData.objects.find(dObj => dObj.type === type);
         let dynamicObjectCollision = this.collisionLayerData.objects.find(dObj => dObj.type === type);
-        DEBUG_LOG("[MapBuilder]: getDynamicObject -> " + dynamicObject);
-        /*let dynObjectTarget = Object.assign({}, dynamicObject);
-        let newPlane = new Plane(dynObjectTarget, dynObjectTarget.body, {
-            ...ANIMATIONS.PLANE_EXPLOSION,
-            animationSpritesheet: images[ANIMATIONS.PLANE_EXPLOSION.imageNames[dynamicObject.name]],
-        });*/
-
-
-        // let newEntity = buildDynamicObjects(dynamicObject, dynamicObjectCollision)[0];
 
         // return newEntity;
         return { dynamicObject: dynamicObject, collisionBody: dynamicObjectCollision }
@@ -408,22 +390,17 @@ function TriggerMapObject(objData, bodyData) {
         switch (objData.properties[i].name) {
             case "score":
                 this.score = objData.properties[i].value;
-                //console.log("Score set to " + this.score + " for " + objData.name);
                 break;
             case "targ_light":
                 this.targ_light = objData.properties[i].value;
-                DEBUG_LOG("Target Light set to " + this.targ_light + " for " + objData.name);
                 break;
             case "ball_catch":
                 this.ball_catch = objData.properties[i].value;
-                DEBUG_LOG("Ball Catch set to " + this.ball_catch + " for " + objData.name);
             case "slot_target":
                 this.slot_target = objData.properties[i].value;
-                DEBUG_LOG("Slot Target set to " + this.slot_target + " for " + objData.name);
             default:
                 break;
         }
-        //console.log("Name: " + objData.name + " Properties: " + objData.properties[i].name);
     }
     
     this.update = function(deltaTime) {}

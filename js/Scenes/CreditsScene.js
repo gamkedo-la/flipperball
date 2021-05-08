@@ -45,19 +45,16 @@ function CreditsScene() {
         switch (newKeyEvent) {
             case KEY_UP:
                 if(!paused){
-                    DEBUG_LOG("up");
                     stringPositionOffset-=70;
                 }
                 return true;
             case KEY_LEFT:
                 if(!paused){
-                    DEBUG_LOG("left");
                     stringPositionOffset-=140;
                 }
                 return true;
             case KEY_DOWN:
                 if(!paused){
-                    DEBUG_LOG("down");
                     stringPositionOffset+=70;
                     if(stringPositionOffset>-40) {
                         stringPositionOffset = -40;
@@ -79,15 +76,12 @@ function CreditsScene() {
                 }
                 return true;
             case ALIAS.SELECT2:
-                // console.log("Selected the Play button");
                 
                 if(!keyPressed){
                     flipperSoundMenu.play();
                     if(paused){
-                        DEBUG_LOG("not paused");
                         paused = false;
                     }else{
-                        DEBUG_LOG("pause");
                         paused = true;
                     }
                 }

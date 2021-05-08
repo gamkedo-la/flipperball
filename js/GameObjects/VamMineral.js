@@ -58,7 +58,6 @@ class VamMineral extends GameObject {
         this.score = this.mineral_scores[this.rand_mineral_index];
         this.sprite = images[this.mineral];        
         this.radius = (this.width + this.height)/4;
-        //console.log("Random Mineral radius:" + this.radius + " " + this.mineral + " " + this.score + " " + this.rand_mineral_index);
         this.speed = 25;
         this.x_dir = Math.floor(Math.random() * 3) - 1
         this.y_dir = Math.floor(Math.random() * 3) - 1

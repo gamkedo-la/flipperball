@@ -53,7 +53,6 @@ function GameScene() {
   const self = this;
 
   this.transitionIn = function () {
-    // console.log("Current Table Index: " + this.currentTableIndex);
     this.tablesForScene = [selected_table, selected_top_table];
     if (
       this.storedTables[this.currentTableIndex] &&
@@ -166,10 +165,8 @@ function GameScene() {
 
   this.transitionOut = function () {
     if (!this.gameHasFinished) {
-      // console.log("Current Stored Tables: " + this.storedTables.length);
       this.storedTables[this.lastTableIndex] = this.table;
       this.storedCollisionManagers[this.lastTableIndex] = this.collisionManager;
-      // console.log("Transitioning out. Stored table and collisions at index" + this.lastTableIndex);
     } else {
       stopBackgroundMusic();
       this.bonusLive = false;
@@ -192,11 +189,9 @@ function GameScene() {
         return true;
       case ALIAS.CHEATS:
         CHEATS_ACTIVE = true; //not toggling because key is rapid fire
-        console.log("cheats on? " + CHEATS_ACTIVE);
         return true;
       case ALIAS.CHEATS_ADD_POINTS:
         if (CHEATS_ACTIVE) {
-          console.log("adding cheat points");
           incrementScore(3000);
           checkForExtraBall();
         }
@@ -204,7 +199,6 @@ function GameScene() {
       case ALIAS.DEBUG:
         if (pressed) {
           DEBUG = !DEBUG;
-          // console.log("Debug? " + DEBUG);
           if (DEBUG) {
             canvasContainer.appendChild(debugButton);
           } else {
@@ -291,7 +285,6 @@ function GameScene() {
     currentShakes++;
     if (shakeStartTime != -1) {
       if (currentShakes >= shakesBeforeTilt) {
-        console.log("TILT");
         tilt = true;
         shakeStartTime = -1;
         currentShakes = 0;
@@ -385,7 +378,6 @@ function GameScene() {
     for (const ball of self.table.balls) {
       if (ball.y < 0) {
         if (DEBUG) {
-          // console.log("if(ball.y < 0)");
           outputTableBallState(ball);
         }
         if (self.currentTableIndex < self.tablesForScene.length - 1) {
@@ -397,22 +389,16 @@ function GameScene() {
             ballOffset: { x: 0, y: canvas.height },
           });
 
-          //TODO: FM: Determine when extra ball should actually be given to player
-          //Probably at some number of points and under some special circumstances
-          //extraBall();
           if (DEBUG) {
-            // console.log("if(self.currentTableIndex < self.tablesForScene.length - 1)");
             outputTableBallState(ball);
           }
         }
       } else if (ball.y > canvas.height) {
         if (DEBUG) {
-          // console.log("else if (ball.y > canvas.height)");
           outputTableBallState(ball);
         }
         if (self.currentTableIndex == 0) {
           if (DEBUG) {
-            // console.log("if (self.currentTableIndex == 0)");
             outputTableBallState(ball);
           }
           self.lastTableIndex = self.currentTableIndex;
@@ -439,11 +425,6 @@ function GameScene() {
     }
   };
   const outputTableBallState = function (ball) {
-    // console.log("Ball Y:" + ball.y);
-    // console.log("self.currenTableIndex:" + self.currentTableIndex);
-    // console.log("self.tablesForScene.length:" + self.tablesForScene.length);
-    // console.log("self.table.balls.length:" + self.table.balls.length);
-    // console.log("-----");
   };
   const loseBall = function (ball) {
     self.table.dynamicObjects.forEach((data) => {
@@ -459,16 +440,9 @@ function GameScene() {
 
     let ballIndex = self.table.balls.indexOf(ball);
     if (ballIndex !== -1) {
-      //TODO: KYLE Get loseball back to working the way it did previously. I tore this up debugging other ball behavior
-      //      and just needed it out of the way, but now that it's working it can be put back in place.
-      //Setting properties.ball to undefined so it doesn´t propagate to the next TransitionIn()
-      //self.properties.ball = undefined;
-      //self.collisionManager.unregisterBall(ball);
-      //self.table.balls.splice(ballIndex, 1);
       for (const ball of self.table.balls) {
         ball.reset();
       }
-      // console.log("self.table.balls.length: " + self.table.balls.length);
       // reset flipper input (in case of tilt)
       if (tilt) {
         tilt = false;
@@ -509,12 +483,6 @@ function GameScene() {
   };
 
   this.releasePlunger = function () {
-    // if(!this.hasPlungerReleased) {
-    //     this.hasPlungerReleased = true;
-    //     // eslint-disable-next-line no-console
-    //     console.log("Plunger Activated");
-    //     this.playAnimation("plunger", ANIMATIONS.PLUNGER_RELEASE, 912, 552);
-    // }
   };
 
   this.incrementScoreFromObject = function (score) {
@@ -523,7 +491,6 @@ function GameScene() {
 
   const checkForRotatingGateScore = function () {
     if (self.remainingRotatingScore > 0) {
-      DEBUG_LOG(self.remainingRotatingScore);
       self.rotatingGateEntity.updateAnimationTiedToScore(
         self.remainingRotatingScore
       );
@@ -680,9 +647,6 @@ function GameScene() {
     if (selected_table == TABLES.Forest || selected_table == TABLES.ForestTop) {
       self.bananaCounter += deltaTime;
       if (self.bananaCounter >= self.bananaRandomSpawnTime) {
-        DEBUG_LOG(
-          "[GameScene] Update: Banana counter >= banana random spawn time"
-        );
         self.bananaCounter = 0;
         self.getRandomNumberBetweenTwo(
           self.bananaMinSpawnTime,
@@ -968,18 +932,12 @@ function GameScene() {
         // self.playAnimation(otherEntity.body.name, ANIMATIONS.PLANE_EXPLOSION, otherEntity.x, otherEntity.y);
         break;
       case ENTITY_TYPE.Spawner:
-        DEBUG_LOG(
-          "[GameScene]: NotifyBallCollision() -> Spawner collision detected"
-        );
         if (!spawnerCollisionOn) {
           self.spawnEntity(otherEntity);
           spawnerCollisionOn = true;
         }
         break;
       case ENTITY_TYPE.Banana:
-        DEBUG_LOG(
-          "[GameScene]: NotifyBallCollision() -> Banana collision detected"
-        );
         if (!this.isColliding) {
           incrementScore(otherEntity.score);
           self.removeEntity(otherEntity);
@@ -988,9 +946,6 @@ function GameScene() {
         }
         break;
       case ENTITY_TYPE.BananaTaken:
-        DEBUG_LOG(
-          "[GameScene]: NotifyBallCollision() -> BananaTaken collision detected"
-        );
         if (!this.isColliding) {
           incrementScore(otherEntity.score);
           self.removeEntity(otherEntity);
@@ -999,9 +954,6 @@ function GameScene() {
         }
         break;
       case ENTITY_TYPE.Card:
-        DEBUG_LOG(
-          "[GameScene]: NotifyBallCollision() -> Card collision detected"
-        );
         if (!otherEntity.isSpinning && !otherEntity.isFaceUp) {
           otherEntity.flipCard();
         }
@@ -1074,7 +1026,6 @@ function GameScene() {
               selected_table == TABLES.Forest ||
               selected_table == TABLES.ForestTop
             ) {
-              DEBUG_LOG("DOUBLE BANANA");
               self.bananaMinSpawnTime = 2000;
               self.bananaMaxSpawnTime = 4000;
             }
@@ -1139,7 +1090,6 @@ function GameScene() {
       switch (otherType) {
         case ENTITY_TYPE.BananaTaken:
           newObjectData = self.table.getDynamicObject(ENTITY_TYPE.BananaTaken);
-          DEBUG_LOG("Spawning Banana Taken");
           break;
         default:
           break;
@@ -1231,9 +1181,6 @@ function GameScene() {
   };
 
   this.removeEntity = function (entityToRemove) {
-    DEBUG_LOG(
-      "[GameScene]: RemoveEntity -> Entity name: " + entityToRemove.name
-    );
     self.table.dynamicObjects.splice(
       self.table.dynamicObjects.indexOf(entityToRemove),
       1

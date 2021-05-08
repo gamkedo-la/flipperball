@@ -790,7 +790,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="235" name="mars" gid="83" x="472" y="118.167" width="24" height="23">
+  <object id="235" name="mars" gid="83" x="493.667" y="85.8337" width="24" height="23">
    <properties>
     <property name="score" type="int" value="300"/>
     <property name="speed" type="int" value="0"/>
@@ -1059,7 +1059,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="240" name="mars" type="mars" x="472" y="94.6667" width="24" height="24">
+  <object id="240" name="mars" type="mars" x="493.333" y="62.3334" width="24" height="24">
    <properties>
     <property name="dynObjConn" type="object" value="235"/>
    </properties>

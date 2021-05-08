@@ -2,7 +2,6 @@ class Spawner extends GameObject {
     constructor(...props) {
         super(...props);
 
-        console.log("[Spawner]: Constructor");
         if (!this.score) {
             this.score = 0
         }

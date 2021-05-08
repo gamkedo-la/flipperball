@@ -106,7 +106,6 @@ class Ball extends GameObject {
                         SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
                     }
                     if (collision.otherEntity.subType === TRIGGER_TYPE.Light) {
-                        DEBUG_LOG("Light Trigger Hit");
                     } else if (collision.otherEntity.subType === TRIGGER_TYPE.BallCatch) {
                         ballCapturedSound.play();
                     }     

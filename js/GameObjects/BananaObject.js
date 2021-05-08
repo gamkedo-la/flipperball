@@ -12,7 +12,6 @@ class BananaObject extends GameObject {
         super.update(deltaTime);
         this.timeCounter+=deltaTime;
         if(this.timeCounter >= this.timeAlive){
-            DEBUG_LOG("Banana counter: " + this.timeCounter);
             SceneManager.scenes[SCENE.GAME].removeEntity(this);
             SceneManager.scenes[SCENE.GAME].spawnEntity(null, ENTITY_TYPE.BananaTaken, this);
         }

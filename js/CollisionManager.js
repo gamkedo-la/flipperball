@@ -139,11 +139,9 @@ function CollisionManager () {
         const distance = squaredDistance(ball.body.center.x, ball.body.center.y, entity.body.center.x, entity.body.center.y);
         const squaredRadii = (ball.body.radius + entity.body.radius) * (ball.body.radius + entity.body.radius);
         if (entity.type == ENTITY_TYPE.Gate && ball.velocity.x < 0) { return;}
-        //console.log("[CollisionManager]: checkSingleBodyCollisions() -> entity.type: "+ entity.type);
         if (distance <= squaredRadii) {
             if (entity.type == ENTITY_TYPE.RotatingGate || entity.body.name == ENTITY_NAME.RotatingGate
                 || entity.type == ENTITY_TYPE.Spawner || entity.type == ENTITY_TYPE.Banana || entity.type == ENTITY_TYPE.BananaTaken) {    
-                DEBUG_LOG("CollisionManager: checkCollision: "+ entity.type); 
                 const direction = normalize(ball.body.center, entity.body.center);
                 this.collisions.push(new Collision(
                     COLLISION_TYPE.Polygon,
@@ -178,7 +176,6 @@ function CollisionManager () {
             if (distance <= squaredRadii) {
                 if (entity.type == ENTITY_TYPE.RotatingGate || entityBody.name == ENTITY_NAME.RotatingGate) {
                     //TODO: Add handling of rotating way collision
-                    // console.log("CollisionManager: checkCollision: "+ entity.type);
                     const direction = normalize(ball.body.center, entityBody.center);
                     this.collisions.push(new Collision(
                         COLLISION_TYPE.Polygon,

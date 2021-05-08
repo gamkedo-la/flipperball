@@ -114,7 +114,6 @@ function BackgroundMusicClass(filenameWithPath) {
 	
 	this.setVolume = function(volume) {
 		// Multipliction by a boolean serves as 1 for true and 0 for false
-		// console.log("Music Sound: " + musicSound + ", musicSound.volume: " + musicSound.volume);
 		if(isMuted) {
 			musicSound.volume = 0;
 		} else {
@@ -126,8 +125,6 @@ function BackgroundMusicClass(filenameWithPath) {
 		} else if (musicSound.paused) {
 			if(skipToGameDEBUG == false) {
 				musicSound.play();
-			} else {
-				console.log("using skipToGameDEBUG from globals.js for quicker testing loop, music not playing since code reached before first user interaction");
 			}
 		}
 	}

@@ -2,7 +2,6 @@ class ToggleLight extends GameObject {
 
     constructor(...props) {
         super(...props);
-        DEBUG_LOG("[ToggleLight] Constructor");
         this.isInReverse = false;
         this.isAnimating = false;
         
@@ -67,9 +66,7 @@ class ToggleLight extends GameObject {
     
     triggerBonus() {
         this.reqLights -= 1;
-        DEBUG_LOG("Required Lights Left: " + this.reqLights);
         if (this.reqLights <= 0) {
-            DEBUG_LOG("Bonus Light Triggered!");
             this.updateLightState(true);
             this.reqLights = this.origReqLights;
             return true;

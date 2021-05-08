@@ -67,11 +67,9 @@ function TableSelectionScene() {
                 
                 if(selectorPositionsIndex > 0){
                     selectorPositionsIndex--;
-                    console.log("UP: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }else if(selectorPositionsIndex == 0){
                     selectorPositionsIndex = SELECTIONS.length - 1;
-                    DEBUG_LOG("BACK DOWN: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }
 
@@ -79,11 +77,9 @@ function TableSelectionScene() {
             case KEY_DOWN:
                 if(selectorPositionsIndex < SELECTIONS.length-1){
                     selectorPositionsIndex++;
-                    console.log("DOWN: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }else if(selectorPositionsIndex == SELECTIONS.length-1){
                     selectorPositionsIndex = 0;
-                    DEBUG_LOG("BACK UP: " + selectorPositionsIndex);
                     flipperSoundMenu.play();
                 }
                 break;

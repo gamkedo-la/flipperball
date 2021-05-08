@@ -13,9 +13,6 @@ class GameObject {
         this.height = objData.height;
         this.rotation = objData.rotation;
         this.active = objData.active;
-        if (this.type === 'side_drain_bumper') {
-            console.log('stopping')
-        }
         this.scale = 1;
 
         this.x = objData.x;
@@ -200,9 +197,6 @@ class GameObject {
         let absVelo = Math.abs(this.velocity.x) + Math.abs(this.velocity.y);
         let motionTrailCenterX = this.x + this.width / 2;
         let motionTrailCenterY = this.y + this.height / 2;
-        if (DEBUG) {
-            //console.log("Absolute Velocity:" + absVelo)
-        }
         if (absVelo > this.minTrailVelocity) {
             //store the position of the object each frame to use as a trail point
             this.trailPositions.push({ x: this.x, y: this.y, width: this.width * this.trailFadeStrength, height: this.height * this.trailFadeStrength, centerX: motionTrailCenterX, centerY: motionTrailCenterY });
