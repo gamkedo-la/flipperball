@@ -26,7 +26,7 @@
          "name":"Fixed",
          "objects":[
                 {
-                 "gid":49,
+                 "gid":50,
                  "height":600,
                  "id":212,
                  "name":"atlantis_top_bg",
@@ -34,8 +34,8 @@
                  "type":"",
                  "visible":true,
                  "width":720,
-                 "x":276.211314803864,
-                 "y":599.625468164794
+                 "x":276.211,
+                 "y":599.625
                 }, 
                 {
                  "gid":7,
@@ -128,7 +128,7 @@
                  "y":407
                 }, 
                 {
-                 "gid":30,
+                 "gid":31,
                  "height":24,
                  "id":92,
                  "name":"ball_catch_arrow",
@@ -182,7 +182,7 @@
                  "y":725
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":137,
                  "name":"habitrail_small_track",
@@ -218,7 +218,7 @@
                  "y":680
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":170,
                  "name":"habitrail_small_track",
@@ -236,7 +236,7 @@
                  "y":503
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":171,
                  "name":"habitrail_small_track",
@@ -254,7 +254,7 @@
                  "y":427.5
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":172,
                  "name":"habitrail_small_track",
@@ -272,7 +272,7 @@
                  "y":352
                 }, 
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":75,
                  "id":173,
                  "name":"habitrail_gateway",
@@ -295,7 +295,7 @@
                  "y":600
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":75,
                  "id":174,
                  "name":"habitrail_gateway",
@@ -419,7 +419,7 @@
                  "y":127
                 }, 
                 {
-                 "gid":31,
+                 "gid":32,
                  "height":54,
                  "id":91,
                  "name":"ball_catch",
@@ -445,6 +445,66 @@
                  "width":54,
                  "x":307,
                  "y":78.6667
+                }, 
+                {
+                 "gid":90,
+                 "height":98,
+                 "id":216,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":70,
+                 "x":422.666666666667,
+                 "y":120
+                }, 
+                {
+                 "gid":90,
+                 "height":98,
+                 "id":217,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":70,
+                 "x":582.666666666667,
+                 "y":120
+                }, 
+                {
+                 "gid":90,
+                 "height":98,
+                 "id":218,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":70,
+                 "x":502.666666666667,
+                 "y":120
+                }, 
+                {
+                 "gid":90,
+                 "height":98,
+                 "id":230,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":70,
+                 "x":662.666666666667,
+                 "y":120
+                }, 
+                {
+                 "gid":90,
+                 "height":98,
+                 "id":232,
+                 "name":"card_back_hometeam_logo",
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":70,
+                 "x":742.666666666667,
+                 "y":120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1117,6 +1177,201 @@
                  "width":40,
                  "x":291.607,
                  "y":189.394
+                }, 
+                {
+                 "height":0,
+                 "id":219,
+                 "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":1.4210854715202e-14
+                        }, 
+                        {
+                         "x":-0.322005,
+                         "y":96.0568
+                        }, 
+                        {
+                         "x":67.299,
+                         "y":96.0568
+                        }, 
+                        {
+                         "x":68.5871,
+                         "y":-0.973548999999991
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":216
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":0,
+                 "x":422.666666666667,
+                 "y":22
+                }, 
+                {
+                 "height":0,
+                 "id":220,
+                 "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-0.315774,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":65.9969,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":67.26,
+                         "y":-0.966859999999997
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":217
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":0,
+                 "x":582.666666666667,
+                 "y":22
+                }, 
+                {
+                 "height":0,
+                 "id":221,
+                 "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":1.4210854715202e-14
+                        }, 
+                        {
+                         "x":-0.318889,
+                         "y":96.0568
+                        }, 
+                        {
+                         "x":66.648,
+                         "y":96.0568
+                        }, 
+                        {
+                         "x":67.9236,
+                         "y":-0.973548999999991
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":218
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":0,
+                 "x":502.666666666667,
+                 "y":22
+                }, 
+                {
+                 "height":0,
+                 "id":231,
+                 "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-0.315774,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":65.9969,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":67.26,
+                         "y":-0.966859999999997
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":230
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":0,
+                 "x":662.666666666667,
+                 "y":22
+                }, 
+                {
+                 "height":0,
+                 "id":233,
+                 "name":"card",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-0.315774,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":65.9969,
+                         "y":95.3968
+                        }, 
+                        {
+                         "x":67.26,
+                         "y":-0.966859999999997
+                        }],
+                 "properties":[
+                        {
+                         "name":"dynObjConn",
+                         "type":"object",
+                         "value":232
+                        }, 
+                        {
+                         "name":"score",
+                         "type":"int",
+                         "value":100
+                        }],
+                 "rotation":0,
+                 "type":"card",
+                 "visible":true,
+                 "width":0,
+                 "x":742.666666666667,
+                 "y":22
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1125,7 +1380,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":213,
+ "nextobjectid":234,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1154,7 +1409,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":24,
+         "tilecount":25,
          "tileheight":600,
          "tiles":[
                 {
@@ -1456,12 +1711,18 @@
                  "imageheight":26,
                  "imagewidth":5,
                  "type":"trigger"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/card_back_hometeam_logo.png",
+                 "imageheight":98,
+                 "imagewidth":70
                 }],
          "tilewidth":598
         }, 
         {
          "columns":0,
-         "firstgid":25,
+         "firstgid":26,
          "grid":
             {
              "height":1,
@@ -1855,7 +2116,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":50,
+         "firstgid":51,
          "grid":
             {
              "height":1,
@@ -1908,6 +2169,537 @@
                  "type":"habitrail"
                 }],
          "tilewidth":42
+        }, 
+        {
+         "columns":0,
+         "firstgid":54,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"dynamic",
+         "spacing":0,
+         "tilecount":36,
+         "tileheight":600,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/raw\/img\/backgrounds\/plunger.png",
+                 "imageheight":289,
+                 "imagewidth":68,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"plunger"
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/img\/tables\/flipper_left.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"left_flipper"
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/img\/tables\/flipper_right.png",
+                 "imageheight":126,
+                 "imagewidth":171,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"right_flipper"
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/img\/tables\/plunger_chute.png",
+                 "imageheight":600,
+                 "imagewidth":105,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_left.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/raw\/img\/backgrounds\/drain_wall_right.png",
+                 "imageheight":195,
+                 "imagewidth":197,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/raw\/img\/backgrounds\/vertical_wall.png",
+                 "imageheight":598,
+                 "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_1.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_2.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_3.png",
+                 "imageheight":52,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/raw\/img\/backgrounds\/angled_wall_4.png",
+                 "imageheight":86,
+                 "imagewidth":52,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_yellow.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_green.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_blue.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/raw\/img\/backgrounds\/circle_bumper_red.png",
+                 "imageheight":95,
+                 "imagewidth":94,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"circle_bumper"
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/raw\/img\/backgrounds\/ball.png",
+                 "imageheight":26,
+                 "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":50
+                        }],
+                 "type":"ball"
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_left.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/raw\/img\/backgrounds\/flipper_bumper_right.png",
+                 "imageheight":186,
+                 "imagewidth":55,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"flipper_bumper"
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_left.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/raw\/img\/backgrounds\/drain_rail_right.png",
+                 "imageheight":270,
+                 "imagewidth":82,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/raw\/img\/backgrounds\/lane_trigger.png",
+                 "imageheight":26,
+                 "imagewidth":5,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"trigger"
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/raw\/img\/backgrounds\/rotating_gate_provisional.png",
+                 "imageheight":9,
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":75
+                        }]
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/img\/tables\/angled_wall_5.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/img\/tables\/angled_wall_6.png",
+                 "imageheight":142,
+                 "imagewidth":140,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }],
+                 "type":"wall"
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/img\/tables\/letter_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/img\/tables\/letter_light_lit.png",
+                 "imageheight":24,
+                 "imagewidth":24,
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":0
+                        }]
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/img\/tables\/cloud_1.png",
+                 "imageheight":78,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":28,
+                 "image":"..\/img\/tables\/cloud_2.png",
+                 "imageheight":36,
+                 "imagewidth":51,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":15
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":29,
+                 "image":"..\/img\/tables\/cloud_3.png",
+                 "imageheight":54,
+                 "imagewidth":81,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":7
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":30,
+                 "image":"..\/img\/tables\/cloud_4.png",
+                 "imageheight":66,
+                 "imagewidth":108,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":5
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":31,
+                 "image":"..\/img\/tables\/cloud_5.png",
+                 "imageheight":39,
+                 "imagewidth":66,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":25
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/img\/tables\/cloud_6.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/img\/tables\/cloud_7.png",
+                 "imageheight":96,
+                 "imagewidth":144,
+                 "properties":[
+                        {
+                         "name":"xVelocity",
+                         "type":"int",
+                         "value":3
+                        }, 
+                        {
+                         "name":"yVelocity",
+                         "type":"int",
+                         "value":0
+                        }, 
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-80
+                        }],
+                 "type":"cloud"
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/img\/tables\/2x_bonus_light_unlit.png",
+                 "imageheight":24,
+                 "imagewidth":24
+                }, 
+                {
+                 "id":35,
+                 "image":"..\/img\/tables\/diamond_div.png",
+                 "imageheight":7,
+                 "imagewidth":7
+                }, 
+                {
+                 "id":36,
+                 "image":"..\/img\/tables\/card_back_hometeam_logo.png",
+                 "imageheight":98,
+                 "imagewidth":70
+                }],
+         "tilewidth":197
         }],
  "tilewidth":10,
  "type":"map",

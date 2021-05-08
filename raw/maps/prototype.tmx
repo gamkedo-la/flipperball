@@ -381,9 +381,6 @@
     <property name="requiredLights" type="int" value="4"/>
    </properties>
   </object>
-  <object id="131" name="card_back_hometeam_logo" type="card" gid="37" x="433" y="368" width="70" height="98"/>
-  <object id="134" name="card_back_hometeam_logo" type="card" gid="37" x="575.333" y="368.152" width="70" height="98"/>
-  <object id="142" name="card_back_hometeam_logo" type="card" gid="37" x="505.167" y="367.667" width="70" height="98"/>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="3" name="circle_bumper_green" type="circle_bumper" x="413.784" y="13.3133" width="94.652" height="95.4154">
@@ -580,27 +577,6 @@
   </object>
   <object id="129" name="diamond_div_5" type="wall" x="659.174" y="75.8696">
    <polygon points="0,0 -2.95652,3.17391 -0.130435,6.26087 3.13043,3.04348"/>
-  </object>
-  <object id="133" name="card" type="card" x="434.201" y="270.277">
-   <properties>
-    <property name="dynObjConn" type="object" value="131"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <polygon points="0,0 -0.322005,96.0568 67.299,96.0568 68.5871,-0.973549"/>
-  </object>
-  <object id="135" name="card" type="card" x="576.527" y="271.088">
-   <properties>
-    <property name="dynObjConn" type="object" value="134"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <polygon points="0,0 -0.315774,95.3968 65.9969,95.3968 67.26,-0.96686"/>
-  </object>
-  <object id="143" name="card" type="card" x="506.364" y="269.943">
-   <properties>
-    <property name="dynObjConn" type="object" value="142"/>
-    <property name="score" type="int" value="100"/>
-   </properties>
-   <polygon points="0,0 -0.318889,96.0568 66.648,96.0568 67.9236,-0.973549"/>
   </object>
  </objectgroup>
 </map>
