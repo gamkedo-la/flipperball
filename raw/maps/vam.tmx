@@ -296,32 +296,32 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="23" name="plunger_chute" type="wall" gid="4" x="894" y="598" width="105" height="598">
+  <object id="23" name="vam_plunger_chute" type="wall" gid="4" x="894" y="598" width="105" height="598">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="24" name="drain_wall_right" type="wall" gid="6" x="698" y="658" width="197" height="195">
+  <object id="24" name="vam_drain_wall_right" type="wall" gid="6" x="698" y="658" width="197" height="195">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="25" name="drain_wall_left" type="wall" gid="5" x="289" y="658" width="197" height="195">
+  <object id="25" name="vam_drain_wall_left" type="wall" gid="5" x="289" y="658" width="197" height="195">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598">
+  <object id="26" name="vam_vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="78" name="angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
+  <object id="78" name="vam_angled_wall_5" type="wall" gid="24" x="289.333" y="78" width="140" height="142">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="79" name="angled_wall_6" type="wall" gid="25" x="754.667" y="74" width="140" height="142">
+  <object id="79" name="vam_angled_wall_6" type="wall" gid="25" x="754.667" y="74" width="140" height="142">
    <properties>
     <property name="zOrder" type="int" value="0"/>
    </properties>

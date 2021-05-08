@@ -29,7 +29,7 @@
                  "gid":7,
                  "height":598,
                  "id":26,
-                 "name":"vertical_wall",
+                 "name":"vam_vertical_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -47,7 +47,7 @@
                  "gid":11,
                  "height":86,
                  "id":59,
-                 "name":"angled_wall_4",
+                 "name":"vam_angled_wall_4",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -65,7 +65,7 @@
                  "gid":21,
                  "height":14,
                  "id":61,
-                 "name":"horizontal_wall",
+                 "name":"vam_horizontal_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -83,7 +83,7 @@
                  "gid":21,
                  "height":14,
                  "id":62,
-                 "name":"horizontal_wall",
+                 "name":"vam_horizontal_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -101,7 +101,7 @@
                  "gid":10,
                  "height":52,
                  "id":70,
-                 "name":"angled_wall_3",
+                 "name":"vam_angled_wall_3",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -119,7 +119,7 @@
                  "gid":22,
                  "height":598,
                  "id":110,
-                 "name":"chute_wall",
+                 "name":"vam_chute_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -137,7 +137,7 @@
                  "gid":22,
                  "height":598,
                  "id":111,
-                 "name":"chute_wall",
+                 "name":"vam_chute_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -173,7 +173,7 @@
                  "gid":6,
                  "height":195,
                  "id":168,
-                 "name":"drain_wall_right",
+                 "name":"vam_drain_wall_right",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -101738,8 +101738,8 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":64,
-                 "x":726.666666666667,
-                 "y":317.333333333333
+                 "x":726.667,
+                 "y":317.333
                 }, 
                 {
                  "gid":25,
@@ -101761,8 +101761,8 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":64,
-                 "x":591.333333333333,
-                 "y":474.333333333333
+                 "x":591.333,
+                 "y":474.333
                 }, 
                 {
                  "gid":25,
@@ -101784,7 +101784,7 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":64,
-                 "x":372.333333333333,
+                 "x":372.333,
                  "y":175
                 }, 
                 {
@@ -101807,8 +101807,8 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":64,
-                 "x":546.333333333333,
-                 "y":84.1666666666666
+                 "x":546.333,
+                 "y":84.1667
                 }, 
                 {
                  "gid":26,
@@ -101830,8 +101830,8 @@
                  "type":"vam_mineral",
                  "visible":true,
                  "width":32,
-                 "x":610.878787878788,
-                 "y":289.757575757576
+                 "x":610.879,
+                 "y":289.758
                 }],
          "opacity":1,
          "properties":[
@@ -102490,7 +102490,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":54.7628037362865,
+                 "height":54.7628,
                  "id":3833,
                  "name":"asteroid_bumper",
                  "properties":[
@@ -102499,12 +102499,12 @@
                          "type":"object",
                          "value":3830
                         }],
-                 "rotation":1.18866218032815,
+                 "rotation":1.18866,
                  "type":"asteroid_bumper",
                  "visible":true,
-                 "width":50.819996806014,
-                 "x":379.598225267095,
-                 "y":115.578203698569
+                 "width":50.82,
+                 "x":379.598,
+                 "y":115.578
                 }, 
                 {
                  "ellipse":true,
@@ -102522,7 +102522,7 @@
                  "visible":true,
                  "width":50.82,
                  "x":439.59,
-                 "y":215.6186
+                 "y":215.619
                 }, 
                 {
                  "ellipse":true,
@@ -102539,8 +102539,8 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":50.82,
-                 "x":757.256666666667,
-                 "y":137.951933333333
+                 "x":757.257,
+                 "y":137.952
                 }, 
                 {
                  "ellipse":true,
@@ -102558,7 +102558,7 @@
                  "visible":true,
                  "width":50.82,
                  "x":733.59,
-                 "y":258.6186
+                 "y":258.619
                 }, 
                 {
                  "ellipse":true,
@@ -102576,7 +102576,7 @@
                  "visible":true,
                  "width":50.82,
                  "x":598.59,
-                 "y":415.951933333333
+                 "y":415.952
                 }, 
                 {
                  "ellipse":true,
@@ -102593,7 +102593,7 @@
                  "type":"asteroid_bumper",
                  "visible":true,
                  "width":50.82,
-                 "x":552.923333333334,
+                 "x":552.923,
                  "y":25.6186
                 }, 
                 {
@@ -102611,8 +102611,8 @@
                  "type":"vam_mineral",
                  "visible":true,
                  "width":0,
-                 "x":626.833333333333,
-                 "y":273.791666666667
+                 "x":626.833,
+                 "y":273.792
                 }],
          "opacity":1,
          "type":"objectgroup",

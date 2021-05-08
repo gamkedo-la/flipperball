@@ -343,15 +343,15 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
-  <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
-  <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
-  <object id="62" name="horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
-  <object id="70" name="angled_wall_3" gid="10" x="854" y="407" width="52" height="52"/>
-  <object id="110" name="chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
-  <object id="111" name="chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
+  <object id="26" name="vam_vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
+  <object id="59" name="vam_angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
+  <object id="61" name="vam_horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
+  <object id="62" name="vam_horizontal_wall" gid="21" x="278" y="14" width="598" height="14"/>
+  <object id="70" name="vam_angled_wall_3" gid="10" x="854" y="407" width="52" height="52"/>
+  <object id="110" name="vam_chute_wall" gid="22" x="966" y="597.5" width="34" height="598"/>
+  <object id="111" name="vam_chute_wall" gid="22" x="894" y="725" width="34" height="598"/>
   <object id="137" name="habitrail_small_track" gid="56" x="348" y="552" width="42" height="75" rotation="310"/>
-  <object id="168" name="drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
+  <object id="168" name="vam_drain_wall_right" gid="6" x="698.5" y="680" width="197" height="195"/>
   <object id="170" name="habitrail_small_track" gid="56" x="291" y="503" width="42" height="75"/>
   <object id="171" name="habitrail_small_track" gid="56" x="291" y="427.5" width="42" height="75"/>
   <object id="172" name="habitrail_small_track" gid="56" x="291" y="352" width="42" height="75"/>
