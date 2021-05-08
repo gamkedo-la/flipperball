@@ -43,14 +43,18 @@ class PlayingCard extends GameObject {
 
             this.spin += deltaTime * 0.002;
 
-            if (Math.cos(this.spin) < -0.9){
-                this.spin = Math.PI;
+            if ((!this.isFaceUp && Math.cos(this.spin) < -0.9) ||
+                (this.isFaceUp && Math.cos(this.spin) > 0.9)){
+                this.isFaceUp ? this.spin = 0: this.spin = Math.PI;
                 this.isSpinning = false;
-                this.isFaceUp = true;
+                this.isFaceUp = !this.isFaceUp;
+            }
+        }
 
-                if (this.areAllCardsFaceUp()){
-                    SceneManager.scenes[SCENE.GAME].incrementScoreFromObject(this.score);
-                }
+        if (this.areAllCardsFaceUp() && !this.isSpinning){
+            SceneManager.scenes[SCENE.GAME].incrementScoreFromObject(this.score);
+            for (const card of cards){
+                card.flipCard();
             }
         }
     }
