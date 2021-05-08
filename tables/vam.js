@@ -29,7 +29,7 @@
                  "gid":4,
                  "height":598,
                  "id":23,
-                 "name":"plunger_chute",
+                 "name":"vam_plunger_chute",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -47,7 +47,7 @@
                  "gid":6,
                  "height":195,
                  "id":24,
-                 "name":"drain_wall_right",
+                 "name":"vam_drain_wall_right",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -65,7 +65,7 @@
                  "gid":5,
                  "height":195,
                  "id":25,
-                 "name":"drain_wall_left",
+                 "name":"vam_drain_wall_left",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -83,7 +83,7 @@
                  "gid":7,
                  "height":598,
                  "id":26,
-                 "name":"vertical_wall",
+                 "name":"vam_vertical_wall",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -101,7 +101,7 @@
                  "gid":24,
                  "height":142,
                  "id":78,
-                 "name":"angled_wall_5",
+                 "name":"vam_angled_wall_5",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -119,7 +119,7 @@
                  "gid":25,
                  "height":142,
                  "id":79,
-                 "name":"angled_wall_6",
+                 "name":"vam_angled_wall_6",
                  "properties":[
                         {
                          "name":"zOrder",
@@ -76178,7 +76178,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
