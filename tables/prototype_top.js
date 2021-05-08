@@ -1260,7 +1260,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":65,
                  "name":"flipper_right",
                  "properties":[
@@ -1272,9 +1272,9 @@
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
-                 "x":710.348,
-                 "y":564.303
+                 "width":23,
+                 "x":713.098,
+                 "y":564.553
                 }, 
                 {
                  "ellipse":true,
@@ -1330,7 +1330,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":68,
                  "name":"flipper_left",
                  "properties":[
@@ -1342,8 +1342,8 @@
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
-                 "x":446.416,
+                 "width":23,
+                 "x":446.916,
                  "y":561.917
                 }, 
                 {
@@ -1961,7 +1961,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

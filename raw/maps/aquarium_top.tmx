@@ -636,7 +636,7 @@
    </properties>
    <polygon points="-9.52084,4.91666 -132.414,104.016 -117.515,122.788 23.8484,51.7273"/>
   </object>
-  <object id="65" name="flipper_right" type="flipper_tip" x="722.348" y="504.303" width="24" height="24">
+  <object id="65" name="flipper_right" type="flipper_tip" x="724.015" y="505.303" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
@@ -654,7 +654,7 @@
    </properties>
    <polygon points="2.20833,-1.875 -123.303,-102.575 -154.242,-54.5455 -11.8485,16.2727"/>
   </object>
-  <object id="68" name="flipper_left" type="flipper_tip" x="486.416" y="501.917" width="24" height="24">
+  <object id="68" name="flipper_left" type="flipper_tip" x="487.416" y="502.584" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>

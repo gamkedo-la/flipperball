@@ -495,8 +495,8 @@
                  "type":"spawner",
                  "visible":true,
                  "width":54,
-                 "x":574.333333333333,
-                 "y":121.666666666667
+                 "x":574.333,
+                 "y":121.667
                 }, 
                 {
                  "gid":159,
@@ -523,7 +523,7 @@
                  "type":"plane",
                  "visible":true,
                  "width":51,
-                 "x":282.333333333333,
+                 "x":282.333,
                  "y":140.25
                 }, 
                 {
@@ -541,8 +541,8 @@
                  "type":"",
                  "visible":true,
                  "width":39,
-                 "x":289.833333333333,
-                 "y":143.333333333333
+                 "x":289.833,
+                 "y":143.333
                 }, 
                 {
                  "gid":165,
@@ -829,7 +829,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":65,
                  "name":"flipper_right",
                  "properties":[
@@ -841,9 +841,9 @@
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
-                 "x":722.348,
-                 "y":504.303
+                 "width":23,
+                 "x":724.014666666667,
+                 "y":505.303
                 }, 
                 {
                  "ellipse":true,
@@ -899,7 +899,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":24,
+                 "height":23,
                  "id":68,
                  "name":"flipper_left",
                  "properties":[
@@ -911,8 +911,8 @@
                  "rotation":0,
                  "type":"flipper_tip",
                  "visible":true,
-                 "width":24,
-                 "x":486.416,
+                 "width":23,
+                 "x":487.082666666667,
                  "y":501.917
                 }, 
                 {
@@ -1297,8 +1297,8 @@
                  "type":"spawner",
                  "visible":true,
                  "width":0,
-                 "x":581.333333333333,
-                 "y":75.1666666666667
+                 "x":581.333,
+                 "y":75.1667
                 }, 
                 {
                  "ellipse":true,
@@ -1315,7 +1315,7 @@
                  "type":"plane",
                  "visible":true,
                  "width":48,
-                 "x":282.833333333333,
+                 "x":282.833,
                  "y":91.75
                 }, 
                 {
@@ -1349,8 +1349,8 @@
                  "type":"wall",
                  "visible":true,
                  "width":0,
-                 "x":290.333333333333,
-                 "y":141.833333333333
+                 "x":290.333,
+                 "y":141.833
                 }, 
                 {
                  "height":0,
@@ -1407,7 +1407,7 @@
          "value":0
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.4.3",
  "tileheight":10,
  "tilesets":[
         {
@@ -2824,8 +2824,8 @@
                 {
                  "id":40,
                  "image":"..\/img\/tables\/space_shuttle.png",
-                 "imageheight":96,
-                 "imagewidth":96,
+                 "imageheight":75,
+                 "imagewidth":75,
                  "properties":[
                         {
                          "name":"zOrder",
@@ -3780,6 +3780,6 @@
         }],
  "tilewidth":10,
  "type":"map",
- "version":1.5,
+ "version":1.4,
  "width":100
 });

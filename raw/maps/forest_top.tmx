@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="239">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="239">
  <editorsettings>
   <export target="../../tables/forest_top.js" format="js"/>
  </editorsettings>
@@ -613,7 +613,7 @@
    <properties>
     <property name="zOrder" type="int" value="-75"/>
    </properties>
-   <image width="96" height="96" source="../../img/tables/space_shuttle.png"/>
+   <image width="75" height="75" source="../../img/tables/space_shuttle.png"/>
   </tile>
   <tile id="41" type="sputnik">
    <image width="96" height="96" source="../../img/tables/sputniksatellite.png"/>
@@ -1153,7 +1153,7 @@
    </properties>
    <polygon points="-9.52084,4.91666 -132.414,104.016 -117.515,122.788 23.8484,51.7273"/>
   </object>
-  <object id="65" name="flipper_right" type="flipper_tip" x="722.348" y="504.303" width="24" height="24">
+  <object id="65" name="flipper_right" type="flipper_tip" x="724.015" y="505.303" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="15"/>
    </properties>
@@ -1171,7 +1171,7 @@
    </properties>
    <polygon points="2.20833,-1.875 -123.303,-102.575 -154.242,-54.5455 -11.8485,16.2727"/>
   </object>
-  <object id="68" name="flipper_left" type="flipper_tip" x="486.416" y="501.917" width="24" height="24">
+  <object id="68" name="flipper_left" type="flipper_tip" x="487.083" y="501.917" width="23" height="23">
    <properties>
     <property name="dynObjConn" type="object" value="14"/>
    </properties>
