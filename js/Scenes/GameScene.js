@@ -784,7 +784,7 @@ function GameScene() {
           Math.round(self.bonusTime) +
           ")",
         TEXT_LEFT_OFFSET,
-        canvas.height - 160,
+        canvas.height - (160 + (self.highScore ? 40 : 0)),
         Color.Yellow,
         Fonts.Subtitle,
         TextAlignment.Left,

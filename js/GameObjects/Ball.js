@@ -37,7 +37,7 @@ class Ball extends GameObject {
 
         if (this.x < 290) {
             this.velocity.x = Math.abs(this.velocity.x)
-        } else if (this.x > 895 && this.velocity.x > Math.abs(this.velocity.y)) {
+        } else if (this.x > 895 && this.velocity.x > Math.abs(this.velocity.y / 3)) {
             this.velocity.x = -Math.abs(this.velocity.x)
         }
     }
