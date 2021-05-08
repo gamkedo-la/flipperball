@@ -748,7 +748,7 @@ function GameScene() {
           Math.round(self.bonusTime) +
           ")",
         TEXT_LEFT_OFFSET,
-        canvas.height - (160 + (self.highScore ? 40 : 0)),
+        canvas.height - 200,
         Color.Yellow,
         Fonts.Subtitle,
         TextAlignment.Left,
@@ -870,28 +870,28 @@ function GameScene() {
         break;
       case ENTITY_TYPE.Earth:
         if (otherEntity.hasAnimation) {
-          incrementScore(otherEntity.score);
+          incrementScore(otherEntity.getScore());
           otherEntity.animate(0);
           bumperSound.play();
         }
         break;
       case ENTITY_TYPE.Mars:
         if (otherEntity.hasAnimation) {
-          incrementScore(otherEntity.score);
+          incrementScore(otherEntity.getScore());
           otherEntity.animate(0);
           bumperSound.play();
         }
         break;
       case ENTITY_TYPE.Jupiter:
         if (otherEntity.hasAnimation) {
-          incrementScore(otherEntity.score);
+          incrementScore(otherEntity.getScore());
           otherEntity.animate(0);
           bumperSound.play();
         }
         break;
       case ENTITY_TYPE.Saturn:
         if (otherEntity.hasAnimation) {
-          incrementScore(otherEntity.score);
+          incrementScore(otherEntity.getScore());
           otherEntity.animate(0);
           bumperSound.play();
         }

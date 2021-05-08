@@ -9,10 +9,16 @@ class Jupiter extends GameObject {
         this.orbitCenter = {x: props[0].centerX || this.x, y: props[0].centerY || this.y}
         this.orbitRadius = Math.sqrt(((this.center.x - this.orbitCenter.x) * (this.center.x - this.orbitCenter.x)) + ((this.center.y - this.orbitCenter.y) * (this.center.y - this.orbitCenter.y)))
         this.angle = Math.atan2((this.y - this.orbitCenter.y), (this.x - this.orbitCenter.x));
+        this.timeSinceScore = 0;
+        this.initialScore = this.score;
     }
 
     update (deltaTime) {
         super.update(deltaTime);
+        this.timeSinceScore += deltaTime;
+        if (this.timeSinceScore > 200) {
+            this.score = this.initialScore;
+        }
         if (this.isFinished) {
             this.active = false
         }
@@ -28,5 +34,15 @@ class Jupiter extends GameObject {
         this.body.update(deltaX, deltaY);
         this.x += deltaX;
         this.y += deltaY;
+    }
+
+    getScore () {
+        let response = this.score;
+        if (this.score > 0) {
+            this.timeSinceScore = 0;
+            this.score = 0;
+        }
+
+        return response;
     }
 }
