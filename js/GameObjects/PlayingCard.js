@@ -60,6 +60,7 @@ class PlayingCard extends GameObject {
     }
 
     flipCard(){
+        if (!this.isFaceUp) this.setRandomFaceValue();
         this.isSpinning = true;
     }
 
@@ -72,6 +73,13 @@ class PlayingCard extends GameObject {
         }
 
         return true;
+    }
+
+    setRandomFaceValue(){
+        this.cardFace = images[cardImages[Math.floor(Math.random() * cardImages.length)]];
+        for (const card of cards){
+            if (card.cardFace === this.cardFace && card != this) this.setRandomFaceValue();     
+        }
     }
 
     draw(){
