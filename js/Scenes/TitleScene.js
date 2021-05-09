@@ -118,6 +118,10 @@ function TitleScene() {
         const titlePic = images['flipper_title_small'];
 
         canvasContext.drawImage(titlePic,  canvas.width/2 - titlePic.width/2, 0);
+
+        if(goingToGame) {
+            colorText("Loading Table...", canvas.width / 2, canvas.height-50, Color.White, Fonts.BodyText, TextAlignment.Center, 1);
+        }
 	}
 	
 	const drawBG = function() {
