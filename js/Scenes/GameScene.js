@@ -162,7 +162,7 @@ function GameScene() {
         currentMusicVolume = userModifiedVolume?currentMusicVolume:0.5;
       }
       else{
-        currentMusicVolume = currentMusicVolume = userModifiedVolume?currentMusicVolume:defaultMusicVolume;
+        currentMusicVolume = userModifiedVolume?currentMusicVolume:defaultMusicVolume;
       }
       setMusicVolume(currentMusicVolume);
 

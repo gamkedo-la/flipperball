@@ -51,8 +51,10 @@ const Color = {
 };
 
 //---------------Music and SFX-----------//
-const defaultMusicVolume = 0.7;
+const defaultMusicVolume = 0.4;
+const defaultSFXVolume = 0.5;
 var currentMusicVolume = defaultMusicVolume;
+var currentSFXVolume = defaultSFXVolume;
 
 //---------------Persistence-----------//
 const localStorageKey = {
