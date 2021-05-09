@@ -4,7 +4,7 @@ function CreditsScene() {
     const CREDITS_BG_COLOR = "#010139";
 
     let selectorPositionsIndex = 0;
-    const CREDITS_UPDATE_TIME = 20;
+    let CREDITS_UPDATE_TIME = 10;
     const PADDING = 35;
     let paused = false;
     let timeCounter = 0;
@@ -45,27 +45,33 @@ function CreditsScene() {
         switch (newKeyEvent) {
             case KEY_UP:
                 if(!paused){
-                    stringPositionOffset-=70;
+                    CREDITS_UPDATE_TIME--;
+                    if (CREDITS_UPDATE_TIME < 1) {
+                        CREDITS_UPDATE_TIME = 1;
+                    }
                 }
                 return true;
             case KEY_LEFT:
                 if(!paused){
-                    stringPositionOffset-=140;
+                    CREDITS_UPDATE_TIME++;
+                    if (CREDITS_UPDATE_TIME > 40) {
+                        CREDITS_UPDATE_TIME = 40;
+                    }
                 }
                 return true;
             case KEY_DOWN:
                 if(!paused){
-                    stringPositionOffset+=70;
-                    if(stringPositionOffset>-40) {
-                        stringPositionOffset = -40;
+                    CREDITS_UPDATE_TIME++;
+                    if (CREDITS_UPDATE_TIME > 40) {
+                        CREDITS_UPDATE_TIME = 40;
                     }
                 }
                 return true;
             case KEY_RIGHT:
                 if(!paused){
-                    stringPositionOffset+=140;
-                    if(stringPositionOffset>-40) {
-                        stringPositionOffset = -40;
+                    CREDITS_UPDATE_TIME--;
+                    if (CREDITS_UPDATE_TIME < 1) {
+                        CREDITS_UPDATE_TIME = 1;
                     }
                 }
                 return true;
@@ -98,6 +104,9 @@ function CreditsScene() {
             if(timeCounter >= CREDITS_UPDATE_TIME){
                 timeCounter = 0;
                 stringPositionOffset-=1;
+                if (stringPositionOffset < -3600) {
+                    stringPositionOffset = -3600
+                }
             }
             timeCounter+=deltaTime;
         }
@@ -107,7 +116,7 @@ function CreditsScene() {
     const draw = function(deltaTime) {
         drawBG();
         drawLines();
-         
+        drawLogo();
 	}
 	
 	const drawBG = function() {
@@ -125,14 +134,20 @@ function CreditsScene() {
         
     }
 
+    const drawLogo = function () {
+        const drawWidth = htgdLogoPic.width / 2;
+        const drawHeight = htgdLogoPic.height / 2;
+        canvasContext.drawImage(htgdLogoPic, (canvas.width - drawWidth) / 2, stringPositionOffset + (25 + creditLines.length) * PADDING, drawWidth, drawHeight)
+    }
+
 }
 
 var creditsList = [
 "H Trayford: Project lead, core gameplay and main engine code, base table functionality, Tiled map editor integration, ball/flipper physics,  additional asset integration and assorted bugfixes, layout tweaks, multi-collider object support, planet bumpers with animation, table selection screen",
 "Sergio Ferrer: Rocket/space table art (background, star animations, planet sprite, sputnik, rocket, space shuttle), forest table (background, base layout, tree walls, bananas, monkeys, planes), title control tips, ball reset, extra ball score goal, rotating gates (including related additional scoring functionality), target plane spawner, short flipper art, sky table layout variation, better selection arrow (flippers), scroll credits page functionality, menu screen wrap, banana sound",
-"Fahad Muntaz: Aquarium table (including bubbles effect), start song, habitrail (art, implementation, placement), slot machine feature (art, implementation, placement, sounds), title image integration, pause mode, mute toggle, volume controls, ball loss, extra ball support",
+"Fahad Muntaz: Atlantis table (including bubbles effect), start song, habitrail (art, implementation, placement), slot machine feature (art, implementation, placement, sounds), title image integration, pause mode, mute toggle, volume controls, ball loss, extra ball support",
 "Kyle Black: VAM Empire table (design, layout, asteroids, starfield, themed playfield components including sound), ball trail improvements, table state persistence, backlit letters with animation, collison and scoring updates, lane trigger updates, blocked sounds repeating too rapidly, additional flipper juice, minor reset fixes, team internal reference diagram, score multiplier feature, light bonus minigame, flipping card fix",
-"Andrew Hind: Background songs (aquarium, forst, space table, VAM empire), menu music (honky tonk song, game over), sounds (flipper, ball capture, ball strike, rollover lane), title screen image",
+"Andrew Hind: Background songs (atlantis, forst, space table, VAM empire), menu music (honky tonk song, game over), sounds (flipper, ball capture, ball strike, rollover lane), title screen image",
 "Ryan Lewis: Rails, plunger art, cloud background (top and bottom), animated bumpers, small bumper animations, 4 color variations for bumpers, font selection and related integration, cyclone animation, plane explosion, pluger animation",
 "Daniel Xiao: Volume preferences save/load, variable canvas width support, additional animation support, game object base class, collision crash fix",
 "Christian de Miranda: Shake and tilt detection, pause tint and tip, default key mapping",
@@ -142,6 +157,7 @@ var creditsList = [
 "Zarya Rowland Bintz: Score bonus debug cheat",
 "Himar Gil Hernandez: Initial z-order sort support",
 "Tanner Chrishop: Pop bumper sound, full screen toggle",
+"Ashleigh M.: High Score displayed, High Score persistence across browser refresh",
 "Jason Harrison: Screen flash",
 "Derek Miranda: Mute feature fix",
 "Ben Stone: Collision fix",
