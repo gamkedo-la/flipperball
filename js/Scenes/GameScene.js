@@ -158,12 +158,18 @@ function GameScene() {
     }
     // stopBackgroundMusic()
       playLoopBackgroundMusic(musicToPlay);
-      if (selected_table == TABLES.Vam) { 
+      /*if (selected_table == TABLES.Vam) { 
         currentMusicVolume = userModifiedVolume?currentMusicVolume:0.5;
       }
-      else{
+      else{*/
+        
+      if(localStorage.getItem(localStorageKey.MusicVolume) != null){
+        currentMusicVolume = parseFloat(localStorage.getItem(localStorageKey.MusicVolume));
+      }else{
         currentMusicVolume = userModifiedVolume?currentMusicVolume:defaultMusicVolume;
       }
+        
+      //}
       setMusicVolume(currentMusicVolume);
 
     this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(
