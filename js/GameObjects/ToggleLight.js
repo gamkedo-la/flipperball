@@ -37,6 +37,7 @@ class ToggleLight extends GameObject {
         if (this.isLit) {
             this.isLit = false;
             this.isAnimating = false;
+            this.currFrame = 0;
             return true;
         }
         return false;
