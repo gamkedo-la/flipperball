@@ -30,6 +30,12 @@
                  "height":600,
                  "id":212,
                  "name":"atlantis_top_bg",
+                 "properties":[
+                        {
+                         "name":"zOrder",
+                         "type":"int",
+                         "value":-100
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -526,8 +532,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":54,
-                 "x":671.79755568697,
-                 "y":323.877192982456
+                 "x":671.798,
+                 "y":323.877
                 }, 
                 {
                  "gid":102,
@@ -549,8 +555,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":54,
-                 "x":516.071161048689,
-                 "y":324.36999802878
+                 "x":516.071,
+                 "y":324.37
                 }, 
                 {
                  "gid":107,
@@ -577,8 +583,8 @@
                  "type":"cloud",
                  "visible":true,
                  "width":81,
-                 "x":322.697319140548,
-                 "y":150.409816676523
+                 "x":322.697,
+                 "y":150.41
                 }, 
                 {
                  "gid":108,
@@ -605,8 +611,8 @@
                  "type":"cloud",
                  "visible":true,
                  "width":108,
-                 "x":484.143110585453,
-                 "y":100.550167553716
+                 "x":484.143,
+                 "y":100.55
                 }, 
                 {
                  "gid":106,
@@ -633,8 +639,8 @@
                  "type":"cloud",
                  "visible":true,
                  "width":51,
-                 "x":442.664794007491,
-                 "y":171.729942834615
+                 "x":442.665,
+                 "y":171.73
                 }, 
                 {
                  "gid":106,
@@ -661,8 +667,8 @@
                  "type":"cloud",
                  "visible":true,
                  "width":51,
-                 "x":663.441454760497,
-                 "y":136.24797949931
+                 "x":663.441,
+                 "y":136.248
                 }, 
                 {
                  "gid":106,
@@ -689,8 +695,8 @@
                  "type":"cloud",
                  "visible":true,
                  "width":51,
-                 "x":784.178691109797,
-                 "y":186.514094224325
+                 "x":784.179,
+                 "y":186.514
                 }, 
                 {
                  "gid":106,
@@ -711,14 +717,14 @@
                         {
                          "name":"zOrder",
                          "type":"int",
-                         "value":-1
+                         "value":-80
                         }],
                  "rotation":0,
                  "type":"cloud",
                  "visible":true,
                  "width":51,
-                 "x":774.322590183324,
-                 "y":60.3560023654642
+                 "x":774.323,
+                 "y":60.356
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1602,8 +1608,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":53,
-                 "x":670.326335501676,
-                 "y":269.675832840528
+                 "x":670.326,
+                 "y":269.676
                 }, 
                 {
                  "ellipse":true,
@@ -1620,8 +1626,8 @@
                  "type":"circle_bumper_small",
                  "visible":true,
                  "width":53,
-                 "x":516.571161048689,
-                 "y":269.675832840528
+                 "x":516.571,
+                 "y":269.676
                 }],
          "opacity":1,
          "type":"objectgroup",

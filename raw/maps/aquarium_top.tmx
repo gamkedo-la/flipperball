@@ -701,7 +701,11 @@
   </tile>
  </tileset>
  <objectgroup id="5" name="Fixed">
-  <object id="212" name="atlantis_top_bg" gid="50" x="276.211" y="599.625" width="720" height="600"/>
+  <object id="212" name="atlantis_top_bg" gid="50" x="276.211" y="599.625" width="720" height="600">
+   <properties>
+    <property name="zOrder" type="int" value="-100"/>
+   </properties>
+  </object>
   <object id="26" name="vertical_wall" type="wall" gid="7" x="276" y="598" width="14" height="598"/>
   <object id="59" name="angled_wall_4" gid="11" x="914" y="100.333" width="52" height="86"/>
   <object id="61" name="horizontal_wall" gid="21" x="388" y="14" width="598" height="14"/>
@@ -760,7 +764,7 @@
   <object id="243" name="cloud_2" gid="106" x="784.179" y="186.514" width="51" height="36"/>
   <object id="244" name="cloud_2" gid="106" x="774.323" y="60.356" width="51" height="36">
    <properties>
-    <property name="zOrder" type="int" value="-1"/>
+    <property name="zOrder" type="int" value="-80"/>
    </properties>
   </object>
  </objectgroup>
