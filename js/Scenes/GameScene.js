@@ -142,7 +142,8 @@ function GameScene() {
     let musicToPlay = "Honky_Tonk_Piano_Loop";
     switch (selected_table) {
       case TABLES.Vam:
-        musicToPlay = "VAM_Empire_Table_Loop";
+            musicToPlay = "VAM_Empire_Table_Loop";
+            
         break;
       case TABLES.Space:
         musicToPlay = "Space_Table_Music_Loop";
@@ -155,7 +156,8 @@ function GameScene() {
         break;
     }
     // stopBackgroundMusic()
-    playLoopBackgroundMusic(musicToPlay);
+      playLoopBackgroundMusic(musicToPlay);
+      if (selected_table == TABLES.Vam) { setMusicVolume(.5);}
 
     this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(
       this.bananaMinSpawnTime,
@@ -990,61 +992,67 @@ function GameScene() {
     self.table.animations.push(newAnimation);
   };
 
-  this.handleTriggerCollision = function (triggerEntity, ball) {
-    if (!triggerEntity.active) return;
-    incrementScore(triggerEntity.score);
-    if (triggerEntity.targ_light) {
-      const lightTarget = self.table.dynamicObjects.find(
-        (data) => data.id === triggerEntity.targ_light
-      );
-      const targetLit = lightTarget.turnOn();
-      this.bonusLights.push(lightTarget);
-      // If light wasn't already lit, `trigger` any attached bonus switches
-      if (targetLit) {
-        // Send bonus light a trigger signal if this light is attached to a bonus condition
-        if (lightTarget.bonusTargID) {
-          const bonusTarg = self.table.dynamicObjects.find(
-            (data) => data.id === lightTarget.bonusTargID
-          );
-          const bonusLit = bonusTarg.triggerBonus();
-          if (bonusLit && bonusTarg.subtype === "shuttle") {
-            const plug = self.table.dynamicObjects.find(
-              (data) => data.type === ENTITY_TYPE.Plug
+    this.handleTriggerCollision = function (triggerEntity, ball) {
+        if (!triggerEntity.active) return;
+        incrementScore(triggerEntity.score);
+        if (triggerEntity.targ_light) {
+            const lightTarget = self.table.dynamicObjects.find(
+                (data) => data.id === triggerEntity.targ_light
             );
-            if (plug) {
-              plug.activate();
+            const targetLit = lightTarget.turnOn();
+            this.bonusLights.push(lightTarget);
+            // If light wasn't already lit, `trigger` any attached bonus switches
+            if (targetLit) {
+                if (lightTarget.name == "energy_light") {
+                    energyLightSound.play();
+                }
+                // Send bonus light a trigger signal if this light is attached to a bonus condition
+                if (lightTarget.bonusTargID) {
+                    const bonusTarg = self.table.dynamicObjects.find(
+                        (data) => data.id === lightTarget.bonusTargID
+                    );
+                    const bonusLit = bonusTarg.triggerBonus();
+                    if (bonusLit && bonusTarg.subtype === "shuttle") {
+                        const plug = self.table.dynamicObjects.find(
+                            (data) => data.type === ENTITY_TYPE.Plug
+                        );
+                        if (plug) {
+                            plug.activate();
+                        }
+                    } else if (bonusLit) {
+                        if (!this.bonusLive) {
+                            this.bonusActivated = true;
+                        }
+                        this.bonusLights.push(bonusTarg);
+                        this.bonusMultiplier = bonusTarg.bonusMult || 2;
+                        this.bonusLive = true;
+                        this.bonusTime = bonusTarg.bonusTime || 60;
+                        if (lightTarget.name == "energy_light") {
+                            energyLightBonusSound.play();
+                        }
+                        if (
+                            selected_table == TABLES.Forest ||
+                            selected_table == TABLES.ForestTop
+                        ) {
+                            self.bananaMinSpawnTime = 2000;
+                            self.bananaMaxSpawnTime = 4000;
+                        }
+                    }
+                }
             }
-          } else if (bonusLit) {
-            if (!this.bonusLive) {
-              this.bonusActivated = true;
+            if (triggerEntity.subtype === "shuttle") triggerEntity.active = false;
+        } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
+            ball.reset();
+            if (this.currentTableIndex > 0) {
+                self.transitionIn();
             }
-            this.bonusLights.push(bonusTarg);
-            this.bonusMultiplier = bonusTarg.bonusMult || 2;
-            this.bonusLive = true;
-            this.bonusTime = bonusTarg.bonusTime || 60;
-            if (
-              selected_table == TABLES.Forest ||
-              selected_table == TABLES.ForestTop
-            ) {
-              self.bananaMinSpawnTime = 2000;
-              self.bananaMaxSpawnTime = 4000;
-            }
-          }
+        } else if (triggerEntity.slot_target) {
+            const slotMachineTarget = self.slotMachines.find(
+                (data) => data.id === triggerEntity.slot_target
+            );
+            slotMachineTarget.spin();
         }
-      }
-      if (triggerEntity.subtype === "shuttle") triggerEntity.active = false;
-    } else if (triggerEntity.subType === TRIGGER_TYPE.BallCatch) {
-      ball.reset();
-      if (this.currentTableIndex > 0) {
-        self.transitionIn();
-      }
-    } else if (triggerEntity.slot_target) {
-      const slotMachineTarget = self.slotMachines.find(
-        (data) => data.id === triggerEntity.slot_target
-      );
-      slotMachineTarget.spin();
-    }
-  };
+    };
 
   this.handleRotatingGateCollision = function (rotatingEntity) {
     const rate = 0.01;

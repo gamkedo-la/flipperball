@@ -283,6 +283,9 @@ function loadImages() {
         {imgName: "vam_chute_wall", theFile: "tables/vam/vam_chute_wall.png"},        
         {imgName: "vam_drain_wall_left", theFile: "tables/vam/vam_drain_wall_left.png"},
         {imgName: "vam_drain_wall_right", theFile: "tables/vam/vam_drain_wall_right.png"},
+        {imgName: "energy_light", theFile: "tables/vam/energy_light.png"},
+        {imgName: "energy_light_anim", theFile: "animations/energy_light_anim.png"},
+        
 
         //Forest Table Sprites
         {imgName: "forest_bottom_bg", theFile: "tables/forest_bottom_bg.png"},

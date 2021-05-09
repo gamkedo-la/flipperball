@@ -49,6 +49,8 @@ function loadAudio() {
 	bumperSound = new SoundOverlapsClass(assetPath.Audio + "ding", 50, 0.35);
 	asteroidBumperSound = new SoundOverlapsClass(assetPath.Audio + "asteroidbumper_hit", 59, 0.50);
 	mineralPickupSound = new SoundOverlapsClass(assetPath.Audio + "mineral_pickup", 10, 1);
+	energyLightSound = new SoundOverlapsClass(assetPath.Audio + "energy_light", 10, 1);
+	energyLightBonusSound = new SoundOverlapsClass(assetPath.Audio + "energy_light_bonus", 10, 1);
 	slotDingSound = new SoundOverlapsClass(assetPath.Audio + "slot_ding", 0.5);
 	slotCrankSound = new SoundOverlapsClass(assetPath.Audio + "slow_crank");
 	wallSound = new SoundOverlapsClass(assetPath.Audio + "Ball_Strike_Wall_SFX", 200, 0.06125);
@@ -96,8 +98,10 @@ function BackgroundMusicClass(filenameWithPath) {
         this.setVolume(musicVolume);
     }
 
-    this.pauseSound = function() {
-        musicSound.pause();
+	this.pauseSound = function () {
+		if (skipToGameDEBUG == false) {
+			musicSound.pause();
+		}
     }
 
     this.resumeSound = function() {

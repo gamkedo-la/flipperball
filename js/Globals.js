@@ -177,6 +177,7 @@ const ENTITY_NAME = {
 	WingBumperLeft: 'wing_bumper_left',
 	Cyclone: 'cyclone',
 	LetterLight: 'letter_light',
+	EnergyLight: 'energy_light',
 	RotatingGate: 'rotating_gate',
 	PlaneRed: 'plane_red',
 	SpawnerPlane: 'spawner_plane',
@@ -442,12 +443,13 @@ const ANIMATIONS = {
 	},
 	LETTER_LIGHT: {
 		imageNames: {
-			"letter_light": "letter_light_anim"
+			"letter_light": "letter_light_anim",
+			"energy_light": "energy_light_anim"
 		},
 		frames: [0, 1, 2, 3, 4],
 		frameWidth: 24,
 		frameHeight: 24,
-		frameTimes: [64],
+		frameTimes: [256],
 		reverses: false,
 		loops: false,
 		holds: true

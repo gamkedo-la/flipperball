@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="4129">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="7" nextobjectid="4154">
  <editorsettings>
   <export target="../../tables/vam.js" format="js"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="maxY" type="int" value="600"/>
   <property name="minY" type="int" value="0"/>
  </properties>
- <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="39" columns="0">
+ <tileset firstgid="1" name="dynamic" tilewidth="197" tileheight="600" tilecount="41" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0" type="plunger">
    <properties>
@@ -249,8 +249,14 @@
   <tile id="39">
    <image width="32" height="32" source="../../img/tables/vam/asteroid.png"/>
   </tile>
+  <tile id="40">
+   <image width="24" height="24" source="../../img/tables/vam/energy_light.png"/>
+  </tile>
+  <tile id="41">
+   <image width="5" height="10" source="../../img/tables/light_trigger.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="41" name="cloud_bg" tilewidth="960" tileheight="1280" tilecount="4" columns="0">
+ <tileset firstgid="43" name="cloud_bg" tilewidth="960" tileheight="1280" tilecount="4" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <properties>
@@ -274,7 +280,7 @@
    <image width="960" height="1280" source="../../img/tables/vam/starfield.png"/>
   </tile>
  </tileset>
- <tileset firstgid="46" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
+ <tileset firstgid="48" name="habitrail" tilewidth="36" tileheight="125" tilecount="3" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="6" type="habitrail">
    <properties>
@@ -326,7 +332,7 @@
     <property name="zOrder" type="int" value="0"/>
    </properties>
   </object>
-  <object id="168" name="starfield" gid="45" x="134.952" y="602.61" width="960" height="1280">
+  <object id="168" name="starfield" gid="47" x="134.952" y="602.61" width="960" height="1280" visible="0">
    <properties>
     <property name="zOrder" type="int" value="-100"/>
    </properties>
@@ -18915,6 +18921,117 @@
     <property name="zOrder" type="int" value="-20"/>
    </properties>
   </object>
+  <object id="4129" name="energy_light" type="letter_light" gid="41" x="578.667" y="110" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4130" name="bonus_light_2x" type="status_light" gid="35" x="578" y="228" width="24" height="24">
+   <properties>
+    <property name="bonusMult" type="int" value="2"/>
+    <property name="bonusTime" type="int" value="60"/>
+    <property name="requiredLights" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="4131" name="light_trigger" type="trigger" gid="42" x="588" y="120.333" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4129"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4133" name="energy_light" type="letter_light" gid="41" x="648" y="132.166" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4134" name="light_trigger" type="trigger" gid="42" x="657.333" y="142.499" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4133"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4136" name="energy_light" type="letter_light" gid="41" x="688.667" y="226.166" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4137" name="light_trigger" type="trigger" gid="42" x="698" y="236.499" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4136"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4139" name="energy_light" type="letter_light" gid="41" x="648.667" y="313.166" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4140" name="light_trigger" type="trigger" gid="42" x="658" y="323.499" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4139"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4142" name="energy_light" type="letter_light" gid="41" x="578" y="334.166" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4143" name="light_trigger" type="trigger" gid="42" x="587.333" y="344.5" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4142"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4145" name="energy_light" type="letter_light" gid="41" x="507.667" y="314.5" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4146" name="light_trigger" type="trigger" gid="42" x="517" y="324.834" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4145"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4148" name="energy_light" type="letter_light" gid="41" x="465.333" y="225.833" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4149" name="light_trigger" type="trigger" gid="42" x="474.666" y="236.167" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4148"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4151" name="energy_light" type="letter_light" gid="41" x="507.333" y="131.833" width="24" height="24">
+   <properties>
+    <property name="bonus" type="object" value="4130"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="4152" name="light_trigger" type="trigger" gid="42" x="516.666" y="142.167" width="5" height="10">
+   <properties>
+    <property name="score" type="int" value="1000"/>
+    <property name="targ_light" type="object" value="4151"/>
+    <property name="zOrder" type="int" value="0"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="Collision">
   <object id="9" name="wing_bumper_left" type="wing_bumper" x="375" y="246.5">
@@ -19042,6 +19159,54 @@
     <property name="dynObjConn" type="object" value="121"/>
    </properties>
    <polygon points="-0.301653,-0.489669 3.01653,-5.87603 23.0764,-5.54959 26.2438,0 22.4731,8.4876 3.31818,7.99793"/>
+  </object>
+  <object id="4132" name="light_trigger" x="583.208" y="107.667" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4131"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4135" name="light_trigger" x="652.541" y="129.833" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4134"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4138" name="light_trigger" x="693.208" y="223.833" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4137"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4141" name="light_trigger" x="653.208" y="310.833" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4140"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4144" name="light_trigger" x="582.541" y="331.833" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4143"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4147" name="light_trigger" x="512.208" y="312.167" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4146"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4150" name="light_trigger" x="469.874" y="223.5" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4149"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="4153" name="light_trigger" x="511.874" y="129.5" width="14" height="14">
+   <properties>
+    <property name="dynObjConn" type="object" value="4152"/>
+   </properties>
+   <ellipse/>
   </object>
  </objectgroup>
 </map>
