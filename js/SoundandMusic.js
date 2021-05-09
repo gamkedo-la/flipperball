@@ -255,8 +255,10 @@ function pauseSoundAndMusic() {
 }
 
 function resumeSoundAndMusic() {
-	playResumeSound();
-	currentBackgroundMusic.resumeSound();
+	if(!isMuted){
+		playResumeSound();
+		currentBackgroundMusic.resumeSound();
+	}
 }
 
 function playLoopBackgroundMusic(trackToPlay = "Honky_Tonk_Piano_Loop") { 
