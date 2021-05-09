@@ -127,10 +127,10 @@ class Ball extends GameObject {
                 } else if(collision.otherEntity.type === ENTITY_TYPE.SideDrainBumper) {
                     if(collision.otherEntity.active) {
                         this.respondToCircularCollision(collision);
-                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);    
+                        SceneManager.scenes[SCENE.GAME].notifyBallCollision(collision.otherEntity, this);
+                        this.vxAdjustment = -this.velocity.x;
+                        this.vyAdjustment = this.velocity.y - MAX_BALL_SPEED;
                     }
-                    this.vxAdjustment = -this.velocity.x;
-                    this.vyAdjustment = this.velocity.y - MAX_BALL_SPEED;
                 } else if(collision.otherEntity.type === ENTITY_TYPE.Plug) {
                     if(collision.otherEntity.active) {
                         this.respondToCircularCollision(collision);

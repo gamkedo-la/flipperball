@@ -737,7 +737,7 @@
                  "type":"rotating_gate",
                  "visible":true,
                  "width":26.5455,
-                 "x":805.727,
+                 "x":802.727,
                  "y":334.227
                 }, 
                 {
@@ -2384,8 +2384,8 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":493.666666666667,
-                 "y":85.8336666666667
+                 "x":493.667,
+                 "y":85.8337
                 }, 
                 {
                  "gid":83,
@@ -2670,8 +2670,8 @@
                          "y":232.909
                         }, 
                         {
-                         "x":-50.7954,
-                         "y":265.25
+                         "x":-49.0454,
+                         "y":271.75
                         }, 
                         {
                          "x":-0.25,
@@ -2685,7 +2685,7 @@
                         }],
                  "rotation":0,
                  "type":"drain_divider",
-                 "visible":false,
+                 "visible":true,
                  "width":0,
                  "x":848.25,
                  "y":236.75
@@ -2704,8 +2704,8 @@
                          "y":172.864
                         }, 
                         {
-                         "x":48.7955,
-                         "y":254.818
+                         "x":51.7955,
+                         "y":275.568
                         }, 
                         {
                          "x":86.9318,
@@ -2727,7 +2727,7 @@
                         }],
                  "rotation":0,
                  "type":"drain_divider",
-                 "visible":false,
+                 "visible":true,
                  "width":0,
                  "x":330,
                  "y":237.182
@@ -3562,36 +3562,12 @@
                  "type":"mars",
                  "visible":true,
                  "width":24,
-                 "x":493.333333333333,
-                 "y":62.3333666666667
-                }, 
-                {
-                 "ellipse":true,
-                 "height":10,
-                 "id":241,
-                 "name":"diamond_div_1",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":10,
-                 "x":331.25,
-                 "y":237.5
-                }, 
-                {
-                 "ellipse":true,
-                 "height":10,
-                 "id":245,
-                 "name":"diamond_div_1",
-                 "rotation":0,
-                 "type":"wall",
-                 "visible":true,
-                 "width":10,
-                 "x":836.25,
-                 "y":238.375
+                 "x":493.333,
+                 "y":62.3334
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],

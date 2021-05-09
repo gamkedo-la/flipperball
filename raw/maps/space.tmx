@@ -649,7 +649,7 @@
     <property name="subtype" value="rocket"/>
    </properties>
   </object>
-  <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="805.727" y="334.227" width="26.5455" height="13.5454">
+  <object id="121" name="rotating_gate" type="rotating_gate" gid="23" x="802.727" y="334.227" width="26.5455" height="13.5454">
    <properties>
     <property name="isLeft" type="bool" value="false"/>
     <property name="score" type="int" value="5"/>
@@ -805,7 +805,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="3" name="Collision">
+ <objectgroup id="3" name="Collision" visible="0">
   <object id="9" name="flipper_bumper_left" type="flipper_bumper" x="377" y="250.5">
    <properties>
     <property name="dynObjConn" type="object" value="30"/>
@@ -839,17 +839,17 @@
   <object id="50" name="right" type="wall" x="892.5" y="404.5">
    <polygon points="1,60 -135.5,195 107.5,194.5 103.736,-484 70.236,-484.5 70.3182,147.682 34.9091,147.318 34.986,-484 -2.5,-569.223 -135.5,-473 0,-356"/>
   </object>
-  <object id="51" name="drain_rail_right" type="drain_divider" x="848.25" y="236.75" visible="0">
+  <object id="51" name="drain_rail_right" type="drain_divider" x="848.25" y="236.75">
    <properties>
     <property name="dynObjConn" type="object" value="48"/>
    </properties>
-   <polygon points="1.16667,-7.66667 -10.5,1.16667 -12.75,166.159 -81.9546,232.909 -50.7954,265.25 -0.25,169.159"/>
+   <polygon points="1.16667,-7.66667 -10.5,1.16667 -12.75,166.159 -81.9546,232.909 -49.0454,271.75 -0.25,169.159"/>
   </object>
-  <object id="52" name="drain_rail_left" type="drain_divider" x="330" y="237.182" visible="0">
+  <object id="52" name="drain_rail_left" type="drain_divider" x="330" y="237.182">
    <properties>
     <property name="dynObjConn" type="object" value="49"/>
    </properties>
-   <polygon points="0,-8.66667 1.5,172.864 48.7955,254.818 86.9318,235.159 15.4318,165.341 14.8182,2.30303"/>
+   <polygon points="0,-8.66667 1.5,172.864 51.7955,275.568 86.9318,235.159 15.4318,165.341 14.8182,2.30303"/>
   </object>
   <object id="53" name="left" type="wall" x="272.5" y="0.5">
    <polygon points="0,-80 -1,599.5 150.5,599.5 13.1667,462.167 13,51.8333 152.5,-64 0.0214,-150.419"/>
@@ -1063,12 +1063,6 @@
    <properties>
     <property name="dynObjConn" type="object" value="235"/>
    </properties>
-   <ellipse/>
-  </object>
-  <object id="241" name="diamond_div_1" type="wall" x="331.25" y="237.5" width="10" height="10">
-   <ellipse/>
-  </object>
-  <object id="245" name="diamond_div_1" type="wall" x="836.25" y="238.375" width="10" height="10">
    <ellipse/>
   </object>
  </objectgroup>

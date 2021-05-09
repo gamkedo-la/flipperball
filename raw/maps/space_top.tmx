@@ -721,7 +721,7 @@
     <property name="zOrder" type="int" value="75"/>
    </properties>
   </object>
-  <object id="232" name="rotating_gate" type="rotating_gate" gid="77" x="866.727" y="279.727" width="26.5455" height="13.5454">
+  <object id="232" name="rotating_gate" type="rotating_gate" gid="77" x="862.727" y="279.727" width="26.5455" height="13.5454">
    <properties>
     <property name="isLeft" type="bool" value="true"/>
     <property name="score" type="int" value="5"/>
