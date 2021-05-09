@@ -285,6 +285,8 @@ function loadImages() {
         {imgName: "vam_drain_wall_right", theFile: "tables/vam/vam_drain_wall_right.png"},
         {imgName: "energy_light", theFile: "tables/vam/energy_light.png"},
         {imgName: "energy_light_anim", theFile: "animations/energy_light_anim.png"},
+        {imgName: "energy_heart_core", theFile: "tables/vam/energy_heart_core.png"},
+        {imgName: "energy_heart_core_anim", theFile: "animations/energy_heart_core_anim.png"},
         
 
         //Forest Table Sprites

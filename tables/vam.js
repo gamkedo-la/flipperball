@@ -134,7 +134,7 @@
                  "y":74
                 }, 
                 {
-                 "gid":47,
+                 "gid":48,
                  "height":1280,
                  "id":168,
                  "name":"starfield",
@@ -75490,7 +75490,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75503,34 +75503,6 @@
                  "width":24,
                  "x":578.667,
                  "y":110
-                }, 
-                {
-                 "gid":35,
-                 "height":24,
-                 "id":4130,
-                 "name":"bonus_light_2x",
-                 "properties":[
-                        {
-                         "name":"bonusMult",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"bonusTime",
-                         "type":"int",
-                         "value":60
-                        }, 
-                        {
-                         "name":"requiredLights",
-                         "type":"int",
-                         "value":8
-                        }],
-                 "rotation":0,
-                 "type":"status_light",
-                 "visible":true,
-                 "width":24,
-                 "x":577.999666666667,
-                 "y":228
                 }, 
                 {
                  "gid":42,
@@ -75569,7 +75541,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75620,7 +75592,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75671,7 +75643,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75722,7 +75694,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75773,7 +75745,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75824,7 +75796,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75875,7 +75847,7 @@
                         {
                          "name":"bonus",
                          "type":"object",
-                         "value":4130
+                         "value":4155
                         }, 
                         {
                          "name":"zOrder",
@@ -75916,6 +75888,34 @@
                  "width":5,
                  "x":516.666333333333,
                  "y":142.167166666667
+                }, 
+                {
+                 "gid":43,
+                 "height":200,
+                 "id":4155,
+                 "name":"energy_heart_core",
+                 "properties":[
+                        {
+                         "name":"bonusMult",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"bonusTime",
+                         "type":"int",
+                         "value":60
+                        }, 
+                        {
+                         "name":"requiredLights",
+                         "type":"int",
+                         "value":8
+                        }],
+                 "rotation":0,
+                 "type":"status_light",
+                 "visible":true,
+                 "width":200,
+                 "x":488.909090909091,
+                 "y":310.363636363636
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -76755,6 +76755,18 @@
                  "width":14,
                  "x":511.874333333333,
                  "y":129.500166666667
+                }, 
+                {
+                 "ellipse":true,
+                 "height":200,
+                 "id":4154,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":200,
+                 "x":488.909090909091,
+                 "y":110
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -76763,7 +76775,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":4154,
+ "nextobjectid":4156,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -76792,7 +76804,7 @@
          "margin":0,
          "name":"dynamic",
          "spacing":0,
-         "tilecount":41,
+         "tilecount":42,
          "tileheight":600,
          "tiles":[
                 {
@@ -77372,12 +77384,18 @@
                  "image":"..\/img\/tables\/light_trigger.png",
                  "imageheight":10,
                  "imagewidth":5
+                }, 
+                {
+                 "id":42,
+                 "image":"..\/img\/tables\/vam\/energy_heart_core.png",
+                 "imageheight":200,
+                 "imagewidth":200
                 }],
-         "tilewidth":197
+         "tilewidth":200
         }, 
         {
          "columns":0,
-         "firstgid":43,
+         "firstgid":44,
          "grid":
             {
              "height":1,
@@ -77436,7 +77454,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":48,
+         "firstgid":49,
          "grid":
             {
              "height":1,

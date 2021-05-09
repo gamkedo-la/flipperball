@@ -168,6 +168,12 @@ function MapBuilder (tableName = selected_table) {
                         animationSpritesheet: images[ANIMATIONS.SHUTTLE.imageNames[obj.name]],
                     });
                     result.push(newGameObject);    
+                } else if (obj.name === "energy_heart_core") {
+                    const newGameObject = new ToggleLight(obj, null, {
+                        ...ANIMATIONS.ENERGY_HEART,
+                        animationSpritesheet: images[ANIMATIONS.ENERGY_HEART.imageNames[obj.name]],
+                    });
+                    result.push(newGameObject);
                 } else {
                     const newGameObject = new ToggleLight(obj, null, {
                         ...ANIMATIONS.BONUS_LIGHT,
