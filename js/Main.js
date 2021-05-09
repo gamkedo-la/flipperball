@@ -23,13 +23,13 @@ window.onload = function() {
 	htgdLogoPic.src = assetPath.Image + "screens/screen_HTGD_Logo.png";
 };
 
-fullScreenButton.innerHTML = 'Full Screen';
+/*fullScreenButton.innerHTML = 'Full Screen';
 fullScreenButton.style.borderRadius = 0;
 canvasContainer.appendChild(fullScreenButton);
 fullScreenButton.onclick = function () {
 	FEATURE_FLAGS.useCanvasContainer = !FEATURE_FLAGS.useCanvasContainer;
 	toggleFullScreen();
-}
+}*/
 
 function toggleFullScreen() {
 	if (FEATURE_FLAGS.useCanvasContainer) {
