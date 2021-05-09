@@ -220,11 +220,13 @@ function setMusicVolume(amount){
 }
 
 function turnVolumeUp() {
-	setMusicVolume(musicVolume + VOLUME_INCREMENT);
+	currentMusicVolume = musicVolume + VOLUME_INCREMENT;
+	setMusicVolume(currentMusicVolume);
 }
 
 function turnVolumeDown() {
-	setMusicVolume(musicVolume - VOLUME_INCREMENT);
+	currentMusicVolume = musicVolume - VOLUME_INCREMENT;
+	setMusicVolume(currentMusicVolume);
 }
 
 function turnSFXVolumeUp() {

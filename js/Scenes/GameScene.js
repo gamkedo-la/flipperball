@@ -37,6 +37,7 @@ function GameScene() {
   let currentShakes = 0;
   const shakesBeforeTilt = 2;
   let tilt = false;
+  let userModifiedVolume = false;
   let spawnerCollisionOn = false;
   this.slotMachines = [];
   this.bonusActivated = false;
@@ -157,7 +158,13 @@ function GameScene() {
     }
     // stopBackgroundMusic()
       playLoopBackgroundMusic(musicToPlay);
-      if (selected_table == TABLES.Vam) { setMusicVolume(.5);}
+      if (selected_table == TABLES.Vam) { 
+        currentMusicVolume = userModifiedVolume?currentMusicVolume:0.5;
+      }
+      else{
+        currentMusicVolume = currentMusicVolume = userModifiedVolume?currentMusicVolume:defaultMusicVolume;
+      }
+      setMusicVolume(currentMusicVolume);
 
     this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(
       this.bananaMinSpawnTime,
@@ -220,21 +227,25 @@ function GameScene() {
         return true;
       case ALIAS.VOLUME_UP:
         if (pressed) {
+          userModifiedVolume = true;
           turnVolumeUp();
         }
         return true;
       case ALIAS.VOLUME_DOWN:
         if (pressed) {
+          userModifiedVolume = true;
           turnVolumeDown();
         }
         return true;
       case ALIAS.SFX_VOLUME_UP:
         if (pressed) {
+          userModifiedVolume = true;
           turnSFXVolumeUp();
         }
         return true;
       case ALIAS.SFX_VOLUME_DOWN:
         if (pressed) {
+          userModifiedVolume = true;
           turnSFXVolumeDown();
         }
         return true;

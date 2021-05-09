@@ -50,6 +50,10 @@ const Color = {
 	BlackOverlay: "rgba(0, 0, 0, 0.30)"
 };
 
+//---------------Music and SFX-----------//
+const defaultMusicVolume = 0.7;
+var currentMusicVolume = defaultMusicVolume;
+
 //---------------Persistence-----------//
 const localStorageKey = {
 	MusicVolume:"flipperball_musicVolume",
