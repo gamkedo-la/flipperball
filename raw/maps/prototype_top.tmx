@@ -361,7 +361,7 @@
   <object id="14" name="flipper_left" gid="2" x="299" y="586" width="170" height="124"/>
   <object id="15" name="flipper_right" gid="3" x="713" y="588" width="170" height="124"/>
   <object id="30" name="flipper_bumper_left" gid="17" x="322" y="410.5" width="55" height="186"/>
-  <object id="31" name="flipper_bumper_right" gid="18" x="807.5" y="428" width="55" height="186"/>
+  <object id="31" name="flipper_bumper_right" gid="18" x="787.5" y="428" width="55" height="186"/>
   <object id="93" name="circle_bumper_small_red" type="circle_bumper_small" gid="34" x="453.333" y="129.667" width="54" height="54">
    <properties>
     <property name="score" type="int" value="150"/>
@@ -416,7 +416,7 @@
     <property name="relatedCollisionObjects" value="132,133"/>
    </properties>
   </object>
-  <object id="165" name="slot_trigger" gid="24" x="703" y="519.667" width="5" height="26">
+  <object id="165" name="slot_trigger" gid="24" x="867" y="335.167" width="5" height="26">
    <properties>
     <property name="slot_target" type="object" value="164"/>
    </properties>
@@ -432,7 +432,7 @@
   <object id="53" name="left" type="wall" x="276.5" y="0.5">
    <polygon points="0,0 -0.75,710.5 13.25,710.25 13.6553,464.876 65.454,464.748 13.75,413 13,136.5 13.5,49.5 14,-0.5"/>
   </object>
-  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="862.273" y="381.455">
+  <object id="55" name="flipper_bumper_right" type="flipper_bumper" x="842.273" y="381.455">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
@@ -567,13 +567,13 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="147" name="flipper_bumper_right" type="flipper_bumper" x="843.25" y="241.25" width="19" height="19">
+  <object id="147" name="flipper_bumper_right" type="flipper_bumper" x="823.25" y="241.25" width="19" height="19">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
    <ellipse/>
   </object>
-  <object id="148" name="flipper_bumper_right" type="flipper_bumper" x="807.636" y="415.818" width="12" height="12">
+  <object id="148" name="flipper_bumper_right" type="flipper_bumper" x="787.636" y="415.818" width="12" height="12">
    <properties>
     <property name="dynObjConn" type="object" value="31"/>
    </properties>
@@ -604,7 +604,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="166" name="slot_trigger" x="685" y="481.333" width="42.6666" height="54">
+  <object id="166" name="slot_trigger" x="851" y="303.333" width="35" height="35">
    <properties>
     <property name="dynObjConn" type="object" value="165"/>
    </properties>

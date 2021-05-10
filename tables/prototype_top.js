@@ -684,7 +684,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":55,
-                 "x":807.5,
+                 "x":787.5,
                  "y":428
                 }, 
                 {
@@ -978,8 +978,8 @@
                  "type":"trigger",
                  "visible":true,
                  "width":5,
-                 "x":703,
-                 "y":519.667
+                 "x":867,
+                 "y":335.167
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1121,7 +1121,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":0,
-                 "x":862.273,
+                 "x":842.273,
                  "y":381.455
                 }, 
                 {
@@ -1831,7 +1831,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":19,
-                 "x":843.25,
+                 "x":823.25,
                  "y":241.25
                 }, 
                 {
@@ -1849,7 +1849,7 @@
                  "type":"flipper_bumper",
                  "visible":true,
                  "width":12,
-                 "x":807.636,
+                 "x":787.636,
                  "y":415.818
                 }, 
                 {
@@ -1943,7 +1943,7 @@
                 }, 
                 {
                  "ellipse":true,
-                 "height":54,
+                 "height":35,
                  "id":166,
                  "name":"slot_trigger",
                  "properties":[
@@ -1955,9 +1955,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":42.6666,
-                 "x":685,
-                 "y":481.333
+                 "width":35,
+                 "x":851,
+                 "y":303.333
                 }],
          "opacity":1,
          "type":"objectgroup",

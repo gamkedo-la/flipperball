@@ -16,9 +16,9 @@ window.onload = function() {
 
   colorText("L..O..A..D..I..N..G..", canvas.width / 2, canvas.height / 2, Color.White, Fonts.MainTitle, TextAlignment.Center, 1);
 
-	initializeInput();
-	configureGameAudio();
-	loadAudio();
+	// initializeInput();
+	// configureGameAudio();
+	// loadAudio();
 //	currentBackgroundMusic.loopSong(menuMusic);//TODO: Restore once there is background music
 	htgdLogoPic.src = assetPath.Image + "screens/screen_HTGD_Logo.png";
 };

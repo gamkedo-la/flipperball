@@ -5,32 +5,20 @@ const TITLE_IMG_EXISTS = false;
 
 //-----Global Img Objects-----//
 let titlePic;
+let startTime;
+let picsToLoad = 0;
+let htgdLogoScale = 0.5;
+let startedLoading = false;
+let finishedLoading = false;
 
 //-----Load the HTGD Logo-----//
-let startTime;
 const htgdLogoPic = document.createElement("img");//src set in Main.js
 htgdLogoPic.onload = function() {
-    if (TITLE_IMG_EXISTS) {
-        //Begin loading the Title Image
-        titlePic = document.createElement("img");
-        titlePic.onload = function() {
-            //Begin Loading remaining images
-            loadImages();
-            showTitleScreen();
-        }
-        titlePic.src = assetPath.Image + "screens/titlePic.png"
-    }
-
     startTime = Date.now();
-    if(skipToGameDEBUG) {
-        loadImages();
-    } else {
-        animateHTGDLogo();
-    }
+    animateHTGDLogo();
 }
 
 //-----Animate the HTGD Logo-----//
-let htgdLogoScale = 0.5;
 function animateHTGDLogo () {
     drawRect(0, 0, canvas.width, canvas.height, '#000000');
 
@@ -43,30 +31,22 @@ function animateHTGDLogo () {
         (htgdLogoScale * htgdLogoPic.width), (htgdLogoScale * htgdLogoPic.height)
     );
 
-    if(Date.now() - startTime < 1000) {
+    if (Date.now() - startTime < 250) {
         htgdLogoScale += 0.003125;
         requestAnimationFrame(animateHTGDLogo);
-    } else if (!TITLE_IMG_EXISTS) {
+    } else if (!startedLoading) {
+        htgdLogoScale += 0.003125;
+        requestAnimationFrame(animateHTGDLogo);
         loadImages();
-    } else {
-        showTitleScreen();
-    }
-}
-
-//-----Show the Title Screen even though other images haven't loaded yet-----//
-function showTitleScreen() {
-    if (TITLE_IMG_EXISTS) {
-        //draw the title image, no UI because images haven't finished loading yet
-        canvasContext.drawImage(titlePic, 0, 0);
-    } else {
-        //draw black screen - terrible UI, but shouldn't happen once we have a title image
-        drawRect(0, 0, canvas.width, canvas.height, '#000000');
+    } else if (!finishedLoading) {
+        htgdLogoScale += 0.003125;
+        requestAnimationFrame(animateHTGDLogo);
     }
 }
 
 //------Actually do some image loading------//
-let picsToLoad = 0;
 function loadImages() {
+    startedLoading = true
     const imageList = [
         // List them here alphabetically to make it easier to find the one you're looking for
         {imgName: "bonus_light_2x", theFile: "tables/2x_bonus_light_unlit.png"},
@@ -333,8 +313,14 @@ function beginLoadingImage(imgName, fileName) {
     newImg.onload = function() {
         images[imgName] = newImg;
         picsToLoad--;
-        if (picsToLoad === 0) { // last image loaded?
+        if (picsToLoad <= 0) { // last image loaded?
+            finishedLoading = true
+            initializeInput();
+            configureGameAudio();
+            loadAudio();
             loadingDoneSoStartGame();
+            window.blur();
+            window.focus();
         }
     }
     newImg.src = assetPath.Image + fileName;
