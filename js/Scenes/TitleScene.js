@@ -125,7 +125,6 @@ function TitleScene() {
 	}
 	
 	const drawBG = function() {
-        // canvasContext.drawImage(titleScreenPic, 0, 0, canvas.width, canvas.height);
         const PADDING = 35;
         drawRect(0, 0, canvas.width, canvas.height, Color.Black);
 

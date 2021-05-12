@@ -92,9 +92,6 @@ const ALIAS = {
 function initializeInput() {
 	document.addEventListener("keydown",keyPress);
 	document.addEventListener("keyup",keyRelease);
-	document.addEventListener("mousedown", mouseButtonPressed);
-	document.addEventListener("mouseup", mouseButtonReleased);
-	document.addEventListener('mousemove', calculateMousePos);
 }
 
 function notifyCurrentScene(newInput, pressed) {
@@ -129,48 +126,4 @@ function keyRelease(evt) {
 		heldButtons.splice(index, 1);
 		notifyCurrentScene(evt.keyCode, false);
 	}
-}
-
-function mouseButtonPressed(evt) {
-	evt.preventDefault();
-
-	if (evt.button === 0) {//left mouse button is button 0
-		heldButtons.push(LEFT_MOUSE_BUTTON);
-		notifyCurrentScene(LEFT_MOUSE_BUTTON, true);
-	} else if(evt.button === 1) {//right mouse button is button 1
-		heldButtons.push(RIGHT_MOUSE_BUTTON);
-		notifyCurrentScene(RIGHT_MOUSE_BUTTON, true);
-	}
-}
-
-function mouseButtonReleased(evt) {
-	evt.preventDefault();
-
-	if (evt.button === 0) {//left mouse button is button 0
-		const index = heldButtons.indexOf(LEFT_MOUSE_BUTTON);
-		if(index >= 0) {
-			heldButtons.splice(index, 1);
-			notifyCurrentScene(LEFT_MOUSE_BUTTON, false);
-		}
-	} else if(evt.button === 1) {//right mouse button is button 1
-		const index = heldButtons.indexOf(RIGHT_MOUSE_BUTTON);
-		if(index >= 0) {
-			heldButtons.splice(index, 1);
-			notifyCurrentScene(RIGHT_MOUSE_BUTTON, false);
-		}
-	}
-}
-
-function calculateMousePos(evt) {
-    const rect = canvas.getBoundingClientRect();
-    mouseX = evt.clientX - rect.left;
-    mouseY = evt.clientY - rect.top;
-}
-
-function mouseInside(x, y, width, height) {
-	return mouseX > x && mouseX < x + width && mouseY > y	&& mouseY < y + height;
-}
-
-function pointInside(pointX, pointY, x, y, width, height) {
-	return pointX > x && pointX < x + width && pointY > y && pointY < y + height;
 }

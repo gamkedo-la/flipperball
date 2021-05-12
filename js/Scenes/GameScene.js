@@ -1,11 +1,7 @@
 //Game Play scene
 // eslint-disable-next-line no-unused-vars
-//sorry guys idk where to put this rn!
-//localStorage.setItem('highScore', '000000')
 
 function GameScene() {
-  // this.properties gets overwritten with SceneManager.js->setState([..], properties)
-  // this.properties = selected_table;
   this.table = null;
   this.storedTables = [];
   this.collisionManager = null;
@@ -156,20 +152,14 @@ function GameScene() {
         musicToPlay = "Aquarium_Table_Music_Loop";
         break;
     }
-    // stopBackgroundMusic()
       playLoopBackgroundMusic(musicToPlay);
-      /*if (selected_table == TABLES.Vam) { 
-        currentMusicVolume = userModifiedVolume?currentMusicVolume:0.5;
-      }
-      else{*/
         
       if(localStorage.getItem(localStorageKey.MusicVolume) != null){
         currentMusicVolume = parseFloat(localStorage.getItem(localStorageKey.MusicVolume));
       }else{
         currentMusicVolume = userModifiedVolume?currentMusicVolume:defaultMusicVolume;
       }
-        
-      //}
+
       setMusicVolume(currentMusicVolume);
 
     this.bananaRandomSpawnTime = this.getRandomNumberBetweenTwo(
@@ -213,12 +203,7 @@ function GameScene() {
         return true;
       case ALIAS.DEBUG:
         if (pressed) {
-          DEBUG = !DEBUG;
-          if (DEBUG) {
-            canvasContainer.appendChild(debugButton);
-          } else {
-            canvasContainer.removeChild(debugButton);
-          }
+
         }
         // eslint-disable-next-line no-console
         return true;
@@ -342,9 +327,6 @@ function GameScene() {
       return;
     }
 
-    // The Chronogram object (Chronogram.js) keeps a timer and allows registering events
-    // Also, the GameScene object gets a deltaTime passed to it each update cycle, that
-    // could be summed and compared to shakeDuration
     const dt = Date.now() - shakeStartTime; // actual shake duration
 
     if (dt > shakeDuration) {
@@ -369,26 +351,6 @@ function GameScene() {
         pauseSoundAndMusic();
       } else {
         resumeSoundAndMusic();
-      }
-    }
-  };
-
-  //TODO: FM: To be Removed; To Help with Debugging
-  //We can probably leave it in, not a big deal
-  const originalBallAndTableTransition = function () {
-    for (const ball of self.table.balls) {
-      if (ball.y < 0) {
-        SceneManager.setState(SCENE.GAME, {
-          tableName: selected_top_table,
-          ball: ball,
-          ballOffset: { x: 0, y: canvas.height },
-        });
-      } else if (ball.y > canvas.height) {
-        SceneManager.setState(SCENE.GAME, {
-          tableName: selected_table,
-          ball: ball,
-          ballOffset: { x: 0, y: canvas.height },
-        });
       }
     }
   };
@@ -495,7 +457,6 @@ function GameScene() {
         self.highScore = self.score;
         localStorage.setItem("highScoreStorage", self.score);
       } //set the new high score both as a property and as storage
-      //just work with this rn, don't worry about "getting"
 
       SceneManager.setState(SCENE.GAMEOVER);
     }
@@ -550,7 +511,6 @@ function GameScene() {
   var checkForExtraBall = function () {
     if (self.scoreIncrementForExtraBall >= SCORE_NEEDED_FOR_EXTRA_BALL) {
       extraBall();
-      //Maybe add a SFX to tell the player they got an extra ball?
       self.scoreIncrementForExtraBall -= SCORE_NEEDED_FOR_EXTRA_BALL;
     }
   };
@@ -632,17 +592,11 @@ function GameScene() {
     self.collisionManager.checkCollisions(deltaTime / 2);
 
     for (let i = self.table.animations.length - 1; i >= 0; i--) {
-      //Need to iterate backwards to avoid skipping anything or going
-      //past the end of the array if we remove an element part way
-      //through the loop.
       const animation = self.table.animations[i];
       animation.update(deltaTime);
       if (animation.isFinished) {
         // remove finished animations
         self.table.animations.splice(i, 1);
-        // is it possible to inactivate the animations rather than
-        // destroying them so we don't have to create a new object
-        // when we just want to play the same animation again?
       }
     }
 
@@ -655,13 +609,7 @@ function GameScene() {
         endBonusRound();
       }
     }
-    //TODO: We'll need to change to figure out what to do about multi-ball
-    if (DEBUG) {
-      //originalBallAndTableTransition();
-      determineBallAndTableState();
-    } else {
-      determineBallAndTableState();
-    }
+    determineBallAndTableState();
 
     if (selected_table == TABLES.Forest || selected_table == TABLES.ForestTop) {
       self.bananaCounter += deltaTime;
@@ -869,7 +817,6 @@ function GameScene() {
         break;
       case ENTITY_TYPE.AsteroidBumper:
         incrementScore(otherEntity.score);
-        //otherEntity.spawnMineral();
 
         self.spawnEntity(otherEntity);
         asteroidBumperSound.play();
@@ -929,8 +876,6 @@ function GameScene() {
         if (otherEntity.hasAnimation) {
           otherEntity.animate(0);
         }
-        //self.playAnimation(otherEntity.bodies[0].name, ANIMATIONS.WING_BUMPER, otherEntity.x, otherEntity.y);
-        //otherEntity.animating = true;
         break;
       case ENTITY_TYPE.Trigger:
         self.handleTriggerCollision(otherEntity, ball);
@@ -948,7 +893,6 @@ function GameScene() {
         if (otherEntity.hasAnimation) {
           otherEntity.animate(0);
         }
-        // self.playAnimation(otherEntity.body.name, ANIMATIONS.PLANE_EXPLOSION, otherEntity.x, otherEntity.y);
         break;
       case ENTITY_TYPE.Spawner:
         if (!spawnerCollisionOn) {
@@ -991,8 +935,6 @@ function GameScene() {
   };
 
   this.playAnimation = function (imageName, animationData, x, y) {
-    //is it possible to only make these once and then play them when
-    //we want to run them, rather than creating a new object every time?
     const newAnimation = new SpriteAnimation(
       imageName,
       images[animationData.imageNames[imageName]],
@@ -1092,7 +1034,6 @@ function GameScene() {
   };
 
   this.spawnEntity = function (spawnerEntity, otherType, otherTypeSpawnInfo) {
-    // var type = null;
     let newObjectData;
     if (spawnerEntity != null) {
       switch (spawnerEntity.name) {
@@ -1163,17 +1104,8 @@ function GameScene() {
         this.collisionManager.registerEntity(newObject);
       }
     }
-    // if(type !== null) {
-    //     const dynamicObj = self.table.getDynamicObject(type);
-    //     if(dynamicObj) {
-    //         self.table.drawOrder.splice(self.table.dynamicObjectsFirstIndex, 0, dynamicObj);
-    //         self.table.dynamicObjects.push(dynamicObj);
-    //         if (dynamicObj.body || dynamicObj.bodies) {
-    //             this.collisionManager.registerEntity(dynamicObj);
-    //         }
-    //     }
-    // }
   };
+
   this.handleHabitrailCollision = function (habitrailEntity) {
     if (this.activeHabitrails.indexOf(habitrailEntity) != -1) {
       return;

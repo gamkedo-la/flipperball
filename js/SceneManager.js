@@ -5,7 +5,6 @@ const SceneManager = {
 	currentScene: SCENE.TITLE,
 	pauseCause:null,
 	scenes: {
-//		[SCENE.LOADING]: new LoadingScreen(),
 		[SCENE.TITLE]: new TitleScene(),
 		[SCENE.TABLE_SELECTION]: new TableSelectionScene(),
 		[SCENE.CONTROLS]: new ControlsScene(),
@@ -14,7 +13,6 @@ const SceneManager = {
 		[SCENE.HELP]: new HelpScene(),
 		[SCENE.GAME]: new GameScene(),
 		[SCENE.GAMEOVER]: new GameOverScene(),
-//		[SCENE.ENDING]: new EndgameScene()
 	},
 	setState: function(newScene, properties) {
         this.scenes[this.currentScene].transitionOut();
