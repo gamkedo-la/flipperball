@@ -50,12 +50,15 @@ function GameScene() {
   const self = this;
 
   this.transitionIn = function () {
+    console.log('transitionIn was just called');
+    console.log(this.storedTables[this.currentTableIndex]);
     this.tablesForScene = [selected_table, selected_top_table];
     if (
       this.storedTables[this.currentTableIndex] &&
       this.storedCollisionManagers[this.currentTableIndex]
     ) {
       this.table = this.storedTables[this.currentTableIndex];
+      console.log(this.storedTables[this.currentTableIndex]);
       this.collisionManager = this.storedCollisionManagers[
         this.currentTableIndex
       ];
@@ -64,6 +67,7 @@ function GameScene() {
         stopBackgroundMusic();
       }
       this.table = new MapBuilder(this.properties.tableName);
+      //console.log(this.storedTables);
       this.collisionManager = new CollisionManager();
       this.savedBall = this.properties.ball;
     }
@@ -453,6 +457,10 @@ function GameScene() {
       endBonusRound();
       stopBackgroundMusic();
 
+      //console.log(self.storedTables);
+      //console.log(self.storedTables[self.currentTableIndex]);
+      //console.log(this.storedTables); not even defined, use `self`, not `this`
+      //console.log(this.storedTables[this.currentTableIndex]);
       if (self.score > self.highScore) {
         self.highScore = self.score;
         localStorage.setItem("highScoreStorage", self.score);
@@ -733,6 +741,10 @@ function GameScene() {
     );
 
     if (self.highScore) {
+      //console.log(self.table); //that is a map builder object, not useful to me.
+      //console.log(self.storedTables[self.currentTableIndex]); //idk if this _also_ uses the `self` alias, but let's try it
+      //console.log(this.storedTables); //undefined
+      //console.log(self.storedTables); //it's an empty array...
       colorText(
         "High Score: " + self.highScore,
         TEXT_LEFT_OFFSET,
