@@ -15,7 +15,9 @@ function GameScene() {
   this.hasPlungerReleased = false;
   this.score = 0;
   this.highScore = localStorage.getItem("highScoreStorage");
+  this.spaceHighScore = localStorage.getItem("spaceHighScoreStorage");
   this.highScoreStorage = localStorage.getItem("highScoreStorage");
+  this.spaceHighScoreStorage = localStorage.getItem("spaceHighScoreStorage");
   this.scoreIncrementForExtraBall = 0;
   this.bonusMultiplier = 1;
   this.bonusLive = false;
@@ -456,11 +458,7 @@ function GameScene() {
       self.gameHasFinished = true;
       endBonusRound();
       stopBackgroundMusic();
-
-      //console.log(self.storedTables);
-      //console.log(self.storedTables[self.currentTableIndex]);
-      //console.log(this.storedTables); not even defined, use `self`, not `this`
-      //console.log(this.storedTables[this.currentTableIndex]);
+      
       if (self.score > self.highScore) {
         self.highScore = self.score;
         localStorage.setItem("highScoreStorage", self.score);
@@ -745,6 +743,7 @@ function GameScene() {
       //console.log(self.storedTables[self.currentTableIndex]); //idk if this _also_ uses the `self` alias, but let's try it
       //console.log(this.storedTables); //undefined
       //console.log(self.storedTables); //it's an empty array...
+      console.log(selected_table);
       colorText(
         "High Score: " + self.highScore,
         TEXT_LEFT_OFFSET,
