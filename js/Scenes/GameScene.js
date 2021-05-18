@@ -14,10 +14,7 @@ function GameScene() {
   this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
   this.hasPlungerReleased = false;
   this.score = 0;
-  this.highScore = localStorage.getItem("highScoreStorage");
-  this.spaceHighScore = localStorage.getItem("spaceHighScoreStorage");
-  this.highScoreStorage = localStorage.getItem("highScoreStorage");
-  this.spaceHighScoreStorage = localStorage.getItem("spaceHighScoreStorage");
+  this.highScoreDisplay = 0;
   this.scoreIncrementForExtraBall = 0;
   this.bonusMultiplier = 1;
   this.bonusLive = false;
@@ -52,8 +49,20 @@ function GameScene() {
   const self = this;
 
   this.transitionIn = function () {
-    console.log('transitionIn was just called');
-    console.log(this.storedTables[this.currentTableIndex]);
+    //idk if this is the best spot to put this but...
+    //this should set the highScoreDisplay initially. 
+    if(selected_table == 'prototype'){
+      this.highScoreDisplay = localStorage.getItem("prototypeHighScore");
+    } else if (selected_table == 'space') {
+      this.highScoreDisplay = localStorage.getItem("spaceHighScore");
+    } else if (selected_table == 'vam') {
+      this.highScoreDisplay = localStorage.getItem("vamHighScore");
+    } else if (selected_table == 'atlantis') {
+      this.highScoreDisplay = localStorage.getItem("atlantisHighScore");
+    } else if (selected_table == 'forest') {
+      this.highScoreDisplay = localStorage.getItem("forestHighScore");
+    }
+    
     this.tablesForScene = [selected_table, selected_top_table];
     if (
       this.storedTables[this.currentTableIndex] &&
@@ -459,14 +468,23 @@ function GameScene() {
       endBonusRound();
       stopBackgroundMusic();
 
-      if (self.score > self.highScore) {
-        self.highScore = self.score;
-        localStorage.setItem("highScoreStorage", self.score);
+      if (self.score > self.highScoreDisplay) {
+        self.highScoreDisplay = self.score;
+        //reset the highScoreDisplay within session
+
+        if(selected_table == 'prototype'){
+          localStorage.setItem("prototypeHighScore", self.score);
+        } else if (selected_table == 'space') {
+          localStorage.setItem("spaceHighScore", self.score);
+        } else if (selected_table == 'vam') {
+          localStorage.setItem("vamHighScore", self.score);
+        } else if (selected_table == 'atlantis') {
+          localStorage.setItem("atlantisHighScore", self.score);
+        } else if (selected_table == 'forest') {
+          localStorage.setItem("forestHighScore", self.score);
+        } //set the highScore Storage properties, based on board
+
       } //set the new high score both as a property and as storage
-      if(selected_table == 'space'){
-        self.spaceHighScore = self.score;
-        localStorage.setItem("spaceHighScoreStorage", self.score);
-      }
 
       SceneManager.setState(SCENE.GAMEOVER);
     }
@@ -744,7 +762,7 @@ function GameScene() {
 
     if (self.highScore) {
       colorText(
-        "High Score: " + self.highScore,
+        "High Score: " + self.highScoreDisplay,
         TEXT_LEFT_OFFSET,
         canvas.height - 120,
         Color.White,
