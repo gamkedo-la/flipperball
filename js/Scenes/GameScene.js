@@ -14,7 +14,7 @@ function GameScene() {
   this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
   this.hasPlungerReleased = false;
   this.score = 0;
-  this.highScoreDisplay = 0;
+  this.highScoreDisplay = 1;
   this.scoreIncrementForExtraBall = 0;
   this.bonusMultiplier = 1;
   this.bonusLive = false;
@@ -51,15 +51,21 @@ function GameScene() {
   this.transitionIn = function () {
     //idk if this is the best spot to put this but...
     //this should set the highScoreDisplay initially. 
+    console.log(selected_table);
     if(selected_table == 'prototype'){
       this.highScoreDisplay = localStorage.getItem("prototypeHighScore");
-    } else if (selected_table == 'space') {
+    } 
+    if (selected_table == 'space') {
+      console.log('space conditional reached');
       this.highScoreDisplay = localStorage.getItem("spaceHighScore");
-    } else if (selected_table == 'vam') {
+    } 
+    if (selected_table == 'vam') {
       this.highScoreDisplay = localStorage.getItem("vamHighScore");
-    } else if (selected_table == 'atlantis') {
+    } 
+    if (selected_table == 'atlantis') {
       this.highScoreDisplay = localStorage.getItem("atlantisHighScore");
-    } else if (selected_table == 'forest') {
+    } 
+    if (selected_table == 'forest') {
       this.highScoreDisplay = localStorage.getItem("forestHighScore");
     }
     
@@ -474,13 +480,17 @@ function GameScene() {
 
         if(selected_table == 'prototype'){
           localStorage.setItem("prototypeHighScore", self.score);
-        } else if (selected_table == 'space') {
+        } 
+        if (selected_table == 'space') {
           localStorage.setItem("spaceHighScore", self.score);
-        } else if (selected_table == 'vam') {
+        } 
+        if (selected_table == 'vam') {
           localStorage.setItem("vamHighScore", self.score);
-        } else if (selected_table == 'atlantis') {
+        } 
+        if (selected_table == 'atlantis') {
           localStorage.setItem("atlantisHighScore", self.score);
-        } else if (selected_table == 'forest') {
+        } 
+        if (selected_table == 'forest') {
           localStorage.setItem("forestHighScore", self.score);
         } //set the highScore Storage properties, based on board
 
@@ -760,7 +770,8 @@ function GameScene() {
       1
     );
 
-    if (self.highScore) {
+    if (self.highScoreDisplay) {
+      console.log('Im being reached on the space board')
       colorText(
         "High Score: " + self.highScoreDisplay,
         TEXT_LEFT_OFFSET,
