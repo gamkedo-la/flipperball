@@ -458,11 +458,15 @@ function GameScene() {
       self.gameHasFinished = true;
       endBonusRound();
       stopBackgroundMusic();
-      
+
       if (self.score > self.highScore) {
         self.highScore = self.score;
         localStorage.setItem("highScoreStorage", self.score);
       } //set the new high score both as a property and as storage
+      if(selected_table == 'space'){
+        self.spaceHighScore = self.score;
+        localStorage.setItem("spaceHighScoreStorage", self.score);
+      }
 
       SceneManager.setState(SCENE.GAMEOVER);
     }
@@ -739,11 +743,6 @@ function GameScene() {
     );
 
     if (self.highScore) {
-      //console.log(self.table); //that is a map builder object, not useful to me.
-      //console.log(self.storedTables[self.currentTableIndex]); //idk if this _also_ uses the `self` alias, but let's try it
-      //console.log(this.storedTables); //undefined
-      //console.log(self.storedTables); //it's an empty array...
-      console.log(selected_table);
       colorText(
         "High Score: " + self.highScore,
         TEXT_LEFT_OFFSET,
