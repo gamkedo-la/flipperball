@@ -14,7 +14,7 @@ function GameScene() {
   this.numberOfRemainingBalls = STARTING_BALLS_COUNT;
   this.hasPlungerReleased = false;
   this.score = 0;
-  this.highScoreDisplay = 1;
+  this.highScoreDisplay = 0;
   this.scoreIncrementForExtraBall = 0;
   this.bonusMultiplier = 1;
   this.bonusLive = false;
@@ -52,6 +52,7 @@ function GameScene() {
     //idk if this is the best spot to put this but...
     //this should set the highScoreDisplay initially. 
     console.log(selected_table);
+    //self.highScoreDisplay = this.highScoreDisplay;
     if(selected_table == 'prototype'){
       this.highScoreDisplay = localStorage.getItem("prototypeHighScore");
     } 
@@ -62,7 +63,7 @@ function GameScene() {
     if (selected_table == 'vam') {
       this.highScoreDisplay = localStorage.getItem("vamHighScore");
     } 
-    if (selected_table == 'atlantis') {
+    if (selected_table == 'aquarium') {
       this.highScoreDisplay = localStorage.getItem("atlantisHighScore");
     } 
     if (selected_table == 'forest') {
@@ -487,7 +488,7 @@ function GameScene() {
         if (selected_table == 'vam') {
           localStorage.setItem("vamHighScore", self.score);
         } 
-        if (selected_table == 'atlantis') {
+        if (selected_table == 'aquarium') {
           localStorage.setItem("atlantisHighScore", self.score);
         } 
         if (selected_table == 'forest') {
@@ -770,37 +771,30 @@ function GameScene() {
       1
     );
 
-    if (self.highScoreDisplay) {
-      console.log('Im being reached on the space board')
-      colorText(
-        "High Score: " + self.highScoreDisplay,
-        TEXT_LEFT_OFFSET,
-        canvas.height - 120,
-        Color.White,
-        Fonts.Subtitle,
-        TextAlignment.Left,
-        1
-      );
-      colorText(
-        "No. of plays left: " + self.numberOfRemainingBalls,
-        TEXT_LEFT_OFFSET,
-        canvas.height - 80,
-        Color.White,
-        Fonts.Subtitle,
-        TextAlignment.Left,
-        1
-      );
-    } else {
-      colorText(
-        "No. of plays left: " + self.numberOfRemainingBalls,
-        TEXT_LEFT_OFFSET,
-        canvas.height - 120,
-        Color.White,
-        Fonts.Subtitle,
-        TextAlignment.Left,
-        1
-      );
+    if(self.highScoreDisplay == null){
+      self.highScoreDisplay = 0;
     }
+
+    colorText(
+      "High Score: " + self.highScoreDisplay,
+      TEXT_LEFT_OFFSET,
+      canvas.height - 120,
+      Color.White,
+      Fonts.Subtitle,
+      TextAlignment.Left,
+      1
+    );
+    
+    colorText(
+      "No. of plays left: " + self.numberOfRemainingBalls,
+      TEXT_LEFT_OFFSET,
+      canvas.height - 80,
+      Color.White,
+      Fonts.Subtitle,
+      TextAlignment.Left,
+      1
+    );
+    
 
     if (isGameOver()) {
       colorText(
